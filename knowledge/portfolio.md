@@ -7,6 +7,10 @@ version: 0.2
 last_reviewed: 2026-08-08
 ---
 
+## Current learning
+
+Shauna is currently enrolled with Product School, deepening her understanding of how AI products are built, shipped, evaluated, and improved. No specific course title or credential is claimed in this version.
+
 # Shauna Brennan
 
 Shauna Brennan is an AI-first Head of Product Marketing focused on fast-growing AI companies. At Workvivo, she was the founding product marketer, operated as a solo PMM for three years, and now leads a team of five.

@@ -32,7 +32,7 @@
       <p class="hero-copy">I build the positioning, category strategy, and GTM systems that turn complex AI into a clear reason to believe—and a market ready to move.</p>
       <div class="hero-actions">
         <a class="button primary" href="#explore">Explore the evidence <span>↓</span></a>
-        <button class="button secondary" data-open-agent><span class="voice-bars"><i></i><i></i><i></i></span> Ask my AI</button>
+        <a class="button secondary" href="#ask"><span class="voice-bars"><i></i><i></i><i></i></span> Ask my portfolio agent <span>↓</span></a>
       </div>
       <div class="signal-row" aria-label="Core strengths">
         <span>Positioning & narrative</span><span>AI-native GTM</span><span>PMM leadership</span><span>Category strategy</span>
@@ -127,14 +127,13 @@
         <h2>Don’t just read my résumé.<br>Interrogate it.</h2>
         <p>Meet my live AI portfolio agent. Ask about my experience, how I approach positioning, or the evidence behind a project by voice or text.</p>
         <div class="prompt-chips">
-          <span>Try asking:</span>
-          <button data-open-agent>How do you position AI products?</button>
-          <button data-open-agent>How have you built PMM?</button>
-          <button data-open-agent>Show me an AI-first experiment</button>
+          <span class="prompt-label">Try asking:</span>
+          <span class="prompt-example">How do you position AI products?</span>
+          <span class="prompt-example">How have you built PMM?</span>
+          <span class="prompt-example">Show me an AI-first experiment</span>
         </div>
         <div class="agent-handoff">
-          <button class="button primary" data-open-agent>Start a conversation <span>↘</span></button>
-          <p><span class="status-dot"></span><span><strong>Live now</strong><small>Voice + text · Look for the orb in the bottom-right</small></span></p>
+          <p><span class="status-dot"></span><span><strong>Ready when you are</strong><small>Open the floating agent in the bottom-right to start a voice or text conversation ↘</small></span></p>
         </div>
       </div>
     </section>
@@ -152,7 +151,6 @@
       <a id="work-dialog-link" class="button primary" target="_blank" rel="noreferrer">Explore the source <span>↗</span></a>
     </div>
   </dialog>
-  <div class="agent-cue" id="agent-cue" role="status" aria-live="polite">Open my AI agent here <span>↘</span></div>
   <elevenlabs-convai
     id="shauna-agent"
     agent-id="agent_4401kzh72h3ff1ev937b4qdg8b7y"

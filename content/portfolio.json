@@ -1,0 +1,14 @@
+{
+  "capabilities": [
+    {"title":"Positioning & narrative","description":"Turn complex products and crowded markets into a focused, ownable reason to choose."},
+    {"title":"AI-native GTM","description":"Use AI as both product context and operating leverage across research, creation, and iteration."},
+    {"title":"PMM leadership","description":"Build the function, decision systems, and cross-functional rhythm that make PMM effective."},
+    {"title":"Category & market strategy","description":"Connect competitive, analyst, buyer, and product signals into a coherent market point of view."}
+  ],
+  "work": [
+    {"title":"Workvivo HQ & HQ Agent","category":"ai","tag":"AI product · Positioning & GTM","summary":"A portfolio case-study shell for turning an AI-powered employee experience into a clear buyer story and go-to-market motion.","proof":"Named project; supporting artifacts and outcomes to be added before publication.","featured":true},
+    {"title":"Building the PMM function","category":"leadership","tag":"Leadership · Operating model","summary":"How I approach PMM as a company capability: clear remit, strong interfaces, and repeatable systems—not a request desk.","proof":"Experience area; scope, examples, and references require source confirmation."},
+    {"title":"AI Positioning QA","category":"ai","tag":"AI-first PMM experiment","summary":"A GitHub project exploring how AI can pressure-test positioning quality and make strategic feedback more repeatable.","proof":"Public GitHub repository: shaunaleebrennan/ai-positioning-qa."},
+    {"title":"Category, analyst & competitive strategy","category":"strategy","tag":"Market strategy · Intelligence","summary":"A connected approach to shaping category perception, analyst engagement, and competitive choices around a durable point of view.","proof":"Capability area; selected evidence to be attached."}
+  ]
+}

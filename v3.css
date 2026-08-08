@@ -24,3 +24,85 @@
     height: clamp(250px, 19vw, 300px);
   }
 }
+
+/* A restrained echo of the hero orb across The Full Picture. */
+.signal-panel {
+  isolation: isolate;
+  transition: transform .3s ease, border-color .3s ease;
+}
+
+.signal-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.signal-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, #fff7cb, #f6c8d8 35%, #8b7dff 70%, #c9ff63);
+  opacity: .72;
+}
+
+.signal-panel::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  right: -125px;
+  top: -125px;
+  pointer-events: none;
+  filter: blur(8px);
+  opacity: .18;
+}
+
+.signal-panel:hover {
+  transform: translateY(-3px);
+  border-color: #555064;
+}
+
+.outcome-panel {
+  background: linear-gradient(145deg, #131614 55%, #201a2b);
+}
+
+.outcome-panel::after {
+  background: radial-gradient(circle at 35% 35%, #fff7cb, #f6c8d8 38%, #8b7dff 72%, transparent 73%);
+}
+
+.craft-panel {
+  background: linear-gradient(145deg, #17161e, #242139 70%, #26311f);
+}
+
+.craft-panel::after {
+  background: radial-gradient(circle at 35% 35%, #f6c8d8, #8b7dff 52%, #c9ff63 76%, transparent 77%);
+  opacity: .16;
+}
+
+.project-panel {
+  background: linear-gradient(145deg, #131614, #171b2b);
+}
+
+.project-panel::after {
+  background: radial-gradient(circle at 35% 35%, #dfe3ff, #8b7dff 58%, transparent 72%);
+  opacity: .2;
+}
+
+.recognition-panel {
+  background: linear-gradient(145deg, #f0f2ea 48%, #f6dfe8 74%, #dedaff);
+}
+
+.recognition-panel::after {
+  background: radial-gradient(circle at 35% 35%, #fff7cb, #f6c8d8 45%, #8b7dff 76%, transparent 77%);
+  opacity: .28;
+}
+
+.outcome-panel .panel-kicker { color: #f6c8d8; }
+.craft-panel .panel-kicker { color: #c9bbff; }
+.project-panel .panel-kicker { color: #a9b4ff; }
+.recognition-panel .panel-kicker { color: #5964a3; }
+
+@media (prefers-reduced-motion: reduce) {
+  .signal-panel { transition: none; }
+}

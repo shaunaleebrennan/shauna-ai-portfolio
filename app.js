@@ -4,10 +4,10 @@ document.querySelector('#capabilities').innerHTML = content.capabilities.map((it
   <article class="capability"><span>0${i + 1}</span><div><h3>${item.title}</h3><p>${item.description}</p></div></article>`).join('');
 
 const workGrid = document.querySelector('#work-grid');
-workGrid.innerHTML = content.work.map(item => `
-  <article class="work-card ${item.featured ? 'featured' : ''}" data-category="${item.category}">
+workGrid.innerHTML = content.work.map((item, index) => `
+  <article class="work-card ${item.featured ? 'featured' : ''}" data-category="${item.category}" data-open-work="${index}" role="button" tabindex="0" aria-label="Open ${item.title} project details">
     ${item.image ? `<div class="work-image"><img src="${item.image}" alt="" loading="lazy"></div>` : ''}
-    <div class="work-content"><span class="tag">${item.tag}</span><span class="arrow">↗</span><h3>${item.title}</h3><p>${item.summary}</p><div class="proof">${item.proof}</div></div>
+    <div class="work-content"><span class="tag">${item.tag}</span><span class="arrow">↗</span><h3>${item.title}</h3><p>${item.summary}</p><div class="proof">${item.proof}</div><span class="open-label">Open project</span></div>
   </article>`).join('');
 
 document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => {
@@ -28,9 +28,9 @@ const responses = [
   { terms: ['qa', 'experiment', 'github'], answer: 'AI Positioning QA is a public GitHub experiment exploring how AI can pressure-test positioning quality and make strategic feedback more repeatable. It is included as evidence of AI-first PMM experimentation.' },
   { terms: ['workvivo', 'hq', 'agent'], answer: 'Workvivo HQ reframed a fragmented digital workplace as one AI-native headquarters for communication, knowledge, action, and employee intelligence. The evidence set includes the public launch page, a 60-slide pitch deck, campaign assets, Shauna’s launch post, and a public peer testimonial. Her exact ownership and attributable outcomes are still being confirmed.' },
   { terms: ['category', 'analyst', 'competitive'], answer: 'Shauna connects category, analyst, buyer, product, and competitive signals into one market point of view. At Workvivo, she advanced analyst-relations programs associated with recognition across Gartner, Forrester, G2, ClearBox, and Gartner Peer Insights.' },
-  { terms: ['award', 'recognition'], answer: 'Recognition includes Workvivo’s Quarterback of the Year in 2026, public peer testimony describing her HQ launch contribution as world-class PMM, an LGBTQ+ Inclusion finalist recognition, and contribution to a 2023 diversity and inclusion award.' },
+  { terms: ['award', 'recognition'], answer: 'Professional recognition includes Workvivo’s Quarterback of the Year in 2026 and public peer testimony describing her HQ launch contribution as world-class PMM. Her LGBTQ+ Inclusion finalist recognition and contribution to a 2023 diversity and inclusion award are presented separately as evidence of values and community contribution.' },
   { terms: ['outcome', 'arr', 'growth', 'scale'], answer: 'Shauna helped scale Workvivo from approximately $10M to more than $100M ARR through acquisition by Zoom, while the platform grew beyond 10 million users. She built PMM from zero to five people and drove GTM and differentiation for the Meta Workplace migration motion. These are presented as company journeys she materially supported, not results attributed to her alone.' },
-  { terms: ['learn', 'skill', 'agent', 'rag'], answer: 'Shauna’s AI practice spans agentic enterprise search, task orchestration, permission-aware RAG, workflow automation, and AI pricing. She builds agents for repetitive PMM workflows and seller support, and advises executive and product teams on AI roadmap and GTM.' }
+  { terms: ['learn', 'skill', 'agent', 'rag', 'product school'], answer: 'Shauna’s AI practice spans agentic enterprise search, task orchestration, permission-aware RAG, workflow automation, and AI pricing. She is currently enrolled with Product School to deepen how AI products are built, shipped, and evaluated, alongside building agents for PMM workflows and seller support.' }
 ];
 function answer(question) {
   const lower = question.toLowerCase();
@@ -46,3 +46,25 @@ document.querySelectorAll('[data-open-agent]').forEach(x => x.addEventListener('
 document.querySelector('[data-close-agent]').addEventListener('click', () => dialog.close());
 document.querySelectorAll('[data-question]').forEach(x => x.addEventListener('click', () => { dialog.showModal(); submitQuestion(x.dataset.question); }));
 document.querySelector('#agent-form').addEventListener('submit', event => { event.preventDefault(); submitQuestion(input.value); input.value = ''; });
+
+const workDialog = document.querySelector('#work-dialog');
+const workLink = document.querySelector('#work-dialog-link');
+document.querySelectorAll('[data-open-work]').forEach(card => card.addEventListener('click', () => {
+  const item = content.work[Number(card.dataset.openWork)];
+  document.querySelector('#work-dialog-tag').textContent = item.tag;
+  document.querySelector('#work-dialog-title').textContent = item.title;
+  document.querySelector('#work-dialog-summary').textContent = item.summary;
+  document.querySelector('#work-dialog-demonstrates').textContent = item.demonstrates;
+  document.querySelector('#work-dialog-proof').textContent = item.proof;
+  workLink.hidden = !item.url;
+  if (item.url) workLink.href = item.url;
+  workDialog.showModal();
+}));
+document.querySelectorAll('[data-open-work]').forEach(card => card.addEventListener('keydown', event => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    card.click();
+  }
+}));
+document.querySelector('[data-close-work]').addEventListener('click', () => workDialog.close());
+workDialog.addEventListener('click', event => { if (event.target === workDialog) workDialog.close(); });

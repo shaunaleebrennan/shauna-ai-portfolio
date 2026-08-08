@@ -1,13 +1,13 @@
 /* Final responsive composition overrides. */
 @media (min-width: 761px) {
   .hero-stage {
-    width: calc(100vw - 48px);
-    margin-left: calc((100% - (100vw - 48px)) / 2);
-    min-height: clamp(440px, 40vw, 650px);
+    width: 100%;
+    margin-left: 0;
+    min-height: clamp(420px, 34vw, 540px);
   }
 
   .hero .hero-stage h1 {
-    font-size: clamp(76px, 11.2vw, 180px);
+    font-size: clamp(66px, 8.7vw, 118px);
   }
 
   .hero h1 span:nth-child(2) {
@@ -19,8 +19,8 @@
   }
 
   .hero-orb {
-    right: 24%;
-    width: clamp(260px, 20vw, 360px);
-    height: clamp(260px, 20vw, 360px);
+    right: 22%;
+    width: clamp(250px, 19vw, 300px);
+    height: clamp(250px, 19vw, 300px);
   }
 }

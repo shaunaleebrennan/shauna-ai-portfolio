@@ -32,7 +32,7 @@
       <p class="hero-copy">I build the positioning, category strategy, and GTM systems that turn complex AI into a clear reason to believe—and a market ready to move.</p>
       <div class="hero-actions">
         <a class="button primary" href="#explore">Explore the evidence <span>↓</span></a>
-        <a class="button secondary" href="#ask"><span class="voice-bars"><i></i><i></i><i></i></span> Ask my AI</a>
+        <button class="button secondary" data-open-agent><span class="voice-bars"><i></i><i></i><i></i></span> Ask Shauna, decoded</button>
       </div>
       <div class="signal-row" aria-label="Core strengths">
         <span>Positioning & narrative</span><span>AI-native GTM</span><span>PMM leadership</span><span>Category strategy</span>
@@ -125,28 +125,16 @@
       <div>
         <div class="section-label"><span>04</span> Ask me <small>Live voice + text agent</small></div>
         <h2>Don’t just read my résumé.<br>Interrogate it.</h2>
-        <p>Meet Shauna OS, my live ElevenLabs portfolio agent. Ask about my experience, how I approach positioning, or the evidence behind a project—by voice or text.</p>
+        <p>Meet <strong>Shauna, decoded</strong>—my live ElevenLabs portfolio agent. Ask about my experience, how I approach positioning, or the evidence behind a project by voice or text.</p>
         <div class="prompt-chips">
           <span>Try asking:</span>
-          <button data-focus-agent>How do you position AI products?</button>
-          <button data-focus-agent>How have you built PMM?</button>
-          <button data-focus-agent>Show me an AI-first experiment</button>
+          <button data-open-agent>How do you position AI products?</button>
+          <button data-open-agent>How have you built PMM?</button>
+          <button data-open-agent>Show me an AI-first experiment</button>
         </div>
-        <div class="agent-widget-shell" id="shauna-os-widget">
-          <div class="agent-live-note"><span class="status-dot"></span><strong>Shauna OS</strong><small>Powered by ElevenLabs</small></div>
-          <elevenlabs-convai
-            agent-id="agent_4401kzh72h3ff1ev937b4qdg8b7y"
-            variant="expanded"
-            dismissible="false"
-            avatar-orb-color-1="#f6c8d8"
-            avatar-orb-color-2="#8b7dff"
-            action-text="Ask Shauna OS"
-            start-call-text="Start a conversation"
-            end-call-text="End conversation"
-            expand-text="Ask Shauna OS"
-            listening-text="Listening…"
-            speaking-text="Shauna OS is speaking"
-          ></elevenlabs-convai>
+        <div class="agent-handoff">
+          <button class="button primary" data-open-agent>Open Shauna, decoded <span>↘</span></button>
+          <p><span class="status-dot"></span><span><strong>Live now</strong><small>Voice + text · Look for the orb in the bottom-right</small></span></p>
         </div>
       </div>
     </section>
@@ -164,6 +152,19 @@
       <a id="work-dialog-link" class="button primary" target="_blank" rel="noreferrer">Explore the source <span>↗</span></a>
     </div>
   </dialog>
+  <div class="agent-cue" id="agent-cue" role="status" aria-live="polite">Open Shauna, decoded here <span>↘</span></div>
+  <elevenlabs-convai
+    id="shauna-agent"
+    agent-id="agent_4401kzh72h3ff1ev937b4qdg8b7y"
+    avatar-orb-color-1="#f6c8d8"
+    avatar-orb-color-2="#8b7dff"
+    action-text="Ask Shauna, decoded"
+    start-call-text="Start a conversation"
+    end-call-text="End conversation"
+    expand-text="Open Shauna, decoded"
+    listening-text="Listening…"
+    speaking-text="Shauna, decoded is speaking"
+  ></elevenlabs-convai>
   <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
   <script src="app.js" type="module"></script>
 </body>

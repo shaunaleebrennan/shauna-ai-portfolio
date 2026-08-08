@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shauna Brennan — AI-first Head of Product Marketing. Strategy, systems, and stories for fast-growing AI companies.">
+  <title>Shauna Brennan — AI-first Head of Product Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav shell">
+    <a class="brand" href="#top" aria-label="Shauna Brennan home"><span>SB</span> Shauna Brennan</a>
+    <nav aria-label="Primary navigation">
+      <a href="#scan">Scan</a><a href="#explore">Explore</a><a href="#ask">Ask</a>
+    </nav>
+    <a class="nav-cta" href="mailto:hello@example.com">Let’s talk <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="eyebrow"><span class="pulse"></span> AI-first Head of Product Marketing</div>
+      <h1>I turn complex AI<br>into a <em>clear reason</em><br>to believe.</h1>
+      <p class="hero-copy">I build the positioning, category strategy, and GTM systems that help fast-growing AI companies earn attention—and turn it into momentum.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#explore">Explore the evidence <span>↓</span></a>
+        <button class="button secondary" data-open-agent><span class="voice-bars"><i></i><i></i><i></i></span> Ask my AI</button>
+      </div>
+      <div class="signal-row" aria-label="Core strengths">
+        <span>Positioning & narrative</span><span>AI-native GTM</span><span>PMM leadership</span><span>Category strategy</span>
+      </div>
+    </section>
+
+    <section id="scan" class="section shell">
+      <div class="section-label"><span>01</span> Scan me <small>30-second executive view</small></div>
+      <div class="scan-grid">
+        <div>
+          <h2>Strategy that ships.<br>Stories that stick.</h2>
+          <p>I operate where product, market, and narrative meet—turning ambiguity into an actionable path for teams and a compelling story for buyers.</p>
+        </div>
+        <div class="capabilities" id="capabilities"></div>
+      </div>
+      <div class="principle"><span>My operating principle</span><blockquote>“The best positioning isn’t a line on a slide. It’s a decision system for the whole company.”</blockquote></div>
+    </section>
+
+    <section id="explore" class="section shell">
+      <div class="section-label"><span>02</span> Explore me <small>Evidence, not adjectives</small></div>
+      <div class="section-head"><h2>Selected work</h2><p>Real projects. Clear thinking. Claims separated from context so you can inspect the evidence.</p></div>
+      <div class="filter-row" role="group" aria-label="Filter work">
+        <button class="filter active" data-filter="all">All work</button>
+        <button class="filter" data-filter="ai">AI & product</button>
+        <button class="filter" data-filter="leadership">Leadership</button>
+        <button class="filter" data-filter="strategy">Strategy</button>
+      </div>
+      <div class="work-grid" id="work-grid"></div>
+    </section>
+
+    <section class="section approach shell">
+      <div class="section-label"><span>03</span> How I think <small>A repeatable system</small></div>
+      <div class="section-head"><h2>From signal to story<br>to system.</h2><p>AI changes the speed of execution. Strong judgment still decides what is worth doing.</p></div>
+      <div class="steps">
+        <article><span>01</span><h3>Find the signal</h3><p>Listen across customers, product, market, analysts, and competitors. Separate the interesting from the important.</p></article>
+        <article><span>02</span><h3>Make the choice</h3><p>Turn insight into a sharp point of view: who this is for, why it matters now, and what only we can own.</p></article>
+        <article><span>03</span><h3>Build the system</h3><p>Translate the narrative into launches, enablement, feedback loops, and AI-native workflows that compound.</p></article>
+      </div>
+    </section>
+
+    <section id="ask" class="section shell ask-section">
+      <div class="agent-orb"><div></div><span></span></div>
+      <div>
+        <div class="section-label"><span>04</span> Ask me <small>Portfolio agent preview</small></div>
+        <h2>Don’t just read my résumé.<br>Interrogate it.</h2>
+        <p>Ask about my experience, how I approach positioning, or the evidence behind a project. Answers are designed to be grounded in the portfolio knowledge base.</p>
+        <div class="prompt-chips">
+          <button data-question="How do you approach positioning an AI product?">How do you position AI products?</button>
+          <button data-question="Tell me about your PMM leadership experience.">How have you built PMM?</button>
+          <button data-question="What is the AI Positioning QA project?">Show me an AI-first experiment</button>
+        </div>
+        <button class="button primary" data-open-agent>Start a conversation <span>↗</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell"><div><strong>Shauna Brennan</strong><span>AI-first Head of Product Marketing</span></div><p>Built as an AI-native product marketing experience.</p><a href="#top">Back to top ↑</a></footer>
+
+  <dialog id="agent-dialog" aria-labelledby="agent-title">
+    <div class="dialog-head"><div><span class="status-dot"></span><div><strong id="agent-title">Ask Shauna AI</strong><small>Portfolio knowledge preview</small></div></div><button data-close-agent aria-label="Close">×</button></div>
+    <div class="messages" id="messages"><div class="message agent">Hi—I’m a preview of Shauna’s portfolio agent. Ask me about her approach, leadership, or selected work. I’ll only answer from the evidence currently in this portfolio.</div></div>
+    <form id="agent-form"><input id="agent-input" aria-label="Your question" placeholder="Ask a question…" autocomplete="off"><button aria-label="Send">↑</button></form>
+    <p class="dialog-note">Demo response layer · ElevenLabs voice integration planned</p>
+  </dialog>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

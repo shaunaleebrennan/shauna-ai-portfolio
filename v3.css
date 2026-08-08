@@ -107,17 +107,26 @@
   .signal-panel { transition: none; }
 }
 
-/* Live Shauna, decoded agent. */
+/* Live portfolio agent handoff. */
 .ask-section {
   align-items: center;
 }
 
-.prompt-chips > span {
+.prompt-chips .prompt-label {
   align-self: center;
   color: var(--muted);
   font-size: 11px;
   letter-spacing: .1em;
   text-transform: uppercase;
+}
+
+.prompt-chips .prompt-example {
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  color: var(--muted);
+  background: var(--panel);
+  font-size: 13px;
 }
 
 .agent-handoff {
@@ -149,41 +158,9 @@
   font-size: 11px;
 }
 
-.agent-cue {
-  position: fixed;
-  right: 24px;
-  bottom: 104px;
-  z-index: 1000;
-  padding: 10px 14px;
-  border: 1px solid #716885;
-  border-radius: 99px;
-  color: #111;
-  background: linear-gradient(90deg, #f6c8d8, #c9bbff);
-  box-shadow: 0 16px 45px rgba(0, 0, 0, .35);
-  font-size: 12px;
-  font-weight: 600;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(8px);
-}
-
-.agent-cue.visible {
-  animation: agentCue 2.6s ease both;
-}
-
-@keyframes agentCue {
-  0%, 100% { opacity: 0; transform: translateY(8px); }
-  14%, 78% { opacity: 1; transform: translateY(0); }
-}
-
 @media (max-width: 760px) {
   .agent-handoff {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .agent-cue {
-    right: 14px;
-    bottom: 92px;
   }
 }

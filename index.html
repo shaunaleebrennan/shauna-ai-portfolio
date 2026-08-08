@@ -32,7 +32,7 @@
       <p class="hero-copy">I build the positioning, category strategy, and GTM systems that turn complex AI into a clear reason to believe—and a market ready to move.</p>
       <div class="hero-actions">
         <a class="button primary" href="#explore">Explore the evidence <span>↓</span></a>
-        <button class="button secondary" data-open-agent><span class="voice-bars"><i></i><i></i><i></i></span> Ask my AI</button>
+        <a class="button secondary" href="#ask"><span class="voice-bars"><i></i><i></i><i></i></span> Ask my AI</a>
       </div>
       <div class="signal-row" aria-label="Core strengths">
         <span>Positioning & narrative</span><span>AI-native GTM</span><span>PMM leadership</span><span>Category strategy</span>
@@ -123,27 +123,37 @@
     <section id="ask" class="section shell ask-section">
       <div class="agent-orb"><div></div><span></span></div>
       <div>
-        <div class="section-label"><span>04</span> Ask me <small>Portfolio agent preview</small></div>
+        <div class="section-label"><span>04</span> Ask me <small>Live voice + text agent</small></div>
         <h2>Don’t just read my résumé.<br>Interrogate it.</h2>
-        <p>Ask about my experience, how I approach positioning, or the evidence behind a project. Answers are designed to be grounded in the portfolio knowledge base.</p>
+        <p>Meet Shauna OS, my live ElevenLabs portfolio agent. Ask about my experience, how I approach positioning, or the evidence behind a project—by voice or text.</p>
         <div class="prompt-chips">
-          <button data-question="How do you approach positioning an AI product?">How do you position AI products?</button>
-          <button data-question="Tell me about your PMM leadership experience.">How have you built PMM?</button>
-          <button data-question="What is the AI Positioning QA project?">Show me an AI-first experiment</button>
+          <span>Try asking:</span>
+          <button data-focus-agent>How do you position AI products?</button>
+          <button data-focus-agent>How have you built PMM?</button>
+          <button data-focus-agent>Show me an AI-first experiment</button>
         </div>
-        <button class="button primary" data-open-agent>Start a conversation <span>↗</span></button>
+        <div class="agent-widget-shell" id="shauna-os-widget">
+          <div class="agent-live-note"><span class="status-dot"></span><strong>Shauna OS</strong><small>Powered by ElevenLabs</small></div>
+          <elevenlabs-convai
+            agent-id="agent_4401kzh72h3ff1ev937b4qdg8b7y"
+            variant="expanded"
+            dismissible="false"
+            avatar-orb-color-1="#f6c8d8"
+            avatar-orb-color-2="#8b7dff"
+            action-text="Ask Shauna OS"
+            start-call-text="Start a conversation"
+            end-call-text="End conversation"
+            expand-text="Ask Shauna OS"
+            listening-text="Listening…"
+            speaking-text="Shauna OS is speaking"
+          ></elevenlabs-convai>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="shell"><div><strong>Shauna Brennan</strong><span>AI-first Head of Product Marketing</span></div><p>Built as an AI-native product marketing experience.</p><a href="#top">Back to top ↑</a></footer>
 
-  <dialog id="agent-dialog" aria-labelledby="agent-title">
-    <div class="dialog-head"><div><span class="status-dot"></span><div><strong id="agent-title">Ask Shauna AI</strong><small>Portfolio knowledge preview</small></div></div><button data-close-agent aria-label="Close">×</button></div>
-    <div class="messages" id="messages"><div class="message agent">Hi—I’m a preview of Shauna’s portfolio agent. Ask me about her approach, leadership, or selected work. I’ll only answer from the evidence currently in this portfolio.</div></div>
-    <form id="agent-form"><input id="agent-input" aria-label="Your question" placeholder="Ask a question…" autocomplete="off"><button aria-label="Send">↑</button></form>
-    <p class="dialog-note">Demo response layer · ElevenLabs voice integration planned</p>
-  </dialog>
   <dialog id="work-dialog" class="work-dialog" aria-labelledby="work-dialog-title">
     <div class="work-dialog-head"><span id="work-dialog-tag"></span><button data-close-work aria-label="Close project details">×</button></div>
     <div class="work-dialog-body">
@@ -154,6 +164,7 @@
       <a id="work-dialog-link" class="button primary" target="_blank" rel="noreferrer">Explore the source <span>↗</span></a>
     </div>
   </dialog>
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
   <script src="app.js" type="module"></script>
 </body>
 </html>

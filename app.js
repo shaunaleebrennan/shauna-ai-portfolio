@@ -19,9 +19,33 @@ document.querySelectorAll('.filter').forEach(button => button.addEventListener('
   });
 }));
 
-document.querySelectorAll('[data-focus-agent]').forEach(button => button.addEventListener('click', () => {
-  document.querySelector('#shauna-os-widget').scrollIntoView({ behavior: 'smooth', block: 'center' });
-}));
+const agentWidget = document.querySelector('#shauna-agent');
+const agentCue = document.querySelector('#agent-cue');
+
+function showAgentCue() {
+  agentCue.classList.remove('visible');
+  void agentCue.offsetWidth;
+  agentCue.classList.add('visible');
+  setTimeout(() => agentCue.classList.remove('visible'), 2600);
+}
+
+async function openAgent() {
+  await customElements.whenDefined('elevenlabs-convai');
+  const root = agentWidget.shadowRoot;
+  const buttons = root ? [...root.querySelectorAll('button')] : [];
+  const launcher = buttons.find(button => {
+    const label = `${button.getAttribute('aria-label') || ''} ${button.textContent || ''}`.toLowerCase();
+    return /open|expand|ask shauna|conversation|chat/.test(label) && button.offsetParent !== null;
+  });
+
+  if (launcher) {
+    launcher.click();
+  } else {
+    showAgentCue();
+  }
+}
+
+document.querySelectorAll('[data-open-agent]').forEach(button => button.addEventListener('click', openAgent));
 
 const workDialog = document.querySelector('#work-dialog');
 const workLink = document.querySelector('#work-dialog-link');

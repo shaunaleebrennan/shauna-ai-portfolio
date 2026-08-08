@@ -3,19 +3,27 @@ document_type: portfolio_knowledge_base
 person: Shauna Brennan
 target_role: Head of Product Marketing
 focus: AI-first, fast-growing AI companies
-version: 0.1
+version: 0.2
 last_reviewed: 2026-08-08
 ---
 
 # Shauna Brennan
 
-Shauna Brennan is positioning herself for AI-first Head of Product Marketing roles at fast-growing AI companies.
+Shauna Brennan is an AI-first Head of Product Marketing focused on fast-growing AI companies. At Workvivo, she was the founding product marketer, operated as a solo PMM for three years, and now leads a team of five.
 
 ## Positioning
 
-Shauna turns complex AI products and crowded markets into a clear, credible reason to choose. She works where product, market, and narrative meet, converting ambiguity into an actionable path for teams and a compelling story for buyers.
+Shauna builds categories, narratives, and go-to-market strategies for enterprise AI products, turning complex technology into clear buyer value, market momentum, and commercial growth.
 
-This is a positioning statement, not a quantified performance claim.
+She helped scale Workvivo from approximately $10M ARR to more than $100M ARR through its acquisition by Zoom. The company grew to more than 10 million users globally. These are company-journey metrics; describe Shauna's contribution as helping to scale the business, not as solely causing the results.
+
+## Executive outcomes
+
+- Built Workvivo's PMM function from zero to a team of five.
+- Led positioning and GTM for Workvivo HQ, HQ Agent, and Seer.
+- Helped relaunch the platform as AI-native, supporting significant expansion ARR. Do not quantify expansion ARR without an approved source.
+- Drove GTM, competitive differentiation, and sales motions after Workvivo became Meta's only preferred Workplace migration partner. Workvivo captured almost 80% of Meta's customer base and more than doubled ARR; these are company/motion outcomes, not solely personal outcomes.
+- Advanced analyst-relations programs associated with recognition from Gartner, Forrester, G2, ClearBox, and Gartner Peer Insights.
 
 ## Operating principle
 
@@ -29,11 +37,11 @@ Turn complex products and crowded markets into a focused, ownable reason to choo
 
 ### AI-native GTM
 
-Use AI as both product context and operating leverage across research, creation, and iteration. Specific workflows and outcomes are pending evidence.
+Use AI as both product context and operating leverage across research, creation, and iteration. Shauna builds agents that reduce repetitive workflows and support sellers, applies AI practices to PMM operations, and advises executive and product teams on AI roadmap, GTM, and pricing.
 
 ### PMM leadership
 
-Build PMM as a company capability through a clear remit, strong cross-functional interfaces, and repeatable systems. Team scope and outcomes are pending evidence.
+Build PMM as a company capability through a clear remit, strong cross-functional interfaces, and repeatable systems. Shauna built the function from founding/solo PMM to a team of five.
 
 ### Category and market strategy
 
@@ -47,7 +55,7 @@ This is a named portfolio case study related to AI product positioning and GTM. 
 
 ### Building the PMM function
 
-This is a named experience area. The intended story is about building PMM as a company capability rather than a reactive request desk. Scope, dates, and results must be verified.
+Shauna was Workvivo's founding PMM, remained the solo product marketer for three years, and built the function into a team of five as Head of Product Marketing.
 
 ### AI Positioning QA
 

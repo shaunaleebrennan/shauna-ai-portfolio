@@ -106,3 +106,75 @@
 @media (prefers-reduced-motion: reduce) {
   .signal-panel { transition: none; }
 }
+
+/* Live Shauna OS agent. */
+.ask-section {
+  align-items: start;
+}
+
+.prompt-chips > span {
+  align-self: center;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.agent-widget-shell {
+  position: relative;
+  margin-top: 30px;
+  min-height: 430px;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid #4f495b;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(246, 200, 216, .12), transparent 32%),
+    radial-gradient(circle at 92% 100%, rgba(139, 125, 255, .12), transparent 35%),
+    #101211;
+}
+
+.agent-widget-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, #f6c8d8, #8b7dff 58%, #c9ff63);
+}
+
+.agent-live-note {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.agent-live-note .status-dot {
+  grid-row: span 2;
+}
+
+.agent-live-note strong {
+  font: 600 14px Manrope;
+}
+
+.agent-live-note small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+elevenlabs-convai {
+  display: block;
+  width: 100%;
+  min-height: 350px;
+}
+
+@media (max-width: 760px) {
+  .agent-widget-shell {
+    min-height: 390px;
+    padding: 14px;
+  }
+
+  elevenlabs-convai {
+    min-height: 320px;
+  }
+}

@@ -1,0 +1,26 @@
+/* Final responsive composition overrides. */
+@media (min-width: 761px) {
+  .hero-stage {
+    width: calc(100vw - 48px);
+    margin-left: calc((100% - (100vw - 48px)) / 2);
+    min-height: clamp(440px, 40vw, 650px);
+  }
+
+  .hero .hero-stage h1 {
+    font-size: clamp(76px, 11.2vw, 180px);
+  }
+
+  .hero h1 span:nth-child(2) {
+    padding-left: 14%;
+  }
+
+  .hero h1 span:nth-child(3) {
+    padding-left: 68%;
+  }
+
+  .hero-orb {
+    right: 24%;
+    width: clamp(260px, 20vw, 360px);
+    height: clamp(260px, 20vw, 360px);
+  }
+}

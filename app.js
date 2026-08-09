@@ -36,12 +36,14 @@ workGrid.addEventListener('pointerdown', event => {
     railScrollStart = workGrid.scrollLeft;
     railWasDragged = false;
     workGrid.classList.add('is-dragging');
-    workGrid.setPointerCapture(event.pointerId);
   }
 });
 workGrid.addEventListener('pointermove', event => {
   if (!workGrid.classList.contains('is-dragging')) return;
-  if (Math.abs(event.clientX - railPointerStart) > 6) railWasDragged = true;
+  if (Math.abs(event.clientX - railPointerStart) > 6) {
+    railWasDragged = true;
+    if (!workGrid.hasPointerCapture(event.pointerId)) workGrid.setPointerCapture(event.pointerId);
+  }
   workGrid.scrollLeft = railScrollStart - (event.clientX - railPointerStart);
 });
 workGrid.addEventListener('pointerup', event => {

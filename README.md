@@ -13,7 +13,7 @@ The site is designed around four ways to understand Shauna's work:
 3. **The full picture** — interactive tabs covering core competencies, recognition, and continuous learning, with links to verified certificates.
 4. **Ask me** — a live ElevenLabs voice and text portfolio agent grounded in approved portfolio knowledge.
 
-The hero also includes a downloadable CV and a continuously scrolling AI toolkit featuring GitHub, ZoomMate, Claude, Figma, Codex, Claude Code, Lovable, ElevenLabs, My Notes by Zoom, Gemini, ChatGPT, Replit, Clozd, HQ Agent, and hiresteve.ai.
+The hero also includes a downloadable CV and a continuously scrolling AI toolkit featuring GitHub, ZoomMate, Claude, Figma, Codex, Claude Code, Lovable, ElevenLabs, My Notes by Zoom, Gemini, ChatGPT, ChatGPT-Live, Replit, Clozd, HQ Agent, and hiresteve.ai.
 
 ## Selected work
 

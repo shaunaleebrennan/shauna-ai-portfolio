@@ -59,7 +59,7 @@ The agent is an additional way to explore the portfolio, not a replacement for t
 
 ### How it works
 
-1. `index.html` includes the `<elevenlabs-convai>` web component and loads ElevenLabs' hosted widget script from `unpkg.com`.
+1. `index.html` includes the `<elevenlabs-convai>` web component and loads ElevenLabs' hosted widget script from `elevenlabs.io`.
 2. The component connects the site to the configured ElevenLabs agent using its public agent ID.
 3. The floating control in the bottom-right lets a visitor begin a text or voice conversation. Voice use requires the visitor to grant microphone permission; the rest of the portfolio does not.
 4. ElevenLabs runs the conversation and generates responses using the agent instructions and knowledge configured in the ElevenLabs workspace.

@@ -6,10 +6,128 @@
     {"title":"Category & market strategy","description":"Connect competitive, analyst, buyer, and product signals into a coherent market point of view."}
   ],
   "work": [
-    {"title":"Workvivo HQ & HQ Agent","category":"ai","tag":"AI product · Positioning & GTM","summary":"Reframing a fragmented digital workplace as one AI-native headquarters for communication, knowledge, action, and employee intelligence.","demonstrates":"Category reframing, enterprise AI positioning, launch narrative, campaign orchestration, and sales enablement for a complex product portfolio.","proof":"Public launch page, 60-slide pitch deck, campaign system, Shauna launch post, and public peer testimonial.","image":"assets/evidence/hq-agent-product.png","featured":true,"url":"https://www.workvivo.com/hq/"},
-    {"title":"Building the PMM function","category":"leadership","tag":"Leadership · Operating model","summary":"How I approach PMM as a company capability: clear remit, strong interfaces, and repeatable systems—not a request desk.","demonstrates":"Zero-to-one function building, team leadership, executive partnership, prioritisation, and scalable PMM operating systems.","proof":"Founding product marketer; solo PMM for three years; function built from zero to a team of five as the company scaled."},
-    {"title":"AI Positioning QA","category":"ai","tag":"AI-first PMM experiment","summary":"A GitHub project exploring how AI can pressure-test positioning quality and make strategic feedback more repeatable.","demonstrates":"Hands-on AI experimentation, prompt and evaluation thinking, product judgment, and the ability to turn PMM craft into a working tool.","proof":"Public GitHub repository: shaunaleebrennan/ai-positioning-qa.","url":"https://github.com/shaunaleebrennan/ai-positioning-qa"},
-    {"title":"The Listening Gap","category":"strategy","tag":"Research · Thought leadership","summary":"A research-led narrative that turns employee-listening evidence into a memorable funnel and five actions for closing the gap.","demonstrates":"Research synthesis, narrative architecture, thought leadership, and category education grounded in evidence.","proof":"Supplied 18-page Seer research report; Shauna's exact contribution pending confirmation.","image":"assets/workvivo-hq/hq-people-3.webp"},
-    {"title":"Category, analyst & competitive strategy","category":"strategy","tag":"Market strategy · Intelligence","summary":"A connected approach to shaping category perception, analyst engagement, and competitive choices around a durable point of view.","demonstrates":"Analyst relations, competitive intelligence, category design, market storytelling, and translating external signals into GTM choices.","proof":"Forrester and Gartner campaign artifacts supplied; individual ownership pending confirmation.","image":"assets/evidence/forrester-wave-2026.png"}
+    {
+      "slug":"workvivo-hq",
+      "title":"Workvivo HQ",
+      "category":"gtm",
+      "tag":"GTM",
+      "summary":"Repositioning employee experience for the AI era—without losing the adoption, trust, and culture that made the platform distinctive.",
+      "demonstrates":"Platform repositioning, category evolution, executive narrative, launch strategy, and buyer storytelling across IT, HR, and Comms.",
+      "proof":"Public launch page, 60-slide pitch deck, campaign system, Shauna launch post, and public peer testimonial.",
+      "image":"assets/evidence/workvivo-hq.jpg",
+      "sourceUrl":"https://www.workvivo.com/hq/",
+      "caseStudy":{
+        "eyebrow":"Repositioning a category for the AI era",
+        "context":"Workvivo had established itself as an Employee Experience Platform. As enterprise software moved into an AI-native era, the challenge was bigger than adding AI features to the existing story: the company needed a credible new ambition without abandoning the employee-experience equity that made it distinctive.",
+        "challenge":"What should Workvivo become when AI changes how employees interact with information, systems, and work? A generic ‘we’re now an AI company’ claim would have discarded the adoption, culture, frontline reach, and trust the platform had already earned.",
+        "insight":"AI becomes more valuable when it lives inside an employee experience people already use. The platform story shifted toward an AI-native headquarters for every employee, captured in the central idea: Give work a home.",
+        "contribution":["Strategic positioning and category narrative","Messaging architecture across IT, HR, and Comms buyers","Launch strategy, seller narrative, and website story","Analyst story and competitive framing","Portfolio narrative connecting Workvivo HQ to the broader AI strategy"],
+        "decisions":["Position AI as embedded in the employee experience—not bolted on","Make adoption part of the AI ROI story","Frame one destination where employees can understand, find, and increasingly act","Keep frontline employees inside the enterprise AI narrative"],
+        "outcome":"Workvivo publicly launched HQ after surpassing 10 million users and $100M ARR. Those are company proof points during Shauna’s tenure, not outcomes attributed to her alone.",
+        "learning":"Repositioning works when it expands what a brand can mean without erasing the reason customers trusted it in the first place."
+      }
+    },
+    {
+      "slug":"hq-agent",
+      "title":"HQ Agent",
+      "category":"launch",
+      "tag":"Product launch",
+      "summary":"Turning enterprise search, trusted answers, self-service, and agentic action into one credible product story—and a launch buyers could navigate.",
+      "demonstrates":"Agentic AI positioning, portfolio architecture, trust messaging, packaging, launch orchestration, and enterprise sales enablement.",
+      "proof":"HQ product experience, launch narrative, seller materials, and portfolio positioning connecting Workvivo and Zoom AI.",
+      "image":"assets/evidence/hq-agent.jpg",
+      "sourceUrl":"https://www.workvivo.com/hq/",
+      "caseStudy":{
+        "eyebrow":"Commercialising enterprise AI",
+        "context":"HQ Agent extended Workvivo beyond communications and employee experience into trusted enterprise answers, search, self-service, and agentic task execution. It sat at the intersection of enterprise knowledge, RAG, permissions, employee experience, and Zoom’s broader AI technology.",
+        "challenge":"The launch could not be reduced to ‘better enterprise search.’ It needed a clear category, a credible trust story, an understandable relationship with Workvivo HQ and ZoomMate, and sustainable packaging for different levels of AI value.",
+        "insight":"The most useful commercial progression was SEARCH → ANSWER → ACTION: from finding information, to receiving a grounded answer, to increasingly completing the task. The launch idea became: From search, to answer, to job done.",
+        "contribution":["Product and portfolio positioning","AI maturity story and competitive framing","Pricing and packaging co-developed with the Revenue leader","Seller narrative and enablement","Translation of trust, permissions, citations, and grounding into buyer value","GTM execution across Product, Revenue, and the market"],
+        "decisions":["Market the buyer value of RAG—not the acronym","Use ‘grounded, cited, and permission-aware’ instead of unsafe absolute claims","Differentiate HQ Agent’s employee support from ZoomMate’s deeper productivity use cases","Price levels of AI value rather than charging for novelty"],
+        "outcome":"The result was a portfolio and launch narrative designed to make a technically complex enterprise AI product easier to understand, sell, and evaluate. Shauna shaped the commercial story; she did not engineer the underlying AI system.",
+        "learning":"Technical depth matters in Product Marketing when it changes the claim, the value, the packaging, or the buyer’s trust."
+      }
+    },
+    {
+      "slug":"seer",
+      "title":"Seer",
+      "category":"gtm",
+      "tag":"GTM",
+      "summary":"Building a people-intelligence story around the Listening Gap: the distance between what employees say and what organisations act on.",
+      "demonstrates":"Research synthesis, category narrative, thought leadership, product positioning, and a practical GTM frame for employee intelligence.",
+      "proof":"Seer product materials and the supplied 18-page Listening Gap research report.",
+      "image":"assets/evidence/seer.jpg",
+      "caseStudy":{
+        "eyebrow":"Entering the people-intelligence market",
+        "context":"Workvivo expanded into People Intelligence with Seer, moving into a buyer and category conversation adjacent to its employee-experience strengths.",
+        "challenge":"Seer could not sound like another survey platform. The story needed to explain how employee feedback moves beyond collection—turning large volumes of qualitative signal into insight that leaders and managers can act on.",
+        "insight":"The narrative became LISTEN → UNDERSTAND → ACT. The Listening Gap gave the strategy a memorable tension: organisations often collect employee feedback, but struggle to convert what they hear into meaningful action.",
+        "contribution":["Positioning and GTM strategy","Launch strategy","Pricing and packaging","Competitive strategy","Seller narrative and enablement","Hiring a dedicated PMM to scale execution while retaining senior strategy ownership"],
+        "decisions":["Anchor the story in action—not survey collection","Use AI topic grouping, comment analysis, and sentiment as means to insight","Connect executive reporting with practical manager action","Position against established engagement and listening alternatives"],
+        "outcome":"Seer established a people-intelligence expansion story spanning employee listening, AI-assisted insight, manager intelligence, and action. No unverified Seer revenue or adoption metrics are claimed.",
+        "learning":"Adjacent-market entry becomes credible when the narrative explains both the new capability and why the existing brand has earned the right to compete."
+      }
+    },
+    {
+      "slug":"market-leadership",
+      "title":"Market leadership",
+      "category":"analyst",
+      "tag":"Analyst relations",
+      "summary":"Creating one connected market-leadership motion across Gartner, Forrester, G2, ClearBox, Gartner Peer Insights, and SoftwareReviews.",
+      "demonstrates":"Analyst relations, competitive intelligence, category design, campaign strategy, and turning external validation into commercial leverage.",
+      "proof":"Gartner and Forrester leadership campaign artifacts, supported by recognition across major analyst and review platforms.",
+      "image":"assets/evidence/market-leadership.jpg",
+      "caseStudy":{
+        "eyebrow":"Building external market credibility",
+        "context":"Workvivo evolved from an underdog employee app into a recognised Employee Experience Platform and later a broader AI-native employee-experience story. Analyst understanding had to evolve with the product and company narrative.",
+        "challenge":"Market leadership is not created by a single briefing. It requires a consistent point of view, credible evidence, strong customer proof, disciplined claims, and alignment across products that are evolving at different speeds.",
+        "insight":"Analyst relations works best as a connected category system—not a calendar of submissions. The analyst narrative, evidence base, competitive position, customer proof, and GTM story need to reinforce one another.",
+        "contribution":["Analyst narrative and executive storytelling","Briefings and RFI development","Evidence and customer-proof development","Competitive positioning and claims governance","Alignment across Workvivo HQ, HQ Agent, and Seer","Campaign strategy that translated recognition into market-facing proof"],
+        "decisions":["Build a durable category story rather than chase individual rankings","Keep external claims grounded in verifiable evidence","Connect analyst recognition to seller and buyer narratives","Maintain one coherent portfolio story across multiple evaluation contexts"],
+        "outcome":"Workvivo received recognition across Gartner, Forrester, G2, ClearBox, Gartner Peer Insights, and SoftwareReviews. Shauna played a substantial role in the program; independent analysts and reviewers controlled their own outcomes.",
+        "learning":"Influence without control demands evidence, consistency, and patience. Strong analyst relations makes the company easier to understand before it tries to make it look impressive."
+      }
+    },
+    {
+      "slug":"ai-product-strategy",
+      "title":"AI Product Strategy",
+      "category":"technical",
+      "tag":"Technical expertise",
+      "summary":"Learning by building: product strategy, AI pricing, portfolio agents, and hands-on experimentation with the tools reshaping modern GTM.",
+      "demonstrates":"AI product judgment, pricing strategy, agent prototyping, workflow design, technical curiosity, and applied PMM experimentation.",
+      "proof":"Product School coursework, AI pricing study, this portfolio agent, and builds using Claude, ChatGPT, Codex, Replit, Lovable, ElevenLabs, and ZoomMate.",
+      "image":"assets/evidence/ai-product-strategy.jpg",
+      "sourceUrl":"https://github.com/shaunaleebrennan",
+      "caseStudy":{
+        "eyebrow":"Building an AI-enabled PMM operating model",
+        "context":"AI-first Product Marketing is not simply a team using ChatGPT. Shauna has been exploring how AI can change the operating model of PMM itself—and where human judgment must remain accountable.",
+        "challenge":"High-value PMM time disappears into retrieval, repeated seller questions, monitoring, synthesis, recurring research, and first-pass analysis. The strategic question is which work requires human judgment and which work can be processed or automated.",
+        "insight":"AI does more of the processing. PMM remains accountable for the thinking. Retrieval, extraction, monitoring, classification, and repeatable analysis can accelerate; positioning, pricing, claims, category strategy, and executive recommendations still need accountable judgment.",
+        "contribution":["Seller-facing competitive intelligence and automated monitoring","AI-assisted win/loss analysis and lightweight decision tools","AI Positioning QA","This portfolio and its grounded agent experience","Reusable research, synthesis, and PMM workflows","Continued product and AI-pricing study"],
+        "decisions":["Design around workflows rather than collecting tools","Keep a human in the loop for consequential claims and decisions","Encode PMM expertise into evaluation criteria","Use prototypes to learn before deciding whether to build, buy, or stop"],
+        "outcome":"The result is a growing set of practical systems that increase PMM leverage while keeping strategic accountability human. The tools are not the proof; the workflow design and operating choices are.",
+        "learning":"Technical expertise for a PMM is the ability to understand enough of the system to make better product, pricing, trust, and go-to-market decisions."
+      }
+    },
+    {
+      "slug":"meta-migration",
+      "title":"The Meta Migration",
+      "category":"competitive",
+      "tag":"Competitive displacement",
+      "summary":"Turning a time-bound market disruption into a coordinated commercial motion—while making migration feel credible, differentiated, and low-risk.",
+      "demonstrates":"Migration positioning, competitive differentiation, market messaging, seller strategy, enablement, and fast cross-functional GTM execution.",
+      "proof":"Shauna played a significant GTM role in the wider migration motion that helped Workvivo capture the majority of the available Workplace customer opportunity and double ARR; these are company outcomes.",
+      "image":"assets/evidence/meta-migration.jpg",
+      "caseStudy":{
+        "eyebrow":"Turning disruption into commercial opportunity",
+        "context":"Meta announced the closure of Workplace. Workvivo was named Meta’s only preferred migration partner, creating a major, time-bound market opportunity and a highly visible competitive GTM motion.",
+        "challenge":"Workvivo had to move quickly while differentiating against competitors, reducing migration risk, addressing customer uncertainty, enabling sellers, and converting a temporary market event into durable commercial opportunity.",
+        "insight":"The winning story needed to combine urgency with reassurance. Migration could not feel like a technical transfer alone; it needed to feel like a credible path from a closing platform to a stronger long-term employee experience.",
+        "contribution":["Migration positioning and narrative","Competitive differentiation","Seller strategy and enablement","Market messaging","Cross-functional coordination of the commercial motion","Helping translate the market event into a repeatable customer story"],
+        "decisions":["Lead with a proven, low-risk migration path","Differentiate the destination—not only the transfer process","Equip sellers for a compressed, competitive decision cycle","Balance market urgency with customer confidence"],
+        "outcome":"The wider migration motion helped Workvivo capture the majority of the available Workplace customer opportunity and double ARR. These are company outcomes; Shauna played a significant GTM role and did not independently win the migration business.",
+        "learning":"When a market window is short, clarity and coordination become competitive advantages. The best displacement story makes both the move and the destination feel compelling."
+      }
+    }
   ]
 }

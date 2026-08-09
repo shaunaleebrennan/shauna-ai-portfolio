@@ -59,7 +59,7 @@ The agent is an additional way to explore the portfolio, not a replacement for t
 
 ### How it works
 
-1. `index.html` includes the `<elevenlabs-convai>` web component and loads ElevenLabs' hosted widget script from `elevenlabs.io`.
+1. `index.html` includes the `<elevenlabs-convai>` web component and loads ElevenLabs' hosted widget script from `unpkg.com`.
 2. The component connects the site to the configured ElevenLabs agent using its public agent ID.
 3. The floating control in the bottom-right lets a visitor begin a text or voice conversation. Voice use requires the visitor to grant microphone permission; the rest of the portfolio does not.
 4. ElevenLabs runs the conversation and generates responses using the agent instructions and knowledge configured in the ElevenLabs workspace.
@@ -75,7 +75,7 @@ Repository files do **not** automatically sync to ElevenLabs. When the knowledge
 
 ### Configuration and maintenance
 
-- **Widget placement and copy:** edit the `<elevenlabs-convai>` attributes near the bottom of `index.html`.
+- **Widget appearance, placement, avatar, and copy:** manage these in the ElevenLabs workspace. The embed in `index.html` intentionally supplies only the agent ID so it does not override the saved widget configuration.
 - **Agent behaviour, voice, model, tools, and knowledge base:** manage these in the ElevenLabs workspace connected to the configured agent.
 - **Approved portfolio knowledge:** maintain the source documents in `knowledge/`, then manually sync approved changes to ElevenLabs.
 - **Visual styling:** the widget uses ElevenLabs' embedded interface; the surrounding Ask me section and handoff copy are styled by the site's CSS.

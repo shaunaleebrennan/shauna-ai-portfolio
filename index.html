@@ -59,53 +59,45 @@
 
     <section id="explore" class="section shell">
       <div class="section-label"><span>02</span> Explore the evidence <small>Evidence, not adjectives</small></div>
-      <div class="section-head"><h2>Selected work</h2><p>Real projects. Clear thinking. Claims separated from context so you can inspect the evidence.</p></div>
-      <div class="filter-row" role="group" aria-label="Filter work">
-        <button class="filter active" data-filter="all">All work</button>
-        <button class="filter" data-filter="ai">AI & product</button>
-        <button class="filter" data-filter="leadership">Leadership</button>
-        <button class="filter" data-filter="strategy">Strategy</button>
+      <div class="section-head"><h2>Selected work</h2><p>Six stories about shaping markets, launching AI products, and building the craft behind the work.</p></div>
+      <div class="work-toolbar">
+        <div class="filter-row" role="group" aria-label="Filter work">
+          <button class="filter active" data-filter="all">All work</button>
+          <button class="filter" data-filter="gtm">GTM</button>
+          <button class="filter" data-filter="launch">Product launch</button>
+          <button class="filter" data-filter="analyst">Analyst relations</button>
+          <button class="filter" data-filter="technical">Technical expertise</button>
+          <button class="filter" data-filter="competitive">Competitive displacement</button>
+        </div>
+        <div class="rail-controls" aria-label="Scroll selected work">
+          <span>Drag or scroll to explore</span>
+          <button type="button" data-rail-prev aria-label="Previous project">←</button>
+          <button type="button" data-rail-next aria-label="Next project">→</button>
+        </div>
       </div>
-      <div class="work-grid" id="work-grid"></div>
+      <div class="work-rail" id="work-grid" tabindex="0" aria-label="Selected work, horizontally scrollable"></div>
     </section>
 
-    <section class="section shell signal-map">
-      <div class="section-label"><span>+</span> The full picture <small>Signals beyond a traditional resume</small></div>
-      <div class="section-head"><h2>What compounds.</h2><p>A career is more than a sequence of roles. These are the systems, proof points, and habits I bring to the next problem.</p></div>
-      <div class="signal-panels">
-        <article class="signal-panel outcome-panel">
-          <span class="panel-kicker">Commercial & category outcomes</span>
-          <h3>From underdog SaaS platform to AI category leader.</h3>
-          <ul>
-            <li>Helped scale Workvivo through acquisition by Zoom and beyond $100M ARR.</li>
-            <li>Led AI platform positioning and GTM during one of the toughest periods in SaaS.</li>
-            <li>Built migration differentiation that helped capture the majority of Meta's customers after it sunset.</li>
-            <li>Led Analyst releation programs that gave us Leadership status across Gartner, Forrester, G2, ClearBox, and Gartner Peer Insights.</li>
-          </ul>
+    <section id="essentials" class="section shell signal-map">
+      <div class="section-label"><span>+</span> Beyond the work <small>Capability, recognition, momentum</small></div>
+      <div class="section-head compact-head"><h2>The essentials.</h2><p>A concise view of what I bring, how the work is recognised, and how I keep learning.</p></div>
+      <div class="essentials-tabs" role="tablist" aria-label="Beyond the work">
+        <button id="tab-competencies" role="tab" aria-selected="true" aria-controls="panel-competencies" data-essential-tab="competencies"><span>01</span>Competencies</button>
+        <button id="tab-recognition" role="tab" aria-selected="false" aria-controls="panel-recognition" data-essential-tab="recognition" tabindex="-1"><span>02</span>Recognition</button>
+        <button id="tab-learning" role="tab" aria-selected="false" aria-controls="panel-learning" data-essential-tab="learning" tabindex="-1"><span>03</span>Continuous learning</button>
+      </div>
+      <div class="essentials-stage">
+        <article id="panel-competencies" class="essential-panel" role="tabpanel" aria-labelledby="tab-competencies" data-essential-panel="competencies">
+          <div class="essential-content"><span class="panel-kicker">What I repeatedly deliver</span><h3>Strategy through execution.</h3><div class="competency-list"><span>Positioning & narrative</span><span>AI GTM</span><span>Product launches</span><span>Pricing & packaging</span><span>Competitive strategy</span><span>Analyst relations</span><span>Seller enablement</span><span>PMM leadership</span></div></div>
+          <div class="essential-orbit orbit-competencies" aria-hidden="true"><div class="orbit-core"><span>PMM</span></div><i>◇</i><i>↗</i><i>◎</i><i>∆</i></div>
         </article>
-        <article class="signal-panel craft-panel">
-          <span class="panel-kicker">AI practice & learning</span>
-          <h3>I build with AI, not just market it.</h3>
-          <p>Continuous technical upskilling across agentic search, task orchestration, permission-aware RAG, workflow automation, and AI pricing.</p>
-          <div class="learning-note"><span>Learning now</span><strong>Currently enrolled with Product School</strong><p>Deepening how I build, ship, and evaluate AI products—so I can operate as a stronger product partner and AI subject-matter expert.</p></div>
-          <div class="skill-cloud"><span>Positioning</span><span>Category design</span><span>AI GTM</span><span>Pricing</span><span>Competitive strategy</span><span>Analyst relations</span><span>Sales enablement</span><span>Agent building</span></div>
+        <article id="panel-recognition" class="essential-panel" role="tabpanel" aria-labelledby="tab-recognition" data-essential-panel="recognition" hidden>
+          <div class="essential-content"><span class="panel-kicker">How the work is recognised</span><h3>Trusted to lead the work.</h3><div class="award-list"><p><strong>Quarterback of the Year</strong><span>Workvivo · 2026</span></p><p><strong>“World-class PMM”</strong><span>HQ launch peer feedback</span></p><p><strong>LGBTQ+ Inclusion finalist</strong><span>Diversity in Tech · 2022</span></p><p><strong>DE&I Award contributor</strong><span>Invest in Ireland · 2023</span></p></div></div>
+          <div class="essential-orbit orbit-recognition" aria-hidden="true"><div class="orbit-core"><span>★</span></div><i>✦</i><i>◆</i><i>★</i><i>●</i></div>
         </article>
-        <article class="signal-panel project-panel">
-          <span class="panel-kicker">Projects & experiments</span>
-          <h3>Proof of curiosity.</h3>
-          <a href="https://github.com/shaunaleebrennan/ai-positioning-qa" target="_blank" rel="noreferrer"><strong>AI Positioning QA</strong><span>AI-first PMM experiment ↗</span></a>
-          <div><strong>Workvivo HQ + HQ Agent</strong><span>AI portfolio GTM</span></div>
-          <div><strong>Seer + The Listening Gap</strong><span>Research-led category narrative</span></div>
-        </article>
-        <article class="signal-panel recognition-panel">
-          <span class="panel-kicker">Recognition & contribution</span>
-          <h3>How I work—and what I stand for.</h3>
-          <div class="recognition-list">
-            <p><strong>Quarterback of the Year</strong><span>Professional recognition · Workvivo, 2026</span></p>
-            <p><strong>HQ launch peer testimonial</strong><span>Public feedback · AI portfolio launch</span></p>
-            <p><strong>LGBTQ+ Inclusion finalist</strong><span>Values in action · Diversity in Tech Awards, 2022</span></p>
-            <p><strong>DE&I Award contributor</strong><span>Community contribution · Invest in Ireland, 2023</span></p>
-          </div>
+        <article id="panel-learning" class="essential-panel" role="tabpanel" aria-labelledby="tab-learning" data-essential-panel="learning" hidden>
+          <div class="essential-content"><span class="panel-kicker">How I keep moving forward</span><h3>Learn. Build. Apply.</h3><div class="certificate-list"><a href="https://certificate.productschool.com/80a9097d-7d40-4b71-a943-01ac715a5d21#acc.BunwTeYZ" target="_blank" rel="noreferrer"><strong>AI Product Strategy for Leaders</strong><span>Product School · 2026 ↗</span></a><a href="https://certificate.productschool.com/bd44f14a-0971-4b70-9ec5-3032c2f28783#acc.edT8a2Lp" target="_blank" rel="noreferrer"><strong>Go-to-Market Certification</strong><span>Product School · 2026 ↗</span></a><a href="https://maven.com/certificate/cbWgAxSb" target="_blank" rel="noreferrer"><strong>Ready for Launch</strong><span>Maven · 2024 ↗</span></a><a href="https://www.credly.com/badges/2a6917bf-6328-444d-898b-ea32a8b1f802/public_url" target="_blank" rel="noreferrer"><strong>Product Launches 101</strong><span>Appcues · 2023 ↗</span></a></div></div>
+          <div class="essential-orbit orbit-learning" aria-hidden="true"><div class="orbit-core"><span>↗</span></div><i>✓</i><i>+</i><i>∞</i><i>✦</i></div>
         </article>
       </div>
     </section>
@@ -148,7 +140,7 @@
       <p id="work-dialog-summary"></p>
       <div class="work-dialog-detail"><span>What this demonstrates</span><p id="work-dialog-demonstrates"></p></div>
       <div class="work-dialog-detail"><span>Evidence in this portfolio</span><p id="work-dialog-proof"></p></div>
-      <a id="work-dialog-link" class="button primary" target="_blank" rel="noreferrer">Explore the source <span>↗</span></a>
+      <a id="work-dialog-link" class="button primary">Read the full case study <span>→</span></a>
     </div>
   </dialog>
   <elevenlabs-convai

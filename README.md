@@ -75,7 +75,7 @@ Repository files do **not** automatically sync to ElevenLabs. When the knowledge
 
 ### Configuration and maintenance
 
-- **Widget placement and copy:** edit the `<elevenlabs-convai>` attributes near the bottom of `index.html`.
+- **Widget appearance, placement, avatar, and copy:** manage these in the ElevenLabs workspace. The embed in `index.html` intentionally supplies only the agent ID so it does not override the saved widget configuration.
 - **Agent behaviour, voice, model, tools, and knowledge base:** manage these in the ElevenLabs workspace connected to the configured agent.
 - **Approved portfolio knowledge:** maintain the source documents in `knowledge/`, then manually sync approved changes to ElevenLabs.
 - **Visual styling:** the widget uses ElevenLabs' embedded interface; the surrounding Ask me section and handoff copy are styled by the site's CSS.

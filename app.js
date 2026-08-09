@@ -5,10 +5,10 @@ document.querySelector('#capabilities').innerHTML = content.capabilities.map((it
 
 const workGrid = document.querySelector('#work-grid');
 workGrid.innerHTML = content.work.map((item, index) => `
-  <article class="work-card" data-category="${item.category}" data-open-work="${index}" role="button" tabindex="0" aria-label="Open ${item.title} project details">
+  <a class="work-card" data-category="${item.category}" href="./case-study.html?case=${encodeURIComponent(item.slug)}" aria-label="Open ${item.title} case study">
     ${item.image ? `<div class="work-image"><img src="${item.image}" alt="" loading="lazy"></div>` : ''}
     <div class="work-content"><span class="work-number">0${index + 1}</span><span class="tag">${item.tag}</span><span class="arrow">↗</span><h3>${item.title}</h3><p>${item.summary}</p><span class="open-label">View case study</span></div>
-  </article>`).join('');
+  </a>`).join('');
 
 document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => {
   document.querySelectorAll('.filter').forEach(x => x.classList.remove('active'));
@@ -54,28 +54,6 @@ workGrid.addEventListener('click', event => {
   event.stopPropagation();
   railWasDragged = false;
 }, true);
-
-const workDialog = document.querySelector('#work-dialog');
-const workLink = document.querySelector('#work-dialog-link');
-document.querySelectorAll('[data-open-work]').forEach(card => card.addEventListener('click', () => {
-  const item = content.work[Number(card.dataset.openWork)];
-  document.querySelector('#work-dialog-tag').textContent = item.tag;
-  document.querySelector('#work-dialog-title').textContent = item.title;
-  document.querySelector('#work-dialog-summary').textContent = item.summary;
-  document.querySelector('#work-dialog-demonstrates').textContent = item.demonstrates;
-  document.querySelector('#work-dialog-proof').textContent = item.proof;
-  workLink.href = `case-study.html?case=${item.slug}`;
-  workLink.hidden = false;
-  workDialog.showModal();
-}));
-document.querySelectorAll('[data-open-work]').forEach(card => card.addEventListener('keydown', event => {
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    card.click();
-  }
-}));
-document.querySelector('[data-close-work]').addEventListener('click', () => workDialog.close());
-workDialog.addEventListener('click', event => { if (event.target === workDialog) workDialog.close(); });
 
 const essentialTabs = [...document.querySelectorAll('[data-essential-tab]')];
 const selectEssentialTab = tab => {

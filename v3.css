@@ -191,3 +191,5 @@
 @media(max-width:800px){.essentials-tabs{display:flex;overflow-x:auto;scrollbar-width:none}.essentials-tabs button{flex:0 0 auto;padding-right:28px}.essentials-tabs button:after{right:18px}.essential-panel{grid-template-columns:1fr;min-height:0;padding:40px 28px 58px}.essential-orbit{width:min(76vw,360px);grid-row:1}.essential-content{grid-row:2}.essential-content h3{margin-bottom:30px}}
 @media(max-width:520px){.essential-panel .competency-list{grid-template-columns:1fr}.essential-orbit i{width:48px;height:48px;border-radius:15px;font-size:19px}}
 @media(prefers-reduced-motion:reduce){.essential-panel,.essential-orbit{animation:none}}
+
+.certificate-list .course-title{display:flex;min-width:0;max-width:none;flex-direction:column;align-items:flex-start;gap:5px;color:var(--ink);text-align:left}.certificate-list .course-title small{color:var(--acid);font:600 10px Manrope;letter-spacing:.1em;text-transform:uppercase}

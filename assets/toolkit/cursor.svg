@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Cursor</title>
+  <path fill="#8b8b8b" d="M256 43 74 149l182 107V43Z"/>
+  <path fill="#6f6f6f" d="m256 43 182 106H256V43Z"/>
+  <path fill="#666" d="M74 149v213l182-106L74 149Z"/>
+  <path fill="#494949" d="m438 149-92 160 92 53V149Z"/>
+  <path fill="#bdbdbd" d="M74 362 256 469V256L74 362Z"/>
+  <path fill="#b9b9b9" d="m346 309-90 160 182-107-92-53Z"/>
+  <path fill="#f0f0f0" d="M74 149h364L256 469V256L74 149Z"/>
+</svg>

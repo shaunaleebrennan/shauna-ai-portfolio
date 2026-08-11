@@ -3,13 +3,18 @@ document_type: portfolio_knowledge_base
 person: Shauna Brennan
 target_role: Head of Product Marketing
 focus: AI-first, fast-growing AI companies
-version: 0.2
-last_reviewed: 2026-08-08
+version: 0.3
+last_reviewed: 2026-08-11
 ---
 
 ## Current learning
 
-Shauna is currently enrolled with Product School, deepening her understanding of how AI products are built, shipped, evaluated, and improved. No specific course title or credential is claimed in this version.
+Shauna is currently completing two courses:
+
+- AI Engineer Agentic Track: The Complete Agent & MCP Course from Udemy.
+- Advanced AI Agents Certification for PMs from Product School.
+
+Both courses are in progress. Do not describe either course as completed or as an earned certification until the portfolio is updated with completion evidence.
 
 # Shauna Brennan
 

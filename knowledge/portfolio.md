@@ -3,8 +3,8 @@ document_type: portfolio_knowledge_base
 person: Shauna Brennan
 target_role: Head of Product Marketing
 focus: AI-first, fast-growing AI companies
-version: 0.3
-last_reviewed: 2026-08-11
+version: 0.4
+last_reviewed: 2026-09-17
 ---
 
 ## Current learning
@@ -33,6 +33,10 @@ She helped scale Workvivo from approximately $10M ARR to more than $100M ARR thr
 - Helped relaunch the platform as AI-native, supporting significant expansion ARR. Do not quantify expansion ARR without an approved source.
 - Drove GTM, competitive differentiation, and sales motions after Workvivo became Meta's only preferred Workplace migration partner. Workvivo captured almost 80% of Meta's customer base and more than doubled ARR; these are company/motion outcomes, not solely personal outcomes.
 - Advanced analyst-relations programs associated with recognition from Gartner, Forrester, G2, ClearBox, and Gartner Peer Insights.
+
+## Replit Agent recognition
+
+Replit ranks Shauna in the top 1% of Replit Agent users. Replit summarises her demonstrated capability as taking applications from an initial prompt through build and iteration to a deployed production release. This is a Replit-generated assessment based on app usage, updated 16 September 2026; do not describe it as an independently assessed software-engineering certification.
 
 ## Operating principle
 

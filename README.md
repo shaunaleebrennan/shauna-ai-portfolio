@@ -82,7 +82,7 @@ Start here:
 - **AI Product Strategy for Leaders** — Product School, 2026
 - **Go-to-Market Certification** — Product School, 2026
 - **Ready for Launch** — Maven, 2024
-- Currently completing Product School's Advanced AI Agents Certification for PMs and the AI Engineer Agentic Track covering agents and MCP.
+- Currently completing the AI Engineer Agentic Track covering agents and MCP.
 
 ## Recognition
 

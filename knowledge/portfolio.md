@@ -9,12 +9,11 @@ last_reviewed: 2026-09-17
 
 ## Current learning
 
-Shauna is currently completing two courses:
+Shauna is currently completing one course:
 
 - AI Engineer Agentic Track: The Complete Agent & MCP Course from Udemy.
-- Advanced AI Agents Certification for PMs from Product School.
 
-Both courses are in progress. Do not describe either course as completed or as an earned certification until the portfolio is updated with completion evidence.
+This course is in progress. Do not describe it as completed or as an earned certification until the portfolio is updated with completion evidence.
 
 ## Completed learning
 

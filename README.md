@@ -30,8 +30,6 @@ Start here:
 
 **Role progression:** Product Marketing Manager → Senior Product Marketing Manager → Lead Product Marketing Manager
 
-Joined October 2022 · Promoted to Senior Product Marketing Manager in October 2024 · Currently Lead Product Marketing Manager
-
 - Joined as Workvivo's founding product marketer and built Product Marketing from the first hire into a five-person function.
 - Lead positioning and go-to-market for Workvivo HQ, HQ Agent, and Seer, translating complex AI and agentic capabilities into differentiated stories for technical and business audiences.
 - Partner with Product and technical teams across enterprise RAG and retrieval, AI search, agents, third-party connectors, permission-aware experiences, and task execution.

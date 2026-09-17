@@ -1,7 +1,7 @@
 ---
 document_type: portfolio_knowledge_base
 person: Shauna Brennan
-target_role: Technical AI Product Marketing Leader
+target_role: Technical Product Marketing Leader | AI & Agentic Systems
 focus: AI-first, fast-growing AI companies
 version: 0.4
 last_reviewed: 2026-09-17
@@ -22,7 +22,7 @@ Both courses are in progress. Do not describe either course as completed or as a
 
 # Shauna Brennan
 
-Shauna Brennan is a Technical AI Product Marketing Leader focused on fast-growing AI companies. At Workvivo, she was the founding product marketer, operated as a solo PMM for three years, and now leads a team of five.
+Shauna Brennan is a Technical Product Marketing Leader specialising in AI and agentic systems for fast-growing technology companies. At Workvivo, she was the founding product marketer, operated as a solo PMM for three years, and now leads a team of five.
 
 ## Positioning
 

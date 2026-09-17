@@ -4,7 +4,7 @@ The public LinkedIn profile and portfolio evidence provide a starting point, but
 
 ## Current headline hypothesis
 
-Technical AI Product Marketing Leader | Positioning, category creation, and GTM systems for complex B2B products
+Technical Product Marketing Leader | AI & Agentic Systems | Positioning, category creation, and GTM systems for complex B2B products
 
 ## Workvivo questions
 

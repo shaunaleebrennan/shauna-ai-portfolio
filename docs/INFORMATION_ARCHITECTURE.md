@@ -8,7 +8,7 @@ The visitor should experience Shauna’s AI-first PMM judgment rather than merel
 
 **Visitor job:** “Tell me in 30 seconds whether this person is relevant and senior enough.”
 
-- Position: Technical AI Product Marketing Leader
+- Position: Technical Product Marketing Leader | AI & Agentic Systems
 - Value proposition: turns complex AI into a clear reason to believe
 - Four capability signals: positioning, AI-native GTM, PMM leadership, category strategy
 - Operating principle: positioning as a company decision system

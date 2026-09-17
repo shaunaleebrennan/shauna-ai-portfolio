@@ -1,6 +1,6 @@
 # Shauna Azevedo-Brennan
 
-## Technical AI Product Marketing Leader
+## Technical Product Marketing Leader | AI & Agentic Systems
 
 Dublin, Ireland · [Portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/) · [LinkedIn](https://www.linkedin.com/in/shaunalee/) · [GitHub](https://github.com/shaunaleebrennan) · [Email](mailto:shaunaleebrennan@gmail.com) · [Download CV](assets/Shauna-Azevedo-Brennan-CV.pdf)
 

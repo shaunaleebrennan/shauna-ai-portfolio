@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 190" role="img" aria-labelledby="title desc">
+  <title id="title">Workvivo HQ — Repositioning for the AI era</title>
+  <desc id="desc">A compact case study banner.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0b0b11"/>
+      <stop offset="0.7" stop-color="#11101d"/>
+      <stop offset="1" stop-color="#24205b"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="38%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#f5ffd7"/>
+      <stop offset="0.3" stop-color="#baff57"/>
+      <stop offset="0.74" stop-color="#6f5cff"/>
+      <stop offset="1" stop-color="#33245f"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="190" rx="20" fill="url(#bg)"/>
+  <rect width="9" height="190" rx="4.5" fill="#baff57"/>
+  <text x="48" y="132" fill="#baff57" font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="76" font-weight="780">01</text>
+  <line x1="174" y1="42" x2="174" y2="148" stroke="#f7f5f0" stroke-opacity="0.16" stroke-width="2"/>
+  <text x="216" y="69" fill="#baff57" font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="750" letter-spacing="4">WORKVIVO HQ</text>
+  <text x="216" y="132" fill="#f7f5f0" font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="46" font-weight="760">Repositioning for the AI era</text>
+  <g opacity="0.86">
+    <circle cx="1117" cy="95" r="43" fill="url(#orb)"/>
+    <ellipse cx="1117" cy="95" rx="64" ry="48" fill="none" stroke="#baff57" stroke-opacity="0.42" stroke-width="2"/>
+    <circle cx="1061" cy="73" r="7" fill="#ffc0d8"/>
+    <circle cx="1170" cy="111" r="7" fill="#baff57"/>
+  </g>
+</svg>

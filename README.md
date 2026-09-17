@@ -18,23 +18,23 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 ## Selected work
 
-### [01 · Workvivo HQ](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=workvivo-hq)
+### [Workvivo HQ](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=workvivo-hq)
 
-[![Workvivo HQ case study](assets/readme/case-workvivo-hq.jpg)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=workvivo-hq)
+[![Workvivo HQ — Repositioning for the AI era](assets/readme/workvivo-hq-strip.svg)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=workvivo-hq)
 
-Repositioning employee experience for the AI era—without losing the adoption, trust, or culture that made the platform distinctive.
+**Positioning · Category · Launch** — Repositioning employee experience for the AI era without losing the adoption, trust, or culture that made the platform distinctive. I led the strategic positioning, messaging architecture, launch strategy, seller narrative, and analyst framing.
 
-### [02 · AI Product Strategy](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=ai-product-strategy)
+### [AI Product Strategy](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=ai-product-strategy)
 
-[![AI Product Strategy case study](assets/readme/case-ai-product-strategy.jpg)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=ai-product-strategy)
+[![AI Product Strategy — Building the PMM operating model](assets/readme/ai-product-strategy-strip.svg)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=ai-product-strategy)
 
-Designing an AI-enabled PMM operating model through agent prototypes, pricing work, and workflow design.
+**Agents · Pricing · Workflow Design** — Building an AI-enabled PMM operating model through agent prototypes, pricing work, and workflow design. The proof includes this grounded portfolio agent, AI Positioning QA, and reusable research, synthesis, and competitive workflows.
 
-### [03 · HQ Agent](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=hq-agent)
+### [HQ Agent](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=hq-agent)
 
-[![HQ Agent case study](assets/readme/case-hq-agent.jpg)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=hq-agent)
+[![HQ Agent — From search, to answer, to action](assets/readme/hq-agent-strip.svg)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=hq-agent)
 
-Turning enterprise search, grounded answers, and agentic action into one credible commercial progression: **SEARCH → ANSWER → ACTION**.
+**Agentic AI · Trust · Packaging** — Turning enterprise search, grounded answers, and agentic action into one credible commercial progression: **SEARCH → ANSWER → ACTION**. I led the product story, AI maturity narrative, pricing and packaging, and seller enablement.
 
 <details>
 <summary><strong>More evidence-led work</strong></summary>

@@ -28,6 +28,27 @@
       }
     },
     {
+      "slug":"ai-product-strategy",
+      "title":"AI Product Strategy",
+      "category":"technical",
+      "tag":"Technical expertise",
+      "summary":"Learning by building: product strategy, AI pricing, portfolio agents, and hands-on experimentation with the tools reshaping modern GTM.",
+      "demonstrates":"AI product judgment, pricing strategy, agent prototyping, workflow design, technical curiosity, and applied PMM experimentation.",
+      "proof":"Product School coursework, AI pricing study, this portfolio agent, and builds using Claude, ChatGPT, Codex, Replit, Lovable, ElevenLabs, and ZoomMate.",
+      "image":"assets/evidence/ai-product-strategy.jpg",
+      "sourceUrl":"https://github.com/shaunaleebrennan",
+      "caseStudy":{
+        "eyebrow":"Building an AI-enabled PMM operating model",
+        "context":"AI-first Product Marketing is not simply a team using ChatGPT. Shauna has been exploring how AI can change the operating model of PMM itself—and where human judgment must remain accountable.",
+        "challenge":"High-value PMM time disappears into retrieval, repeated seller questions, monitoring, synthesis, recurring research, and first-pass analysis. The strategic question is which work requires human judgment and which work can be processed or automated.",
+        "insight":"AI does more of the processing. PMM remains accountable for the thinking. Retrieval, extraction, monitoring, classification, and repeatable analysis can accelerate; positioning, pricing, claims, category strategy, and executive recommendations still need accountable judgment.",
+        "contribution":["Seller-facing competitive intelligence and automated monitoring","AI-assisted win/loss analysis and lightweight decision tools","AI Positioning QA","This portfolio and its grounded agent experience","Reusable research, synthesis, and PMM workflows","Continued product and AI-pricing study"],
+        "decisions":["Design around workflows rather than collecting tools","Keep a human in the loop for consequential claims and decisions","Encode PMM expertise into evaluation criteria","Use prototypes to learn before deciding whether to build, buy, or stop"],
+        "outcome":"The result is a growing set of practical systems that increase PMM leverage while keeping strategic accountability human. The tools are not the proof; the workflow design and operating choices are.",
+        "learning":"Technical expertise for a PMM is the ability to understand enough of the system to make better product, pricing, trust, and go-to-market decisions."
+      }
+    },
+    {
       "slug":"hq-agent",
       "title":"HQ Agent",
       "category":"launch",
@@ -46,26 +67,6 @@
         "decisions":["Market the buyer value of RAG—not the acronym","Use ‘grounded, cited, and permission-aware’ instead of unsafe absolute claims","Differentiate HQ Agent’s employee support from ZoomMate’s deeper productivity use cases","Price levels of AI value rather than charging for novelty"],
         "outcome":"The result was a portfolio and launch narrative designed to make a technically complex enterprise AI product easier to understand, sell, and evaluate. Shauna shaped the commercial story; she did not engineer the underlying AI system.",
         "learning":"Technical depth matters in Product Marketing when it changes the claim, the value, the packaging, or the buyer’s trust."
-      }
-    },
-    {
-      "slug":"seer",
-      "title":"Seer",
-      "category":"gtm",
-      "tag":"GTM",
-      "summary":"Building a people-intelligence story around the Listening Gap: the distance between what employees say and what organisations act on.",
-      "demonstrates":"Research synthesis, category narrative, thought leadership, product positioning, and a practical GTM frame for employee intelligence.",
-      "proof":"Seer product materials and the supplied 18-page Listening Gap research report.",
-      "image":"assets/evidence/seer.jpg",
-      "caseStudy":{
-        "eyebrow":"Entering the people-intelligence market",
-        "context":"Workvivo expanded into People Intelligence with Seer, moving into a buyer and category conversation adjacent to its employee-experience strengths.",
-        "challenge":"Seer could not sound like another survey platform. The story needed to explain how employee feedback moves beyond collection—turning large volumes of qualitative signal into insight that leaders and managers can act on.",
-        "insight":"The narrative became LISTEN → UNDERSTAND → ACT. The Listening Gap gave the strategy a memorable tension: organisations often collect employee feedback, but struggle to convert what they hear into meaningful action.",
-        "contribution":["Positioning and GTM strategy","Launch strategy","Pricing and packaging","Competitive strategy","Seller narrative and enablement","Hiring a dedicated PMM to scale execution while retaining senior strategy ownership"],
-        "decisions":["Anchor the story in action—not survey collection","Use AI topic grouping, comment analysis, and sentiment as means to insight","Connect executive reporting with practical manager action","Position against established engagement and listening alternatives"],
-        "outcome":"Seer established a people-intelligence expansion story spanning employee listening, AI-assisted insight, manager intelligence, and action. No unverified Seer revenue or adoption metrics are claimed.",
-        "learning":"Adjacent-market entry becomes credible when the narrative explains both the new capability and why the existing brand has earned the right to compete."
       }
     },
     {
@@ -89,27 +90,6 @@
       }
     },
     {
-      "slug":"ai-product-strategy",
-      "title":"AI Product Strategy",
-      "category":"technical",
-      "tag":"Technical expertise",
-      "summary":"Learning by building: product strategy, AI pricing, portfolio agents, and hands-on experimentation with the tools reshaping modern GTM.",
-      "demonstrates":"AI product judgment, pricing strategy, agent prototyping, workflow design, technical curiosity, and applied PMM experimentation.",
-      "proof":"Product School coursework, AI pricing study, this portfolio agent, and builds using Claude, ChatGPT, Codex, Replit, Lovable, ElevenLabs, and ZoomMate.",
-      "image":"assets/evidence/ai-product-strategy.jpg",
-      "sourceUrl":"https://github.com/shaunaleebrennan",
-      "caseStudy":{
-        "eyebrow":"Building an AI-enabled PMM operating model",
-        "context":"AI-first Product Marketing is not simply a team using ChatGPT. Shauna has been exploring how AI can change the operating model of PMM itself—and where human judgment must remain accountable.",
-        "challenge":"High-value PMM time disappears into retrieval, repeated seller questions, monitoring, synthesis, recurring research, and first-pass analysis. The strategic question is which work requires human judgment and which work can be processed or automated.",
-        "insight":"AI does more of the processing. PMM remains accountable for the thinking. Retrieval, extraction, monitoring, classification, and repeatable analysis can accelerate; positioning, pricing, claims, category strategy, and executive recommendations still need accountable judgment.",
-        "contribution":["Seller-facing competitive intelligence and automated monitoring","AI-assisted win/loss analysis and lightweight decision tools","AI Positioning QA","This portfolio and its grounded agent experience","Reusable research, synthesis, and PMM workflows","Continued product and AI-pricing study"],
-        "decisions":["Design around workflows rather than collecting tools","Keep a human in the loop for consequential claims and decisions","Encode PMM expertise into evaluation criteria","Use prototypes to learn before deciding whether to build, buy, or stop"],
-        "outcome":"The result is a growing set of practical systems that increase PMM leverage while keeping strategic accountability human. The tools are not the proof; the workflow design and operating choices are.",
-        "learning":"Technical expertise for a PMM is the ability to understand enough of the system to make better product, pricing, trust, and go-to-market decisions."
-      }
-    },
-    {
       "slug":"meta-migration",
       "title":"The Meta Migration",
       "category":"competitive",
@@ -129,6 +109,26 @@
         "outcome":"The wider migration motion helped Workvivo capture the majority of the available Workplace customer opportunity and double ARR. Workvivo also won Forrester’s 2026 B2B Return on Integration Honors for the way teams, functions, processes, and execution aligned around the opportunity. These are company outcomes; Shauna played a significant GTM role and did not independently win the migration business or award.",
         "award":{"title":"2026 B2B Return on Integration Honors","issuer":"Forrester","description":"Forrester recognised Workvivo for creating exceptional business value by aligning product, engineering, sales, marketing, customer success, and partnerships around one strategic migration mission.","url":"https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/"},
         "learning":"When a market window is short, clarity and coordination become competitive advantages. The best displacement story makes both the move and the destination feel compelling."
+      }
+    },
+    {
+      "slug":"seer",
+      "title":"Seer",
+      "category":"gtm",
+      "tag":"GTM",
+      "summary":"Building a people-intelligence story around the Listening Gap: the distance between what employees say and what organisations act on.",
+      "demonstrates":"Research synthesis, category narrative, thought leadership, product positioning, and a practical GTM frame for employee intelligence.",
+      "proof":"Seer product materials and the supplied 18-page Listening Gap research report.",
+      "image":"assets/evidence/seer.jpg",
+      "caseStudy":{
+        "eyebrow":"Entering the people-intelligence market",
+        "context":"Workvivo expanded into People Intelligence with Seer, moving into a buyer and category conversation adjacent to its employee-experience strengths.",
+        "challenge":"Seer could not sound like another survey platform. The story needed to explain how employee feedback moves beyond collection—turning large volumes of qualitative signal into insight that leaders and managers can act on.",
+        "insight":"The narrative became LISTEN → UNDERSTAND → ACT. The Listening Gap gave the strategy a memorable tension: organisations often collect employee feedback, but struggle to convert what they hear into meaningful action.",
+        "contribution":["Positioning and GTM strategy","Launch strategy","Pricing and packaging","Competitive strategy","Seller narrative and enablement","Hiring a dedicated PMM to scale execution while retaining senior strategy ownership"],
+        "decisions":["Anchor the story in action—not survey collection","Use AI topic grouping, comment analysis, and sentiment as means to insight","Connect executive reporting with practical manager action","Position against established engagement and listening alternatives"],
+        "outcome":"Seer established a people-intelligence expansion story spanning employee listening, AI-assisted insight, manager intelligence, and action. No unverified Seer revenue or adoption metrics are claimed.",
+        "learning":"Adjacent-market entry becomes credible when the narrative explains both the new capability and why the existing brand has earned the right to compete."
       }
     }
   ]

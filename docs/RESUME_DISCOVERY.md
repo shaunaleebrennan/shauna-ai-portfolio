@@ -4,7 +4,7 @@ The public LinkedIn profile and portfolio evidence provide a starting point, but
 
 ## Current headline hypothesis
 
-AI-first Head of Product Marketing | Positioning, category creation, and GTM systems for complex B2B products
+Technical AI Product Marketing Leader | Positioning, category creation, and GTM systems for complex B2B products
 
 ## Workvivo questions
 

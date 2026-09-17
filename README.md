@@ -1,6 +1,6 @@
 # Shauna Azevedo-Brennan — AI Product Marketing Portfolio
 
-An evidence-led, AI-native portfolio for Shauna Brennan, an AI Product Marketing leader specialising in positioning, go-to-market strategy, product launches, analyst relations, competitive displacement, and AI-enabled PMM.
+An evidence-led, AI-native portfolio for Shauna Brennan, a Technical AI Product Marketing Leader specialising in positioning, go-to-market strategy, product launches, analyst relations, competitive displacement, and AI-enabled PMM.
 
 **Live site:** [shaunaleebrennan.github.io/shauna-ai-portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/)
 

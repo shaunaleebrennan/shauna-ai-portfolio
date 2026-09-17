@@ -117,6 +117,32 @@
 
     <section id="explore" class="section shell">
       <div class="section-label"><span>02</span> Explore the evidence</div>
+      <section class="proof-finder" aria-labelledby="proof-finder-title" data-proof-finder data-search-endpoint="" hidden>
+        <div class="proof-finder-intro">
+          <span class="proof-finder-kicker"><img src="./assets/toolkit/voyage-ai.svg" alt=""> Semantic evidence search · Voyage AI</span>
+          <h2 id="proof-finder-title">Find the proof.</h2>
+          <p>Describe the experience you want to verify. I’ll surface the closest case-study evidence and verified proof points—no generated answers.</p>
+        </div>
+        <div class="proof-finder-search">
+          <form class="proof-search-form" role="search" data-proof-form>
+            <label class="visually-hidden" for="proof-query">What experience would you like evidence of?</label>
+            <input id="proof-query" name="query" type="search" required minlength="2" maxlength="240" autocomplete="off" placeholder="e.g. launching agentic AI for enterprise buyers" data-proof-query>
+            <button type="submit" data-proof-submit>Find evidence <span aria-hidden="true">↗</span></button>
+          </form>
+          <div class="proof-suggestions" aria-label="Suggested searches">
+            <span>Try:</span>
+            <button type="button" data-proof-suggestion="Agentic AI">Agentic AI</button>
+            <button type="button" data-proof-suggestion="Technical GTM">Technical GTM</button>
+            <button type="button" data-proof-suggestion="Analyst relations">Analyst relations</button>
+            <button type="button" data-proof-suggestion="PMM leadership">PMM leadership</button>
+          </div>
+          <p class="proof-privacy">Powered by MongoDB Voyage AI. Please don’t enter confidential information.</p>
+          <p class="proof-status" role="status" aria-live="polite" aria-atomic="true" data-proof-status></p>
+        </div>
+        <div class="proof-results" data-proof-results hidden>
+          <ol aria-label="Evidence matches" data-proof-list></ol>
+        </div>
+      </section>
       <div class="section-head work-section-head">
         <h2>Selected work</h2>
         <div class="work-head-meta">
@@ -201,5 +227,6 @@
   ></elevenlabs-convai>
   <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
   <script src="app.js" type="module"></script>
+  <script src="evidence-search.js" type="module"></script>
 </body>
 </html>

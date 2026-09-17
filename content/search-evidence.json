@@ -1,0 +1,242 @@
+[
+  {
+    "id": "workvivo-hq-category-repositioning",
+    "title": "Workvivo HQ: Repositioning for the AI era",
+    "eyebrow": "Category strategy",
+    "category": "Workvivo HQ",
+    "excerpt": "Workvivo HQ repositioned the employee experience platform for an AI-native era without discarding its strengths in adoption, culture, frontline reach, and trust. The central idea—Give work a home—framed one destination where employees can communicate, find trusted answers, take action, and understand what is happening.",
+    "href": "./case-study.html?case=workvivo-hq",
+    "keywords": ["Workvivo HQ", "category strategy", "repositioning", "employee experience", "AI-native", "frontline employees"],
+    "source": "content/portfolio.json#workvivo-hq.caseStudy"
+  },
+  {
+    "id": "workvivo-hq-strategic-contribution",
+    "title": "Workvivo HQ: Strategic contribution",
+    "eyebrow": "Positioning and launch",
+    "category": "Workvivo HQ",
+    "excerpt": "Shauna's contribution covered strategic positioning, category narrative, messaging for IT, HR, and Communications buyers, launch strategy, seller narrative, website story, analyst framing, and the portfolio narrative connecting Workvivo HQ to the broader AI strategy.",
+    "href": "./case-study.html?case=workvivo-hq",
+    "keywords": ["positioning", "launch strategy", "messaging architecture", "seller narrative", "analyst story", "IT", "HR", "Communications"],
+    "source": "content/portfolio.json#workvivo-hq.caseStudy.contribution"
+  },
+  {
+    "id": "workvivo-hq-company-proof",
+    "title": "Workvivo HQ: Company proof points",
+    "eyebrow": "Scale and market context",
+    "category": "Workvivo HQ",
+    "excerpt": "Workvivo publicly launched HQ while serving 9 million users and after surpassing $100 million in annual recurring revenue. These are company proof points from Shauna's tenure, not results attributed to her alone.",
+    "href": "./case-study.html?case=workvivo-hq",
+    "keywords": ["9 million users", "$100M ARR", "company growth", "Workvivo launch", "enterprise scale"],
+    "source": "content/portfolio.json#workvivo-hq.caseStudy.outcome"
+  },
+  {
+    "id": "ai-product-strategy-operating-model",
+    "title": "AI-enabled Product Marketing operating model",
+    "eyebrow": "AI product strategy",
+    "category": "AI Product Strategy",
+    "excerpt": "Shauna is exploring how AI can change Product Marketing's operating model—not simply how a team uses ChatGPT. The work separates tasks suited to retrieval, monitoring, classification, and repeatable analysis from positioning, pricing, claims, category strategy, and executive recommendations that still require accountable human judgment.",
+    "href": "./case-study.html?case=ai-product-strategy",
+    "keywords": ["AI-native GTM", "PMM operating model", "automation", "human judgment", "retrieval", "classification", "workflow design"],
+    "source": "content/portfolio.json#ai-product-strategy.caseStudy"
+  },
+  {
+    "id": "ai-product-strategy-applied-work",
+    "title": "Applied AI Product Marketing experiments",
+    "eyebrow": "Hands-on building",
+    "category": "AI Product Strategy",
+    "excerpt": "The applied work includes seller-facing competitive intelligence, automated monitoring, AI-assisted win/loss analysis, AI Positioning QA, a grounded portfolio agent, and reusable research and synthesis workflows. Prototypes are used to learn before deciding whether to build, buy, or stop.",
+    "href": "./case-study.html?case=ai-product-strategy",
+    "keywords": ["AI Positioning QA", "portfolio agent", "competitive intelligence", "win loss", "prototyping", "research synthesis", "PMM automation"],
+    "source": "content/portfolio.json#ai-product-strategy.caseStudy.contribution"
+  },
+  {
+    "id": "ai-product-strategy-human-accountability",
+    "title": "AI accelerates processing; people own decisions",
+    "eyebrow": "Operating principle",
+    "category": "AI Product Strategy",
+    "excerpt": "The operating principle is clear: AI can accelerate retrieval, processing, and repeatable analysis, while people remain accountable for positioning, pricing, claims, and consequential decisions. The proof is in workflow design and operating choices, not in collecting tools.",
+    "href": "./case-study.html?case=ai-product-strategy",
+    "keywords": ["human in the loop", "accountability", "AI governance", "claims", "pricing", "positioning", "responsible AI"],
+    "source": "README.md#technical-product-marketing-depth"
+  },
+  {
+    "id": "hq-agent-search-answer-action",
+    "title": "HQ Agent: From search to answer to action",
+    "eyebrow": "Agentic AI positioning",
+    "category": "HQ Agent",
+    "excerpt": "HQ Agent extended Workvivo into trusted enterprise answers, search, self-service, and agentic task execution. Shauna shaped the commercial progression SEARCH → ANSWER → ACTION: from finding information, to receiving a grounded answer, to increasingly completing the task.",
+    "href": "./case-study.html?case=hq-agent",
+    "keywords": ["HQ Agent", "agentic AI", "enterprise search", "self-service", "task execution", "search answer action"],
+    "source": "content/portfolio.json#hq-agent.caseStudy"
+  },
+  {
+    "id": "hq-agent-trust-messaging",
+    "title": "HQ Agent: Translating trust architecture",
+    "eyebrow": "Technical narrative",
+    "category": "HQ Agent",
+    "excerpt": "The trust story translated retrieval, permissions, citations, and grounding into buyer value. Instead of unsafe absolute claims, the narrative used precise language such as grounded, cited, and permission-aware—and marketed the buyer value of RAG rather than the acronym itself.",
+    "href": "./case-study.html?case=hq-agent",
+    "keywords": ["RAG", "grounding", "citations", "permissions", "trust", "enterprise AI", "technical messaging"],
+    "source": "content/portfolio.json#hq-agent.caseStudy.decisions"
+  },
+  {
+    "id": "hq-agent-commercialisation",
+    "title": "HQ Agent: Commercialising enterprise AI",
+    "eyebrow": "Pricing, packaging, and launch",
+    "category": "HQ Agent",
+    "excerpt": "Shauna's contribution included product and portfolio positioning, the AI maturity story, competitive framing, seller enablement, and pricing and packaging co-developed with the Revenue leader. The packaging decision was to price levels of AI value rather than charge for novelty.",
+    "href": "./case-study.html?case=hq-agent",
+    "keywords": ["pricing and packaging", "enterprise AI", "commercialisation", "seller enablement", "portfolio positioning", "AI maturity"],
+    "source": "content/portfolio.json#hq-agent.caseStudy.contribution"
+  },
+  {
+    "id": "market-leadership-connected-system",
+    "title": "Market leadership as a connected system",
+    "eyebrow": "Analyst relations",
+    "category": "Market Leadership",
+    "excerpt": "Shauna approached analyst relations as a connected category system rather than a calendar of submissions. The analyst narrative, evidence base, competitive position, customer proof, and go-to-market story needed to reinforce one another across products evolving at different speeds.",
+    "href": "./case-study.html?case=market-leadership",
+    "keywords": ["analyst relations", "category strategy", "competitive intelligence", "evidence", "customer proof", "market leadership"],
+    "source": "content/portfolio.json#market-leadership.caseStudy.insight"
+  },
+  {
+    "id": "market-leadership-contribution",
+    "title": "Analyst narrative and evidence development",
+    "eyebrow": "Market credibility",
+    "category": "Market Leadership",
+    "excerpt": "The work spanned analyst narrative and executive storytelling, briefings and RFI development, evidence and customer-proof development, competitive positioning, claims governance, portfolio alignment, and campaigns that translated recognition into market-facing proof.",
+    "href": "./case-study.html?case=market-leadership",
+    "keywords": ["analyst briefing", "RFI", "claims governance", "executive storytelling", "competitive positioning", "campaign strategy"],
+    "source": "content/portfolio.json#market-leadership.caseStudy.contribution"
+  },
+  {
+    "id": "market-leadership-independent-recognition",
+    "title": "Recognition across analyst and review platforms",
+    "eyebrow": "External validation",
+    "category": "Market Leadership",
+    "excerpt": "Workvivo received recognition across Gartner, Forrester, G2, ClearBox, Gartner Peer Insights, and SoftwareReviews. Shauna played a substantial role in the program, while independent analysts and reviewers controlled their own evaluations and outcomes.",
+    "href": "./case-study.html?case=market-leadership",
+    "keywords": ["Gartner", "Forrester", "G2", "ClearBox", "Gartner Peer Insights", "SoftwareReviews", "analyst recognition"],
+    "source": "content/portfolio.json#market-leadership.caseStudy.outcome"
+  },
+  {
+    "id": "meta-migration-market-opportunity",
+    "title": "Meta migration: Turning disruption into opportunity",
+    "eyebrow": "Competitive displacement",
+    "category": "The Meta Migration",
+    "excerpt": "When Meta announced the closure of Workplace, Workvivo was named its only preferred migration partner. The go-to-market challenge was to move quickly, differentiate against competitors, reduce migration risk, reassure customers, and turn a time-bound market event into durable commercial opportunity.",
+    "href": "./case-study.html?case=meta-migration",
+    "keywords": ["Meta Workplace", "migration", "competitive displacement", "preferred migration partner", "market disruption", "GTM"],
+    "source": "content/portfolio.json#meta-migration.caseStudy"
+  },
+  {
+    "id": "meta-migration-strategic-contribution",
+    "title": "Meta migration: GTM contribution",
+    "eyebrow": "Migration positioning",
+    "category": "The Meta Migration",
+    "excerpt": "Shauna played a significant go-to-market role across migration positioning, competitive differentiation, seller strategy and enablement, market messaging, cross-functional coordination, and the customer story. The narrative balanced urgency with confidence in both the migration path and the destination.",
+    "href": "./case-study.html?case=meta-migration",
+    "keywords": ["migration positioning", "seller enablement", "competitive differentiation", "customer story", "cross-functional GTM", "market messaging"],
+    "source": "content/portfolio.json#meta-migration.caseStudy.contribution"
+  },
+  {
+    "id": "meta-migration-forrester-award",
+    "title": "Forrester recognised the migration programme",
+    "eyebrow": "Verified company award",
+    "category": "The Meta Migration",
+    "excerpt": "Workvivo won Forrester's 2026 B2B Return on Integration Honors for aligning product, engineering, sales, marketing, customer success, and partnerships around one migration mission. This was a company outcome; Shauna was a significant GTM contributor, not the sole winner.",
+    "href": "./case-study.html?case=meta-migration",
+    "keywords": ["Forrester award", "B2B Return on Integration Honors", "cross-functional alignment", "Meta migration", "company outcome"],
+    "source": "docs/EVIDENCE_REGISTER.md#evidence-register"
+  },
+  {
+    "id": "seer-listening-gap",
+    "title": "Seer: The Listening Gap",
+    "eyebrow": "Research-led narrative",
+    "category": "Seer",
+    "excerpt": "Seer's story centred on the Listening Gap: organisations often collect employee feedback but struggle to turn what they hear into meaningful action. The narrative moved beyond survey collection through LISTEN → UNDERSTAND → ACT, connecting qualitative signal to insight for leaders and managers.",
+    "href": "./case-study.html?case=seer",
+    "keywords": ["Seer", "Listening Gap", "employee listening", "people intelligence", "research", "listen understand act"],
+    "source": "content/portfolio.json#seer.caseStudy"
+  },
+  {
+    "id": "seer-listening-funnel",
+    "title": "The Listening Funnel framework",
+    "eyebrow": "Thought leadership",
+    "category": "Seer",
+    "excerpt": "The Listening Funnel organised the research around three stages: inclusion in feedback programmes, leadership accountability for what is heard, and visible impact so employees can see change. The action layer recommended designing for every employee, taking visible action, holding leaders accountable, closing the loop, and breaking down feedback silos.",
+    "href": "./case-study.html?case=seer",
+    "keywords": ["Listening Funnel", "inclusion", "leadership accountability", "visible impact", "frontline feedback", "close the loop"],
+    "source": "knowledge/case-study-listening-gap.md#narrative-structure"
+  },
+  {
+    "id": "seer-market-entry",
+    "title": "Seer: Entering people intelligence",
+    "eyebrow": "Adjacent-market GTM",
+    "category": "Seer",
+    "excerpt": "Shauna's contribution covered positioning, go-to-market and launch strategy, pricing and packaging, competitive strategy, and seller enablement. The story used AI-assisted topic grouping, comment analysis, and sentiment as means to insight, while keeping practical manager action at the centre. No unverified Seer revenue or adoption metrics are claimed.",
+    "href": "./case-study.html?case=seer",
+    "keywords": ["people intelligence", "adjacent market", "pricing and packaging", "competitive strategy", "sentiment analysis", "manager action"],
+    "source": "content/portfolio.json#seer.caseStudy.contribution"
+  },
+  {
+    "id": "capability-positioning-narrative",
+    "title": "Positioning and narrative",
+    "eyebrow": "Core capability",
+    "category": "Capabilities",
+    "excerpt": "Shauna turns complex products and crowded markets into a focused, ownable reason to choose. Her work connects technical architecture to buyer value, positioning, category strategy, launch narratives, and go-to-market systems that sellers and cross-functional teams can use.",
+    "href": "./index.html#scan",
+    "keywords": ["positioning", "messaging", "narrative", "category strategy", "buyer value", "technical product marketing"],
+    "source": "content/portfolio.json#capabilities"
+  },
+  {
+    "id": "capability-ai-native-gtm",
+    "title": "AI-native go-to-market",
+    "eyebrow": "Core capability",
+    "category": "Capabilities",
+    "excerpt": "Shauna uses AI as both product context and operating leverage across research, creation, monitoring, and iteration. Her approach starts with workflows rather than tool collecting and keeps accountable human review around positioning, pricing, claims, and strategic recommendations.",
+    "href": "./index.html#scan",
+    "keywords": ["AI-native GTM", "workflow design", "research", "monitoring", "human review", "product marketing operations"],
+    "source": "content/portfolio.json#capabilities"
+  },
+  {
+    "id": "capability-enterprise-ai-depth",
+    "title": "Enterprise AI and context systems",
+    "eyebrow": "Technical depth",
+    "category": "Capabilities",
+    "excerpt": "Shauna works across enterprise retrieval and RAG, AI search, grounding and citations, permissions, orchestration, agentic workflows, MCP, and enterprise integrations. Her focus is understanding enough of the system to make better product, pricing, trust, and go-to-market decisions.",
+    "href": "./index.html#essentials",
+    "keywords": ["RAG", "AI search", "grounding", "citations", "permissions", "MCP", "orchestration", "enterprise integrations"],
+    "source": "README.md#enterprise-ai-and-context-systems"
+  },
+  {
+    "id": "capability-pmm-leadership",
+    "title": "Product Marketing leadership",
+    "eyebrow": "Core capability",
+    "category": "Capabilities",
+    "excerpt": "Shauna's leadership approach treats Product Marketing as a company capability: define a clear remit, build strong cross-functional interfaces, and create repeatable decision systems and operating rhythms that make the function effective.",
+    "href": "./index.html#scan",
+    "keywords": ["PMM leadership", "product marketing function", "cross-functional leadership", "operating model", "decision systems"],
+    "source": "content/portfolio.json#capabilities"
+  },
+  {
+    "id": "capability-hands-on-building",
+    "title": "Hands-on AI systems",
+    "eyebrow": "Applied technical practice",
+    "category": "Capabilities",
+    "excerpt": "Shauna built and deployed this JSON-driven GitHub Pages portfolio with a grounded conversational agent, and built the public AI Positioning QA project to turn Product Marketing criteria into a repeatable AI-assisted review workflow. She also prototypes research, competitive, win/loss, and recurring PMM workflows.",
+    "href": "./index.html#ask",
+    "keywords": ["GitHub Pages", "portfolio agent", "AI Positioning QA", "coding agents", "prototype", "AI-assisted workflows"],
+    "source": "README.md#hands-on-ai-systems"
+  },
+  {
+    "id": "capability-replit-recognition",
+    "title": "Top 1% of Replit Agent users",
+    "eyebrow": "Applied builder recognition",
+    "category": "Recognition",
+    "excerpt": "Replit ranks Shauna in the top 1% of Replit Agent users and summarises her demonstrated capability as taking applications from an initial prompt through build and iteration to a deployed production release. This is a Replit-generated assessment based on app usage, not an independent software-engineering certification.",
+    "href": "./index.html#essentials",
+    "keywords": ["Replit Agent", "top 1%", "application building", "deployment", "iteration", "AI builder"],
+    "source": "knowledge/portfolio.md#replit-agent-recognition"
+  }
+]

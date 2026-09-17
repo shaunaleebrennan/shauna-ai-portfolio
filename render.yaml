@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: shauna-portfolio-evidence-search
+    runtime: node
+    plan: free
+    buildCommand: cd api && npm test
+    startCommand: cd api && npm start
+    healthCheckPath: /health
+    buildFilter:
+      paths:
+        - api/**
+        - content/search-evidence.json
+    envVars:
+      - key: VOYAGE_API_KEY
+        sync: false
+      - key: VOYAGE_MODEL
+        value: rerank-3-lite
+      - key: VOYAGE_ENDPOINT
+        value: https://ai.mongodb.com/v1/rerank
+      - key: ALLOWED_ORIGINS
+        value: https://shaunaleebrennan.github.io
+      - key: REQUESTS_PER_MINUTE
+        value: "3"

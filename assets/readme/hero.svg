@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-labelledby="title description">
+  <title id="title">Shauna Azevedo-Brennan — Technical Product Marketing Leader</title>
+  <desc id="description">AI and agentic systems. Strategy that ships. Stories that stick.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c0d0d"/>
+      <stop offset="0.58" stop-color="#161321"/>
+      <stop offset="1" stop-color="#211743"/>
+    </linearGradient>
+    <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b7dff"/>
+      <stop offset="0.42" stop-color="#f6c8d8"/>
+      <stop offset="0.7" stop-color="#fff7cb"/>
+      <stop offset="1" stop-color="#c9ff63"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="35%" cy="30%" r="72%">
+      <stop offset="0" stop-color="#fff7cb"/>
+      <stop offset="0.27" stop-color="#f6c8d8"/>
+      <stop offset="0.58" stop-color="#8b7dff"/>
+      <stop offset="1" stop-color="#4c28d7"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="390" rx="28" fill="url(#background)"/>
+  <rect x="0" y="0" width="1200" height="5" rx="2.5" fill="url(#spectrum)"/>
+  <circle cx="1052" cy="194" r="126" fill="#8b7dff" opacity="0.18" filter="url(#glow)"/>
+  <circle cx="1052" cy="194" r="101" fill="none" stroke="#ffffff" stroke-opacity="0.14"/>
+  <circle cx="1052" cy="194" r="69" fill="none" stroke="#ffffff" stroke-opacity="0.1"/>
+  <circle cx="1052" cy="194" r="39" fill="url(#orb)"/>
+  <circle cx="956" cy="127" r="10" fill="#f6c8d8"/>
+  <circle cx="1139" cy="162" r="8" fill="#c9ff63"/>
+  <circle cx="974" cy="285" r="7" fill="#fff7cb"/>
+  <path d="M964 132C1000 105 1096 94 1135 154" fill="none" stroke="#f6c8d8" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round"/>
+  <path d="M978 280C1042 316 1115 282 1137 169" fill="none" stroke="#c9ff63" stroke-opacity="0.38" stroke-width="2" stroke-linecap="round"/>
+  <text x="70" y="70" fill="#c9ff63" font-family="Inter, Manrope, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3">SHAUNA AZEVEDO-BRENNAN</text>
+  <text x="70" y="151" fill="#f2f3ed" font-family="Inter, Manrope, Arial, sans-serif" font-size="57" font-weight="700" letter-spacing="-2.4">Technical Product Marketing</text>
+  <text x="70" y="216" fill="#f2f3ed" font-family="Inter, Manrope, Arial, sans-serif" font-size="57" font-weight="700" letter-spacing="-2.4">Leader</text>
+  <text x="70" y="265" fill="#b9bdb5" font-family="Inter, Manrope, Arial, sans-serif" font-size="23" font-weight="500">AI &amp; Agentic Systems</text>
+  <rect x="70" y="301" width="665" height="1" fill="#ffffff" opacity="0.13"/>
+  <text x="70" y="340" fill="#e2e4de" font-family="Inter, Manrope, Arial, sans-serif" font-size="20">Strategy that ships. Stories that stick.</text>
+</svg>

@@ -1,89 +1,122 @@
-# Shauna Azevedo-Brennan
+![Shauna Azevedo-Brennan — Technical Product Marketing Leader. AI and agentic systems. Strategy that ships. Stories that stick.](assets/readme/hero.png)
 
-## Technical Product Marketing Leader | AI & Agentic Systems
+<h1 align="center">Shauna Azevedo-Brennan</h1>
 
-Dublin, Ireland · [Portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/) · [LinkedIn](https://www.linkedin.com/in/shaunalee/) · [GitHub](https://github.com/shaunaleebrennan) · [Email](mailto:shaunaleebrennan@gmail.com) · [Download CV](assets/Shauna-Azevedo-Brennan-CV.pdf)
+<p align="center"><strong>Technical Product Marketing Leader | AI &amp; Agentic Systems</strong><br>Dublin, Ireland</p>
 
-I turn complex enterprise AI products into clear positioning, differentiated narratives, and go-to-market systems that drive adoption and revenue. I bring 10 years of marketing experience across startup, scale-up, acquisition, and global enterprise environments—and I build with AI myself.
+<p align="center"><a href="https://shaunaleebrennan.github.io/shauna-ai-portfolio/">Portfolio</a> · <a href="assets/Shauna-Azevedo-Brennan-CV.pdf">View CV (PDF)</a> · <a href="https://www.linkedin.com/in/shaunalee/">LinkedIn</a> · <a href="https://github.com/shaunaleebrennan">GitHub</a> · <a href="mailto:shaunaleebrennan@gmail.com">Email</a></p>
 
-My work sits at the intersection of product marketing and technical fluency: enterprise RAG and retrieval, AI search, agentic products, orchestration, integrations, pricing and packaging, product launches, and the coding-agent ecosystem. I work closely with Product, Engineering, Revenue, Sales, and executive teams to connect how a product works to why a buyer, developer, or platform team should care.
+I make complex AI clear—and commercially useful. I lead positioning, category strategy, and go-to-market for enterprise AI and agentic products, turning technical depth into narratives buyers understand, sellers can use, and teams can build around.
 
-## About this portfolio
+Across 10 years in start-up, scale-up, acquisition, and global enterprise environments, I have built a product marketing function, led portfolio positioning, and translated complex product architecture into clear buyer narratives and go-to-market systems. I also build with the technologies reshaping product development, so my technical point of view comes from applied work—not observation.
 
-This repository is the source for my [live portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/). I designed and built the experience to make my work inspectable rather than simply claimed: six evidence-led case studies, a downloadable CV, a live ElevenLabs portfolio agent, and links to public proof.
+## Executive snapshot
 
-The site is a lightweight static application built with semantic HTML, responsive CSS, vanilla JavaScript, and JSON-driven content, then deployed through GitHub Pages. I also implemented consent-aware Google Analytics and maintain the portfolio agent's grounded knowledge base. Replit ranks me in the top 1% of Replit Agent users based on taking applications from an initial prompt through iteration to a deployed production release.
+- **Built Product Marketing 0→5** — joined Workvivo as its founding product marketer and progressed from Product Marketing Manager to Senior PMM to Lead PMM.
+- **Lead enterprise AI portfolio GTM** — positioning, launches, pricing and packaging, analyst strategy, competitive intelligence, and seller enablement across Workvivo HQ, HQ Agent, and Seer.
+- **Worked through scale and acquisition** — during my tenure, Workvivo grew from approximately $10M to [more than $100M ARR](https://www.workvivo.com/newsroom/workvivo-by-zoom-surpasses-100-million-in-annual-recurring-revenue/), reached 9 million users, and became part of Zoom. These are company milestones, not outcomes attributed to me alone.
 
-Start here:
+## Selected work
 
-- [Workvivo HQ — repositioning an enterprise platform for the AI era](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=workvivo-hq)
-- [HQ Agent — commercialising enterprise search, trusted answers, and agentic action](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=hq-agent)
-- [AI Product Strategy — learning by building with agents and modern developer tools](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=ai-product-strategy)
-- [The Meta Migration — an award-winning competitive displacement motion](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=meta-migration)
-- [Market leadership — analyst relations, evidence, and category strategy](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=market-leadership)
+### [01 · Workvivo HQ](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=workvivo-hq)
+
+[![Workvivo HQ case study](assets/readme/case-workvivo-hq.jpg)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=workvivo-hq)
+
+Repositioning employee experience for the AI era—without losing the adoption, trust, or culture that made the platform distinctive.
+
+### [02 · AI Product Strategy](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=ai-product-strategy)
+
+[![AI Product Strategy case study](assets/readme/case-ai-product-strategy.jpg)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=ai-product-strategy)
+
+Designing an AI-enabled PMM operating model through agent prototypes, pricing work, and workflow design.
+
+### [03 · HQ Agent](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=hq-agent)
+
+[![HQ Agent case study](assets/readme/case-hq-agent.jpg)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=hq-agent)
+
+Turning enterprise search, grounded answers, and agentic action into one credible commercial progression: **SEARCH → ANSWER → ACTION**.
+
+<details>
+<summary><strong>More evidence-led work</strong></summary>
+
+- [**The Meta Migration**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=meta-migration) — positioning and enabling a time-critical enterprise migration programme recognised by Forrester.
+- [**Market Leadership**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=market-leadership) — connecting analyst relations, evidence, competitive intelligence, and category strategy.
+- [**Seer**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=seer) — building a people-intelligence story around **LISTEN → UNDERSTAND → ACT**.
+
+</details>
 
 ## Experience
 
 ### Workvivo by Zoom
 
-**Dublin · October 2022–present · Enterprise AI, agents, and platform GTM**
+**Lead Product Marketing Manager** · Dublin · October 2022–present<br>
+**Progression:** Product Marketing Manager → Senior Product Marketing Manager → Lead Product Marketing Manager
 
-**Role progression:** Product Marketing Manager → Senior Product Marketing Manager → Lead Product Marketing Manager
+- Built Workvivo's first product marketing function and grew it into a five-person team.
+- Lead portfolio positioning and GTM for **Workvivo HQ, HQ Agent, and Seer**, spanning enterprise AI search, retrieval, agents, integrations, pricing, and packaging.
+- Turn technical architecture into commercial systems across positioning, launches, seller enablement, analyst strategy, competitive differentiation, and category development.
+- Shaped migration positioning, market messaging, competitive differentiation, and seller enablement for Workvivo's response to the Meta Workplace closure. The wider cross-functional programme received [Forrester's 2026 B2B Return on Integration Honors](https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/).
 
-- Joined as Workvivo's founding product marketer and built Product Marketing from the first hire into a five-person function.
-- Lead positioning and go-to-market for Workvivo HQ, HQ Agent, and Seer, translating complex AI and agentic capabilities into differentiated stories for technical and business audiences.
-- Partner with Product and technical teams across enterprise RAG and retrieval, AI search, agents, third-party connectors, permission-aware experiences, and task execution.
-- Work cross-functionally with Zoom's AI Product and Product Marketing teams to bring ZoomMate capabilities into Workvivo HQ and connect platform-level AI to enterprise positioning and GTM.
-- Shaped the commercial narrative for an AI ecosystem spanning MCP-enabled orchestration, third-party AI assistants, and enterprise system integrations.
-- Own major launches across positioning, messaging, technical storytelling, web, thought leadership, analyst relations, seller enablement, and integrated GTM.
-- Lead pricing and packaging, competitive intelligence, and expansion strategy using market, customer, and commercial insight.
-- Helped Workvivo scale from approximately $10M to more than $100M ARR, through acquisition by Zoom, and to 9 million users globally. These are company milestones during my tenure, not outcomes attributed to me alone.
-- Played a significant GTM role in the Meta Workplace migration motion, which captured the majority of the available customer opportunity, more than doubled company ARR, and won Forrester's 2026 B2B Return on Integration Honors.
+<details>
+<summary><strong>Technical and cross-functional scope</strong></summary>
+
+- Partner with Product and Engineering across enterprise retrieval, AI search, agents, third-party connectors, permission-aware experiences, grounding, citations, and task execution.
+- Work with Zoom's AI Product and Product Marketing teams to bring ZoomMate capabilities into Workvivo HQ.
+- Shape the commercial narrative for an ecosystem spanning MCP-enabled orchestration, third-party AI assistants, and enterprise integrations.
+- Lead pricing and packaging, competitive intelligence, expansion strategy, analyst relations, and category development using market, customer, and commercial insight.
+
+</details>
 
 ### Diligent — Product Marketing Manager
 
 **Dublin · May 2021–September 2022 · Governance, risk, and compliance**
 
-- Owned EMEA go-to-market strategy for complex governance, risk, and compliance technology.
-- Turned technical capabilities into enterprise positioning, regional messaging, buyer content, and commercial programs for C-suite, board, and IT audiences.
-- Partnered across Product, Sales, and Marketing to support regional growth and product adoption.
+Owned EMEA GTM for complex GRC technology, translating technical capabilities into positioning, regional messaging, buyer content, and commercial programmes for C-suite, board, and IT audiences.
 
 ### Glofox, now part of ABC Fitness — Product Marketing Manager
 
 **Dublin · November 2019–May 2021 · B2B SaaS**
 
-- Served as the founding product marketer, building the positioning, messaging, launch, and customer-insight foundation.
-- Used buyer research to sharpen value across the customer journey and support the company's scale-up story.
+Served as founding product marketer, building the positioning, messaging, launch, and customer-insight foundation during the company's scale-up journey.
 
 ### Dencan Restaurants — Marketing Manager
 
 **Canada · June 2017–December 2018 · Franchise B2C marketing**
 
-- Led local, regional, and national campaigns across multiple restaurant brands.
-- Managed more than $2.4M in marketing investment across digital, content, radio, partnerships, and customer engagement.
+Led multi-brand campaigns and managed more than $2.4M in marketing investment across digital, content, radio, partnerships, and customer engagement.
 
-## Relevant technical and GTM depth
+## Technical product marketing depth
 
-- **AI and context systems:** enterprise RAG and retrieval, AI search, grounding and citations, permissions, orchestration, agentic workflows, MCP, and enterprise integrations
-- **Developer and AI tools:** Claude Code, Cursor, GitHub Copilot, Codex, Replit, GitHub, MongoDB Atlas, n8n, Lovable, ElevenLabs, Gemini, and OpenAI
-- **Product marketing:** positioning, messaging, persona and buyer insight, product launches, technical content, pricing and packaging, competitive intelligence, seller enablement, analyst relations, and category strategy
-- **Leadership:** PMM function building, hiring, cross-functional strategy, executive communication, and translating technical decisions into commercial impact
+### Enterprise AI and context systems
 
-## Applied AI work
+Enterprise retrieval and RAG · AI search · grounding and citations · permissions · orchestration · agentic workflows · MCP · enterprise integrations
 
-- Built and deployed this portfolio and its grounded conversational agent.
-- Build AI-assisted workflows for research, synthesis, competitive intelligence, positioning QA, win/loss analysis, and recurring PMM operations.
-- Use agent and coding tools in day-to-day work to understand emerging builder workflows firsthand.
-- Apply a clear operating principle: AI can accelerate retrieval, processing, and repeatable analysis; people remain accountable for positioning, pricing, claims, and consequential decisions.
+### Commercial systems
 
-## Education and continued learning
+Positioning and category strategy · buyer insight · technical narratives · launches · pricing and packaging · competitive intelligence · analyst relations · seller enablement
 
-**Higher education**
+### Hands-on AI systems
 
-- **Innovation & Enterprise Development, Level 9 Postgraduate qualification** — Trinity College Dublin, 2020
-- **Creative Digital Media, Level 8 Bachelor's degree** — Technological University Dublin, 2013
+The tools are not the proof; the workflow design and operating choices are.
 
-**Continuous learning**
+- Built and deployed this JSON-driven portfolio on GitHub Pages, with an ElevenLabs conversational agent grounded in curated portfolio evidence.
+- Built [**AI Positioning QA**](https://github.com/shaunaleebrennan/ai-positioning-qa), a public project that turns product-marketing criteria into a repeatable AI-assisted review workflow.
+- Prototype AI-assisted workflows for research synthesis, competitive monitoring, positioning QA, win/loss analysis, and recurring PMM operations.
+- Use coding agents and developer tools to test workflow choices and understand builder constraints firsthand.
+
+> **Operating principle:** AI can accelerate retrieval, processing, and repeatable analysis. People remain accountable for positioning, pricing, claims, and consequential decisions.
+
+**Selected tools:** Claude Code, Codex, Cursor, GitHub Copilot, Replit, GitHub, MongoDB Atlas, n8n, ElevenLabs, Gemini, and OpenAI.
+
+## Education and recognition
+
+### Higher education
+
+- **Innovation & Enterprise Development, Level 9 postgraduate qualification** — Trinity College Dublin, 2020
+- **Creative Digital Media, Level 8 bachelor's degree** — Technological University Dublin, 2013
+
+<details>
+<summary><strong>Certifications and continued learning</strong></summary>
 
 - [**Agentic Workflows & Loops Certification**](https://certificate.productschool.com/8dc6671f-4211-4cc2-93be-5131ebd8c0db) — Product School, 2026
 - [**AI Product Strategy for Leaders**](https://certificate.productschool.com/80a9097d-7d40-4b71-a943-01ac715a5d21#acc.BunwTeYZ) — Product School, 2026
@@ -91,13 +124,19 @@ Start here:
 - [**Ready for Launch**](https://maven.com/certificate/cbWgAxSb) — Maven, 2024
 - Currently completing [**AI Engineer Agentic Track: The Complete Agent & MCP Course**](https://www.udemy.com/course/the-complete-agentic-ai-engineering-course/).
 
-## Recognition
+</details>
 
-- **Top 1% of Replit Agent users** — Replit, 2026
+### Recognition
+
+- [**Top 1% of Replit Agent users**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#explore) — Replit, 2026
 - **Quarterback of the Year** — Workvivo, 2026
-- **B2B Return on Integration Honors** — Forrester recognised Workvivo's cross-functional Meta migration motion, 2026
-- **Commitment to Diversity, Equality & Inclusion Award** — Invest in Ireland recognised Diligent's Pride ERG work, co-led by Shauna, 2023
+- [**B2B Return on Integration Honors**](https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/) — awarded by Forrester to Workvivo's cross-functional Meta migration programme, 2026
+- **Commitment to Diversity, Equality & Inclusion Award** — Invest in Ireland recognition for Diligent's Pride ERG, co-led by Shauna, 2023
 
----
+## About this portfolio
 
-This README is a role-focused résumé and guide to the supporting evidence. For the full experience, [visit the portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/) or [ask the portfolio agent](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#ask).
+This repository powers my [live portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/): six evidence-led case studies, a CV, public proof, and a grounded conversational agent. I designed and built the static experience with semantic HTML, responsive CSS, vanilla JavaScript, JSON-driven content, consent-aware Google Analytics, and GitHub Pages.
+
+Use it in three ways: **[scan](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#scan)** the executive view, **[explore](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#explore)** the evidence, or **[ask](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#ask)** the portfolio agent about my experience and the work behind a case study.
+
+<p align="center"><strong><a href="https://shaunaleebrennan.github.io/shauna-ai-portfolio/">Explore the full portfolio →</a></strong></p>

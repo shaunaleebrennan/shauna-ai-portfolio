@@ -98,12 +98,6 @@ Start here:
 - **B2B Return on Integration Honors** — Forrester recognised Workvivo's cross-functional Meta migration motion, 2026
 - **Commitment to Diversity, Equality & Inclusion Award** — Invest in Ireland recognised Diligent's Pride ERG work, co-led by Shauna, 2023
 
-## Why MongoDB context engineering
-
-MongoDB's context-engineering brief calls for a product marketer who can move between technical practitioners and enterprise decision-makers, understand the agentic development stack, build differentiated technical narratives, and turn them into adoption. That is the direction of my work: leading enterprise-AI product marketing while using coding agents, MCP concepts, automation, and developer tools myself.
-
-I would bring a builder's curiosity, a decade of B2B marketing judgment, hands-on experience translating RAG, search, agent, integration, and trust architecture into buyer value, and a record of driving complex launches across Product, Engineering, Revenue, Sales, analysts, and the market.
-
 ---
 
 This README is a role-focused résumé and guide to the supporting evidence. For the full experience, [visit the portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/) or [ask the portfolio agent](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#ask).

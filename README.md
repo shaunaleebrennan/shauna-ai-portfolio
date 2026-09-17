@@ -24,7 +24,7 @@ Start here:
 
 ## Experience
 
-### Workvivo by Zoom — Acting Head / Lead of Product Marketing
+### Workvivo by Zoom — Lead of Product Marketing
 
 **Dublin · October 2022–present · Enterprise AI, agents, and platform GTM**
 

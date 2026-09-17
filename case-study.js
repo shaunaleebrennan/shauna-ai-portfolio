@@ -34,6 +34,7 @@ if (index === -1) {
           <section class="case-grid"><h2>My contribution</h2><div class="case-copy">${list(study.contribution)}</div></section>
           <section class="case-grid"><h2>Key decisions</h2><div class="case-copy">${list(study.decisions)}</div></section>
           <section class="case-grid"><h2>Outcome</h2><div class="case-copy"><p>${study.outcome}</p></div></section>
+          ${study.award ? `<aside class="case-award"><span>External recognition · ${study.award.issuer}</span><div><h2>${study.award.title}</h2><p>${study.award.description}</p><a href="${study.award.url}" target="_blank" rel="noreferrer">Read the Forrester announcement ↗</a></div></aside>` : ''}
           <aside class="case-quote"><span>What I learned</span><blockquote>${study.learning}</blockquote></aside>
           <nav class="case-actions" aria-label="Case study navigation">
             ${item.sourceUrl ? `<a class="button primary" href="${item.sourceUrl}" target="_blank" rel="noreferrer">View public evidence <span>↗</span></a>` : '<a href="index.html#explore">← Back to selected work</a>'}

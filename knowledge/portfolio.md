@@ -32,6 +32,7 @@ She helped scale Workvivo from approximately $10M ARR to more than $100M ARR thr
 - Led positioning and GTM for Workvivo HQ, HQ Agent, and Seer.
 - Helped relaunch the platform as AI-native, supporting significant expansion ARR. Do not quantify expansion ARR without an approved source.
 - Drove GTM, competitive differentiation, and sales motions after Workvivo became Meta's only preferred Workplace migration partner. Workvivo captured almost 80% of Meta's customer base and more than doubled ARR; these are company/motion outcomes, not solely personal outcomes.
+- Workvivo won Forrester's 2026 B2B Return on Integration Honors for the cross-functional migration motion. This is a verified company award; describe Shauna as a significant GTM contributor, not as the sole winner.
 - Advanced analyst-relations programs associated with recognition from Gartner, Forrester, G2, ClearBox, and Gartner Peer Insights.
 
 ## Replit Agent recognition

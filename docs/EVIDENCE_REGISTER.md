@@ -9,6 +9,7 @@ This register is the publication gate for portfolio claims.
 | Built/led the PMM function | Named experience | Dates, team scope, remit, operating artifacts, references |
 | AI-native GTM | Capability statement | 2–3 specific workflows or experiments and their observed effect |
 | Category/analyst/competitive strategy | Capability statement | Approved examples, artifacts, and attributable outcomes |
+| Workvivo Meta migration won Forrester's 2026 B2B Return on Integration Honors | Verified public company outcome | Forrester winner announcement, published 2 September 2026 |
 
 ## Publication rule
 

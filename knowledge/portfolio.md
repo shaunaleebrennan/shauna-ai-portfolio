@@ -16,6 +16,10 @@ Shauna is currently completing two courses:
 
 Both courses are in progress. Do not describe either course as completed or as an earned certification until the portfolio is updated with completion evidence.
 
+## Completed learning
+
+- Agentic Workflows & Loops Certification from Product School, issued 2 September 2026. The public credential verifies completion and applied knowledge of multi-agent AI systems, collaboration, and complex workflow automation.
+
 # Shauna Brennan
 
 Shauna Brennan is an AI-first Head of Product Marketing focused on fast-growing AI companies. At Workvivo, she was the founding product marketer, operated as a solo PMM for three years, and now leads a team of five.

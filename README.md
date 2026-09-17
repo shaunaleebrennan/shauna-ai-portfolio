@@ -50,7 +50,7 @@ Start here:
 
 ### Glofox, now part of ABC Fitness — Product Marketing Manager
 
-**Dublin · November 2019–May 2021 · B2B SaaS**
+**Dublin · November 2019–May 2021 · Start-up to scale-up to acquisition**
 
 - Served as the founding product marketer, building the positioning, messaging, launch, and customer-insight foundation.
 - Used buyer research to sharpen value across the customer journey and support the company's scale-up story.

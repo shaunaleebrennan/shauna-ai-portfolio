@@ -85,11 +85,11 @@ Start here:
 
 **Continuous learning**
 
-- **Agentic Workflows & Loops Certification** — Product School, 2026
-- **AI Product Strategy for Leaders** — Product School, 2026
-- **Go-to-Market Certification** — Product School, 2026
-- **Ready for Launch** — Maven, 2024
-- Currently completing the AI Engineer Agentic Track covering agents and MCP.
+- [**Agentic Workflows & Loops Certification**](https://certificate.productschool.com/8dc6671f-4211-4cc2-93be-5131ebd8c0db) — Product School, 2026
+- [**AI Product Strategy for Leaders**](https://certificate.productschool.com/80a9097d-7d40-4b71-a943-01ac715a5d21#acc.BunwTeYZ) — Product School, 2026
+- [**Go-to-Market Certification**](https://certificate.productschool.com/bd44f14a-0971-4b70-9ec5-3032c2f28783#acc.edT8a2Lp) — Product School, 2026
+- [**Ready for Launch**](https://maven.com/certificate/cbWgAxSb) — Maven, 2024
+- Currently completing [**AI Engineer Agentic Track: The Complete Agent & MCP Course**](https://www.udemy.com/course/the-complete-agentic-ai-engineering-course/).
 
 ## Recognition
 

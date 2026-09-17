@@ -78,8 +78,13 @@ Start here:
 
 ## Education and continued learning
 
+**Higher education**
+
 - **Innovation & Enterprise Development, Level 9 Postgraduate qualification** — Trinity College Dublin, 2020
 - **Creative Digital Media, Level 8 Bachelor's degree** — Technological University Dublin, 2013
+
+**Continuous learning**
+
 - **Agentic Workflows & Loops Certification** — Product School, 2026
 - **AI Product Strategy for Leaders** — Product School, 2026
 - **Go-to-Market Certification** — Product School, 2026

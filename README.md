@@ -57,7 +57,7 @@ Start here:
 
 ### Dencan Restaurants — Marketing Manager
 
-**Canada · June 2017–December 2018 · Multi-brand marketing**
+**Canada · June 2017–December 2018 · Franchise B2C marketing**
 
 - Led local, regional, and national campaigns across multiple restaurant brands.
 - Managed more than $2.4M in marketing investment across digital, content, radio, partnerships, and customer engagement.

@@ -28,7 +28,7 @@ Shauna Brennan is an AI-first Head of Product Marketing focused on fast-growing 
 
 Shauna builds categories, narratives, and go-to-market strategies for enterprise AI products, turning complex technology into clear buyer value, market momentum, and commercial growth.
 
-She helped scale Workvivo from approximately $10M ARR to more than $100M ARR through its acquisition by Zoom. The company grew to more than 10 million users globally. These are company-journey metrics; describe Shauna's contribution as helping to scale the business, not as solely causing the results.
+She helped scale Workvivo from approximately $10M ARR to more than $100M ARR through its acquisition by Zoom. The company reached 9 million users globally. These are company-journey metrics; describe Shauna's contribution as helping to scale the business, not as solely causing the results.
 
 ## Executive outcomes
 

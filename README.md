@@ -1,135 +1,102 @@
-# Shauna Azevedo-Brennan — AI Product Marketing Portfolio
+# Shauna Azevedo-Brennan
 
-An evidence-led, AI-native portfolio for Shauna Brennan, a Technical AI Product Marketing Leader specialising in positioning, go-to-market strategy, product launches, analyst relations, competitive displacement, and AI-enabled PMM.
+## Technical AI Product Marketing Leader
 
-**Live site:** [shaunaleebrennan.github.io/shauna-ai-portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/)
+Dublin, Ireland · [Portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/) · [LinkedIn](https://www.linkedin.com/in/shaunalee/) · [GitHub](https://github.com/shaunaleebrennan) · [Email](mailto:shaunaleebrennan@gmail.com) · [Download CV](assets/Shauna-Azevedo-Brennan-CV.pdf)
 
-## Current experience
+I turn complex enterprise AI products into clear positioning, differentiated narratives, and go-to-market systems that drive adoption and revenue. I bring 10 years of marketing experience across startup, scale-up, acquisition, and global enterprise environments—and I build with AI myself.
 
-The site is designed around four ways to understand Shauna's work:
+My work sits at the intersection of product marketing and technical fluency: enterprise RAG and retrieval, AI search, agentic products, orchestration, integrations, pricing and packaging, product launches, and the coding-agent ecosystem. I work closely with Product, Engineering, Revenue, Sales, and executive teams to connect how a product works to why a buyer, developer, or platform team should care.
 
-1. **Scan me** — a concise executive overview of positioning, AI-native GTM, PMM leadership, and category strategy.
-2. **Explore the work** — a filterable, horizontally scrolling collection of six visual case studies.
-3. **The full picture** — interactive tabs covering core competencies, recognition, and continuous learning, with links to verified certificates.
-4. **Ask me** — a live ElevenLabs voice and text portfolio agent grounded in approved portfolio knowledge.
+## About this portfolio
 
-The hero also includes a downloadable CV and a continuously scrolling AI toolkit featuring GitHub, GitHub Copilot, MongoDB Atlas, Render, ZoomMate, ChatGPT-Live, Claude, Figma, Codex, Claude Code, Lovable, n8n, ElevenLabs, My Notes by Zoom, Gemini, OpenAI, MongoDB, Replit, Clozd, HQ Agent, and hiresteve.ai.
+This repository is the source for my [live portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/). I designed and built the experience to make my work inspectable rather than simply claimed: six evidence-led case studies, a downloadable CV, a live ElevenLabs portfolio agent, and links to public proof.
 
-## Selected work
+The site is a lightweight static application built with semantic HTML, responsive CSS, vanilla JavaScript, and JSON-driven content, then deployed through GitHub Pages. I also implemented consent-aware Google Analytics and maintain the portfolio agent's grounded knowledge base. Replit ranks me in the top 1% of Replit Agent users based on taking applications from an initial prompt through iteration to a deployed production release.
 
-Each project card links to a dedicated case-study page with context, challenge, strategic insight, Shauna's contribution, key decisions, outcome, and learning.
+Start here:
 
-- **Workvivo HQ** — AI GTM and platform positioning
-- **HQ Agent** — agent product launch and commercialisation
-- **Seer** — people-intelligence GTM
-- **Market leadership** — analyst relations and external validation
-- **AI Product Strategy** — technical fluency and AI-enabled PMM workflows
-- **The Meta Migration** — competitive displacement and migration GTM
+- [Workvivo HQ — repositioning an enterprise platform for the AI era](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=workvivo-hq)
+- [HQ Agent — commercialising enterprise search, trusted answers, and agentic action](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=hq-agent)
+- [AI Product Strategy — learning by building with agents and modern developer tools](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=ai-product-strategy)
+- [The Meta Migration — an award-winning competitive displacement motion](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=meta-migration)
+- [Market leadership — analyst relations, evidence, and category strategy](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=market-leadership)
 
-Case-study content is driven from `content/portfolio.json`, so the homepage cards and expanded pages remain consistent.
+## Experience
 
-## Evidence standard
+### Workvivo by Zoom — Acting Head / Lead of Product Marketing
 
-The portfolio separates Shauna's contribution from company-level outcomes and avoids presenting unverified metrics as personal impact.
+**Dublin · October 2022–present · Enterprise AI, agents, and platform GTM**
 
-- Public artifacts are linked where available.
-- Company outcomes are identified as company outcomes.
-- Capability statements describe Shauna's approach without inventing results.
-- Claims and supporting materials are tracked in `docs/EVIDENCE_REGISTER.md` and related evidence documents.
+- Joined as Workvivo's founding product marketer and built Product Marketing from the first hire into a five-person function.
+- Lead positioning and go-to-market for Workvivo HQ, HQ Agent, and Seer, translating complex AI and agentic capabilities into differentiated stories for technical and business audiences.
+- Partner with Product and technical teams across enterprise RAG and retrieval, AI search, agents, third-party connectors, permission-aware experiences, and task execution.
+- Work cross-functionally with Zoom's AI Product and Product Marketing teams to bring ZoomMate capabilities into Workvivo HQ and connect platform-level AI to enterprise positioning and GTM.
+- Shaped the commercial narrative for an AI ecosystem spanning MCP-enabled orchestration, third-party AI assistants, and enterprise system integrations.
+- Own major launches across positioning, messaging, technical storytelling, web, thought leadership, analyst relations, seller enablement, and integrated GTM.
+- Lead pricing and packaging, competitive intelligence, and expansion strategy using market, customer, and commercial insight.
+- Helped Workvivo scale from approximately $10M to more than $100M ARR, through acquisition by Zoom, and to 9 million users globally. These are company milestones during my tenure, not outcomes attributed to me alone.
+- Played a significant GTM role in the Meta Workplace migration motion, which captured the majority of the available customer opportunity, more than doubled company ARR, and won Forrester's 2026 B2B Return on Integration Honors.
 
-## Technology
+### Diligent — Product Marketing Manager
 
-This is a lightweight static site with no build step or package installation.
+**Dublin · May 2021–September 2022 · Governance, risk, and compliance**
 
-- Semantic HTML
-- Responsive CSS with reduced-motion support
-- Vanilla JavaScript modules
-- JSON-driven portfolio and case-study content
-- ElevenLabs Conversational AI widget
-- Google Fonts: Manrope and DM Sans
-- GitHub Pages hosting
+- Owned EMEA go-to-market strategy for complex governance, risk, and compliance technology.
+- Turned technical capabilities into enterprise positioning, regional messaging, buyer content, and commercial programs for C-suite, board, and IT audiences.
+- Partnered across Product, Sales, and Marketing to support regional growth and product adoption.
 
-## ElevenLabs portfolio agent
+### Glofox, now part of ABC Fitness — Product Marketing Manager
 
-### What it is
+**Dublin · November 2019–May 2021 · B2B SaaS**
 
-The **Ask me** experience is a live ElevenLabs Conversational AI agent that lets visitors explore the portfolio through voice or text. It is intended to make the work easier to interrogate: visitors can ask about Shauna's experience, positioning approach, AI workflows, or the evidence behind a project instead of relying only on page navigation.
+- Served as the founding product marketer, building the positioning, messaging, launch, and customer-insight foundation.
+- Used buyer research to sharpen value across the customer journey and support the company's scale-up story.
 
-The agent is an additional way to explore the portfolio, not a replacement for the written case studies or downloadable CV.
+### Dencan Restaurants — Marketing Manager
 
-### How it works
+**Canada · June 2017–December 2018 · Multi-brand marketing**
 
-1. `index.html` includes the `<elevenlabs-convai>` web component and loads ElevenLabs' hosted widget script from `unpkg.com`.
-2. The component connects the site to the configured ElevenLabs agent using its public agent ID.
-3. The floating control in the bottom-right lets a visitor begin a text or voice conversation. Voice use requires the visitor to grant microphone permission; the rest of the portfolio does not.
-4. ElevenLabs runs the conversation and generates responses using the agent instructions and knowledge configured in the ElevenLabs workspace.
-5. The agent should answer from approved portfolio material and avoid inventing evidence, metrics, or responsibilities that the source material does not support.
+- Led local, regional, and national campaigns across multiple restaurant brands.
+- Managed more than $2.4M in marketing investment across digital, content, radio, partnerships, and customer engagement.
 
-The static site contains no ElevenLabs API key. The public agent identifier and widget presentation settings are declared in `index.html`.
+## Relevant technical and GTM depth
 
-### Grounding and source material
+- **AI and context systems:** enterprise RAG and retrieval, AI search, grounding and citations, permissions, orchestration, agentic workflows, MCP, and enterprise integrations
+- **Developer and AI tools:** Claude Code, Cursor, GitHub Copilot, Codex, Replit, GitHub, MongoDB Atlas, n8n, Lovable, ElevenLabs, Gemini, and OpenAI
+- **Product marketing:** positioning, messaging, persona and buyer insight, product launches, technical content, pricing and packaging, competitive intelligence, seller enablement, analyst relations, and category strategy
+- **Leadership:** PMM function building, hiring, cross-functional strategy, executive communication, and translating technical decisions into commercial impact
 
-The `knowledge/` directory contains the approved portfolio material maintained alongside the site, including the central portfolio knowledge base and supporting case-study documents. These files provide a reviewable source for the agent's approved claims.
+## Applied AI work
 
-Repository files do **not** automatically sync to ElevenLabs. When the knowledge files change, the corresponding knowledge-base content and agent instructions must also be updated in the ElevenLabs workspace. The website and agent should be reviewed together so that neither experience contains stale or unsupported claims.
+- Built and deployed this portfolio and its grounded conversational agent.
+- Build AI-assisted workflows for research, synthesis, competitive intelligence, positioning QA, win/loss analysis, and recurring PMM operations.
+- Use agent and coding tools in day-to-day work to understand emerging builder workflows firsthand.
+- Apply a clear operating principle: AI can accelerate retrieval, processing, and repeatable analysis; people remain accountable for positioning, pricing, claims, and consequential decisions.
 
-### Configuration and maintenance
+## Education and continued learning
 
-- **Widget appearance, placement, avatar, and copy:** manage these in the ElevenLabs workspace. The embed in `index.html` intentionally supplies only the agent ID so it does not override the saved widget configuration.
-- **Agent behaviour, voice, model, tools, and knowledge base:** manage these in the ElevenLabs workspace connected to the configured agent.
-- **Approved portfolio knowledge:** maintain the source documents in `knowledge/`, then manually sync approved changes to ElevenLabs.
-- **Visual styling:** the widget uses ElevenLabs' embedded interface; the surrounding Ask me section and handoff copy are styled by the site's CSS.
-- **Testing:** verify both text and voice modes, grounding, microphone permission, mobile behaviour, and clear recovery when the agent cannot support an answer.
+- **Innovation & Enterprise Development, Level 9 Postgraduate qualification** — Trinity College Dublin, 2020
+- **Creative Digital Media, Level 8 Bachelor's degree** — Technological University Dublin, 2013
+- **Agentic Workflows & Loops Certification** — Product School, 2026
+- **AI Product Strategy for Leaders** — Product School, 2026
+- **Go-to-Market Certification** — Product School, 2026
+- **Ready for Launch** — Maven, 2024
+- Currently completing Product School's Advanced AI Agents Certification for PMs and the AI Engineer Agentic Track covering agents and MCP.
 
-Because conversations are handled by an external service, transcript retention, consent, access, and deletion behaviour should be reviewed in the ElevenLabs workspace and kept aligned with the site's privacy expectations. Do not place secrets, private customer information, or unapproved evidence in the public repository or agent knowledge base.
+## Recognition
 
-## Run locally
+- **Top 1% of Replit Agent users** — Replit, 2026
+- **Quarterback of the Year** — Workvivo, 2026
+- **B2B Return on Integration Honors** — Forrester recognised Workvivo's cross-functional Meta migration motion, 2026
+- **Commitment to Diversity, Equality & Inclusion Award** — Invest in Ireland recognised Diligent's Pride ERG work, co-led by Shauna, 2023
 
-The site loads JSON through JavaScript modules, so run it through a local web server rather than opening `index.html` directly:
+## Why MongoDB context engineering
 
-```bash
-python3 -m http.server 4173
-```
+MongoDB's context-engineering brief calls for a product marketer who can move between technical practitioners and enterprise decision-makers, understand the agentic development stack, build differentiated technical narratives, and turn them into adoption. That is the direction of my work: leading enterprise-AI product marketing while using coding agents, MCP concepts, automation, and developer tools myself.
 
-Then open [http://localhost:4173](http://localhost:4173).
+I would bring a builder's curiosity, a decade of B2B marketing judgment, hands-on experience translating RAG, search, agent, integration, and trust architecture into buyer value, and a record of driving complex launches across Product, Engineering, Revenue, Sales, analysts, and the market.
 
-## Repository structure
+---
 
-```text
-.
-├── index.html                  # Main portfolio experience and live agent embed
-├── case-study.html             # Reusable expanded case-study page
-├── app.js                      # Homepage content, filters, carousel, and profile tabs
-├── case-study.js               # Case-study routing and rendering
-├── styles.css                  # Foundation styles
-├── v2.css                      # Earlier visual refinements retained by the page
-├── v3.css                      # Current design, carousel, toolkit, and tab refinements
-├── case-study.css              # Expanded case-study styling
-├── content/
-│   └── portfolio.json          # Capabilities, projects, and case-study copy
-├── knowledge/                  # Reviewable source material for the portfolio agent
-├── assets/
-│   ├── evidence/               # Selected-work artwork
-│   ├── toolkit/                # AI toolkit logos
-│   ├── favicon.svg             # Portfolio orb favicon
-│   └── Shauna-Azevedo-Brennan-CV.pdf
-└── docs/                       # IA, evidence, inventory, and resume-discovery notes
-```
-
-## Content updates
-
-- Edit homepage capabilities, project labels, summaries, and case studies in `content/portfolio.json`.
-- Edit page-level headings, CTAs, profile tabs, certificates, toolkit order, and the ElevenLabs embed in `index.html`.
-- Update the downloadable CV at `assets/Shauna-Azevedo-Brennan-CV.pdf` without changing the filename.
-- Update agent source material in `knowledge/`, then manually sync approved changes to the ElevenLabs knowledge base.
-- Add visual refinements to `v3.css`; keep earlier stylesheets intact unless intentionally consolidating the CSS.
-
-## Publishing
-
-GitHub Pages publishes the repository root from the `main` branch. Changes made on a feature branch must be merged into `main` before they appear on the live site. After merging, allow GitHub Pages time to rebuild and hard-refresh the live page if an older version remains cached.
-
-## Privacy and maintenance
-
-The site uses Google Analytics 4 only after a visitor explicitly accepts analytics through the on-site preference banner. The consent choice is stored locally in the visitor's browser. Advertising storage, ad-user data, ad personalisation, Google signals, and ad-personalisation signals remain disabled.
-
-The ElevenLabs experience should preserve clear user initiation, an accessible text alternative, appropriate transcript handling, and grounding against approved source material. Treat the website and remote agent configuration as two connected surfaces that must be maintained together.
+This README is a role-focused résumé and guide to the supporting evidence. For the full experience, [visit the portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/) or [ask the portfolio agent](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#ask).

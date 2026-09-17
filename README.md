@@ -24,9 +24,13 @@ Start here:
 
 ## Experience
 
-### Workvivo by Zoom — Lead Product Marketing Manager
+### Workvivo by Zoom
 
 **Dublin · October 2022–present · Enterprise AI, agents, and platform GTM**
+
+**Role progression:** Product Marketing Manager → Senior Product Marketing Manager → Lead Product Marketing Manager
+
+Joined October 2022 · Promoted to Senior Product Marketing Manager in October 2024 · Currently Lead Product Marketing Manager
 
 - Joined as Workvivo's founding product marketer and built Product Marketing from the first hire into a five-person function.
 - Lead positioning and go-to-market for Workvivo HQ, HQ Agent, and Seer, translating complex AI and agentic capabilities into differentiated stories for technical and business audiences.

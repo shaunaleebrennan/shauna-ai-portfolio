@@ -130,4 +130,6 @@ GitHub Pages publishes the repository root from the `main` branch. Changes made 
 
 ## Privacy and maintenance
 
+The site uses Google Analytics 4 only after a visitor explicitly accepts analytics through the on-site preference banner. The consent choice is stored locally in the visitor's browser. Advertising storage, ad-user data, ad personalisation, Google signals, and ad-personalisation signals remain disabled.
+
 The ElevenLabs experience should preserve clear user initiation, an accessible text alternative, appropriate transcript handling, and grounding against approved source material. Treat the website and remote agent configuration as two connected surfaces that must be maintained together.

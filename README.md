@@ -100,7 +100,6 @@ Positioning and category strategy · buyer insight · technical narratives · la
 The tools are not the proof; the workflow design and operating choices are.
 
 - Built and deployed this JSON-driven portfolio on GitHub Pages, with an ElevenLabs conversational agent grounded in curated portfolio evidence.
-- Built [**AI Positioning QA**](https://github.com/shaunaleebrennan/ai-positioning-qa), a public project that turns product-marketing criteria into a repeatable AI-assisted review workflow.
 - Prototype AI-assisted workflows for research synthesis, competitive monitoring, positioning QA, win/loss analysis, and recurring PMM operations.
 - Use coding agents and developer tools to test workflow choices and understand builder constraints firsthand.
 

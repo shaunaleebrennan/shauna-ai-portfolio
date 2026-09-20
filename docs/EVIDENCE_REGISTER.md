@@ -21,7 +21,7 @@ Last reviewed: 18 September 2026
 | Analyst, category, and competitive strategy | Approved public self-report with supplied artifacts | Published case study, résumé, campaign artifacts, and evidence inventory; analysts and review platforms controlled their own outcomes |
 | Replit top 1% recognition | Platform assessment | Supplied Replit screenshot dated 16 September 2026 and published portfolio; do not call it an independent engineering certification |
 | Voyage AI evidence-search implementation | Verified public code; deployment in progress | Portfolio repository; do not call the search live until secure Render deployment and endpoint connection are verified |
-| Shauna, Decoded portfolio agent | Verified public artifact plus configured third-party runtime | Public repository contains the widget integration, versioned knowledge pack, routing instructions, build script, and evaluation set; the public portfolio contains the live ElevenLabs widget. Describe Shauna as having designed, configured, tested, and integrated the experience—not engineered ElevenLabs' models or platform runtime |
+| Portfolio Voice Agent | Verified public artifact plus configured third-party runtime | Public repository contains the widget integration and a public-safe architecture and evaluation overview; operational knowledge, routing instructions, build source, and detailed tests remain private. The public portfolio contains the live ElevenLabs widget. Describe Shauna as having designed, configured, tested, and integrated the experience—not engineered ElevenLabs' models or platform runtime |
 
 ## Publication rule
 

@@ -1,6 +1,6 @@
-# Shauna, Decoded — portfolio agent system
+# Portfolio Voice Agent — system overview
 
-Shauna, Decoded is the live voice and text agent embedded in this portfolio. It is designed to help recruiters, hiring managers, and technical stakeholders explore Shauna Brennan's work through focused questions rather than a fixed résumé journey.
+Portfolio Voice Agent is the live voice and text agent embedded in this portfolio. It is designed to help recruiters, hiring managers, and technical stakeholders explore Shauna Brennan's work through focused questions rather than a fixed résumé journey.
 
 ## System design
 

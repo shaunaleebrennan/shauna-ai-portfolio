@@ -60,24 +60,24 @@
     "source": "README.md#technical-product-marketing-depth"
   },
   {
-    "id": "shauna-decoded-agent-architecture",
-    "title": "Shauna, Decoded: Portfolio agent architecture",
+    "id": "portfolio-voice-agent-architecture",
+    "title": "Portfolio Voice Agent: System architecture",
     "eyebrow": "Conversational AI system",
-    "category": "Shauna, Decoded",
+    "category": "Portfolio Voice Agent",
     "excerpt": "Shauna designed a live ElevenLabs voice and text portfolio agent around intent routing, modular RAG, persistent claim controls, focused specialist answer modes, and links back to public evidence. Versioned Markdown sources are converted into upload-ready HTML with a deterministic Node build script.",
-    "href": "./case-study.html?case=shauna-decoded",
+    "href": "./case-study.html?case=portfolio-voice-agent",
     "keywords": ["ElevenLabs", "portfolio agent", "voice agent", "RAG", "intent routing", "knowledge architecture", "Node.js", "context engineering"],
-    "source": "content/portfolio.json#shauna-decoded.caseStudy.architecture"
+    "source": "content/portfolio.json#portfolio-voice-agent.caseStudy.architecture"
   },
   {
-    "id": "shauna-decoded-agent-evaluation",
-    "title": "Shauna, Decoded: Evaluation and claim controls",
+    "id": "portfolio-voice-agent-evaluation",
+    "title": "Portfolio Voice Agent: Evaluation and claim controls",
     "eyebrow": "Agent reliability",
-    "category": "Shauna, Decoded",
+    "category": "Portfolio Voice Agent",
     "excerpt": "The agent uses a 13-question evaluation set with explicit pass criteria to test positioning, technical evidence, ownership boundaries, unsupported claims, role-fit nuance, leadership, and concise voice responses. A canonical claim ledger separates verified facts, public artifacts, self-reported experience, company context, and in-progress work.",
-    "href": "./case-study.html?case=shauna-decoded",
+    "href": "./case-study.html?case=portfolio-voice-agent",
     "keywords": ["agent evaluation", "claim governance", "prompt injection", "attribution", "testing", "guardrails", "AI reliability"],
-    "source": "docs/PORTFOLIO_AGENT_CASE_STUDY.md#evaluation-framework"
+    "source": "docs/PORTFOLIO_VOICE_AGENT_CASE_STUDY.md#evaluation-framework"
   },
   {
     "id": "hq-agent-search-answer-action",

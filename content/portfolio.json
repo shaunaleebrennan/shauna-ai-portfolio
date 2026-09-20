@@ -49,15 +49,15 @@
       }
     },
     {
-      "slug":"shauna-decoded",
-      "title":"Shauna, Decoded",
+      "slug":"portfolio-voice-agent",
+      "title":"Portfolio Voice Agent",
       "category":"technical",
       "tag":"Agent system",
       "summary":"Designing a live voice and text portfolio agent that can route intent, retrieve focused evidence, preserve claim boundaries, and explain the work behind the résumé.",
       "demonstrates":"Conversational AI, agent workflow design, modular RAG, knowledge architecture, evaluation, claim governance, voice UX, and web integration.",
       "proof":"Live ElevenLabs agent embedded in this portfolio, versioned knowledge sources and routing rules, a repeatable source-build process, and a documented 13-question evaluation framework.",
-      "image":"assets/evidence/ai-product-strategy.jpg",
-      "sourceUrl":"https://github.com/shaunaleebrennan/shauna-ai-portfolio/blob/main/docs/PORTFOLIO_AGENT_CASE_STUDY.md",
+      "image":"assets/evidence/portfolio-voice-agent.png",
+      "sourceUrl":"https://github.com/shaunaleebrennan/shauna-ai-portfolio/blob/main/docs/PORTFOLIO_VOICE_AGENT_CASE_STUDY.md",
       "caseStudy":{
         "eyebrow":"Turning a résumé into an evidence-grounded conversation",
         "context":"A static portfolio can show the work, but it cannot adapt to the question a recruiter, hiring manager, or technical stakeholder actually wants answered. Shauna designed a live ElevenLabs experience that lets visitors explore her career, case studies, technical builds, and working principles through voice or text.",

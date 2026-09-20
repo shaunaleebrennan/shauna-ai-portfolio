@@ -1,5 +1,7 @@
 const content = await fetch('./content/portfolio.json').then(response => response.json());
-const slug = new URLSearchParams(window.location.search).get('case');
+const requestedSlug = new URLSearchParams(window.location.search).get('case');
+const legacySlugs = { 'shauna-decoded': 'portfolio-voice-agent' };
+const slug = legacySlugs[requestedSlug] ?? requestedSlug;
 const index = content.work.findIndex(item => item.slug === slug);
 const root = document.querySelector('#case-study');
 

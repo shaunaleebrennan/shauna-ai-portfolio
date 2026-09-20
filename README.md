@@ -39,7 +39,7 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 <details>
 <summary><strong>More evidence-led work</strong></summary>
 
-- [**Portfolio Voice Agent**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=portfolio-voice-agent) — designing a live ElevenLabs voice and text experience around intent routing, modular RAG, evaluation, and claim governance.
+- [**Portfolio Voice Agent**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=portfolio-voice-agent) — creating a custom voice persona and personality, engineering prompts and guardrails, building intent-routing workflows and modular RAG, and comparing model outputs through structured testing.
 - [**The Meta Migration**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=meta-migration) — positioning and enabling a time-critical enterprise migration programme within Workvivo's Forrester-recognised response to a major market disruption.
 - [**Market Leadership**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=market-leadership) — connecting analyst relations, evidence, competitive intelligence, and category strategy.
 - [**Seer**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=seer) — building a people-intelligence story around **LISTEN → UNDERSTAND → ACT**.

@@ -64,9 +64,9 @@
     "title": "Portfolio Voice Agent: System architecture",
     "eyebrow": "Conversational AI system",
     "category": "Portfolio Voice Agent",
-    "excerpt": "Shauna designed a live ElevenLabs voice and text portfolio agent around intent routing, modular RAG, persistent claim controls, focused specialist answer modes, and links back to public evidence. Versioned Markdown sources are converted into upload-ready HTML with a deterministic Node build script.",
+    "excerpt": "Shauna designed a live ElevenLabs voice and text portfolio agent around a custom voice persona, defined personality, intent-routing workflow, modular RAG, persistent claim controls, focused specialist answer modes, and links back to public evidence. Versioned Markdown sources are converted into upload-ready HTML with a deterministic Node build script.",
     "href": "./case-study.html?case=portfolio-voice-agent",
-    "keywords": ["ElevenLabs", "portfolio agent", "voice agent", "RAG", "intent routing", "knowledge architecture", "Node.js", "context engineering"],
+    "keywords": ["ElevenLabs", "portfolio agent", "voice agent", "voice persona", "personality", "RAG", "intent routing", "workflow", "knowledge architecture", "Node.js", "context engineering"],
     "source": "content/portfolio.json#portfolio-voice-agent.caseStudy.architecture"
   },
   {
@@ -74,9 +74,9 @@
     "title": "Portfolio Voice Agent: Evaluation and claim controls",
     "eyebrow": "Agent reliability",
     "category": "Portfolio Voice Agent",
-    "excerpt": "The agent uses a 13-question evaluation set with explicit pass criteria to test positioning, technical evidence, ownership boundaries, unsupported claims, role-fit nuance, leadership, and concise voice responses. A canonical claim ledger separates verified facts, public artifacts, self-reported experience, company context, and in-progress work.",
+    "excerpt": "The agent combines guardrails with a 13-question evaluation set, repeated voice and text testing, test analysis, and comparisons across multiple model outputs. Results informed changes to prompts, model choices, personality, routes, knowledge, answer length, and claim boundaries.",
     "href": "./case-study.html?case=portfolio-voice-agent",
-    "keywords": ["agent evaluation", "claim governance", "prompt injection", "attribution", "testing", "guardrails", "AI reliability"],
+    "keywords": ["agent evaluation", "model comparison", "prompt engineering", "test analysis", "claim governance", "prompt injection", "attribution", "testing", "guardrails", "AI reliability"],
     "source": "docs/PORTFOLIO_VOICE_AGENT_CASE_STUDY.md#evaluation-framework"
   },
   {

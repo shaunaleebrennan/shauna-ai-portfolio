@@ -1,4 +1,4 @@
-const content = await fetch('./content/portfolio.json').then(response => response.json());
+const content = await fetch('./content/portfolio.json', { cache: 'no-store' }).then(response => response.json());
 const requestedSlug = new URLSearchParams(window.location.search).get('case');
 const legacySlugs = { 'shauna-decoded': 'portfolio-voice-agent' };
 const slug = legacySlugs[requestedSlug] ?? requestedSlug;

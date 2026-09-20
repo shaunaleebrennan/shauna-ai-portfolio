@@ -1,4 +1,4 @@
-const content = await fetch('./content/portfolio.json').then(r => r.json());
+const content = await fetch('./content/portfolio.json', { cache: 'no-store' }).then(r => r.json());
 
 document.querySelector('#capabilities').innerHTML = content.capabilities.map((item, i) => `
   <article class="capability"><span>0${i + 1}</span><div><h3>${item.title}</h3><p>${item.description}</p></div></article>`).join('');

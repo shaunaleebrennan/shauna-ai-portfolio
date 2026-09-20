@@ -39,7 +39,7 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 <details>
 <summary><strong>More evidence-led work</strong></summary>
 
-- [**The Meta Migration**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=meta-migration) — positioning and enabling a time-critical enterprise migration programme recognised by Forrester.
+- [**The Meta Migration**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=meta-migration) — positioning and enabling a time-critical enterprise migration programme within Workvivo's Forrester-recognised response to a major market disruption.
 - [**Market Leadership**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=market-leadership) — connecting analyst relations, evidence, competitive intelligence, and category strategy.
 - [**Seer**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=seer) — building a people-intelligence story around **LISTEN → UNDERSTAND → ACT**.
 
@@ -55,7 +55,7 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 - Built Workvivo's first product marketing function and grew it into a five-person team.
 - Lead portfolio positioning and GTM for **Workvivo HQ, HQ Agent, and Seer**, spanning enterprise AI search, retrieval, agents, integrations, pricing, and packaging.
 - Turn technical architecture into commercial systems across positioning, launches, seller enablement, analyst strategy, competitive differentiation, and category development.
-- Shaped migration positioning, market messaging, competitive differentiation, and seller enablement for Workvivo's response to the Meta Workplace closure. The wider cross-functional programme received [Forrester's 2026 B2B Return on Integration Honors](https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/).
+- Shaped migration positioning, market messaging, competitive differentiation, and seller enablement for Workvivo's response to the Meta Workplace closure. [Forrester named Workvivo](https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/) its 2026 B2B Return on Integration Honors winner for a cross-functional response to a major market disruption; this portfolio identifies that work as the Meta migration.
 
 <details>
 <summary><strong>Technical and cross-functional scope</strong></summary>
@@ -129,12 +129,12 @@ The tools are not the proof; the workflow design and operating choices are.
 
 - [**Top 1% of Replit Agent users**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#explore) — Replit, 2026
 - **Quarterback of the Year** — Workvivo, 2026
-- [**B2B Return on Integration Honors**](https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/) — awarded by Forrester to Workvivo's cross-functional Meta migration programme, 2026
+- [**B2B Return on Integration Honors**](https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/) — awarded by Forrester to Workvivo for its cross-functional response to a major market disruption; this portfolio identifies the programme as the Meta migration, 2026
 - **Commitment to Diversity, Equality & Inclusion Award** — Invest in Ireland recognition for Diligent's Pride ERG, co-led by Shauna, 2023
 
 ## About this portfolio
 
-This repository powers my [live portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/): six evidence-led case studies, a CV, public proof, and a grounded conversational agent. I designed and built the static experience with semantic HTML, responsive CSS, vanilla JavaScript, JSON-driven content, consent-aware Google Analytics, and GitHub Pages.
+This repository powers my [live portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/): seven evidence-led case studies, a CV, public proof, and a grounded conversational agent. I designed and built the static experience with semantic HTML, responsive CSS, vanilla JavaScript, JSON-driven content, consent-aware Google Analytics, and GitHub Pages.
 
 Use it in three ways: **[scan](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#scan)** the executive view, **[explore](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#explore)** the evidence, or **[ask](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#ask)** the portfolio agent about my experience and the work behind a case study.
 

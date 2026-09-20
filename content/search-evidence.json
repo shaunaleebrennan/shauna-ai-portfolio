@@ -60,6 +60,26 @@
     "source": "README.md#technical-product-marketing-depth"
   },
   {
+    "id": "shauna-decoded-agent-architecture",
+    "title": "Shauna, Decoded: Portfolio agent architecture",
+    "eyebrow": "Conversational AI system",
+    "category": "Shauna, Decoded",
+    "excerpt": "Shauna designed a live ElevenLabs voice and text portfolio agent around intent routing, modular RAG, persistent claim controls, focused specialist answer modes, and links back to public evidence. Versioned Markdown sources are converted into upload-ready HTML with a deterministic Node build script.",
+    "href": "./case-study.html?case=shauna-decoded",
+    "keywords": ["ElevenLabs", "portfolio agent", "voice agent", "RAG", "intent routing", "knowledge architecture", "Node.js", "context engineering"],
+    "source": "content/portfolio.json#shauna-decoded.caseStudy.architecture"
+  },
+  {
+    "id": "shauna-decoded-agent-evaluation",
+    "title": "Shauna, Decoded: Evaluation and claim controls",
+    "eyebrow": "Agent reliability",
+    "category": "Shauna, Decoded",
+    "excerpt": "The agent uses a 13-question evaluation set with explicit pass criteria to test positioning, technical evidence, ownership boundaries, unsupported claims, role-fit nuance, leadership, and concise voice responses. A canonical claim ledger separates verified facts, public artifacts, self-reported experience, company context, and in-progress work.",
+    "href": "./case-study.html?case=shauna-decoded",
+    "keywords": ["agent evaluation", "claim governance", "prompt injection", "attribution", "testing", "guardrails", "AI reliability"],
+    "source": "docs/PORTFOLIO_AGENT_CASE_STUDY.md#evaluation-framework"
+  },
+  {
     "id": "hq-agent-search-answer-action",
     "title": "HQ Agent: From search to answer to action",
     "eyebrow": "Agentic AI positioning",
@@ -141,10 +161,10 @@
   },
   {
     "id": "meta-migration-forrester-award",
-    "title": "Forrester recognised the migration programme",
+    "title": "Forrester recognised Workvivo's cross-functional response",
     "eyebrow": "Verified company award",
     "category": "The Meta Migration",
-    "excerpt": "Workvivo won Forrester's 2026 B2B Return on Integration Honors for aligning product, engineering, sales, marketing, customer success, and partnerships around one migration mission. This was a company outcome; Shauna was a significant GTM contributor, not the sole winner.",
+    "excerpt": "Forrester named Workvivo its 2026 B2B Return on Integration Honors winner for a cross-functional response to a major market disruption. Shauna's portfolio identifies the recognised programme as the Meta migration and records her as a significant GTM contributor; the award is a company outcome.",
     "href": "./case-study.html?case=meta-migration",
     "keywords": ["Forrester award", "B2B Return on Integration Honors", "cross-functional alignment", "Meta migration", "company outcome"],
     "source": "docs/EVIDENCE_REGISTER.md#evidence-register"

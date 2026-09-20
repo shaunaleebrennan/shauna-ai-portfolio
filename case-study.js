@@ -13,6 +13,9 @@ if (index === -1) {
   document.querySelector('meta[name="description"]').content = item.summary;
 
   const list = items => `<ul>${items.map(value => `<li>${value}</li>`).join('')}</ul>`;
+  const optionalList = (title, items) => items?.length
+    ? `<section class="case-grid case-grid--technical"><h2>${title}</h2><div class="case-copy">${list(items)}</div></section>`
+    : '';
   root.innerHTML = `
     <article>
       <header class="case-hero case-shell">
@@ -33,6 +36,10 @@ if (index === -1) {
           <section class="case-grid"><h2>Strategic insight</h2><div class="case-copy"><p>${study.insight}</p></div></section>
           <section class="case-grid"><h2>My contribution</h2><div class="case-copy">${list(study.contribution)}</div></section>
           <section class="case-grid"><h2>Key decisions</h2><div class="case-copy">${list(study.decisions)}</div></section>
+          ${optionalList('System architecture', study.architecture)}
+          ${optionalList('Tools & implementation', study.tooling)}
+          ${optionalList('Reliability & safeguards', study.safeguards)}
+          ${optionalList('Evaluation', study.validation)}
           <section class="case-grid"><h2>Outcome</h2><div class="case-copy"><p>${study.outcome}</p></div></section>
           ${study.award ? `<aside class="case-award"><span>External recognition · ${study.award.issuer}</span><div><h2>${study.award.title}</h2><p>${study.award.description}</p><a href="${study.award.url}" target="_blank" rel="noreferrer">Read the Forrester announcement ↗</a></div></aside>` : ''}
           <aside class="case-quote"><span>What I learned</span><blockquote>${study.learning}</blockquote></aside>

@@ -2,3 +2,10 @@
 node_modules/
 .env*
 dist/
+
+# Private role preparation and agent operations are not public portfolio assets.
+private-role-prep/
+knowledge/agent-evaluation-set.md
+knowledge/agent-system-prompt-v2.md
+knowledge/elevenlabs/
+scripts/build-elevenlabs-html.mjs

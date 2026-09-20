@@ -1,6 +1,6 @@
 # Portfolio evidence inventory
 
-Last reviewed: 2026-08-08
+Last reviewed: 2026-09-18
 
 This inventory distinguishes public evidence, supplied artifacts, company-level proof, and claims about Shauna's individual contribution.
 
@@ -25,12 +25,10 @@ This inventory distinguishes public evidence, supplied artifacts, company-level 
 - The launch system included a sales narrative, website, launch campaign, social story, product pillars, and HQ Agent messaging.
 - Public peer commentary supports a significant PMM contribution by Shauna to bringing HQ to market.
 
-### Confirmation still needed from Shauna
+### Current public-use boundary
 
-- Exact role, decision rights, and collaborators.
-- Which narrative elements and assets she directly authored, led, or approved.
-- Launch timeline and internal/external audiences.
-- Outcomes that can be attributed to the launch rather than the company overall.
+- Shauna's published portfolio and résumé approve positioning, messaging architecture, launch strategy, seller narrative, analyst framing, and portfolio narrative as public self-report.
+- Do not infer sole ownership, unpublished decision rights, authorship of every asset, engineering ownership, or quantified launch outcomes.
 
 ## The Listening Gap / Seer
 
@@ -44,11 +42,10 @@ This inventory distinguishes public evidence, supplied artifacts, company-level 
 - It organizes the narrative around inclusion, leadership accountability, visible impact, and closing the feedback loop.
 - It ends with five practical actions, connecting research findings to product/category relevance.
 
-### Confirmation still needed from Shauna
+### Current public-use boundary
 
-- Her role in research design, narrative, writing, product positioning, launch, and distribution.
-- Research methodology and source report approval for public reuse.
-- Performance or pipeline outcomes, if any and publishable.
+- Shauna's published portfolio approves positioning, go-to-market, launch strategy, pricing and packaging, competitive strategy, and seller narrative as public self-report.
+- The supplied report supports the Listening Gap and Listening Funnel narrative. It does not establish sole research authorship, authorship of every word, campaign ownership, methodology validation, or quantified performance.
 
 ## Analyst and category proof
 
@@ -64,7 +61,7 @@ These demonstrate the existence of analyst-recognition campaigns and Workvivo's 
 
 ## LinkedIn-derived résumé signals
 
-- Public profile describes Shauna as founding PMM, solo PMM for 3+ years, and acting Head of Product Marketing.
+- Public materials describe Shauna as the founding PMM. The canonical résumé progression is Product Marketing Manager → Senior Product Marketing Manager → Lead Product Marketing Manager; do not use the historic acting-Head wording in portfolio-agent answers.
 - Current public location: Dublin, Ireland.
 - Public launch activity and peer commentary support involvement in the Workvivo HQ launch.
 - Public honors include Workvivo "Quarterback of the Year" (May 2026) and diversity/inclusion recognition from earlier work.

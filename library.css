@@ -2,3 +2,5 @@
 .document-intro h1{font-size:clamp(32px,4vw,50px);margin:20px 0}.document-contents summary{cursor:pointer;color:var(--acid);font-weight:600}.document-contents[open] summary{margin-bottom:20px}.document-copy>h2:first-child{margin-top:0}
 
 .qa-feature{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center;padding:32px;margin:0 0 36px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(120deg,#241e30,#151715)}.qa-feature .eyebrow{color:#d3bcff;font-size:11px}.qa-feature h2{font-size:clamp(25px,3vw,36px);line-height:1.15;margin:14px 0}.qa-feature p:not(.eyebrow){color:var(--muted);max-width:750px;line-height:1.7}.qa-feature-links{display:flex;flex-direction:column;gap:20px}.qa-feature-links a{color:var(--ink);text-underline-offset:5px;font-size:14px}.qa-feature-links a:first-child{color:#d3bcff}@media(max-width:760px){.qa-feature{grid-template-columns:1fr;padding:24px;gap:16px}}
+
+#explore .qa-feature{width:min(calc(100vw - 48px),var(--max))}@media(max-width:760px){#explore .qa-feature{width:calc(100vw - 32px)}}

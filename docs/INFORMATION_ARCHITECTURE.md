@@ -1,51 +1,29 @@
-# Information architecture
+# Portfolio structure
 
-## Product thesis
+The portfolio supports three visitor journeys: a quick career overview, direct inspection of the work, and a focused conversation with the portfolio agent.
 
-The visitor should experience Shauna’s AI-first PMM judgment rather than merely read a résumé. The site moves from fast orientation to proof to conversation.
+## Start with the overview
 
-## 1. SCAN ME
+The [homepage](../index.html) introduces Shauna’s positioning, career, capabilities, recognition, and learning. The CV provides a downloadable résumé.
 
-**Visitor job:** “Tell me in 30 seconds whether this person is relevant and senior enough.”
+## Explore the work
 
-- Position: Technical Product Marketing Leader | AI & Agentic Systems
-- Value proposition: turns complex AI into a clear reason to believe
-- Four capability signals: positioning, AI-native GTM, PMM leadership, category strategy
-- Operating principle: positioning as a company decision system
+The [case-study and knowledge library](../library.html) lists all seven case studies together. Each case study separates context, challenge, strategic insight, contribution, decisions, outcome, learning, and supporting evidence. Technical sections appear where relevant.
 
-## 2. EXPLORE ME
+Every case study has section navigation, direct supporting links, a route back to the library, and a next case study. Sources distinguish public product context, professional self-report, public builds, campaign artifacts, and external company recognition.
 
-**Visitor job:** “Show me how she thinks and what supports the claims.”
+## Read supporting documents
 
-- Featured case study: Workvivo HQ & HQ Agent
-- Leadership case: building PMM as a function
-- AI experiment: AI Positioning QA
-- Strategy case: category, analyst, and competitive strategy
-- Each card must distinguish context, contribution, outcome, and evidence
+Public knowledge notes explain career context and the HQ and Listening Gap narratives. Technical notes cover the Voice Agent and the evidence-search implementation. The evidence register and artifact inventory explain what each source supports. The evidence backlog records gaps without turning them into claims.
 
-## 3. ASK ME
+Readable HTML pages are generated from an explicit allowlist in `content/library.json`. Markdown remains the editable source. Private prompts, operational knowledge, routing configuration, and detailed tests are excluded from the public library.
 
-**Visitor job:** “Let me investigate the questions I care about.”
+## Ask a focused question
 
-- Suggested recruiter questions reduce blank-page friction
-- Text is always available; voice is an enhancement
-- Answers must use approved knowledge only
-- The agent abstains when evidence is missing
+The [portfolio agent](../index.html#ask) provides an additional route into the evidence through voice or text. Case studies and documents remain accessible without using the agent.
 
-## Future case-study schema
+## Maintaining the library
 
-```json
-{
-  "slug": "project-name",
-  "title": "Human-readable title",
-  "context": "Company/product/market situation",
-  "challenge": "The decision or problem",
-  "role": "Shauna's verified scope",
-  "choices": ["Strategic choices and trade-offs"],
-  "work": ["Artifacts or programs"],
-  "outcomes": [{"claim": "Outcome", "source": "Evidence reference"}],
-  "reflection": "What changed in Shauna's thinking",
-  "topics": ["positioning", "ai-gtm"],
-  "visibility": "public"
-}
-```
+Edit the public Markdown source or `content/portfolio.json`, then run `npm ci`, `npm run build`, and `npm run check`. Commit the generated `library.html` and `documents/` pages alongside their source changes. GitHub Pages serves these static files without requiring a runtime Markdown renderer.
+
+Do not add private source directories to the document allowlist. Adding a new document does not authorise publication of private material referenced inside it.

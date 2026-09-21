@@ -1,7 +1,7 @@
 ---
 document_type: case_study
 title: Workvivo HQ go-to-market
-status: evidence_development
+status: public_supporting_note
 topics: [ai-product, positioning, go-to-market, product-marketing, launch]
 public_sources:
   - https://www.workvivo.com/hq/
@@ -48,8 +48,10 @@ HQ Agent extends the story from finding answers to reasoning, recommended next s
 
 Shauna publicly introduced Workvivo HQ on LinkedIn. A colleague publicly thanked her for her "trojan efforts" bringing HQ to market and called it "world class PMM."
 
-Her exact ownership, collaborators, and attributable outcomes must be confirmed before this section becomes a definitive first-person case study.
+Her published case study records positioning, messaging architecture, launch strategy, seller narrative, analyst framing, and portfolio narrative as professional self-report. The supplied deck and campaign materials support the narrative but are not hosted here.
 
-## Agent guardrail
+[Read the full Workvivo HQ case study](../case-study.html?case=workvivo-hq).
+
+## Evidence boundary
 
 Do not attribute company metrics, product adoption, retention, CSAT, analyst placement, or the authorship of specific assets to Shauna unless her role and permission to publish are confirmed.

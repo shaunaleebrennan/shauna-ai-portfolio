@@ -2,6 +2,8 @@
 
 The portfolio’s **Find the proof** module uses MongoDB Voyage AI to rerank a fixed, public evidence corpus. It returns sourced excerpts and links only; it does not generate new claims.
 
+**Status:** implementation available; live deployment is not verified. The production homepage currently leaves the search module hidden and has no configured endpoint.
+
 ## Architecture
 
 - GitHub Pages serves the static portfolio and `evidence-search.js`.

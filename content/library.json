@@ -1,0 +1,65 @@
+[
+  {
+    "id": "career",
+    "title": "Career and leadership",
+    "source": "knowledge/portfolio.md",
+    "category": "Career",
+    "summary": "Experience, progression, team leadership, hands-on builds, and completed learning."
+  },
+  {
+    "id": "hq-narrative",
+    "title": "Workvivo HQ: the narrative",
+    "source": "knowledge/case-study-hq.md",
+    "category": "Strategy",
+    "summary": "How the category idea connects the buyer problem, product pillars, and launch story."
+  },
+  {
+    "id": "listening-gap",
+    "title": "The Listening Gap",
+    "source": "knowledge/case-study-listening-gap.md",
+    "category": "Strategy",
+    "summary": "The listening framework behind the Seer story, with clear attribution."
+  },
+  {
+    "id": "voice-agent",
+    "title": "Portfolio Voice Agent: system overview",
+    "source": "docs/PORTFOLIO_VOICE_AGENT_CASE_STUDY.md",
+    "category": "Technical",
+    "summary": "Voice design, retrieval, routing, safeguards, and evaluation approach."
+  },
+  {
+    "id": "evidence-register",
+    "title": "Claims and sources",
+    "source": "docs/EVIDENCE_REGISTER.md",
+    "category": "Evidence",
+    "summary": "Which statements are public artifacts, professional self-report, or company outcomes."
+  },
+  {
+    "id": "evidence-inventory",
+    "title": "Supporting artifact inventory",
+    "source": "docs/EVIDENCE_INVENTORY.md",
+    "category": "Evidence",
+    "summary": "Public sources and supplied materials, including what is available to inspect."
+  },
+  {
+    "id": "site-architecture",
+    "title": "Portfolio structure",
+    "source": "docs/INFORMATION_ARCHITECTURE.md",
+    "category": "Technical",
+    "summary": "How the portfolio connects a quick overview, case studies, documents, and conversation."
+  },
+  {
+    "id": "search-setup",
+    "title": "Evidence search: implementation notes",
+    "source": "docs/VOYAGE_SEARCH_SETUP.md",
+    "category": "Technical",
+    "summary": "Architecture and deployment instructions for the search prototype; live deployment is pending."
+  },
+  {
+    "id": "evidence-backlog",
+    "title": "Further evidence to add",
+    "source": "docs/RESUME_DISCOVERY.md",
+    "category": "Evidence",
+    "summary": "The remaining evidence that would strengthen the case without inventing impact."
+  }
+]

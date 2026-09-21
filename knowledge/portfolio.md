@@ -1,96 +1,56 @@
----
-document_type: portfolio_knowledge_base
-person: Shauna Brennan
-target_role: Senior Product Marketing Leader | Complex B2B, AI and category-defining products
-focus: Fast-growing technology companies where positioning, category strategy, GTM and AI-native execution matter
-version: 0.5
-last_reviewed: 2026-09-20
----
+# Career and leadership
 
-## Current learning
+Shauna Azevedo-Brennan is a Technical Product Marketing Leader focused on complex B2B products, enterprise AI, and category strategy. Based in Dublin, she connects technical product understanding with positioning, launches, pricing, packaging, and seller enablement.
 
-Shauna is currently completing one course:
+This is a public career summary, aligned with the published résumé. Individual role and contribution statements are professional self-report; company milestones are company context. See the [claims and sources](../docs/EVIDENCE_REGISTER.md).
 
-- AI Engineer Agentic Track: The Complete Agent & MCP Course from Udemy.
+## Experience and progression
 
-This course is in progress. Do not describe it as completed or as an earned certification until the portfolio is updated with completion evidence.
+- **Workvivo by Zoom, October 2022–present:** Product Marketing Manager → Senior Product Marketing Manager → Lead Product Marketing Manager. Founding product marketer; built the first PMM function into a five-person team.
+- **Diligent, May 2021–September 2022:** Product Marketing Manager. Owned EMEA GTM for governance, risk, and compliance technology serving executive, board, and IT audiences.
+- **Glofox, November 2019–May 2021:** Founding product marketer, building positioning, messaging, launch, and customer-insight foundations.
+- **Dencan Restaurants, June 2017–December 2018:** Marketing Manager. Led multi-brand campaigns and managed more than $2.4M in marketing investment. This is managed investment, not generated revenue.
 
-## Completed learning
+## Leadership and commercial scope
 
-- Agentic Workflows & Loops Certification from Product School, issued 2 September 2026. The public credential verifies completion and applied knowledge of multi-agent AI systems, collaboration, and complex workflow automation.
+At Workvivo, Shauna leads portfolio positioning and GTM across Workvivo HQ, HQ Agent, and Seer. Her scope includes launches, pricing and packaging, analyst strategy, competitive intelligence, and seller enablement, working across Product, Engineering, Revenue, and Marketing.
 
-# Shauna Brennan
-
-Shauna Brennan is a senior Product Marketing leader focused on complex B2B, AI-enabled, and category-defining products. At Workvivo, she was the founding product marketer, operated as a solo PMM for three years, and now leads a team of five.
-
-## Positioning
-
-Shauna builds categories, narratives, and go-to-market strategies for complex enterprise products, turning technical capability and market change into clear buyer value, coherent commercial stories, and work GTM teams can use. AI and agentic systems are an increasingly important part of that experience, not the sole definition of it.
-
-She helped scale Workvivo from approximately $10M ARR to more than $100M ARR through its acquisition by Zoom. The company reached 9 million users globally. These are company-journey metrics; describe Shauna's contribution as helping to scale the business, not as solely causing the results.
-
-## Executive outcomes
-
-- Built Workvivo's PMM function from zero to a team of five.
-- Led positioning and GTM for Workvivo HQ, HQ Agent, and Seer.
-- Helped relaunch the platform as AI-native, shaping the positioning, commercial narrative, and go-to-market. Do not infer a revenue result without an approved source.
-- Drove GTM, competitive differentiation, and seller enablement after Workvivo became Meta's only preferred Workplace migration partner. Do not claim a migration share or ARR result without an approved public source.
-- Forrester named Workvivo its 2026 B2B Return on Integration Honors winner for a cross-functional response to a major market disruption. Shauna's portfolio identifies the recognised company programme as the Meta migration and records her as a significant GTM contributor; do not describe her as the sole winner.
-- Advanced analyst-relations programs associated with recognition from Gartner, Forrester, G2, ClearBox, and Gartner Peer Insights.
-
-## Replit Agent recognition
-
-Replit ranks Shauna in the top 1% of Replit Agent users. Replit summarises her demonstrated capability as taking applications from an initial prompt through build and iteration to a deployed production release. This is a Replit-generated assessment based on app usage, updated 16 September 2026; do not describe it as an independently assessed software-engineering certification.
-
-## Operating principle
-
-The best positioning is not only a line on a slide. It is a decision system for the company. It should guide who the product is for, which value matters most, what the company can credibly own, and how product and GTM teams make choices.
-
-## Capability areas
-
-### Positioning and narrative
-
-Turn complex products and crowded markets into a focused, ownable reason to choose.
-
-### AI-native GTM
-
-Use AI as both product context and operating leverage across research, creation, and iteration. Shauna builds agents that reduce repetitive workflows and support sellers, applies AI practices to PMM operations, and advises executive and product teams on AI roadmap, GTM, and pricing.
-
-### PMM leadership
-
-Build PMM as a company capability through a clear remit, strong cross-functional interfaces, and repeatable systems. Shauna built the function from founding/solo PMM to a team of five.
-
-### Category and market strategy
-
-Connect competitive, analyst, buyer, and product signals into a coherent market point of view. Specific public examples are pending evidence.
+During her tenure, Workvivo grew from approximately $10M to more than $100M ARR, reached 9 million users, and became part of Zoom. These are company milestones, not results attributed to Shauna alone. The evidence register distinguishes the externally sourced ARR milestone from self-reported company context.
 
 ## Selected work
 
-### Workvivo HQ and HQ Agent
+- [Workvivo HQ](../case-study.html?case=workvivo-hq): category repositioning, messaging architecture, and launch strategy.
+- [HQ Agent](../case-study.html?case=hq-agent): AI product narrative, trust messaging, pricing, and packaging.
+- [The Meta Migration](../case-study.html?case=meta-migration): migration positioning, competitive differentiation, and seller enablement.
+- [Market leadership](../case-study.html?case=market-leadership): analyst narrative, evidence, and category strategy.
+- [Seer](../case-study.html?case=seer): people-intelligence positioning and market entry.
 
-This is a named portfolio case study related to AI product positioning and GTM. Supporting artifacts, Shauna's exact role, and outcomes must be added before the agent makes more specific claims.
+## Hands-on AI work
 
-### Building the PMM function
+- [Portfolio Voice Agent](../case-study.html?case=portfolio-voice-agent): voice-persona design, prompts, intent routing, knowledge structure, guardrails, evaluation, and web integration using ElevenLabs.
+- [AI Positioning QA](https://github.com/shaunaleebrennan/ai-positioning-qa): a public positioning-review tool with an inspectable rubric and source.
+- [AI Product Strategy](../case-study.html?case=ai-product-strategy): workflow experiments and product judgment applied to PMM operations.
 
-Shauna was Workvivo's founding PMM, remained the solo product marketer for three years, and built the function into a team of five as Head of Product Marketing.
+Shauna designed and integrated the portfolio experience. ElevenLabs supplies the underlying voice models and runtime. Workvivo product engineering is distinct from her product marketing contribution.
 
-### AI Positioning QA
+## Education and continued learning
 
-AI Positioning QA is a public GitHub project at `shaunaleebrennan/ai-positioning-qa`. It explores how AI can pressure-test positioning quality and make strategic feedback more repeatable. This existence claim is supported by the public repository; deeper product claims require repository documentation.
+- Innovation & Enterprise Development, Level 9 postgraduate qualification — Trinity College Dublin, 2020.
+- Creative Digital Media, Level 8 bachelor’s degree — Technological University Dublin, 2013.
+- [Agentic Workflows & Loops Certification](https://certificate.productschool.com/8dc6671f-4211-4cc2-93be-5131ebd8c0db) — Product School, 2026.
+- [AI Product Strategy for Leaders](https://certificate.productschool.com/80a9097d-7d40-4b71-a943-01ac715a5d21) — Product School, 2026.
+- [Go-to-Market Certification](https://certificate.productschool.com/bd44f14a-0971-4b70-9ec5-3032c2f28783) — Product School, 2026.
+- [Ready for Launch](https://maven.com/certificate/cbWgAxSb) — Maven, 2024.
+- AI Engineer Agentic Track: The Complete Agent & MCP Course — Udemy, in progress.
 
-### Category, analyst, and competitive strategy
+## Recognition
 
-This is a capability area connecting category perception, analyst engagement, and competitive decisions around a consistent point of view. Specific examples and results must be verified.
+Workvivo Quarterback of the Year, 2026; contributor to the Diligent Pride ERG’s Invest in Ireland diversity, equality, and inclusion recognition, 2023. Replit’s top 1% assessment is based on platform usage, updated 16 September 2026; it is not an independent engineering certification.
 
-## Agent behavior
+Workvivo’s 2026 Forrester B2B Return on Integration Honors is a company award. The portfolio records Shauna’s significant GTM contribution and identifies the programme as the Meta migration.
 
-- Answer only from this document and other approved knowledge-base sources.
-- Clearly separate capability statements from verified outcomes.
-- Never invent metrics, team sizes, dates, customer names, or scope.
-- When evidence is missing, say what is known and what is not yet verified.
-- Adapt emphasis to the visitor's question without changing or inflating the underlying facts.
-- When discussing role fit, distinguish strongest overlap, closest evidence, and any real transfer or gap.
-- Do not present Shauna as a software engineer, developer advocate, database specialist, security practitioner, or domain expert unless an approved source supports that claim.
-- Do not mention or optimise toward a specific employer unless the visitor introduces that employer or role.
-- Draw from the full body of work rather than repeatedly defaulting to Workvivo HQ.
-- Invite the visitor to explore positioning, launches, category strategy, regional GTM, PMM leadership, AI-first experimentation, seller enablement, or a named case study.
+## Operating principle
+
+AI can accelerate retrieval, processing, and repeatable analysis. People remain accountable for positioning, pricing, claims, and consequential decisions.
+
+[View the CV](../assets/Shauna-Azevedo-Brennan-CV.pdf) · [Browse all case studies and documents](../library.html)

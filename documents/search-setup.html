@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Architecture and deployment instructions for the search prototype; live deployment is pending."><title>Evidence search: implementation notes — Shauna Brennan</title><link rel="icon" href="../assets/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../library.css"><script src="../analytics.js" defer></script></head>
+<body class="resource-page"><a class="skip-link" href="#main">Skip to content</a><header class="nav shell"><a class="brand" href="../index.html"><span>SB</span> Shauna Brennan</a><nav aria-label="Main navigation"><a href="../index.html#explore">Portfolio</a><a href="../library.html">Library</a><a href="../assets/Shauna-Azevedo-Brennan-CV.pdf">CV</a></nav></header><main id="main" class="shell"><div class="document-intro"><a href="../library.html#documents">← All supporting documents</a><p class="eyebrow">Technical · Supporting document</p><h1 id="voyage-evidence-search-setup">Voyage evidence search setup</h1><p>Architecture and deployment instructions for the search prototype; live deployment is pending.</p></div><div class="document-layout"><aside><details class="document-contents"><summary>On this page</summary><nav class="document-toc" aria-label="On this page"><a href="#architecture">Architecture</a><a href="#deploy">Deploy</a><a href="#local-verification">Local verification</a><a href="#operating-controls">Operating controls</a></nav></details><a class="source-link" href="https://github.com/shaunaleebrennan/shauna-ai-portfolio/blob/main/docs/VOYAGE_SEARCH_SETUP.md">Markdown source ↗</a></aside><article class="document-copy">
+<p>The portfolio’s <strong>Find the proof</strong> module uses MongoDB Voyage AI to rerank a fixed, public evidence corpus. It returns sourced excerpts and links only; it does not generate new claims.</p>
+<p><strong>Status:</strong> implementation available; live deployment is not verified. The production homepage currently leaves the search module hidden and has no configured endpoint.</p>
+<h2 id="architecture">Architecture</h2>
+<ul>
+<li>GitHub Pages serves the static portfolio and <code>evidence-search.js</code>.</li>
+<li>Render runs the small Node service in <code>api/</code>.</li>
+<li>The Node service sends the visitor’s query and the fixed records in <code>content/search-evidence.json</code> to <code>rerank-3-lite</code>.</li>
+<li><code>VOYAGE_API_KEY</code> stays in Render. It must never be added to the repository or browser code.</li>
+</ul>
+<h2 id="deploy">Deploy</h2>
+<ol>
+<li>Create a MongoDB Voyage model API key in the MongoDB Atlas console. Choose the <code>any</code> geography for the default <code>https://ai.mongodb.com</code> endpoint. If you create an EU- or US-scoped key, change <code>VOYAGE_ENDPOINT</code> in Render to the geography-specific endpoint Atlas provides.</li>
+<li>In Render, create a Blueprint from this GitHub repository. Render reads <code>render.yaml</code> from the repository root.</li>
+<li>When prompted, enter the key as the secret <code>VOYAGE_API_KEY</code> environment variable.</li>
+<li>Wait for <code>/health</code> to return <code>{ &quot;ok&quot;: true }</code> on the Render service URL.</li>
+<li>Set <code>data-search-endpoint</code> on <code>[data-proof-finder]</code> in <code>index.html</code> to the public Render endpoint, including <code>/api/search</code>.</li>
+<li>Test one suggested query, then commit and push the endpoint change.</li>
+</ol>
+<p>Example endpoint:</p>
+<pre><code class="language-html">data-search-endpoint=&quot;https://YOUR-RENDER-SERVICE.onrender.com/api/search&quot;
+</code></pre>
+<h2 id="local-verification">Local verification</h2>
+<p>From <code>api/</code>:</p>
+<pre><code class="language-bash">npm test
+VOYAGE_API_KEY=&quot;your-local-key&quot; npm start
+</code></pre>
+<p>From the repository root, serve the static site on an allowed local origin:</p>
+<pre><code class="language-bash">python3 -m http.server 8000
+</code></pre>
+<p>Open <code>http://127.0.0.1:8000/</code>. On localhost, the frontend automatically uses <code>http://127.0.0.1:3000/api/search</code> when no deployed endpoint is configured.</p>
+<h2 id="operating-controls">Operating controls</h2>
+<ul>
+<li><code>ALLOWED_ORIGINS</code> is restricted to the GitHub Pages origin in production.</li>
+<li><code>REQUESTS_PER_MINUTE</code> defaults to <code>3</code>, matching the MongoDB Voyage free-trial request limit. Increase it only when the account’s current rate limit supports that traffic.</li>
+<li>The free Render plan can take about a minute to wake after inactivity. The interface keeps the request alive and explains the delay; upgrade the service if first-search latency becomes important.</li>
+<li>Visitor queries are not written to application logs or analytics by this implementation.</li>
+<li>The UI warns visitors not to submit confidential information because queries are sent to the model provider for ranking.</li>
+<li>Change <code>VOYAGE_MODEL</code> in Render if moving from the preview <code>rerank-3-lite</code> model to another supported reranker.</li>
+</ul>
+<p class="document-end"><a href="../library.html">← Return to the library</a></p></article></div></main><footer class="shell"><div><strong>Shauna Brennan</strong><span>Technical Product Marketing Leader</span></div><a href="../library.html">Case studies & documents</a><a href="mailto:shaunaleebrennan@gmail.com">Get in touch</a></footer></body></html>

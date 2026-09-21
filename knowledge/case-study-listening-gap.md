@@ -1,7 +1,7 @@
 ---
 document_type: case_study
 title: The Listening Gap research narrative
-status: evidence_development
+status: public_supporting_note
 topics: [research, thought-leadership, category-strategy, employee-listening]
 source_artifact: Seer_TheListeningGap_Report_V2.pdf
 ---
@@ -38,4 +38,6 @@ This artifact demonstrates the structure of research-led product marketing: defi
 
 ## Contribution status
 
-Shauna supplied the artifact for portfolio development. Her exact contribution to the research, writing, design, product positioning, and campaign must be confirmed before attributing ownership.
+Shauna’s published Seer case study records positioning, GTM, launch strategy, pricing and packaging, competitive strategy, and seller enablement as professional self-report. The supplied 18-page report supports this narrative analysis; it does not establish sole research authorship, authorship of every word, methodology validation, or measured campaign performance. The full report is not hosted in this public repository.
+
+[Read the Seer case study](../case-study.html?case=seer) · [Inspect the evidence inventory](../docs/EVIDENCE_INVENTORY.md).

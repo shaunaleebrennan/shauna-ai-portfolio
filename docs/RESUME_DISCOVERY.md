@@ -1,35 +1,31 @@
-# Résumé discovery backlog
+# Further evidence to add
 
-The public LinkedIn profile and portfolio evidence provide a starting point, but an executive résumé needs verified scope and outcomes.
+The published résumé and case studies already record Shauna’s career dates, progression to Lead Product Marketing Manager, five-person PMM function, and contribution across Workvivo HQ, HQ Agent, Seer, analyst strategy, and the Meta migration. This backlog identifies what could make those stories more concrete.
 
-## Current headline hypothesis
+These are evidence gaps, not claimed results. Add material only when its source, attribution, and permission for public use are established.
 
-Technical Product Marketing Leader | AI & Agentic Systems | Positioning, category creation, and GTM systems for complex B2B products
+## Launch and commercial impact
 
-## Workvivo questions
+For Workvivo HQ, HQ Agent, and Seer, add a shareable launch timeline or specific before-and-after messaging example. Where available, document a measured launch, pipeline, adoption, or enablement outcome with a period, source, and clear account of Shauna’s contribution.
 
-1. What month and year did you join Workvivo, and what titles have you held?
-2. You describe yourself publicly as founding PMM, solo PMM for 3+ years, and acting Head of Product Marketing. When did each phase begin?
-3. What PMM team did you build or lead: headcount, roles, hiring, and reporting line?
-4. For Workvivo HQ, what did you personally own, co-own, influence, or approve?
-5. Which launch outcomes can be shared: pipeline, usage, win rate, analyst response, launch reach, enablement adoption, or sales feedback?
-6. Which other launches or repositioning efforts best demonstrate your range?
-7. What analyst and category programs did you directly lead?
-8. Which AI-native workflows have you built for the PMM function?
+## Pricing and packaging decisions
 
-## Earlier-career questions
+Add a public-safe example of the decision, alternatives considered, and trade-off resolved. Do not disclose internal commercial information or infer a pricing result from participation alone.
 
-1. List employers, titles, and dates before Workvivo.
-2. Which experience best proves SaaS scale, acquisition, international growth, or team leadership?
-3. Which results are measurable and safe to publish?
+## Leadership
 
-## Executive signal questions
+Add a concrete example of team remit, hiring, coaching, or an operating rhythm that improved PMM execution. Keep company outcomes distinct from the effect of the team’s work.
 
-1. What size company and leadership scope are you targeting next?
-2. What do CEOs, CPOs, and CROs repeatedly rely on you for?
-3. What difficult strategic decision are you proudest of making?
-4. What is your distinctive point of view on AI product marketing?
+## Analyst and migration work
 
-## Evidence standard
+Add shareable examples of Shauna’s narrative or enablement contribution. Link original public recognition where available; company campaign artwork is not the underlying analyst report or independent proof of individual ownership.
 
-Every résumé metric must have a source or be explicitly confirmed by Shauna. Company-level metrics must not be presented as personal outcomes without a clear contribution statement.
+## Technical evaluation
+
+A dated, public-safe evaluation summary would strengthen the Voice Agent case: configurations compared, questions tested, recurring failures, changes made, and limitations. An evaluation framework does not establish a measured pass rate.
+
+## Source material not currently public
+
+The HQ sales deck and full Listening Gap report were supplied for portfolio development but are not hosted here. Keep them separate from public downloads unless publication is authorised.
+
+[Claims and sources](EVIDENCE_REGISTER.md) · [Supporting artifact inventory](EVIDENCE_INVENTORY.md)

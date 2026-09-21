@@ -36,15 +36,23 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 **Agentic AI · Trust · Packaging** — Turning enterprise search, grounded answers, and agentic action into one credible commercial progression: **SEARCH → ANSWER → ACTION**. I led the product story, AI maturity narrative, pricing and packaging, and seller enablement.
 
-<details>
-<summary><strong>More evidence-led work</strong></summary>
+### More case studies
 
 - [**Portfolio Voice Agent**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=portfolio-voice-agent) — creating a custom voice persona and personality, engineering prompts and guardrails, building intent-routing workflows and modular RAG, and comparing model outputs through structured testing.
 - [**The Meta Migration**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=meta-migration) — positioning and enabling a time-critical enterprise migration programme within Workvivo's Forrester-recognised response to a major market disruption.
 - [**Market Leadership**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=market-leadership) — connecting analyst relations, evidence, competitive intelligence, and category strategy.
 - [**Seer**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=seer) — building a people-intelligence story around **LISTEN → UNDERSTAND → ACT**.
 
-</details>
+
+## Supporting documents
+
+[Browse the full case-study and knowledge library](https://shaunaleebrennan.github.io/shauna-ai-portfolio/library.html).
+
+- [Career and leadership](knowledge/portfolio.md) — experience, progression, learning, and scope.
+- [Workvivo HQ narrative](knowledge/case-study-hq.md) and [The Listening Gap](knowledge/case-study-listening-gap.md) — strategy and research frameworks.
+- [Voice Agent system overview](docs/PORTFOLIO_VOICE_AGENT_CASE_STUDY.md) — architecture, guardrails, and evaluation approach.
+- [Claims and sources](docs/EVIDENCE_REGISTER.md) and [artifact inventory](docs/EVIDENCE_INVENTORY.md) — what the evidence supports.
+- [Technical and maintenance documentation](docs/README.md) — site structure, search implementation, and further evidence to add.
 
 ## Experience
 
@@ -140,3 +148,7 @@ This repository powers my [live portfolio](https://shaunaleebrennan.github.io/sh
 Use it in three ways: **[scan](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#scan)** the executive view, **[explore](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#explore)** the evidence, or **[ask](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#ask)** the portfolio agent about my experience and the work behind a case study.
 
 <p align="center"><strong><a href="https://shaunaleebrennan.github.io/shauna-ai-portfolio/">Explore the full portfolio →</a></strong></p>
+
+## Maintaining the supporting pages
+
+Run `npm ci`, `npm run build`, and `npm run check` from the repository root. The library and readable document pages are generated from the public sources listed in `content/library.json`. Commit generated pages with their source changes. Operational agent knowledge and prompts remain private.

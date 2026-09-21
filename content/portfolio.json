@@ -16,6 +16,26 @@
       "proof":"Public launch page, 60-slide pitch deck, campaign system, Shauna launch post, and public peer testimonial.",
       "image":"assets/evidence/workvivo-hq.jpg",
       "sourceUrl":"https://www.workvivo.com/hq/",
+      "evidence": [
+        {
+          "title": "Workvivo HQ product page",
+          "url": "https://www.workvivo.com/hq/",
+          "kind": "Public product context",
+          "note": "Shows the product narrative; Shauna’s contribution is described in this case study."
+        },
+        {
+          "title": "Shauna’s launch post",
+          "url": "https://www.linkedin.com/posts/shaunalee_work-has-a-new-address-introducing-workvivo-activity-7472968114830454786-qTjH",
+          "kind": "Public launch activity",
+          "note": "Launch commentary and peer feedback. LinkedIn may require sign-in."
+        },
+        {
+          "title": "Read the narrative notes",
+          "url": "documents/hq-narrative.html",
+          "kind": "Supporting document",
+          "note": "Buyer problem, product pillars, and launch system."
+        }
+      ],
       "caseStudy":{
         "eyebrow":"Repositioning a category for the AI era",
         "context":"Workvivo had established itself as an Employee Experience Platform. As enterprise software moved into an AI-native era, the challenge was bigger than adding AI features to the existing story: the company needed a credible new ambition without abandoning the employee-experience equity that made it distinctive.",
@@ -37,6 +57,26 @@
       "proof":"Product School coursework, AI pricing study, this portfolio agent, and builds using Claude, ChatGPT, Codex, Replit, Lovable, ElevenLabs, and ZoomMate.",
       "image":"assets/evidence/ai-product-strategy.jpg",
       "sourceUrl":"https://github.com/shaunaleebrennan",
+      "evidence": [
+        {
+          "title": "Try AI Positioning QA",
+          "url": "https://shaunaleebrennan.github.io/ai-positioning-qa/",
+          "kind": "Public build",
+          "note": "Browser-based positioning review; human judgment remains accountable."
+        },
+        {
+          "title": "Inspect the rubric and implementation",
+          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa",
+          "kind": "Source repository",
+          "note": "Review the framework, worked example, and validation checks."
+        },
+        {
+          "title": "Explore the Portfolio Voice Agent",
+          "url": "case-study.html?case=portfolio-voice-agent",
+          "kind": "Related case study",
+          "note": "A concrete example of agent design, integration, and evaluation."
+        }
+      ],
       "caseStudy":{
         "eyebrow":"Building an AI-enabled PMM operating model",
         "context":"AI-first Product Marketing is not simply a team using ChatGPT. Shauna has been exploring how AI can change the operating model of PMM itself—and where human judgment must remain accountable.",
@@ -55,16 +95,36 @@
       "tag":"Agent system",
       "summary":"Designing a live voice and text portfolio agent with a custom voice persona, intent-routing workflow, evidence retrieval, guardrails, and systematic model and response testing.",
       "demonstrates":"Conversational AI, voice-persona design, prompt engineering, agent workflow design, intent routing, modular RAG, guardrails, model evaluation, test analysis, and web integration.",
-      "proof":"Live ElevenLabs agent embedded in this portfolio, a voice persona created from Shauna's own voice, documented procedures, versioned prompts and knowledge sources, workflow routing, guardrails, iterative tests, and a structured 13-question evaluation framework.",
+      "proof":"Live ElevenLabs widget, public system overview, and integration source. Private prompts, routing configuration, and detailed evaluation records are not published.",
       "image":"assets/evidence/portfolio-voice-agent.png",
       "sourceUrl":"https://github.com/shaunaleebrennan/shauna-ai-portfolio/blob/main/docs/PORTFOLIO_VOICE_AGENT_CASE_STUDY.md",
+      "evidence": [
+        {
+          "title": "Read the system overview",
+          "url": "documents/voice-agent.html",
+          "kind": "Technical document",
+          "note": "Voice persona, workflow, knowledge design, guardrails, and evaluation framework."
+        },
+        {
+          "title": "Try the portfolio agent",
+          "url": "index.html#ask",
+          "kind": "Live interface",
+          "note": "Ask a career or technical question through the embedded ElevenLabs agent."
+        },
+        {
+          "title": "Inspect the portfolio source",
+          "url": "https://github.com/shaunaleebrennan/shauna-ai-portfolio",
+          "kind": "Source repository",
+          "note": "Public integration code; private prompts, routing configuration, and detailed test records are excluded."
+        }
+      ],
       "caseStudy":{
         "eyebrow":"Turning a résumé into an evidence-grounded conversation",
         "context":"A static portfolio can show the work, but it cannot adapt to the question a recruiter, hiring manager, or technical stakeholder actually wants answered. Shauna designed a live ElevenLabs experience that lets visitors explore her career, case studies, technical builds, and working principles through voice or text. She also created a voice persona from her own voice and gave the agent a defined personality so the experience feels recognisably hers without pretending to be her.",
         "challenge":"The agent needed to be persuasive without becoming a hype machine. It had to answer broad career questions quickly, go deep on named projects, distinguish work Shauna built from products she marketed, link back to public evidence, and avoid turning company outcomes or technical fluency into unsupported personal claims.",
         "insight":"A credible portfolio agent is a voice, context, workflow, and evaluation problem—not simply a prompt. Better answers came from defining the persona, separating durable rules from retrievable evidence, routing different intents to specialist answer modes, comparing model outputs, and analysing failures where attribution, role fit, or technical ownership could drift.",
         "contribution":["Created a custom voice persona from her own recorded voice and defined its personality, tone, conversational style, and answer behaviour","Engineered the system prompts, answer contract, evidence standard, and guardrails","Designed a modular knowledge base around career, technical builds, case studies, learning, recognition, and a canonical claim ledger","Built the workflow and intent-routing conditions for technical questions, case-study deep dives, career history, working style, and role-fit pressure tests","Compared outputs from multiple models and analysed response quality, grounding, tone, and failure patterns","Ran iterative manual and structured tests, then refined prompts, routes, knowledge, and response behaviour","Documented procedures for how the agent handles common intents, evidence, uncertainty, testing, updates, and release review","Integrated the ElevenLabs conversational widget into a responsive GitHub Pages portfolio","Built a Node-based source pipeline that converts maintained Markdown into upload-ready HTML knowledge documents"],
-        "decisions":["Use voice and text as the interface, while keeping public case-study links as the evidence layer","Keep compact identity and claim rules in always-on prompt context; retrieve longer case-study material only when relevant","Route by visitor intent rather than forcing one general prompt to handle every conversation style","Answer technical questions decisively with concrete build evidence, then add ownership boundaries only where they prevent a false inference","Keep knowledge sources versioned in Git so updates are inspectable and repeatable","Treat live platform configuration and repository evidence as separate states; published files document the design but do not prove every console setting is active"],
+        "decisions":["Use voice and text as the interface, while keeping public case-study links as the evidence layer","Keep compact identity and claim rules in always-on prompt context; retrieve longer case-study material only when relevant","Route by visitor intent rather than forcing one general prompt to handle every conversation style","Answer technical questions decisively with concrete build evidence, then add ownership boundaries only where they prevent a false inference","Keep knowledge sources versioned privately, with a public system overview and integration code for visitors to inspect","Treat live platform configuration and repository evidence as separate states; published files document the design but do not prove every console setting is active"],
         "architecture":["ElevenLabs Conversational AI provides the live voice and text runtime embedded through its web component","A custom voice persona created from Shauna's own voice provides a consistent spoken identity, supported by defined personality and conversation rules","A main-agent workflow coordinates specialist intent routes for career, technical evidence, case-study depth, working style, and fit assessment","Two compact prompt documents hold identity, personality, answer policy, and claim controls in persistent context","Nine focused knowledge documents are configured for RAG so the agent retrieves only the evidence relevant to the question","A canonical claim ledger separates externally verified facts, public artifacts, self-reported experience, company context, and work still in progress","Absolute portfolio and repository links let answers point visitors back to inspectable evidence"],
         "tooling":["ElevenLabs Conversational AI for the agent runtime, custom voice persona, speech interface, workflow, model configuration, and knowledge retrieval","Prompt engineering and conversation design for personality, response structure, routing, and behavioural boundaries","Structured evaluation and qualitative analysis for comparing model outputs and finding recurring failure patterns","HTML, CSS, and vanilla JavaScript for the portfolio and widget integration","Markdown and structured front matter as the editable knowledge source","Node.js for deterministic Markdown-to-HTML knowledge builds","Git and GitHub for versioning, public evidence, and GitHub Pages deployment","Codex and other AI development tools for implementation support, with Shauna retaining the product, content, and claim decisions"],
         "safeguards":["Third-person identity prevents the agent from impersonating Shauna","Attribution rules distinguish products marketed, systems built, tools used, and concepts studied","Hard claim rules block invented metrics, sole credit for company outcomes, and unsupported production-engineering claims","Specialist routing reduces context collisions between technical proof, career history, project narratives, and role-fit assessment","Public links and evidence labels make provenance visible instead of asking visitors to trust generated prose","A bounded answer pattern keeps voice responses concise and avoids turning narrow questions into résumé recitations"],
@@ -83,6 +143,26 @@
       "proof":"HQ product experience, launch narrative, seller materials, and portfolio positioning connecting Workvivo and Zoom AI.",
       "image":"assets/evidence/hq-agent.jpg",
       "sourceUrl":"https://www.workvivo.com/hq/",
+      "evidence": [
+        {
+          "title": "Workvivo HQ product page",
+          "url": "https://www.workvivo.com/hq/",
+          "kind": "Public product context",
+          "note": "Company product context, not independent verification of individual ownership."
+        },
+        {
+          "title": "HQ Agent product artwork",
+          "url": "assets/evidence/hq-agent-product.png",
+          "kind": "Published artifact",
+          "note": "Product visual supporting the commercial narrative."
+        },
+        {
+          "title": "Explore the platform positioning",
+          "url": "case-study.html?case=workvivo-hq",
+          "kind": "Related case study",
+          "note": "How the agent fits the wider Workvivo HQ story."
+        }
+      ],
       "caseStudy":{
         "eyebrow":"Commercialising enterprise AI",
         "context":"HQ Agent extended Workvivo beyond communications and employee experience into trusted enterprise answers, search, self-service, and agentic task execution. It sat at the intersection of enterprise knowledge, RAG, permissions, employee experience, and Zoom’s broader AI technology.",
@@ -103,6 +183,26 @@
       "demonstrates":"Analyst relations, competitive intelligence, category design, campaign strategy, and turning external validation into commercial leverage.",
       "proof":"Gartner and Forrester leadership campaign artifacts, supported by recognition across major analyst and review platforms.",
       "image":"assets/evidence/market-leadership.jpg",
+      "evidence": [
+        {
+          "title": "Gartner 2025 campaign artwork",
+          "url": "assets/evidence/gartner-mq-2025.png",
+          "kind": "Published campaign artifact",
+          "note": "Company campaign creative, not the analyst report or proof of sole authorship."
+        },
+        {
+          "title": "Forrester 2026 campaign artwork",
+          "url": "assets/evidence/forrester-wave-2026.png",
+          "kind": "Published campaign artifact",
+          "note": "Shows the recognition campaign; analysts controlled their own assessment."
+        },
+        {
+          "title": "Read the artifact inventory",
+          "url": "documents/evidence-inventory.html",
+          "kind": "Evidence record",
+          "note": "Sources and attribution boundaries for the analyst and category work."
+        }
+      ],
       "caseStudy":{
         "eyebrow":"Building external market credibility",
         "context":"Workvivo evolved from an underdog employee app into a recognised Employee Experience Platform and later a broader AI-native employee-experience story. Analyst understanding had to evolve with the product and company narrative.",
@@ -124,6 +224,26 @@
       "proof":"Forrester named Workvivo its 2026 B2B Return on Integration Honors winner for a cross-functional response to a major market disruption. Shauna’s portfolio identifies the recognised programme as the Meta migration and records her significant GTM role; the award is a company outcome.",
       "image":"assets/evidence/meta-migration.jpg",
       "sourceUrl":"https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/",
+      "evidence": [
+        {
+          "title": "Forrester winner announcement",
+          "url": "https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/",
+          "kind": "External company recognition",
+          "note": "Verifies Workvivo’s company award. The announcement does not name Meta."
+        },
+        {
+          "title": "Workplace migration programme",
+          "url": "https://www.workvivo.com/workplace/",
+          "kind": "Public company context",
+          "note": "Company migration offering; Shauna’s GTM role is professional self-report."
+        },
+        {
+          "title": "Read the claims and sources",
+          "url": "documents/evidence-register.html",
+          "kind": "Evidence record",
+          "note": "Separates the external award, programme attribution, and individual contribution."
+        }
+      ],
       "caseStudy":{
         "eyebrow":"Turning disruption into commercial opportunity",
         "context":"Meta announced the closure of Workplace. Workvivo was named Meta’s only preferred migration partner, creating a major, time-bound market opportunity and a highly visible competitive GTM motion.",
@@ -145,6 +265,26 @@
       "demonstrates":"Research synthesis, category narrative, thought leadership, product positioning, and a practical GTM frame for employee intelligence.",
       "proof":"Seer product materials and the supplied 18-page Listening Gap research report.",
       "image":"assets/evidence/seer.jpg",
+      "evidence": [
+        {
+          "title": "Read The Listening Gap notes",
+          "url": "documents/listening-gap.html",
+          "kind": "Supporting document",
+          "note": "Framework and implications from the supplied report; the full report is not hosted here."
+        },
+        {
+          "title": "Seer portfolio artwork",
+          "url": "assets/evidence/seer.jpg",
+          "kind": "Published artifact",
+          "note": "Portfolio visual accompanying the people-intelligence narrative."
+        },
+        {
+          "title": "Read the artifact inventory",
+          "url": "documents/evidence-inventory.html",
+          "kind": "Evidence record",
+          "note": "What the supplied research supports and what it does not establish."
+        }
+      ],
       "caseStudy":{
         "eyebrow":"Entering the people-intelligence market",
         "context":"Workvivo expanded into People Intelligence with Seer, moving into a buyer and category conversation adjacent to its employee-experience strengths.",

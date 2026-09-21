@@ -38,7 +38,7 @@ HQ Agent extends the story from finding answers to reasoning, recommended next s
 ## Go-to-market system evidenced
 
 - Product and category narrative.
-- 60-slide sales pitch deck.
+- GTM kits built and Sales enabled for the Workvivo HQ launch.
 - Launch website.
 - Organic social launch sequence and carousel.
 - Product UI and capability messaging.
@@ -48,7 +48,7 @@ HQ Agent extends the story from finding answers to reasoning, recommended next s
 
 Shauna publicly introduced Workvivo HQ on LinkedIn. A colleague publicly thanked her for her "trojan efforts" bringing HQ to market and called it "world class PMM."
 
-Her published case study records positioning, messaging architecture, launch strategy, seller narrative, analyst framing, and portfolio narrative as professional self-report. The supplied deck and campaign materials support the narrative but are not hosted here.
+Her published case study records positioning, messaging architecture, launch strategy, GTM kit development, sales enablement, analyst framing, and portfolio narrative as professional self-report. The supplied deck and campaign materials support the narrative but are not hosted here.
 
 [Read the full Workvivo HQ case study](../case-studies/workvivo-hq.md).
 

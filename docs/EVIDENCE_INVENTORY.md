@@ -8,7 +8,7 @@ This inventory distinguishes public evidence, supplied artifacts, company-level 
 
 ### Supplied artifacts
 
-- `Zoom_Workvivo HQ_Sales Pitch Deck.pptx` - 60-slide product and sales narrative.
+- `Zoom_Workvivo HQ_Sales Pitch Deck.pptx` - Product and sales narrative supporting the Workvivo HQ GTM kit.
 - HQ launch organic-social assets in square and vertical formats.
 - HQ carousel explaining the problem, category story, product pillars, and product UI.
 

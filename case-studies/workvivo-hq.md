@@ -24,7 +24,7 @@ AI becomes more valuable when it lives inside an employee experience people alre
 
 - Strategic positioning and category narrative
 - Messaging architecture across IT, HR, and Comms buyers
-- Launch strategy, seller narrative, and website story
+- Built GTM kits and enabled Sales for the Workvivo HQ launch
 - Analyst story and competitive framing
 - Portfolio narrative connecting Workvivo HQ to the broader AI strategy
 

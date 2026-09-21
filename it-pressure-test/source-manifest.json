@@ -1,11 +1,11 @@
 {
   "sourceRepository": "https://github.com/shaunaleebrennan/ai-positioning-qa",
-  "sourceCommit": "336cf0ca566642074a1fbb8c4146cc99c05628b8",
+  "sourceCommit": "f5ab93fbe6c5bd3442f4f00906a762f39a2edb9d",
   "files": [
     {
       "source": "tool.html",
       "path": "index.html",
-      "sha256": "5244ab7a15482b1af496aab684e6f8ecd1f8e74282e1f89e3692b4389ba6f9ea"
+      "sha256": "abfe465c90d801db7e4b701a0a101f8d6310a6d75d255fd8535b1a95f4c7e153"
     },
     {
       "source": "manual-review.html",
@@ -25,7 +25,7 @@
     {
       "source": "assets/it-buyer.css",
       "path": "assets/it-buyer.css",
-      "sha256": "20d32c6cb655c62f8f75829b9f77b173b747fb04c354c8c968d74f57edeecaa4"
+      "sha256": "1496bf6cd36daf97fe2761b456a83ce8dc9bd7e7b6b35c245b0940b78607ea29"
     },
     {
       "source": "assets/js/app.js",

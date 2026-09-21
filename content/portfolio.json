@@ -62,7 +62,7 @@
           "title": "Try AI Positioning QA",
           "url": "https://shaunaleebrennan.github.io/ai-positioning-qa/",
           "kind": "Public build",
-          "note": "Eight-dimension review, evidence diagnostics, and category-defense worksheet; human judgment remains accountable."
+          "note": "IT-buyer lenses, evidence diagnostics, and in-tool deep review; human judgment remains accountable."
         },
         {
           "title": "Inspect the rubric and implementation",
@@ -72,7 +72,7 @@
         },
         {
           "title": "Read the positioning pressure test",
-          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/pressure-test-2026-09-21.md",
+          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-buyer-integration-2026-09-21.md",
           "kind": "Evaluation evidence",
           "note": "Adversarial scoring and import checks, fixes, and remaining calibration limits."
         },

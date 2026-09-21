@@ -19,17 +19,17 @@ During her tenure, Workvivo grew from approximately $10M to more than $100M ARR,
 
 ## Selected work
 
-- [Workvivo HQ](../case-study.html?case=workvivo-hq): category repositioning, messaging architecture, and launch strategy.
-- [HQ Agent](../case-study.html?case=hq-agent): AI product narrative, trust messaging, pricing, and packaging.
-- [The Meta Migration](../case-study.html?case=meta-migration): migration positioning, competitive differentiation, and seller enablement.
-- [Market leadership](../case-study.html?case=market-leadership): analyst narrative, evidence, and category strategy.
-- [Seer](../case-study.html?case=seer): people-intelligence positioning and market entry.
+- [Workvivo HQ](../case-studies/workvivo-hq.md): category repositioning, messaging architecture, and launch strategy.
+- [HQ Agent](../case-studies/hq-agent.md): AI product narrative, trust messaging, pricing, and packaging.
+- [The Meta Migration](../case-studies/meta-migration.md): migration positioning, competitive differentiation, and seller enablement.
+- [Market leadership](../case-studies/market-leadership.md): analyst narrative, evidence, and category strategy.
+- [Seer](../case-studies/seer.md): people-intelligence positioning and market entry.
 
 ## Hands-on AI work
 
-- [Portfolio Voice Agent](../case-study.html?case=portfolio-voice-agent): voice-persona design, prompts, intent routing, knowledge structure, guardrails, evaluation, and web integration using ElevenLabs.
+- [Portfolio Voice Agent](../case-studies/portfolio-voice-agent.md): voice-persona design, prompts, intent routing, knowledge structure, guardrails, evaluation, and web integration using ElevenLabs.
 - [AI Positioning QA](https://github.com/shaunaleebrennan/ai-positioning-qa): a public positioning-review tool with an inspectable rubric and source.
-- [AI Product Strategy](../case-study.html?case=ai-product-strategy): workflow experiments and product judgment applied to PMM operations.
+- [AI Product Strategy](../case-studies/ai-product-strategy.md): workflow experiments and product judgment applied to PMM operations.
 
 Shauna designed and integrated the portfolio experience. ElevenLabs supplies the underlying voice models and runtime. Workvivo product engineering is distinct from her product marketing contribution.
 
@@ -53,4 +53,4 @@ Workvivo’s 2026 Forrester B2B Return on Integration Honors is a company award.
 
 AI can accelerate retrieval, processing, and repeatable analysis. People remain accountable for positioning, pricing, claims, and consequential decisions.
 
-[View the CV](../assets/Shauna-Azevedo-Brennan-CV.pdf) · [Browse all case studies and documents](../library.html)
+[View the CV](../assets/Shauna-Azevedo-Brennan-CV.pdf) · [Browse all case studies and documents](../LIBRARY.md)

@@ -29,7 +29,11 @@ for (const doc of docs) {
       const [file, fragment] = href.split('#');
       const target = path.posix.normalize(path.posix.join(path.posix.dirname(doc.source), file));
       const entry = docs.find(d => d.source === target);
-      href = entry ? `${entry.id}.html${fragment ? '#' + fragment : ''}` : '../' + target + (fragment ? '#' + fragment : '');
+      if (target.startsWith('case-studies/') && target.endsWith('.md')) {
+        href = '../case-study.html?case=' + path.posix.basename(target, '.md');
+      } else if (target === 'LIBRARY.md') {
+        href = '../library.html' + (fragment ? '#' + (fragment === 'supporting-documents' ? 'documents' : fragment) : '');
+      } else href = entry ? `${entry.id}.html${fragment ? '#' + fragment : ''}` : '../' + target + (fragment ? '#' + fragment : '');
     }
     if (!/^(https?:|mailto:|#|\.\.\/|[\w-]+\.html)/.test(href)) throw Error(`Unsafe link: ${href}`);
     return `<a href="${escape(href)}">${this.parser.parseInline(token.tokens)}</a>`;
@@ -43,3 +47,25 @@ for (const doc of docs) {
 const card = item => `<article class="resource-card"><p class="eyebrow">${escape(item.tag)}</p><h3><a href="case-study.html?case=${item.slug}">${escape(item.title)} <span aria-hidden="true">↗</span></a></h3><p>${escape(item.summary)}</p><small>${escape(item.demonstrates)}</small></article>`;
 await writeFile('library.html', layout('Case studies & knowledge', 'All seven case studies, public knowledge notes, technical documents, and supporting evidence in one place.', `<header class="library-hero"><p class="eyebrow">The work, and what supports it</p><h1>Case studies<br>& knowledge.</h1><p>Explore the decisions, contributions, and evidence behind my work in product marketing, enterprise AI, and team leadership.</p><nav class="jump-links" aria-label="Library sections"><a href="#case-studies">7 case studies ↓</a><a href="#documents">9 supporting documents ↓</a><a href="assets/Shauna-Azevedo-Brennan-CV.pdf">View CV ↗</a></nav></header><section class="reading-paths" aria-labelledby="start"><h2 id="start">Choose your starting point</h2><div class="resource-grid"><div><h3>Leadership & commercial strategy</h3><p>Start with <a href="documents/career.html">career and leadership</a>, then explore <a href="case-study.html?case=workvivo-hq">Workvivo HQ</a> and <a href="case-study.html?case=meta-migration">the Meta migration</a>.</p></div><div><h3>Technical AI & hands-on building</h3><p>Start with the <a href="case-study.html?case=portfolio-voice-agent">Portfolio Voice Agent</a>, then inspect <a href="https://github.com/shaunaleebrennan/ai-positioning-qa">AI Positioning QA</a> and the <a href="documents/voice-agent.html">system overview</a>.</p></div></div></section><section id="case-studies" class="library-section"><h2>Selected case studies</h2><p>Each story separates the challenge, my contribution, decisions, outcomes, and supporting sources.</p><div class="resource-grid">${work.map(card).join('')}</div></section><section id="documents" class="library-section"><h2>Supporting documents</h2><p>Read the career context, strategic frameworks, implementation choices, and source records behind the case studies.</p><div class="resource-grid">${docs.map(d => `<article class="resource-card"><p class="eyebrow">${escape(d.category)}</p><h3><a href="documents/${d.id}.html">${escape(d.title)} <span aria-hidden="true">↗</span></a></h3><p>${escape(d.summary)}</p></article>`).join('')}</div></section><aside class="evidence-note"><h2>How to read the evidence</h2><p>My role and contribution are professional self-report unless a linked source independently confirms them. Product pages provide company context; company growth and awards are shared outcomes. Supplied decks and research reports are identified where relevant, but are not all available as public downloads.</p><p><a href="documents/evidence-register.html">See claims and sources →</a></p></aside>`));
 console.log(`Built library and ${docs.length} public document pages.`);
+
+// GitHub readers get Markdown; the website keeps its existing HTML routes.
+const site = 'https://shaunaleebrennan.github.io/shauna-ai-portfolio/';
+const githubTarget = href => {
+  const document = docs.find(d => href === `documents/${d.id}.html`);
+  if (document) return '../' + document.source;
+  if (href.startsWith('case-study.html?case=')) return href.split('=')[1] + '.md';
+  if (/^https?:/.test(href)) return href;
+  if (href.startsWith('index.html')) return site + href;
+  return '../' + href;
+};
+await mkdir('case-studies', { recursive: true });
+for (const item of work) {
+  const study = item.caseStudy;
+  const sections = [['Context',study.context],['The challenge',study.challenge],['Strategic insight',study.insight],['My contribution',study.contribution],['Key decisions',study.decisions],['System architecture',study.architecture],['Tools & implementation',study.tooling],['Reliability & safeguards',study.safeguards],['Evaluation',study.validation],['Outcome',study.outcome],['What I learned',study.learning]];
+  const body = sections.filter(([,v]) => v).map(([heading,value]) => `## ${heading}\n\n${Array.isArray(value) ? value.map(v => '- '+v).join('\n') : value}`).join('\n\n');
+  await writeFile(`case-studies/${item.slug}.md`, `# ${item.title}\n\n[← All case studies and documents](../LIBRARY.md) · [View on the portfolio website](${site}case-study.html?case=${item.slug})\n\n**${study.eyebrow}**\n\n${item.summary}\n\n**What this demonstrates:** ${item.demonstrates}\n\n${body}\n\n## Evidence and supporting documents\n\nRole and contribution statements are professional self-report unless a source independently confirms them. Company outcomes are shared results.\n\n${item.evidence.map(e => `- **[${e.title}](${githubTarget(e.url)})** — ${e.kind}. ${e.note}`).join('\n')}\n\n[Claims and sources](../docs/EVIDENCE_REGISTER.md) · [All supporting documents](../LIBRARY.md#supporting-documents)\n`);
+}
+await writeFile('LIBRARY.md', `# Case studies and knowledge\n\n[Portfolio overview](README.md) · [View the portfolio website](${site}) · [CV](assets/Shauna-Azevedo-Brennan-CV.pdf)\n\nRead every case study and supporting document here on GitHub. The links below open formatted Markdown. For the designed website experience, visit the [online library](${site}library.html).\n\n## Case studies\n\n${work.map(w => `### [${w.title}](case-studies/${w.slug}.md)\n\n${w.summary}`).join('\n\n')}\n\n## Supporting documents\n\n${docs.map(d => `- **[${d.title}](${d.source})** — ${d.summary}`).join('\n')}\n\n## Reading the evidence\n\nIndividual contributions are professional self-report unless a source independently confirms them. Company awards and growth remain company outcomes. The [evidence inventory](docs/EVIDENCE_INVENTORY.md) distinguishes public artifacts from supplied materials that are not hosted here.\n`);
+await writeFile('case-studies/README.md', `# Case studies\n\nRead the complete stories directly on GitHub.\n\n${work.map(w => `- [${w.title}](${w.slug}.md) — ${w.caseStudy.eyebrow}.`).join('\n')}\n\n[All supporting documents](../LIBRARY.md#supporting-documents) · [Portfolio overview](../README.md)\n`);
+await writeFile('documents/README.md', `# Looking for the supporting documents?\n\n**[Read the formatted documents on GitHub →](../LIBRARY.md#supporting-documents)**\n\nThe HTML files in this folder power the portfolio website. GitHub displays them as source code. Use the Markdown library above, or [open the styled website pages](${site}library.html#documents).\n`);
+console.log(`Built GitHub library and ${work.length} Markdown case studies.`);

@@ -4,11 +4,11 @@ The portfolio supports three visitor journeys: a quick career overview, direct i
 
 ## Start with the overview
 
-The [homepage](../index.html) introduces Shauna’s positioning, career, capabilities, recognition, and learning. The CV provides a downloadable résumé.
+The [homepage](https://shaunaleebrennan.github.io/shauna-ai-portfolio/) introduces Shauna’s positioning, career, capabilities, recognition, and learning. The CV provides a downloadable résumé.
 
 ## Explore the work
 
-The [case-study and knowledge library](../library.html) lists all seven case studies together. Each case study separates context, challenge, strategic insight, contribution, decisions, outcome, learning, and supporting evidence. Technical sections appear where relevant.
+The [case-study and knowledge library](../LIBRARY.md) lists all seven case studies together. Each case study separates context, challenge, strategic insight, contribution, decisions, outcome, learning, and supporting evidence. Technical sections appear where relevant.
 
 Every case study has section navigation, direct supporting links, a route back to the library, and a next case study. Sources distinguish public product context, professional self-report, public builds, campaign artifacts, and external company recognition.
 
@@ -20,10 +20,10 @@ Readable HTML pages are generated from an explicit allowlist in `content/library
 
 ## Ask a focused question
 
-The [portfolio agent](../index.html#ask) provides an additional route into the evidence through voice or text. Case studies and documents remain accessible without using the agent.
+The [portfolio agent](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#ask) provides an additional route into the evidence through voice or text. Case studies and documents remain accessible without using the agent.
 
 ## Maintaining the library
 
-Edit the public Markdown source or `content/portfolio.json`, then run `npm ci`, `npm run build`, and `npm run check`. Commit the generated `library.html` and `documents/` pages alongside their source changes. GitHub Pages serves these static files without requiring a runtime Markdown renderer.
+Edit the public Markdown source or `content/portfolio.json`, then run `npm ci`, `npm run build`, and `npm run check`. The same build creates `LIBRARY.md` and `case-studies/*.md` for native GitHub reading. Edit case-study content in `content/portfolio.json`, not the generated Markdown. Commit the generated website pages and GitHub reading copies alongside their source changes. GitHub Pages serves these static files without requiring a runtime Markdown renderer.
 
 Do not add private source directories to the document allowlist. Adding a new document does not authorise publication of private material referenced inside it.

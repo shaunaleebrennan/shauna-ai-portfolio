@@ -18,35 +18,35 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 ## Selected work
 
-### [Workvivo HQ](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=workvivo-hq)
+### [Workvivo HQ](case-studies/workvivo-hq.md)
 
-[![Workvivo HQ — Repositioning for the AI era](assets/readme/workvivo-hq-strip.svg)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=workvivo-hq)
+[![Workvivo HQ — Repositioning for the AI era](assets/readme/workvivo-hq-strip.svg)](case-studies/workvivo-hq.md)
 
 **Positioning · Category · Launch** — Repositioning employee experience for the AI era without losing the adoption, trust, or culture that made the platform distinctive. I led the strategic positioning, messaging architecture, launch strategy, seller narrative, and analyst framing.
 
-### [AI Product Strategy](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=ai-product-strategy)
+### [AI Product Strategy](case-studies/ai-product-strategy.md)
 
-[![AI Product Strategy — Building the PMM operating model](assets/readme/ai-product-strategy-strip.svg)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=ai-product-strategy)
+[![AI Product Strategy — Building the PMM operating model](assets/readme/ai-product-strategy-strip.svg)](case-studies/ai-product-strategy.md)
 
 **Agents · Pricing · Workflow Design** — Building an AI-enabled PMM operating model through agent prototypes, pricing work, and workflow design. The proof includes this grounded portfolio agent, AI Positioning QA, and reusable research, synthesis, and competitive workflows.
 
-### [HQ Agent](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=hq-agent)
+### [HQ Agent](case-studies/hq-agent.md)
 
-[![HQ Agent — From search, to answer, to action](assets/readme/hq-agent-strip.svg)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=hq-agent)
+[![HQ Agent — From search, to answer, to action](assets/readme/hq-agent-strip.svg)](case-studies/hq-agent.md)
 
 **Agentic AI · Trust · Packaging** — Turning enterprise search, grounded answers, and agentic action into one credible commercial progression: **SEARCH → ANSWER → ACTION**. I led the product story, AI maturity narrative, pricing and packaging, and seller enablement.
 
 ### More case studies
 
-- [**Portfolio Voice Agent**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=portfolio-voice-agent) — creating a custom voice persona and personality, engineering prompts and guardrails, building intent-routing workflows and modular RAG, and comparing model outputs through structured testing.
-- [**The Meta Migration**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=meta-migration) — positioning and enabling a time-critical enterprise migration programme within Workvivo's Forrester-recognised response to a major market disruption.
-- [**Market Leadership**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=market-leadership) — connecting analyst relations, evidence, competitive intelligence, and category strategy.
-- [**Seer**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=seer) — building a people-intelligence story around **LISTEN → UNDERSTAND → ACT**.
+- [**Portfolio Voice Agent**](case-studies/portfolio-voice-agent.md) — creating a custom voice persona and personality, engineering prompts and guardrails, building intent-routing workflows and modular RAG, and comparing model outputs through structured testing.
+- [**The Meta Migration**](case-studies/meta-migration.md) — positioning and enabling a time-critical enterprise migration programme within Workvivo's Forrester-recognised response to a major market disruption.
+- [**Market Leadership**](case-studies/market-leadership.md) — connecting analyst relations, evidence, competitive intelligence, and category strategy.
+- [**Seer**](case-studies/seer.md) — building a people-intelligence story around **LISTEN → UNDERSTAND → ACT**.
 
 
 ## Supporting documents
 
-[Browse the full case-study and knowledge library](https://shaunaleebrennan.github.io/shauna-ai-portfolio/library.html).
+**[Read all case studies and supporting documents on GitHub](LIBRARY.md)** · [View the website library](https://shaunaleebrennan.github.io/shauna-ai-portfolio/library.html).
 
 - [Career and leadership](knowledge/portfolio.md) — experience, progression, learning, and scope.
 - [Workvivo HQ narrative](knowledge/case-study-hq.md) and [The Listening Gap](knowledge/case-study-listening-gap.md) — strategy and research frameworks.
@@ -151,4 +151,4 @@ Use it in three ways: **[scan](https://shaunaleebrennan.github.io/shauna-ai-port
 
 ## Maintaining the supporting pages
 
-Run `npm ci`, `npm run build`, and `npm run check` from the repository root. The library and readable document pages are generated from the public sources listed in `content/library.json`. Commit generated pages with their source changes. Operational agent knowledge and prompts remain private.
+Run `npm ci`, `npm run build`, and `npm run check` from the repository root. The library and readable document pages are generated from the public sources listed in `content/library.json`. Commit generated pages and the Markdown case studies with their source changes. Operational agent knowledge and prompts remain private.

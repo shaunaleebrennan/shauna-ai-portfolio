@@ -1,6 +1,6 @@
 # Public knowledge notes
 
-[Browse the readable library](https://shaunaleebrennan.github.io/shauna-ai-portfolio/library.html) · [Portfolio overview](../README.md)
+[Browse all documents on GitHub](../LIBRARY.md) · [Portfolio overview](../README.md)
 
 These public documents support the case studies. Private agent prompts, routing configuration, and detailed evaluation records are not included.
 

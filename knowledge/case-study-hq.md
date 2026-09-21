@@ -50,7 +50,7 @@ Shauna publicly introduced Workvivo HQ on LinkedIn. A colleague publicly thanked
 
 Her published case study records positioning, messaging architecture, launch strategy, seller narrative, analyst framing, and portfolio narrative as professional self-report. The supplied deck and campaign materials support the narrative but are not hosted here.
 
-[Read the full Workvivo HQ case study](../case-study.html?case=workvivo-hq).
+[Read the full Workvivo HQ case study](../case-studies/workvivo-hq.md).
 
 ## Evidence boundary
 

@@ -40,4 +40,4 @@ This artifact demonstrates the structure of research-led product marketing: defi
 
 Shauna’s published Seer case study records positioning, GTM, launch strategy, pricing and packaging, competitive strategy, and seller enablement as professional self-report. The supplied 18-page report supports this narrative analysis; it does not establish sole research authorship, authorship of every word, methodology validation, or measured campaign performance. The full report is not hosted in this public repository.
 
-[Read the Seer case study](../case-study.html?case=seer) · [Inspect the evidence inventory](../docs/EVIDENCE_INVENTORY.md).
+[Read the Seer case study](../case-studies/seer.md) · [Inspect the evidence inventory](../docs/EVIDENCE_INVENTORY.md).

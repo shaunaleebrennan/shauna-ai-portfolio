@@ -1,0 +1,5 @@
+# Generated reading formats; maintained sources are Markdown and portfolio.json.
+documents/*.html linguist-generated=true
+library.html linguist-generated=true
+case-studies/*.md linguist-generated=true
+LIBRARY.md linguist-generated=true

@@ -38,5 +38,5 @@ for (const [file, href] of links) {
   }
 }
 const generated = await readdir('documents');
-check(generated.length === docs.length, 'Unexpected document output; inspect for stale or private pages');
+check(generated.filter(name => name.endsWith('.html')).length === docs.length, 'Unexpected document output; inspect for stale or private pages');
 console.log(`${checks} checks passed: library coverage, local links, fragments, case routes, and public-source allowlist.`);

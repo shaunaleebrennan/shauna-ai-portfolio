@@ -24,13 +24,19 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 **Positioning · Category · Launch** — Repositioning employee experience for the AI era without losing the adoption, trust, or culture that made the platform distinctive. I led the strategic positioning, messaging architecture, launch strategy, seller narrative, and analyst framing.
 
+### [IT Pressure Test](case-studies/it-pressure-test.md)
+
+[![IT Pressure Test — Will IT believe it?](assets/evidence/it-pressure-test.png)](case-studies/it-pressure-test.md)
+
+**Buyer insight · Positioning systems · Evaluation** — Building an IT messaging review around six audience lenses, accountable human judgment, and inspectable source evidence. [Try the live tool](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/) · [Read the case study](case-studies/it-pressure-test.md).
+
 ### [AI Product Strategy](case-studies/ai-product-strategy.md)
 
 [![AI Product Strategy — Building the PMM operating model](assets/readme/ai-product-strategy-strip.svg)](case-studies/ai-product-strategy.md)
 
-**Agents · Pricing · Workflow Design** — Building an AI-enabled PMM operating model through agent prototypes, pricing work, and workflow design. The proof includes this grounded portfolio agent, AI Positioning QA, and reusable research, synthesis, and competitive workflows.
+**Agents · Pricing · Workflow Design** — Building an AI-enabled PMM operating model through agent prototypes, pricing work, and workflow design. The proof includes this grounded portfolio agent, IT Pressure Test, and reusable research, synthesis, and competitive workflows.
 
-**Try the build:** [AI Positioning QA](https://shaunaleebrennan.github.io/ai-positioning-qa/) — an IT-buyer messaging review with six audience lenses, buyer questions, and an in-tool deep review. The app uses local rules and keeps the original eight-dimension manual evaluator available. [Inspect the source and rubric](https://github.com/shaunaleebrennan/ai-positioning-qa) · [Read the pressure-test findings](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-buyer-integration-2026-09-21.md).
+**Try the build:** [IT Pressure Test](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/) — an IT-buyer messaging review with six audience lenses, buyer questions, and an in-tool deep review. The app uses local rules and keeps the original eight-dimension manual evaluator available. [Inspect the source and rubric](https://github.com/shaunaleebrennan/ai-positioning-qa) · [Read the pressure-test findings](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-buyer-integration-2026-09-21.md).
 
 ### [HQ Agent](case-studies/hq-agent.md)
 
@@ -145,7 +151,7 @@ The tools are not the proof; the workflow design and operating choices are.
 
 ## About this portfolio
 
-This repository powers my [live portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/): seven evidence-led case studies, a CV, public proof, and a grounded conversational agent. I designed and built the static experience with semantic HTML, responsive CSS, vanilla JavaScript, JSON-driven content, consent-aware Google Analytics, and GitHub Pages.
+This repository powers my [live portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/): eight evidence-led case studies, a CV, public proof, and a grounded conversational agent. I designed and built the static experience with semantic HTML, responsive CSS, vanilla JavaScript, JSON-driven content, consent-aware Google Analytics, and GitHub Pages.
 
 Use it in three ways: **[scan](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#scan)** the executive view, **[explore](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#explore)** the evidence, or **[ask](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#ask)** the portfolio agent about my experience and the work behind a case study.
 
@@ -154,3 +160,7 @@ Use it in three ways: **[scan](https://shaunaleebrennan.github.io/shauna-ai-port
 ## Maintaining the supporting pages
 
 Run `npm ci`, `npm run build`, and `npm run check` from the repository root. The library and readable document pages are generated from the public sources listed in `content/library.json`. Commit generated pages and the Markdown case studies with their source changes. Operational agent knowledge and prompts remain private.
+
+### Updating the nested IT Pressure Test
+
+The app runtime lives in `it-pressure-test/`. After committing changes in the sibling `ai-positioning-qa` source repository, run `node scripts/sync-it-pressure-test.mjs`, then `npm run build` and `npm run check`. The manifest records the source commit and hashes. The copy includes only public runtime assets, never research attachments.

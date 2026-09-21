@@ -48,6 +48,86 @@
       }
     },
     {
+      "slug": "it-pressure-test",
+      "title": "IT Pressure Test",
+      "category": "technical",
+      "tag": "Technical expertise",
+      "summary": "Turning IT-buyer positioning judgment into a working tool: six audience lenses, source-linked diagnostics, and a practical rewrite brief.",
+      "demonstrates": "Buyer insight, positioning systems, product judgment, AI-assisted prototyping, evaluation, and accountable human review.",
+      "proof": "Live portfolio-hosted app, inspectable source, 44 automated checks, and documented browser evaluation.",
+      "image": "assets/evidence/it-pressure-test.png",
+      "sourceUrl": "it-pressure-test/",
+      "liveUrl": "it-pressure-test/",
+      "evidence": [
+        {
+          "title": "Try IT Pressure Test",
+          "url": "it-pressure-test/",
+          "kind": "Live interactive build",
+          "note": "Choose an IT audience, buying role and stage; inspect the copy and run a deeper review in the tool."
+        },
+        {
+          "title": "Inspect the implementation",
+          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa",
+          "kind": "Source repository",
+          "note": "The original repository retains the build and evaluation history under its existing URL."
+        },
+        {
+          "title": "Read the integration evaluation",
+          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-buyer-integration-2026-09-21.md",
+          "kind": "Evaluation evidence",
+          "note": "What was checked, what changed, and what keyword-based scoring cannot establish."
+        }
+      ],
+      "caseStudy": {
+        "eyebrow": "From a manual QA rubric to a buyer-focused decision aid",
+        "context": "Positioning reviews often produce broad opinions rather than specific, actionable questions. The original AI Positioning QA made a rubric inspectable, but asking reviewers to complete eight dimensions created too much work before they received useful feedback.",
+        "challenge": "Make the review immediately useful for enterprise IT messaging while retaining traceability. A CIO, an architecture lead and an internal champion can read the same asset with different responsibilities; an awareness asset should not be judged as a procurement brief.",
+        "insight": "Start with the buyer’s remit and the job of the message. Surface the questions that matter next, show the source passages behind the diagnosis, and leave the claim and publication decision with a human.",
+        "contribution": [
+          "Defined the IT-buyer scope, review experience and evidence standard",
+          "Directed AI-assisted prototyping in ChatGPT and implementation in Codex",
+          "Shaped six audience lenses, distinct buying roles and stage-aware review guidance",
+          "Pressure-tested scoring, source traceability, export behavior and input changes",
+          "Integrated the live tool, documentation and visual identity into this portfolio"
+        ],
+        "decisions": [
+          "Separate awareness stage from purchase stage: what the reader knows differs from what the buying group is deciding",
+          "Replace the manual-first interface with Gut Reaction, priority changes and buyer questions",
+          "Keep deep review inside the app with matching passages and an editable rewrite brief",
+          "Call the score language-signal coverage: it is not buyer readiness, factual verification or market validation",
+          "Retain the original eight-dimension evaluator as a separate workflow rather than equating its score with the new six-gate model"
+        ],
+        "architecture": [
+          "Static HTML and CSS provide the interface; vanilla JavaScript runs locally in the browser",
+          "A pure evaluation module contains six IT profiles, three buying roles, purchase-stage weights and language checks",
+          "The UI module renders source excerpts, prioritised questions, stage guidance and the rewrite brief",
+          "Markdown export preserves the source, context, supplied proof and edited rewrite; the app makes no model or network calls",
+          "The portfolio hosts a versioned copy of the public runtime, with a source commit and file hashes recorded in its manifest"
+        ],
+        "tooling": [
+          "ChatGPT for prototype iteration and Codex for integration, refactoring and checks",
+          "Node’s test runner for deterministic scoring and export tests",
+          "GitHub for version control and GitHub Pages for static hosting",
+          "Generated case-study artwork; interface styling follows the portfolio palette"
+        ],
+        "safeguards": [
+          "Supplied proof is displayed as unverified context and cannot inflate the score of the source copy",
+          "Edits invalidate displayed results and exports; source HTML is escaped rather than executed",
+          "Quoted passages preserve the original source whitespace",
+          "No automatic saving, tracking or external model calls in the tool",
+          "Private research attachments are not published; unsupported research percentages were withheld"
+        ],
+        "validation": [
+          "44 automated checks passed at integration, retaining the original evaluator tests",
+          "New checks cover proof isolation, exact excerpts, export context and all 54 combinations of remit, buying role and purchase stage",
+          "Browser checks covered example review, deep review, edited-brief export, escaped HTML, stale-result invalidation and the 390px mobile layout",
+          "Keyword stuffing, negation and irrelevant evidence remain known limitations; independent human calibration and external model benchmarking have not been completed"
+        ],
+        "outcome": "A live IT messaging review that gives immediate, inspectable guidance and a reusable rewrite brief. The build demonstrates how positioning judgment can become a practical workflow. It does not establish commercial lift, buyer agreement or production-grade approval governance.",
+        "learning": "A useful review system must make its limits as visible as its recommendations. Simplifying the interface only helps if the evidence and the human decision remain clear."
+      }
+    },
+    {
       "slug":"ai-product-strategy",
       "title":"AI Product Strategy",
       "category":"technical",
@@ -59,8 +139,8 @@
       "sourceUrl":"https://github.com/shaunaleebrennan",
       "evidence": [
         {
-          "title": "Try AI Positioning QA",
-          "url": "https://shaunaleebrennan.github.io/ai-positioning-qa/",
+          "title": "Try IT Pressure Test",
+          "url": "it-pressure-test/",
           "kind": "Public build",
           "note": "IT-buyer lenses, evidence diagnostics, and in-tool deep review; human judgment remains accountable."
         },
@@ -88,7 +168,7 @@
         "context":"AI-first Product Marketing is not simply a team using ChatGPT. Shauna has been exploring how AI can change the operating model of PMM itself—and where human judgment must remain accountable.",
         "challenge":"High-value PMM time disappears into retrieval, repeated seller questions, monitoring, synthesis, recurring research, and first-pass analysis. The strategic question is which work requires human judgment and which work can be processed or automated.",
         "insight":"AI does more of the processing. PMM remains accountable for the thinking. Retrieval, extraction, monitoring, classification, and repeatable analysis can accelerate; positioning, pricing, claims, category strategy, and executive recommendations still need accountable judgment.",
-        "contribution":["Seller-facing competitive intelligence and automated monitoring","AI-assisted win/loss analysis and lightweight decision tools","AI Positioning QA","This portfolio and its grounded agent experience","Reusable research, synthesis, and PMM workflows","Continued product and AI-pricing study"],
+        "contribution":["Seller-facing competitive intelligence and automated monitoring","AI-assisted win/loss analysis and lightweight decision tools","IT Pressure Test","This portfolio and its grounded agent experience","Reusable research, synthesis, and PMM workflows","Continued product and AI-pricing study"],
         "decisions":["Design around workflows rather than collecting tools","Keep a human in the loop for consequential claims and decisions","Encode PMM expertise into evaluation criteria","Use prototypes to learn before deciding whether to build, buy, or stop"],
         "outcome":"The result is a growing set of practical systems that increase PMM leverage while keeping strategic accountability human. The tools are not the proof; the workflow design and operating choices are.",
         "learning":"Technical expertise for a PMM is the ability to understand enough of the system to make better product, pricing, trust, and go-to-market decisions."

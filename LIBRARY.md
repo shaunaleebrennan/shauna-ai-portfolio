@@ -10,6 +10,10 @@ Read every case study and supporting document here on GitHub. The links below op
 
 Repositioning employee experience for the AI era—without losing the adoption, trust, and culture that made the platform distinctive.
 
+### [IT Pressure Test](case-studies/it-pressure-test.md)
+
+Turning IT-buyer positioning judgment into a working tool: six audience lenses, source-linked diagnostics, and a practical rewrite brief.
+
 ### [AI Product Strategy](case-studies/ai-product-strategy.md)
 
 Learning by building: product strategy, AI pricing, portfolio agents, and hands-on experimentation with the tools reshaping modern GTM.

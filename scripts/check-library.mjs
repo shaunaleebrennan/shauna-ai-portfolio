@@ -40,3 +40,11 @@ for (const [file, href] of links) {
 const generated = await readdir('documents');
 check(generated.filter(name => name.endsWith('.html')).length === docs.length, 'Unexpected document output; inspect for stale or private pages');
 console.log(`${checks} checks passed: library coverage, local links, fragments, case routes, and public-source allowlist.`);
+
+const manifest = JSON.parse(await readFile('it-pressure-test/source-manifest.json','utf8'));
+const {createHash} = await import('node:crypto');
+for (const entry of manifest.files) {
+  check(createHash('sha256').update(await readFile(`it-pressure-test/${entry.path}`)).digest('hex')===entry.sha256, `Tool runtime differs from manifest: ${entry.path}`);
+}
+for(const item of work) await access(item.image);
+console.log(`Verified ${manifest.files.length} nested tool files and ${work.length} case-study images.`);

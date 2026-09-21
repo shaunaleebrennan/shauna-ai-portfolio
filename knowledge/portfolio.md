@@ -28,7 +28,7 @@ During her tenure, Workvivo grew from approximately $10M to more than $100M ARR,
 ## Hands-on AI work
 
 - [Portfolio Voice Agent](../case-studies/portfolio-voice-agent.md): voice-persona design, prompts, intent routing, knowledge structure, guardrails, evaluation, and web integration using ElevenLabs.
-- [AI Positioning QA](https://github.com/shaunaleebrennan/ai-positioning-qa): a public positioning-review tool with an inspectable rubric and source.
+- [IT Pressure Test](https://github.com/shaunaleebrennan/ai-positioning-qa): a public positioning-review tool with an inspectable rubric and source.
 - [AI Product Strategy](../case-studies/ai-product-strategy.md): workflow experiments and product judgment applied to PMM operations.
 
 Shauna designed and integrated the portfolio experience. ElevenLabs supplies the underlying voice models and runtime. Workvivo product engineering is distinct from her product marketing contribution.

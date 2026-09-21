@@ -1,0 +1,96 @@
+{
+  "sourceRepository": "https://github.com/shaunaleebrennan/ai-positioning-qa",
+  "sourceCommit": "336cf0ca566642074a1fbb8c4146cc99c05628b8",
+  "files": [
+    {
+      "source": "tool.html",
+      "path": "index.html",
+      "sha256": "5244ab7a15482b1af496aab684e6f8ecd1f8e74282e1f89e3692b4389ba6f9ea"
+    },
+    {
+      "source": "manual-review.html",
+      "path": "manual-review.html",
+      "sha256": "39fb0219e82d0dd815a2b0c59e7bac0c7bda5e24e3a8fcac8e96f32bc8710525"
+    },
+    {
+      "source": "favicon.svg",
+      "path": "favicon.svg",
+      "sha256": "f81bab785cfd2d1cb70c25255064ba5693dd6f30e279ebef70af3aba6a2c0549"
+    },
+    {
+      "source": "assets/styles.css",
+      "path": "assets/styles.css",
+      "sha256": "da56fc6f2a92029fe1a31a86a74c400b5f025ffb906012f10090811b9dec4ae6"
+    },
+    {
+      "source": "assets/it-buyer.css",
+      "path": "assets/it-buyer.css",
+      "sha256": "20d32c6cb655c62f8f75829b9f77b173b747fb04c354c8c968d74f57edeecaa4"
+    },
+    {
+      "source": "assets/js/app.js",
+      "path": "assets/js/app.js",
+      "sha256": "5ee97c1b3ab9aa90dcf2396f1c400c54d5fa86d399e943054316d3c23bbaaa26"
+    },
+    {
+      "source": "assets/js/awareness.js",
+      "path": "assets/js/awareness.js",
+      "sha256": "dfdf9be5cc06054310dab0dff37a35656e6781588bf0568bce1073b9ab600338"
+    },
+    {
+      "source": "assets/js/config.js",
+      "path": "assets/js/config.js",
+      "sha256": "721896e316093becf92313768062457ebdeb4288e96c8f314d1a6c6e7945a44e"
+    },
+    {
+      "source": "assets/js/diagnostics.js",
+      "path": "assets/js/diagnostics.js",
+      "sha256": "df940778534fe7276fc87521342453bddada1be84ea758ff151e0d9da5810a33"
+    },
+    {
+      "source": "assets/js/export.js",
+      "path": "assets/js/export.js",
+      "sha256": "89c0b5765bf22dc1cffe13c7b5bb4c0c1e251a65750a82cb4b31bf28de4603a7"
+    },
+    {
+      "source": "assets/js/it-buyer.js",
+      "path": "assets/js/it-buyer.js",
+      "sha256": "14a3664700799c0eac1be640b9323c0e9ea0682b5c328412f150030ef3db50d0"
+    },
+    {
+      "source": "assets/js/it-engine.js",
+      "path": "assets/js/it-engine.js",
+      "sha256": "0c2ea9334bd02b0eb67a08ce9e336699cd3298ddc91e54ed3602b7296e7ee7e3"
+    },
+    {
+      "source": "assets/js/prompt.js",
+      "path": "assets/js/prompt.js",
+      "sha256": "22f5e52248ee9bcc6e3745421c6676325f02ddf766604e61174533e1d2256b22"
+    },
+    {
+      "source": "assets/js/rubric.js",
+      "path": "assets/js/rubric.js",
+      "sha256": "5c26a2d6b3c8131cf5492531856bed849b49667cf04342f29b0800188b13ab62"
+    },
+    {
+      "source": "assets/js/sample-data.js",
+      "path": "assets/js/sample-data.js",
+      "sha256": "eaa449930fabf8145f45eb11412da52fdae97c073089fbbe645cf334d4c60277"
+    },
+    {
+      "source": "assets/js/scoring.js",
+      "path": "assets/js/scoring.js",
+      "sha256": "28a7515204be58eb176ec7633661eeb1ec9246c6d98c85b09eab39b8ba2e365e"
+    },
+    {
+      "source": "assets/js/strategy.js",
+      "path": "assets/js/strategy.js",
+      "sha256": "af29448562f658028364ccbc4e2a1f80e40e14ed2b043b3ab19308fcc81c84c7"
+    },
+    {
+      "source": "assets/js/validation.js",
+      "path": "assets/js/validation.js",
+      "sha256": "8135ea3146f7af6dc2fca022c9c3cbc0bc0a1d5dd50e7c06d19e803c59cc9627"
+    }
+  ]
+}

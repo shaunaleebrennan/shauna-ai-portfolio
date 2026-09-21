@@ -30,6 +30,7 @@ if (index === -1) {
           <p>${study.eyebrow}</p>
           <div class="case-meta"><div>Focus</div><div>${item.demonstrates.split(',').slice(0, 2).join(' ·')}</div><div>Evidence standard</div><div>Contribution and company outcomes separated</div></div>
         </div>
+        ${item.liveUrl ? `<p><a class="button primary" href="${item.liveUrl}">Try the live IT Pressure Test ↗</a></p>` : ""}
       </header>
 
       <section class="case-shell case-overview" aria-label="Case study at a glance"><div><span class="case-kicker">What this demonstrates</span><p>${item.demonstrates}</p></div><div><span class="case-kicker">My contribution</span><p>${study.contribution.slice(0, 3).join('; ')}.</p></div></section>

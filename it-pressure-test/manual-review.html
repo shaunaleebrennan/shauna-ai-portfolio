@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; style-src-attr 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'"
+    >
+    <meta name="theme-color" content="#0b0d0c">
+    <meta
+      name="description"
+      content="A browser-based, evidence-led QA framework for reviewing B2B product positioning."
+    >
+    <title>AI Positioning QA — Evidence-led messaging review</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/styles.css">
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main-content">Skip to review</a>
+
+    <p class="shell"><a href="./index.html">← IT buyer review</a></p><header class="site-header">
+      <div class="shell masthead">
+        <a class="wordmark" href="#top" aria-label="AI Positioning QA home">
+          <span aria-hidden="true">AP</span>
+          <span>AI Positioning QA</span>
+        </a>
+        <div class="edition" aria-label="Version 1.1, open source">
+          <span>v1.1</span>
+          <span aria-hidden="true">/</span>
+          <span>Open source</span>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="intro" aria-labelledby="page-title">
+        <div class="shell intro-grid">
+          <div class="intro-copy">
+            <p class="eyebrow">Evidence-led messaging review</p>
+            <h1 id="page-title">Make your<br><em>position</em><br>defensible.</h1>
+            <p class="lede">
+              An AI-assisted positioning review for B2B messaging. Score what the asset
+              actually communicates, trace every observation to evidence, and keep the
+              final judgement with a human.
+            </p>
+            <div class="hero-actions"><a class="button button-primary" href="#context">Start a review ↗</a><a href="#source">Try a worked example ↓</a></div>
+            <p class="byline">Built by <a href="https://shaunaleebrennan.github.io/shauna-ai-portfolio/">Shauna Brennan</a> · Strategy, made inspectable.</p>
+          </div>
+
+          <aside class="principle-card" aria-labelledby="principle-title">
+            <p class="principle-index" aria-hidden="true">01 / Principle</p>
+            <h2 id="principle-title">A diagnostic, not market validation.</h2>
+            <p>
+              The score helps prioritise questions and revisions. It does not prove
+              message-market fit; only customer and performance evidence can do that.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <div class="shell privacy-strip" role="note" aria-label="Privacy information">
+        <div class="privacy-marker" aria-hidden="true">Local</div>
+        <div>
+          <strong>Your source copy stays local by default.</strong>
+          <p>
+            This app sends no data anywhere. You decide whether to copy a generated
+            prompt into an external AI tool. Remove confidential, personal, or
+            unapproved material and check that tool’s privacy terms first.
+          </p>
+        </div>
+      </div>
+
+      <div class="shell app-shell">
+        <aside class="workflow-rail" aria-label="Review workflow">
+          <p class="rail-label">Review workflow</p><p id="review-progress" class="progress-note" role="status">0 of 8 dimensions filled</p>
+          <ol>
+            <li><a href="#context"><span>01</span> Context</a></li>
+            <li><a href="#source"><span>02</span> Source</a></li>
+            <li><a href="#strategy"><span>↗</span> Defend the position</a></li>
+            <li><a href="#rubric"><span>03</span> Score</a></li>
+            <li><a href="#synthesis"><span>04</span> Synthesise</a></li>
+            <li><a href="#results"><span>05</span> Review</a></li>
+          </ol>
+          <p class="rail-note">
+            Complete one asset at a time. Score the words on the page, not what you know
+            about the product.
+          </p>
+        </aside>
+
+        <div class="workspace">
+          <div id="error-summary" class="message message-error" role="alert" tabindex="-1" hidden></div>
+          <div id="status-message" class="message message-status" role="status" aria-live="polite" aria-atomic="true"></div>
+
+          <form id="review-form" novalidate>
+            <section id="context" class="panel" aria-labelledby="context-title">
+              <div class="section-heading">
+                <div>
+                  <p class="section-number">01</p>
+                  <h2 id="context-title">Set the review context</h2>
+                </div>
+                <p>
+                  Define the situation before evaluating the message. Required fields
+                  are marked <span aria-hidden="true">*</span><span class="sr-only">required</span>.
+                </p>
+              </div>
+
+              <div class="field-grid field-grid-two">
+                <div class="field-group">
+                  <label for="asset-name">Asset name <span aria-hidden="true">*</span></label>
+                  <input id="asset-name" name="asset-name" type="text" autocomplete="off" required>
+                </div>
+
+                <div class="field-group compact-field">
+                  <label for="asset-version">Version</label>
+                  <input id="asset-version" name="asset-version" type="text" autocomplete="off" placeholder="e.g. 0.3">
+                </div>
+
+                <div class="field-group">
+                  <label for="reviewer-type">Review method <span aria-hidden="true">*</span></label>
+                  <select id="reviewer-type" name="reviewer-type" required>
+                    <option value="human">Human review</option>
+                    <option value="ai-assisted">AI-assisted review</option>
+                  </select>
+                </div>
+
+                <div class="field-group">
+                  <label for="journey-stage">Awareness stage <span aria-hidden="true">*</span></label>
+                  <select id="journey-stage" name="journey-stage" required aria-describedby="awareness-indicator">
+                    <option value="">Choose an awareness stage</option>
+                    <option value="Unaware">Unaware</option>
+                    <option value="Problem aware">Problem aware</option>
+                    <option value="Solution aware">Solution aware</option>
+                    <option value="Product aware">Product aware</option>
+                    <option value="Most aware">Most aware</option>
+                  </select>
+                  <p class="field-help" id="awareness-indicator" aria-live="polite">Choose what the prospect already knows before reading this asset.</p>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label for="audience">Intended audience <span aria-hidden="true">*</span></label>
+                <textarea
+                  id="audience"
+                  name="audience"
+                  rows="3"
+                  placeholder="Roles, company context, maturity, priorities, and constraints"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="field-grid field-grid-two">
+                <div class="field-group">
+                  <label for="buying-trigger">Buying trigger <span aria-hidden="true">*</span></label>
+                  <textarea
+                    id="buying-trigger"
+                    name="buying-trigger"
+                    rows="4"
+                    placeholder="What changed, and why might this matter now?"
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="field-group">
+                  <label for="alternatives">Alternatives considered <span aria-hidden="true">*</span></label>
+                  <textarea
+                    id="alternatives"
+                    name="alternatives"
+                    rows="4"
+                    placeholder="Competitors, manual work, internal build, or doing nothing"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label for="supplied-evidence">Evidence supplied</label>
+                <textarea
+                  id="supplied-evidence"
+                  name="supplied-evidence"
+                  rows="4"
+                  aria-describedby="evidence-help"
+                  placeholder="Research, customer proof, product behaviour, benchmarks, or qualifications"
+                ></textarea>
+                <p id="evidence-help" class="field-help">
+                  List only evidence the reviewer can use. Do not assume access to other
+                  research or internal knowledge.
+                </p>
+              </div>
+            </section>
+
+            <section id="source" class="panel" aria-labelledby="source-title">
+              <div class="section-heading">
+                <div>
+                  <p class="section-number">02</p>
+                  <h2 id="source-title">Add the exact source</h2>
+                </div>
+                <p>
+                  Paste the copy unchanged. Exact quotations make the review auditable
+                  and help expose unsupported inferences.
+                </p>
+              </div>
+
+              <div class="field-group source-field">
+                <label for="source-messaging">Source messaging <span aria-hidden="true">*</span></label>
+                <textarea
+                  id="source-messaging"
+                  name="source-messaging"
+                  rows="12"
+                  aria-describedby="source-help"
+                  placeholder="Paste one homepage section, launch narrative, campaign message, or sales-deck passage."
+                  required
+                ></textarea>
+                <div id="source-help" class="field-meta">
+                  <span>One asset per review</span>
+                  <span>Plain text only</span>
+                  <span>No confidential data</span>
+                </div>
+              </div>
+
+              <div class="button-row button-row-spread">
+                <div class="example-controls"><label for="example-choice">Fictional example</label><select id="example-choice"><option value="signalsdesk">SignalsDesk · weak claims</option><option value="releaseguard">ReleaseGuard · stronger evidence</option><option value="relayboard">Relayboard · non-AI product</option></select><button id="load-example" class="button button-secondary" type="button">
+                  Load worked example
+                </button></div>
+                <div class="button-cluster">
+                  <button id="clear-review" class="button button-danger" type="button">Clear review</button>
+                  <button id="generate-prompt" class="button button-quiet" type="button">
+                    Generate AI prompt
+                  </button>
+                  <button id="open-import" class="button button-quiet" type="button">
+                    Import AI review
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <section id="strategy" class="panel strategy-panel" aria-labelledby="strategy-title">
+              <div class="section-heading"><div><p class="section-number">Strategic pressure test</p><h2 id="strategy-title">Defend the position.</h2></div><p>A clear message can still rest on a weak category claim. Make the strongest case against your position before defending it.</p></div>
+              <details><summary>Open the category stress test <span>Optional · separate from the score</span></summary>
+                <p class="field-help">These are human-authored challenges, not simulated customer research. The export records your source, asset version, reasoning, and accountable owner as a draft decision record.</p>
+                <div id="strategy-fields" class="field-grid field-grid-two"></div>
+                <button id="export-strategy" type="button" class="button button-secondary">Export category stress test</button>
+                <p id="strategy-status" class="message" role="status" hidden></p>
+              </details>
+            </section>
+            <section id="rubric" class="panel" aria-labelledby="rubric-title">
+              <div class="section-heading">
+                <div>
+                  <p class="section-number">03</p>
+                  <h2 id="rubric-title">Score the eight dimensions</h2>
+                </div>
+                <p>
+                  Use 1–5 anchors, cite the source, record what is missing, then make one
+                  focused recommendation. Responsible AI may be marked N/A when no AI
+                  claim is present.
+                </p>
+              </div>
+
+              <div class="scale-key" aria-label="Scoring scale">
+                <span><strong>1</strong> Missing or misleading</span>
+                <span><strong>3</strong> Adequate but incomplete</span>
+                <span><strong>5</strong> Clear and well supported</span>
+              </div>
+
+              <div id="dimensions" class="dimensions" aria-describedby="rubric-guidance">
+                <p class="empty-state">The review dimensions are preparing…</p>
+              </div>
+              <p id="rubric-guidance" class="sr-only">
+                Each dimension requires a score or not-applicable selection, supporting
+                evidence, missing context, confidence, and a recommendation.
+              </p>
+            </section>
+
+            <section id="synthesis" class="panel" aria-labelledby="synthesis-title">
+              <div class="section-heading">
+                <div>
+                  <p class="section-number">04</p>
+                  <h2 id="synthesis-title">Turn diagnosis into a decision</h2>
+                </div>
+                <p>
+                  Make the highest-impact issues explicit. These fields remain editable
+                  whether the review is human or AI-assisted.
+                </p>
+              </div>
+
+              <div class="field-group">
+                <label for="priority-findings">Three priority findings <span aria-hidden="true">*</span></label>
+                <textarea
+                  id="priority-findings"
+                  name="priority-findings"
+                  rows="5"
+                  placeholder="1. Finding and why it matters&#10;2. Finding and why it matters&#10;3. Finding and why it matters"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="field-grid field-grid-two">
+                <div class="field-group">
+                  <label for="risky-claims">Unsupported or risky claims</label>
+                  <textarea
+                    id="risky-claims"
+                    name="risky-claims"
+                    rows="6"
+                    placeholder="Quote the claim, explain the risk, and name the proof or qualification needed."
+                  ></textarea>
+                </div>
+
+                <div class="field-group">
+                  <label for="next-test">Recommended next test <span aria-hidden="true">*</span></label>
+                  <textarea
+                    id="next-test"
+                    name="next-test"
+                    rows="6"
+                    placeholder="Audience, method, comparison, and decision criterion"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label for="human-notes">Human review notes</label>
+                <textarea
+                  id="human-notes"
+                  name="human-notes"
+                  rows="5"
+                  placeholder="Record accepted, rejected, or modified recommendations and why."
+                ></textarea>
+              </div>
+
+              <div class="calculation-band">
+                <div>
+                  <strong>Ready to calculate?</strong>
+                  <p>The application computes the total. Imports with inconsistent totals are rejected.</p>
+                </div>
+                <button id="calculate" class="button button-primary" type="submit">
+                  Calculate review
+                </button>
+              </div>
+            </section>
+          </form>
+
+          <section id="results" class="panel results-panel" aria-labelledby="results-title" hidden>
+            <div class="section-heading results-heading">
+              <div>
+                <p class="section-number">05</p>
+                <h2 id="results-title">Review the diagnosis</h2>
+              </div>
+              <p>
+                Read the component evidence before the total. The score is a prioritisation
+                aid, not an objective verdict.
+              </p>
+            </div>
+
+            <aside class="diagnostic-card" aria-labelledby="diagnostic-status"><h3 id="diagnostic-status"></h3><ul id="diagnostic-warnings"></ul><p id="score-sensitivity"></p></aside>
+            <div class="score-summary" aria-live="polite" aria-atomic="true">
+              <div class="overall-score-block">
+                <span class="score-label">Normalised score</span>
+                <output id="overall-score" class="overall-score">—</output>
+              </div>
+              <div class="weight-block">
+                <span class="score-label">Applicable weight</span>
+                <output id="applicable-weight" class="applicable-weight">—</output>
+              </div>
+            </div>
+
+            <div class="result-grid">
+              <div class="result-section">
+                <h3>Component scores</h3>
+                <div id="score-bars" class="score-bars">
+                  <p class="empty-state">Calculate the review to see component scores.</p>
+                </div>
+              </div>
+
+              <div class="result-section risk-section">
+                <h3>Risk flags</h3>
+                <ul id="risk-flags" class="risk-flags">
+                  <li class="empty-state">No calculation yet.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="result-note" role="note">
+              <strong>Use the output as a review record.</strong>
+              <p>
+                Validate important assumptions with customers, product evidence, and
+                performance data before changing market-facing positioning.
+              </p>
+            </div>
+
+            <div class="button-row results-actions">
+              <div class="button-cluster">
+                <button id="export-markdown" class="button button-secondary" type="button" disabled>
+                  Export Markdown
+                </button>
+                <button id="export-json" class="button button-secondary" type="button" disabled>
+                  Export JSON
+                </button>
+              </div>
+
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div>
+          <strong>AI Positioning QA</strong>
+          <p>Open-source, evidence-led positioning quality assurance.</p>
+        </div>
+        <p>Built for accountable product marketing. No accounts. No tracking. No hidden model calls.</p>
+      </div>
+    </footer>
+
+    <dialog id="prompt-dialog" class="modal" aria-labelledby="prompt-dialog-title" aria-describedby="prompt-dialog-description">
+      <div class="modal-header">
+        <div>
+          <p class="eyebrow">Optional AI assistance</p>
+          <h2 id="prompt-dialog-title">Generated review prompt</h2>
+        </div>
+        <button id="close-prompt" class="icon-button" type="button" aria-label="Close prompt dialog">×</button>
+      </div>
+      <p id="prompt-dialog-description" class="modal-intro">
+        Review the text before copying it to an AI tool approved by you or your organisation.
+        This app does not send it.
+      </p>
+      <div class="field-group">
+        <label for="generated-prompt">Prompt</label>
+        <textarea id="generated-prompt" rows="18" readonly></textarea>
+      </div>
+      <div class="modal-actions">
+        <button id="copy-prompt" class="button button-primary" type="button">Copy prompt</button>
+      </div>
+    </dialog>
+
+    <dialog id="import-dialog" class="modal" aria-labelledby="import-dialog-title" aria-describedby="import-dialog-description">
+      <div class="modal-header">
+        <div>
+          <p class="eyebrow">AI-assisted draft</p>
+          <h2 id="import-dialog-title">Import a structured review</h2>
+        </div>
+        <button id="close-import" class="icon-button" type="button" aria-label="Close import dialog">×</button>
+      </div>
+      <p id="import-dialog-description" class="modal-intro">
+        Paste only JSON returned from the generated prompt. The app validates its structure, checks quotations and matches it to your current source and context. Imported approval always resets to pending. Clear the current review to restore a different saved record.
+      </p>
+      <div id="import-errors" class="message message-error" role="alert" aria-live="assertive" hidden></div>
+      <div class="field-group">
+        <label for="import-json">Review JSON</label>
+        <textarea
+          id="import-json"
+          rows="16"
+          spellcheck="false"
+          placeholder="Paste the complete JSON response here."
+        ></textarea>
+      </div>
+      <div class="modal-actions">
+        <button id="apply-import" class="button button-primary" type="button">Validate and apply</button>
+      </div>
+    </dialog>
+
+    <noscript>
+      <div class="noscript-message">
+        AI Positioning QA needs JavaScript to calculate, import, and export reviews. No
+        information is sent to a server.
+      </div>
+    </noscript>
+
+    <script type="module" src="./assets/js/app.js"></script>
+  </body>
+</html>

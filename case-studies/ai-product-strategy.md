@@ -24,7 +24,7 @@ AI does more of the processing. PMM remains accountable for the thinking. Retrie
 
 - Seller-facing competitive intelligence and automated monitoring
 - AI-assisted win/loss analysis and lightweight decision tools
-- AI Positioning QA
+- IT Pressure Test
 - This portfolio and its grounded agent experience
 - Reusable research, synthesis, and PMM workflows
 - Continued product and AI-pricing study
@@ -48,7 +48,7 @@ Technical expertise for a PMM is the ability to understand enough of the system 
 
 Role and contribution statements are professional self-report unless a source independently confirms them. Company outcomes are shared results.
 
-- **[Try AI Positioning QA](https://shaunaleebrennan.github.io/ai-positioning-qa/)** — Public build. IT-buyer lenses, evidence diagnostics, and in-tool deep review; human judgment remains accountable.
+- **[Try IT Pressure Test](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/)** — Public build. IT-buyer lenses, evidence diagnostics, and in-tool deep review; human judgment remains accountable.
 - **[Inspect the rubric and implementation](https://github.com/shaunaleebrennan/ai-positioning-qa)** — Source repository. Review the framework, worked example, and validation checks.
 - **[Read the positioning pressure test](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-buyer-integration-2026-09-21.md)** — Evaluation evidence. Adversarial scoring and import checks, fixes, and remaining calibration limits.
 - **[Explore the Portfolio Voice Agent](portfolio-voice-agent.md)** — Related case study. A concrete example of agent design, integration, and evaluation.

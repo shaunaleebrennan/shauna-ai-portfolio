@@ -48,8 +48,9 @@ Technical expertise for a PMM is the ability to understand enough of the system 
 
 Role and contribution statements are professional self-report unless a source independently confirms them. Company outcomes are shared results.
 
-- **[Try AI Positioning QA](https://shaunaleebrennan.github.io/ai-positioning-qa/)** — Public build. Browser-based positioning review; human judgment remains accountable.
+- **[Try AI Positioning QA](https://shaunaleebrennan.github.io/ai-positioning-qa/)** — Public build. Eight-dimension review, evidence diagnostics, and category-defense worksheet; human judgment remains accountable.
 - **[Inspect the rubric and implementation](https://github.com/shaunaleebrennan/ai-positioning-qa)** — Source repository. Review the framework, worked example, and validation checks.
+- **[Read the positioning pressure test](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/pressure-test-2026-09-21.md)** — Evaluation evidence. Adversarial scoring and import checks, fixes, and remaining calibration limits.
 - **[Explore the Portfolio Voice Agent](portfolio-voice-agent.md)** — Related case study. A concrete example of agent design, integration, and evaluation.
 
 [Claims and sources](../docs/EVIDENCE_REGISTER.md) · [All supporting documents](../LIBRARY.md#supporting-documents)

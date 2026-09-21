@@ -30,6 +30,8 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 **Agents · Pricing · Workflow Design** — Building an AI-enabled PMM operating model through agent prototypes, pricing work, and workflow design. The proof includes this grounded portfolio agent, AI Positioning QA, and reusable research, synthesis, and competitive workflows.
 
+**Try the build:** [AI Positioning QA](https://shaunaleebrennan.github.io/ai-positioning-qa/) — an eight-dimension positioning review with evidence diagnostics and a category-defense worksheet. The browser app uses deterministic scoring; optional AI-assisted reviews remain subject to human review. [Inspect the source and rubric](https://github.com/shaunaleebrennan/ai-positioning-qa) · [Read the pressure-test findings](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/pressure-test-2026-09-21.md).
+
 ### [HQ Agent](case-studies/hq-agent.md)
 
 [![HQ Agent — From search, to answer, to action](assets/readme/hq-agent-strip.svg)](case-studies/hq-agent.md)

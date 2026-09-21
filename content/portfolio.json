@@ -62,13 +62,19 @@
           "title": "Try AI Positioning QA",
           "url": "https://shaunaleebrennan.github.io/ai-positioning-qa/",
           "kind": "Public build",
-          "note": "Browser-based positioning review; human judgment remains accountable."
+          "note": "Eight-dimension review, evidence diagnostics, and category-defense worksheet; human judgment remains accountable."
         },
         {
           "title": "Inspect the rubric and implementation",
           "url": "https://github.com/shaunaleebrennan/ai-positioning-qa",
           "kind": "Source repository",
           "note": "Review the framework, worked example, and validation checks."
+        },
+        {
+          "title": "Read the positioning pressure test",
+          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/pressure-test-2026-09-21.md",
+          "kind": "Evaluation evidence",
+          "note": "Adversarial scoring and import checks, fixes, and remaining calibration limits."
         },
         {
           "title": "Explore the Portfolio Voice Agent",

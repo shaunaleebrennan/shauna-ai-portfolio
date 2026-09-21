@@ -26,7 +26,7 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 ### [IT Pressure Test](case-studies/it-pressure-test.md)
 
-[![IT Pressure Test — Will IT believe it?](assets/evidence/it-pressure-test.png)](case-studies/it-pressure-test.md)
+[![IT Pressure Test — Will IT believe it?](assets/evidence/it-pressure-test-v2.jpg)](case-studies/it-pressure-test.md)
 
 **Buyer insight · Positioning systems · Evaluation** — Building an IT messaging review around six audience lenses, accountable human judgment, and inspectable source evidence. [Try the live tool](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/) · [Read the case study](case-studies/it-pressure-test.md).
 

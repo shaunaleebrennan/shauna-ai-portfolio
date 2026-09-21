@@ -24,6 +24,7 @@ if (index === -1) {
   root.innerHTML = `
     <article>
       <header class="case-hero case-shell">
+        <div class="case-hero-content">
         <div class="case-kicker">${item.tag} · Case study 0${index + 1}</div>
         <h1 class="case-title">${item.title}</h1>
         <div class="case-deck">
@@ -31,11 +32,12 @@ if (index === -1) {
           <div class="case-meta"><div>Focus</div><div>${item.demonstrates.split(',').slice(0, 2).join(' ·')}</div><div>Evidence standard</div><div>Contribution and company outcomes separated</div></div>
         </div>
         ${item.liveUrl ? `<p><a class="button primary" href="${item.liveUrl}">Try the live IT Pressure Test ↗</a></p>` : ""}
+        </div>
+        <figure class="case-visual"><img src="${item.image}" alt="${item.title} case study artwork" width="1600" height="2000" fetchpriority="high"></figure>
       </header>
 
       <section class="case-shell case-overview" aria-label="Case study at a glance"><div><span class="case-kicker">What this demonstrates</span><p>${item.demonstrates}</p></div><div><span class="case-kicker">My contribution</span><p>${study.contribution.slice(0, 3).join('; ')}.</p></div></section>
       <nav class="case-shell case-jumps" aria-label="On this page"><a href="#context">Context</a><a href="#contribution">My contribution</a><a href="#decisions">Key decisions</a>${study.architecture ? '<a href="#system-architecture">System design</a><a href="#evaluation">Evaluation</a>' : ''}<a href="#outcome">Outcome</a><a href="#evidence">Evidence & documents</a></nav>
-      <figure class="case-visual"><img src="${item.image}" alt="${item.title} case study artwork"></figure>
 
       <div class="case-body">
         <div class="case-shell">

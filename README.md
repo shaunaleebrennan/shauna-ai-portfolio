@@ -32,7 +32,7 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 ### [AI Product Strategy](case-studies/ai-product-strategy.md)
 
-[![AI Product Strategy — Building the PMM operating model](assets/readme/ai-product-strategy-strip.svg)](case-studies/ai-product-strategy.md)
+[![AI Product Strategy — Building the PMM operating model](assets/readme/ai-product-strategy-strip-v2.svg)](case-studies/ai-product-strategy.md)
 
 **Agents · Pricing · Workflow Design** — Building an AI-enabled PMM operating model through agent prototypes, pricing work, and workflow design. The proof includes this grounded portfolio agent, IT Pressure Test, and reusable research, synthesis, and competitive workflows.
 
@@ -40,7 +40,7 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 ### [HQ Agent](case-studies/hq-agent.md)
 
-[![HQ Agent — From search, to answer, to action](assets/readme/hq-agent-strip.svg)](case-studies/hq-agent.md)
+[![HQ Agent — From search, to answer, to action](assets/readme/hq-agent-strip-v2.svg)](case-studies/hq-agent.md)
 
 **Agentic AI · Trust · Packaging** — Turning enterprise search, grounded answers, and agentic action into one credible commercial progression: **SEARCH → ANSWER → ACTION**. I led the product story, AI maturity narrative, pricing and packaging, and seller enablement.
 

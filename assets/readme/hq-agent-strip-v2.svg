@@ -16,7 +16,7 @@
   </defs>
   <rect width="1200" height="190" rx="20" fill="url(#bg)"/>
   <rect width="9" height="190" rx="4.5" fill="#8f7cff"/>
-  <text x="48" y="132" fill="#9d8cff" font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="76" font-weight="780">03</text>
+  <text x="48" y="132" fill="#9d8cff" font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="76" font-weight="780">04</text>
   <line x1="174" y1="42" x2="174" y2="148" stroke="#f7f5f0" stroke-opacity="0.16" stroke-width="2"/>
   <text x="216" y="69" fill="#9d8cff" font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="750" letter-spacing="4">HQ AGENT</text>
   <text x="216" y="132" fill="#f7f5f0" font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="43" font-weight="760">From search, to answer, to action</text>

@@ -1,8 +1,14 @@
 const hurdles = {
+  platform: {
+    title: 'Make the broader Workvivo HQ case to IT',
+    direction: 'Start with the employee journey across communication, knowledge and everyday work. Identify fragmented destinations, difficult access or a change-adoption problem. Bring Comms or HR together with the digital workplace owner, IT and the relevant knowledge or operations owner. Separate platform value and confirmed entitlements from any HQ Agent purchase.',
+    question: 'Where do employees lose time finding information or knowing what to do next, and who owns that experience across systems?',
+    next: 'A joint employee-journey and system-fit workshop. Agree what the platform must improve, how it fits existing systems and which measures will demonstrate value. Qualify any agent use case separately.'
+  },
   access: {
     title: 'Earn the AI / IT conversation',
-    direction: 'Use the existing employee-experience relationship to identify a frontline or mobile employee group that the current AI programme is not serving well, then identify one recurring workflow problem. Ask your champion to introduce the person accountable for that workflow and the AI or IT owner. Give them a reason to join: a measurable problem, an affected employee group and a decision they own.',
-    question: 'Which frontline employee requests still depend on a manager or service desk, where do delays occur, and who owns the workflow and AI programme?',
+    direction: 'Use the existing employee-experience relationship to identify an employee group that the current AI programme is not serving well, including frontline, mobile or desk-based staff, then identify one recurring workflow problem. Ask your champion to introduce the person accountable for that workflow and the AI or IT owner. Give them a reason to join: a measurable problem, an affected employee group and a decision they own.',
+    question: 'Which employee requests still depend on a manager or service desk, where do delays occur, and who owns the workflow and AI programme?',
     next: 'A short workflow discovery session with the business champion and AI / IT owner. Agree the problem before proposing a product demo.'
   },
   fit: {
@@ -20,10 +26,11 @@ const hurdles = {
 };
 export function teamBrief(r) {
   const h=hurdles[r.challenge]||hurdles.access;
+  const offering=r.challenge==='platform'?'Workvivo HQ':'HQ Agent within Workvivo HQ';
   const stage=r.goal==='attention'
     ? 'Discover: lead with one problem and one relevant question. Offer a working conversation; keep technical detail available for follow-up.'
     : r.goal==='shortlist'
-      ? 'Evaluate: show the current and proposed workflow, where HQ Agent fits, what must connect and the evidence still needed.'
+      ? 'Evaluate: show the current and proposed workflow, where the proposed platform or agent capability fits, what must connect and the evidence still needed.'
       : 'Commit: make ownership, implementation effort, controls, cost and acceptance criteria explicit.';
-  return `${h.title}\n\nSELLER DIRECTION\n${h.direction}\n\nDISCOVERY QUESTION\n${h.question}\n\nNEXT CONVERSATION\n${h.next}\n\nSTAGE FIT\n${stage}\n\nREWRITE STARTER — COMPLETE AND VERIFY\nFor [employee group], [recurring workflow] creates [specific delay, cost or risk]. Your current approach leaves [validated gap]. Explore whether HQ Agent within Workvivo HQ can improve [bounded outcome]. Validate [systems, supported actions and controls] and measure [agreed baseline and success criterion].\n\nWORKFLOW TO SCOPE\n[Employee group] → [question or request] → [source or live system] → [supported action] → [confirmation or escalation]. For example, explore a leave-policy-to-request journey; validate every step before presenting it as available.\n\nPROOF TO BRING\nAn approved demonstration of the exact workflow; confirmed integration and action scope; permission and data-flow evidence; a relevant customer example or an agreed pilot measurement plan. Do not transfer general Workvivo adoption figures to HQ Agent outcomes.\n\nSUPPLIED TEAM CONTEXT — NOT VERIFIED OR AUTOMATICALLY ANALYSED\n${r.teamContext?.trim()||'None supplied.'}\n\nUse this context when completing the starter. Keep the original meaning, and mark unsupported claims as PROOF NEEDED. The language score uses only the message field.`;
+  return `${h.title}\n\nSELLER DIRECTION\n${h.direction}\n\nDISCOVERY QUESTION\n${h.question}\n\nNEXT CONVERSATION\n${h.next}\n\nSTAGE FIT\n${stage}\n\nREWRITE STARTER — COMPLETE AND VERIFY\nFor [employee group], [recurring workflow] creates [specific delay, cost or risk]. Your current approach leaves [validated gap]. Explore whether ${offering} can improve [bounded outcome]. Validate [systems, supported actions and controls] and measure [agreed baseline and success criterion].\n\nPLATFORM AND AGENT BOUNDARY\nWorkvivo is the company and master brand; Workvivo HQ is the platform experience. Explain platform value and confirmed entitlements first. Treat HQ Agent scope and any additional purchase as a separate decision with its own evidence.\n\nWORKFLOW TO SCOPE\n[Employee group] → [question or request] → [source or live system] → [supported action] → [confirmation or escalation]. For example, explore a leave-policy-to-request journey; validate every step before presenting it as available.\n\nPROOF TO BRING\nAn approved demonstration of the exact workflow; confirmed integration and action scope; permission and data-flow evidence; a relevant customer example or an agreed pilot measurement plan. Do not transfer general Workvivo adoption figures to HQ Agent outcomes.\n\nSUPPLIED TEAM CONTEXT — NOT VERIFIED OR AUTOMATICALLY ANALYSED\n${r.teamContext?.trim()||'None supplied.'}\n\nUse this context when completing the starter. Keep the original meaning, and mark unsupported claims as PROOF NEEDED. The language score uses only the message field.`;
 }

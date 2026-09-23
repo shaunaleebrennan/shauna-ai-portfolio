@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {angles,claimChecks,claimReviewText,guidanceFor,guidanceText} from '../workvivo-it-buyer-test/assets/js/hq-guidance.js';
+import {credentialNote,angles,claimChecks,claimReviewText,guidanceFor,guidanceText} from '../workvivo-it-buyer-test/assets/js/hq-guidance.js';
 import {analyse,profiles,buyingRoles,goals,esc} from '../workvivo-it-buyer-test/assets/js/it-engine.js';
 const base={angle:'general',persona:'ai',buyingRole:'owner',goal:'attention',region:'global',awareness:'Problem aware',assetType:'Email / outreach',message:'Manual work delays employee requests.',proof:'',challenge:'access'};
 test('HQ guidance leaves the original scoring engine byte-for-byte unchanged',()=>assert.equal(readFileSync(new URL('../workvivo-it-buyer-test/assets/js/it-engine.js',import.meta.url),'utf8'),readFileSync(new URL('../it-pressure-test/assets/js/it-engine.js',import.meta.url),'utf8')));
@@ -54,4 +54,24 @@ test('multiple claims of the same type are retained with decimal values intact',
  const text='Customers report 35.5% savings. Another cohort reports 25% adoption.';
  const metrics=claimChecks(text).filter(f=>f.id==='metrics');
  assert.equal(metrics.length,2);assert.equal(metrics[0].quote,'Customers report 35.5% savings.');
+});
+
+
+test('measurement guidance keeps supporting listening separate from AI usage and outcome proof in every export',()=>{
+ for(const angle of Object.keys(angles)){
+  const text=guidanceText({...base,angle});
+  for(const phrase of ['Seer is an optional supporting differentiator','Analytics and Advanced Analytics','AI-generated analytics summaries are not the same as AI usage measurement','Usage and sentiment alone do not prove ROI','do not infer individual sentiment from usage','Do not promise a single joined dashboard'])assert(text.includes(phrase),`${angle}: ${phrase}`);
+ }
+ assert(!Object.keys(angles).includes('seer'));
+ assert(claimChecks('Seer proves AI transformation ROI.').some(f=>f.id==='causality'));
+});
+
+
+test('confirmed credential lists receive useful sales guidance without approving surrounding claims',()=>{
+ assert.match(credentialNote('SOC 2 Type II, ISO 27001.'),/Confirmed Workvivo credentials/);
+ assert.match(credentialNote('SOC 2 Type 2 and ISO 27001'),/approved trust documentation/);
+ for(const text of ['Not SOC 2 Type II.','SOC 2 Type II guarantees zero risk.','Our competitor has ISO 27001.','ISO 27001 for all products.'])assert.equal(credentialNote(text),'');
+ const r={...base,message:'SOC 2 Type II, ISO 27001. HQ Agent guarantees ROI.'};
+ assert.match(claimReviewText(r),/Confirmed Workvivo credentials/);
+ assert(claimChecks(r.message).some(f=>f.id==='causality'));
 });

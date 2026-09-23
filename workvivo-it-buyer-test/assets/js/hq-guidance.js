@@ -2,8 +2,25 @@
 export const sources = [
   {name:'Atomic — How IT Leaders Actually Buy Tech', url:'https://atomic.ie/how-it-leaders-actually-buy-tech/', scope:'Buyer-research basis: system fit, realistic delivery, internal consensus and post-purchase support. Interviews cover Europe and North America; this is not proof of HQ outcomes or a regional scoring model.'},
   {name:'Forrester — Understanding B2B Buyer Roles', url:'https://www.forrester.com/report/understanding-b2b-buyer-roles-is-the-key-to-navigating-buying-groups/RES173037', scope:'Public research summary: buying roles and their involvement vary across purchase scenarios. The full report is gated; no survey percentages are reproduced here.'},
-  {name:'Workvivo — HQ product overview', url:'https://www.workvivo.com/hq/', scope:'Vendor product context for HQ, HQ Agent and Seer. Marketing descriptions do not independently establish customer outcomes, integration scope or comparative superiority.'}
+  {name:'Workvivo — HQ product overview', url:'https://www.workvivo.com/hq/', scope:'Vendor product context for HQ, HQ Agent and Seer. Marketing descriptions do not independently establish customer outcomes, integration scope or comparative superiority.'},
+  {name:'Workvivo — Seer', url:'https://www.workvivo.com/seer/', scope:'Vendor context for employee listening, manager insights, action planning and Advanced Analytics. Applying listening to AI change is a suggested use case, not a validated transformation result.'},
+  {name:'Workvivo — AI overview', url:'https://support.workvivo.com/hc/en-gb/articles/25076159425309-Workvivo-AI-Overview', scope:'Explains AI-generated summaries of platform analytics and Seer feedback. These summaries are distinct from measurement of AI usage.'},
+  {name:'Workvivo — Product packages', url:'https://www.workvivo.com/pricing/', scope:'Lists HQ Agent AI usage analytics. Confirm current entitlements, reporting fields and access for the proposed customer scenario. Public pages checked 23 September 2026.'}
 ];
+export const measurement = {
+  positioning:'Lead with the IT problem and the HQ / HQ Agent use case. Seer is an optional supporting differentiator: involve HR / People and managers to understand how change is landing and act on feedback.',
+  layers:[
+    {name:'Analytics and Advanced Analytics', signal:'Inspect platform activation, use and content engagement, with deeper analysis where available.', question:'Is the rollout reaching employees, and where does engagement drop?', limit:'Platform activity does not establish useful AI use or task success. Confirm the available reports and package.'},
+    {name:'AI usage insights', signal:'Use supported HQ Agent AI usage analytics to examine uptake.', question:'What does the available usage reporting tell us about this AI rollout?', limit:'Confirm event definitions, reporting coverage and time period. Do not assume visibility into every AI tool, task completion or answer quality. AI-generated analytics summaries are not the same as AI usage measurement.'},
+    {name:'Seer: sentiment and change insights', signal:'Use employee listening, comment themes and manager action planning to investigate confidence, friction and support needs.', question:'How are employees experiencing the change, and what should we improve?', limit:'This is a suggested application of listening, not a dedicated AI-transformation score or proof of causation. Agree suitable questions and confidentiality/access arrangements with HR / People; do not infer individual sentiment from usage.'},
+    {name:'Operational and financial evidence', signal:'Combine relevant service, task-quality and cost data with the above signals.', question:'Did work improve enough to justify the investment?', limit:'Record a baseline, cohort, time period, comparison and full costs. Usage and sentiment alone do not prove ROI.'}
+  ],
+  next:'For one AI use case, agree an IT owner, a People partner and an operational outcome. Review uptake and employee feedback, choose an improvement, name its owner, communicate what changed and reassess. Check whether the operational outcome moved too.',
+  boundary:'Use these as complementary evidence sources. Do not promise a single joined dashboard, automatic data correlation or included entitlements without confirming the implementation.'
+};
+export function measurementText() {
+  return `### Measurement: use, experience and outcomes\n\n${measurement.positioning}\n\n${measurement.layers.map(l=>`- ${l.name}: ${l.signal}\n  Ask: ${l.question}\n  Boundary: ${l.limit}`).join('\n\n')}\n\nNext step: ${measurement.next}\n\n${measurement.boundary}\n`;
+}
 export const angles = {
   general: {label:'Employee experience across the existing stack',
     opening:'Where does the employee journey break across the systems you already own?',
@@ -13,13 +30,13 @@ export const angles = {
     offer:'A one-journey experience map',test:'Compare the current route with the proposed route using the same task and employee group.'},
   proof: {label:'Proof of progress',
     opening:'What changed in employees’ work after the AI rollout—and what can you demonstrate?',
-    bridge:'Use HQ reach and engagement signals, and relevant Seer listening insights, alongside workflow and financial evidence. They do not independently establish AI ROI.',
+    bridge:'Combine Analytics and Advanced Analytics for platform engagement, HQ Agent AI usage insights for uptake, and optional Seer listening for the experience of change. Test progress against operational and financial outcomes; none of these signals alone establishes AI ROI.',
     evidence:'Record baseline, cohort, time period, task outcome, costs, comparison and other changes that could explain the result.',
     challenge:'Could usage or sentiment improve while task quality, service outcomes or cost remain unchanged?',
     offer:'A progress-and-evidence worksheet',test:'Ask an IT sponsor and a business owner whether the evidence supports the same investment decision.'},
   adoption: {label:'Useful adoption and change',
     opening:'AI is available. Where does useful repeat use stall?',
-    bridge:'Explore how HQ communication, guidance and community could support change, with HQ Agent for relevant tasks and Seer for listening. Use communicate → guide → act → listen → improve as a planning framework, not a proven causal model.',
+    bridge:'Explore how HQ communication, guidance and community could support change, with HQ Agent for relevant tasks, analytics for engagement and AI uptake, and optional Seer listening for sentiment and change insights with HR / People. Use communicate → guide → act → listen → improve as a planning framework, not a proven causal model.',
     evidence:'Check access, task relevance, source quality, training, trust and support. Compare employee groups and record the intervention and outcome.',
     challenge:'Is the main barrier poor data, a weak use case or missing training rather than the place AI is accessed?',
     offer:'An adoption-barrier diagnostic',test:'Test the suspected barrier with employees before proposing another destination or rollout.'},
@@ -119,11 +136,19 @@ export function claimChecks(message='') {
     return passages.filter(p=>rule.re.test(p)).map(quote=>({id:rule.id,title:rule.title,quote,why:rule.why,need:rule.need,direction:rule.direction}));
   });
 }
+// Team-confirmed credentials; recognise only a bare list, never endorse surrounding claims.
+export function credentialNote(passage='') {
+  const credential=/\b(?:SOC\s*2\s*Type\s*(?:II|2)|ISO\s*27001)\b/gi;
+  if(!credential.test(passage))return '';
+  const remainder=passage.replace(credential,'').replace(/\band\b/gi,'').replace(/[\s,;:.&“”"'‘’()]+/g,'');
+  return remainder ? '' : 'Confirmed Workvivo credentials: SOC 2 Type II and ISO 27001. Sales: use the approved trust documentation for the customer’s product and scope. These credentials do not establish every workflow control or guarantee zero risk.';
+}
 export function claimReviewText(r) {
   const flags=claimChecks(r.message);
-  return `## Claims to inspect before using this message\n\n${flags.length?`${flags.length} rule-based review prompt(s). These do not establish that a claim is false; questions, quotations and negation may also match.`:'No targeted claim patterns matched. This is not evidence that the message is accurate or complete.'}\n\n${flags.map(f=>`### ${f.title}\n\nSource passage: ${f.quote}\n\nWhy inspect: ${f.why}\nEvidence needed: ${f.need}\nRewrite direction: ${f.direction}`).join('\n\n')}\n\n${guidanceFor(r).proofStatus}\n\nThese checks remain visible regardless of the language score or purchase stage. Supplied proof does not automatically clear them.\n`;
+  const credentials=(r.message.match(/[^.!?\n]+[.!?]?/g)||[]).map(credentialNote).find(Boolean);
+  return `## Claims to inspect before using this message\n\n${credentials?credentials+'\n\n':''}${flags.length?`${flags.length} rule-based review prompt(s). These do not establish that a claim is false; questions, quotations and negation may also match.`:'No targeted claim patterns matched. This is not evidence that the message is accurate or complete.'}\n\n${flags.map(f=>`### ${f.title}\n\nSource passage: ${f.quote}\n\nWhy inspect: ${f.why}\nEvidence needed: ${f.need}\nRewrite direction: ${f.direction}`).join('\n\n')}\n\n${guidanceFor(r).proofStatus}\n\nThese checks remain visible regardless of the language score or purchase stage. Supplied proof does not automatically clear them.\n`;
 }
 export function guidanceText(r) {
   const g=guidanceFor(r);
-  return `## HQ-aligned direction to test\n\nAngle: ${g.label}\nEditorial guidance informed by buyer research and HQ messaging; not a validated buyer reaction or automatic rewrite.\n\nSuggested opening question: ${g.opening}\n\nHQ connection: ${g.bridge}\n\nEvidence to earn the claim: ${g.evidence}\n\nCounter-question: ${g.challenge}\n\nSuggested next asset (not an existing deliverable): ${g.offer}\n\nNext test: ${g.test}\n\nBuyer and buying role: ${g.buyer}\n\nPurchase stage: ${g.stage}\n\nAwareness: ${g.awareness}\n\nAsset format: ${g.format}\n\nRegional scope: ${g.region}\n\nProof status: ${g.proofStatus}\n\nResearch informs the questions, not the weights or an endorsement of HQ. Brand alignment adds no points.\n\n### Public source basis\n\n${sources.map(s=>`- ${s.name}: ${s.url}\n  ${s.scope}`).join('\n')}\n`;
+  return `## HQ-aligned direction to test\n\nAngle: ${g.label}\nEditorial guidance informed by buyer research and HQ messaging; not a validated buyer reaction or automatic rewrite.\n\nSuggested opening question: ${g.opening}\n\nHQ connection: ${g.bridge}\n\nEvidence to earn the claim: ${g.evidence}\n\nCounter-question: ${g.challenge}\n\nSuggested next asset (not an existing deliverable): ${g.offer}\n\nNext test: ${g.test}\n\nBuyer and buying role: ${g.buyer}\n\nPurchase stage: ${g.stage}\n\nAwareness: ${g.awareness}\n\nAsset format: ${g.format}\n\nRegional scope: ${g.region}\n\nProof status: ${g.proofStatus}\n\n${measurementText()}\nResearch informs the questions, not the weights or an endorsement of HQ. Brand alignment adds no points.\n\n### Public source basis\n\n${sources.map(s=>`- ${s.name}: ${s.url}\n  ${s.scope}`).join('\n')}\n`;
 }

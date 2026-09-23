@@ -1,5 +1,5 @@
 import { awarenessIndicator } from "./awareness.js";
-import {profiles,buyingRoles,goals,dims,esc,analyse,react,verdict,evidenceStatus,rewriteBrief,summary} from "./it-engine.js?v=3.2";
+import {profiles,buyingRoles,buyerFocus,goals,dims,esc,analyse,react,verdict,evidenceStatus,rewriteBrief,summary} from "./it-engine.js?v=3.2.1";
 const $=s=>document.querySelector(s);let current=null;
 function data(){return{persona:$("#persona").value,buyingRole:$("#buying-role").value,goal:$("#goal").value,region:$("#region").value,assetType:$("#asset-type").value,solution:$("#solution").value.trim(),alternatives:$("#alternatives").value.trim(),proof:$("#proof").value.trim(),awareness:$("#awareness").value,message:$("#message").value}}function persona(){const p=profiles[$("#persona").value],b=buyingRoles[$("#buying-role").value];$("#persona-preview").innerHTML=`<strong>${p.name} · ${b.name}</strong>${p.summary} In this purchase, this reader ${b.summary.charAt(0).toLowerCase()+b.summary.slice(1)} Looks for ${p.cares}.`;[...$(".lens-card ul").children].forEach((x,i)=>x.textContent=Object.values(p.questions)[i])}
 const points=n=>Number(n.toFixed(2)).toString();
@@ -20,7 +20,9 @@ function render(r){
   $('#reaction').textContent=react(r);
   $('#priorities').innerHTML=r.ranked.length?r.ranked.slice(0,3).map(id=>{const x=r.audit.rows[id];return `<li><b>${esc(dims[id].name)}</b><span>${esc(x.next)}</span><small class="points-note">${esc(x.reason)}</small></li>`}).join(''):'<li>All structural checks are met. Have a reviewer confirm the evidence and audience fit.</li>';
   const ids=[...r.ranked,...Object.keys(dims)].filter((id,i,a)=>a.indexOf(id)===i).slice(0,3);
-  $('#questions').innerHTML=ids.slice(0,r.alternatives?2:3).map(id=>`<li>${esc(r.profile.questions[id])}</li>`).join('')+(r.alternatives?`<li>Compared with ${esc(r.alternatives)}, what can you substantiate as different?</li>`:'');
+  const focus=buyerFocus[r.persona]||'value';
+  const buyerQuestions=[...new Set([ids[0],focus,...ids])].slice(0,r.alternatives?2:3);
+  $('#questions').innerHTML=buyerQuestions.map(id=>`<li>${esc(r.profile.questions[id])}</li>`).join('')+(r.alternatives?`<li>Compared with ${esc(r.alternatives)}, what can you substantiate as different?</li>`:'');
   $('#score-explanation').innerHTML=breakdown(r);
   $('#score-details').open=false;
   $('#deep-results')?.remove();

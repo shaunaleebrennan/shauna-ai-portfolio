@@ -11,7 +11,7 @@ const copy = {
  governance:['Make the approved AI route useful for employees.','Evaluate Workvivo HQ and HQ Agent around a defined task, with clear requirements for who can access information, take action and handle exceptions. Bring the employee experience and the control requirements into the same decision.']
 };
 const next = {
- attention:'Could we start with one employee task and explore where the current experience gets in the way?',
+ attention:'Would a short conversation about that employee journey be useful?',
  shortlist:'Let’s walk through one journey together and compare the current approach with HQ, including system fit, supported actions and the evidence you need.',
  evaluation:'Let’s agree a scoped evaluation with named owners, success measures and a review of implementation effort, costs and controls before an investment decision.'
 };
@@ -25,10 +25,18 @@ export function draftFor(r) {
  const credentials=sentences.some(s=>credentialNote(s))?'Workvivo has SOC 2 Type II and ISO 27001 credentials.':'';
  const short=/Headline/.test(r.assetType||'');
  const email=/Email/.test(r.assetType||'');
- const draft=short?`${headline}\n\n${cta}`:[email?`Subject: ${headline}`:headline,problem,body,credentials,proof,cta].filter(Boolean).join('\n\n');
+ const greeting=(r.message||'').match(/(?:^|\n)\s*(?:Hi|Hello|Dear)\s+([^,\n!]+)[,!]?/i)?.[1] || '[First name]';
+ const opening=problem || 'How are [employee group] handling [recurring task] today—and where does the experience get in their way?';
+ const evidence=proof || (r.goal==='evaluation'?'[Add the relevant customer or evaluation result, including what was measured and over what period.]':'');
+ const draft=short?`${headline}\n\n${cta}`:[email?`Subject: ${headline}`:headline,email?`Hi ${greeting},`:'',opening,body,credentials,evidence,cta,email?`Best,\n${(r.message||'').match(/(?:^|\n)(?:Best|Thanks|Regards|Best regards),?\s*\n([^\n]+)/i)?.[1] || '[Your name]'}`:''].filter(Boolean).join('\n\n');
  const gaps=[];
  if(!short && r.goal==='evaluation' && !proof)gaps.push('For the investment decision: add the relevant evaluation or customer evidence when available. The draft currently proposes an evaluation rather than claiming a proven return.');
- return {draft,gaps,notes:[
+ return {draft,gaps,guidance:[
+   'Lead with one employee task and its impact; keep the opening relevant to this buyer.',
+   'Explain the role of HQ and HQ Agent without promising unconfirmed integrations, controls or savings.',
+   proof?'Your supplied proof is retained. Keep its wording and scope aligned with the source.':'Keep the invitation exploratory; no invented customer results or ROI claims.',
+   'Complete the square brackets with account-specific details before sending. Keep the next step small and concrete.'
+ ],notes:[
    'An editable draft assembled locally from the selected angle and stage, with a matching problem or next step retained from your message where recognised. It is not a free-form AI rewrite.',
    ...(proof&&!short?['Your supplied proof is included as written. It has not been independently verified or matched to each claim.']:[]),
    ...(r.teamContext?.trim()?['Your additional context remains below for reference; the local drafting rules do not interpret free-form background notes.']:[])

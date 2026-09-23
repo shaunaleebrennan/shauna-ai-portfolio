@@ -98,3 +98,12 @@ test('rewrite provides copy, preserves supplied evidence and only requests absen
  assert(!draftFor({...base,message:'Manual tasks always guarantee ROI.'}).draft.includes('guarantee ROI'));
  assert(draftFor({...base,assetType:'Headline / paid ad'}).draft.length<300);
 });
+
+
+test('rewrite gives concise guidance and inline gaps, retaining known names',async()=>{
+ const {draftFor}=await import('../workvivo-it-buyer-test/assets/js/rewrite.js');
+ const r=draftFor({...base,message:'Hi Alex,\nLet’s discuss AI.\nBest,\nSam'});
+ assert.equal(r.guidance.length,4);assert(r.draft.includes('Hi Alex,'));assert(r.draft.includes('Best,\nSam'));
+ assert(r.draft.includes('[employee group]'));assert(r.draft.includes('[recurring task]'));
+ assert(!r.draft.includes('[First name]'));assert(!r.draft.includes('[Your name]'));
+});

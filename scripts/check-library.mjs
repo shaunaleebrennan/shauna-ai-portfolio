@@ -8,6 +8,7 @@ const library = await readFile('library.html', 'utf8');
 const tracked = (await import('node:child_process')).execFileSync('git', ['ls-files'], { encoding: 'utf8' }).split('\n');
 let checks = 0;
 const check = (condition, message) => { assert.ok(condition, message); checks++; };
+check(!(await readdir('.')).includes('workvivo-it-buyer-test'), 'Only the generic IT tool should be published');
 check(new Set(docs.map(d => d.id)).size === docs.length, 'Document IDs must be unique');
 check(new Set(work.map(d => d.slug)).size === work.length, 'Case slugs must be unique');
 for (const doc of docs) {
@@ -26,6 +27,7 @@ for (const file of files) {
 }
 for (const item of work) for (const e of item.evidence) links.push(['case-study.html', e.url]);
 for (const [file, href] of links) {
+  check(!href.includes('workvivo-it-buyer-test'), `Company-specific tool link in ${file}`);
   if (/^(https?:|mailto:|data:)/.test(href)) continue;
   const url = new URL(href, `https://local.test/${file}`);
   const target = decodeURIComponent(url.pathname.slice(1));

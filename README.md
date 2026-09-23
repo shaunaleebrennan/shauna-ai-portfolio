@@ -36,7 +36,7 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 **Agents · Pricing · Workflow Design** — Building an AI-enabled PMM operating model through agent prototypes, pricing work, and workflow design. The proof includes this grounded portfolio agent, IT Pressure Test, and reusable research, synthesis, and competitive workflows.
 
-**Try the build:** [IT Pressure Test](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/) — an IT-buyer messaging review with six audience lenses, buyer questions, and an in-tool deep review. The app uses local rules and keeps the original eight-dimension manual evaluator available. [Inspect the source and rubric](https://github.com/shaunaleebrennan/ai-positioning-qa) · [Read the pressure-test findings](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-buyer-integration-2026-09-21.md).
+**Try the build:** [IT Pressure Test](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/) — a vendor-neutral IT messaging review with a transparent /100 score, six audience lenses and an in-tool deep review. Inspect the criteria and matched passages under Why this score? The local rubric remains an editing aid, with unverified proof and human judgement kept explicit. [Inspect the source and rubric](https://github.com/shaunaleebrennan/ai-positioning-qa) · [Read the validation notes](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-rubric-3.1.md).
 
 ### [HQ Agent](case-studies/hq-agent.md)
 

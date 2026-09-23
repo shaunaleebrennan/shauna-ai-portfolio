@@ -63,3 +63,33 @@ summary { cursor:pointer; }
 @media(max-width:900px) { .app-grid { grid-template-columns:1fr; } .hero-grid { grid-template-columns:1.2fr 1fr; } .hero { padding:55px 0; } }
 @media(max-width:620px) { .shell { width:calc(100% - 32px); } .topbar .shell { height:66px; } .portfolio-link { font-size:.73rem; } .brand { font-size:1rem; } .hero-grid { grid-template-columns:1fr; gap:32px; } .hero h1 { font-size:clamp(3.4rem,13vw,5rem); } .hero .eyebrow { font-size:.62rem; } .lede { font-size:1rem; } .persona-card { padding:24px; } .quote { font-size:1.35rem; } main { padding-top:28px; } .panel { padding:24px 20px; } .section-head h2 { font-size:1.6rem; } .field-grid { gap:0; } .button-row .primary { width:100%; } }
 @media(prefers-reduced-motion:reduce) { input,select,textarea,.button { transition:none; } }
+
+/* Compact review surface and inspectable rubric. */
+.hero { padding:42px 0 46px; }
+.hero h1 { font-size:clamp(2.8rem,5.5vw,4.8rem); }
+.hero .lede { margin-top:20px; }
+.persona-card .quote { font-size:1.25rem; }
+.advanced { margin-top:4px; border:1px solid var(--line); border-radius:14px; background:#ffffff03; }
+.advanced > summary { padding:16px; font-weight:700; font-size:.95rem; }
+.advanced > summary span { display:block; margin-top:4px; color:var(--muted); font-weight:400; font-size:.875rem; }
+.advanced-body { padding:4px 16px 16px; }
+.score-details { margin-top:22px; }
+.score-ring output { transform:translateY(-9px); }
+.score-denominator { position:absolute; top:86px; z-index:1; color:#c1c5bb; font-size:.875rem; font-weight:700; }
+#verdict-copy { margin-top:12px; font-size:.95rem; overflow-wrap:anywhere; }
+#verdict-tag { font-size:.875rem; }
+.proof-pill { margin-top:14px!important; font-size:.875rem; }
+.score-table-wrap { overflow:auto; margin:16px 0; }
+.claim-table { background:#ffffff03; font-size:.95rem; }
+.claim-table tfoot { background:#d3bcff0b; }
+.criterion { border-top:1px solid var(--line); padding:14px 0; }
+.criterion summary { font-weight:650; font-size:.95rem; }
+.criterion blockquote { margin:12px 0; border-left:3px solid #d3bcff; padding-left:14px; font-size:.95rem; white-space:pre-wrap; overflow-wrap:anywhere; }
+.anchors { font-size:.9rem; color:var(--muted); padding-left:23px; }
+.anchors li { padding:4px 0; }
+.selected-anchor { color:var(--ink); font-weight:700; }
+.points-note { display:block; margin-top:8px; color:var(--muted); font-size:.8rem; }
+.field label,.button,.help,.lens-card li,.principle { font-size:.875rem; }
+.rewrite-brief { width:100%; min-height:350px; background:#101410; color:var(--ink); }
+.deep-review > .help { margin:12px 0; }
+@media(max-width:620px) { .hero { padding:28px 0; } .verdict { padding:22px; } .score-details .advanced-body { padding-left:12px; padding-right:12px; } }

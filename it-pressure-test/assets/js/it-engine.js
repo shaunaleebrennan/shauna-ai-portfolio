@@ -1,24 +1,48 @@
 import { awarenessIndicator } from "./awareness.js";
+import { ITRubric } from "./it-rubric.js?v=3.1";
 
-const profiles={executive:{name:"CIO / Executive IT",role:"enterprise IT executive",summary:"Sets technology direction and carries accountability for enterprise value, resilience and long-term system health.",cares:"business outcomes, system-wide impact, investment priorities, vendor risk, cost predictability, stakeholder alignment and a credible path from purchase to value",voice:"strategic, commercially accountable and sceptical of isolated solutions or short-term promises",questions:{relevance:"What business pressure makes this a priority now, and what happens if we do nothing?",value:"Can I defend the investment to the CEO, CFO and business leaders?",fit:"How does this affect the wider technology ecosystem over the next three to five years?",trust:"What delivery, governance and vendor risks am I accepting?",proof:"What independent and peer evidence reduces the risk of this decision?",clarity:"Can I explain the decision and its consequences in one sentence?"}},ai:{name:"AI Transformation / Automation",role:"enterprise AI transformation leader",summary:"Turns AI ambition into governed use cases, measurable adoption and an operating model the organization can scale.",cares:"use-case value, governed access, trusted data, workflow integration, employee adoption, outcome measurement, model and vendor controls, and responsible expansion",voice:"ambitious about AI but disciplined about risk, adoption and demonstrable business impact",questions:{relevance:"Which recurring work problem is important enough for AI to solve?",value:"Are we measuring completed work and business impact, or merely AI activity?",fit:"How does this connect to approved data, systems, models and existing AI investments?",trust:"Who controls access, prompts, actions, data use and model behavior?",proof:"What pilot evidence shows trusted repeat use and measurable value?",clarity:"Is this a bounded enterprise use case or an open-ended AI promise?"}},workplace:{name:"Digital Workplace / Employee Technology",role:"digital workplace leader",summary:"Owns the employee technology experience across collaboration, communication, knowledge and everyday work.",cares:"employee adoption, intuitive access, fewer destinations, Microsoft coexistence, frontline and desk-worker reach, change management, service demand and experience consistency",voice:"employee-centered but pragmatic about platform sprawl, administration and adoption burden",questions:{relevance:"Which employee journey is fragmented or failing today?",value:"Will this reduce friction, support demand or unused technology investment?",fit:"Does it simplify the employee experience while coexisting with our current stack?",trust:"Can IT manage the experience consistently across roles, locations and devices?",proof:"What adoption and workflow evidence exists for a workforce like ours?",clarity:"Will employees understand where this fits and why they should use it?"}},architecture:{name:"Enterprise Architecture / Platform Strategy",role:"enterprise architect or platform strategist",summary:"Protects architectural coherence and evaluates how a new capability changes dependencies, integration and technical debt.",cares:"interoperability, identity, data flows, system boundaries, extensibility, lifecycle risk, consolidation, implementation dependencies and future replacement",voice:"systemic, technically rigorous and resistant to point solutions presented in isolation",questions:{relevance:"Which architectural constraint or capability gap does this address?",value:"What complexity, duplication or technical debt does this remove?",fit:"What connects to what, through which standards, and with which dependencies?",trust:"How are permissions, failure modes, data boundaries and lifecycle risks handled?",proof:"Show me the architecture, integration depth, performance limits and implementation evidence.",clarity:"Can I place this precisely in the target architecture?"}},security:{name:"Security, Risk & Compliance",role:"security, risk or compliance leader",summary:"Defines acceptable risk and can stop a purchase that lacks credible controls, evidence or accountability.",cares:"identity, least-privilege access, privacy, data residency, retention, auditability, regulatory fit, third-party risk, incident response and AI governance",voice:"evidence-led, control-focused and unwilling to accept broad assurances without mechanisms",questions:{relevance:"Which current risk does this reduce, and which new risks does it introduce?",value:"Does the control improvement justify the residual risk and operational cost?",fit:"How does this integrate with identity, policy, monitoring and existing security controls?",trust:"Where does data go, who can access it, what is retained and what is auditable?",proof:"Which certifications, control evidence, test results and contractual commitments apply?",clarity:"Are capabilities, boundaries and exceptions stated precisely?"}},operations:{name:"IT Operations / Service Management",role:"IT operations or service management leader",summary:"Must deploy, operate and support the technology without creating fragile services or avoidable workload.",cares:"reliability, administration, implementation effort, support coverage, service performance, migration, training, incident handling, ticket demand and predictable cost",voice:"practical, service-oriented and alert to the operational burden hidden behind a polished demo",questions:{relevance:"Which recurring service or operational problem does this remove?",value:"Will it reduce support demand, resolution time or operating cost?",fit:"How does it work with service management, identity and operational workflows?",trust:"What are the SLA, support, recovery, escalation and administrative controls?",proof:"What happened during real deployments, including problems and recovery?",clarity:"What will my team have to implement, own and support?"}}};
+const profiles={executive:{name:"CIO / Executive IT",role:"enterprise IT executive",summary:"Sets technology direction and carries accountability for enterprise value, resilience and long-term system health.",cares:"business outcomes, system-wide impact, investment priorities, vendor risk, cost predictability, stakeholder alignment and a credible path from purchase to value",voice:"strategic, commercially accountable and sceptical of isolated solutions or short-term promises",questions:{relevance:"What business pressure makes this a priority now, and what happens if we do nothing?",value:"Can I defend the investment to the CEO, CFO and business leaders?",fit:"How does this affect the wider technology ecosystem over the next three to five years?",trust:"What delivery, governance and vendor risks am I accepting?",proof:"What independent and peer evidence reduces the risk of this decision?",clarity:"Can I explain the decision and its consequences in one sentence?"}},ai:{name:"AI Transformation / Automation",role:"enterprise AI transformation leader",summary:"Turns AI ambition into governed use cases, measurable adoption and an operating model the organization can scale.",cares:"use-case value, governed access, trusted data, workflow integration, employee adoption, outcome measurement, model and vendor controls, and responsible expansion",voice:"ambitious about AI but disciplined about risk, adoption and demonstrable business impact",questions:{relevance:"Which recurring work problem is important enough for AI to solve?",value:"Are we measuring completed work and business impact, or merely AI activity?",fit:"How does this connect to approved data, systems, models and existing AI investments?",trust:"Who controls access, prompts, actions, data use and model behavior?",proof:"What pilot evidence shows trusted repeat use and measurable value?",clarity:"Is this a bounded enterprise use case or an open-ended AI promise?"}},workplace:{name:"Digital Workplace / Employee Technology",role:"digital workplace leader",summary:"Owns the employee technology experience across collaboration, communication, knowledge and everyday work.",cares:"employee adoption, intuitive access, fewer destinations, coexistence with existing productivity tools, frontline and desk-worker reach, change management, service demand and experience consistency",voice:"employee-centered but pragmatic about platform sprawl, administration and adoption burden",questions:{relevance:"Which employee journey is fragmented or failing today?",value:"Will this reduce friction, support demand or unused technology investment?",fit:"Does it simplify the employee experience while coexisting with our current stack?",trust:"Can IT manage the experience consistently across roles, locations and devices?",proof:"What adoption and workflow evidence exists for a workforce like ours?",clarity:"Will employees understand where this fits and why they should use it?"}},architecture:{name:"Enterprise Architecture / Platform Strategy",role:"enterprise architect or platform strategist",summary:"Protects architectural coherence and evaluates how a new capability changes dependencies, integration and technical debt.",cares:"interoperability, identity, data flows, system boundaries, extensibility, lifecycle risk, consolidation, implementation dependencies and future replacement",voice:"systemic, technically rigorous and resistant to point solutions presented in isolation",questions:{relevance:"Which architectural constraint or capability gap does this address?",value:"What complexity, duplication or technical debt does this remove?",fit:"What connects to what, through which standards, and with which dependencies?",trust:"How are permissions, failure modes, data boundaries and lifecycle risks handled?",proof:"Show me the architecture, integration depth, performance limits and implementation evidence.",clarity:"Can I place this precisely in the target architecture?"}},security:{name:"Security, Risk & Compliance",role:"security, risk or compliance leader",summary:"Defines acceptable risk and can stop a purchase that lacks credible controls, evidence or accountability.",cares:"identity, least-privilege access, privacy, data residency, retention, auditability, regulatory fit, third-party risk, incident response and AI governance",voice:"evidence-led, control-focused and unwilling to accept broad assurances without mechanisms",questions:{relevance:"Which current risk does this reduce, and which new risks does it introduce?",value:"Does the control improvement justify the residual risk and operational cost?",fit:"How does this integrate with identity, policy, monitoring and existing security controls?",trust:"Where does data go, who can access it, what is retained and what is auditable?",proof:"Which certifications, control evidence, test results and contractual commitments apply?",clarity:"Are capabilities, boundaries and exceptions stated precisely?"}},operations:{name:"IT Operations / Service Management",role:"IT operations or service management leader",summary:"Must deploy, operate and support the technology without creating fragile services or avoidable workload.",cares:"reliability, administration, implementation effort, support coverage, service performance, migration, training, incident handling, ticket demand and predictable cost",voice:"practical, service-oriented and alert to the operational burden hidden behind a polished demo",questions:{relevance:"Which recurring service or operational problem does this remove?",value:"Will it reduce support demand, resolution time or operating cost?",fit:"How does it work with service management, identity and operational workflows?",trust:"What are the SLA, support, recovery, escalation and administrative controls?",proof:"What happened during real deployments, including problems and recovery?",clarity:"What will my team have to implement, own and support?"}}};
 const buyingRoles={owner:{name:"Decision owner",summary:"Must make the final recommendation and defend value, risk and strategic fit across the executive team."},champion:{name:"Driver / internal champion",summary:"Builds consensus, translates the solution for stakeholders and needs practical material for the internal business case."},influencer:{name:"Technical influencer / gatekeeper",summary:"Defines requirements, verifies claims and can remove an option that fails technical, security or operational scrutiny."}};
-const goals={attention:{label:"Discover: understand the problem",required:["relevance","value","clarity"],weights:{relevance:30,value:25,fit:5,trust:5,proof:15,clarity:20}},shortlist:{label:"Evaluate: compare approaches",required:["relevance","value","fit","trust","proof","clarity"],weights:{relevance:20,value:20,fit:15,trust:15,proof:15,clarity:15}},evaluation:{label:"Commit: justify the choice",required:["relevance","value","fit","trust","proof","clarity"],weights:{relevance:12,value:18,fit:20,trust:20,proof:18,clarity:12}}};
-const profileWeights={executive:{relevance:4,value:8,proof:4},ai:{value:5,fit:4,trust:7,proof:3},workplace:{relevance:5,value:6,fit:4,clarity:3},architecture:{fit:10,trust:5,proof:4},security:{fit:4,trust:12,proof:7},operations:{value:4,fit:5,trust:6,proof:5}};
-const roleWeights={owner:{value:5,proof:3},champion:{relevance:3,value:4,clarity:3},influencer:{fit:5,trust:5,proof:4}};
-const dims={relevance:{name:"Recognisable problem",terms:["problem","friction","risk","slow","delay","manual","fragment","silo","sprawl","complex","disconnected","shadow","inconsistent","challenge","pressure","gap"],strong:["because","cost of","resulting in","leads to","without"],fix:"Lead with the operational pressure, risk or change forcing IT to act—not the product category.",why:"IT needs to recognise its world before it cares about your solution."},value:{name:"Business value",terms:["cost","tco","save","reduce","consolidat","productiv","adoption","roi","value","faster","time","revenue","efficien","admin","outcome","impact","licens"],strong:["%","€","$","hours","days","fewer","measur"],fix:"Translate the capability into a measurable cost, risk, productivity or adoption outcome.",why:"A capability is not yet a business case."},fit:{name:"Stack fit",terms:["integrat","connect","coexist","microsoft","m365","existing stack","workflow","identity","sso","scim","api","ecosystem","interoper","without replacing","system of record"],strong:["native","bidirectional","permission","sync","no rip","works with"],fix:"Explain how it works with the systems IT already trusts, and whether it replaces, consolidates or adds.",why:"The default objection is often ‘we already have this’ or ‘this adds complexity’."},trust:{name:"Trust and governance",terms:["security","secure","govern","control","audit","permission","privacy","compliance","gdpr","soc 2","iso","sla","reliab","uptime","data","admin","policy","encrypted"],strong:["role-based","audit trail","contractual","data residency","least privilege","human control"],fix:"Make the trust mechanism concrete: controls, permissions, data boundaries, auditability or service commitments.",why:"Generic ‘enterprise-grade’ language creates questions; mechanisms reduce perceived risk."},proof:{name:"Credibility and proof",terms:["customer","case study","proven","deployed","benchmark","research","pilot","result","certif","gartner","forrester","validated","reference","at scale"],strong:["%","€","$","million","thousand","sla","soc 2","iso 27001","gdpr"],fix:"Support the central promise with one specific, relevant proof point—or narrow the claim until it is supportable.",why:"Enterprise IT expects evidence proportionate to the size of the promise."},clarity:{name:"Clarity and repeatability",terms:[],strong:[],fix:"State the buyer, problem, outcome and mechanism in plain language. Remove stacked abstractions and category jargon.",why:"If the buyer cannot repeat it accurately, the message will not travel through the buying group."}};
-const hype=["revolutionary","game-changing","game changing","next-gen","next generation","seamless","effortless","transformative","unprecedented","best-in-class","world-class","all-in-one","single pane of glass","future-proof","future proof","intelligent","ai-powered","unlock","supercharge","reimagine"],jargon=["synergy","paradigm","holistic","ecosystem","orchestration","transformation","enablement","platform","solution","experience layer","agentic","leverage","streamline"];const count=(t,l)=>l.filter(x=>t.toLowerCase().includes(x)).length,esc=s=>String(s).replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-function clarity(t){const w=t.match(/\b[\w’'-]+\b/g)||[],s=t.split(/[.!?]+/).filter(x=>x.trim());let n=5,a=w.length/Math.max(1,s.length),j=count(t,jargon);if(a>30)n--;if(a>45)n--;if(j>2)n--;if(j>5)n--;if(w.length<5)n=2;return Math.max(1,n)}
+const goals=Object.fromEntries(Object.entries(ITRubric.stages).map(([id,stage])=>[id,{...stage,required:Object.keys(stage.weights).filter(k=>stage.weights[k]>0)}]));
+const dims = {
+  "relevance": {
+    "name": "Recognisable pressure"
+  },
+  "value": {
+    "name": "Business value"
+  },
+  "fit": {
+    "name": "Stack fit"
+  },
+  "trust": {
+    "name": "Trust and governance"
+  },
+  "proof": {
+    "name": "Credibility and proof"
+  },
+  "clarity": {
+    "name": "Clarity and repeatability"
+  }
+};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
-function analyse(d){const text=d.message,rule=goals[d.goal],ai=/\b(ai|artificial intelligence|agent|copilot|llm|model)\b/i.test(d.message),scores={},weight=id=>rule.weights[id]+(profileWeights[d.persona][id]||0)+(roleWeights[d.buyingRole][id]||0);Object.entries(dims).forEach(([id,x])=>{if(id==="clarity")return scores[id]=clarity(d.message);let h=count(text,x.terms),s=count(text,x.strong),n=1+Math.min(3,h);if(s&&h)n++;scores[id]=Math.min(5,n)});if(ai&&!count(text,["govern","permission","data","audit","control","privacy","security"]))scores.trust=1;let num=0,den=0;Object.keys(dims).forEach(id=>{if(d.goal==="attention"&&!rule.required.includes(id))return;num+=scores[id]*weight(id);den+=5*weight(id)});const total=Math.round(num/den*100),ranked=Object.keys(dims).filter(id=>rule.required.includes(id)).sort((a,b)=>(scores[a]*10-weight(a))-(scores[b]*10-weight(b)));return{...d,ai,scores,total,ranked,flags:hype.filter(x=>d.message.toLowerCase().includes(x)),rule,profile:profiles[d.persona]}}
-
-function react(r){const lines={relevance:"I do not yet see the urgent problem in my world.",value:"I can see an idea, but not a business case I could defend.",fit:"I am left wondering whether this works with—or simply adds to—my existing stack.",trust:r.ai?"You mention AI, but not how data access and use are governed.":"The trust claim needs a mechanism, not an adjective.",proof:"The promise is doing more work than the evidence.",clarity:"I had to translate the language before I could explain the offer."};return r.ranked.filter(x=>r.scores[x]<4).slice(0,2).map(x=>lines[x]).join(" ") || "Several relevant signals are present. I would still ask for scope, delivery realities and supporting evidence."}
-function verdict(r){return r.total>=80?["Several signals present — verify the claims","Matching language covers several buyer questions. This does not establish relevance, truth or buyer readiness."]:r.total>=62?["Some signals present","Inspect the matched passages and resolve the remaining questions before drawing a conclusion."]:["Limited signals detected","Review the gaps against the asset’s purpose. Keyword checks can miss meaningful wording."]}
-
-
-function splitSentences(t){return(t.match(/[^.!?]+[.!?]?/g)||[]).map(x=>x.trim()).filter(Boolean)}
-
-function evidenceFor(r,id){if(id==="clarity")return r.message.length<220?r.message:splitSentences(r.message)[0]||r.message;const x=dims[id],sentences=splitSentences(r.message),ranked=sentences.map(s=>({s,n:count(s,x.terms)+count(s,x.strong)*2})).sort((a,b)=>b.n-a.n);return ranked[0]&&ranked[0].n?ranked[0].s:""}
+function analyse(d) {
+  const audit=ITRubric.assess(d),base=ITRubric.stages[d.goal];
+  return {...d,audit,total:audit.total,scores:Object.fromEntries(Object.entries(audit.rows).map(([k,v])=>[k,v.level])),
+    ranked:audit.ranked,rule:{label:base.label,weights:audit.weights,required:Object.keys(audit.weights).filter(k=>audit.weights[k]>0)},
+    ai:/\b(ai|agent|copilot|llm)\b/i.test(d.message),profile:profiles[d.persona]};
+}
+function splitSentences(t){return ITRubric.passages(t);}
+function evidenceFor(r,id){return r.audit.rows[id].quote;}
+function evidenceStatus(r){return r.audit.status;}
+function verdict(r){return [r.audit.label,'An automated estimate of message structure for this stage. It does not establish buyer response or verify claims.'];}
+function react(r) {
+  const gaps=r.ranked.filter(id=>r.scores[id]<3);
+  if(!gaps.length) return 'The message gives me a concrete starting point. I would now check whether the supporting sources apply to our organisation and the exact offer.';
+  const lines={relevance:'I need a clearer connection to the work problem that makes this worth my attention.',value:'What work improves, and how does this approach cause that improvement?',fit:'Tell me what stays in my stack, what changes and what the connection actually does.',trust:'I need a specific control and its boundary before I can rely on the assurance.',proof:'Show me a traceable source for the central promise.',clarity:'Make the proposition and next step easier to repeat.'};
+  return gaps.slice(0,2).map(id=>lines[id]).join(' ');
+}
 
 function rewriteBrief(r){const evidence=Object.fromEntries(Object.keys(dims).map(id=>[id,evidenceFor(r,id)||"[MISSING]" ])),later=r.goal==="attention"?"Save detailed architecture, controls, implementation and commercial terms for evaluation content.":r.goal==="shortlist"?"Prepare implementation, pricing, contractual and support detail for the commit stage.":"No major decision criterion should remain implicit at commit stage.";return`REWRITE BRIEF
 
@@ -30,23 +54,23 @@ Asset: ${r.assetType}
 
 1. OPEN IN THE BUYER'S WORLD
 Name the pressure, failed workflow or system consequence that makes action necessary.
-Current usable signal: ${evidence.relevance}
+Detected passage (review meaning): ${evidence.relevance}
 
 2. MAKE THE VALUE INTERNALLY DEFENSIBLE
 Connect the outcome to cost, risk, productivity, adoption or service performance. Name who benefits and how IT will measure it.
-Current usable signal: ${evidence.value}
+Detected passage (review meaning): ${evidence.value}
 
 3. DEFINE THE SYSTEM ROLE
 State what the offer connects to, replaces, consolidates or leaves in place. Make dependencies visible.
-Current usable signal: ${evidence.fit}
+Detected passage (review meaning): ${evidence.fit}
 
 4. MAKE TRUST A MECHANISM
 Use specific controls, boundaries, implementation realities and ownership. Avoid unsupported adjectives.
-Current usable signal: ${evidence.trust}
+Detected passage (review meaning): ${evidence.trust}
 
 5. ADD PROOF PROPORTIONATE TO THE PROMISE
 Use approved customer, pilot, performance, independent or implementation evidence. If proof is unavailable, narrow the claim.
-Current usable signal: ${evidence.proof}
+Detected passage (review meaning): ${evidence.proof}
 
 RECOMMENDED MESSAGE ORDER
 [Recognisable problem and consequence]
@@ -60,6 +84,49 @@ RECOMMENDED MESSAGE ORDER
 STAGE BOUNDARY
 ${later}`}
 
-function summary(r){return`# IT buyer positioning pressure test\n\n**IT audience:** ${r.profile.name}\n**Buying role:** ${buyingRoles[r.buyingRole].name}\n**Awareness stage:** ${r.awareness}\n**Purchase stage:** ${r.rule.label}\n**Asset type:** ${r.assetType}\n**Market focus:** ${r.region} (context only; no regional scoring)\n**Solution context:** ${r.solution||"Not supplied"}\n**Alternatives:** ${r.alternatives||"Not supplied"}\n**Supplied proof (unverified):** ${r.proof||"Not supplied"}\n**Language-signal coverage:** ${r.total}/100\n**Verdict:** ${verdict(r)[0]}\n\n## Gut reaction (composite prompt, not buyer testimony)\n\n> ${react(r)}\n\n## Three changes that matter most\n\n${r.ranked.slice(0,3).map((id,i)=>`${i+1}. **${dims[id].name}:** ${dims[id].fix}`).join("\n")}\n\n## Buyer gates\n\n${Object.keys(dims).map(id=>`- **${dims[id].name}:** ${r.rule.required.includes(id)?r.scores[id]+"/5":"Not required yet"}`).join("\n")}\n\n## Questions IT will ask\n\n${r.ranked.slice(0,4).map(id=>`- ${r.profile.questions[id]}`).join("\n")}\n\n## Source message\n\n${r.message}\n\n## Rewrite brief\n\n${rewriteBrief(r)}\n`}
 
-export {profiles,buyingRoles,goals,dims,hype,count,esc,analyse,react,verdict,evidenceFor,rewriteBrief,summary,splitSentences};
+const points=n=>Number(n.toFixed(2)).toString();
+function summary(r){
+  const criteria=Object.entries(r.audit.rows).map(([id,x])=>`- **${dims[id].name}:** ${x.weight?`${x.level}/4; ${points(x.points)}/${x.weight} points. ${x.reason}`:'Not required for this format and stage.'}${x.weight&&x.quote?`\n  Passage: “${x.quote}”`:''}`).join('\n');
+  return `# IT buyer positioning pressure test
+
+**Messaging score:** ${r.total}/100 — ${r.audit.label}
+**Rubric:** ${r.audit.version}; automated structural estimate, not buyer validation.
+**Proof status:** ${r.audit.status}
+${r.audit.criticalClaims.length?'**Claim review required:** '+r.audit.criticalClaims.map(c=>c.quote).join(' | ')+'\n':''}
+**IT audience:** ${r.profile.name}
+**Buying role:** ${buyingRoles[r.buyingRole].name}
+**Awareness stage:** ${r.awareness}
+**Purchase stage:** ${r.rule.label}
+**Asset:** ${r.assetType}
+**Market focus:** ${r.region} (context only)
+**Solution context:** ${r.solution||'Not supplied'}
+**Alternatives:** ${r.alternatives||'Not supplied'}
+**Supplied proof (unverified):** ${r.proof||'Not supplied'}
+
+## Gut Reaction
+
+Composite buyer prompt, not customer testimony.
+
+> ${react(r)}
+
+## Priority changes
+
+${r.ranked.slice(0,3).map(id=>`- **${dims[id].name}:** ${r.audit.rows[id].next}`).join('\n')||'No structural gaps detected; verify meaning and evidence.'}
+
+## Why this score?
+
+${criteria}
+
+Formula: sum(level / 4 × weight), rounded once. Weights and thresholds are editorial; scores are not calibrated against buyer outcomes. Supplied proof does not earn points. Compare drafts under the same rubric, stage and format. Small point differences have no validated significance. Local rules can miss nuance, negation, unusual wording and relationships between passages.
+
+## Source message
+
+${r.message}
+
+## Rewrite brief
+
+${rewriteBrief(r)}
+`;
+}
+export {profiles,buyingRoles,goals,dims,esc,analyse,react,verdict,evidenceFor,evidenceStatus,rewriteBrief,summary,splitSentences};

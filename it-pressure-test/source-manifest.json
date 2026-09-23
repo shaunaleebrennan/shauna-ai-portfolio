@@ -1,11 +1,11 @@
 {
   "sourceRepository": "https://github.com/shaunaleebrennan/ai-positioning-qa",
-  "sourceCommit": "f5ab93fbe6c5bd3442f4f00906a762f39a2edb9d",
+  "sourceCommit": "3f965f055dfbfdf402315cd2a890e0c201917643",
   "files": [
     {
       "source": "tool.html",
       "path": "index.html",
-      "sha256": "abfe465c90d801db7e4b701a0a101f8d6310a6d75d255fd8535b1a95f4c7e153"
+      "sha256": "2cb201d515a32d9380e8435de4e160dbf29090293f2d7a599671635f7cff5dc8"
     },
     {
       "source": "manual-review.html",
@@ -25,7 +25,7 @@
     {
       "source": "assets/it-buyer.css",
       "path": "assets/it-buyer.css",
-      "sha256": "1496bf6cd36daf97fe2761b456a83ce8dc9bd7e7b6b35c245b0940b78607ea29"
+      "sha256": "f6d0486e1717316b2adcc1cdb1342978a513ff2d9f15b236bde478c5b68f96db"
     },
     {
       "source": "assets/js/app.js",
@@ -55,12 +55,17 @@
     {
       "source": "assets/js/it-buyer.js",
       "path": "assets/js/it-buyer.js",
-      "sha256": "14a3664700799c0eac1be640b9323c0e9ea0682b5c328412f150030ef3db50d0"
+      "sha256": "4381314b4c8673f0b074181cc9c684cb1af2bf4c12ab30c5a002ed989112182a"
     },
     {
       "source": "assets/js/it-engine.js",
       "path": "assets/js/it-engine.js",
-      "sha256": "0c2ea9334bd02b0eb67a08ce9e336699cd3298ddc91e54ed3602b7296e7ee7e3"
+      "sha256": "e82970c8f78204d98e0c57b1d154be23faa5299a714828eedfceedb58567fbb9"
+    },
+    {
+      "source": "assets/js/it-rubric.js",
+      "path": "assets/js/it-rubric.js",
+      "sha256": "eacea4b5c35da749962c14e16f6b3d04f3a513794a59c5539c47232cbeee6f0a"
     },
     {
       "source": "assets/js/prompt.js",

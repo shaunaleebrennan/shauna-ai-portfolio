@@ -33,13 +33,13 @@ Start with the buyer’s remit and the job of the message. Surface the questions
 - Separate awareness stage from purchase stage: what the reader knows differs from what the buying group is deciding
 - Replace the manual-first interface with Gut Reaction, priority changes and buyer questions
 - Keep deep review inside the app with matching passages and an editable rewrite brief
-- Call the score language-signal coverage: it is not buyer readiness, factual verification or market validation
-- Retain the original eight-dimension evaluator as a separate workflow rather than equating its score with the new six-gate model
+- Keep an inspectable /100 structural score with explicit stage weights, separate proof status and visible critical-claim warnings
+- Keep the public tool vendor-neutral and retain the original eight-dimension manual evaluator as a separate workflow
 
 ## System architecture
 
 - Static HTML and CSS provide the interface; vanilla JavaScript runs locally in the browser
-- A pure evaluation module contains six IT profiles, three buying roles, purchase-stage weights and language checks
+- Pure modules separate six IT buyer profiles and rewrite guidance from the versioned 0–4 scoring rubric
 - The UI module renders source excerpts, prioritised questions, stage guidance and the rewrite brief
 - Markdown export preserves the source, context, supplied proof and edited rewrite; the app makes no model or network calls
 - The portfolio hosts a versioned copy of the public runtime, with a source commit and file hashes recorded in its manifest
@@ -61,10 +61,10 @@ Start with the buyer’s remit and the job of the message. Surface the questions
 
 ## Evaluation
 
-- 44 automated checks passed at integration, retaining the original evaluator tests
-- New checks cover proof isolation, exact excerpts, export context and all 54 combinations of remit, buying role and purchase stage
-- Browser checks covered example review, deep review, edited-brief export, escaped HTML, stale-result invalidation and the 390px mobile layout
-- Keyword stuffing, negation and irrelevant evidence remain known limitations; independent human calibration and external model benchmarking have not been completed
+- 59 automated checks passed for rubric 3.1, retaining the original manual-evaluator tests
+- Checks cover proof isolation, citations, selected negation cases, vendor substitutions, proposed measurements, risk flags and all 54 remit/role/stage combinations
+- Browser checks covered compact results, deep review, edited-brief export, escaped HTML, stale-result invalidation and 320px/390px layouts
+- Semantic relationships, unusual phrasing and unverified evidence remain limitations; independent human calibration has not been completed
 
 ## Outcome
 
@@ -80,6 +80,6 @@ Role and contribution statements are professional self-report unless a source in
 
 - **[Try IT Pressure Test](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/)** — Live interactive build. Choose an IT audience, buying role and stage; inspect the copy and run a deeper review in the tool.
 - **[Inspect the implementation](https://github.com/shaunaleebrennan/ai-positioning-qa)** — Source repository. The original repository retains the build and evaluation history under its existing URL.
-- **[Read the integration evaluation](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-buyer-integration-2026-09-21.md)** — Evaluation evidence. What was checked, what changed, and what keyword-based scoring cannot establish.
+- **[Read the rubric validation notes](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-rubric-3.1.md)** — Evaluation evidence. Scoring safeguards, browser checks, and the remaining need for independent human calibration.
 
 [Claims and sources](../docs/EVIDENCE_REGISTER.md) · [All supporting documents](../LIBRARY.md#supporting-documents)

@@ -1,4 +1,4 @@
-import { teamBrief } from "./workvivo.js";
+import { teamBrief } from "./workvivo.js?v=3";
 import { awarenessIndicator } from "./awareness.js";
 import {profiles,buyingRoles,goals,dims,hype,count,esc,analyse,react,verdict,evidenceFor,rewriteBrief,summary,splitSentences} from "./it-engine.js";
 const $=s=>document.querySelector(s);let current=null;

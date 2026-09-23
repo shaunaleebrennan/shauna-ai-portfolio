@@ -1,4 +1,4 @@
-import {credentialNote, measurement, angles, sources, guidanceFor, guidanceText, claimChecks, claimReviewText} from "./hq-guidance.js?v=2";
+import {credentialNote, measurement, angles, sources, guidanceFor, guidanceText, claimChecks, claimReviewText} from "./hq-guidance.js?v=3";
 import { teamBrief } from "./workvivo.js?v=4";
 import { awarenessIndicator } from "./awareness.js";
 import {profiles,buyingRoles,goals,dims,hype,count,esc,analyse,react,verdict,evidenceFor,rewriteBrief,summary,splitSentences} from "./it-engine.js";

@@ -75,3 +75,12 @@ test('confirmed credential lists receive useful sales guidance without approving
  assert.match(claimReviewText(r),/Confirmed Workvivo credentials/);
  assert(claimChecks(r.message).some(f=>f.id==='causality'));
 });
+
+
+test('number feedback distinguishes uptake, savings and ROI without removing scrutiny',()=>{
+ const feedback=text=>claimChecks(text).find(f=>f.id==='metrics');
+ assert.match(feedback('We achieved 80% adoption.').why,/people are engaging/);
+ assert.match(feedback('We saved 25% of costs.').why,/time freed up, lower spending or an estimate/);
+ assert.match(feedback('How will we measure ROI?').direction,/question or ambition/);
+ assert.match(feedback('A 35.5% improvement.').need,/how it was calculated/);
+});

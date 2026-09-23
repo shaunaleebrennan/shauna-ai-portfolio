@@ -116,7 +116,7 @@ export function guidanceFor(r) {
 
 // Rule matches identify passages for inspection, not true/false conclusions.
 const rules = [
-  {id:'metrics', title:'Quantified or financial claim', re:/\d[\d,.]*\s*(?:%|percent|million|billion|[x×]\b)|[$£€]\s*\d|\bROI\b/i, why:'A number or ROI reference needs its population, period, method and attribution. Platform adoption is not HQ Agent ROI.', need:'Exact source, date, denominator, product scope, comparison and approved wording.', direction:'Replace an unsupported result with the outcome you propose to measure.'},
+  {id:'metrics', title:'Quantified or financial claim', re:/\d[\d,.]*\s*(?:%|percent|million|billion|[x×]\b)|[$£€]\s*\d|\bROI\b/i, why:'Give the reader enough context to understand what this figure means and whether it applies to their situation.', need:'Where the figure comes from, who or what it covers, when it was measured and how it was calculated.', direction:'If the evidence is available, add the context and source. Otherwise, frame the result as something to test rather than a promise.'},
   {id:'buyer', title:'Buyer authority assumption', re:/\b(?:IT|CIOs?|CHROs?)\b.{0,65}\b(?:always|controls? (?:the )?budget|owns? (?:the )?budget|is (?:the )?economic buyer|are (?:the )?economic buyers|signs)\b/i, why:'Titles do not establish decision authority in every account.', need:'An account-specific buying group, budget owner and decision process.', direction:'Ask who owns, funds and approves this purchase.'},
   {id:'causality', title:'Causal or guaranteed transformation claim', re:/\b(?:guarantee\w*|ensure\w*|automatically|alone)\b.{0,90}\b(?:adoption|ROI|transformation|success|value)\b|\b(?:where|location|front door|experience layer)\b.{0,100}\b(?:determines?|guarantees?|more than training)\b|\b(?:seer|adoption|usage)\b.{0,70}\b(?:proves?|guarantees?|delivers?)\b.{0,35}\b(?:ROI|transformation|value)\b/i, why:'Location, usage and sentiment do not establish the cause of business improvement.', need:'A baseline, outcome measures, comparison and consideration of alternative explanations.', direction:'Present the change mechanism as a hypothesis and test it alongside access, training, data quality and task relevance.'},
   {id:'security', title:'Broad security or governance assurance', re:/\b(?:fully secure|100% secure|zero risk|hallucination[- ]free|safe AI|full audit|full control|no customer (?:content|data).{0,30}(?:retained|train)|never.{0,30}train|zero[- ]data[- ]retention)\b/i, why:'Broad assurances can hide boundaries, exceptions and responsibilities.', need:'Current control and contractual evidence for the product, data flow and action being discussed.', direction:'Name the specific control and boundary; retain human oversight and residual risks.'},
@@ -129,11 +129,29 @@ const rules = [
   {id:'placeholder', title:'Unfinished proof or offer', re:/\[(?:customer|company|IT leader|proof|source|\d)[^\]]*\]|\b(?:TBC|TBD|PROOF NEEDED)\b/i, why:'Production placeholders and proposed offers are not finished evidence or available assets.', need:'The completed asset and permission to use its evidence, or an explicit draft label.', direction:'Keep the draft internal until the reference or offer is ready.'},
   {id:'grounding', title:'Grounding presented as guaranteed accuracy', re:/\b(?:ground\w*|citations?|RAG|permission[- ]aware)\b.{0,75}\b(?:guarantee\w*|ensure\w*|always accurate|no hallucinations)\b/i, why:'Retrieval, citations and permissions do not by themselves establish answer correctness.', need:'Evaluation on relevant, stale, conflicting and inaccessible knowledge, plus recovery procedures.', direction:'Explain the mechanism and how answer quality is tested, without an accuracy guarantee.'}
 ];
+function metricFeedback(quote) {
+  if(/\bROI\b/i.test(quote))return {
+    why:'If you’re making a return-on-investment case, help the buyer see the link between what changed at work and what the organisation gained. Usage can be part of that story; the costs and benefits complete it.',
+    need:'The use case, results over a stated period, costs included and how the benefit was calculated. Make clear whether the evidence relates to HQ, HQ Agent or the wider programme.',
+    direction:'For a measured result, explain the calculation and its limits. For an ROI question or ambition, say what you would measure together.'
+  };
+  if(/\b(?:saving\w*|save\w*|cost\w*|hours?|productivity)\b|[$£€]/i.test(quote))return {
+    why:'A saving is more useful when the buyer can see what changed. Was this time freed up, lower spending or an estimate—and over what period?',
+    need:'The starting point, people or tasks measured, time period and calculation. For a net saving, include the costs of putting the change in place and running it.',
+    direction:'Name the type of saving and keep the claim within what was measured. Label forecasts as estimates and show the assumptions.'
+  };
+  if(/\b(?:adoption|usage|users?|active|engagement)\b/i.test(quote))return {
+    why:'This could be a useful sign that people are engaging. Help the reader understand who is counted and what “using it” means, then connect it to the work you want to improve.',
+    need:'The employee group, time period and definition of use or engagement. Distinguish platform activity from HQ Agent use; add task outcomes if you’re making a broader value claim.',
+    direction:'Keep a supported adoption figure and explain its scope. If business impact hasn’t been measured yet, make that the next question to explore.'
+  };
+  return {};
+}
 export function claimChecks(message='') {
   // Preserve exact source text, including whitespace inside a passage and decimal points.
   const passages=typeof Intl.Segmenter === "function" ? [...new Intl.Segmenter("en",{granularity:"sentence"}).segment(message)].map(x=>x.segment.trim()).filter(Boolean) : (message.match(/[^\n]+/g)||[]);
   return rules.flatMap(rule=>{
-    return passages.filter(p=>rule.re.test(p)).map(quote=>({id:rule.id,title:rule.title,quote,why:rule.why,need:rule.need,direction:rule.direction}));
+    return passages.filter(p=>rule.re.test(p)).map(quote=>({id:rule.id,title:rule.title,quote,why:rule.why,need:rule.need,direction:rule.direction,...(rule.id==='metrics'?metricFeedback(quote):{})}));
   });
 }
 // Team-confirmed credentials; recognise only a bare list, never endorse surrounding claims.

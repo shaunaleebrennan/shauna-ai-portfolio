@@ -6,7 +6,7 @@
 
 :root{--ink:#eef1e8;--muted:#afb3aa;--paper:#0b0d0c;--card:#151715;--line:#343732;--green:#d3bcff;--lime:#c9ff63;--red:#f6b2ab}input,select,textarea,.result-card,.gate,.evidence-item,.claim-table,.rewrite-brief{background:#101310;color:var(--ink);border-color:var(--line)}.persona-preview,.reaction,.priority-list li,.question-list li,.architecture span{background:#24222c;color:var(--ink)}.evidence-item blockquote{color:var(--ink)}.primary{color:#17121f}.secondary{background:transparent;color:var(--ink)}.objection-list li{background:#2d2022}.hero,.topbar{background:#101210}.hero h1 em{color:#d3bcff}a{color:#d3bcff;text-underline-offset:4px}.hero h1{font-family:system-ui,sans-serif}.panel,.field,.app-grid>div{min-width:0}select{max-width:100%}.skip-link{position:absolute;top:-100px}.skip-link:focus{top:10px;z-index:100;background:var(--paper);padding:12px}:focus-visible{outline:2px solid var(--lime);outline-offset:4px}.help{line-height:1.6}.gate,.evidence-item,.claim-table{overflow-wrap:anywhere}@media(max-width:900px){.side{order:initial}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-/* A quieter editorial finish, using the portfolio's lilac and lime palette. */
+/* Team app editorial styling. */
 :root { --radius:24px; --line:#333730; --shadow:0 20px 60px #00000020; }
 body { background:radial-gradient(ellipse at 100% 35%,#27203245,transparent 45%),var(--paper); }
 .topbar { background:#101210; border-bottom-color:#ffffff12; }
@@ -14,9 +14,6 @@ body { background:radial-gradient(ellipse at 100% 35%,#27203245,transparent 45%)
 .brand { display:flex; align-items:center; gap:6px; letter-spacing:-.035em; font-size:1.15rem; }
 .brand::before { content:""; width:14px; height:14px; margin-right:8px; border:3px solid var(--lime); border-radius:50%; box-shadow:0 0 18px #c9ff6326; }
 .brand span { color:var(--ink); }
-.portfolio-link { color:#c1c5bb; font-size:.82rem; text-decoration:none; }
-.portfolio-link span { margin-left:8px; color:var(--lime); }
-.portfolio-link:hover { color:var(--lime); }
 .hero { position:relative; background:radial-gradient(ellipse at 83% 10%,#45355145,transparent 55%),#101210; border-bottom:1px solid #ffffff10; padding:76px 0 84px; }
 .hero-grid { gap:64px; align-items:center; }
 .hero .eyebrow { font-size:.7rem; letter-spacing:.15em; margin-bottom:23px; }
@@ -61,7 +58,7 @@ summary { cursor:pointer; }
 .footer a:hover { color:var(--lime); }
 @media(max-width:1000px) { .app-grid { grid-template-columns:minmax(0,1fr) 280px; gap:20px; } .hero-grid { gap:32px; } }
 @media(max-width:900px) { .app-grid { grid-template-columns:1fr; } .hero-grid { grid-template-columns:1.2fr 1fr; } .hero { padding:55px 0; } }
-@media(max-width:620px) { .shell { width:calc(100% - 32px); } .topbar .shell { height:66px; } .portfolio-link { font-size:.73rem; } .brand { font-size:1rem; } .hero-grid { grid-template-columns:1fr; gap:32px; } .hero h1 { font-size:clamp(3.4rem,13vw,5rem); } .hero .eyebrow { font-size:.62rem; } .lede { font-size:1rem; } .persona-card { padding:24px; } .quote { font-size:1.35rem; } main { padding-top:28px; } .panel { padding:24px 20px; } .section-head h2 { font-size:1.6rem; } .field-grid { gap:0; } .button-row .primary { width:100%; } }
+@media(max-width:620px) { .shell { width:calc(100% - 32px); } .topbar .shell { height:66px; } .brand { font-size:1rem; } .hero-grid { grid-template-columns:1fr; gap:32px; } .hero h1 { font-size:clamp(3.4rem,13vw,5rem); } .hero .eyebrow { font-size:.62rem; } .lede { font-size:1rem; } .persona-card { padding:24px; } .quote { font-size:1.35rem; } main { padding-top:28px; } .panel { padding:24px 20px; } .section-head h2 { font-size:1.6rem; } .field-grid { gap:0; } .button-row .primary { width:100%; } }
 @media(prefers-reduced-motion:reduce) { input,select,textarea,.button { transition:none; } }
 
 .team-brief{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;line-height:1.75;color:var(--muted)} details p{font-size:.88rem;color:var(--muted)} .hero h1{font-size:clamp(3rem,7vw,6rem)}

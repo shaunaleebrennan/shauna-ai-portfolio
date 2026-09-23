@@ -62,3 +62,5 @@ summary { cursor:pointer; }
 @media(prefers-reduced-motion:reduce) { input,select,textarea,.button { transition:none; } }
 
 .team-brief{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;line-height:1.75;color:var(--muted)} details p{font-size:.88rem;color:var(--muted)} .hero h1{font-size:clamp(3rem,7vw,6rem)}
+
+.claim-review{border:1px solid #d3bcff60;border-left:4px solid var(--lime);padding:20px;border-radius:14px;margin-bottom:24px;background:#20231b}.claim-review h3{margin-top:0}.claim-review p{font-size:.88rem}.claim-review-item{border-top:1px solid #ffffff25;padding:12px 0}.claim-review-item summary{font-weight:650}.claim-review-item blockquote{margin:12px 0;padding:12px;background:#0d100d;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.88rem}.critical-question{margin-top:20px;border-left:3px solid var(--green)}

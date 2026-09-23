@@ -1,6 +1,6 @@
-/* IT messaging rubric 3.2. Editorial rules, not a calibrated buyer prediction. */
+/* IT messaging rubric 3.3. Editorial rules, not a calibrated buyer prediction. */
 export const ITRubric = (() => {
-  const version = '3.2';
+  const version = '3.3';
   const stages = {
     attention: {label: 'Discover: earn attention', weights: {relevance:30,value:20,fit:0,trust:0,proof:15,clarity:35}},
     shortlist: {label: 'Evaluate: compare approaches', weights: {relevance:20,value:20,fit:20,trust:10,proof:20,clarity:10}},
@@ -68,7 +68,7 @@ export const ITRubric = (() => {
     source: /(?:https?:\/\/[^\s]+|\bsource:|\b(?:according to|case study|customer report|pilot report|research report|audit report|control document|study by|report by)\b)/i,
     attribution: /(?:https?:\/\/[^\s]+|\b(?:[A-Z][\w’'-]+\s+){1,5}(?:case study|pilot report|research report|audit report|control document)\b)/,
     metric: /(?:\d+(?:\.\d+)?\s*%|[$€£]\s*\d|\b\d[\d,.]*[kmb]?\+?\s*(?:hours?|minutes?|days?|weeks?|months?|seconds?|employees|workers|users|tools|integrations|connectors|organisations|organizations|million|billion)\b)/i,
-    action: /\b(find|finds|search|searches|answer|answers|reduce|reduces|check|checks|review|reviews|compare|compares|help|helps|connect|connects|integrate|integrates|retrieve|retrieves|sync|syncs|take|takes|give|gives|use|uses|show|shows|keep|keeps|read|see|learn|download|explore|ask|test|measure|decide|resolve|resolves|approve|approves|restrict|restricts|control|controls|save|saves|cut|cuts|stop|stops|why|how|what)\b/i,
+    action: /\b(find|finds|finding|search|searches|searching|answer|answers|answering|reduce|reduces|reducing|check|checks|checking|review|reviews|reviewing|compare|compares|comparing|help|helps|helping|connect|connects|connecting|integrate|integrates|integrating|retrieve|retrieves|retrieving|sync|syncs|syncing|take|takes|taking|give|gives|giving|use|uses|using|show|shows|showing|keep|keeps|keeping|read|reading|see|seeing|learn|learning|download|downloading|explore|exploring|ask|asking|test|testing|measure|measuring|decide|deciding|resolve|resolves|resolving|approve|approves|approving|restrict|restricts|restricting|control|controls|controlling|save|saves|saving|cut|cutting|stop|stops|stopping|why|how|what)\b/i,
     lowCTA: /\b(read|see|learn|download|explore|compare|check|watch|discover|ask|review)\b/i,
     CTA: /\b(read|see|learn|download|explore|compare|check|watch|discover|ask|review|book|schedule|pilot|test|agree|request|contact|map)\b/i
   };

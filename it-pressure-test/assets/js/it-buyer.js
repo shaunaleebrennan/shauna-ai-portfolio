@@ -1,5 +1,5 @@
 import { awarenessIndicator } from "./awareness.js";
-import {profiles,buyingRoles,buyerFocus,goals,dims,esc,analyse,react,verdict,evidenceStatus,rewriteBrief,summary} from "./it-engine.js?v=3.2.1";
+import {profiles,buyingRoles,buyerFocus,goals,dims,esc,analyse,react,verdict,evidenceStatus,rewriteBrief,summary} from "./it-engine.js?v=3.3";
 const $=s=>document.querySelector(s);let current=null;
 function data(){return{persona:$("#persona").value,buyingRole:$("#buying-role").value,goal:$("#goal").value,region:$("#region").value,assetType:$("#asset-type").value,solution:$("#solution").value.trim(),alternatives:$("#alternatives").value.trim(),proof:$("#proof").value.trim(),awareness:$("#awareness").value,message:$("#message").value}}function persona(){const p=profiles[$("#persona").value],b=buyingRoles[$("#buying-role").value];$("#persona-preview").innerHTML=`<strong>${p.name} · ${b.name}</strong>${p.summary} In this purchase, this reader ${b.summary.charAt(0).toLowerCase()+b.summary.slice(1)} Looks for ${p.cares}.`;[...$(".lens-card ul").children].forEach((x,i)=>x.textContent=Object.values(p.questions)[i])}
 const points=n=>Number(n.toFixed(2)).toString();
@@ -15,7 +15,7 @@ function render(r){
   $('#evidence-status').textContent=evidenceStatus(r);
   $('#verdict-title').textContent=r.audit.label;
   $('#verdict-tag').textContent=`${r.rule.label} · ${r.audit.format}`;
-  $('#verdict-copy').textContent=r.audit.criticalClaims.length?`Critical claim to check: “${r.audit.criticalClaims[0].quote}” The numeric score does not clear this claim.`:`Scored against this ${r.audit.format} alone. A short asset cannot stand in for a full purchase case. Check the reasoning and sources.`;
+  $('#verdict-copy').textContent=r.audit.criticalClaims.length?`Critical claim to check: “${r.audit.criticalClaims[0].quote}” The numeric score does not clear this claim.`:r.total===100?'All structural checks were detected. Claims, sources and competitive difference have not been verified.':`Scored against this ${r.audit.format} alone. ${r.audit.shortAsset||r.assetType==='Email / outreach'?'A short asset cannot stand in for a full purchase case.':'This does not establish buyer acceptance.'} Check the reasoning and sources.`;
   $('#reaction-label').textContent='Gut Reaction';
   $('#reaction').textContent=react(r);
   $('#priorities').innerHTML=r.ranked.length?r.ranked.slice(0,3).map(id=>{const x=r.audit.rows[id];return `<li><b>${esc(dims[id].name)}</b><span>${esc(x.next)}</span><small class="points-note">${esc(x.reason)}</small></li>`}).join(''):'<li>All structural checks are met. Have a reviewer confirm the evidence and audience fit.</li>';

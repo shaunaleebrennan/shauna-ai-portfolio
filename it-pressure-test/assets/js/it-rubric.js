@@ -1,10 +1,33 @@
-/* IT messaging rubric 3.1. Editorial rules, not a calibrated buyer prediction. */
+/* IT messaging rubric 3.2. Editorial rules, not a calibrated buyer prediction. */
 export const ITRubric = (() => {
-  const version = '3.1';
+  const version = '3.2';
   const stages = {
     attention: {label: 'Discover: earn attention', weights: {relevance:30,value:20,fit:0,trust:0,proof:15,clarity:35}},
     shortlist: {label: 'Evaluate: compare approaches', weights: {relevance:20,value:20,fit:20,trust:10,proof:20,clarity:10}},
     evaluation: {label: 'Commit: justify the choice', weights: {relevance:10,value:20,fit:20,trust:20,proof:20,clarity:10}}
+  };
+  // Asset contracts change what can reasonably fit in the supplied copy. No buyer-specific score weights.
+  const formats = {
+    'Headline / paid ad': {name:'Headline / paid ad',kind:'headline',weights:{relevance:40,value:20,fit:0,trust:0,proof:0,clarity:40}},
+    'Email / outreach': {name:'Email / outreach',kind:'outreach',weights:{relevance:35,value:25,fit:0,trust:0,proof:0,clarity:40}},
+    'Campaign or thought-leadership copy': {name:'Campaign or thought-leadership copy',kind:'editorial',weights:{
+      attention:{relevance:35,value:25,fit:0,trust:0,proof:0,clarity:40},
+      shortlist:{relevance:30,value:25,fit:10,trust:0,proof:10,clarity:25},
+      evaluation:{relevance:20,value:25,fit:15,trust:10,proof:10,clarity:20}}},
+    'Homepage / landing page': {name:'Homepage / landing page',kind:'landing',weights:{
+      attention:{relevance:30,value:25,fit:0,trust:0,proof:15,clarity:30},
+      shortlist:{relevance:20,value:20,fit:20,trust:10,proof:15,clarity:15},
+      evaluation:stages.evaluation.weights}},
+    'IT-focused strategic narrative': {name:'IT-focused strategic narrative',kind:'narrative',weights:{
+      attention:{relevance:35,value:25,fit:0,trust:0,proof:10,clarity:30},
+      shortlist:{relevance:25,value:20,fit:15,trust:10,proof:20,clarity:10},
+      evaluation:stages.evaluation.weights}},
+    'Messaging and positioning framework': {name:'Messaging and positioning framework',kind:'framework',weights:{
+      attention:{relevance:35,value:25,fit:0,trust:0,proof:10,clarity:30},
+      shortlist:{relevance:25,value:20,fit:15,trust:10,proof:20,clarity:10},
+      evaluation:stages.evaluation.weights}},
+    'Sales pitch / deck': {name:'Sales pitch / deck',kind:'decision'},
+    'Product or solution brief': {name:'Product or solution brief',kind:'decision'}
   };
   const anchors = {
     relevance: ['No usable buyer problem detected', 'A problem is named', 'Buyer and task are tied to the problem', 'The consequence is explained', 'An explicit reason to change the current approach'],
@@ -86,15 +109,16 @@ export const ITRubric = (() => {
   function assess(input) {
     const message=String(input.message||'').trim(), ps=passages(message);
     const stage=stages[input.goal]||stages.shortlist;
-    const shortAsset=input.assetType==='Headline / paid ad';
-    const attentionHeadline=input.goal==='attention'&&shortAsset;
-    const weights={...stage.weights};
+    const format=formats[input.assetType]||formats['Sales pitch / deck'];
+    const shortAsset=format.kind==='headline';
+    const compact=shortAsset||format.kind==='outreach';
+    const editorial=format.kind==='editorial';
+    const noCTA=shortAsset||editorial||format.kind==='framework'||format.kind==='narrative';
+    const weights={...(format.weights?.[input.goal]||format.weights||stage.weights)};
     const activeAnchors=Object.fromEntries(Object.entries(anchors).map(([id,list])=>[id,[...list]]));
-    if(attentionHeadline) {
-      Object.assign(weights,{relevance:40,value:20,fit:0,trust:0,proof:0,clarity:40});
-      activeAnchors.value[4]='A specific beneficiary and workflow outcome';
-    }
-    if(shortAsset)activeAnchors.clarity[4]='A clear, restrained headline; no CTA required';
+    if(compact||editorial)activeAnchors.value[4]='A specific beneficiary and workflow outcome';
+    if(noCTA)activeAnchors.clarity[4]=shortAsset?'A clear, restrained headline; no CTA required':'A clear, restrained takeaway; no CTA required';
+    if(input.goal!=='attention'&&!compact&&!editorial)activeAnchors.relevance[4]='A concrete reason to choose this approach over the current option';
     const allClaims=claims(message);
     const systemNames=[...message.matchAll(/\b(?:with|to|from|across|alongside|keep|keeps|retain|retains|replace|replaces|requires?(?: configured)?)\s+([A-Z][A-Za-z0-9_-]*(?:\s+(?:[A-Z][A-Za-z0-9_-]*|365))?)/g)].map(m=>m[1]);
     for(const s of ps){const m=s.match(/^([A-Z][A-Za-z0-9_-]*)\s+(?:connects?|integrates?|retrieves?|syncs?|works?)\b/);if(m&&!/^(?:We|It|Our|IT|They)$/.test(m[1]))systemNames.push(m[1]);}
@@ -109,9 +133,9 @@ export const ITRubric = (() => {
       return {id,level,quote,checks,reason:anchors[id][level],next:needs[id][Math.min(3,level)],cap:''};
     }
     const first=(...p)=>ps.find(s=>matches(s,...p))||'';
-    const problem=first(P.problem), problemPassages=ps.filter(s=>sentence(s,shortAsset?4:6)&&matches(s,P.problem,P.buyer,P.task));
+    const problem=first(P.problem), problemPassages=ps.filter(s=>sentence(s,compact?4:6)&&matches(s,P.problem,P.buyer,P.task));
     const specificProblem=problemPassages[0]||'', consequence=problemPassages.find(s=>P.consequence.test(s))||'';
-    const benefit=ps.find(hasBenefit)||'', benefitPassages=ps.filter(s=>sentence(s)&&hasBenefit(s)&&P.task.test(s));
+    const benefit=ps.find(hasBenefit)||'', benefitPassages=ps.filter(s=>sentence(s,compact?4:6)&&hasBenefit(s)&&P.task.test(s));
     const specificBenefit=benefitPassages[0]||'', mechanism=benefitPassages.find(s=>P.mechanism.test(s))||'';
     const fit=ps.find(s=>P.interaction.test(s)&&!denied(s))||'', concreteFit=ps.find(s=>sentence(s)&&P.interaction.test(s)&&hasSystem(s)&&!denied(s))||'';
     const trust=first(P.trust,P.object)||first(P.control)||first(/\b(?:SOC 2|ISO 27001)\b/i);
@@ -120,17 +144,17 @@ export const ITRubric = (() => {
     const source=ps.find(s=>P.source.test(s)&&!hollow(s))||'';
     const traceable=ps.find(identifiableSource)||'';
     const scoped=ps.find(s=>identifiableSource(s)&&P.scope.test(s))||'';
-    const usable=ps.filter(s=>sentence(s,shortAsset?4:6));
+    const usable=ps.filter(s=>sentence(s,compact?4:6));
     const length=words(message).length, average=length/Math.max(1,ps.length);
     const clear=usable.length>0 && average<=28 && (message.match(marketing)||[]).length<=1;
     const cta=ps.find(s=>(input.goal==='attention'?P.lowCTA:P.CTA).test(s)&&/\b(?:guide|report|case study|checklist|session|workflow|demo|pilot|plan|assessment|questions?|example|replay|approach|with|how|why|what)\b/i.test(s))||'';
     const rows={
-      relevance:row('relevance', [['Buyer pressure',problem],['Specific buyer and task',specificProblem],['Consequence',consequence],['Reason to reconsider',consequence&&first(P.reframe)]]),
-      value:row('value', [['Benefit',benefit],['Workflow outcome',specificBenefit],['Mechanism',mechanism],[attentionHeadline?'Beneficiary and workflow':'Measure, population and period',mechanism&&benefitPassages.find(s=>P.mechanism.test(s)&&(attentionHeadline?P.buyer.test(s):matches(s,P.measure,P.population,P.period)))]]),
+      relevance:row('relevance', [['Buyer pressure',problem],['Specific buyer and task',specificProblem],['Consequence',consequence],[input.goal==='attention'||compact||editorial?'Reason to reconsider':'Concrete contrast with current option',consequence&&ps.find(s=>P.reframe.test(s)&&(input.goal==='attention'||compact||editorial||P.mechanism.test(s)))]]),
+      value:row('value', [['Benefit',benefit],['Workflow outcome',specificBenefit],['Mechanism',mechanism],[compact||editorial?'Beneficiary and workflow':'Measure, population and period',mechanism&&benefitPassages.find(s=>P.mechanism.test(s)&&(compact||editorial?P.buyer.test(s):matches(s,P.measure,P.population,P.period)))]]),
       fit:row('fit', [['System interaction',fit],['Named system and action',concreteFit],['Role in the stack',concreteFit&&ps.find(s=>P.role.test(s)&&hasSystem(s)&&!denied(s))],['Dependency or boundary',concreteFit&&ps.find(s=>P.dependency.test(s)&&hasSystem(s)&&!denied(s))]]),
       trust:row('trust', [['Trust signal',trust],['Control and object',concreteControl],['Control owner',controlPassages.find(s=>P.owner.test(s))||''],['Boundary or responsibility',concreteControl&&ps.find(s=>!denied(s)&&matches(s,/\b(?:only|limited|requires?|except|retain|responsib|until|before|after)\w*\b/i,P.object))]]),
       proof:row('proof', [['Source reference',source],['Traceable attribution',traceable],['Relevant scope',scoped],['Result or control with scope',scoped&&((P.measure.test(scoped)&&P.task.test(scoped))||P.control.test(scoped))?scoped:'']]),
-      clarity:row('clarity', [['Usable text',length>=3&&(ps[0]||'')],['Concrete proposition',usable[0]||''],['Readable, restrained wording',clear&&usable[0]],['Stage-appropriate next step',shortAsset?clear&&usable[0]:cta]])
+      clarity:row('clarity', [['Usable text',length>=3&&(ps[0]||'')],['Concrete proposition',usable[0]||''],['Readable, restrained wording',clear&&usable[0]],['Stage-appropriate next step',noCTA?clear&&usable.find(s=>hasBenefit(s)&&P.task.test(s)):cta]])
     };
     const numberWithoutSource=allClaims.some(c=>c.context==='Assertion'&&!c.attributed);
     if(numberWithoutSource&&rows.proof.level>1) {
@@ -141,22 +165,30 @@ export const ITRubric = (() => {
       rows.trust.level=Math.min(1,rows.trust.level);rows.trust.cap='An absolute assurance needs a scope review before controls earn stronger credit.';
       rows.trust.quote=allClaims.find(c=>c.type==='Absolute assurance'&&c.context==='Assertion').quote;
     }
+    if((shortAsset&&length>45)||(format.kind==='outreach'&&length>200)) {
+      rows.clarity.level=Math.min(2,rows.clarity.level);
+      rows.clarity.cap=`At ${length} words this exceeds the ${shortAsset?'45-word headline/ad':'200-word outreach'} review limit; check the actual unit the buyer will see.`;
+    }
     for(const [id,r] of Object.entries(rows)) {
       r.weight=weights[id];r.points=r.level/4*r.weight;r.available=r.weight-r.points;
       r.reason=r.cap||activeAnchors[id][r.level];r.next=needs[id][Math.min(3,r.level)];r.anchors=activeAnchors[id];
-      if(attentionHeadline&&id==='value'&&r.level===3)r.next='Name the people who benefit from the workflow improvement.';
-      if(r.cap)r.next=id==='trust'?'Narrow the absolute assurance and state its scope, exceptions and responsibility.':'Attribute each material asserted claim, or narrow the promise until it can be supported.';
+      if((compact||editorial)&&id==='value'&&r.level===3)r.next='Name the people who benefit from the workflow improvement.';
+      if(noCTA&&id==='clarity'&&r.level===3)r.next='State a clear takeaway that a buyer can repeat; an explicit CTA is optional here.';
+      if(input.goal!=='attention'&&!compact&&!editorial&&id==='relevance'&&r.level===3)r.next='Contrast the approach with a real alternative and name the mechanism that makes it different.';
+      if(r.cap)r.next=id==='trust'?'Narrow the absolute assurance and state its scope, exceptions and responsibility.':id==='proof'?'Attribute each material asserted claim, or narrow the promise until it can be supported.':'Test the actual shorter headline or outreach copy as a separate asset.';
     }
     const raw=Object.values(rows).reduce((n,r)=>n+r.points,0),total=Math.round(raw);
     const ranked=Object.keys(rows).filter(id=>weights[id]>0&&rows[id].level<4).sort((a,b)=>rows[b].available-rows[a].available||a.localeCompare(b));
+    // Address comprehension first when the basic proposition is still missing.
+    const gate=['clarity','relevance','value'].find(id=>weights[id]>0&&rows[id].level<2);
+    if(gate)ranked.unshift(...ranked.splice(ranked.indexOf(gate),1));
     const proofText=String(input.proof||'').trim();
     const hasContext=proofText.length>0&&!/^(?:none|not supplied|no (?:approved |supporting )?proof.*|n\/a)$/i.test(proofText);
     const status=hasContext?'Supplied · unverified':numberWithoutSource?'Claims need sources':traceable?'Referenced · unverified':source?'Source mentioned · not identifiable':'No source supplied';
     const criticalClaims=allClaims.filter(c=>c.risk==='high'&&c.context==='Assertion');
-    return {version,rows,weights,raw,total,ranked,claims:allClaims,criticalClaims,status,shortAsset,
+    return {version,rows,weights,raw,total,ranked,claims:allClaims,criticalClaims,status,shortAsset,format:format.name,
       label:criticalClaims.length?'Claim review required':total>=80?'Strong structure':total>=60?'Promising':total>=40?'Needs work':'Reframe the message',
-      method:attentionHeadline?'Headline weights: relevance 40, value 20, clarity 40. Contribution = level ÷ 4 × weight. A beneficiary and workflow replace the full success measure; proof, technical detail and a CTA are not required in the headline. Any claims still need checking.':'Each criterion earns 0–4; contribution = level ÷ 4 × stage weight. The six contributions total 100 possible points.'};
+      method:`${format.name} at ${stage.label}: ${compact?'a specific beneficiary and workflow replace a full success metric; technical detail and inline proof carry no points. ':editorial?'a specific beneficiary and workflow replace a full success metric. ':''}${noCTA?'A CTA is optional for this format. ':''}Each scored criterion earns 0–4; contribution = level ÷ 4 × the displayed format-and-stage weight. The six contributions total 100 possible points. Claims still need checking.`};
   }
-  return {version,stages,anchors,needs,passages,claims,assess};
+  return {version,stages,formats,anchors,needs,passages,claims,assess};
 })();
-

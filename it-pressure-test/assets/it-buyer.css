@@ -8,7 +8,7 @@
 
 /* A quieter editorial finish, using the portfolio's lilac and lime palette. */
 :root { --radius:24px; --line:#333730; --shadow:0 20px 60px #00000020; }
-body { background:radial-gradient(ellipse at 100% 35%,#27203245,transparent 45%),var(--paper); }
+body { background:radial-gradient(ellipse at 100% 35%,#e5d8f0,transparent 45%),#f5f3ee; }
 .topbar { background:#101210; border-bottom-color:#ffffff12; }
 .topbar .shell { height:76px; }
 .brand { display:flex; align-items:center; gap:6px; letter-spacing:-.035em; font-size:1.15rem; }
@@ -55,10 +55,13 @@ textarea::placeholder,input::placeholder { color:#858b80; opacity:1; }
 .lens-card li { counter-increment:buyer-question; display:grid; grid-template-columns:24px 1fr; gap:12px; padding:14px 0; margin:0; border-top:1px solid #ffffff10; font-size:.85rem; line-height:1.55; }
 .lens-card li::before { content:counter(buyer-question,decimal-leading-zero); color:var(--lime); font-size:.65rem; letter-spacing:.04em; padding-top:3px; }
 .principle { border-color:#ffffff14; line-height:1.7; font-size:.8rem; }
+.principle { background:#fffdf8; color:#394840; border-color:#dfd9e4; box-shadow:0 10px 24px #3d2d4912; }
+.principle strong { color:#202c25; }
+.principle a { color:#51368a; }
 summary { cursor:pointer; }
-.footer { border-color:#ffffff14; }
-.footer a { color:#bfc4b9; text-decoration:none; }
-.footer a:hover { color:var(--lime); }
+.footer { color:#44534b; border-color:#d9d1df; }
+.footer a { color:#51368a; text-decoration:none; }
+.footer a:hover { color:#2b195c; }
 @media(max-width:1000px) { .app-grid { grid-template-columns:minmax(0,1fr) 280px; gap:20px; } .hero-grid { gap:32px; } }
 @media(max-width:900px) { .app-grid { grid-template-columns:1fr; } .hero-grid { grid-template-columns:1.2fr 1fr; } .hero { padding:55px 0; } }
 @media(max-width:620px) { .shell { width:calc(100% - 32px); } .topbar .shell { height:66px; } .portfolio-link { font-size:.73rem; } .brand { font-size:1rem; } .hero-grid { grid-template-columns:1fr; gap:32px; } .hero h1 { font-size:clamp(3.4rem,13vw,5rem); } .hero .eyebrow { font-size:.62rem; } .lede { font-size:1rem; } .persona-card { padding:24px; } .quote { font-size:1.35rem; } main { padding-top:28px; } .panel { padding:24px 20px; } .section-head h2 { font-size:1.6rem; } .field-grid { gap:0; } .button-row .primary { width:100%; } }

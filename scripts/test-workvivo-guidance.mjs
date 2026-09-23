@@ -84,3 +84,17 @@ test('number feedback distinguishes uptake, savings and ROI without removing scr
  assert.match(feedback('How will we measure ROI?').direction,/question or ambition/);
  assert.match(feedback('A 35.5% improvement.').need,/how it was calculated/);
 });
+
+test('rewrite provides copy, preserves supplied evidence and only requests absent decision evidence',async()=>{
+ const {draftFor}=await import('../workvivo-it-buyer-test/assets/js/rewrite.js');
+ for(const angle of Object.keys(angles)){
+  const r=draftFor({...base,angle,message:'Employees struggle to find current policies.',proof:'In our pilot, 12 of 15 requests were resolved.',goal:'evaluation'});
+  assert(r.draft.includes('Employees struggle to find current policies.'));
+  assert(r.draft.includes('12 of 15 requests'));assert.equal(r.gaps.length,0);
+  assert(!r.draft.includes('[MISSING]'));assert(!r.draft.includes('REWRITE BRIEF'));
+ }
+ assert.equal(draftFor({...base,goal:'attention'}).gaps.length,0);
+ assert.equal(draftFor({...base,goal:'evaluation'}).gaps.length,1);
+ assert(!draftFor({...base,message:'Manual tasks always guarantee ROI.'}).draft.includes('guarantee ROI'));
+ assert(draftFor({...base,assetType:'Headline / paid ad'}).draft.length<300);
+});

@@ -18,4 +18,4 @@ I led positioning and GTM strategy, launch planning, pricing and packaging, comp
 
 A people-intelligence story organised around listen, understand and act. The Listening Gap gave it a memorable tension, connecting employee feedback and AI-assisted insight to the decisions leaders and managers need to make.
 
-> An adjacent market becomes a credible next step when you make the buyer’s problem—and your reason to solve it—clear.
+> Employee listening becomes valuable when it changes what leaders and managers do next.

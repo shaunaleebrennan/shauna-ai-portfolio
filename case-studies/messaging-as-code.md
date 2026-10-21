@@ -18,4 +18,4 @@ I owned the project, wrote the messaging with support from my PMM team, and defi
 
 The HQ Agent pilot is complete and connected to our sales enablement agent, with positive feedback so far. Phase two is to write and test the remaining messaging. From there, the ambition is an agentic system connected to the design system, bringing governed messaging into content creation and automating more of the workflow.
 
-> The value is in turning messaging into a shared foundation for sales enablement, content creation and automation.
+> Scaling AI content starts with messaging that people can trust and agents can use.

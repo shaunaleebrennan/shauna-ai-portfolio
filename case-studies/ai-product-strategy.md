@@ -18,4 +18,4 @@ I completed Product School courses in AI Product Strategy for Leaders, Agentic W
 
 A growing body of practical builds and reusable workflows, including this portfolio agent and IT Pressure Test. The learning continues through testing, troubleshooting and iteration—helping me ask better questions about the products I market, evaluate AI’s possibilities and limits, and bring new approaches into PMM work.
 
-> I learn by following a question, building something to explore it, and applying what I discover.
+> Building with AI turns curiosity into better judgment about what to market, automate and trust.

@@ -18,4 +18,4 @@ I led product and portfolio positioning, translated technical detail into buyer 
 
 A clear story built around search, answer and action, carried through positioning, packaging and launch. My role was to make the product understandable and commercially useful, working closely with the teams building it.
 
-> The strongest AI positioning connects product capability, buyer trust and a clear reason to choose.
+> An agent’s value is the work it helps people complete, with clear limits they can trust.

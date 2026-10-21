@@ -18,4 +18,4 @@ I shaped migration positioning, competitive differentiation and market messaging
 
 A focused migration story and coordinated go-to-market motion. Forrester later recognised Workvivo’s companywide response to the disruption with its 2026 B2B Return on Integration Honors. I contributed to that programme’s GTM work alongside the wider team.
 
-> The deadline created urgency. My job was to give customers a clear reason to choose Workvivo.
+> Even when customers have to move, the destination still has to earn their choice.

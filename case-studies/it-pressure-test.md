@@ -18,4 +18,4 @@ I defined the buyer lenses, review experience and evidence criteria, then used C
 
 A live browser tool that turns positioning judgment into practical editing guidance. It shows the passages behind its feedback and helps the author shape the next draft. The score is an aid to judgment; it does not verify claims or replace a buyer’s response.
 
-> Good feedback gives someone a useful next move.
+> Better messaging starts with understanding the decision your buyer is trying to make.

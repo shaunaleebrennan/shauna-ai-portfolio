@@ -37,6 +37,10 @@ Shauna confirms the HQ Agent pilot is complete, is connected to the sales enable
 
 On 21 October 2026, the existing internal compiler was run against a temporary local Git fixture with invented text. The baseline read “Find the policy you need.”; the submitted wording was “Find the policy and its source.” The compiler returned PREPARED with one candidate and a cycle receipt. A separate comparison supplied newer current text and returned STALE_AUTHORING_VIEW with an empty changes array. The public JSON contains a summarized receipt excerpt and sanitized results, not the complete internal receipt or source repository. The temporary baseline commit identifies the demonstration fixture and is not a public repository revision. No canonical source files were written, no approval was performed, and live document integration was not exercised. This is fresh software behavior evidence; it establishes no business impact.
 
+## Analyst programme ownership — candidate confirmation, 21 October 2026
+
+Shauna confirms that PMM absorbed analyst relations when its owner left, and that she built a programme to make the additional remit scale while continuing to grow Workvivo’s leadership across reports. This is professional self-report. The portfolio describes programme design, delivery and continuing leadership without inventing report-by-report rank changes, submission volumes or efficiency metrics. Analysts and review platforms retain control of their assessments.
+
 ## Publication rule
 
 No number, customer outcome, business impact, team size, or ownership claim should appear in the public portfolio until its source and attribution boundary are recorded here. Claims marked approved public self-report may be used only with that status preserved. Claims marked company context must never be converted into personal causation.

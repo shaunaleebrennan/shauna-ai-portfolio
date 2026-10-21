@@ -4,7 +4,7 @@
 
 **Learning what AI changes by putting it to work**
 
-The useful question for me is where AI can make Product Marketing more effective, and where the thinking still needs an owner.
+I combine structured learning with self-guided discovery: studying the ideas, building something with them, and finding out what holds up in practice.
 
 ## What needed to change
 
@@ -12,10 +12,10 @@ Research, repeated seller questions and first-pass analysis can absorb time that
 
 ## My part in it
 
-I built and prototyped across competitive intelligence, research synthesis, positioning reviews and conversational agents. Alongside product and AI-pricing study, those projects let me test ideas in practice: how to structure context, evaluate an answer and make the output useful to someone else.
+I completed Product School courses in AI Product Strategy for Leaders, Agentic Workflows & Loops, and Go-to-Market. Alongside that structured learning, I keep exploring independently: trying new tools, following questions into the technical detail, and building across competitive intelligence, research synthesis, positioning reviews and conversational agents.
 
 ## What came out of it
 
-A growing body of practical builds and reusable workflows, including this portfolio agent and IT Pressure Test. Each one has helped me ask better questions about the products I market and the way PMM work gets done.
+A growing body of practical builds and reusable workflows, including this portfolio agent and IT Pressure Test. The learning continues through testing, troubleshooting and iteration—helping me ask better questions about the products I market, evaluate AI’s possibilities and limits, and bring new approaches into PMM work.
 
-> Building is one of the fastest ways to find out which parts of an idea hold up.
+> I learn by following a question, building something to explore it, and applying what I discover.

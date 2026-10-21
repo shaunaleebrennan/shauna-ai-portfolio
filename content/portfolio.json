@@ -258,11 +258,11 @@
       "caseStudy":{
         "overview": {
           "eyebrow": "Learning what AI changes by putting it to work",
-          "lead": "The useful question for me is where AI can make Product Marketing more effective, and where the thinking still needs an owner.",
+          "lead": "I combine structured learning with self-guided discovery: studying the ideas, building something with them, and finding out what holds up in practice.",
           "problem": "Research, repeated seller questions and first-pass analysis can absorb time that PMMs need for judgment. I wanted to understand which parts could become useful workflows and which decisions should stay firmly human.",
-          "contribution": "I built and prototyped across competitive intelligence, research synthesis, positioning reviews and conversational agents. Alongside product and AI-pricing study, those projects let me test ideas in practice: how to structure context, evaluate an answer and make the output useful to someone else.",
-          "result": "A growing body of practical builds and reusable workflows, including this portfolio agent and IT Pressure Test. Each one has helped me ask better questions about the products I market and the way PMM work gets done.",
-          "learning": "Building is one of the fastest ways to find out which parts of an idea hold up."
+          "contribution": "I completed Product School courses in AI Product Strategy for Leaders, Agentic Workflows & Loops, and Go-to-Market. Alongside that structured learning, I keep exploring independently: trying new tools, following questions into the technical detail, and building across competitive intelligence, research synthesis, positioning reviews and conversational agents.",
+          "result": "A growing body of practical builds and reusable workflows, including this portfolio agent and IT Pressure Test. The learning continues through testing, troubleshooting and iteration—helping me ask better questions about the products I market, evaluate AI’s possibilities and limits, and bring new approaches into PMM work.",
+          "learning": "I learn by following a question, building something to explore it, and applying what I discover."
         },
         "eyebrow":"Building an AI-enabled PMM operating model",
         "context":"AI-first Product Marketing is not simply a team using ChatGPT. Shauna has been exploring how AI can change the operating model of PMM itself—and where human judgment must remain accountable.",

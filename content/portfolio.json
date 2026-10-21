@@ -311,7 +311,7 @@
           "problem": "Recruiters, hiring managers and collaborators arrive with different questions. I wanted them to explore the work naturally, with answers that were specific, useful and faithful to my experience.",
           "contribution": "I designed and integrated a voice and text agent on ElevenLabs, with a voice persona based on my own recordings. I shaped its personality, prompts, knowledge and routing, then tested different models and responses to improve clarity, relevance and accuracy.",
           "result": "A live conversational layer for the portfolio. Visitors can ask about a project, a decision or my approach, while the agent draws on curated career and project material. The work brought voice design, product judgment and hands-on AI configuration together in one experience.",
-          "learning": "A good agent needs a clear sense of what matters, what it knows and how to answer."
+          "learning": "Designing the conversation means shaping what the agent knows, how it responds and why someone would want to use it."
         },
         "eyebrow":"Turning a résumé into an evidence-grounded conversation",
         "context":"A static portfolio can show the work, but it cannot adapt to the question a recruiter, hiring manager, or technical stakeholder actually wants answered. Shauna designed a live ElevenLabs experience that lets visitors explore her career, case studies, technical builds, and working principles through voice or text. She also created a voice persona from her own voice and gave the agent a defined personality so the experience feels recognisably hers without pretending to be her.",

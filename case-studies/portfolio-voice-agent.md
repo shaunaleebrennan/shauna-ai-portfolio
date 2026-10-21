@@ -18,4 +18,4 @@ I designed and integrated a voice and text agent on ElevenLabs, with a voice per
 
 A live conversational layer for the portfolio. Visitors can ask about a project, a decision or my approach, while the agent draws on curated career and project material. The work brought voice design, product judgment and hands-on AI configuration together in one experience.
 
-> A good agent needs a clear sense of what matters, what it knows and how to answer.
+> Designing the conversation means shaping what the agent knows, how it responds and why someone would want to use it.

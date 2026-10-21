@@ -24,11 +24,15 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 **Positioning · Category · Launch** — Repositioning employee experience for the AI era without losing the adoption, trust, or culture that made the platform distinctive. I led the strategic positioning, messaging architecture, launch strategy, seller narrative, and analyst framing.
 
-### [IT Pressure Test](case-studies/it-pressure-test.md)
+### [Messaging as Code](case-studies/messaging-as-code.md)
 
-[![IT Pressure Test — Will IT believe it?](assets/readme/it-pressure-test-strip-v5.svg)](case-studies/it-pressure-test.md)
+**GTM systems · Source traceability · Human approval** — Designing an operating model for reusable messaging, defining the content model and approval workflow, then directing AI-assisted implementation. Includes an executed, sanitized change demonstration and the decision to simplify authoring.
 
-**Buyer insight · Positioning systems · Evaluation** — Building an IT messaging review around six audience lenses, accountable human judgment, and inspectable source evidence. [Try the live tool](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/) · [Read the case study](case-studies/it-pressure-test.md).
+### [HQ Agent](case-studies/hq-agent.md)
+
+[![HQ Agent — From search, to answer, to action](assets/readme/hq-agent-strip-v2.svg)](case-studies/hq-agent.md)
+
+**Agentic AI · Trust · Packaging** — Turning enterprise search, grounded answers, and agentic action into one credible commercial progression: **SEARCH → ANSWER → ACTION**. I led the product story, AI maturity narrative, pricing and packaging, and seller enablement.
 
 ### [AI Product Strategy](case-studies/ai-product-strategy.md)
 
@@ -38,18 +42,13 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 **Try the build:** [IT Pressure Test](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/) — a vendor-neutral IT messaging review with a transparent /100 score, six audience lenses and an in-tool deep review. Inspect the criteria and matched passages under Why this score? The local rubric remains an editing aid, with unverified proof and human judgement kept explicit. [Inspect the source and rubric](https://github.com/shaunaleebrennan/ai-positioning-qa) · [Read the validation notes](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-rubric-3.1.md).
 
-### [HQ Agent](case-studies/hq-agent.md)
-
-[![HQ Agent — From search, to answer, to action](assets/readme/hq-agent-strip-v2.svg)](case-studies/hq-agent.md)
-
-**Agentic AI · Trust · Packaging** — Turning enterprise search, grounded answers, and agentic action into one credible commercial progression: **SEARCH → ANSWER → ACTION**. I led the product story, AI maturity narrative, pricing and packaging, and seller enablement.
-
 ### More case studies
 
-- [**Portfolio Voice Agent**](case-studies/portfolio-voice-agent.md) — creating a custom voice persona and personality, engineering prompts and guardrails, building intent-routing workflows and modular RAG, and comparing model outputs through structured testing.
-- [**The Meta Migration**](case-studies/meta-migration.md) — positioning and enabling a time-critical enterprise migration programme within Workvivo's Forrester-recognised response to a major market disruption.
-- [**Market Leadership**](case-studies/market-leadership.md) — connecting analyst relations, evidence, competitive intelligence, and category strategy.
-- [**Seer**](case-studies/seer.md) — building a people-intelligence story around **LISTEN → UNDERSTAND → ACT**.
+- [**Portfolio Voice Agent**](case-studies/portfolio-voice-agent.md) — Designing a live voice and text portfolio agent with a custom voice persona, intent-routing workflow, evidence retrieval, guardrails, and systematic model and response testing.
+- [**Market leadership**](case-studies/market-leadership.md) — Creating one connected market-leadership motion across Gartner, Forrester, G2, ClearBox, Gartner Peer Insights, and SoftwareReviews.
+- [**The Meta Migration**](case-studies/meta-migration.md) — Turning a time-bound market disruption into an award-winning commercial motion—while making migration feel credible, differentiated, and low-risk.
+- [**Seer**](case-studies/seer.md) — Building a people-intelligence story around the Listening Gap: the distance between what employees say and what organisations act on.
+- [**IT Pressure Test**](case-studies/it-pressure-test.md) — Turning IT-buyer positioning judgment into a working tool: six audience lenses, source-linked diagnostics, and a practical rewrite brief.
 
 
 ## Supporting documents
@@ -151,7 +150,7 @@ The tools are not the proof; the workflow design and operating choices are.
 
 ## About this portfolio
 
-This repository powers my [live portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/): eight evidence-led case studies, a CV, public proof, and a grounded conversational agent. I designed and built the static experience with semantic HTML, responsive CSS, vanilla JavaScript, JSON-driven content, consent-aware Google Analytics, and GitHub Pages.
+This repository powers my [live portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/): nine evidence-led case studies, a CV, public proof, and a grounded conversational agent. I designed and built the static experience with semantic HTML, responsive CSS, vanilla JavaScript, JSON-driven content, consent-aware Google Analytics, and GitHub Pages.
 
 Use it in three ways: **[scan](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#scan)** the executive view, **[explore](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#explore)** the evidence, or **[ask](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#ask)** the portfolio agent about my experience and the work behind a case study.
 

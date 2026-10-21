@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2000" viewBox="0 0 1600 2000">
+<rect width="1600" height="2000" rx="64" fill="#151c19"/>
+<g fill="none" stroke="#344b3e" stroke-width="2"><path d="M0 350H1600M0 800H1600M0 1250H1600M0 1700H1600M300 0V2000M800 0V2000M1300 0V2000"/></g>
+<g font-family="Arial, sans-serif"><text x="130" y="195" fill="#c9ff63" font-size="32" letter-spacing="7">GTM SYSTEMS</text><g fill="#f0f3e9" font-size="132" font-weight="700"><text x="130" y="395">Messaging</text><text x="130" y="540">as Code.</text></g><text x="135" y="650" fill="#b8c7bc" font-size="38">Protect the meaning. Keep the owner.</text>
+<g stroke="#c9ff63" stroke-width="4"><path d="M800 965V1060M800 1250V1345M800 1535V1630"/></g>
+<g fill="#202e25" stroke="#4a6853" stroke-width="2"><rect x="130" y="775" width="1340" height="190" rx="24"/><rect x="130" y="1060" width="1340" height="190" rx="24"/><rect x="130" y="1345" width="1340" height="190" rx="24"/><rect x="130" y="1630" width="1340" height="190" rx="24"/></g>
+<g font-size="28" fill="#c9ff63"><text x="185" y="840">01 / SOURCE</text><text x="185" y="1125">02 / CHANGE</text><text x="185" y="1410">03 / VALIDATE</text><text x="185" y="1695">04 / REVIEW</text></g>
+<g font-size="46" fill="#f0f3e9"><text x="185" y="910">Product truth + evidence</text><text x="185" y="1195">Exact authored edits</text><text x="185" y="1480">Structure + references + conflicts</text><text x="185" y="1765">Human approval</text></g><text x="130" y="1920" fill="#b8c7bc" font-size="28" letter-spacing="3">VERSIONED CONTENT. ACCOUNTABLE DECISIONS.</text></g></svg>

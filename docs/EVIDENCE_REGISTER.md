@@ -23,6 +23,20 @@ Last reviewed: 18 September 2026
 | Voyage AI evidence-search implementation | Verified public code; deployment in progress | Portfolio repository; do not call the search live until secure Render deployment and endpoint connection are verified |
 | Portfolio Voice Agent | Verified public artifact plus configured third-party runtime | Public repository contains the widget integration and a public-safe architecture and evaluation overview; operational knowledge, routing instructions, build source, and detailed tests remain private. The public portfolio contains the live ElevenLabs widget. Describe Shauna as having designed, configured, tested, and integrated the experience—not engineered ElevenLabs' models or platform runtime |
 
+## Messaging as Code — added 21 October 2026
+
+Professional self-report based on inspection of the internal Workvivo GTM OS repository (README, tooling status, authoring documentation and integration configuration) and development records. Shauna defined PMM requirements and directed AI-assisted implementation and testing. The public case study describes the system without publishing internal messaging or Product source material.
+
+Implemented: offline validation, deterministic authoring and candidate change compilation, plus a guarded synchronization foundation. Live document and tracker targets and the authenticated adapter remain unconfigured. Full unattended synchronization, enforced branch protection and commercial impact are not claimed. Asset resolution, tracing and generation remain planned. The custom authoring pilot was reassessed in favour of simpler document collaboration. Historical regression scenarios are described without presenting an old test count as a fresh run.
+
+### Pilot progress — candidate confirmation, 21 October 2026
+
+Shauna confirms the HQ Agent pilot is complete, is connected to the sales enablement agent and has received positive feedback. This is professional self-report; no feedback quotes, sample size, adoption count or measured business outcome was supplied. Shauna also confirms that testing led her to change the approach from a GitHub-based workflow to an in-house system using Zoom agents and Canvas. Phase two is writing and testing the rest of the messaging. The agentic content-creation system connected to the design system is a future ambition. These distinctions replace the earlier high-level outcome description while retaining the historical implementation and validation record below.
+
+### Sanitized compiler demonstration
+
+On 21 October 2026, the existing internal compiler was run against a temporary local Git fixture with invented text. The baseline read “Find the policy you need.”; the submitted wording was “Find the policy and its source.” The compiler returned PREPARED with one candidate and a cycle receipt. A separate comparison supplied newer current text and returned STALE_AUTHORING_VIEW with an empty changes array. The public JSON contains a summarized receipt excerpt and sanitized results, not the complete internal receipt or source repository. The temporary baseline commit identifies the demonstration fixture and is not a public repository revision. No canonical source files were written, no approval was performed, and live document integration was not exercised. This is fresh software behavior evidence; it establishes no business impact.
+
 ## Publication rule
 
 No number, customer outcome, business impact, team size, or ownership claim should appear in the public portfolio until its source and attribution boundary are recorded here. Claims marked approved public self-report may be used only with that status preserved. Claims marked company context must never be converted into personal causation.

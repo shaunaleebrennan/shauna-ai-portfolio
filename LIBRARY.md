@@ -10,9 +10,13 @@ Read every case study and supporting document here on GitHub. The links below op
 
 Repositioning employee experience for the AI era—without losing the adoption, trust, and culture that made the platform distinctive.
 
-### [IT Pressure Test](case-studies/it-pressure-test.md)
+### [Messaging as Code](case-studies/messaging-as-code.md)
 
-Turning IT-buyer positioning judgment into a working tool: six audience lenses, source-linked diagnostics, and a practical rewrite brief.
+Designing an operating model for messaging reuse across teams and AI tools, with clear product truth, PMM ownership and human review.
+
+### [HQ Agent](case-studies/hq-agent.md)
+
+Turning enterprise search, trusted answers, self-service, and agentic action into one credible product story—and a launch buyers could navigate.
 
 ### [AI Product Strategy](case-studies/ai-product-strategy.md)
 
@@ -21,10 +25,6 @@ Learning by building: product strategy, AI pricing, portfolio agents, and hands-
 ### [Portfolio Voice Agent](case-studies/portfolio-voice-agent.md)
 
 Designing a live voice and text portfolio agent with a custom voice persona, intent-routing workflow, evidence retrieval, guardrails, and systematic model and response testing.
-
-### [HQ Agent](case-studies/hq-agent.md)
-
-Turning enterprise search, trusted answers, self-service, and agentic action into one credible product story—and a launch buyers could navigate.
 
 ### [Market leadership](case-studies/market-leadership.md)
 
@@ -37,6 +37,10 @@ Turning a time-bound market disruption into an award-winning commercial motion�
 ### [Seer](case-studies/seer.md)
 
 Building a people-intelligence story around the Listening Gap: the distance between what employees say and what organisations act on.
+
+### [IT Pressure Test](case-studies/it-pressure-test.md)
+
+Turning IT-buyer positioning judgment into a working tool: six audience lenses, source-linked diagnostics, and a practical rewrite brief.
 
 ## Supporting documents
 

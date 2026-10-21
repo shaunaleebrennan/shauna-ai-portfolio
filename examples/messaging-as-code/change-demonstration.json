@@ -1,0 +1,23 @@
+{
+  "example_type": "Sanitized local fixture; not customer messaging or a live document sync",
+  "before": "Find the policy you need.",
+  "submitted": "Find the policy and its source.",
+  "receipt_excerpt": {
+    "receipt_version": 1,
+    "cycle_id": "880c05cc9c037bdf1f9e10abf69b1fa5480860d8b08ca17b2af11846079b1ae7",
+    "baseline_commit": "4bad383c5006fdf76e6f2352a99388112fd2d566",
+    "changed_field": "text",
+    "before": "Find the policy you need.",
+    "after": "Find the policy and its source.",
+    "compiler_status": "PREPARED",
+    "candidate_file_count": 1
+  },
+  "stale_edit": {
+    "current_text": "Find the current policy and owner.",
+    "submitted_text": "Find the policy and its source.",
+    "status": "STALE_AUTHORING_VIEW",
+    "changes": []
+  },
+  "canonical_files_written": false,
+  "human_approval": "Required; not performed"
+}

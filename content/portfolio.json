@@ -37,6 +37,14 @@
         }
       ],
       "caseStudy":{
+        "overview": {
+          "eyebrow": "Giving an established platform a bigger story",
+          "lead": "How do you bring AI into a product story without losing what people already love about it? That was the challenge behind Workvivo HQ.",
+          "problem": "Workvivo had earned its place in employee experience through connection, culture and adoption. As AI changed how people find information and get work done, the platform needed a broader ambition that still felt like Workvivo.",
+          "contribution": "I led the positioning and messaging architecture, connecting the platform story to the different priorities of IT, HR and Communications. I carried that thinking into the website and seller narrative, analyst framing and launch strategy, then built GTM kits and enabled Sales. The strategic choice was to make AI an expansion of Workvivo’s employee-experience strengths, connecting one platform story to distinct buying priorities.",
+          "result": "A coherent launch story that gave the platform room to grow while keeping employees at its centre. AI became part of the experience people already had a reason to use.",
+          "learning": "A bigger ambition works best when people can still recognise why they trusted you in the first place."
+        },
         "eyebrow":"Repositioning a category for the AI era",
         "context":"Workvivo had established itself as an Employee Experience Platform. As enterprise software moved into an AI-native era, the challenge was bigger than adding AI features to the existing story: the company needed a credible new ambition without abandoning the employee-experience equity that made it distinctive.",
         "challenge":"What should Workvivo become when AI changes how employees interact with information, systems, and work? A generic ‘we’re now an AI company’ claim would have discarded the adoption, culture, frontline reach, and trust the platform had already earned.",
@@ -45,6 +53,424 @@
         "decisions":["Position AI as embedded in the employee experience—not bolted on","Make adoption part of the AI ROI story","Frame one destination where employees can understand, find, and increasingly act","Keep frontline employees inside the enterprise AI narrative"],
         "outcome":"Workvivo publicly launched HQ while serving 9 million users and after surpassing $100M ARR. Those are company proof points during Shauna’s tenure, not outcomes attributed to her alone.",
         "learning":"Repositioning works when it expands what a brand can mean without erasing the reason customers trusted it in the first place."
+      }
+    },
+    {
+      "slug": "messaging-as-code",
+      "title": "Messaging as Code",
+      "category": "technical",
+      "tag": "GTM systems",
+      "summary": "Designing an operating model for messaging reuse across teams and AI tools, with clear product truth, PMM ownership and human review.",
+      "demonstrates": "PMM operating-model design, strategic messaging, product judgment, information architecture, and AI-assisted implementation.",
+      "proof": "Sanitized compiler demonstration and change receipt, with implementation status and source notes in the evidence register.",
+      "image": "assets/evidence/messaging-as-code.svg",
+      "sourceUrl": "case-studies/messaging-as-code.md",
+      "evidence": [
+        {
+          "title": "Inspect the sanitized change receipt",
+          "url": "examples/messaging-as-code/change-demonstration.json",
+          "kind": "Executed local demonstration",
+          "note": "Invented wording run through the existing compiler, plus a stale-edit comparison. No customer content or live synchronization."
+        },
+        {
+          "title": "Implementation and source notes",
+          "url": "documents/evidence-register.html",
+          "kind": "Evidence register",
+          "note": "Source basis, ownership and current implementation boundaries."
+        }
+      ],
+      "caseStudy": {
+        "overview": {
+          "eyebrow": "Keeping the story intact as more people and AI reuse it",
+          "lead": "AI makes messaging easier to create and distribute. I wanted to make it easier to reuse responsibly, too.",
+          "problem": "A message travels through decks, websites, launch kits and AI prompts. Along the way, its meaning, evidence or approval can get lost. I designed an operating model that keeps those connections visible and gives PMMs ownership of the words.",
+          "contribution": "I owned the project, wrote the messaging with support from my PMM team, and defined the content model, approval workflow and acceptance criteria. I directed AI-assisted implementation and tested changes and failures. Through testing, I moved the approach from a GitHub-based workflow to an in-house system using Zoom agents and Canvas, keeping the focus on an authoring experience the team could use.",
+          "result": "The HQ Agent pilot is complete and connected to our sales enablement agent, with positive feedback so far. Phase two is to write and test the remaining messaging. From there, the ambition is an agentic system connected to the design system, bringing governed messaging into content creation and automating more of the workflow.",
+          "learning": "A system only helps if it makes the next human decision easier."
+        },
+        "eyebrow": "Making approved messaging reusable across teams and AI tools",
+        "contribution": [
+          "Owned the project and defined the content model, approval workflow and acceptance criteria",
+          "Directed AI-assisted implementation of the validation and change-proposal foundation",
+          "Tested exact edits and failure scenarios, then simplified the authoring approach"
+        ],
+        "sections": [
+          {
+            "id": "context",
+            "title": "The problem",
+            "paragraphs": [
+              "Product messaging is reused across sales decks, launch materials, websites and AI prompts. Marketing, Sales and PMM need to adapt the story for different products, personas and assets while keeping claims accurate and the narrative consistent. Each adaptation creates another opportunity for wording to lose its context, evidence or approval status.",
+              "AI makes that content easier to produce and distribute. It also makes it more important to know which messages are current, supported and approved. I designed a structured messaging system to make reuse more reliable while preserving PMM ownership."
+            ]
+          },
+          {
+            "id": "contribution",
+            "title": "My role and approach",
+            "paragraphs": [
+              "I defined the content model, approval workflow and acceptance criteria, then directed AI-assisted implementation and tested how the system handled changes and failures. The model separates product facts from positioning, connects messages to their supporting sources, and gives content explicit ownership and review states.",
+              "The authoring pilot changed my approach. When the custom interface made it difficult to find and review the actual wording, I paused its expansion and prioritised familiar document editing, history and comments. Governance depends on people being able to understand and approve their own changes."
+            ]
+          },
+          {
+            "id": "workflow",
+            "title": "How the system works",
+            "paragraphs": [
+              "The intended change cycle is straightforward: a PMM edits wording, the system identifies the exact changes and checks them, and a human reviews the proposal before it becomes canonical. The implemented foundation prepares validated candidate changes and a receipt for review."
+            ],
+            "items": [
+              "Edit: start from a known version of the message and submit the exact intended wording",
+              "Check: compare the edit with its baseline, preserve untouched fields and validate the candidate content",
+              "Review: retain the proposed change and its receipt for a human decision",
+              "Recover: stop when the underlying message has changed, so the author can compare versions and reconcile the edit"
+            ],
+            "detailsTitle": "Technical design beneath the workflow",
+            "details": [
+              "Typed objects separate product truth, buyer context, proof, messaging, design and asset recipes",
+              "Git records versions; Python and JSON Schema validate structure and references offline",
+              "An identity binding connects each authoring field to its canonical object; a deterministic compiler produces candidate files and a change receipt"
+            ]
+          },
+          {
+            "id": "decisions",
+            "title": "The decisions that mattered",
+            "items": [
+              "Separate facts from positioning: product authority establishes what can be claimed; messaging determines how to communicate it for a buyer",
+              "Preserve exact edits: compile the wording the PMM submitted and leave other fields intact",
+              "Keep approval human: a successful technical check does not approve a claim or authorize publication",
+              "Make conflicts recoverable: preserve the original, submitted and current versions so the author can resolve a stale edit",
+              "Simplify authoring: prove one reliable change cycle in a familiar document workflow before adding more custom automation"
+            ]
+          },
+          {
+            "id": "evaluation",
+            "title": "What I built and tested",
+            "paragraphs": [
+              "The project produced a working foundation for validating structured messaging and proposing controlled changes for review. Development checks cover exact wording, untouched-field preservation, placeholders, stale edits, changed bindings and recovery from partial failures.",
+              "To make that behavior inspectable, I ran the existing compiler against a temporary local fixture using invented wording. One text edit produced a validated candidate and a change receipt. A separate comparison against a newer message returned STALE_AUTHORING_VIEW with no proposed changes."
+            ],
+            "demo": {
+              "label": "Sanitized local demonstration — invented wording, real compiler output",
+              "before": "Find the policy you need.",
+              "after": "Find the policy and its source.",
+              "receipt": "{\n  \"receipt_version\": 1,\n  \"cycle_id\": \"880c05cc9c037bdf1f9e10abf69b1fa5480860d8b08ca17b2af11846079b1ae7\",\n  \"baseline_commit\": \"4bad383c5006fdf76e6f2352a99388112fd2d566\",\n  \"changed_field\": \"text\",\n  \"before\": \"Find the policy you need.\",\n  \"after\": \"Find the policy and its source.\",\n  \"compiler_status\": \"PREPARED\",\n  \"candidate_file_count\": 1\n}",
+              "stale": "Current message: Find the current policy and owner.\nSubmitted edit: Find the policy and its source.\nResult: STALE_AUTHORING_VIEW\nProposed changes: []",
+              "note": "This demonstrates candidate compilation and conflict detection. It is not a customer change, approval event or live document synchronization.",
+              "url": "examples/messaging-as-code/change-demonstration.json"
+            },
+            "status": "Current status: live document synchronization remains incomplete, and adoption and efficiency gains have not yet been measured. The evidence register records the integration and implementation boundaries."
+          },
+          {
+            "id": "learning",
+            "title": "What I learned",
+            "paragraphs": [
+              "The central design question was how to make messaging easier to reuse while keeping people accountable for its meaning and approval. The pilot showed that the collaboration experience is part of that governance: a technically controlled workflow still fails if the author cannot easily find and review the wording.",
+              "I would now prove the simplest complete human change cycle first, then add automation where it removes effort without obscuring ownership."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug":"hq-agent",
+      "title":"HQ Agent",
+      "category":"launch",
+      "tag":"Product launch",
+      "summary":"Turning enterprise search, trusted answers, self-service, and agentic action into one credible product story—and a launch buyers could navigate.",
+      "demonstrates":"Agentic AI positioning, portfolio architecture, trust messaging, packaging, launch orchestration, and enterprise sales enablement.",
+      "proof":"HQ product experience, launch narrative, seller materials, and portfolio positioning connecting Workvivo and Zoom AI.",
+      "image":"assets/evidence/hq-agent.jpg",
+      "sourceUrl":"https://www.workvivo.com/hq/",
+      "evidence": [
+        {
+          "title": "Workvivo HQ product page",
+          "url": "https://www.workvivo.com/hq/",
+          "kind": "Public product context",
+          "note": "Company product context, not independent verification of individual ownership."
+        },
+        {
+          "title": "HQ Agent product artwork",
+          "url": "assets/evidence/hq-agent-product.png",
+          "kind": "Published artifact",
+          "note": "Product visual supporting the commercial narrative."
+        },
+        {
+          "title": "Explore the platform positioning",
+          "url": "case-study.html?case=workvivo-hq",
+          "kind": "Related case study",
+          "note": "How the agent fits the wider Workvivo HQ story."
+        }
+      ],
+      "caseStudy":{
+        "overview": {
+          "eyebrow": "Making enterprise AI make sense to the buyer",
+          "lead": "Search. An answer. A next step. HQ Agent needed a story that made that progression clear—and gave buyers a reason to care.",
+          "problem": "The product brought together enterprise knowledge, grounded answers and defined actions. Explaining the technology was only part of the job. Buyers also needed to understand where it fit, what they could trust and how to evaluate its value.",
+          "contribution": "I led product and portfolio positioning, translated technical detail into buyer value, and developed the seller narrative and enablement. I also co-developed pricing and packaging with the Revenue leader, connecting the commercial model to different levels of AI value. Understanding retrieval, grounding, permissions and connected actions helped me decide which promises we could credibly make and how to distinguish levels of value.",
+          "result": "A clear story built around search, answer and action, carried through positioning, packaging and launch. My role was to make the product understandable and commercially useful, working closely with the teams building it.",
+          "learning": "Technical understanding earns its place when it helps you make a sharper commercial decision."
+        },
+        "eyebrow":"Commercialising enterprise AI",
+        "context":"HQ Agent extended Workvivo beyond communications and employee experience into trusted enterprise answers, search, self-service, and agentic task execution. It sat at the intersection of enterprise knowledge, RAG, permissions, employee experience, and Zoom’s broader AI technology.",
+        "challenge":"The launch could not be reduced to ‘better enterprise search.’ It needed a clear category, a credible trust story, an understandable relationship with Workvivo HQ and ZoomMate, and sustainable packaging for different levels of AI value.",
+        "insight":"The most useful commercial progression was SEARCH → ANSWER → ACTION: from finding information, to receiving a grounded answer, to increasingly completing the task. The launch idea became: From search, to answer, to job done.",
+        "contribution":["Product and portfolio positioning","AI maturity story and competitive framing","Pricing and packaging co-developed with the Revenue leader","Seller narrative and enablement","Translation of trust, permissions, citations, and grounding into buyer value","GTM execution across Product, Revenue, and the market"],
+        "decisions":["Market the buyer value of RAG—not the acronym","Use ‘grounded, cited, and permission-aware’ instead of unsafe absolute claims","Differentiate HQ Agent’s employee support from ZoomMate’s deeper productivity use cases","Price levels of AI value rather than charging for novelty"],
+        "outcome":"The result was a portfolio and launch narrative designed to make a technically complex enterprise AI product easier to understand, sell, and evaluate. Shauna shaped the commercial story; she did not engineer the underlying AI system.",
+        "learning":"Technical depth matters in Product Marketing when it changes the claim, the value, the packaging, or the buyer’s trust."
+      }
+    },
+    {
+      "slug":"ai-product-strategy",
+      "title":"AI Product Strategy",
+      "category":"technical",
+      "tag":"Technical expertise",
+      "summary":"Learning by building: product strategy, AI pricing, portfolio agents, and hands-on experimentation with the tools reshaping modern GTM.",
+      "demonstrates":"AI product judgment, pricing strategy, agent prototyping, workflow design, technical curiosity, and applied PMM experimentation.",
+      "proof":"Product School coursework, AI pricing study, this portfolio agent, and builds using Claude, ChatGPT, Codex, Replit, Lovable, ElevenLabs, and ZoomMate.",
+      "image":"assets/evidence/ai-product-strategy.jpg",
+      "sourceUrl":"https://github.com/shaunaleebrennan",
+      "evidence": [
+        {
+          "title": "Try IT Pressure Test",
+          "url": "it-pressure-test/",
+          "kind": "Public build",
+          "note": "IT-buyer lenses, evidence diagnostics, and in-tool deep review; human judgment remains accountable."
+        },
+        {
+          "title": "Inspect the rubric and implementation",
+          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa",
+          "kind": "Source repository",
+          "note": "Review the framework, worked example, and validation checks."
+        },
+        {
+          "title": "Read the positioning pressure test",
+          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-buyer-integration-2026-09-21.md",
+          "kind": "Evaluation evidence",
+          "note": "Adversarial scoring and import checks, fixes, and remaining calibration limits."
+        },
+        {
+          "title": "Explore the Portfolio Voice Agent",
+          "url": "case-study.html?case=portfolio-voice-agent",
+          "kind": "Related case study",
+          "note": "A concrete example of agent design, integration, and evaluation."
+        }
+      ],
+      "caseStudy":{
+        "overview": {
+          "eyebrow": "Learning what AI changes by putting it to work",
+          "lead": "The useful question for me is where AI can make Product Marketing more effective, and where the thinking still needs an owner.",
+          "problem": "Research, repeated seller questions and first-pass analysis can absorb time that PMMs need for judgment. I wanted to understand which parts could become useful workflows and which decisions should stay firmly human.",
+          "contribution": "I built and prototyped across competitive intelligence, research synthesis, positioning reviews and conversational agents. Alongside product and AI-pricing study, those projects let me test ideas in practice: how to structure context, evaluate an answer and make the output useful to someone else.",
+          "result": "A growing body of practical builds and reusable workflows, including this portfolio agent and IT Pressure Test. Each one has helped me ask better questions about the products I market and the way PMM work gets done.",
+          "learning": "Building is one of the fastest ways to find out which parts of an idea hold up."
+        },
+        "eyebrow":"Building an AI-enabled PMM operating model",
+        "context":"AI-first Product Marketing is not simply a team using ChatGPT. Shauna has been exploring how AI can change the operating model of PMM itself—and where human judgment must remain accountable.",
+        "challenge":"High-value PMM time disappears into retrieval, repeated seller questions, monitoring, synthesis, recurring research, and first-pass analysis. The strategic question is which work requires human judgment and which work can be processed or automated.",
+        "insight":"AI does more of the processing. PMM remains accountable for the thinking. Retrieval, extraction, monitoring, classification, and repeatable analysis can accelerate; positioning, pricing, claims, category strategy, and executive recommendations still need accountable judgment.",
+        "contribution":["Seller-facing competitive intelligence and automated monitoring","AI-assisted win/loss analysis and lightweight decision tools","IT Pressure Test","This portfolio and its grounded agent experience","Reusable research, synthesis, and PMM workflows","Continued product and AI-pricing study"],
+        "decisions":["Design around workflows rather than collecting tools","Keep a human in the loop for consequential claims and decisions","Encode PMM expertise into evaluation criteria","Use prototypes to learn before deciding whether to build, buy, or stop"],
+        "outcome":"The result is a growing set of practical systems that increase PMM leverage while keeping strategic accountability human. The tools are not the proof; the workflow design and operating choices are.",
+        "learning":"Technical expertise for a PMM is the ability to understand enough of the system to make better product, pricing, trust, and go-to-market decisions."
+      }
+    },
+    {
+      "slug":"portfolio-voice-agent",
+      "title":"Portfolio Voice Agent",
+      "category":"technical",
+      "tag":"Agent system",
+      "summary":"Designing a live voice and text portfolio agent with a custom voice persona, intent-routing workflow, evidence retrieval, guardrails, and systematic model and response testing.",
+      "demonstrates":"Conversational AI, voice-persona design, prompt engineering, agent workflow design, intent routing, modular RAG, guardrails, model evaluation, test analysis, and web integration.",
+      "proof":"Live ElevenLabs widget, public system overview, and integration source. Private prompts, routing configuration, and detailed evaluation records are not published.",
+      "image":"assets/evidence/portfolio-voice-agent.png",
+      "sourceUrl":"https://github.com/shaunaleebrennan/shauna-ai-portfolio/blob/main/docs/PORTFOLIO_VOICE_AGENT_CASE_STUDY.md",
+      "evidence": [
+        {
+          "title": "Read the system overview",
+          "url": "documents/voice-agent.html",
+          "kind": "Technical document",
+          "note": "Voice persona, workflow, knowledge design, guardrails, and evaluation framework."
+        },
+        {
+          "title": "Try the portfolio agent",
+          "url": "index.html#ask",
+          "kind": "Live interface",
+          "note": "Ask a career or technical question through the embedded ElevenLabs agent."
+        },
+        {
+          "title": "Inspect the portfolio source",
+          "url": "https://github.com/shaunaleebrennan/shauna-ai-portfolio",
+          "kind": "Source repository",
+          "note": "Public integration code; private prompts, routing configuration, and detailed test records are excluded."
+        }
+      ],
+      "caseStudy":{
+        "overview": {
+          "eyebrow": "A portfolio you can have a conversation with",
+          "lead": "A case study can tell a story. A conversation can start with the part you actually care about. I wanted my portfolio to do both.",
+          "problem": "Recruiters, hiring managers and collaborators arrive with different questions. I wanted them to explore the work naturally, with answers that were specific, useful and faithful to my experience.",
+          "contribution": "I designed and integrated a voice and text agent on ElevenLabs, with a voice persona based on my own recordings. I shaped its personality, prompts, knowledge and routing, then tested different models and responses to improve clarity, relevance and accuracy.",
+          "result": "A live conversational layer for the portfolio. Visitors can ask about a project, a decision or my approach, while the agent draws on curated career and project material. The work brought voice design, product judgment and hands-on AI configuration together in one experience.",
+          "learning": "A good agent needs a clear sense of what matters, what it knows and how to answer."
+        },
+        "eyebrow":"Turning a résumé into an evidence-grounded conversation",
+        "context":"A static portfolio can show the work, but it cannot adapt to the question a recruiter, hiring manager, or technical stakeholder actually wants answered. Shauna designed a live ElevenLabs experience that lets visitors explore her career, case studies, technical builds, and working principles through voice or text. She also created a voice persona from her own voice and gave the agent a defined personality so the experience feels recognisably hers without pretending to be her.",
+        "challenge":"The agent needed to be persuasive without becoming a hype machine. It had to answer broad career questions quickly, go deep on named projects, distinguish work Shauna built from products she marketed, link back to public evidence, and avoid turning company outcomes or technical fluency into unsupported personal claims.",
+        "insight":"A credible portfolio agent is a voice, context, workflow, and evaluation problem—not simply a prompt. Better answers came from defining the persona, separating durable rules from retrievable evidence, routing different intents to specialist answer modes, comparing model outputs, and analysing failures where attribution, role fit, or technical ownership could drift.",
+        "contribution":["Created a custom voice persona from her own recorded voice and defined its personality, tone, conversational style, and answer behaviour","Engineered the system prompts, answer contract, evidence standard, and guardrails","Designed a modular knowledge base around career, technical builds, case studies, learning, recognition, and a canonical claim ledger","Built the workflow and intent-routing conditions for technical questions, case-study deep dives, career history, working style, and role-fit pressure tests","Compared outputs from multiple models and analysed response quality, grounding, tone, and failure patterns","Ran iterative manual and structured tests, then refined prompts, routes, knowledge, and response behaviour","Documented procedures for how the agent handles common intents, evidence, uncertainty, testing, updates, and release review","Integrated the ElevenLabs conversational widget into a responsive GitHub Pages portfolio","Built a Node-based source pipeline that converts maintained Markdown into upload-ready HTML knowledge documents"],
+        "decisions":["Use voice and text as the interface, while keeping public case-study links as the evidence layer","Keep compact identity and claim rules in always-on prompt context; retrieve longer case-study material only when relevant","Route by visitor intent rather than forcing one general prompt to handle every conversation style","Answer technical questions decisively with concrete build evidence, then add ownership boundaries only where they prevent a false inference","Keep knowledge sources versioned privately, with a public system overview and integration code for visitors to inspect","Treat live platform configuration and repository evidence as separate states; published files document the design but do not prove every console setting is active"],
+        "architecture":["ElevenLabs Conversational AI provides the live voice and text runtime embedded through its web component","A custom voice persona created from Shauna's own voice provides a consistent spoken identity, supported by defined personality and conversation rules","A main-agent workflow coordinates specialist intent routes for career, technical evidence, case-study depth, working style, and fit assessment","Two compact prompt documents hold identity, personality, answer policy, and claim controls in persistent context","Nine focused knowledge documents are configured for RAG so the agent retrieves only the evidence relevant to the question","A canonical claim ledger separates externally verified facts, public artifacts, self-reported experience, company context, and work still in progress","Absolute portfolio and repository links let answers point visitors back to inspectable evidence"],
+        "tooling":["ElevenLabs Conversational AI for the agent runtime, custom voice persona, speech interface, workflow, model configuration, and knowledge retrieval","Prompt engineering and conversation design for personality, response structure, routing, and behavioural boundaries","Structured evaluation and qualitative analysis for comparing model outputs and finding recurring failure patterns","HTML, CSS, and vanilla JavaScript for the portfolio and widget integration","Markdown and structured front matter as the editable knowledge source","Node.js for deterministic Markdown-to-HTML knowledge builds","Git and GitHub for versioning, public evidence, and GitHub Pages deployment","Codex and other AI development tools for implementation support, with Shauna retaining the product, content, and claim decisions"],
+        "safeguards":["Third-person identity prevents the agent from impersonating Shauna","Attribution rules distinguish products marketed, systems built, tools used, and concepts studied","Hard claim rules block invented metrics, sole credit for company outcomes, and unsupported production-engineering claims","Specialist routing reduces context collisions between technical proof, career history, project narratives, and role-fit assessment","Public links and evidence labels make provenance visible instead of asking visitors to trust generated prose","A bounded answer pattern keeps voice responses concise and avoids turning narrow questions into résumé recitations"],
+        "validation":["Fifteen acceptance questions cover the most common recruiter and technical-review journeys","A 13-question evaluation set tests positioning, technical evidence, ownership boundaries, unsupported claims, role-fit nuance, leadership, and concise voice responses","Multiple model outputs were tested against comparable prompts to evaluate answer quality and trade-offs","Repeated live voice and text tests exposed issues in tone, grounding, routing, concision, and claim boundaries","Test analysis informed successive changes to prompts, model choices, workflow routes, knowledge sources, and guardrails","Explicit pass criteria and documented procedures make review repeatable rather than purely subjective","Knowledge documents carry version and review dates so content drift can be traced","Repository checks can validate source completeness and regenerated HTML before the knowledge pack is uploaded","Live conversational quality still requires manual testing in ElevenLabs after knowledge or workflow configuration changes"],
+        "outcome":"The result is a live, inspectable portfolio interface that demonstrates more than familiarity with AI tools. It shows Shauna's ability to shape a voice persona, engineer prompts, build an intent-routing workflow, configure retrieval and guardrails, compare model behaviour, analyse tests, and translate the technical decisions into a clear professional story. The agent runs on ElevenLabs; Shauna designed, configured, tested, documented, and integrated the experience rather than engineering the underlying voice models or platform runtime.",
+        "learning":"The quality of an agent is shaped less by the cleverness of one prompt than by the discipline of its context, routing, evidence, evaluation, and boundaries."
+      }
+    },
+    {
+      "slug":"market-leadership",
+      "title":"Market leadership",
+      "category":"analyst",
+      "tag":"Analyst relations",
+      "summary":"Creating one connected market-leadership motion across Gartner, Forrester, G2, ClearBox, Gartner Peer Insights, and SoftwareReviews.",
+      "demonstrates":"Analyst relations, competitive intelligence, category design, campaign strategy, and turning external validation into commercial leverage.",
+      "proof":"Gartner and Forrester leadership campaign artifacts, supported by recognition across major analyst and review platforms.",
+      "image":"assets/evidence/market-leadership.jpg",
+      "evidence": [
+        {
+          "title": "Gartner 2025 campaign artwork",
+          "url": "assets/evidence/gartner-mq-2025.png",
+          "kind": "Published campaign artifact",
+          "note": "Company campaign creative, not the analyst report or proof of sole authorship."
+        },
+        {
+          "title": "Forrester 2026 campaign artwork",
+          "url": "assets/evidence/forrester-wave-2026.png",
+          "kind": "Published campaign artifact",
+          "note": "Shows the recognition campaign; analysts controlled their own assessment."
+        },
+        {
+          "title": "Read the artifact inventory",
+          "url": "documents/evidence-inventory.html",
+          "kind": "Evidence record",
+          "note": "Sources and attribution boundaries for the analyst and category work."
+        }
+      ],
+      "caseStudy":{
+        "overview": {
+          "eyebrow": "Helping the market understand the company we were becoming",
+          "lead": "As Workvivo grew, the product story moved quickly. The way analysts and buyers understood it needed to keep up.",
+          "problem": "A briefing or a ranking is one moment in a much longer conversation. We needed a consistent point of view, credible customer proof and a portfolio story that held together as the products evolved.",
+          "contribution": "I connected analyst narrative, executive storytelling, briefings and RFIs with competitive positioning and evidence development. I also worked on the campaigns and seller narratives that made external recognition useful beyond the announcement.",
+          "result": "A connected market-leadership programme spanning Gartner, Forrester, G2, ClearBox and other analyst and review platforms. Workvivo earned recognition across these programmes; my contribution was to the story, evidence and go-to-market work behind our participation.",
+          "learning": "Credibility builds when the story and the evidence keep reinforcing each other."
+        },
+        "eyebrow":"Building external market credibility",
+        "context":"Workvivo evolved from an underdog employee app into a recognised Employee Experience Platform and later a broader AI-native employee-experience story. Analyst understanding had to evolve with the product and company narrative.",
+        "challenge":"Market leadership is not created by a single briefing. It requires a consistent point of view, credible evidence, strong customer proof, disciplined claims, and alignment across products that are evolving at different speeds.",
+        "insight":"Analyst relations works best as a connected category system—not a calendar of submissions. The analyst narrative, evidence base, competitive position, customer proof, and GTM story need to reinforce one another.",
+        "contribution":["Analyst narrative and executive storytelling","Briefings and RFI development","Evidence and customer-proof development","Competitive positioning and claims governance","Alignment across Workvivo HQ, HQ Agent, and Seer","Campaign strategy that translated recognition into market-facing proof"],
+        "decisions":["Build a durable category story rather than chase individual rankings","Keep external claims grounded in verifiable evidence","Connect analyst recognition to seller and buyer narratives","Maintain one coherent portfolio story across multiple evaluation contexts"],
+        "outcome":"Workvivo received recognition across Gartner, Forrester, G2, ClearBox, Gartner Peer Insights, and SoftwareReviews. Shauna played a substantial role in the program; independent analysts and reviewers controlled their own outcomes.",
+        "learning":"Influence without control demands evidence, consistency, and patience. Strong analyst relations makes the company easier to understand before it tries to make it look impressive."
+      }
+    },
+    {
+      "slug":"meta-migration",
+      "title":"The Meta Migration",
+      "category":"competitive",
+      "tag":"Competitive displacement",
+      "summary":"Turning a time-bound market disruption into an award-winning commercial motion—while making migration feel credible, differentiated, and low-risk.",
+      "demonstrates":"Migration positioning, competitive differentiation, market messaging, seller strategy, enablement, and fast cross-functional GTM execution.",
+      "proof":"Forrester named Workvivo its 2026 B2B Return on Integration Honors winner for a cross-functional response to a major market disruption. Shauna’s portfolio identifies the recognised programme as the Meta migration and records her significant GTM role; the award is a company outcome.",
+      "image":"assets/evidence/meta-migration.jpg",
+      "sourceUrl":"https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/",
+      "evidence": [
+        {
+          "title": "Forrester winner announcement",
+          "url": "https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/",
+          "kind": "External company recognition",
+          "note": "Verifies Workvivo’s company award. The announcement does not name Meta."
+        },
+        {
+          "title": "Workplace migration programme",
+          "url": "https://www.workvivo.com/workplace/",
+          "kind": "Public company context",
+          "note": "Company migration offering; Shauna’s GTM role is professional self-report."
+        },
+        {
+          "title": "Read the claims and sources",
+          "url": "documents/evidence-register.html",
+          "kind": "Evidence record",
+          "note": "Separates the external award, programme attribution, and individual contribution."
+        }
+      ],
+      "caseStudy":{
+        "overview": {
+          "eyebrow": "Giving customers confidence when their platform was closing",
+          "lead": "Meta’s decision to close Workplace created an urgent choice for customers. They needed a clear path forward, and a reason to feel good about the destination.",
+          "problem": "As Meta’s only preferred migration partner, Workvivo faced a major opportunity and a compressed decision window. The story needed to balance urgency with reassurance, while helping sellers stand out in a competitive market.",
+          "contribution": "I shaped migration positioning, competitive differentiation and market messaging, alongside seller strategy, enablement and cross-functional coordination. The focus was on making the move understandable and the longer-term employee experience compelling. The positioning had to give customers confidence in moving and make Workvivo compelling beyond the migration itself.",
+          "result": "A focused migration story and coordinated go-to-market motion. Forrester later recognised Workvivo’s companywide response to the disruption with its 2026 B2B Return on Integration Honors. I contributed to that programme’s GTM work alongside the wider team.",
+          "learning": "When customers have to move, the story needs to make both the journey and the destination feel credible."
+        },
+        "eyebrow":"Turning disruption into commercial opportunity",
+        "context":"Meta announced the closure of Workplace. Workvivo was named Meta’s only preferred migration partner, creating a major, time-bound market opportunity and a highly visible competitive GTM motion.",
+        "challenge":"Workvivo had to move quickly while differentiating against competitors, reducing migration risk, addressing customer uncertainty, enabling sellers, and converting a temporary market event into durable commercial opportunity.",
+        "insight":"The winning story needed to combine urgency with reassurance. Migration could not feel like a technical transfer alone; it needed to feel like a credible path from a closing platform to a stronger long-term employee experience.",
+        "contribution":["Migration positioning and narrative","Competitive differentiation","Seller strategy and enablement","Market messaging","Cross-functional coordination of the commercial motion","Helping translate the market event into a repeatable customer story"],
+        "decisions":["Lead with a proven, low-risk migration path","Differentiate the destination—not only the transfer process","Equip sellers for a compressed, competitive decision cycle","Balance market urgency with customer confidence"],
+        "outcome":"Forrester named Workvivo its 2026 B2B Return on Integration Honors winner for a companywide response to a major market disruption. Shauna’s portfolio identifies the recognised programme as the Meta migration and records her as a significant GTM contributor. The award is a company outcome; no migration-share or ARR result is attributed to Shauna.",
+        "award":{"title":"2026 B2B Return on Integration Honors","issuer":"Forrester","description":"Forrester recognised Workvivo for creating exceptional business value by aligning product, engineering, sales, marketing, customer success, and partnerships around a major market disruption. Shauna’s portfolio identifies that company programme as the Meta migration.","url":"https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/"},
+        "learning":"When a market window is short, clarity and coordination become competitive advantages. The best displacement story makes both the move and the destination feel compelling."
+      }
+    },
+    {
+      "slug":"seer",
+      "title":"Seer",
+      "category":"gtm",
+      "tag":"GTM",
+      "summary":"Building a people-intelligence story around the Listening Gap: the distance between what employees say and what organisations act on.",
+      "demonstrates":"Research synthesis, category narrative, thought leadership, product positioning, and a practical GTM frame for employee intelligence.",
+      "proof":"Seer product materials and the supplied 18-page Listening Gap research report.",
+      "image":"assets/evidence/seer.jpg",
+      "evidence": [
+        {
+          "title": "Read The Listening Gap notes",
+          "url": "documents/listening-gap.html",
+          "kind": "Supporting document",
+          "note": "Framework and implications from the supplied report; the full report is not hosted here."
+        },
+        {
+          "title": "Seer portfolio artwork",
+          "url": "assets/evidence/seer.jpg",
+          "kind": "Published artifact",
+          "note": "Portfolio visual accompanying the people-intelligence narrative."
+        },
+        {
+          "title": "Read the artifact inventory",
+          "url": "documents/evidence-inventory.html",
+          "kind": "Evidence record",
+          "note": "What the supplied research supports and what it does not establish."
+        }
+      ],
+      "caseStudy":{
+        "overview": {
+          "eyebrow": "Turning employee listening into a reason to act",
+          "lead": "Collecting feedback is one thing. Helping an organisation do something useful with it is a much more interesting promise.",
+          "problem": "Seer took Workvivo into people intelligence. To earn attention in an established market, it needed a story that went beyond surveys and explained the gap between what employees say and what organisations act on.",
+          "contribution": "I led positioning and GTM strategy, launch planning, pricing and packaging, competitive framing and the seller narrative. I also hired a dedicated PMM to scale execution while retaining senior strategy ownership.",
+          "result": "A people-intelligence story organised around listen, understand and act. The Listening Gap gave it a memorable tension, connecting employee feedback and AI-assisted insight to the decisions leaders and managers need to make.",
+          "learning": "An adjacent market becomes a credible next step when you make the buyer’s problem—and your reason to solve it—clear."
+        },
+        "eyebrow":"Entering the people-intelligence market",
+        "context":"Workvivo expanded into People Intelligence with Seer, moving into a buyer and category conversation adjacent to its employee-experience strengths.",
+        "challenge":"Seer could not sound like another survey platform. The story needed to explain how employee feedback moves beyond collection—turning large volumes of qualitative signal into insight that leaders and managers can act on.",
+        "insight":"The narrative became LISTEN → UNDERSTAND → ACT. The Listening Gap gave the strategy a memorable tension: organisations often collect employee feedback, but struggle to convert what they hear into meaningful action.",
+        "contribution":["Positioning and GTM strategy","Launch strategy","Pricing and packaging","Competitive strategy","Seller narrative and enablement","Hiring a dedicated PMM to scale execution while retaining senior strategy ownership"],
+        "decisions":["Anchor the story in action—not survey collection","Use AI topic grouping, comment analysis, and sentiment as means to insight","Connect executive reporting with practical manager action","Position against established engagement and listening alternatives"],
+        "outcome":"Seer established a people-intelligence expansion story spanning employee listening, AI-assisted insight, manager intelligence, and action. No unverified Seer revenue or adoption metrics are claimed.",
+        "learning":"Adjacent-market entry becomes credible when the narrative explains both the new capability and why the existing brand has earned the right to compete."
       }
     },
     {
@@ -79,6 +505,14 @@
         }
       ],
       "caseStudy": {
+        "overview": {
+          "eyebrow": "Making a messaging review more useful, sooner",
+          "lead": "“This needs to be stronger” is easy feedback to give and hard feedback to use. I wanted a review that helped someone decide what to change next.",
+          "problem": "IT buyers read with different responsibilities and levels of context. A CIO, an architect and an internal champion can have very different questions about the same message. A useful review needs to recognise that.",
+          "contribution": "I defined the buyer lenses, review experience and evidence criteria, then used ChatGPT and Codex to prototype and develop the tool. I replaced a manual-first rubric with immediate feedback, priority changes and an editable rewrite brief, and tested how the scoring and source passages behaved.",
+          "result": "A live browser tool that turns positioning judgment into practical editing guidance. It shows the passages behind its feedback and helps the author shape the next draft. The score is an aid to judgment; it does not verify claims or replace a buyer’s response.",
+          "learning": "Good feedback gives someone a useful next move."
+        },
         "eyebrow": "From a manual QA rubric to a buyer-focused decision aid",
         "context": "Positioning reviews often produce broad opinions rather than specific, actionable questions. The original AI Positioning QA made a rubric inspectable, but asking reviewers to complete eight dimensions created too much work before they received useful feedback.",
         "challenge": "Make the review immediately useful for enterprise IT messaging while retaining traceability. A CIO, an architecture lead and an internal champion can read the same asset with different responsibilities; an awareness asset should not be judged as a procurement brief.",
@@ -125,261 +559,6 @@
         ],
         "outcome": "A live IT messaging review that gives immediate, inspectable guidance and a reusable rewrite brief. The build demonstrates how positioning judgment can become a practical workflow. It does not establish commercial lift, buyer agreement or production-grade approval governance.",
         "learning": "A useful review system must make its limits as visible as its recommendations. Simplifying the interface only helps if the evidence and the human decision remain clear."
-      }
-    },
-    {
-      "slug":"ai-product-strategy",
-      "title":"AI Product Strategy",
-      "category":"technical",
-      "tag":"Technical expertise",
-      "summary":"Learning by building: product strategy, AI pricing, portfolio agents, and hands-on experimentation with the tools reshaping modern GTM.",
-      "demonstrates":"AI product judgment, pricing strategy, agent prototyping, workflow design, technical curiosity, and applied PMM experimentation.",
-      "proof":"Product School coursework, AI pricing study, this portfolio agent, and builds using Claude, ChatGPT, Codex, Replit, Lovable, ElevenLabs, and ZoomMate.",
-      "image":"assets/evidence/ai-product-strategy.jpg",
-      "sourceUrl":"https://github.com/shaunaleebrennan",
-      "evidence": [
-        {
-          "title": "Try IT Pressure Test",
-          "url": "it-pressure-test/",
-          "kind": "Public build",
-          "note": "IT-buyer lenses, evidence diagnostics, and in-tool deep review; human judgment remains accountable."
-        },
-        {
-          "title": "Inspect the rubric and implementation",
-          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa",
-          "kind": "Source repository",
-          "note": "Review the framework, worked example, and validation checks."
-        },
-        {
-          "title": "Read the positioning pressure test",
-          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-buyer-integration-2026-09-21.md",
-          "kind": "Evaluation evidence",
-          "note": "Adversarial scoring and import checks, fixes, and remaining calibration limits."
-        },
-        {
-          "title": "Explore the Portfolio Voice Agent",
-          "url": "case-study.html?case=portfolio-voice-agent",
-          "kind": "Related case study",
-          "note": "A concrete example of agent design, integration, and evaluation."
-        }
-      ],
-      "caseStudy":{
-        "eyebrow":"Building an AI-enabled PMM operating model",
-        "context":"AI-first Product Marketing is not simply a team using ChatGPT. Shauna has been exploring how AI can change the operating model of PMM itself—and where human judgment must remain accountable.",
-        "challenge":"High-value PMM time disappears into retrieval, repeated seller questions, monitoring, synthesis, recurring research, and first-pass analysis. The strategic question is which work requires human judgment and which work can be processed or automated.",
-        "insight":"AI does more of the processing. PMM remains accountable for the thinking. Retrieval, extraction, monitoring, classification, and repeatable analysis can accelerate; positioning, pricing, claims, category strategy, and executive recommendations still need accountable judgment.",
-        "contribution":["Seller-facing competitive intelligence and automated monitoring","AI-assisted win/loss analysis and lightweight decision tools","IT Pressure Test","This portfolio and its grounded agent experience","Reusable research, synthesis, and PMM workflows","Continued product and AI-pricing study"],
-        "decisions":["Design around workflows rather than collecting tools","Keep a human in the loop for consequential claims and decisions","Encode PMM expertise into evaluation criteria","Use prototypes to learn before deciding whether to build, buy, or stop"],
-        "outcome":"The result is a growing set of practical systems that increase PMM leverage while keeping strategic accountability human. The tools are not the proof; the workflow design and operating choices are.",
-        "learning":"Technical expertise for a PMM is the ability to understand enough of the system to make better product, pricing, trust, and go-to-market decisions."
-      }
-    },
-    {
-      "slug":"portfolio-voice-agent",
-      "title":"Portfolio Voice Agent",
-      "category":"technical",
-      "tag":"Agent system",
-      "summary":"Designing a live voice and text portfolio agent with a custom voice persona, intent-routing workflow, evidence retrieval, guardrails, and systematic model and response testing.",
-      "demonstrates":"Conversational AI, voice-persona design, prompt engineering, agent workflow design, intent routing, modular RAG, guardrails, model evaluation, test analysis, and web integration.",
-      "proof":"Live ElevenLabs widget, public system overview, and integration source. Private prompts, routing configuration, and detailed evaluation records are not published.",
-      "image":"assets/evidence/portfolio-voice-agent.png",
-      "sourceUrl":"https://github.com/shaunaleebrennan/shauna-ai-portfolio/blob/main/docs/PORTFOLIO_VOICE_AGENT_CASE_STUDY.md",
-      "evidence": [
-        {
-          "title": "Read the system overview",
-          "url": "documents/voice-agent.html",
-          "kind": "Technical document",
-          "note": "Voice persona, workflow, knowledge design, guardrails, and evaluation framework."
-        },
-        {
-          "title": "Try the portfolio agent",
-          "url": "index.html#ask",
-          "kind": "Live interface",
-          "note": "Ask a career or technical question through the embedded ElevenLabs agent."
-        },
-        {
-          "title": "Inspect the portfolio source",
-          "url": "https://github.com/shaunaleebrennan/shauna-ai-portfolio",
-          "kind": "Source repository",
-          "note": "Public integration code; private prompts, routing configuration, and detailed test records are excluded."
-        }
-      ],
-      "caseStudy":{
-        "eyebrow":"Turning a résumé into an evidence-grounded conversation",
-        "context":"A static portfolio can show the work, but it cannot adapt to the question a recruiter, hiring manager, or technical stakeholder actually wants answered. Shauna designed a live ElevenLabs experience that lets visitors explore her career, case studies, technical builds, and working principles through voice or text. She also created a voice persona from her own voice and gave the agent a defined personality so the experience feels recognisably hers without pretending to be her.",
-        "challenge":"The agent needed to be persuasive without becoming a hype machine. It had to answer broad career questions quickly, go deep on named projects, distinguish work Shauna built from products she marketed, link back to public evidence, and avoid turning company outcomes or technical fluency into unsupported personal claims.",
-        "insight":"A credible portfolio agent is a voice, context, workflow, and evaluation problem—not simply a prompt. Better answers came from defining the persona, separating durable rules from retrievable evidence, routing different intents to specialist answer modes, comparing model outputs, and analysing failures where attribution, role fit, or technical ownership could drift.",
-        "contribution":["Created a custom voice persona from her own recorded voice and defined its personality, tone, conversational style, and answer behaviour","Engineered the system prompts, answer contract, evidence standard, and guardrails","Designed a modular knowledge base around career, technical builds, case studies, learning, recognition, and a canonical claim ledger","Built the workflow and intent-routing conditions for technical questions, case-study deep dives, career history, working style, and role-fit pressure tests","Compared outputs from multiple models and analysed response quality, grounding, tone, and failure patterns","Ran iterative manual and structured tests, then refined prompts, routes, knowledge, and response behaviour","Documented procedures for how the agent handles common intents, evidence, uncertainty, testing, updates, and release review","Integrated the ElevenLabs conversational widget into a responsive GitHub Pages portfolio","Built a Node-based source pipeline that converts maintained Markdown into upload-ready HTML knowledge documents"],
-        "decisions":["Use voice and text as the interface, while keeping public case-study links as the evidence layer","Keep compact identity and claim rules in always-on prompt context; retrieve longer case-study material only when relevant","Route by visitor intent rather than forcing one general prompt to handle every conversation style","Answer technical questions decisively with concrete build evidence, then add ownership boundaries only where they prevent a false inference","Keep knowledge sources versioned privately, with a public system overview and integration code for visitors to inspect","Treat live platform configuration and repository evidence as separate states; published files document the design but do not prove every console setting is active"],
-        "architecture":["ElevenLabs Conversational AI provides the live voice and text runtime embedded through its web component","A custom voice persona created from Shauna's own voice provides a consistent spoken identity, supported by defined personality and conversation rules","A main-agent workflow coordinates specialist intent routes for career, technical evidence, case-study depth, working style, and fit assessment","Two compact prompt documents hold identity, personality, answer policy, and claim controls in persistent context","Nine focused knowledge documents are configured for RAG so the agent retrieves only the evidence relevant to the question","A canonical claim ledger separates externally verified facts, public artifacts, self-reported experience, company context, and work still in progress","Absolute portfolio and repository links let answers point visitors back to inspectable evidence"],
-        "tooling":["ElevenLabs Conversational AI for the agent runtime, custom voice persona, speech interface, workflow, model configuration, and knowledge retrieval","Prompt engineering and conversation design for personality, response structure, routing, and behavioural boundaries","Structured evaluation and qualitative analysis for comparing model outputs and finding recurring failure patterns","HTML, CSS, and vanilla JavaScript for the portfolio and widget integration","Markdown and structured front matter as the editable knowledge source","Node.js for deterministic Markdown-to-HTML knowledge builds","Git and GitHub for versioning, public evidence, and GitHub Pages deployment","Codex and other AI development tools for implementation support, with Shauna retaining the product, content, and claim decisions"],
-        "safeguards":["Third-person identity prevents the agent from impersonating Shauna","Attribution rules distinguish products marketed, systems built, tools used, and concepts studied","Hard claim rules block invented metrics, sole credit for company outcomes, and unsupported production-engineering claims","Specialist routing reduces context collisions between technical proof, career history, project narratives, and role-fit assessment","Public links and evidence labels make provenance visible instead of asking visitors to trust generated prose","A bounded answer pattern keeps voice responses concise and avoids turning narrow questions into résumé recitations"],
-        "validation":["Fifteen acceptance questions cover the most common recruiter and technical-review journeys","A 13-question evaluation set tests positioning, technical evidence, ownership boundaries, unsupported claims, role-fit nuance, leadership, and concise voice responses","Multiple model outputs were tested against comparable prompts to evaluate answer quality and trade-offs","Repeated live voice and text tests exposed issues in tone, grounding, routing, concision, and claim boundaries","Test analysis informed successive changes to prompts, model choices, workflow routes, knowledge sources, and guardrails","Explicit pass criteria and documented procedures make review repeatable rather than purely subjective","Knowledge documents carry version and review dates so content drift can be traced","Repository checks can validate source completeness and regenerated HTML before the knowledge pack is uploaded","Live conversational quality still requires manual testing in ElevenLabs after knowledge or workflow configuration changes"],
-        "outcome":"The result is a live, inspectable portfolio interface that demonstrates more than familiarity with AI tools. It shows Shauna's ability to shape a voice persona, engineer prompts, build an intent-routing workflow, configure retrieval and guardrails, compare model behaviour, analyse tests, and translate the technical decisions into a clear professional story. The agent runs on ElevenLabs; Shauna designed, configured, tested, documented, and integrated the experience rather than engineering the underlying voice models or platform runtime.",
-        "learning":"The quality of an agent is shaped less by the cleverness of one prompt than by the discipline of its context, routing, evidence, evaluation, and boundaries."
-      }
-    },
-    {
-      "slug":"hq-agent",
-      "title":"HQ Agent",
-      "category":"launch",
-      "tag":"Product launch",
-      "summary":"Turning enterprise search, trusted answers, self-service, and agentic action into one credible product story—and a launch buyers could navigate.",
-      "demonstrates":"Agentic AI positioning, portfolio architecture, trust messaging, packaging, launch orchestration, and enterprise sales enablement.",
-      "proof":"HQ product experience, launch narrative, seller materials, and portfolio positioning connecting Workvivo and Zoom AI.",
-      "image":"assets/evidence/hq-agent.jpg",
-      "sourceUrl":"https://www.workvivo.com/hq/",
-      "evidence": [
-        {
-          "title": "Workvivo HQ product page",
-          "url": "https://www.workvivo.com/hq/",
-          "kind": "Public product context",
-          "note": "Company product context, not independent verification of individual ownership."
-        },
-        {
-          "title": "HQ Agent product artwork",
-          "url": "assets/evidence/hq-agent-product.png",
-          "kind": "Published artifact",
-          "note": "Product visual supporting the commercial narrative."
-        },
-        {
-          "title": "Explore the platform positioning",
-          "url": "case-study.html?case=workvivo-hq",
-          "kind": "Related case study",
-          "note": "How the agent fits the wider Workvivo HQ story."
-        }
-      ],
-      "caseStudy":{
-        "eyebrow":"Commercialising enterprise AI",
-        "context":"HQ Agent extended Workvivo beyond communications and employee experience into trusted enterprise answers, search, self-service, and agentic task execution. It sat at the intersection of enterprise knowledge, RAG, permissions, employee experience, and Zoom’s broader AI technology.",
-        "challenge":"The launch could not be reduced to ‘better enterprise search.’ It needed a clear category, a credible trust story, an understandable relationship with Workvivo HQ and ZoomMate, and sustainable packaging for different levels of AI value.",
-        "insight":"The most useful commercial progression was SEARCH → ANSWER → ACTION: from finding information, to receiving a grounded answer, to increasingly completing the task. The launch idea became: From search, to answer, to job done.",
-        "contribution":["Product and portfolio positioning","AI maturity story and competitive framing","Pricing and packaging co-developed with the Revenue leader","Seller narrative and enablement","Translation of trust, permissions, citations, and grounding into buyer value","GTM execution across Product, Revenue, and the market"],
-        "decisions":["Market the buyer value of RAG—not the acronym","Use ‘grounded, cited, and permission-aware’ instead of unsafe absolute claims","Differentiate HQ Agent’s employee support from ZoomMate’s deeper productivity use cases","Price levels of AI value rather than charging for novelty"],
-        "outcome":"The result was a portfolio and launch narrative designed to make a technically complex enterprise AI product easier to understand, sell, and evaluate. Shauna shaped the commercial story; she did not engineer the underlying AI system.",
-        "learning":"Technical depth matters in Product Marketing when it changes the claim, the value, the packaging, or the buyer’s trust."
-      }
-    },
-    {
-      "slug":"market-leadership",
-      "title":"Market leadership",
-      "category":"analyst",
-      "tag":"Analyst relations",
-      "summary":"Creating one connected market-leadership motion across Gartner, Forrester, G2, ClearBox, Gartner Peer Insights, and SoftwareReviews.",
-      "demonstrates":"Analyst relations, competitive intelligence, category design, campaign strategy, and turning external validation into commercial leverage.",
-      "proof":"Gartner and Forrester leadership campaign artifacts, supported by recognition across major analyst and review platforms.",
-      "image":"assets/evidence/market-leadership.jpg",
-      "evidence": [
-        {
-          "title": "Gartner 2025 campaign artwork",
-          "url": "assets/evidence/gartner-mq-2025.png",
-          "kind": "Published campaign artifact",
-          "note": "Company campaign creative, not the analyst report or proof of sole authorship."
-        },
-        {
-          "title": "Forrester 2026 campaign artwork",
-          "url": "assets/evidence/forrester-wave-2026.png",
-          "kind": "Published campaign artifact",
-          "note": "Shows the recognition campaign; analysts controlled their own assessment."
-        },
-        {
-          "title": "Read the artifact inventory",
-          "url": "documents/evidence-inventory.html",
-          "kind": "Evidence record",
-          "note": "Sources and attribution boundaries for the analyst and category work."
-        }
-      ],
-      "caseStudy":{
-        "eyebrow":"Building external market credibility",
-        "context":"Workvivo evolved from an underdog employee app into a recognised Employee Experience Platform and later a broader AI-native employee-experience story. Analyst understanding had to evolve with the product and company narrative.",
-        "challenge":"Market leadership is not created by a single briefing. It requires a consistent point of view, credible evidence, strong customer proof, disciplined claims, and alignment across products that are evolving at different speeds.",
-        "insight":"Analyst relations works best as a connected category system—not a calendar of submissions. The analyst narrative, evidence base, competitive position, customer proof, and GTM story need to reinforce one another.",
-        "contribution":["Analyst narrative and executive storytelling","Briefings and RFI development","Evidence and customer-proof development","Competitive positioning and claims governance","Alignment across Workvivo HQ, HQ Agent, and Seer","Campaign strategy that translated recognition into market-facing proof"],
-        "decisions":["Build a durable category story rather than chase individual rankings","Keep external claims grounded in verifiable evidence","Connect analyst recognition to seller and buyer narratives","Maintain one coherent portfolio story across multiple evaluation contexts"],
-        "outcome":"Workvivo received recognition across Gartner, Forrester, G2, ClearBox, Gartner Peer Insights, and SoftwareReviews. Shauna played a substantial role in the program; independent analysts and reviewers controlled their own outcomes.",
-        "learning":"Influence without control demands evidence, consistency, and patience. Strong analyst relations makes the company easier to understand before it tries to make it look impressive."
-      }
-    },
-    {
-      "slug":"meta-migration",
-      "title":"The Meta Migration",
-      "category":"competitive",
-      "tag":"Competitive displacement",
-      "summary":"Turning a time-bound market disruption into an award-winning commercial motion—while making migration feel credible, differentiated, and low-risk.",
-      "demonstrates":"Migration positioning, competitive differentiation, market messaging, seller strategy, enablement, and fast cross-functional GTM execution.",
-      "proof":"Forrester named Workvivo its 2026 B2B Return on Integration Honors winner for a cross-functional response to a major market disruption. Shauna’s portfolio identifies the recognised programme as the Meta migration and records her significant GTM role; the award is a company outcome.",
-      "image":"assets/evidence/meta-migration.jpg",
-      "sourceUrl":"https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/",
-      "evidence": [
-        {
-          "title": "Forrester winner announcement",
-          "url": "https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/",
-          "kind": "External company recognition",
-          "note": "Verifies Workvivo’s company award. The announcement does not name Meta."
-        },
-        {
-          "title": "Workplace migration programme",
-          "url": "https://www.workvivo.com/workplace/",
-          "kind": "Public company context",
-          "note": "Company migration offering; Shauna’s GTM role is professional self-report."
-        },
-        {
-          "title": "Read the claims and sources",
-          "url": "documents/evidence-register.html",
-          "kind": "Evidence record",
-          "note": "Separates the external award, programme attribution, and individual contribution."
-        }
-      ],
-      "caseStudy":{
-        "eyebrow":"Turning disruption into commercial opportunity",
-        "context":"Meta announced the closure of Workplace. Workvivo was named Meta’s only preferred migration partner, creating a major, time-bound market opportunity and a highly visible competitive GTM motion.",
-        "challenge":"Workvivo had to move quickly while differentiating against competitors, reducing migration risk, addressing customer uncertainty, enabling sellers, and converting a temporary market event into durable commercial opportunity.",
-        "insight":"The winning story needed to combine urgency with reassurance. Migration could not feel like a technical transfer alone; it needed to feel like a credible path from a closing platform to a stronger long-term employee experience.",
-        "contribution":["Migration positioning and narrative","Competitive differentiation","Seller strategy and enablement","Market messaging","Cross-functional coordination of the commercial motion","Helping translate the market event into a repeatable customer story"],
-        "decisions":["Lead with a proven, low-risk migration path","Differentiate the destination—not only the transfer process","Equip sellers for a compressed, competitive decision cycle","Balance market urgency with customer confidence"],
-        "outcome":"Forrester named Workvivo its 2026 B2B Return on Integration Honors winner for a companywide response to a major market disruption. Shauna’s portfolio identifies the recognised programme as the Meta migration and records her as a significant GTM contributor. The award is a company outcome; no migration-share or ARR result is attributed to Shauna.",
-        "award":{"title":"2026 B2B Return on Integration Honors","issuer":"Forrester","description":"Forrester recognised Workvivo for creating exceptional business value by aligning product, engineering, sales, marketing, customer success, and partnerships around a major market disruption. Shauna’s portfolio identifies that company programme as the Meta migration.","url":"https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/"},
-        "learning":"When a market window is short, clarity and coordination become competitive advantages. The best displacement story makes both the move and the destination feel compelling."
-      }
-    },
-    {
-      "slug":"seer",
-      "title":"Seer",
-      "category":"gtm",
-      "tag":"GTM",
-      "summary":"Building a people-intelligence story around the Listening Gap: the distance between what employees say and what organisations act on.",
-      "demonstrates":"Research synthesis, category narrative, thought leadership, product positioning, and a practical GTM frame for employee intelligence.",
-      "proof":"Seer product materials and the supplied 18-page Listening Gap research report.",
-      "image":"assets/evidence/seer.jpg",
-      "evidence": [
-        {
-          "title": "Read The Listening Gap notes",
-          "url": "documents/listening-gap.html",
-          "kind": "Supporting document",
-          "note": "Framework and implications from the supplied report; the full report is not hosted here."
-        },
-        {
-          "title": "Seer portfolio artwork",
-          "url": "assets/evidence/seer.jpg",
-          "kind": "Published artifact",
-          "note": "Portfolio visual accompanying the people-intelligence narrative."
-        },
-        {
-          "title": "Read the artifact inventory",
-          "url": "documents/evidence-inventory.html",
-          "kind": "Evidence record",
-          "note": "What the supplied research supports and what it does not establish."
-        }
-      ],
-      "caseStudy":{
-        "eyebrow":"Entering the people-intelligence market",
-        "context":"Workvivo expanded into People Intelligence with Seer, moving into a buyer and category conversation adjacent to its employee-experience strengths.",
-        "challenge":"Seer could not sound like another survey platform. The story needed to explain how employee feedback moves beyond collection—turning large volumes of qualitative signal into insight that leaders and managers can act on.",
-        "insight":"The narrative became LISTEN → UNDERSTAND → ACT. The Listening Gap gave the strategy a memorable tension: organisations often collect employee feedback, but struggle to convert what they hear into meaningful action.",
-        "contribution":["Positioning and GTM strategy","Launch strategy","Pricing and packaging","Competitive strategy","Seller narrative and enablement","Hiring a dedicated PMM to scale execution while retaining senior strategy ownership"],
-        "decisions":["Anchor the story in action—not survey collection","Use AI topic grouping, comment analysis, and sentiment as means to insight","Connect executive reporting with practical manager action","Position against established engagement and listening alternatives"],
-        "outcome":"Seer established a people-intelligence expansion story spanning employee listening, AI-assisted insight, manager intelligence, and action. No unverified Seer revenue or adoption metrics are claimed.",
-        "learning":"Adjacent-market entry becomes credible when the narrative explains both the new capability and why the existing brand has earned the right to compete."
       }
     }
   ]

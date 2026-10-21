@@ -2,13 +2,14 @@
 
 Read the complete stories directly on GitHub.
 
-- [Workvivo HQ](workvivo-hq.md) — Repositioning a category for the AI era.
-- [IT Pressure Test](it-pressure-test.md) — From a manual QA rubric to a buyer-focused decision aid.
-- [AI Product Strategy](ai-product-strategy.md) — Building an AI-enabled PMM operating model.
-- [Portfolio Voice Agent](portfolio-voice-agent.md) — Turning a résumé into an evidence-grounded conversation.
-- [HQ Agent](hq-agent.md) — Commercialising enterprise AI.
-- [Market leadership](market-leadership.md) — Building external market credibility.
-- [The Meta Migration](meta-migration.md) — Turning disruption into commercial opportunity.
-- [Seer](seer.md) — Entering the people-intelligence market.
+- [Workvivo HQ](workvivo-hq.md) — Giving an established platform a bigger story.
+- [Messaging as Code](messaging-as-code.md) — Keeping the story intact as more people and AI reuse it.
+- [HQ Agent](hq-agent.md) — Making enterprise AI make sense to the buyer.
+- [AI Product Strategy](ai-product-strategy.md) — Learning what AI changes by putting it to work.
+- [Portfolio Voice Agent](portfolio-voice-agent.md) — A portfolio you can have a conversation with.
+- [Market leadership](market-leadership.md) — Helping the market understand the company we were becoming.
+- [The Meta Migration](meta-migration.md) — Giving customers confidence when their platform was closing.
+- [Seer](seer.md) — Turning employee listening into a reason to act.
+- [IT Pressure Test](it-pressure-test.md) — Making a messaging review more useful, sooner.
 
 [All supporting documents](../LIBRARY.md#supporting-documents) · [Portfolio overview](../README.md)

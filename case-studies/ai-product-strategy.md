@@ -1,56 +1,21 @@
 # AI Product Strategy
 
-[← All case studies and documents](../LIBRARY.md) · [View on the portfolio website](https://shaunaleebrennan.github.io/shauna-ai-portfolio/case-study.html?case=ai-product-strategy)
+[← All selected work](../README.md#selected-work)
 
-**Building an AI-enabled PMM operating model**
+**Learning what AI changes by putting it to work**
 
-Learning by building: product strategy, AI pricing, portfolio agents, and hands-on experimentation with the tools reshaping modern GTM.
+The useful question for me is where AI can make Product Marketing more effective, and where the thinking still needs an owner.
 
-**What this demonstrates:** AI product judgment, pricing strategy, agent prototyping, workflow design, technical curiosity, and applied PMM experimentation.
+## What needed to change
 
-## Context
+Research, repeated seller questions and first-pass analysis can absorb time that PMMs need for judgment. I wanted to understand which parts could become useful workflows and which decisions should stay firmly human.
 
-AI-first Product Marketing is not simply a team using ChatGPT. Shauna has been exploring how AI can change the operating model of PMM itself—and where human judgment must remain accountable.
+## My part in it
 
-## The challenge
+I built and prototyped across competitive intelligence, research synthesis, positioning reviews and conversational agents. Alongside product and AI-pricing study, those projects let me test ideas in practice: how to structure context, evaluate an answer and make the output useful to someone else.
 
-High-value PMM time disappears into retrieval, repeated seller questions, monitoring, synthesis, recurring research, and first-pass analysis. The strategic question is which work requires human judgment and which work can be processed or automated.
+## What came out of it
 
-## Strategic insight
+A growing body of practical builds and reusable workflows, including this portfolio agent and IT Pressure Test. Each one has helped me ask better questions about the products I market and the way PMM work gets done.
 
-AI does more of the processing. PMM remains accountable for the thinking. Retrieval, extraction, monitoring, classification, and repeatable analysis can accelerate; positioning, pricing, claims, category strategy, and executive recommendations still need accountable judgment.
-
-## My contribution
-
-- Seller-facing competitive intelligence and automated monitoring
-- AI-assisted win/loss analysis and lightweight decision tools
-- IT Pressure Test
-- This portfolio and its grounded agent experience
-- Reusable research, synthesis, and PMM workflows
-- Continued product and AI-pricing study
-
-## Key decisions
-
-- Design around workflows rather than collecting tools
-- Keep a human in the loop for consequential claims and decisions
-- Encode PMM expertise into evaluation criteria
-- Use prototypes to learn before deciding whether to build, buy, or stop
-
-## Outcome
-
-The result is a growing set of practical systems that increase PMM leverage while keeping strategic accountability human. The tools are not the proof; the workflow design and operating choices are.
-
-## What I learned
-
-Technical expertise for a PMM is the ability to understand enough of the system to make better product, pricing, trust, and go-to-market decisions.
-
-## Evidence and supporting documents
-
-Role and contribution statements are professional self-report unless a source independently confirms them. Company outcomes are shared results.
-
-- **[Try IT Pressure Test](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/)** — Public build. IT-buyer lenses, evidence diagnostics, and in-tool deep review; human judgment remains accountable.
-- **[Inspect the rubric and implementation](https://github.com/shaunaleebrennan/ai-positioning-qa)** — Source repository. Review the framework, worked example, and validation checks.
-- **[Read the positioning pressure test](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-buyer-integration-2026-09-21.md)** — Evaluation evidence. Adversarial scoring and import checks, fixes, and remaining calibration limits.
-- **[Explore the Portfolio Voice Agent](portfolio-voice-agent.md)** — Related case study. A concrete example of agent design, integration, and evaluation.
-
-[Claims and sources](../docs/EVIDENCE_REGISTER.md) · [All supporting documents](../LIBRARY.md#supporting-documents)
+> Building is one of the fastest ways to find out which parts of an idea hold up.

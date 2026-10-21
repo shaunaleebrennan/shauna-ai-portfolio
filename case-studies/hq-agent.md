@@ -18,4 +18,4 @@ I led product and portfolio positioning, translated technical detail into buyer 
 
 A clear story built around search, answer and action, carried through positioning, packaging and launch. My role was to make the product understandable and commercially useful, working closely with the teams building it.
 
-> Technical understanding earns its place when it helps you make a sharper commercial decision.
+> The strongest AI positioning connects product capability, buyer trust and a clear reason to choose.

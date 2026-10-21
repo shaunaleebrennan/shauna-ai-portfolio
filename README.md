@@ -22,33 +22,33 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 [![Workvivo HQ — Repositioning for the AI era](assets/readme/workvivo-hq-strip.svg)](case-studies/workvivo-hq.md)
 
-**Positioning · Category · Launch** — Repositioning employee experience for the AI era without losing the adoption, trust, or culture that made the platform distinctive. I led the strategic positioning, messaging architecture, launch strategy, seller narrative, and analyst framing.
+**Positioning · Category · Launch** — I led the positioning work behind Workvivo’s shift from an Employee Experience Platform toward an AI-native headquarters for every employee, then carried that strategy into messaging architecture, analyst framing, launch, GTM kits and Sales enablement.
 
 ### [Messaging as Code](case-studies/messaging-as-code.md)
 
-**GTM systems · Source traceability · Human approval** — Designing an operating model for reusable messaging, defining the content model and approval workflow, then directing AI-assisted implementation. Includes an executed, sanitized change demonstration and the decision to simplify authoring.
+**Messaging · Workflow design · AI implementation** — I owned the project, wrote the messaging with PMM-team support, and defined the content model and approval workflow. Testing led me from GitHub to an in-house system using Zoom agents and Canvas. The HQ Agent messaging pilot is complete and connected to the sales enablement agent, with positive feedback so far.
 
 ### [HQ Agent](case-studies/hq-agent.md)
 
 [![HQ Agent — From search, to answer, to action](assets/readme/hq-agent-strip-v2.svg)](case-studies/hq-agent.md)
 
-**Agentic AI · Trust · Packaging** — Turning enterprise search, grounded answers, and agentic action into one credible commercial progression: **SEARCH → ANSWER → ACTION**. I led the product story, AI maturity narrative, pricing and packaging, and seller enablement.
+**Agentic AI · Trust · Packaging** — Turning enterprise search, grounded answers and supported action into a clear commercial progression: **SEARCH → ANSWER → ACTION**. I led product and portfolio positioning and seller enablement, and co-developed pricing and packaging with the Revenue leader.
 
 ### [AI Product Strategy](case-studies/ai-product-strategy.md)
 
 [![AI Product Strategy — Building the PMM operating model](assets/readme/ai-product-strategy-strip-v2.svg)](case-studies/ai-product-strategy.md)
 
-**Agents · Pricing · Workflow Design** — Building an AI-enabled PMM operating model through agent prototypes, pricing work, and workflow design. The proof includes this grounded portfolio agent, IT Pressure Test, and reusable research, synthesis, and competitive workflows.
-
-**Try the build:** [IT Pressure Test](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/) — a vendor-neutral IT messaging review with a transparent /100 score, six audience lenses and an in-tool deep review. Inspect the criteria and matched passages under Why this score? The local rubric remains an editing aid, with unverified proof and human judgement kept explicit. [Inspect the source and rubric](https://github.com/shaunaleebrennan/ai-positioning-qa) · [Read the validation notes](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-rubric-3.1.md).
+**Applied learning · Agents · Workflow design** — Combining Product School courses in AI product strategy, agentic workflows and go-to-market with self-guided building, testing and iteration. Practical work includes this portfolio agent, IT Pressure Test and reusable research, synthesis and competitive workflows.
 
 ### More case studies
 
-- [**Portfolio Voice Agent**](case-studies/portfolio-voice-agent.md) — Designing a live voice and text portfolio agent with a custom voice persona, intent-routing workflow, evidence retrieval, guardrails, and systematic model and response testing.
-- [**Market leadership**](case-studies/market-leadership.md) — Creating one connected market-leadership motion across Gartner, Forrester, G2, ClearBox, Gartner Peer Insights, and SoftwareReviews.
-- [**The Meta Migration**](case-studies/meta-migration.md) — Turning a time-bound market disruption into an award-winning commercial motion—while making migration feel credible, differentiated, and low-risk.
-- [**Seer**](case-studies/seer.md) — Building a people-intelligence story around the Listening Gap: the distance between what employees say and what organisations act on.
+- [**Portfolio Voice Agent**](case-studies/portfolio-voice-agent.md) — Designing, configuring and testing a live voice and text agent that turns career and project evidence into useful conversations.
+- [**Market leadership**](case-studies/market-leadership.md) — Built a scalable analyst-relations programme after PMM absorbed the remit, supporting Workvivo’s continuing leadership across reports and turning recognition into GTM work.
+- [**The Meta Migration**](case-studies/meta-migration.md) — Shaping migration positioning and seller strategy during Meta Workplace’s closure, as part of Workvivo’s Forrester-recognised response.
+- [**Seer**](case-studies/seer.md) — Assessed the standalone opportunity, recommended an integrated offer, committed to the agreed launch and developed recommendations for the next phase.
 - [**IT Pressure Test**](case-studies/it-pressure-test.md) — Turning IT-buyer positioning judgment into a working tool: six audience lenses, source-linked diagnostics, and a practical rewrite brief.
+
+**Try the build:** [Open IT Pressure Test](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/) · [Source and validation](https://github.com/shaunaleebrennan/ai-positioning-qa).
 
 
 ## Supporting documents

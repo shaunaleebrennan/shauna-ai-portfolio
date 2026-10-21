@@ -18,4 +18,4 @@ I built a connected programme around analyst narrative, briefings and RFIs, evid
 
 A scalable programme that sustained and continued to strengthen Workvivo’s leadership across reports, alongside recognition from Gartner, Forrester, G2, ClearBox and other analyst and review platforms. The team could support a growing programme within PMM and carry that market credibility into buyer and seller conversations.
 
-> A strong programme makes each report cycle build on the last, so the work and its value keep growing.
+> The value was in building a repeatable programme that could keep strengthening our market position as the business grew.

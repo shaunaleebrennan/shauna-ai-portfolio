@@ -11,7 +11,7 @@
       "title":"Workvivo HQ",
       "category":"gtm",
       "tag":"GTM",
-      "summary":"Repositioning an established employee-experience platform for the AI era, with one story for IT, HR and Communications.",
+      "summary":"Repositioning Workvivo for the AI era: from Employee Experience Platform toward an AI-native headquarters for every employee.",
       "demonstrates":"Platform repositioning, category evolution, executive narrative, launch strategy, and buyer storytelling across IT, HR, and Comms.",
       "proof":"Public launch page, GTM kits and sales enablement, campaign system, Shauna launch post, and public peer testimonial.",
       "image":"assets/evidence/workvivo-hq.jpg",
@@ -38,11 +38,11 @@
       ],
       "caseStudy":{
         "overview": {
-          "eyebrow": "Expanding an employee-experience platform for the AI era",
-          "lead": "Workvivo had already earned a place in employees’ working lives. I helped define how that strength could support its next chapter in enterprise AI.",
-          "problem": "The platform needed a broader proposition for IT, HR and Communications, while keeping employee adoption, culture and frontline reach central to its value.",
-          "contribution": "I led positioning and messaging architecture, connecting one platform story to the different priorities of IT, HR and Communications. I carried that thinking into the website, analyst narrative and launch strategy, then built GTM kits and enabled Sales. The strategic choice was to position AI as an expansion of Workvivo’s employee-experience strengths, with adoption and reach built into the commercial argument.",
-          "result": "A platform narrative carried through the website, launch, GTM kits and Sales enablement. It gave IT, HR and Communications distinct reasons to care, within one clear story about the employee experience.",
+          "eyebrow": "Repositioning Workvivo for the AI era",
+          "lead": "I led the positioning work behind Workvivo’s shift from an Employee Experience Platform toward an AI-native headquarters for every employee.",
+          "problem": "AI was changing how employees find information, use systems and get work done. Workvivo needed to reposition an established Employee Experience Platform for that shift, with a clear point of view on what it should become and why it could credibly compete.",
+          "contribution": "I led strategic positioning and messaging architecture, connecting the HQ platform, HQ Agent and people intelligence in one coherent story. I translated that position for IT, HR and Communications, shaped analyst and competitive framing, and carried it into the website, launch strategy, GTM kits and Sales enablement.",
+          "result": "Workvivo HQ launched with a proposition that brought communication, knowledge, action and people intelligence into a shared headquarters for every employee. The repositioning gave the platform story, product narratives and launch a common strategic direction.",
           "learning": "In enterprise AI, an experience employees already use is a competitive advantage."
         },
         "eyebrow":"Repositioning a category for the AI era",
@@ -204,7 +204,7 @@
         "overview": {
           "eyebrow": "Making enterprise AI make sense to the buyer",
           "lead": "Search. An answer. A next step. HQ Agent needed a story that made that progression clear—and gave buyers a reason to care.",
-          "problem": "The product brought together enterprise knowledge, grounded answers and defined actions. Explaining the technology was only part of the job. Buyers also needed to understand where it fit, what they could trust and how to evaluate its value.",
+          "problem": "HQ Agent needed to be understood as a progression from enterprise search to grounded answers and supported action. The launch also needed a clear place within Workvivo’s portfolio, a credible trust story and packaging that reflected those different levels of value.",
           "contribution": "I led product and portfolio positioning, working with Product and Engineering to translate retrieval, grounding, permissions and connected actions into buyer value. I developed the seller narrative and enablement, and co-developed pricing and packaging with the Revenue leader. Technical understanding shaped the promises we could credibly make and how we packaged different levels of value.",
           "result": "Positioning, seller enablement and packaging built around search, answer and action. The launch gave commercial teams a practical way to explain the progression from finding information to receiving a grounded answer and completing a supported task.",
           "learning": "An agent’s value is the work it helps people complete, with clear limits they can trust."
@@ -508,7 +508,7 @@
         "overview": {
           "eyebrow": "Making a messaging review more useful, sooner",
           "lead": "“This needs to be stronger” is easy feedback to give and hard feedback to use. I wanted a review that helped someone decide what to change next.",
-          "problem": "IT buyers read with different responsibilities and levels of context. A CIO, an architect and an internal champion can have very different questions about the same message. A useful review needs to recognise that.",
+          "problem": "The first version asked reviewers to complete a detailed rubric before receiving useful feedback. I needed to make the review immediately useful for enterprise IT messaging, while accounting for the reader’s remit, buying role and decision stage.",
           "contribution": "I defined the buyer lenses, review experience and evidence criteria, then used ChatGPT and Codex to prototype and develop the tool. I replaced a manual-first rubric with immediate feedback, priority changes and an editable rewrite brief, and tested how the scoring and source passages behaved.",
           "result": "A live browser tool that turns positioning judgment into practical editing guidance. It shows the passages behind its feedback and helps the author shape the next draft. The score is an aid to judgment; it does not verify claims or replace a buyer’s response.",
           "learning": "Better messaging starts with understanding the decision your buyer is trying to make."

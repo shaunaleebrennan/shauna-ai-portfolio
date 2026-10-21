@@ -8,7 +8,7 @@ Read every case study and supporting document here on GitHub. The links below op
 
 ### [Workvivo HQ](case-studies/workvivo-hq.md)
 
-Repositioning an established employee-experience platform for the AI era, with one story for IT, HR and Communications.
+Repositioning Workvivo for the AI era: from Employee Experience Platform toward an AI-native headquarters for every employee.
 
 ### [Messaging as Code](case-studies/messaging-as-code.md)
 

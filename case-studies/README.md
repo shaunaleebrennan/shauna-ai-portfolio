@@ -2,7 +2,7 @@
 
 Read the complete stories directly on GitHub.
 
-- [Workvivo HQ](workvivo-hq.md) — Expanding an employee-experience platform for the AI era.
+- [Workvivo HQ](workvivo-hq.md) — Repositioning Workvivo for the AI era.
 - [Messaging as Code](messaging-as-code.md) — Making approved messaging reusable across teams and AI tools.
 - [HQ Agent](hq-agent.md) — Making enterprise AI make sense to the buyer.
 - [AI Product Strategy](ai-product-strategy.md) — Learning what AI changes by putting it to work.

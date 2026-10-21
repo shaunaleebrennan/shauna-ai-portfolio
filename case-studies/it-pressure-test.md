@@ -8,7 +8,7 @@
 
 ## What needed to change
 
-IT buyers read with different responsibilities and levels of context. A CIO, an architect and an internal champion can have very different questions about the same message. A useful review needs to recognise that.
+The first version asked reviewers to complete a detailed rubric before receiving useful feedback. I needed to make the review immediately useful for enterprise IT messaging, while accounting for the reader’s remit, buying role and decision stage.
 
 ## My part in it
 

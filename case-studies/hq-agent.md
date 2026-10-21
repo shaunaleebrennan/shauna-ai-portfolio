@@ -8,7 +8,7 @@ Search. An answer. A next step. HQ Agent needed a story that made that progressi
 
 ## What needed to change
 
-The product brought together enterprise knowledge, grounded answers and defined actions. Explaining the technology was only part of the job. Buyers also needed to understand where it fit, what they could trust and how to evaluate its value.
+HQ Agent needed to be understood as a progression from enterprise search to grounded answers and supported action. The launch also needed a clear place within Workvivo’s portfolio, a credible trust story and packaging that reflected those different levels of value.
 
 ## My part in it
 

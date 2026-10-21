@@ -18,4 +18,4 @@ I led the positioning and messaging architecture, connecting the platform story 
 
 A coherent launch story that gave the platform room to grow while keeping employees at its centre. AI became part of the experience people already had a reason to use.
 
-> In enterprise AI, adoption and trust belong in the value proposition from the start.
+> In enterprise AI, an experience employees already use is a competitive advantage.

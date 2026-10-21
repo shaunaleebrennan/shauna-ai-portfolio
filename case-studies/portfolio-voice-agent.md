@@ -12,7 +12,7 @@ Recruiters, hiring managers and collaborators arrive with different questions. I
 
 ## My part in it
 
-I designed and integrated a voice and text agent on ElevenLabs, with a voice persona based on my own recordings. I shaped its personality, prompts, knowledge and routing, then tested different models and responses to improve clarity, relevance and accuracy.
+I designed and integrated a voice and text agent on ElevenLabs, with a voice persona based on my own recordings. I configured its personality, prompts, modular knowledge and intent routing, then compared models and tested responses against career and project evidence to improve clarity, relevance and accuracy.
 
 ## What came out of it
 

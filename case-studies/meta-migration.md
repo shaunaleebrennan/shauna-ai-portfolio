@@ -12,7 +12,7 @@ As Meta’s only preferred migration partner, Workvivo faced a major opportunity
 
 ## My part in it
 
-I shaped migration positioning, competitive differentiation and market messaging, alongside seller strategy, enablement and cross-functional coordination. The focus was on making the move understandable and the longer-term employee experience compelling. The positioning had to give customers confidence in moving and make Workvivo compelling beyond the migration itself.
+I shaped migration positioning, competitive differentiation and market messaging, then carried that through seller strategy, enablement and cross-functional GTM coordination. I connected the practical reasons to move with a longer-term case for choosing Workvivo.
 
 ## What came out of it
 

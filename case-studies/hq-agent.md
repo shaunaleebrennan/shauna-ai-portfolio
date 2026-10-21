@@ -12,10 +12,10 @@ The product brought together enterprise knowledge, grounded answers and defined 
 
 ## My part in it
 
-I led product and portfolio positioning, translated technical detail into buyer value, and developed the seller narrative and enablement. I also co-developed pricing and packaging with the Revenue leader, connecting the commercial model to different levels of AI value. Understanding retrieval, grounding, permissions and connected actions helped me decide which promises we could credibly make and how to distinguish levels of value.
+I led product and portfolio positioning, working with Product and Engineering to translate retrieval, grounding, permissions and connected actions into buyer value. I developed the seller narrative and enablement, and co-developed pricing and packaging with the Revenue leader. Technical understanding shaped the promises we could credibly make and how we packaged different levels of value.
 
 ## What came out of it
 
-A clear story built around search, answer and action, carried through positioning, packaging and launch. My role was to make the product understandable and commercially useful, working closely with the teams building it.
+Positioning, seller enablement and packaging built around search, answer and action. The launch gave commercial teams a practical way to explain the progression from finding information to receiving a grounded answer and completing a supported task.
 
 > An agent’s value is the work it helps people complete, with clear limits they can trust.

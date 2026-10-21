@@ -2,7 +2,7 @@
 
 This register is the publication gate for portfolio claims.
 
-Last reviewed: 18 September 2026
+Last reviewed: 21 October 2026
 
 | Claim or project | Current status | Recorded source and boundary |
 |---|---|---|
@@ -40,6 +40,10 @@ On 21 October 2026, the existing internal compiler was run against a temporary l
 ## Analyst programme ownership — candidate confirmation, 21 October 2026
 
 Shauna confirms that PMM absorbed analyst relations when its owner left, and that she built a programme to make the additional remit scale while continuing to grow Workvivo’s leadership across reports. This is professional self-report. The portfolio describes programme design, delivery and continuing leadership without inventing report-by-report rank changes, submission volumes or efficiency metrics. Analysts and review platforms retain control of their assessments.
+
+## Seer portfolio strategy — candidate confirmation, 21 October 2026
+
+Shauna confirms she assessed the standalone commercial opportunity, recommended a more integrated listening offer, helped shape the agreed approach and committed to delivering the launch. Following the commercial response, she developed further recommendations for an integrated proposition. This is professional self-report, supported by an internal strategy note reviewed for the case study. The public account describes her commercial reasoning and delivery without publishing the internal document. Recommendations remain distinct from an implemented pivot. The account does not claim revenue, adoption or an independently verified market ranking.
 
 ## Publication rule
 

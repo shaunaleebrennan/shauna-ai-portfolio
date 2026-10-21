@@ -16,6 +16,6 @@ I built a connected programme around analyst narrative, briefings and RFIs, evid
 
 ## What came out of it
 
-A scalable programme that sustained and continued to strengthen Workvivo’s leadership across reports, alongside recognition from Gartner, Forrester, G2, ClearBox and other analyst and review platforms. The team could support a growing programme within PMM and carry that market credibility into buyer and seller conversations.
+PMM could sustain analyst relations as the business and portfolio grew. The programme supported Workvivo’s continuing leadership across reports and brought recognition from Gartner, Forrester and other analyst and review platforms into campaigns and seller conversations.
 
 > Analyst relations scales when insight, evidence and relationships build from one report cycle to the next.

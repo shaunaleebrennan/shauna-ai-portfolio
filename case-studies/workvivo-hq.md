@@ -2,20 +2,20 @@
 
 [← All selected work](../README.md#selected-work)
 
-**Giving an established platform a bigger story**
+**Expanding an employee-experience platform for the AI era**
 
-How do you bring AI into a product story without losing what people already love about it? That was the challenge behind Workvivo HQ.
+Workvivo had already earned a place in employees’ working lives. I helped define how that strength could support its next chapter in enterprise AI.
 
 ## What needed to change
 
-Workvivo had earned its place in employee experience through connection, culture and adoption. As AI changed how people find information and get work done, the platform needed a broader ambition that still felt like Workvivo.
+The platform needed a broader proposition for IT, HR and Communications, while keeping employee adoption, culture and frontline reach central to its value.
 
 ## My part in it
 
-I led the positioning and messaging architecture, connecting the platform story to the different priorities of IT, HR and Communications. I carried that thinking into the website and seller narrative, analyst framing and launch strategy, then built GTM kits and enabled Sales. The strategic choice was to make AI an expansion of Workvivo’s employee-experience strengths, connecting one platform story to distinct buying priorities.
+I led positioning and messaging architecture, connecting one platform story to the different priorities of IT, HR and Communications. I carried that thinking into the website, analyst narrative and launch strategy, then built GTM kits and enabled Sales. The strategic choice was to position AI as an expansion of Workvivo’s employee-experience strengths, with adoption and reach built into the commercial argument.
 
 ## What came out of it
 
-A coherent launch story that gave the platform room to grow while keeping employees at its centre. AI became part of the experience people already had a reason to use.
+A platform narrative carried through the website, launch, GTM kits and Sales enablement. It gave IT, HR and Communications distinct reasons to care, within one clear story about the employee experience.
 
 > In enterprise AI, an experience employees already use is a competitive advantage.

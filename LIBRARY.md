@@ -8,7 +8,7 @@ Read every case study and supporting document here on GitHub. The links below op
 
 ### [Workvivo HQ](case-studies/workvivo-hq.md)
 
-Repositioning employee experience for the AI era—without losing the adoption, trust, and culture that made the platform distinctive.
+Repositioning an established employee-experience platform for the AI era, with one story for IT, HR and Communications.
 
 ### [Messaging as Code](case-studies/messaging-as-code.md)
 
@@ -16,27 +16,27 @@ Designing an operating model for messaging reuse across teams and AI tools, with
 
 ### [HQ Agent](case-studies/hq-agent.md)
 
-Turning enterprise search, trusted answers, self-service, and agentic action into one credible product story—and a launch buyers could navigate.
+Turning search, grounded answers and supported actions into positioning, packaging and enablement that buyers and sellers can use.
 
 ### [AI Product Strategy](case-studies/ai-product-strategy.md)
 
-Learning by building: product strategy, AI pricing, portfolio agents, and hands-on experimentation with the tools reshaping modern GTM.
+Combining Product School courses with self-guided building and testing to develop practical judgment about AI products and PMM workflows.
 
 ### [Portfolio Voice Agent](case-studies/portfolio-voice-agent.md)
 
-Designing a live voice and text portfolio agent with a custom voice persona, intent-routing workflow, evidence retrieval, guardrails, and systematic model and response testing.
+Designing, configuring and testing a live voice and text agent that turns career and project evidence into useful conversations.
 
 ### [Market leadership](case-studies/market-leadership.md)
 
-Creating one connected market-leadership motion across Gartner, Forrester, G2, ClearBox, Gartner Peer Insights, and SoftwareReviews.
+Building a scalable analyst-relations programme within PMM, sustaining Workvivo’s market leadership and turning external recognition into useful GTM work.
 
 ### [The Meta Migration](case-studies/meta-migration.md)
 
-Turning a time-bound market disruption into an award-winning commercial motion—while making migration feel credible, differentiated, and low-risk.
+Shaping migration positioning and seller strategy during Meta Workplace’s closure, as part of Workvivo’s Forrester-recognised response.
 
 ### [Seer](case-studies/seer.md)
 
-Building a people-intelligence story around the Listening Gap: the distance between what employees say and what organisations act on.
+Shaping Seer’s positioning, packaging and route to market, with a clear view of the value it could add to Workvivo’s wider platform.
 
 ### [IT Pressure Test](case-studies/it-pressure-test.md)
 

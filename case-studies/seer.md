@@ -2,20 +2,20 @@
 
 [← All selected work](../README.md#selected-work)
 
-**Turning employee listening into a reason to act**
+**Finding the strongest commercial role for people intelligence**
 
-Collecting feedback is one thing. Helping an organisation do something useful with it is a much more interesting promise.
+I led Seer’s positioning and launch while developing a point of view on where employee listening could create the most commercial value.
 
 ## What needed to change
 
-Seer took Workvivo into people intelligence. To earn attention in an established market, it needed a story that went beyond surveys and explained the gap between what employees say and what organisations act on.
+Seer brought employee listening and insight into Workvivo’s portfolio. In an established market, the strategic question was where we could differentiate: through a standalone offer, or by connecting listening to the wider employee experience.
 
 ## My part in it
 
-I led positioning and GTM strategy, launch planning, pricing and packaging, competitive framing and the seller narrative. I also hired a dedicated PMM to scale execution while retaining senior strategy ownership.
+I assessed the standalone opportunity and recommended an integrated offer built around listening, insight and action. I helped shape the agreed approach, then led positioning, pricing and packaging, launch planning and seller enablement. I hired a dedicated PMM to scale execution while retaining strategy ownership.
 
 ## What came out of it
 
-A people-intelligence story organised around listen, understand and act. The Listening Gap gave it a memorable tension, connecting employee feedback and AI-assisted insight to the decisions leaders and managers need to make.
+The launch took the Listening Gap story to market, connecting employee feedback to meaningful action. As the commercial response emerged, I developed recommendations for a more integrated proposition. Seer’s capabilities also strengthened Workvivo’s wider employee listening offer.
 
-> Employee listening becomes valuable when it changes what leaders and managers do next.
+> A product can create its greatest commercial value by making the whole platform more compelling.

@@ -71,7 +71,10 @@ test('builds a structured reranking document', () => {
 test('validates every record in the production evidence index', async () => {
   const file = new URL('../../content/search-evidence.json', import.meta.url);
   const productionEvidence = JSON.parse(await readFile(file, 'utf8'));
-  assert.equal(normalizeEvidence(productionEvidence).length, 24);
+  assert.ok(productionEvidence.length > 0, 'Production evidence must not be empty');
+  assert.equal(normalizeEvidence(productionEvidence).length, productionEvidence.length);
+  assert.equal(new Set(productionEvidence.map(record => record.id)).size, productionEvidence.length,
+    'Production evidence IDs must be unique');
 });
 
 test('calls MongoDB Voyage rerank and returns three distinct case studies', async () => {

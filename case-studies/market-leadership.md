@@ -1,21 +1,25 @@
-# Market leadership
+# Analyst Relations & Category Leadership
 
 [← All selected work](../README.md#selected-work)
 
-**Building an analyst programme that could scale with the business**
+**Turning analyst relations into a strategic market leadership programme**
 
-When our analyst-relations owner left, PMM absorbed the responsibility. I built a programme that made a substantial new remit manageable—and gave it room to grow.
+When Workvivo's dedicated analyst relations owner left, I took on the remit alongside leading Product Marketing. I built a repeatable programme that strengthened our existing position and helped open up adjacent markets.
 
 ## What needed to change
 
-Analyst relations meant much more than keeping briefings in the diary. PMM was taking on research submissions, executive narratives, customer proof and ongoing analyst engagement, alongside an already demanding product-marketing remit. We needed a programme that could scale as Workvivo and its portfolio evolved.
+We had an established presence in employee experience and intranet research, but analyst engagement needed to become more than a series of report deadlines. We needed stronger relationships, a clear evidence base and a view of where the broader product portfolio could credibly compete.
 
 ## My part in it
 
-I built a connected programme around analyst narrative, briefings and RFIs, evidence and customer-proof development, and alignment across the portfolio. I brought those activities together with competitive positioning, campaigns and seller enablement, so the work could build from one report cycle to the next.
+I took ownership of analyst strategy, executive briefings, research submissions, customer proof and ongoing engagement across Gartner, Forrester, ClearBox and other firms. I connected the analyst programme with portfolio positioning, competitive intelligence and GTM, and expanded activity through strategy days, events and research conversations.
+
+I also used analyst and market signals to advise leadership on category shifts, product opportunities and where Workvivo should place its next bets.
 
 ## What came out of it
 
-PMM could sustain analyst relations as the business and portfolio grew. The programme supported Workvivo’s continuing leadership across reports and brought recognition from Gartner, Forrester and other analyst and review platforms into campaigns and seller conversations.
+The programme supported stronger year-on-year recognition, including Workvivo's fourth consecutive Gartner Magic Quadrant Leader placement in 2026, its 2026 Forrester Wave Leader position in Intranet Platforms and ClearBox Choice recognition.
 
-> Analyst relations scales when insight, evidence and relationships build from one report cycle to the next.
+I secured invitations to additional Forrester Wave evaluations in Employee Experience Management and Cognitive Search. Those evaluations are in progress; invitations are not placements or outcomes.
+
+> Analyst relations should help the company see where the market is going—not just tell analysts where we've been.

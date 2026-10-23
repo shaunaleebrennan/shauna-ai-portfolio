@@ -2,7 +2,7 @@
 
 <h1 align="center">Shauna Azevedo-Brennan</h1>
 
-<p align="center"><strong>Product Marketing Leader | Strategy, Intelligence &amp; AI Innovation</strong><br>Dublin, Ireland</p>
+<p align="center"><strong>Product Marketing Leader</strong><br>Dublin, Ireland</p>
 
 <p align="center"><a href="https://shaunaleebrennan.github.io/shauna-ai-portfolio/">Portfolio</a> · <a href="assets/Shauna-Azevedo-Brennan-CV.pdf">View CV (PDF)</a> · <a href="https://www.linkedin.com/in/shaunalee/">LinkedIn</a> · <a href="https://github.com/shaunaleebrennan">GitHub</a> · <a href="mailto:shaunaleebrennan@gmail.com">Email</a></p>
 

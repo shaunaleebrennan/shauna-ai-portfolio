@@ -2,20 +2,22 @@
 
 [← All selected work](../README.md#selected-work)
 
-**Finding the strongest commercial role for people intelligence**
+**Choosing where employee listening could create the most value**
 
-I led Seer’s positioning and launch while developing a point of view on where employee listening could create the most commercial value.
+Seer was more than a messaging exercise. It raised a commercial question about where Workvivo should compete and how employee listening should fit within the wider platform.
 
 ## What needed to change
 
-Seer brought employee listening and insight into Workvivo’s portfolio. In an established market, the strategic question was where we could differentiate: through a standalone offer, or by connecting listening to the wider employee experience.
+The employee listening category was established and competitive. We needed to assess whether Seer would be strongest as a standalone product or as part of an integrated employee experience proposition.
 
 ## My part in it
 
-I assessed the standalone opportunity and recommended an integrated offer built around listening, insight and action. I helped shape the agreed approach, then led positioning, pricing and packaging, launch planning and seller enablement. I hired a dedicated PMM to scale execution while retaining strategy ownership.
+I assessed the standalone opportunity, compared alternatives and recommended an integrated listening, insight and action offer. I helped shape the agreed direction, then led positioning, launch planning and seller enablement, and co-developed commercial packaging. I hired a dedicated PMM to expand execution while retaining strategy oversight.
 
 ## What came out of it
 
-The launch took the Listening Gap story to market, connecting employee feedback to meaningful action. As the commercial response emerged, I developed recommendations for a more integrated proposition. Seer’s capabilities also strengthened Workvivo’s wider employee listening offer.
+We launched Seer with the Listening Gap story, connecting employee feedback to action within Workvivo's broader employee experience. As we learned from the commercial response, I developed further recommendations for a more integrated offer.
 
-> A product can create its greatest commercial value by making the whole platform more compelling.
+Those recommendations are separate from what the business ultimately implemented. I do not claim an unverified revenue or adoption result.
+
+> The best product strategy considers how an offer strengthens the whole portfolio, not only how it sells on its own.

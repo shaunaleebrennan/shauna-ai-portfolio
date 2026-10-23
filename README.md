@@ -12,8 +12,10 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 ## Executive snapshot
 
-- **Built Product Marketing 0→5** — joined Workvivo as its founding product marketer and progressed from Product Marketing Manager to Senior PMM to Lead PMM.
+- **Built and led Product Marketing 0→5** — founding PMM, then Senior PMM and Lead PMM, and more recently Acting Head of Product Marketing. Contribute to executive planning and coach the team through change.
 - **Lead enterprise AI portfolio GTM** — positioning, launches, pricing and packaging, analyst strategy, competitive intelligence, and seller enablement across Workvivo HQ, HQ Agent, and Seer.
+- **Expanded analyst and competitive intelligence** — took ownership of analyst relations when its dedicated lead departed; scaled relationships and market coverage, and secured invitations to new Forrester Wave evaluations. Replaced Klue with the agentic Steve AI system integrated with seller tools.
+- **Built AI-powered PMM systems** — led Messaging as Code, with an HQ Agent pilot linked to the sales enablement agent; the wider rollout remains planned.
 - **Worked through scale and acquisition** — during my tenure, Workvivo grew from approximately $10M to [more than $100M ARR](https://www.workvivo.com/newsroom/workvivo-by-zoom-surpasses-100-million-in-annual-recurring-revenue/), reached 9 million users, and became part of Zoom. These are company milestones, not outcomes attributed to me alone.
 
 ## Selected work
@@ -43,7 +45,7 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 ### More case studies
 
 - [**Portfolio Voice Agent**](case-studies/portfolio-voice-agent.md) — Designing, configuring and testing a live voice and text agent that turns career and project evidence into useful conversations.
-- [**Market leadership**](case-studies/market-leadership.md) — Built a scalable analyst-relations programme after PMM absorbed the remit, supporting Workvivo’s continuing leadership across reports and turning recognition into GTM work.
+- [**Analyst Relations & Category Leadership**](case-studies/market-leadership.md) — Transformed an additional remit into a strategic programme supporting stronger analyst recognition, broader category coverage and leadership intelligence.
 - [**The Meta Migration**](case-studies/meta-migration.md) — Shaping migration positioning and seller strategy during Meta Workplace’s closure, as part of Workvivo’s Forrester-recognised response.
 - [**Seer**](case-studies/seer.md) — Assessed the standalone opportunity, recommended an integrated offer, committed to the agreed launch and developed recommendations for the next phase.
 - [**IT Pressure Test**](case-studies/it-pressure-test.md) — Turning IT-buyer positioning judgment into a working tool: six audience lenses, source-linked diagnostics, and a practical rewrite brief.
@@ -65,12 +67,16 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 ### Workvivo by Zoom
 
-**Lead Product Marketing Manager** · Dublin · October 2022–present<br>
-**Progression:** Product Marketing Manager → Senior Product Marketing Manager → Lead Product Marketing Manager
+**Lead Product Marketing Manager → Acting Head of Product Marketing** · Dublin · October 2022–present<br>
+**Progression:** Product Marketing Manager → Senior Product Marketing Manager → Lead Product Marketing Manager → Acting Head of Product Marketing
 
-- Built Workvivo's first product marketing function and grew it into a five-person team.
-- Lead portfolio positioning and GTM for **Workvivo HQ, HQ Agent, and Seer**, spanning enterprise AI search, retrieval, agents, integrations, pricing, and packaging.
+- Built Workvivo's first product marketing function and grew it into a five-person team. Lead and coach the team through organisational change and participate in executive strategy and planning.
+- Lead portfolio positioning and GTM for **Workvivo HQ, HQ Agent, and Seer**, spanning enterprise AI search, retrieval, agents, integrations, pricing, and packaging. Set messaging direction for integrated Marketing and Growth, including SEO/AEO and sales enablement.
 - Turn technical architecture into commercial systems across positioning, launches, seller enablement, analyst strategy, competitive differentiation, and category development.
+- **Own analyst relations** across Gartner, Forrester, ClearBox and other research firms: executive briefings, strategy days, evidence, report evaluations and events. Supported four consecutive Gartner Magic Quadrant Leader placements and Workvivo's 2026 Forrester Wave Leader position; secured invitations to Employee Experience Management and Cognitive Search Wave evaluations, both in progress. These are company recognitions and independent evaluations.
+- **Own the competitive intelligence programme**, replacing Klue with Steve AI, an agentic system connected to internal sales tools. Improves the currency and availability of competitive guidance; software savings are internally reported and should be cleared before use outside the company.
+- **Lead Messaging as Code**, an evidence-backed source of approved positioning and messaging. The HQ Agent pilot is complete and connected to the sales enablement agent; wider deployment is planned.
+- Serve as a market intelligence partner to executive leadership, identifying emerging categories, competitive threats, buyer needs and strategic growth opportunities.
 - Shaped migration positioning, market messaging, competitive differentiation, and seller enablement for Workvivo's response to the Meta Workplace closure. [Forrester named Workvivo](https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/) its 2026 B2B Return on Integration Honors winner for a cross-functional response to a major market disruption; this portfolio identifies that work as the Meta migration.
 
 <details>
@@ -137,14 +143,15 @@ The tools are not the proof; the workflow design and operating choices are.
 - [**AI Product Strategy for Leaders**](https://certificate.productschool.com/80a9097d-7d40-4b71-a943-01ac715a5d21#acc.BunwTeYZ) — Product School, 2026
 - [**Go-to-Market Certification**](https://certificate.productschool.com/bd44f14a-0971-4b70-9ec5-3032c2f28783#acc.edT8a2Lp) — Product School, 2026
 - [**Ready for Launch**](https://maven.com/certificate/cbWgAxSb) — Maven, 2024
-- Currently completing [**AI Engineer Agentic Track: The Complete Agent & MCP Course**](https://www.udemy.com/course/the-complete-agentic-ai-engineering-course/).
+- Currently completing Product School's **Product Manager Certification** and [**AI Engineer Agentic Track: The Complete Agent & MCP Course**](https://www.udemy.com/course/the-complete-agentic-ai-engineering-course/).
 
 </details>
 
 ### Recognition
 
 - [**Top 1% of Replit Agent users**](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#explore) — Replit, 2026
-- **Quarterback of the Year** — Workvivo, 2026
+- **Quarterback of the Year** — Workvivo, 2026, awarded for leadership impact
+- **Rising Stars Leadership Program** — Workvivo, 2025; manager-nominated for mentoring, interactive workshops and management training, followed by promotion to Lead PMM
 - [**B2B Return on Integration Honors**](https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/) — awarded by Forrester to Workvivo for its cross-functional response to a major market disruption; this portfolio identifies the programme as the Meta migration, 2026
 - **Commitment to Diversity, Equality & Inclusion Award** — Invest in Ireland recognition for Diligent's Pride ERG, co-led by Shauna, 2023
 

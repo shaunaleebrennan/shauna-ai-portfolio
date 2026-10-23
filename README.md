@@ -16,7 +16,7 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 - **Lead enterprise AI portfolio GTM** — positioning, launches, pricing and packaging, analyst strategy, competitive intelligence, and seller enablement across Workvivo HQ, HQ Agent, and Seer.
 - **Expanded analyst and competitive intelligence** — took ownership of analyst relations when its dedicated lead departed; scaled relationships and market coverage, and secured invitations to new Forrester Wave evaluations. Replaced Klue with the agentic Steve AI system integrated with seller tools.
 - **Built AI-powered PMM systems** — led Messaging as Code, with an HQ Agent pilot linked to the sales enablement agent; the wider rollout remains planned.
-- **Worked through scale and acquisition** — during my tenure, Workvivo grew from approximately $10M to [more than $100M ARR](https://www.workvivo.com/newsroom/workvivo-by-zoom-surpasses-100-million-in-annual-recurring-revenue/), reached 9 million users, and became part of Zoom. These are company milestones, not outcomes attributed to me alone.
+- **Worked through scale and acquisition** — during my tenure, Workvivo grew from approximately $10M to [more than $100M ARR](https://www.workvivo.com/newsroom/workvivo-by-zoom-surpasses-100-million-in-annual-recurring-revenue/), reached 9 million users, and became part of Zoom. The latest approved CV records the company journey beyond $110M ARR; the linked announcement verifies the earlier $100M milestone. These are company milestones, not outcomes attributed to me alone.
 
 ## Selected work
 
@@ -24,7 +24,7 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 [![Workvivo HQ — Repositioning for the AI era](assets/readme/workvivo-hq-strip.svg)](case-studies/workvivo-hq.md)
 
-**Positioning · Category · Launch** — I led the positioning work behind Workvivo’s shift from an Employee Experience Platform toward an AI-native headquarters for every employee, then carried that strategy into messaging architecture, analyst framing, launch, GTM kits and Sales enablement.
+**Positioning · Category · Launch** — I led the positioning work behind Workvivo’s shift from an Employee Experience Platform towards an AI-powered digital HQ for every employee, then carried that strategy into messaging architecture, analyst framing, launch, GTM kits and Sales enablement.
 
 ### [Messaging as Code](case-studies/messaging-as-code.md)
 
@@ -99,13 +99,15 @@ Owned EMEA GTM for complex GRC technology, translating technical capabilities in
 
 **Dublin · November 2019–May 2021 · B2B SaaS**
 
-Served as founding product marketer, building the positioning, messaging, launch, and customer-insight foundation during the company's scale-up journey.
+Served as founding product marketer, building the positioning, messaging, launch, and customer-insight foundation during the company's scale-up journey. Helped reposition the platform around online classes during COVID-19 and rebuilt the knowledge base and learning experience, with a self-reported 20%+ increase in knowledge-base views and 12%+ reduction in support tickets.
 
 ### Dencan Restaurants — Marketing Manager
 
 **Canada · June 2017–December 2018 · Franchise B2C marketing**
 
 Led multi-brand campaigns and managed more than $2.4M in marketing investment across digital, content, radio, partnerships, and customer engagement.
+
+Earlier experience also includes **Digital Media Executive at Unislim**, as recorded in the approved CV.
 
 ## Technical product marketing depth
 
@@ -143,7 +145,7 @@ The tools are not the proof; the workflow design and operating choices are.
 - [**AI Product Strategy for Leaders**](https://certificate.productschool.com/80a9097d-7d40-4b71-a943-01ac715a5d21#acc.BunwTeYZ) — Product School, 2026
 - [**Go-to-Market Certification**](https://certificate.productschool.com/bd44f14a-0971-4b70-9ec5-3032c2f28783#acc.edT8a2Lp) — Product School, 2026
 - [**Ready for Launch**](https://maven.com/certificate/cbWgAxSb) — Maven, 2024
-- Currently completing Product School's **Product Manager Certification** and [**AI Engineer Agentic Track: The Complete Agent & MCP Course**](https://www.udemy.com/course/the-complete-agentic-ai-engineering-course/).
+- Currently completing Product School's **Product Management Foundations Certification** and [**AI Engineer Agentic Track: The Complete Agent & MCP Course**](https://www.udemy.com/course/the-complete-agentic-ai-engineering-course/).
 
 </details>
 

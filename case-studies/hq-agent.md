@@ -12,14 +12,16 @@ Search, grounded answers and task execution can sound like one undifferentiated 
 
 ## My part in it
 
-I led product and portfolio positioning, working with Product and Zoom's AI teams to understand enterprise search, retrieval-augmented generation (RAG), grounding, permissions, integrations and supported actions. I turned those capabilities into buyer use cases, seller messaging and enablement for IT, HR and Communications.
-
-I also co-developed pricing and packaging with the Revenue leader, considering customer value, AI maturity, use cases, competitive alternatives and sustainable economics.
+I led product and portfolio positioning, working with Product and Zoom's AI teams to understand enterprise search, retrieval-augmented generation (RAG), grounding, permissions, integrations and supported actions. I turned those capabilities into buyer use cases, seller messaging and enablement for IT, HR and Communications. I also co-developed pricing and packaging with the Revenue leader, considering customer value, AI maturity, use cases, competitive alternatives and sustainable economics.
 
 ## What came out of it
 
-The positioning gave commercial teams a usable progression—search, answer, action—and a more credible explanation of what the product could and could not do. It informed launch and seller enablement and helped connect technical capabilities to commercial value.
-
-Internal planning identified a substantial HQ Agent pipeline opportunity, but pipeline estimates and targets are not presented here as achieved or PMM-generated revenue.
+The positioning gave commercial teams a usable progression—search, answer, action—and a more credible explanation of what the product could and could not do. It informed launch and seller enablement and helped connect technical capabilities to commercial value. Internal planning identified a substantial HQ Agent pipeline opportunity, but pipeline estimates and targets are not presented here as achieved or PMM-generated revenue.
 
 > An agent's value is the work it helps people complete, with limits buyers can trust.
+
+## Supporting evidence
+
+- **[Workvivo HQ product page](https://www.workvivo.com/hq/)** — Public product context. Company product context, not independent verification of individual ownership.
+- **[HQ Agent product artwork](../assets/evidence/hq-agent-product.png)** — Published artifact. Product visual supporting the commercial narrative.
+- **[Explore the platform positioning](workvivo-hq.md)** — Related case study. How the agent fits the wider Workvivo HQ story.

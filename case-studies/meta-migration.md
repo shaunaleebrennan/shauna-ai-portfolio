@@ -16,8 +16,12 @@ I led migration positioning, competitive differentiation and seller messaging, c
 
 ## What came out of it
 
-A coordinated GTM approach that helped the wider business compete for Workplace customers. Workvivo's company-wide response was recognised with Forrester's **2026 B2B Return on Integration Honors**. The award belongs to the cross-functional company effort; my contribution was positioning, competitive strategy and seller enablement.
-
-Internal retrospectives describe substantial company-level customer capture and revenue growth. I have not included those figures here without an approved public source and a clear attribution boundary.
+A coordinated GTM approach that helped the wider business compete for Workplace customers. Workvivo's company-wide response was recognised with Forrester's **2026 B2B Return on Integration Honors**. The award belongs to the cross-functional company effort; my contribution was positioning, competitive strategy and seller enablement. Internal retrospectives describe substantial company-level customer capture and revenue growth. I have not included those figures here without an approved public source and a clear attribution boundary.
 
 > When customers have to move, the destination still has to earn their choice.
+
+## Supporting evidence
+
+- **[Forrester winner announcement](https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/)** — External company recognition. Verifies Workvivo’s company award. The announcement does not name Meta.
+- **[Workplace migration programme](https://www.workvivo.com/workplace/)** — Public company context. Company migration offering; Shauna’s GTM role is professional self-report.
+- **[Read the claims and sources](../docs/EVIDENCE_REGISTER.md)** — Evidence record. Separates the external award, programme attribution, and individual contribution.

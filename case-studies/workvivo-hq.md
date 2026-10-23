@@ -12,14 +12,16 @@ AI was changing how employees find knowledge, interact with systems and get work
 
 ## My part in it
 
-I shaped portfolio positioning and the messaging architecture across Workvivo HQ, HQ Agent and Seer. That meant making deliberate choices about how the products fit together, where we could differentiate, and which technical capabilities mattered to each buyer.
-
-I carried the strategy into launch messaging, the website, analyst framing, competitive guidance, campaign direction and seller enablement, working across Product, Sales, Growth and Marketing.
+I shaped portfolio positioning and the messaging architecture across Workvivo HQ, HQ Agent and Seer. That meant making deliberate choices about how the products fit together, where we could differentiate, and which technical capabilities mattered to each buyer. I carried the strategy into launch messaging, the website, analyst framing, competitive guidance, campaign direction and seller enablement, working across Product, Sales, Growth and Marketing.
 
 ## What came out of it
 
-Workvivo HQ launched with a clearer portfolio story: one headquarters bringing together employee communication, knowledge, insight and action. The messaging gave Product, Marketing and Sales a shared way to explain the platform and its role in enterprise AI.
-
-The company-wide launch was recognised internally for consistent messaging across leadership and field teams. That is qualitative feedback, not a measured pipeline or adoption claim.
+Workvivo HQ launched with a clearer portfolio story: one headquarters bringing together employee communication, knowledge, insight and action. The messaging gave Product, Marketing and Sales a shared way to explain the platform and its role in enterprise AI. The company-wide launch was recognised internally for consistent messaging across leadership and field teams. That is qualitative feedback, not a measured pipeline or adoption claim.
 
 > The strongest AI story builds on what customers already trust.
+
+## Supporting evidence
+
+- **[Workvivo HQ product page](https://www.workvivo.com/hq/)** — Public product context. Shows the product narrative; Shauna’s contribution is described in this case study.
+- **[Shauna’s launch post](https://www.linkedin.com/posts/shaunalee_work-has-a-new-address-introducing-workvivo-activity-7472968114830454786-qTjH)** — Public launch activity. Launch commentary and peer feedback. LinkedIn may require sign-in.
+- **[Read the narrative notes](../knowledge/case-study-hq.md)** — Supporting document. Buyer problem, product pillars, and launch system.

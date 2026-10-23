@@ -34,6 +34,7 @@ try {
           ${section('contribution', 'My part in it', story.contribution)}
           ${section('outcome', 'What came out of it', story.result)}
           <aside class="case-takeaway"><p>${escape(story.learning)}</p></aside>
+          <section class="case-evidence" aria-labelledby="evidence-title"><h2 id="evidence-title">Supporting evidence</h2><p>My contribution is professional self-report. Linked sources show the product context, published artifacts, and attribution boundaries.</p><ul>${item.evidence.map(e => `<li><a href="${escape(e.url)}">${escape(e.title)} ↗</a><small>${escape(e.kind)}</small><p>${escape(e.note)}</p></li>`).join('')}</ul></section>
           <nav class="case-actions" aria-label="Case study navigation">
             <a href="index.html#explore">← All selected work</a>
             <a class="next-case" href="case-study.html?case=${encodeURIComponent(next.slug)}"><span>Next story</span><strong>${escape(next.title)} →</strong></a>

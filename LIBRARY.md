@@ -8,7 +8,7 @@ Read every case study and supporting document here on GitHub. The links below op
 
 ### [Workvivo HQ](case-studies/workvivo-hq.md)
 
-Repositioning Workvivo for the AI era: from Employee Experience Platform toward an AI-native headquarters for every employee.
+Repositioning Workvivo for the AI era: from Employee Experience Platform towards an AI-powered digital HQ, without losing its employee experience differentiation.
 
 ### [Messaging as Code](case-studies/messaging-as-code.md)
 
@@ -26,9 +26,9 @@ Combining Product School courses with self-guided building and testing to develo
 
 Designing, configuring and testing a live voice and text agent that turns career and project evidence into useful conversations.
 
-### [Market leadership](case-studies/market-leadership.md)
+### [Analyst Relations & Category Leadership](case-studies/market-leadership.md)
 
-Building a scalable analyst-relations programme within PMM, sustaining Workvivo’s market leadership and turning external recognition into useful GTM work.
+Scaling analyst relations into a strategic market leadership programme, strengthening research recognition and opening new category opportunities.
 
 ### [The Meta Migration](case-studies/meta-migration.md)
 

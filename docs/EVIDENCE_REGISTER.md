@@ -2,12 +2,12 @@
 
 This register is the publication gate for portfolio claims.
 
-Last reviewed: 21 October 2026
+Last reviewed: 24 October 2026
 
 | Claim or project | Current status | Recorded source and boundary |
 |---|---|---|
 | AI Positioning QA exists as a public project | Verified public artifact | Public GitHub repository: https://github.com/shaunaleebrennan/ai-positioning-qa |
-| Workvivo progression and founding-PMM role | Approved public self-report | Published résumé and repository `README.md`; use Product Marketing Manager → Senior Product Marketing Manager → Lead Product Marketing Manager and do not use Head of Product Marketing |
+| Workvivo progression and founding-PMM role | Approved public self-report | Published résumé and repository `README.md`; use Product Marketing Manager → Senior Product Marketing Manager → Lead Product Marketing Manager → Acting Head of Product Marketing; retain “Acting” and do not imply a permanent Head appointment |
 | Built the first Workvivo PMM function into a five-person team | Approved public self-report | Published résumé and repository `README.md`; describe as self-reported professional experience |
 | Workvivo HQ and HQ Agent contribution | Approved public self-report with public product context | Published case studies, repository `README.md`, supplied launch artifacts, and https://www.workvivo.com/hq/; attribute positioning, messaging, launch, pricing, packaging, enablement, and GTM to Shauna, not product engineering |
 | Seer contribution | Approved public self-report with supplied artifact | Published case study, repository `README.md`, and supplied Listening Gap report; no revenue, adoption, research-authorship, or product-performance claims |
@@ -44,6 +44,20 @@ Shauna confirms that PMM absorbed analyst relations when its owner left, and tha
 ## Seer portfolio strategy — candidate confirmation, 21 October 2026
 
 Shauna confirms she assessed the standalone commercial opportunity, recommended a more integrated listening offer, helped shape the agreed approach and committed to delivering the launch. Following the commercial response, she developed further recommendations for an integrated proposition. This is professional self-report, supported by an internal strategy note reviewed for the case study. The public account describes her commercial reasoning and delivery without publishing the internal document. Recommendations remain distinct from an implemented pivot. The account does not claim revenue, adoption or an independently verified market ranking.
+
+## Career reconciliation — 24 October 2026
+
+The latest approved two-page PDF, “Shauna Azevedo-Brennan - Product Marketing Leader.pdf”, is published unchanged at `assets/Shauna-Azevedo-Brennan-CV.pdf`. Its statements are approved professional self-report unless independently sourced below. The README and career summary retain earlier experience, education, recognition, and technical detail rather than treating the shorter CV as an exhaustive record.
+
+| Claim | Source and attribution boundary |
+|---|---|
+| Acting Head responsibilities, five-person team, executive planning, coaching, and Marketing/Growth messaging direction including SEO/AEO | Latest approved CV and README; professional self-report. Acting Head is a progression from Lead PMM, not a permanent appointment. |
+| Company journey from approximately $10M to $110M ARR | Latest approved CV and approved homepage wording; professional self-report of company context. The separately linked public announcement verifies more than $100M. Never attribute company growth to Shauna alone. |
+| Analyst program, four consecutive Gartner Leader placements, 2026 Forrester Wave Leader position, and invitations to Employee Experience Management and Cognitive Search evaluations | Approved README, CV, and revised analyst case study; professional self-report with supplied campaign artifacts. The two invited evaluations remain in progress; no outcomes are implied. Independent analysts control their assessments. |
+| Steve AI replaced Klue; annual software savings above 60k | Latest approved CV; professional self-report. Currency is not supplied and must not be invented. No measured win-rate or pipeline improvement is claimed. |
+| Glofox knowledge-base views +20% and support tickets −12% | Latest approved CV states 20%+ and 12%+; professional self-report. Preserve the knowledge-base and support context; do not extrapolate to company performance. |
+| Unislim Digital Media Executive; Rising Stars Leadership Program in 2025; Product Management Foundations in progress | Latest approved CV and existing README for Rising Stars; professional self-report. No Unislim dates or additional credentials are inferred. |
+| Revised case-study copy and implementation status | `content/portfolio.json` is the canonical public case-study source. The website reads it and the build generates GitHub Markdown from the same fields. The historical Messaging as Code compiler details above remain a record of the earlier approach, distinct from the completed Zoom agents/Canvas pilot. |
 
 ## Publication rule
 

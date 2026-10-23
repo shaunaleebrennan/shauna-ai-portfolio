@@ -19,3 +19,9 @@ I designed and integrated a voice and text agent on ElevenLabs, with a voice per
 A live conversational layer for the portfolio. Visitors can ask about a project, a decision or my approach, while the agent draws on curated career and project material. The work brought voice design, product judgment and hands-on AI configuration together in one experience.
 
 > A useful agent turns a body of knowledge into the answer someone needs next.
+
+## Supporting evidence
+
+- **[Read the system overview](../docs/PORTFOLIO_VOICE_AGENT_CASE_STUDY.md)** — Technical document. Voice persona, workflow, knowledge design, guardrails, and evaluation framework.
+- **[Try the portfolio agent](https://shaunaleebrennan.github.io/shauna-ai-portfolio/index.html#ask)** — Live interface. Ask a career or technical question through the embedded ElevenLabs agent.
+- **[Inspect the portfolio source](https://github.com/shaunaleebrennan/shauna-ai-portfolio)** — Source repository. Public integration code; private prompts, routing configuration, and detailed test records are excluded.

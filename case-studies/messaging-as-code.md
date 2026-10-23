@@ -12,14 +12,15 @@ Sales and Marketing reuse messaging across products, audiences and assets. Each 
 
 ## My part in it
 
-I led the project, wrote the product messaging with PMM-team support and defined the content model, approval process and acceptance criteria. I tested AI-assisted authoring and revision workflows and changed direction when a GitHub-based approach proved less practical for how the team works.
-
-The resulting in-house approach uses Zoom agents and Canvas to make messaging easier to find, maintain and review.
+I led the project, wrote the product messaging with PMM-team support and defined the content model, approval process and acceptance criteria. I tested AI-assisted authoring and revision workflows and changed direction when a GitHub-based approach proved less practical for how the team works. The resulting in-house approach uses Zoom agents and Canvas to make messaging easier to find, maintain and review.
 
 ## What came out of it
 
-The HQ Agent pilot is complete and connected to the sales enablement agent, with positive early feedback. Wider message coverage and a design-system-connected content generation workflow are planned, not yet established business outcomes.
-
-This is a working example of how I apply hands-on AI knowledge to improve PMM operations—not a claim that the full organisation has adopted it.
+The HQ Agent pilot is complete and connected to the sales enablement agent, with positive early feedback. Wider message coverage and a design-system-connected content generation workflow are planned, not yet established business outcomes. This is a working example of how I apply hands-on AI knowledge to improve PMM operations—not a claim that the full organisation has adopted it.
 
 > Scaling AI content starts with messaging that people can trust and agents can use.
+
+## Supporting evidence
+
+- **[Inspect the sanitized change receipt](../examples/messaging-as-code/change-demonstration.json)** — Executed local demonstration. Invented wording run through the existing compiler, plus a stale-edit comparison. No customer content or live synchronization.
+- **[Implementation and source notes](../docs/EVIDENCE_REGISTER.md)** — Evidence register. Source basis, ownership and current implementation boundaries.

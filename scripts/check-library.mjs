@@ -50,3 +50,20 @@ for (const entry of manifest.files) {
 }
 for(const item of work) await access(item.image);
 console.log(`Verified ${manifest.files.length} nested tool files and ${work.length} case-study images.`);
+
+// The JSON is canonical: prevent stale GitHub copies after a story edit.
+for (const item of work) {
+  const markdown = await readFile(`case-studies/${item.slug}.md`, 'utf8');
+  for (const value of Object.values(item.caseStudy.overview)) {
+    check(markdown.includes(value), `Stale Markdown: ${item.slug}`);
+  }
+  for (const evidence of item.evidence) {
+    check(markdown.includes(evidence.title), `Missing Markdown evidence: ${item.slug}`);
+  }
+}
+const career = await readFile('knowledge/portfolio.md', 'utf8');
+const register = await readFile('docs/EVIDENCE_REGISTER.md', 'utf8');
+check(career.includes('Acting Head of Product Marketing'), 'Career progression must include approved Acting Head role');
+check(!register.includes('do not use Head of Product Marketing'), 'Outdated title restriction');
+check(!library.includes('${work.length}'), 'Library description must interpolate case count');
+console.log('Case-study source parity and career reconciliation checks passed.');

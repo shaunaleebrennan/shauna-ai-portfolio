@@ -12,12 +12,17 @@ AI changes both what enterprises can buy and how marketing teams can operate. I 
 
 ## My part in it
 
-I completed Product School courses in AI Product Strategy for Leaders, Agentic Workflows & Loops and Go-to-Market, and I'm undertaking its Product Manager Certification. Alongside formal learning I build and test agents, automation workflows and lightweight applications using coding assistants, n8n and other developer tools.
-
-Projects include the live conversational portfolio agent, IT Pressure Test, competitive research workflows and Messaging as Code. I test what works, what fails and where human approval is still essential.
+I completed Product School courses in AI Product Strategy for Leaders, Agentic Workflows & Loops and Go-to-Market, and I'm undertaking its Product Manager Certification. Alongside formal learning I build and test agents, automation workflows and lightweight applications using coding assistants, n8n and other developer tools. Projects include the live conversational portfolio agent, IT Pressure Test, competitive research workflows and Messaging as Code. I test what works, what fails and where human approval is still essential.
 
 ## What came out of it
 
 More technical fluency in the AI products I market, better questions for Product and Engineering, and working examples of AI applied to genuine PMM problems. These are practical builds and pilots, not claims of organisation-wide automation or measured efficiency gains.
 
 > The tools aren't the proof. The choices behind the workflow are.
+
+## Supporting evidence
+
+- **[Try IT Pressure Test](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/)** — Public build. IT-buyer lenses, evidence diagnostics, and in-tool deep review; human judgment remains accountable.
+- **[Inspect the rubric and implementation](https://github.com/shaunaleebrennan/ai-positioning-qa)** — Source repository. Review the framework, worked example, and validation checks.
+- **[Read the positioning pressure test](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-buyer-integration-2026-09-21.md)** — Evaluation evidence. Adversarial scoring and import checks, fixes, and remaining calibration limits.
+- **[Explore the Portfolio Voice Agent](portfolio-voice-agent.md)** — Related case study. A concrete example of agent design, integration, and evaluation.

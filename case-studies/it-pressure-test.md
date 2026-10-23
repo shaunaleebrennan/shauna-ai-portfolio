@@ -19,3 +19,9 @@ I defined the buyer lenses, review experience and evidence criteria, then used C
 A live browser tool that turns positioning judgment into practical editing guidance. It shows the passages behind its feedback and helps the author shape the next draft. The score is an aid to judgment; it does not verify claims or replace a buyer’s response.
 
 > Better messaging starts with understanding the decision your buyer is trying to make.
+
+## Supporting evidence
+
+- **[Try IT Pressure Test](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/)** — Live interactive build. Choose an IT audience, buying role and stage; inspect the copy and run a deeper review in the tool.
+- **[Inspect the implementation](https://github.com/shaunaleebrennan/ai-positioning-qa)** — Source repository. The original repository retains the build and evaluation history under its existing URL.
+- **[Read the rubric validation notes](https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-rubric-3.1.md)** — Evaluation evidence. Scoring safeguards, browser checks, and the remaining need for independent human calibration.

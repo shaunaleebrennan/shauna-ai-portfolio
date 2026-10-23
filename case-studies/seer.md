@@ -16,8 +16,12 @@ I assessed the standalone opportunity, compared alternatives and recommended an 
 
 ## What came out of it
 
-We launched Seer with the Listening Gap story, connecting employee feedback to action within Workvivo's broader employee experience. As we learned from the commercial response, I developed further recommendations for a more integrated offer.
-
-Those recommendations are separate from what the business ultimately implemented. I do not claim an unverified revenue or adoption result.
+We launched Seer with the Listening Gap story, connecting employee feedback to action within Workvivo's broader employee experience. As we learned from the commercial response, I developed further recommendations for a more integrated offer. Those recommendations are separate from what the business ultimately implemented. I do not claim an unverified revenue or adoption result.
 
 > The best product strategy considers how an offer strengthens the whole portfolio, not only how it sells on its own.
+
+## Supporting evidence
+
+- **[Read The Listening Gap notes](../knowledge/case-study-listening-gap.md)** — Supporting document. Framework and implications from the supplied report; the full report is not hosted here.
+- **[Seer portfolio artwork](../assets/evidence/seer.jpg)** — Published artifact. Portfolio visual accompanying the people-intelligence narrative.
+- **[Read the artifact inventory](../docs/EVIDENCE_INVENTORY.md)** — Evidence record. What the supplied research supports and what it does not establish.

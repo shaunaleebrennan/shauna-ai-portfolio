@@ -1,8 +1,8 @@
-![Shauna Azevedo-Brennan — Technical Product Marketing Leader. AI and agentic systems. Strategy that ships. Stories that stick.](assets/readme/hero.png)
+![Shauna Azevedo-Brennan — Product Marketing Leader. Strategy, intelligence and AI innovation. Strategy that ships. Stories that stick.](assets/readme/hero.png)
 
 <h1 align="center">Shauna Azevedo-Brennan</h1>
 
-<p align="center"><strong>Technical Product Marketing Leader | AI &amp; Agentic Systems</strong><br>Dublin, Ireland</p>
+<p align="center"><strong>Product Marketing Leader | Strategy, Intelligence &amp; AI Innovation</strong><br>Dublin, Ireland</p>
 
 <p align="center"><a href="https://shaunaleebrennan.github.io/shauna-ai-portfolio/">Portfolio</a> · <a href="assets/Shauna-Azevedo-Brennan-CV.pdf">View CV (PDF)</a> · <a href="https://www.linkedin.com/in/shaunalee/">LinkedIn</a> · <a href="https://github.com/shaunaleebrennan">GitHub</a> · <a href="mailto:shaunaleebrennan@gmail.com">Email</a></p>
 

@@ -2,20 +2,24 @@
 
 [← All selected work](../README.md#selected-work)
 
-**Making enterprise AI make sense to the buyer**
+**From search to answer to action: making agentic AI easier to buy**
 
-Search. An answer. A next step. HQ Agent needed a story that made that progression clear—and gave buyers a reason to care.
+HQ Agent needed a clear story for what it could do, why it mattered and where it fitted within Workvivo's wider AI portfolio.
 
 ## What needed to change
 
-HQ Agent needed to be understood as a progression from enterprise search to grounded answers and supported action. The launch also needed a clear place within Workvivo’s portfolio, a credible trust story and packaging that reflected those different levels of value.
+Search, grounded answers and task execution can sound like one undifferentiated AI promise. Buyers needed to understand the progression in value, the role of permissions and trust, and how HQ Agent related to Workvivo HQ and ZoomMate.
 
 ## My part in it
 
-I led product and portfolio positioning, working with Product and Engineering to translate retrieval, grounding, permissions and connected actions into buyer value. I developed the seller narrative and enablement, and co-developed pricing and packaging with the Revenue leader. Technical understanding shaped the promises we could credibly make and how we packaged different levels of value.
+I led product and portfolio positioning, working with Product and Zoom's AI teams to understand enterprise search, retrieval-augmented generation (RAG), grounding, permissions, integrations and supported actions. I turned those capabilities into buyer use cases, seller messaging and enablement for IT, HR and Communications.
+
+I also co-developed pricing and packaging with the Revenue leader, considering customer value, AI maturity, use cases, competitive alternatives and sustainable economics.
 
 ## What came out of it
 
-Positioning, seller enablement and packaging built around search, answer and action. The launch gave commercial teams a practical way to explain the progression from finding information to receiving a grounded answer and completing a supported task.
+The positioning gave commercial teams a usable progression—search, answer, action—and a more credible explanation of what the product could and could not do. It informed launch and seller enablement and helped connect technical capabilities to commercial value.
 
-> An agent’s value is the work it helps people complete, with clear limits they can trust.
+Internal planning identified a substantial HQ Agent pipeline opportunity, but pipeline estimates and targets are not presented here as achieved or PMM-generated revenue.
+
+> An agent's value is the work it helps people complete, with limits buyers can trust.

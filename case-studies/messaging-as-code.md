@@ -2,20 +2,24 @@
 
 [← All selected work](../README.md#selected-work)
 
-**Making approved messaging reusable across teams and AI tools**
+**Making product messaging a source of truth—not another document to copy**
 
-AI makes messaging easier to create and distribute. I wanted to make it easier to reuse responsibly, too.
+AI can generate content quickly. Keeping that content accurate, approved and consistent across teams is the harder problem.
 
 ## What needed to change
 
-Marketing and Sales need to adapt messaging across products, audiences and assets. Each reuse can separate wording from its meaning, evidence or approval. I designed an operating model that keeps those connections visible and preserves PMM ownership.
+Sales and Marketing reuse messaging across products, audiences and assets. Each copy-and-paste can weaken the link to its original meaning, supporting evidence or approval. I wanted a system where PMM could maintain the source and teams and AI agents could reuse it reliably.
 
 ## My part in it
 
-I owned the project and wrote the messaging with support from my PMM team. I defined the content model, approval workflow and acceptance criteria, then directed AI-assisted implementation and tested changes and failures. The workflow preserves exact edits for human review. Testing led me to move from GitHub to an in-house system using Zoom agents and Canvas, so the team could find, edit and review its own wording.
+I led the project, wrote the product messaging with PMM-team support and defined the content model, approval process and acceptance criteria. I tested AI-assisted authoring and revision workflows and changed direction when a GitHub-based approach proved less practical for how the team works.
+
+The resulting in-house approach uses Zoom agents and Canvas to make messaging easier to find, maintain and review.
 
 ## What came out of it
 
-The HQ Agent messaging pilot is complete and connected to our sales enablement agent, with positive feedback so far. Phase two is to write and test the remaining messaging. The next ambition is an agentic system connected to the design system, bringing governed messaging into content creation and automating more of the workflow.
+The HQ Agent pilot is complete and connected to the sales enablement agent, with positive early feedback. Wider message coverage and a design-system-connected content generation workflow are planned, not yet established business outcomes.
+
+This is a working example of how I apply hands-on AI knowledge to improve PMM operations—not a claim that the full organisation has adopted it.
 
 > Scaling AI content starts with messaging that people can trust and agents can use.

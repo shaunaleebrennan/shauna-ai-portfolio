@@ -2,20 +2,22 @@
 
 [← All selected work](../README.md#selected-work)
 
-**Learning what AI changes by putting it to work**
+**Learn. Build. Apply.**
 
-I combine structured learning with self-guided discovery: studying the ideas, building something with them, and finding out what holds up in practice.
+I don't want to market AI from the sidelines. I learn how the systems work, build with them and use that experience to make better product and GTM decisions.
 
 ## What needed to change
 
-Research, repeated seller questions and first-pass analysis can absorb time that PMMs need for judgment. I wanted to understand which parts could become useful workflows and which decisions should stay firmly human.
+AI changes both what enterprises can buy and how marketing teams can operate. I wanted a practical understanding of agents, orchestration, context, retrieval and human oversight—not just the vocabulary.
 
 ## My part in it
 
-I completed Product School courses in AI Product Strategy for Leaders, Agentic Workflows & Loops, and Go-to-Market. Alongside that structured learning, I keep exploring independently: trying new tools, following questions into the technical detail, and building across competitive intelligence, research synthesis, positioning reviews and conversational agents.
+I completed Product School courses in AI Product Strategy for Leaders, Agentic Workflows & Loops and Go-to-Market, and I'm undertaking its Product Manager Certification. Alongside formal learning I build and test agents, automation workflows and lightweight applications using coding assistants, n8n and other developer tools.
+
+Projects include the live conversational portfolio agent, IT Pressure Test, competitive research workflows and Messaging as Code. I test what works, what fails and where human approval is still essential.
 
 ## What came out of it
 
-A growing body of practical builds and reusable workflows, including this portfolio agent and IT Pressure Test. The learning continues through testing, troubleshooting and iteration—helping me ask better questions about the products I market, evaluate AI’s possibilities and limits, and bring new approaches into PMM work.
+More technical fluency in the AI products I market, better questions for Product and Engineering, and working examples of AI applied to genuine PMM problems. These are practical builds and pilots, not claims of organisation-wide automation or measured efficiency gains.
 
-> Building with AI turns curiosity into better judgment about what to market, automate and trust.
+> The tools aren't the proof. The choices behind the workflow are.

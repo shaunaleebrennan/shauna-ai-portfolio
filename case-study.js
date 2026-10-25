@@ -27,6 +27,7 @@ try {
             <h1 class="case-title">${escape(item.title)}</h1>
             <p class="case-subtitle">${escape(story.eyebrow)}</p>
             <p class="case-intro">${escape(story.lead)}</p>
+            ${item.href ? `<div class="pb-case-link"><a class="button primary" href="${escape(item.href)}">Explore the playbook <span aria-hidden="true">↗</span></a></div>` : ''}
           </div>
           <figure class="case-visual"><img src="${escape(item.image)}" alt="${escape(item.title)} case study artwork" width="1600" height="2000" fetchpriority="high"></figure>
         </header>
@@ -37,7 +38,7 @@ try {
           <aside class="case-takeaway"><p>${escape(story.learning)}</p></aside>
           <nav class="case-actions" aria-label="Case study navigation">
             <a href="index.html#explore">← All selected work</a>
-            <a class="next-case" href="case-study.html?case=${encodeURIComponent(next.slug)}"><span>Next story</span><strong>${escape(next.title)} →</strong></a>
+            <a class="next-case" href="${escape(next.href || `case-study.html?case=${encodeURIComponent(next.slug)}`)}"><span>Next story</span><strong>${escape(next.title)} →</strong></a>
           </nav>
         </div>
       </article>`;

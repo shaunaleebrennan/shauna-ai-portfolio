@@ -79,6 +79,48 @@
       }
     },
     {
+      "slug": "playbook",
+      "title": "Playbook",
+      "category": "gtm",
+      "tag": "PMM frameworks",
+      "href": "playbook.html",
+      "summary": "Narrative Design: turn market insight into a strategic story. Explore the method, pressure-test the argument, and take the skill and workbook with you.",
+      "demonstrates": "Strategic narrative design, market insight, practical frameworks, and AI-assisted PMM workflows.",
+      "proof": "Interactive playbook, downloadable AI skill, and a four-page practical workbook.",
+      "image": "assets/playbooks/narrative-design-cover.svg",
+      "sourceUrl": "playbook.html",
+      "evidence": [
+        {
+          "title": "Explore the Narrative Design playbook",
+          "url": "playbook.html",
+          "kind": "Interactive playbook",
+          "note": "A practical method with worked examples and downloadable tools."
+        },
+        {
+          "title": "Download the narrative skill",
+          "url": "assets/playbooks/narrative-design-skill.zip",
+          "kind": "Reusable AI skill",
+          "note": "Method, pressure tests, AI narrative guidance, and spoken-flow review."
+        },
+        {
+          "title": "Download the workbook",
+          "url": "assets/playbooks/narrative-design-workbook.pdf",
+          "kind": "Printable workbook",
+          "note": "Four pages of prompts, decision guidance, and practical exercises."
+        }
+      ],
+      "caseStudy": {
+        "overview": {
+          "eyebrow": "Turning strategic PMM judgment into a method other people can use",
+          "lead": "I created a practical Narrative Design playbook that connects market insight to buying criteria, a useful approach, and a credible product contribution.",
+          "problem": "A compact framework can explain the sequence while leaving the hardest decisions to the reader. I wanted to make the reasoning usable: how to choose an insight, develop a meaningful approach, connect the product to it, and test whether the story works.",
+          "contribution": "I developed the point of view, practical guidance, worked example, AI narrative checks, and downloadable companion. The playbook credits Marcus Andrews for the five-stage change-led method and distinguishes my practical extensions, including a reframe-led alternative when a market change is not established.",
+          "result": "A public interactive playbook with an annotated example, a browser-based brief export, a reusable narrative-design skill, and a printable workbook. The companion was checked through narrative development, a narrow edit, and Question Mode; those exercises do not establish customer or commercial impact.",
+          "learning": "A useful framework makes the decisions behind the method visible."
+        }
+      }
+    },
+    {
       "slug": "messaging-as-code",
       "title": "Messaging as Code",
       "category": "technical",

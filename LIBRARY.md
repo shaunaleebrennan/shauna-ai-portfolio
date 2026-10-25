@@ -10,6 +10,10 @@ Read every case study and supporting document here on GitHub. The links below op
 
 Repositioning Workvivo for the AI era: from Employee Experience Platform towards an AI-powered digital HQ, without losing its employee experience differentiation.
 
+### [Playbook](case-studies/playbook.md)
+
+Narrative Design: turn market insight into a strategic story. Explore the method, pressure-test the argument, and take the skill and workbook with you.
+
 ### [Messaging as Code](case-studies/messaging-as-code.md)
 
 Designing an operating model for messaging reuse across teams and AI tools, with clear product truth, PMM ownership and human review.

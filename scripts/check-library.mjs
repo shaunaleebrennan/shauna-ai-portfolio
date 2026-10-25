@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import path from 'node:path';
 const docs = JSON.parse(await readFile('content/library.json', 'utf8'));
 const { work } = JSON.parse(await readFile('content/portfolio.json', 'utf8'));
-const files = ['index.html', 'library.html', 'case-study.html', 'playbook.html', ...docs.map(d => `documents/${d.id}.html`)];
+const files = ['index.html', 'library.html', 'case-study.html', 'playbook.html', 'narrative-design-guide.html', ...docs.map(d => `documents/${d.id}.html`)];
 const library = await readFile('library.html', 'utf8');
 const tracked = (await import('node:child_process')).execFileSync('git', ['ls-files'], { encoding: 'utf8' }).split('\n');
 let checks = 0;

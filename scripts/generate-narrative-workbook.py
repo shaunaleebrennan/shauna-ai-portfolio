@@ -79,6 +79,8 @@ def field(title, prompt, x, top, width, lines=1):
     write_lines(x, top+15+used+18, width, lines)
 
 def header(number, title, subtitle):
+    page_tints = [HexColor('#eee7f8'), HexColor('#edf4df'), HexColor('#f8e7eb'), HexColor('#f4ebdf')]
+    rect(M-12, 46, CW+24, 88, page_tints[number-1], radius=8)
     rect(M, 27, 24, 5, GREEN)
     label('Shauna Azevedo-Brennan / Narrative Design', M+34, 23, CW-34, INK)
     label(f'Workbook {number:02d} / 04', M, 54, CW)

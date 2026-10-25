@@ -25,7 +25,7 @@ page('Narrative design.\nChange the frame.', 'A practical playbook and workbook 
  note('When competitors tell the same story, they reinforce the same buying criteria. Narrative design should challenge those criteria - with a market insight customers recognize and an approach your business can credibly lead.'),
  p('Build the argument. Connect it to the product. Test it with people. Then put it to work.'),
  p('Based on Marcus Andrews\u2019 five-stage Narrative Design method, with independent practical guidance on research, positioning, evidence, AI, and GTM execution.'),
- p('Version 1.0 | 25 October 2026'))
+ p('Visual edition 1.1 | 25 October 2026'))
 page('How to use this guide', 'Start with the decision you need to influence. Use the method at the depth the work needs.',
  h('Three ways in'),
  b('<b>Build a narrative:</b> work through the brief, research, five stages, and evidence mapping. Use the workbook at the end to capture your decisions.'),
@@ -198,54 +198,151 @@ page('Method credits and sources', 'A reusable method, with clear attribution an
  h('Keep working'),
  p('The next four pages are printable worksheets. Download them separately, read the complete guide online, or get the AI companion from the portfolio.'),
  p('<link href="https://shaunaleebrennan.github.io/shauna-ai-portfolio/playbook.html" color="#355900">shaunaleebrennan.github.io/shauna-ai-portfolio/playbook.html</link>'),
- note('The examples are fictional and the practical tests are diagnostic tools. Neither an AI score nor a polished draft predicts commercial effectiveness. Version 1.0 | 25 October 2026.'))
+ note('The examples are fictional and the practical tests are diagnostic tools. Neither an AI score nor a polished draft predicts commercial effectiveness. Visual edition 1.1 | 25 October 2026.'))
 assert len(PAGES)==19,len(PAGES)
 
+# Visual edition: generated editorial artwork is illustrative; process graphics
+# are drawn deterministically so labels and relationships remain exact.
+from reportlab.platypus import Flowable
+from reportlab.lib.utils import ImageReader
+from PIL import Image as PILImage
+from io import BytesIO
 for name,file in [('Guide','DejaVuSans.ttf'),('GuideBold','DejaVuSans-Bold.ttf')]: pdfmetrics.registerFont(TTFont(name,'/usr/share/fonts/truetype/dejavu/'+file))
 pdfmetrics.registerFontFamily('Guide',normal='Guide',bold='GuideBold',italic='Guide',boldItalic='GuideBold')
+W,H=A4
+INK=colors.HexColor('#111812'); CREAM=colors.HexColor('#f8f6f0'); ACID=colors.HexColor('#c9ff63')
+LAV=colors.HexColor('#e9e0f8'); PINK=colors.HexColor('#f7e3e9'); MINT=colors.HexColor('#edf3e5')
+STAGE_COLOURS=[LAV,PINK,colors.HexColor('#e4f4c8'),colors.HexColor('#f6e8d8'),colors.HexColor('#dfeae5')]
 styles={
- 'title':ParagraphStyle('title',fontName='GuideBold',fontSize=30,leading=35,textColor=colors.HexColor('#101511'),spaceAfter=15),
- 'deck':ParagraphStyle('deck',fontName='Guide',fontSize=12,leading=18,textColor=colors.HexColor('#4b554b'),spaceAfter=23),
- 'h':ParagraphStyle('h',fontName='GuideBold',fontSize=12,leading=17,spaceBefore=13,spaceAfter=7,textColor=colors.HexColor('#101511')),
- 'p':ParagraphStyle('p',fontName='Guide',fontSize=11,leading=17,spaceAfter=11,textColor=colors.HexColor('#263026')),
- 'b':ParagraphStyle('b',fontName='Guide',fontSize=11,leading=17,spaceAfter=10,leftIndent=12,firstLineIndent=-12,textColor=colors.HexColor('#263026')),
- 'note':ParagraphStyle('note',fontName='Guide',fontSize=11,leading=17,spaceBefore=16,spaceAfter=23,backColor=colors.HexColor('#edf3e5'),borderPadding=12,textColor=colors.HexColor('#172216'))}
+ 'title':ParagraphStyle('title',fontName='GuideBold',fontSize=29,leading=33,textColor=INK,spaceAfter=12),
+ 'deck':ParagraphStyle('deck',fontName='Guide',fontSize=12,leading=17,textColor=colors.HexColor('#50584e'),spaceAfter=18),
+ 'h':ParagraphStyle('h',fontName='GuideBold',fontSize=11.8,leading=16,spaceBefore=10,spaceAfter=6,textColor=INK,keepWithNext=True),
+ 'p':ParagraphStyle('p',fontName='Guide',fontSize=10.5,leading=15.3,spaceAfter=9,textColor=colors.HexColor('#263026')),
+ 'b':ParagraphStyle('b',fontName='Guide',fontSize=10.5,leading=15.3,spaceAfter=8,leftIndent=12,firstLineIndent=-12,textColor=colors.HexColor('#263026')),
+ 'note':ParagraphStyle('note',fontName='Guide',fontSize=10.5,leading=15.3,spaceBefore=13,spaceAfter=22,backColor=MINT,borderPadding=10,textColor=INK),
+ 'caption':ParagraphStyle('caption',fontName='Guide',fontSize=8.2,leading=11.5,spaceAfter=12,textColor=colors.HexColor('#535e52'))}
+ART=OUT/'illustrations'
+READERS={}
+def art(c,name,x,y,w,h):
+ path=ART/(name+'.jpg')
+ if name not in READERS: READERS[name]=ImageReader(str(path))
+ reader=READERS[name];iw,ih=reader.getSize();scale=max(w/iw,h/ih)
+ c.saveState();clip=c.beginPath();clip.rect(x,y,w,h);c.clipPath(clip,stroke=0,fill=0)
+ c.drawImage(reader,x+(w-iw*scale)/2,y+(h-ih*scale)/2,iw*scale,ih*scale,mask='auto');c.restoreState()
+def para(c,t,x,y,w,sz=10,lead=14,font='Guide',colour=INK):
+ st=ParagraphStyle('canvas',fontName=font,fontSize=sz,leading=lead,textColor=colour)
+ pp=Paragraph(t,st);_,hh=pp.wrap(w,1000);pp.drawOn(c,x,y-hh);return hh
+
+def box(c,x,y,w,h,t,fill,sz=9):
+ c.setFillColor(fill);c.roundRect(x,y,w,h,7,fill=1,stroke=0)
+ st=ParagraphStyle('box',fontName='GuideBold',fontSize=sz,leading=sz+3,textColor=INK,alignment=1)
+ pp=Paragraph(t,st);_,ph=pp.wrap(w-18,h);pp.drawOn(c,x+9,y+(h-ph)/2)
+def arrow(c,x1,y1,x2,y2,colour=INK):
+ c.setStrokeColor(colour);c.setLineWidth(1);c.line(x1,y1,x2,y2)
+ c.line(x2,y2,x2-4,y2+3);c.line(x2,y2,x2-4,y2-3)
+
+class Diagram(Flowable):
+ def __init__(self,kind): Flowable.__init__(self);self.kind=kind;self.height=90
+ def wrap(self,aw,ah): self.width=aw;return aw,self.height
+ def draw(self):
+  c=self.canv;w=self.width;k=self.kind
+  if k==0:
+   box(c,0,18,w*.43,57,'BEFORE<br/>One team gets started',LAV)
+   box(c,w*.57,18,w*.43,57,'NOW<br/>Several teams must be ready',PINK)
+   arrow(c,w*.44,46,w*.55,46)
+  elif k==1:
+   box(c,0,17,w*.44,58,'INTERNAL CHECKLIST<br/>Tasks completed',LAV)
+   box(c,w*.56,17,w*.44,58,'CUSTOMER OUTCOME<br/>Still unable to use the product',PINK)
+   c.setFont('GuideBold',20);c.setFillColor(INK);c.drawCentredString(w*.5,38,'≠')
+  elif k==2:
+   labels=['Agree the first<br/>valuable outcome','Work back to<br/>enabling milestones','Measure progress<br/>toward that outcome']
+   for i,t in enumerate(labels):
+    x=i*(w/3+2);box(c,x,18,w/3-12,57,t,[LAV,ACID,PINK][i])
+    if i<2:arrow(c,x+w/3-9,46,x+w/3-1,46)
+  elif k==3:
+   labels=['Requirements','Ownership','Visibility']
+   for i,t in enumerate(labels):
+    x=i*w/3;box(c,x,20,w/3-12,54,t,[LAV,PINK,colors.HexColor('#f3dfc9')][i])
+    if i<2:
+     c.setStrokeColor(colors.HexColor('#9ca396'));c.setDash(2,3);c.line(x+w/3-8,47,x+w/3,47);c.setDash()
+  else:
+   labels=['Obstacle','Capability','How it works','Outcome','Evidence']
+   for i,t in enumerate(labels):
+    x=i*w/5;box(c,x,20,w/5-8,54,t,[PINK,LAV,MINT,ACID,LAV][i],8)
+    if i<4:arrow(c,x+w/5-5,47,x+w/5-1,47)
+
+class Figure(Flowable):
+ def __init__(self,name,height=164,caption=''): Flowable.__init__(self);self.name=name;self.height=height+24;self.imageHeight=height;self.caption=caption
+ def wrap(self,aw,ah):self.width=aw;return aw,self.height
+ def draw(self):
+  art(self.canv,self.name,0,24,self.width,self.imageHeight)
+  if self.caption:para(self.canv,self.caption,0,17,self.width,7.8,10.5,colour=colors.HexColor('#62685c'))
+
+class SignalMap(Flowable):
+ def __init__(self):Flowable.__init__(self);self.height=78
+ def wrap(self,aw,ah):self.width=aw;return aw,self.height
+ def draw(self):
+  c=self.canv;w=self.width
+  for i,(title,sub) in enumerate([('OBSERVE','What did you see?'),('INTERPRET','What might it mean?'),('DECIDE','What should change?')]):
+   x=i*w/3;box(c,x,8,w/3-10,59,title+'<br/>'+sub,[LAV,PINK,ACID][i],8.7)
+   if i<2:arrow(c,x+w/3-8,37,x+w/3-1,37)
+
 counts=[]
 def decorate(c,doc):
- if doc.page==1:
-  c.setFillColor(colors.HexColor('#f1f5e9'));c.rect(0,0,A4[0],A4[1],fill=1,stroke=0)
-  c.setStrokeColor(colors.HexColor('#b7c3ac'));c.setLineWidth(1)
-  c.circle(A4[0]-150,190,100,fill=0,stroke=1);c.circle(A4[0]-150,190,135,fill=0,stroke=1)
-  c.setFillColor(colors.HexColor('#c9ff63'));c.circle(A4[0]-150,190,61,fill=1,stroke=0)
-  c.setFont('GuideBold',13);c.setFillColor(colors.HexColor('#101511'));c.drawString(48,190,'Strategy that ships.')
-  c.drawString(48,168,'Stories that stick.')
- if 6<=doc.page<=10:
+ n=doc.page
+ bg=CREAM
+ if 6<=n<=10:bg=[colors.HexColor('#f8f5fd'),colors.HexColor('#fcf5f7'),colors.HexColor('#f7faef'),colors.HexColor('#fcf7f0'),colors.HexColor('#f3f8f4')][n-6]
+ if n in [2,14,18]:bg=colors.HexColor('#f6f1fb')
+ c.setFillColor(bg);c.rect(0,0,W,H,fill=1,stroke=0)
+ c.setFillColor(ACID);c.rect(43,H-32,27,5,fill=1,stroke=0)
+ c.setFont('GuideBold',7.4);c.setFillColor(INK);c.drawString(80,H-31,'SHAUNA AZEVEDO-BRENNAN / NARRATIVE DESIGN')
+ c.setStrokeColor(colors.HexColor('#cad0c2'));c.line(43,40,W-43,40)
+ c.setFont('Guide',7);c.setFillColor(colors.HexColor('#596150'));c.drawString(43,26,'Practical companion | Five-stage method: Marcus Andrews')
+ c.setFont('GuideBold',8);c.drawRightString(W-43,26,str(n).zfill(2));counts.append(n);c.bookmarkPage('page-'+str(n))
+ if 6<=n<=10:
+  c.setFillColor(STAGE_COLOURS[n-6]);c.roundRect(W-106,H-116,63,54,9,fill=1,stroke=0)
+  c.setFont('GuideBold',29);c.setFillColor(INK);c.drawCentredString(W-74,H-100,str(n-5).zfill(2))
   labels=['CHANGE','IMPACT','NEW GAME','BARRIERS','SOLUTION']
   for i,label in enumerate(labels):
-   x=48+i*101
-   c.setFillColor(colors.HexColor('#c9ff63' if i==doc.page-6 else '#edf1e7'));c.roundRect(x,73,94,28,4,fill=1,stroke=0)
-   c.setFillColor(colors.HexColor('#263026'));c.setFont('GuideBold',6.9);c.drawCentredString(x+47,84,label)
- c.setFillColor(colors.HexColor('#c9ff63'));c.rect(43,A4[1]-32,27,5,fill=1,stroke=0)
- c.setFont('GuideBold',7.4);c.setFillColor(colors.HexColor('#3c493c'));c.drawString(80,A4[1]-31,'SHAUNA AZEVEDO-BRENNAN / NARRATIVE DESIGN')
- c.setStrokeColor(colors.HexColor('#ced6c9'));c.line(43,40,A4[0]-43,40)
- c.setFont('Guide',7);c.drawString(43,26,'Independent practical companion | Five-stage method: Marcus Andrews')
- c.drawRightString(A4[0]-43,26,str(doc.page).zfill(2));counts.append(doc.page)
- c.bookmarkPage('page-'+str(doc.page))
+   x=48+i*101;c.setFillColor(ACID if i==n-6 else colors.HexColor('#e8ebdf'));c.roundRect(x,60,94,21,4,fill=1,stroke=0)
+   c.setFillColor(INK);c.setFont('GuideBold',6.5);c.drawCentredString(x+47,68,label)
+ if n==1:
+  # Actual title remains live text; the image carries no copy.
+  para(c,'Narrative design.<br/>Change the frame.',48,H-88,500,40,44,'GuideBold')
+  para(c,'A practical playbook and workbook for turning market insight into a story people can understand, believe, and use.',50,H-204,480,12,18)
+  para(c,'Shauna Azevedo-Brennan',50,H-275,480,11,15,'GuideBold')
+  art(c,'change-the-frame',0,182,W,335)
+  para(c,'MY POINT OF VIEW',48,159,480,8,11,'GuideBold')
+  para(c,'When competitors tell the same story, they reinforce the same buying criteria. Narrative design should challenge those criteria - with a market insight customers recognize and an approach your business can credibly lead.',48,138,497,10,14)
+  para(c,'Strategy that ships. Stories that stick.  |  Visual edition 1.1 · 25 October 2026',48,66,497,8,11,'GuideBold')
 
-def safe(t):return t.replace('\u2019',"'").replace('\u2018',"'").replace('\u201c','“').replace('\u201d','”').replace('\n','<br/>')
+def safe(t):return t.replace('\u2019',"'").replace('\u2018',"'").replace('\n','<br/>')
 flow=[]
 for i,(title,deck,blocks) in enumerate(PAGES):
  if i:flow.append(PageBreak())
- flow += [Paragraph(safe(title),styles['title']),Paragraph(safe(deck),styles['deck'])]
- for kind,t in blocks:flow.append(Paragraph(('• ' if kind=='b' else '')+safe(t),styles[kind]))
+ if i==0:flow.append(Spacer(1,1));continue
+ ts=styles['title']
+ if 5<=i<=9:ts=ParagraphStyle('stageTitle',parent=styles['title'],rightIndent=80)
+ flow += [Paragraph(safe(title),ts),Paragraph(safe(deck),styles['deck'])]
+ if i==3:flow.append(Figure('examine-the-evidence',145,'Illustration: examine the same evidence from different perspectives.'))
+ if i==10:flow.append(Figure('customer-progress',150,'Illustration: dependencies must come together before the customer can progress.'))
+ if i==11:flow.append(Diagram(4))
+ if i==12:flow.append(Figure('examine-the-evidence',120,'Look for the evidence that would challenge your preferred interpretation.'))
+ for j,(kind,t) in enumerate(blocks):
+  st=styles[kind]
+  if kind=='note':
+   tint=STAGE_COLOURS[i-5] if 5<=i<=9 else (PINK if i%3==0 else LAV if i%3==1 else MINT)
+   st=ParagraphStyle('colourNote',parent=st,backColor=tint)
+  flow.append(Paragraph(('• ' if kind=='b' else '')+safe(t),st))
+  if 5<=i<=9 and j==0:flow.append(Diagram(i-5))
 base=OUT/'narrative-design-guide-body.pdf'
-doc=SimpleDocTemplate(str(base),pagesize=A4,rightMargin=48,leftMargin=48,topMargin=62,bottomMargin=61,title='Narrative Design: Change the Frame | Playbook and Workbook',author='Shauna Azevedo-Brennan')
+doc=SimpleDocTemplate(str(base),pagesize=A4,rightMargin=48,leftMargin=48,topMargin=64,bottomMargin=89,title='Narrative Design: Change the Frame | Visual Playbook and Workbook',author='Shauna Azevedo-Brennan')
 doc.build(flow,onFirstPage=decorate,onLaterPages=decorate)
 assert len(PdfReader(base).pages)==19,('Unexpected overflow',len(PdfReader(base).pages))
 writer=PdfWriter();writer.append(str(base));writer.append(str(OUT/'narrative-design-workbook.pdf'))
-for i,(title,_,_) in enumerate(PAGES): writer.add_outline_item(title.replace('\n',' '),i)
-for i,title in enumerate(['Workbook: strategic choice','Workbook: narrative draft','Workbook: product and proof','Workbook: writing and AI review']): writer.add_outline_item(title,19+i)
-writer.add_metadata({'/Title':'Narrative Design: Change the Frame | Playbook and Workbook','/Author':'Shauna Azevedo-Brennan','/Subject':'A practical narrative design method, worked example, and printable workbook'})
+for i,(title,_,_) in enumerate(PAGES):writer.add_outline_item(title.replace('\n',' '),i)
+for i,title in enumerate(['Workbook: strategic choice','Workbook: narrative draft','Workbook: product and proof','Workbook: writing and AI review']):writer.add_outline_item(title,19+i)
+writer.add_metadata({'/Title':'Narrative Design: Change the Frame | Visual Playbook and Workbook','/Author':'Shauna Azevedo-Brennan','/Subject':'Illustrated practical guide with five-stage method, worked example, evidence tests, and printable workbook'})
 writer.write(str(OUT/'narrative-design-guide.pdf'));base.unlink()
 # HTML uses the same source so the complete method remains readable without a PDF.
 sections=[]

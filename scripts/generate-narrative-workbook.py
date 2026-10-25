@@ -75,7 +75,7 @@ def write_lines(x, top, width, count=1, gap=20):
 
 def field(title, prompt, x, top, width, lines=1):
     label(title, x, top, width, INK)
-    used = para(prompt, x, top+15, width, 9.25, 12.5, MUTED)
+    used = para(prompt, x, top+15, width, 10.5, 15, MUTED)
     write_lines(x, top+15+used+18, width, lines)
 
 def header(number, title, subtitle):
@@ -84,8 +84,8 @@ def header(number, title, subtitle):
     rect(M, 27, 24, 5, GREEN)
     label('Shauna Azevedo-Brennan / Narrative Design', M+34, 23, CW-34, INK)
     label(f'Workbook {number:02d} / 04', M, 54, CW)
-    title_h = para(title, M, 75, CW, 25, 29.5, INK, 'Bold')
-    return 75 + title_h + 13 + para(subtitle, M, 75+title_h+13, CW, 10.2, 14.2, MUTED)
+    title_h = para(title, M, 75, CW, 28, 32, INK, 'Bold')
+    return 75 + title_h + 13 + para(subtitle, M, 75+title_h+13, CW, 11, 15.5, MUTED)
 
 def footer(number):
     line(M, H-42, CW)
@@ -98,7 +98,7 @@ def end_page(number):
 
 # PAGE 1 ---------------------------------------------------------------------
 header(1, 'Start with the strategic choice',
-       'Use evidence to change a buying decision. Complete a working draft, then test it with people.')
+       'Use evidence to change a buying decision. Draft, then test with people.')
 
 rect(M, 143, CW, 109, PALE, radius=4)
 rect(M, 143, 4, 109, LAVENDER)
@@ -142,8 +142,8 @@ top = 151
 for num, title, prompt in stages:
     rect(M, top, 25, 25, GREEN if num=='3' else PALE, radius=3)
     para(num, M+9, top+5, 12, 11, 14, INK, 'Bold')
-    para(title, M+38, top+1, CW-38, 12.1, 16, INK, 'Bold')
-    ph = para(prompt, M+38, top+23, CW-38, 9.8, 13.4, MUTED)
+    para(title, M+38, top+1, CW-38, 13.2, 18, INK, 'Bold')
+    ph = para(prompt, M+38, top+23, CW-38, 10.5, 15, MUTED)
     write_lines(M+38, top+23+ph+17, CW-38)
     top += 98
 
@@ -158,8 +158,8 @@ para("This alternative is not Andrews' five-stage method. Do not invent a trend 
 end_page(2)
 
 # PAGE 3 ---------------------------------------------------------------------
-header(3, 'Connect the product to the proof',
-       'Complete one chain for the most important barrier. Repeat it for other material claims.')
+header(3, 'Connect product to proof',
+       'Map one barrier to a capability, an outcome, and the evidence.')
 
 chain = [
     ('Customer obstacle', 'A barrier to the proposed approach, grounded in the audience’s work.'),
@@ -171,7 +171,7 @@ chain = [
 top=153
 for i,(title,prompt) in enumerate(chain):
     label(title, M, top, 128, INK)
-    para(prompt, M+144, top-1, CW-144, 9.5, 12.8, MUTED)
+    para(prompt, M+144, top-1, CW-144, 10.5, 15, MUTED)
     write_lines(M+144, top+43, CW-144)
     if i < 4:
         line(M, top+58, CW, PALE, 1)
@@ -193,15 +193,15 @@ para('<b>Decide:</b> advance to a defined test, refine a specific gap, or rebuil
 end_page(3)
 
 # PAGE 4 ---------------------------------------------------------------------
-header(4, 'Make it clear. Make it credible.',
-       'Use these practical companion checks before adapting the story into a real asset or conversation.')
+header(4, 'Make it clear and credible',
+       'Review clarity, credibility, and AI claims before using the story.')
 
 label('AI language / use when AI is material', M, 151, COL, INK)
 label('Read-aloud review / use every time', M+COL+GAP, 151, COL, INK)
-para('Temporarily remove AI labels. Are the customer, value, mechanism and reason to choose still clear? Restore terms that add necessary precision.', M, 174, COL, 9.6, 13.4)
-para('Read the draft aloud. Mark places where you lose breath, stumble, reread or cannot explain the connection between ideas.', M+COL+GAP, 174, COL, 9.6, 13.4)
-para('For each material claim, explain:<br/>• the task, inputs and delivered behavior;<br/>• human judgment, permissions and exceptions;<br/>• what is possible, live, measured or forecast;<br/>• proof suited to the promise.', M, 252, COL, 9.6, 14)
-para('Check for:<br/>• one understandable idea at a time;<br/>• concrete work, credible stakes and empathy;<br/>• natural rhythm and useful transitions;<br/>• a specific idea worth remembering.', M+COL+GAP, 252, COL, 9.6, 14)
+para('Temporarily remove AI labels. Are the customer, value, mechanism and reason to choose still clear? Restore terms that add necessary precision.', M, 174, COL, 10.5, 15.3)
+para('Read the draft aloud. Mark places where you lose breath, stumble, reread or cannot explain the connection between ideas.', M+COL+GAP, 174, COL, 10.5, 15.3)
+para('For each material claim, explain:<br/>• the task, inputs and delivered behavior;<br/>• human judgment, permissions and exceptions;<br/>• what is possible, live, measured or forecast;<br/>• proof suited to the promise.', M, 252, COL, 10.5, 15)
+para('Check for:<br/>• one understandable idea at a time;<br/>• concrete work, credible stakes and empathy;<br/>• natural rhythm and useful transitions;<br/>• a specific idea worth remembering.', M+COL+GAP, 252, COL, 10.5, 15)
 para('For agents, verify the resulting task or system state. A convincing response does not establish that the work was completed.', M, 344, COL, 9.2, 12.8, MUTED)
 para('Ask a listener to retell the argument and the next action. Treat their response as evidence within that context, not a revenue forecast.', M+COL+GAP, 344, COL, 9.2, 12.8, MUTED)
 
@@ -218,8 +218,8 @@ prompts = [
 top=489
 for name, prompt in prompts:
     rect(M, top+2, 3, 15, LAVENDER if name=='Check an AI promise' else GREEN)
-    para(name, M+12, top, 118, 9.2, 12.5, INK, 'Bold')
-    para(escape(prompt), M+137, top, CW-137, 9.1, 12.5)
+    para(name, M+12, top, 118, 10.2, 14.5, INK, 'Bold')
+    para(escape(prompt), M+137, top, CW-137, 10.2, 14.5)
     top += 55
 
 line(M, 719, CW)

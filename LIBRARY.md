@@ -46,6 +46,10 @@ Shaping Seer’s positioning, packaging and route to market, with a clear view o
 
 Turning IT-buyer positioning judgment into a working tool: six audience lenses, source-linked diagnostics, and a practical rewrite brief.
 
+### [Brazil in Red](case-studies/brazil-in-red.md)
+
+From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.
+
 ## Supporting documents
 
 - **[Career and leadership](knowledge/portfolio.md)** — Experience, progression, team leadership, hands-on builds, and completed learning.

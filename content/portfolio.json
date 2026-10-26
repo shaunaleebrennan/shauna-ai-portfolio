@@ -741,6 +741,42 @@
         "outcome": "A live IT messaging review that gives immediate, inspectable guidance and a reusable rewrite brief. The build demonstrates how positioning judgment can become a practical workflow. It does not establish commercial lift, buyer agreement or production-grade approval governance.",
         "learning": "A useful review system must make its limits as visible as its recommendations. Simplifying the interface only helps if the evidence and the human decision remain clear."
       }
+    },
+    {
+      "slug": "brazil-in-red",
+      "title": "Brazil in Red",
+      "category": "technical",
+      "tag": "Data storytelling",
+      "summary": "From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.",
+      "demonstrates": "Research synthesis, data storytelling, product judgment, visual direction, and AI-assisted building.",
+      "proof": "Live bilingual atlas with interactive maps, round comparisons, source links, and methodology notes.",
+      "image": "assets/evidence/brazil-in-red.svg",
+      "sourceUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+      "projectUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+      "projectLabel": "Explore the live atlas",
+      "projectPreview": {
+        "image": "assets/evidence/brazil-in-red-map.jpg",
+        "alt": "Brazil in Red state map with round selectors and a detailed Minas Gerais comparison.",
+        "caption": "Inside the atlas: switch rounds, explore a state, and compare the result with the change in vote share."
+      },
+      "evidence": [
+        {
+          "title": "Explore Brazil in Red",
+          "url": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+          "kind": "Live personal project",
+          "note": "Explore the bilingual atlas, interactive maps, comparison tables, and sources and method section."
+        }
+      ],
+      "caseStudy": {
+        "overview": {
+          "eyebrow": "Turning curiosity into a story people can explore",
+          "lead": "I wanted to understand how Brazil voted, what changed between rounds, and how the picture differed for Brazilians abroad. That curiosity became Brazil in Red: an interactive atlas built with AI.",
+          "problem": "Election results arrive as headlines, tables, and scattered reports. I wanted to bring the national picture, regional differences, and overseas vote into one experience. The challenge was to make a complex dataset approachable while preserving the distinctions that matter: vote share versus vote count, a change in winner versus a change in margin, and the different candidate fields in each round.",
+          "contribution": "I set the questions, directed the research and AI-assisted build, and shaped the editorial structure and visual experience. I pushed the work through repeated reviews of maps, chart labels, comparisons, and page hierarchy. When a percentage was ambiguous, I asked for its meaning to be explicit. When selected countries obscured the bigger picture, I asked for regional context. I also expanded the story beyond the results to include people helping each other reach the polls. The resulting experience combines guided storytelling with maps and tables readers can explore for themselves.",
+          "result": "I published a bilingual atlas with English and Portuguese views, maps covering 27 Brazilian federal units, comparisons across 31 selected overseas countries and territories, and controls for exploring rounds, regions, and locations. It brings together the numbers, political context, and stories of participation, with source links and methodology notes. The project demonstrates how I take a question from research through product direction, AI-assisted implementation, and public delivery.",
+          "learning": "AI made it faster to build. Judgment made it worth exploring."
+        }
+      }
     }
   ]
 }

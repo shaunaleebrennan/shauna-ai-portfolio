@@ -42,6 +42,10 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 **Applied learning · Agents · Workflow design** — Combining Product School courses in AI product strategy, agentic workflows and go-to-market with self-guided building, testing and iteration. Practical work includes this portfolio agent, IT Pressure Test and reusable research, synthesis and competitive workflows.
 
+### [Brazil in Red](case-studies/brazil-in-red.md)
+
+**Research · Data storytelling · AI-assisted building** — Turning a personal question into a bilingual, interactive election atlas. I directed the research, editorial structure, visual experience, and iteration across state maps, overseas comparisons, and stories of participation. [Explore the live atlas](https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/).
+
 ### More case studies
 
 - [**Portfolio Voice Agent**](case-studies/portfolio-voice-agent.md) — Designing, configuring and testing a live voice and text agent that turns career and project evidence into useful conversations.

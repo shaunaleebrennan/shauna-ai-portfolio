@@ -27,10 +27,12 @@ try {
             <h1 class="case-title">${escape(item.title)}</h1>
             <p class="case-subtitle">${escape(story.eyebrow)}</p>
             <p class="case-intro">${escape(story.lead)}</p>
+            ${item.projectUrl ? `<div class="pb-case-link"><a class="button primary" href="${escape(item.projectUrl)}" target="_blank" rel="noopener noreferrer">${escape(item.projectLabel || 'Explore the project')} <span aria-hidden="true">↗</span></a></div>` : ''}
             ${item.href ? `<div class="pb-case-link"><a class="button primary" href="${escape(item.href)}">Explore the playbook <span aria-hidden="true">↗</span></a></div>` : ''}
           </div>
           <figure class="case-visual"><img src="${escape(item.image)}" alt="${escape(item.title)} case study artwork" width="1600" height="2000" fetchpriority="high"></figure>
         </header>
+        ${item.projectPreview ? `<figure class="case-project-preview case-shell"><a href="${escape(item.projectUrl)}" target="_blank" rel="noopener noreferrer"><img src="${escape(item.projectPreview.image)}" alt="${escape(item.projectPreview.alt)}" loading="lazy" width="1248" height="824"></a><figcaption>${escape(item.projectPreview.caption)}</figcaption></figure>` : ''}
         <div class="case-body case-shell">
           ${section('context', 'What needed to change', story.problem)}
           ${section('contribution', 'My part in it', story.contribution)}

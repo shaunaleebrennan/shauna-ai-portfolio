@@ -1,0 +1,22 @@
+@font-face{font-family:"Portfolio Sans";src:url("assets/fonts/DMSans-Regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Portfolio Sans";src:url("assets/fonts/DMSans-SemiBold.ttf") format("truetype");font-style:normal;font-weight:600;font-display:swap}
+.portfolio-header-band{background:#0b0d0c;color:#eef1e8;position:relative;z-index:2}
+.portfolio-header{box-sizing:border-box;width:min(calc(100% - 48px),1180px);margin:0 auto;min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:28px;border-bottom:1px solid #272c28;font:400 14px/1.55 "Portfolio Sans",sans-serif}
+.portfolio-header a{color:#a5aa9d;text-decoration:none;white-space:nowrap}
+.portfolio-header a:hover{color:#eef1e8}
+.portfolio-header a:focus-visible{outline:2px solid #c9ff63;outline-offset:5px}
+.portfolio-header .portfolio-brand{display:flex;align-items:center;gap:12px;color:#eef1e8;font-size:16px;font-weight:600}
+.portfolio-brand>span{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#c9ff63;color:#111;font-size:12px}
+.portfolio-navigation{display:flex;align-items:center;gap:32px}
+.portfolio-header .portfolio-linkedin{display:inline-flex;align-items:center;gap:6px;border:1px solid #272c28;border-radius:99px;padding:9px 14px;font-size:14px}
+.portfolio-header .portfolio-linkedin-short{display:none}
+@media(max-width:760px){
+  .portfolio-header{width:calc(100% - 32px);display:grid;grid-template-columns:1fr auto;gap:0 14px;padding:16px 0 0;min-height:112px}
+  .portfolio-header .portfolio-brand{font-size:13px;gap:9px}
+  .portfolio-brand>span{flex-basis:32px;width:32px;height:32px}
+  .portfolio-header .portfolio-linkedin{grid-column:2;grid-row:1;font-size:12px;padding:8px 11px}
+  .portfolio-header .portfolio-linkedin-full{display:none}
+  .portfolio-header .portfolio-linkedin-short{display:inline}
+  .portfolio-navigation{grid-column:1/-1;grid-row:2;justify-content:center;gap:32px;min-height:48px;font-size:13px}
+}
+@media print{.portfolio-header-band{display:none}}

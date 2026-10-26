@@ -7,4 +7,6 @@ const files=['tool.html','manual-review.html','favicon.svg','assets/styles.css',
 const manifest={sourceRepository:'https://github.com/shaunaleebrennan/ai-positioning-qa',sourceCommit:execFileSync('git',['-C',source,'rev-parse','HEAD'],{encoding:'utf8'}).trim(),files:[]};
 for(const file of files){const dest=file==='tool.html'?'index.html':file;await mkdir(`${target}/${dest.split('/').slice(0,-1).join('/')}`,{recursive:true});await copyFile(`${source}/docs/${file}`,`${target}/${dest}`);manifest.files.push({source:file,path:dest,sha256:createHash('sha256').update(await readFile(`${target}/${dest}`)).digest('hex')});}
 await writeFile(`${target}/source-manifest.json`,JSON.stringify(manifest,null,2)+'\n');
+const { syncSiteHeaders } = await import('./sync-site-header.mjs');
+await syncSiteHeaders();
 console.log(`Synced ${files.length} public runtime files. No research or private source files copied.`);

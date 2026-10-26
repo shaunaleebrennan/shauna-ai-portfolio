@@ -1,232 +1,161 @@
 #!/usr/bin/env python3
-"""Editable ReportLab source for the four-page Narrative Design workbook.
-
-Run: python3 scripts/generate-narrative-workbook.py (requires ReportLab and DejaVu Sans)
-No private company context or proprietary research is included.
-"""
+"""Build the four-page workbook with the portfolio's embedded fonts and colours."""
 from pathlib import Path
-from xml.sax.saxutils import escape
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.lib.colors import HexColor, Color
+from reportlab.lib.colors import HexColor
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import Paragraph
 
-ROOT = Path(__file__).resolve().parents[1] / "assets" / "playbooks"
-OUT = ROOT / "narrative-design-workbook.pdf"
-ROOT.mkdir(parents=True, exist_ok=True)
-
-# DM Sans and Manrope are preferred by the portfolio; use embedded, freely
-# redistributable DejaVu Sans when those fonts are not available locally.
-FONT_DIR = Path('/usr/share/fonts/truetype/dejavu')
-for name, filename in [('Body', 'DejaVuSans.ttf'), ('Bold', 'DejaVuSans-Bold.ttf')]:
-    pdfmetrics.registerFont(TTFont(name, str(FONT_DIR / filename)))
-pdfmetrics.registerFontFamily('Body', normal='Body', bold='Bold', italic='Body', boldItalic='Bold')
+PROJECT = Path(__file__).resolve().parents[1]
+OUT = PROJECT / 'assets/playbooks/narrative-design-workbook.pdf'
+FONT_DIR = PROJECT / 'assets/fonts'
+for name, file in [('Body', 'DMSans-Regular.ttf'), ('BodyBold', 'DMSans-SemiBold.ttf'),
+                   ('Heading', 'Manrope-Medium.ttf'), ('HeadingBold', 'Manrope-SemiBold.ttf')]:
+    pdfmetrics.registerFont(TTFont(name, str(FONT_DIR / file)))
+pdfmetrics.registerFontFamily('Body', normal='Body', bold='BodyBold', italic='Body', boldItalic='BodyBold')
 
 W, H = A4
-M = 43
-CW = W - 2 * M
-INK = HexColor('#0b0d0c')
-MUTED = HexColor('#4b524b')
-RULE = HexColor('#bdc5b8')
-PALE = HexColor('#eef1e8')
-GREEN = HexColor('#c9ff63')
-LAVENDER = HexColor('#8b7dff')
-PINK = HexColor('#f6c8d8')
-WHITE = HexColor('#ffffff')
-
+M = 46
+CW = W - M * 2
+GAP = 28
+COL = (CW - GAP) / 2
+INK = HexColor('#171e18')
+MUTED = HexColor('#5f675d')
+RULE = HexColor('#cbd2c4')
+CREAM = HexColor('#f8f6f0')
+STAGES = ['#eee8f5', '#f7e3e9', '#e4f1d0', '#f3e7d7', '#e0eae1']
+TINTS = [STAGES[0], STAGES[2], STAGES[1], STAGES[3]]
+GUIDE = 'https://shaunaleebrennan.github.io/shauna-ai-portfolio/playbook.html'
 c = canvas.Canvas(str(OUT), pagesize=A4, pageCompression=1)
-c.setTitle('Narrative Design Workbook | Shauna Azevedo-Brennan')
+c.setTitle('Narrative Design Workbook | Shauna Brennan')
 c.setAuthor('Shauna Azevedo-Brennan')
-c.setSubject("Practical companion to Marcus Andrews' five-stage Narrative Design method")
+c.setSubject('Four practical worksheets: brief, argument, proof, and review')
 
-STYLES = {}
-def para(text, x, top, width, size=10.2, leading=14.1, color=INK, font='Body'):
-    key = (size, leading, color.hexval(), font)
-    if key not in STYLES:
-        STYLES[key] = ParagraphStyle(str(key), fontName=font, fontSize=size,
-            leading=leading, textColor=color, spaceAfter=0, spaceBefore=0)
-    p = Paragraph(text, STYLES[key])
-    _, height = p.wrap(width, 1000)
-    p.drawOn(c, x, H-top-height)
+def para(text, x, top, width, size=10.5, leading=14.5, color=INK, font='Body'):
+    style = ParagraphStyle('text', fontName=font, fontSize=size, leading=leading, textColor=color)
+    p = Paragraph(text, style)
+    _, height = p.wrap(width, 2000)
+    assert top + height < H - 26, (text, top, height)
+    p.drawOn(c, x, H - top - height)
     return height
 
-def line(x, top, width, color=RULE, weight=.55):
+def rule(x, top, width, color=RULE, weight=.55):
     c.setStrokeColor(color)
     c.setLineWidth(weight)
-    c.line(x, H-top, x+width, H-top)
+    c.line(x, H - top, x + width, H - top)
 
-def rect(x, top, width, height, fill, stroke=None, radius=0):
-    c.setFillColor(fill)
-    c.setStrokeColor(stroke or fill)
-    if radius:
-        c.roundRect(x, H-top-height, width, height, radius, fill=1, stroke=int(bool(stroke)))
-    else:
-        c.rect(x, H-top-height, width, height, fill=1, stroke=int(bool(stroke)))
+def rect(x, top, width, height, fill, radius=4):
+    c.setFillColor(HexColor(fill) if isinstance(fill, str) else fill)
+    c.roundRect(x, H - top - height, width, height, radius, fill=1, stroke=0)
 
-def label(text, x, top, width=CW, color=MUTED):
-    return para(text.upper(), x, top, width, 8.1, 10.8, color, 'Bold')
+def section(text, top):
+    para(text, M, top, CW, 11, 15, MUTED, 'BodyBold')
 
-def write_lines(x, top, width, count=1, gap=20):
-    for i in range(count):
-        line(x, top+i*gap, width)
+def field(title, prompt, x, top, width, height=100):
+    para(title, x, top, width, 12.5, 17, INK, 'HeadingBold')
+    ph = para(prompt, x, top + 23, width, 10.2, 14, MUTED)
+    first = top + height - 38
+    assert top + 23 + ph <= first - 9, (title, ph, height)
+    rule(x, first, width)
+    rule(x, first + 24, width)
 
-def field(title, prompt, x, top, width, lines=1):
-    label(title, x, top, width, INK)
-    used = para(prompt, x, top+15, width, 10.5, 15, MUTED)
-    write_lines(x, top+15+used+18, width, lines)
+def checkbox(text, x, top, width, size=10):
+    c.setStrokeColor(MUTED)
+    c.setLineWidth(.65)
+    c.roundRect(x, H - top - 9, 9, 9, 1.5, fill=0, stroke=1)
+    para(text, x + 17, top - 3, width - 17, size, 14, INK)
 
 def header(number, title, subtitle):
-    page_tints = [HexColor('#eee7f8'), HexColor('#edf4df'), HexColor('#f8e7eb'), HexColor('#f4ebdf')]
-    rect(M-12, 46, CW+24, 88, page_tints[number-1], radius=8)
-    rect(M, 27, 24, 5, GREEN)
-    label('Shauna Azevedo-Brennan / Narrative Design', M+34, 23, CW-34, INK)
-    label(f'Workbook {number:02d} / 04', M, 54, CW)
-    title_h = para(title, M, 75, CW, 28, 32, INK, 'Bold')
-    return 75 + title_h + 13 + para(subtitle, M, 75+title_h+13, CW, 11, 15.5, MUTED)
-
-def footer(number):
-    line(M, H-42, CW)
-    para("Five-stage method: Marcus Andrews. Practical companion: Shauna Azevedo-Brennan.", M, H-32, CW-25, 7.2, 9.2, MUTED)
-    para(f'{number:02d}', W-M-18, H-33, 18, 8.5, 10, INK, 'Bold')
+    rect(M, 29, 23, 4, '#c9ff63', 0)
+    para('NARRATIVE DESIGN / WORKBOOK', M + 33, 25, 300, 7.8, 11, MUTED, 'BodyBold')
+    para('SHAUNA BRENNAN', W - M - 104, 25, 104, 7.8, 11, MUTED, 'BodyBold')
+    para(title, M, 56, CW, 30, 38, INK, 'Heading')
+    para(subtitle, M, 104, CW, 11.3, 16, MUTED)
+    tabs = ['01  Brief', '02  Story', '03  Proof', '04  Review']
+    tab_w = (CW - 18) / 4
+    for i, tab in enumerate(tabs):
+        x = M + i * (tab_w + 6)
+        rect(x, 140, tab_w, 28, TINTS[number - 1] if i == number - 1 else CREAM)
+        para(tab, x + 12, 147, tab_w - 20, 9.4, 13, INK if i == number - 1 else MUTED,
+             'BodyBold' if i == number - 1 else 'Body')
 
 def end_page(number):
-    footer(number)
+    rule(M, 790, CW)
+    para('Five-stage method: Marcus Andrews. Practical companion: Shauna Brennan.', M, 799, CW - 35, 7.1, 9.5, MUTED)
+    para(f'{number} / 4', W - M - 25, 799, 25, 7.8, 10, MUTED, 'BodyBold')
+    c.linkURL(GUIDE, (M, H - 813, W - M - 35, H - 796), thickness=0)
     c.showPage()
 
-# PAGE 1 ---------------------------------------------------------------------
-header(1, 'Start with the strategic choice',
-       'Use evidence to change a buying decision. Draft, then test with people.')
-
-rect(M, 143, CW, 109, PALE, radius=4)
-rect(M, 143, 4, 109, LAVENDER)
-label('The point of view', M+16, 155, CW-32, INK)
-POV = 'When competitors tell the same story, they reinforce the same buying criteria. Narrative design should challenge those criteria—with a market insight customers recognize and an approach your business can credibly lead.'
-para(escape(POV), M+16, 174, CW-32, 11.1, 16, INK)
-
-label('01 / Establish the brief', M, 273, CW, INK)
-GAP = 24
-COL = (CW-GAP)/2
-field('Audience + situation', 'Who is deciding, in which real situation?', M, 295, COL)
-field('Objective + action', 'What should they understand or do differently?', M+COL+GAP, 295, COL)
-field('Actual alternatives', 'What would they use or do without your product?', M, 373, COL)
-field('Delivered advantage', 'Which relevant difference can you substantiate?', M+COL+GAP, 373, COL)
-
-label('02 / Turn evidence into an insight', M, 454, CW, INK)
-field('Observation', 'What recurring tension do customers recognize? Record source, date and scope.', M, 477, CW)
-field('Interpretation', 'Which accepted assumption does it challenge? Keep inference separate from fact.', M, 551, CW)
-field('Belief shift', 'From which current belief to which useful belief? Which buying criterion changes?', M, 625, CW)
-
-rect(M, 706, CW, 67, PALE, radius=4)
-label('Choose the arc before writing', M+12, 716, CW-24, INK)
-para('<b>Change-led:</b> a meaningful external shift is established. Use page 2. '
-     '<b>Reframe-led:</b> a persistent situation is misunderstood, with no established shift. Use the alternative on page 2. '
-     'If neither is supported, clarify the value proposition or investigate further.',
-     M+12, 733, CW-24, 9, 12.3)
+# 01 / BRIEF. Reserve space for decisions instead of repeating the guide.
+header(1, 'Start with the decision.', 'Choose one audience, one buying situation, and one change in understanding.')
+field('Audience and situation', 'Who is deciding, and what is happening?', M, 192, COL, 100)
+field('Objective and next action', 'What should they understand or do?', M + COL + GAP, 192, COL, 100)
+field('Actual alternatives', 'What would they use or do today?', M, 310, COL, 100)
+field('Relevant product advantage', 'Which difference can you substantiate?', M + COL + GAP, 310, COL, 100)
+section('Turn the evidence into an insight', 437)
+field('Observation', 'What did you see? Include the source, date, and situation.', M, 463, CW, 94)
+field('Interpretation', 'What could it mean? Identify the assumption to investigate.', M, 568, CW, 88)
+field('From this belief...', 'What does the audience assume today?', M, 673, COL, 88)
+field('...to this belief', 'What useful idea should replace it?', M + COL + GAP, 673, COL, 88)
 end_page(1)
 
-# PAGE 2 ---------------------------------------------------------------------
-header(2, 'Build the change-led argument',
-       "Marcus Andrews' five-stage method. Write the causal connection, not just a headline.")
-
+# 02 / STORY. Stage colours match the interactive playbook.
+header(2, 'Build the argument.', 'Write one or two sentences per stage. Make each idea lead to the next.')
 stages = [
-    ('1', 'The Change', 'What changed, compared with when, and for whom? What evidence supports the shift, its significance and its limits?'),
-    ('2', 'The Impact', 'Which audience decision or outcome changes, and how? Make the stakes specific before introducing the product.'),
-    ('3', 'The New Game', 'What should people do differently? Define practical actions, success criteria and trade-offs. Is the method useful without your product?'),
-    ('4', "Why It's Hard", 'Which real barriers block this approach? Include organizational, technical, economic or behavioral constraints the product cannot solve.'),
-    ('5', 'The Solution', 'Which delivered capability addresses each barrier? Explain how it changes the work, for whom, and with what evidence.'),
+    ('The Change', 'What changed for this audience? Name the shift and its evidence.'),
+    ('The Impact', 'Why does it matter? Connect the shift to a specific decision or outcome.'),
+    ('The New Game', 'What should people do differently? Give actions and success criteria.'),
+    ("Why It's Hard", 'What blocks that approach? Include work the product cannot solve.'),
+    ('The Solution', 'How does the product help? Connect the barrier, mechanism, and proof.'),
 ]
-top = 151
-for num, title, prompt in stages:
-    rect(M, top, 25, 25, GREEN if num=='3' else PALE, radius=3)
-    para(num, M+9, top+5, 12, 11, 14, INK, 'Bold')
-    para(title, M+38, top+1, CW-38, 13.2, 18, INK, 'Bold')
-    ph = para(prompt, M+38, top+23, CW-38, 10.5, 15, MUTED)
-    write_lines(M+38, top+23+ph+17, CW-38)
-    top += 98
-
-rect(M, 652, CW, 121, PALE, radius=4)
-rect(M, 652, 4, 121, PINK)
-label('Reframe-led alternative / practical companion extension', M+14, 665, CW-28, INK)
-para('Use this arc when the evidence supports a persistent problem or contradiction, rather than a meaningful external change:', M+14, 684, CW-28, 9.5, 13)
-para('<b>Recognizable situation → consequential contradiction → new interpretation → practical approach → barriers → credible product contribution → next action.</b>',
-     M+14, 719, CW-28, 10, 14)
-para("This alternative is not Andrews' five-stage method. Do not invent a trend to complete the template.",
-     M+14, 755, CW-28, 8.5, 11.4, MUTED)
+for i, (title, prompt) in enumerate(stages):
+    top = 193 + i * 110
+    rect(M, top, 26, 26, STAGES[i])
+    para(str(i + 1), M + 9, top + 5, 14, 11, 16, INK, 'BodyBold')
+    field(title, prompt, M + 40, top, CW - 40, 104)
+para('Working from a persistent contradiction rather than a new market change? Use the reframe-led alternative in the complete guide.', M, 750, CW, 9.2, 13, MUTED)
 end_page(2)
 
-# PAGE 3 ---------------------------------------------------------------------
-header(3, 'Connect product to proof',
-       'Map one barrier to a capability, an outcome, and the evidence.')
-
+# 03 / PROOF. Map a single claim all the way to its evidence.
+header(3, 'Connect product to proof.', 'Choose one obstacle. Trace how the product helps and what supports the promise.')
 chain = [
-    ('Customer obstacle', 'A barrier to the proposed approach, grounded in the audience’s work.'),
-    ('Delivered capability', 'What works today? Note configuration, access and dependencies.'),
-    ('Practical mechanism', 'How does it change the work? Include the human or process contribution.'),
-    ('Customer outcome', 'For whom, under which conditions? Include adoption effort and trade-offs.'),
-    ('Evidence + limits', 'Source, date, population or use case, result and what it does not establish.'),
+    ('Customer obstacle', 'Which barrier to the new approach matters to this audience?'),
+    ('Delivered capability', 'What works today? Note configuration, access, and dependencies.'),
+    ('Practical mechanism', 'How does it change the work? Include people and process.'),
+    ('Customer outcome', 'Who benefits, and under which conditions? Name the result to measure.'),
+    ('Evidence and limits', 'Record the source, date, scope, result, and what remains unproven.'),
 ]
-top=153
-for i,(title,prompt) in enumerate(chain):
-    label(title, M, top, 128, INK)
-    para(prompt, M+144, top-1, CW-144, 10.5, 15, MUTED)
-    write_lines(M+144, top+43, CW-144)
-    if i < 4:
-        line(M, top+58, CW, PALE, 1)
-    top += 70
-
-rect(M, 513, CW, 70, PALE, radius=4)
-label('Keep four kinds of support separate', M+12, 523, CW-24, INK)
-para('Evidence for the market change, the recommended approach, product behavior and business impact answer different questions. A demo does not prove reliable deployment; positive reactions do not prove purchase or revenue.',
-     M+12, 541, CW-24, 9.1, 12.5)
-
-label('Pressure-test the argument', M, 597, CW, INK)
-para('1. <b>Logic:</b> Where is the earliest unsupported link? For a reframe-led arc, test the contradiction and its interpretation.', M, 620, CW, 9.5, 13.2)
-para('2. <b>Alternatives:</b> Could a competitor use this unchanged? Why would a capable buyer rationally keep the current approach?', M, 653, CW, 9.5, 13.2)
-para('3. <b>Comprehension:</b> Can an unfamiliar prospect retell the approach, product contribution and next action without coaching?', M, 686, CW, 9.5, 13.2)
-label('Weakest link + repair / evidence needed', M, 724, CW, INK)
-write_lines(M, 756, CW)
-para('<b>Decide:</b> advance to a defined test, refine a specific gap, or rebuild the premise. Coherence is not proof of effectiveness.',
-     M, 765, CW, 8.8, 12, MUTED)
+for i, (title, prompt) in enumerate(chain):
+    field(title, prompt, M, 193 + i * 105, CW, 94)
+rect(M, 737, CW, 35, CREAM)
+para('Match proof to the promise: a demonstration shows behaviour; customer outcomes need evidence from the relevant work.', M + 12, 746, CW - 24, 9.2, 13, MUTED)
 end_page(3)
 
-# PAGE 4 ---------------------------------------------------------------------
-header(4, 'Make it clear and credible',
-       'Review clarity, credibility, and AI claims before using the story.')
-
-label('AI language / use when AI is material', M, 151, COL, INK)
-label('Read-aloud review / use every time', M+COL+GAP, 151, COL, INK)
-para('Temporarily remove AI labels. Are the customer, value, mechanism and reason to choose still clear? Restore terms that add necessary precision.', M, 174, COL, 10.5, 15.3)
-para('Read the draft aloud. Mark places where you lose breath, stumble, reread or cannot explain the connection between ideas.', M+COL+GAP, 174, COL, 10.5, 15.3)
-para('For each material claim, explain:<br/>• the task, inputs and delivered behavior;<br/>• human judgment, permissions and exceptions;<br/>• what is possible, live, measured or forecast;<br/>• proof suited to the promise.', M, 252, COL, 10.5, 15)
-para('Check for:<br/>• one understandable idea at a time;<br/>• concrete work, credible stakes and empathy;<br/>• natural rhythm and useful transitions;<br/>• a specific idea worth remembering.', M+COL+GAP, 252, COL, 10.5, 15)
-para('For agents, verify the resulting task or system state. A convincing response does not establish that the work was completed.', M, 344, COL, 9.2, 12.8, MUTED)
-para('Ask a listener to retell the argument and the next action. Treat their response as evidence within that context, not a revenue forecast.', M+COL+GAP, 344, COL, 9.2, 12.8, MUTED)
-
-label('Revision to make now', M, 406, CW, INK)
-write_lines(M, 439, CW)
-
-label('Useful starter prompts', M, 465, CW, INK)
-prompts = [
-    ('Build from facts', 'Help me build a narrative for [audience / decision] using [product facts and research]. Separate supported claims from hypotheses and choose the appropriate arc.'),
-    ('Find the weak link', 'Pressure-test this draft. Identify the earliest unsupported assumption, the strongest credible objection and the smallest repair that addresses both.'),
-    ('Check an AI promise', 'Review this AI claim against the available evidence. Explain the delivered behavior, human role and product limits; flag any leap from demonstration to outcome.'),
-    ('Review spoken flow', 'Review this script for first-hearing clarity, breath, rhythm and credibility. Preserve concrete detail and qualifications that affect the truth.'),
+# 04 / REVIEW. Short checks lead to a recorded next test.
+header(4, 'Make the story hold up.', 'Test the argument with people, then refine the language.')
+tests = [
+    ('Do they recognise it?', 'Ask about a recent situation. Where does the tension appear?'),
+    ('Can they explain it?', 'Ask them to retell the approach and the next action.'),
+    ('Why choose your product?', 'Compare the argument with their actual alternatives.'),
+    ('Can you prove the promise?', 'Check the relevant workflow and the claimed result.'),
 ]
-top=489
-for name, prompt in prompts:
-    rect(M, top+2, 3, 15, LAVENDER if name=='Check an AI promise' else GREEN)
-    para(name, M+12, top, 118, 10.2, 14.5, INK, 'Bold')
-    para(escape(prompt), M+137, top, CW-137, 10.2, 14.5)
-    top += 55
-
-line(M, 719, CW)
-para('<b>Method credit:</b> Marcus Andrews, <i>Narrative Design for Business</i>.<br/>m3ka.com/frameworks/narrative-design', M, 730, CW, 8.3, 11.4, MUTED)
-c.linkURL('https://www.m3ka.com/frameworks/narrative-design', (M,H-754,M+CW,H-730), relative=0, thickness=0)
-para('Independent practical companion by Shauna Azevedo-Brennan. The reframe-led alternative, proof mapping, pressure tests and editorial checks are companion extensions, not official Andrews methodology.',
-     M, 758, CW, 7.8, 10.8, MUTED)
+for i, (title, prompt) in enumerate(tests):
+    field(title, prompt, M + (i % 2) * (COL + GAP), 193 + (i // 2) * 126, COL, 112)
+rule(M, 456, CW)
+para('If AI is part of the promise', M, 478, COL, 12.5, 17, INK, 'HeadingBold')
+para('Read it aloud', M + COL + GAP, 478, COL, 12.5, 17, INK, 'HeadingBold')
+for i, text in enumerate(['The task and scope are clear.', 'Human judgment is visible.', 'Delivered and planned are distinct.', 'Evidence supports the outcome.']):
+    checkbox(text, M, 512 + i * 20, COL, 9.7)
+for i, text in enumerate(['One clear idea at a time.', 'Concrete work and human stakes.', 'Natural rhythm and transitions.', 'A specific idea worth remembering.']):
+    checkbox(text, M + COL + GAP, 512 + i * 20, COL, 9.7)
+field('The next revision and test', 'What needs to change? Record who will test it, how, and when.', M, 624, CW, 103)
+para('Decision', M, 750, 65, 10, 14, MUTED, 'BodyBold')
+checkbox('Advance to a defined test', M + 67, 753, 175, 9.2)
+checkbox('Refine', M + 264, 753, 85, 9.2)
+checkbox('Rebuild', M + 367, 753, 100, 9.2)
 end_page(4)
 
 c.save()

@@ -1,6 +1,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { marked } from 'marked';
+import { syncSiteHeaders } from './sync-site-header.mjs';
 const work = JSON.parse(await readFile('content/portfolio.json', 'utf8')).work;
 const docs = JSON.parse(await readFile('content/library.json', 'utf8'));
 const escape = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -82,3 +83,4 @@ await writeFile('LIBRARY.md', `# Case studies and knowledge\n\n[Portfolio overvi
 await writeFile('case-studies/README.md', `# Case studies\n\nRead the complete stories directly on GitHub.\n\n${work.map(w => `- [${w.title}](${w.slug}.md) — ${w.caseStudy.overview.eyebrow}.`).join('\n')}\n\n[All supporting documents](../LIBRARY.md#supporting-documents) · [Portfolio overview](../README.md)\n`);
 await writeFile('documents/README.md', `# Looking for the supporting documents?\n\n**[Read the formatted documents on GitHub →](../LIBRARY.md#supporting-documents)**\n\nThe HTML files in this folder power the portfolio website. GitHub displays them as source code. Use the Markdown library above, or [open the styled website pages](${site}library.html#documents).\n`);
 console.log(`Built GitHub library and ${work.length} Markdown case studies.`);
+await syncSiteHeaders();

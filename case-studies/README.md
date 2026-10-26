@@ -3,7 +3,7 @@
 Read the complete stories directly on GitHub.
 
 - [Workvivo HQ](workvivo-hq.md) — Repositioning Workvivo for the AI era—without losing what made it different.
-- [Playbook](playbook.md) — Turning strategic PMM judgment into a method other people can use.
+- [Narrative design](playbook.md) — Turning strategic PMM judgment into a method other people can use.
 - [Messaging as Code](messaging-as-code.md) — Making product messaging a source of truth—not another document to copy.
 - [HQ Agent](hq-agent.md) — From search to answer to action: making agentic AI easier to buy.
 - [AI Product Strategy](ai-product-strategy.md) — Learn. Build. Apply..

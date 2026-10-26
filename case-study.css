@@ -158,3 +158,15 @@
  .ds-outcome-quote{padding:25px}.ds-outcome-quote blockquote{font-size:30px}
 }
 @media(max-width:380px){.ds-persona-grid{grid-template-columns:1fr}.ds-persona-grid summary{min-height:0}}
+
+/* Launch film: a playable artifact within the narrative. */
+.ds-film{margin:38px 0 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
+.ds-film-heading{padding:24px 28px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.ds-film-heading>span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--acid)}
+.ds-film-heading h3{font-size:17px;font-weight:500;line-height:1.5}
+.ds-film-frame{position:relative;aspect-ratio:16/9;background:#000}
+.ds-film-frame iframe{position:absolute;inset:0;display:block;width:100%;height:100%;border:0}
+.ds-film figcaption{padding:18px 28px;color:var(--muted);font-size:13px;line-height:1.7}
+.ds-film figcaption a{color:var(--acid);text-decoration:none;margin-left:10px}
+.ds-film figcaption a:hover{text-decoration:underline}
+@media(max-width:760px){.ds-film{margin-top:28px}.ds-film-heading{padding:20px;display:block}.ds-film-heading h3{margin-top:10px}.ds-film figcaption{padding:18px 20px}.ds-film figcaption a{display:block;margin:8px 0 0}}

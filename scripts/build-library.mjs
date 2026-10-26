@@ -73,9 +73,22 @@ const githubTarget = href => {
   return '../' + href;
 };
 await mkdir('case-studies', { recursive: true });
+const visualMarkdown = visual => {
+  if (!visual) return '';
+  const parts = [`### ${visual.title}`];
+  if (visual.steps) parts.push(visual.steps.join(' → '));
+  if (visual.type === 'compare') parts.push(`**${visual.beforeLabel}:** ${visual.before}\n\n**${visual.afterLabel}:** ${visual.after}`);
+  if (visual.src) parts.push(`![${visual.alt}](${githubTarget(visual.src)})`);
+  if (visual.images) parts.push(visual.images.map(image => `![${image.alt}](${githubTarget(image.src)})\n\n${image.caption}`).join('\n\n'));
+  if (visual.scope) parts.push(`Project coverage: ${visual.scope.map(entry => `${entry.value} ${entry.label.toLowerCase()}`).join(' · ')}.`);
+  if (visual.links) parts.push(visual.links.map(link => `- [${link.title}](${githubTarget(link.url)}) — ${link.note}`).join('\n'));
+  if (visual.caption) parts.push(visual.caption);
+  if (visual.href) parts.push(`[${visual.linkLabel || 'Explore the project'}](${githubTarget(visual.href)})`);
+  return '\n\n' + parts.join('\n\n');
+};
 for (const item of work) {
   const story = item.caseStudy.overview;
-  const body = item.caseStudy.story.map(block => `## ${block.title}\n\n${(block.paragraphs || []).join('\n\n')}${block.items?.length ? '\n\n' + block.items.map(text => '- ' + text).join('\n') : ''}`).join('\n\n');
+  const body = item.caseStudy.story.map(block => `## ${block.title}\n\n${(block.paragraphs || []).join('\n\n')}${block.aside ? `\n\n**${block.aside.label}:** ${block.aside.text}` : ''}${block.items?.length ? '\n\n' + block.items.map(text => '- ' + text).join('\n') : ''}${visualMarkdown(block.visual)}`).join('\n\n');
   await writeFile(`case-studies/${item.slug}.md`, `# ${item.title}\n\n[← All selected work](../README.md#selected-work)\n\n**${story.eyebrow}**\n\n${story.lead}\n\n${body}${story.learning ? `\n\n> ${story.learning}` : ''}\n\n## Supporting evidence\n\n${item.evidence.map(e => `- **[${e.title}](${githubTarget(e.url)})** — ${e.kind}. ${e.note}`).join('\n')}\n`);
 }
 await writeFile('LIBRARY.md', `# Case studies and knowledge\n\n[Portfolio overview](README.md) · [View the portfolio website](${site}) · [CV](assets/Shauna-Azevedo-Brennan-CV.pdf)\n\nRead every case study and supporting document here on GitHub. The links below open formatted Markdown. For the designed website experience, visit the [online library](${site}library.html).\n\n## Case studies\n\n${work.map(w => `### [${w.title}](case-studies/${w.slug}.md)\n\n${w.summary}`).join('\n\n')}\n\n## Supporting documents\n\n${docs.map(d => `- **[${d.title}](${d.source})** — ${d.summary}`).join('\n')}\n\n## Reading the evidence\n\nIndividual contributions are professional self-report unless a source independently confirms them. Company awards and growth remain company outcomes. The [evidence inventory](docs/EVIDENCE_INVENTORY.md) distinguishes public artifacts from supplied materials that are not hosted here.\n`);

@@ -12,11 +12,25 @@ The starting point was personal curiosity. As I explored the results, the questi
 
 I chose to give the atlas an editorial direction, then let readers investigate it. The page moves from the national result to changes between rounds, Brazilian states, and voters abroad. That sequence gives people a way into the subject before asking them to navigate a map or interpret a table.
 
+### A way into the subject
+
+National result → Changes between rounds → Brazilian states → Voters abroad
+
 ## A guided story, with room to explore
 
 I set the questions, directed the research and AI-assisted build, and shaped the structure, visual direction, and interaction design. The published experience covers 27 Brazilian federal units and 31 selected overseas countries and territories, with English and Portuguese views.
 
 I wanted the narrative and the interactive elements to work together. A reader can follow the page for the main patterns, then use the maps, round selectors, regional filters, and comparison tables to examine a place that matters to them. Headings, labels, and visual hierarchy had to support both ways of reading.
+
+### Inside the atlas
+
+![The atlas opening screen with its national result comparison.](../assets/evidence/brazil-in-red-preview.jpg)
+
+Project coverage: 27 brazilian federal units · 31 selected overseas locations · 2 language views.
+
+Start with the national picture, then explore places and comparisons.
+
+[Explore the project](https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/)
 
 ## The choices behind the comparisons
 
@@ -33,7 +47,7 @@ I also wanted the atlas to convey what participation involved. I asked to includ
 
 The resulting project brings research, editorial judgment, and product design into one public experience. It reflects an approach I bring to product marketing: find the question people care about, turn complexity into a clear story, and make it easy to go deeper.
 
-> “For me, data storytelling is an editorial responsibility: choose the question that matters, make the comparisons meaningful, and give people enough context to form their own view.”
+> A chart can be accurate and still tell the wrong story. Choosing what to compare is part of the strategy.
 
 ## Supporting evidence
 

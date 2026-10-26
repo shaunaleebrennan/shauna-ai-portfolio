@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Case-study layout review</title>
+<style>body{margin:0;background:#20241f;color:#eef1e8;font:14px system-ui}header{padding:16px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;border-bottom:1px solid #485143}select{font:inherit;margin-left:8px;padding:8px;background:#eef1e8;color:#0b0d0c}main{padding:20px;overflow:auto}iframe{display:block;border:1px solid #485143;height:950px;background:#0b0d0c}a{color:#c9ff63}</style></head>
+<body><header><label>Case study<select id="case" aria-label="Case study"></select></label><label>Viewport<select id="width" aria-label="Viewport width"><option value="375">Mobile · 375 px</option><option value="768">Tablet · 768 px</option><option value="1280">Desktop · 1280 px</option></select></label><a id="open" href="../index.html#explore">Open full page</a></header><main><iframe id="preview" title="Case-study viewport"></iframe></main>
+<script type="module">
+const {work}=await fetch('../content/portfolio.json',{cache:'no-store'}).then(r=>r.json());
+const chooser=document.querySelector('#case'),width=document.querySelector('#width'),preview=document.querySelector('#preview'),open=document.querySelector('#open');
+for(const item of work){const option=document.createElement('option');option.value=item.slug;option.textContent=item.title;chooser.append(option)}
+const params=new URLSearchParams(location.search);if(work.some(w=>w.slug===params.get('case')))chooser.value=params.get('case');if(['375','768','1280'].includes(params.get('width')))width.value=params.get('width');
+function update(){preview.style.width=width.value+'px';preview.src='../case-study.html?case='+encodeURIComponent(chooser.value);open.href=preview.src;history.replaceState(null,'','?case='+encodeURIComponent(chooser.value)+'&width='+width.value)}
+chooser.addEventListener('change',update);width.addEventListener('change',update);update();
+</script></body></html>

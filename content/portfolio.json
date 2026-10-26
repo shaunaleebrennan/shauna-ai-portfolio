@@ -52,7 +52,7 @@
         "overview": {
           "eyebrow": "Repositioning Workvivo for the AI era—without losing what made it different",
           "lead": "I led the positioning and messaging behind Workvivo's shift from an employee experience platform towards an AI-powered digital headquarters for every employee.",
-          "learning": "The strongest AI story builds on what customers already trust."
+          "learning": "An AI story that erases what made you different is a concession to your competitors."
         },
         "eyebrow": "Repositioning a category for the AI era",
         "context": "Workvivo had established itself as an Employee Experience Platform. As enterprise software moved into an AI-native era, the challenge was bigger than adding AI features to the existing story: the company needed a credible new ambition without abandoning the employee-experience equity that made it distinctive.",
@@ -79,13 +79,48 @@
             "title": "A new role in enterprise AI",
             "paragraphs": [
               "AI was changing how employees find knowledge, interact with systems and get work done. Workvivo needed a credible place in that changing market. The challenge was to make the new AI proposition clear to IT and business buyers while retaining the connection, communication and employee experience strengths customers already valued."
-            ]
+            ],
+            "layout": "split",
+            "label": "Market context",
+            "navLabel": "The opportunity",
+            "aside": {
+              "label": "The strategic question",
+              "text": "How could Workvivo earn a credible role in enterprise AI while building on the employee experience customers already valued?"
+            }
           },
           {
             "id": "contribution",
             "title": "One portfolio, one story",
             "paragraphs": [
               "I shaped portfolio positioning and the messaging architecture across Workvivo HQ, HQ Agent and Seer. That meant making deliberate choices about how the products fit together, where we could differentiate, and which technical capabilities mattered to each buyer. I carried the strategy into launch messaging, the website, analyst framing, competitive guidance, campaign direction and seller enablement, working across Product, Sales, Growth and Marketing."
+            ],
+            "layout": "artifact",
+            "label": "Portfolio positioning",
+            "navLabel": "The portfolio",
+            "visual": {
+              "type": "relationship",
+              "title": "One employee experience",
+              "steps": [
+                "Workvivo HQ",
+                "HQ Agent",
+                "Seer"
+              ],
+              "caption": "Communication and connection · Knowledge and action · Listening and insight",
+              "href": "documents/hq-narrative.html",
+              "linkLabel": "Explore the narrative notes"
+            }
+          },
+          {
+            "id": "choices",
+            "title": "The choices that shaped the positioning",
+            "label": "Strategic choices",
+            "navLabel": "The decisions",
+            "layout": "decisions",
+            "items": [
+              "Build on existing trust. Make communication, connection, and employee experience the foundation of the AI proposition.",
+              "Give the portfolio a clear structure. Explain how Workvivo HQ, HQ Agent, and Seer contribute to one broader employee experience.",
+              "Make the story useful to each buyer. Translate technical capabilities into reasons to care for IT, HR, and Communications.",
+              "Carry the strategy into execution. Use the positioning across launch messaging, analyst framing, campaigns, and seller enablement."
             ]
           },
           {
@@ -93,7 +128,10 @@
             "title": "Taking the positioning into market",
             "paragraphs": [
               "Workvivo HQ launched with a clearer portfolio story: one headquarters bringing together employee communication, knowledge, insight and action. The messaging gave Product, Marketing and Sales a shared way to explain the platform and its role in enterprise AI. The company-wide launch was recognised internally for consistent messaging across leadership and field teams. That is qualitative feedback, not a measured pipeline or adoption claim."
-            ]
+            ],
+            "layout": "text",
+            "label": "Launch and alignment",
+            "navLabel": "The delivery"
           }
         ]
       }
@@ -133,7 +171,7 @@
         "overview": {
           "eyebrow": "Turning strategic PMM judgment into a method other people can use",
           "lead": "I created a practical Narrative Design playbook that connects market insight to buying criteria, a useful approach, and a credible product contribution.",
-          "learning": "A useful framework makes the decisions behind the method visible."
+          "learning": "A narrative earns its place in strategy when it changes what you choose to build, sell, and stop doing."
         },
         "story": [
           {
@@ -141,95 +179,68 @@
             "title": "Making the method usable",
             "paragraphs": [
               "A compact framework can explain the sequence while leaving the hardest decisions to the reader. I wanted to make the reasoning usable: how to choose an insight, develop a meaningful approach, connect the product to it, and test whether the story works."
-            ]
+            ],
+            "layout": "split",
+            "label": "Framework design",
+            "navLabel": "The need",
+            "aside": {
+              "label": "The practical question",
+              "text": "How do you make the judgment behind a narrative method usable by someone applying it to their own work?"
+            }
           },
           {
             "id": "contribution",
             "title": "The thinking behind the playbook",
             "paragraphs": [
               "I developed the point of view, practical guidance, worked example, AI narrative checks, and downloadable companion. The playbook credits Marcus Andrews for the five-stage change-led method and distinguishes my practical extensions, including a reframe-led alternative when a market change is not established."
-            ]
+            ],
+            "layout": "artifact",
+            "label": "Method and extensions",
+            "navLabel": "The method",
+            "visual": {
+              "type": "journey",
+              "title": "Turn a method into practical decisions",
+              "steps": [
+                "Market insight",
+                "A meaningful approach",
+                "Product contribution",
+                "Pressure testing"
+              ],
+              "caption": "Based on Marcus Andrews’ method, with credited practical extensions.",
+              "href": "playbook.html",
+              "linkLabel": "Explore the interactive playbook"
+            }
           },
           {
             "id": "result",
             "title": "A toolkit to put it into practice",
             "paragraphs": [
               "A public interactive playbook with an annotated example, a browser-based brief export, a reusable narrative-design skill, and a printable workbook. The companion was checked through narrative development, a narrow edit, and Question Mode; those exercises do not establish customer or commercial impact."
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "slug": "brazil-in-red",
-      "title": "Brazil in Red",
-      "category": "technical",
-      "tag": "Data storytelling",
-      "summary": "From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.",
-      "demonstrates": "Research synthesis, data storytelling, product judgment, visual direction, and AI-assisted building.",
-      "proof": "Live bilingual atlas with interactive maps, round comparisons, source links, and methodology notes.",
-      "image": "assets/evidence/brazil-in-red.svg",
-      "sourceUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
-      "projectUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
-      "projectLabel": "Explore the live atlas",
-      "projectPreview": {
-        "image": "assets/evidence/brazil-in-red-preview.jpg",
-        "alt": "Brazil in Red atlas opening screen, with its red photographic design and presidential result comparison.",
-        "caption": "The atlas opens with the national picture, then lets readers explore the results across Brazil and the world.",
-        "width": 2048,
-        "height": 853
-      },
-      "evidence": [
-        {
-          "title": "Explore Brazil in Red",
-          "url": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
-          "kind": "Live personal project",
-          "note": "Explore the bilingual atlas, interactive maps, comparison tables, and sources and method section."
-        }
-      ],
-      "caseStudy": {
-        "overview": {
-          "eyebrow": "Turning curiosity into a story people can explore",
-          "lead": "A national result tells you who won. I wanted to understand what sat beneath it: the differences between places, the change between rounds, and the experience of Brazilians voting abroad. I turned those questions into Brazil in Red, a bilingual interactive atlas.",
-          "learning": "“For me, data storytelling is an editorial responsibility: choose the question that matters, make the comparisons meaningful, and give people enough context to form their own view.”"
-        },
-        "story": [
-          {
-            "id": "curiosity",
-            "title": "Finding the story beneath the result",
-            "paragraphs": [
-              "The starting point was personal curiosity. As I explored the results, the question grew: how could I bring the national picture, regional differences, and overseas vote into one experience that made sense to someone arriving without all that context?",
-              "I chose to give the atlas an editorial direction, then let readers investigate it. The page moves from the national result to changes between rounds, Brazilian states, and voters abroad. That sequence gives people a way into the subject before asking them to navigate a map or interpret a table."
-            ]
-          },
-          {
-            "id": "experience",
-            "title": "A guided story, with room to explore",
-            "paragraphs": [
-              "I set the questions, directed the research and AI-assisted build, and shaped the structure, visual direction, and interaction design. The published experience covers 27 Brazilian federal units and 31 selected overseas countries and territories, with English and Portuguese views.",
-              "I wanted the narrative and the interactive elements to work together. A reader can follow the page for the main patterns, then use the maps, round selectors, regional filters, and comparison tables to examine a place that matters to them. Headings, labels, and visual hierarchy had to support both ways of reading."
-            ]
-          },
-          {
-            "id": "decisions",
-            "title": "The choices behind the comparisons",
-            "paragraphs": [
-              "The most useful iterations came from questioning what a reader could reasonably conclude from each visual. I pushed for changes wherever an apparently simple comparison could imply something the data did not establish:"
             ],
-            "items": [
-              "Give each percentage a clear meaning. A candidate’s share, the winner’s share, and a change between rounds answer different questions. The labels needed to identify the candidate, round, and voting basis.",
-              "Make the rounds comparable. Round one includes other candidates. The atlas distinguishes all-valid-vote shares from a comparison recalculated around the two finalists, and separates a change in winner from the size of the swing.",
-              "Choose the right level of context. Highlighting Ireland and France did not tell the whole European story. I asked for a regional view alongside the individual examples, so the selection of places would not carry more weight than it should.",
-              "Keep interpretation within the evidence. Aggregate changes show how results differed between rounds; they do not establish how individual people switched their votes. Source links and methodology notes give readers a way to examine those boundaries."
-            ]
-          },
-          {
-            "id": "people",
-            "title": "Making space for the people behind the numbers",
-            "paragraphs": [
-              "I also wanted the atlas to convey what participation involved. I asked to include stories of people travelling by boat, offering lifts, and helping others reach the polls alongside the political context and disputes. That widened the story from the outcome of voting to the effort people made to take part.",
-              "The resulting project brings research, editorial judgment, and product design into one public experience. It reflects an approach I bring to product marketing: find the question people care about, turn complexity into a clear story, and make it easy to go deeper."
-            ]
+            "layout": "artifact",
+            "label": "Tools for application",
+            "navLabel": "The toolkit",
+            "visual": {
+              "type": "resources",
+              "title": "Use the toolkit",
+              "links": [
+                {
+                  "title": "Interactive playbook",
+                  "url": "playbook.html",
+                  "note": "Worked example and browser brief export"
+                },
+                {
+                  "title": "Narrative Design skill",
+                  "url": "assets/playbooks/narrative-design-skill.zip",
+                  "note": "Reusable companion for AI-assisted work"
+                },
+                {
+                  "title": "Printable workbook",
+                  "url": "assets/playbooks/narrative-design-workbook.pdf",
+                  "note": "Prompts and practical exercises"
+                }
+              ]
+            }
           }
         ]
       }
@@ -262,7 +273,7 @@
         "overview": {
           "eyebrow": "Making product messaging a source of truth—not another document to copy",
           "lead": "AI can generate content quickly. Keeping that content accurate, approved and consistent across teams is the harder problem.",
-          "learning": "Scaling AI content starts with messaging that people can trust and agents can use."
+          "learning": "If every AI tool gets its own version of your positioning, you have automated message drift."
         },
         "eyebrow": "Making approved messaging reusable across teams and AI tools",
         "contribution": [
@@ -350,28 +361,64 @@
             "title": "Messaging that can keep up",
             "paragraphs": [
               "Sales and Marketing reuse messaging across products, audiences and assets. Each copy-and-paste can weaken the link to its original meaning, supporting evidence or approval. I wanted a system where PMM could maintain the source and teams and AI agents could reuse it reliably."
-            ]
+            ],
+            "layout": "split",
+            "label": "The operating problem",
+            "navLabel": "The need",
+            "aside": {
+              "label": "The design requirement",
+              "text": "Give teams and AI agents a reliable source of messaging while keeping PMM ownership and human review clear."
+            }
           },
           {
             "id": "ownership",
             "title": "Designing for trust and reuse",
             "paragraphs": [
               "I led the project, wrote the product messaging with PMM-team support, and defined the content model, approval process, and acceptance criteria. The goal was to give people and AI agents a source they could reuse while keeping PMM ownership and human review clear."
-            ]
+            ],
+            "layout": "artifact",
+            "label": "Governance and reuse",
+            "navLabel": "The system",
+            "visual": {
+              "type": "relationship",
+              "title": "A governed source for reuse",
+              "steps": [
+                "PMM-owned messaging",
+                "Human review",
+                "People + AI agents"
+              ],
+              "caption": "Content model · Approval process · Acceptance criteria",
+              "linkLabel": null
+            }
           },
           {
             "id": "iteration",
             "title": "The workflow changed after testing",
             "paragraphs": [
               "I tested AI-assisted authoring and revision workflows, then changed direction when a GitHub-based approach proved less practical for how the team works. The resulting in-house approach uses Zoom agents and Canvas to make messaging easier to find, maintain, and review."
-            ]
+            ],
+            "layout": "split",
+            "label": "Iteration",
+            "navLabel": "The iteration",
+            "visual": {
+              "type": "compare",
+              "title": "The authoring approach evolved",
+              "beforeLabel": "Initial approach",
+              "before": "GitHub-based authoring",
+              "afterLabel": "After workflow testing",
+              "after": "Zoom agents + Canvas",
+              "caption": "The content model and human review remained central; the authoring approach changed to fit how the team works."
+            }
           },
           {
             "id": "status",
             "title": "A completed pilot, with more to build",
             "paragraphs": [
               "The HQ Agent pilot is complete and connected to the sales enablement agent, with positive early feedback. Wider message coverage and a design-system-connected content generation workflow are planned, not yet established business outcomes. This is a working example of how I apply hands-on AI knowledge to improve PMM operations—not a claim that the full organisation has adopted it."
-            ]
+            ],
+            "layout": "text",
+            "label": "Pilot and next steps",
+            "navLabel": "The pilot"
           }
         ]
       }
@@ -410,7 +457,7 @@
         "overview": {
           "eyebrow": "From search to answer to action: making agentic AI easier to buy",
           "lead": "HQ Agent needed a clear story for what it could do, why it mattered and where it fitted within Workvivo's wider AI portfolio.",
-          "learning": "An agent's value is the work it helps people complete, with limits buyers can trust."
+          "learning": "The unit of value in agentic AI is a job completed. That should shape the pitch, the packaging, and the proof."
         },
         "eyebrow": "Commercialising enterprise AI",
         "context": "HQ Agent extended Workvivo beyond communications and employee experience into trusted enterprise answers, search, self-service, and agentic task execution. It sat at the intersection of enterprise knowledge, RAG, permissions, employee experience, and Zoom’s broader AI technology.",
@@ -438,13 +485,50 @@
             "title": "Making the value progression clear",
             "paragraphs": [
               "Search, grounded answers and task execution can sound like one undifferentiated AI promise. Buyers needed to understand the progression in value, the role of permissions and trust, and how HQ Agent related to Workvivo HQ and ZoomMate."
-            ]
+            ],
+            "layout": "split",
+            "label": "Buyer understanding",
+            "navLabel": "The value",
+            "aside": {
+              "label": "The commercial question",
+              "text": "How do search, grounded answers, and supported actions become a progression buyers can understand and teams can sell?"
+            }
           },
           {
             "id": "contribution",
             "title": "Connecting technical depth to buying decisions",
             "paragraphs": [
               "I led product and portfolio positioning, working with Product and Zoom's AI teams to understand enterprise search, retrieval-augmented generation (RAG), grounding, permissions, integrations and supported actions. I turned those capabilities into buyer use cases, seller messaging and enablement for IT, HR and Communications. I also co-developed pricing and packaging with the Revenue leader, considering customer value, AI maturity, use cases, competitive alternatives and sustainable economics."
+            ],
+            "layout": "artifact",
+            "label": "Technical depth to commercial value",
+            "navLabel": "The approach",
+            "visual": {
+              "type": "journey",
+              "title": "A progression buyers can understand",
+              "steps": [
+                "Search",
+                "Answer",
+                "Action"
+              ],
+              "caption": "Enterprise retrieval → grounded answers → supported task execution",
+              "src": "assets/evidence/hq-agent-product.png",
+              "alt": "HQ Agent product artwork.",
+              "href": "assets/evidence/hq-agent-product.png",
+              "linkLabel": "View the product artwork"
+            }
+          },
+          {
+            "id": "choices",
+            "title": "What the commercial story needed to establish",
+            "label": "Strategic choices",
+            "navLabel": "The decisions",
+            "layout": "decisions",
+            "items": [
+              "Connect the capability to a use case. Explain what the employee is trying to achieve and how the agent helps.",
+              "Make trust part of the value. Include grounding, permissions, integrations, and the boundaries of supported actions.",
+              "Position within the portfolio. Clarify the relationship between HQ Agent, Workvivo HQ, and ZoomMate.",
+              "Package around customer value. Consider AI maturity, use cases, competitive alternatives, and sustainable economics."
             ]
           },
           {
@@ -452,7 +536,128 @@
             "title": "Search. Answer. Action.",
             "paragraphs": [
               "The positioning gave commercial teams a usable progression—search, answer, action—and a more credible explanation of what the product could and could not do. It informed launch and seller enablement and helped connect technical capabilities to commercial value. Internal planning identified a substantial HQ Agent pipeline opportunity, but pipeline estimates and targets are not presented here as achieved or PMM-generated revenue."
-            ]
+            ],
+            "layout": "text",
+            "label": "Commercial application",
+            "navLabel": "The application"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "brazil-in-red",
+      "title": "Brazil in Red",
+      "category": "technical",
+      "tag": "Data storytelling",
+      "summary": "From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.",
+      "demonstrates": "Research synthesis, data storytelling, product judgment, visual direction, and AI-assisted building.",
+      "proof": "Live bilingual atlas with interactive maps, round comparisons, source links, and methodology notes.",
+      "image": "assets/evidence/brazil-in-red.svg",
+      "sourceUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+      "projectUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+      "projectLabel": "Explore the live atlas",
+      "projectPreview": {
+        "image": "assets/evidence/brazil-in-red-preview.jpg",
+        "alt": "Brazil in Red atlas opening screen, with its red photographic design and presidential result comparison.",
+        "caption": "The atlas opens with the national picture, then lets readers explore the results across Brazil and the world.",
+        "width": 2048,
+        "height": 853
+      },
+      "evidence": [
+        {
+          "title": "Explore Brazil in Red",
+          "url": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+          "kind": "Live personal project",
+          "note": "Explore the bilingual atlas, interactive maps, comparison tables, and sources and method section."
+        }
+      ],
+      "caseStudy": {
+        "overview": {
+          "eyebrow": "Turning curiosity into a story people can explore",
+          "lead": "A national result tells you who won. I wanted to understand what sat beneath it: the differences between places, the change between rounds, and the experience of Brazilians voting abroad. I turned those questions into Brazil in Red, a bilingual interactive atlas.",
+          "learning": "A chart can be accurate and still tell the wrong story. Choosing what to compare is part of the strategy."
+        },
+        "story": [
+          {
+            "id": "curiosity",
+            "title": "Finding the story beneath the result",
+            "paragraphs": [
+              "The starting point was personal curiosity. As I explored the results, the question grew: how could I bring the national picture, regional differences, and overseas vote into one experience that made sense to someone arriving without all that context?",
+              "I chose to give the atlas an editorial direction, then let readers investigate it. The page moves from the national result to changes between rounds, Brazilian states, and voters abroad. That sequence gives people a way into the subject before asking them to navigate a map or interpret a table."
+            ],
+            "layout": "split",
+            "label": "Editorial direction",
+            "navLabel": "The question",
+            "visual": {
+              "type": "journey",
+              "title": "A way into the subject",
+              "steps": [
+                "National result",
+                "Changes between rounds",
+                "Brazilian states",
+                "Voters abroad"
+              ]
+            }
+          },
+          {
+            "id": "experience",
+            "title": "A guided story, with room to explore",
+            "paragraphs": [
+              "I set the questions, directed the research and AI-assisted build, and shaped the structure, visual direction, and interaction design. The published experience covers 27 Brazilian federal units and 31 selected overseas countries and territories, with English and Portuguese views.",
+              "I wanted the narrative and the interactive elements to work together. A reader can follow the page for the main patterns, then use the maps, round selectors, regional filters, and comparison tables to examine a place that matters to them. Headings, labels, and visual hierarchy had to support both ways of reading."
+            ],
+            "layout": "artifact",
+            "label": "Experience design",
+            "navLabel": "The experience",
+            "visual": {
+              "type": "image",
+              "title": "Inside the atlas",
+              "src": "assets/evidence/brazil-in-red-preview.jpg",
+              "alt": "The atlas opening screen with its national result comparison.",
+              "href": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+              "caption": "Start with the national picture, then explore places and comparisons.",
+              "scope": [
+                {
+                  "value": "27",
+                  "label": "Brazilian federal units"
+                },
+                {
+                  "value": "31",
+                  "label": "Selected overseas locations"
+                },
+                {
+                  "value": "2",
+                  "label": "Language views"
+                }
+              ]
+            }
+          },
+          {
+            "id": "decisions",
+            "title": "The choices behind the comparisons",
+            "paragraphs": [
+              "The most useful iterations came from questioning what a reader could reasonably conclude from each visual. I pushed for changes wherever an apparently simple comparison could imply something the data did not establish:"
+            ],
+            "items": [
+              "Give each percentage a clear meaning. A candidate’s share, the winner’s share, and a change between rounds answer different questions. The labels needed to identify the candidate, round, and voting basis.",
+              "Make the rounds comparable. Round one includes other candidates. The atlas distinguishes all-valid-vote shares from a comparison recalculated around the two finalists, and separates a change in winner from the size of the swing.",
+              "Choose the right level of context. Highlighting Ireland and France did not tell the whole European story. I asked for a regional view alongside the individual examples, so the selection of places would not carry more weight than it should.",
+              "Keep interpretation within the evidence. Aggregate changes show how results differed between rounds; they do not establish how individual people switched their votes. Source links and methodology notes give readers a way to examine those boundaries."
+            ],
+            "layout": "decisions",
+            "label": "Strategic judgment",
+            "navLabel": "The decisions"
+          },
+          {
+            "id": "people",
+            "title": "Making space for the people behind the numbers",
+            "paragraphs": [
+              "I also wanted the atlas to convey what participation involved. I asked to include stories of people travelling by boat, offering lifts, and helping others reach the polls alongside the political context and disputes. That widened the story from the outcome of voting to the effort people made to take part.",
+              "The resulting project brings research, editorial judgment, and product design into one public experience. It reflects an approach I bring to product marketing: find the question people care about, turn complexity into a clear story, and make it easy to go deeper."
+            ],
+            "layout": "text",
+            "label": "Human context",
+            "navLabel": "The people"
           }
         ]
       }
@@ -497,7 +702,7 @@
         "overview": {
           "eyebrow": "Learn. Build. Apply.",
           "lead": "I don't want to market AI from the sidelines. I learn how the systems work, build with them and use that experience to make better product and GTM decisions.",
-          "learning": "The tools aren't the proof. The choices behind the workflow are."
+          "learning": "AI fluency should improve the decisions you make. Knowing the terminology is the entry fee."
         },
         "eyebrow": "Building an AI-enabled PMM operating model",
         "context": "AI-first Product Marketing is not simply a team using ChatGPT. Shauna has been exploring how AI can change the operating model of PMM itself—and where human judgment must remain accountable.",
@@ -525,7 +730,14 @@
             "title": "Learning through the work",
             "paragraphs": [
               "AI changes both what enterprises can buy and how marketing teams can operate. I wanted a practical understanding of agents, orchestration, context, retrieval and human oversight—not just the vocabulary."
-            ]
+            ],
+            "layout": "split",
+            "label": "Applied learning",
+            "navLabel": "The motivation",
+            "aside": {
+              "label": "The learning standard",
+              "text": "Understand how agents, context, retrieval, and human oversight affect the products and workflows I work on."
+            }
           },
           {
             "id": "practice",
@@ -533,14 +745,31 @@
             "paragraphs": [
               "I completed Product School courses in AI Product Strategy for Leaders, Agentic Workflows & Loops, and Go-to-Market, and I’m undertaking its Product Manager Certification. Alongside formal learning, I build and test agents, automation workflows, and lightweight applications using coding assistants, n8n, and other developer tools.",
               "Projects include the live conversational portfolio agent, competitive research workflows, and Messaging as Code. I test what works, what fails, and where human approval is still essential."
-            ]
+            ],
+            "layout": "artifact",
+            "label": "Learning through practice",
+            "navLabel": "The practice",
+            "visual": {
+              "type": "journey",
+              "title": "Learn. Build. Apply.",
+              "steps": [
+                "Formal learning",
+                "Practical builds",
+                "Testing + iteration",
+                "Product + GTM judgment"
+              ],
+              "caption": "Product School courses, self-guided builds, and hands-on workflow testing."
+            }
           },
           {
             "id": "application",
             "title": "Bringing that judgment into product marketing",
             "paragraphs": [
               "More technical fluency in the AI products I market, better questions for Product and Engineering, and working examples of AI applied to genuine PMM problems. These are practical builds and pilots, not claims of organisation-wide automation or measured efficiency gains."
-            ]
+            ],
+            "layout": "text",
+            "label": "Product marketing application",
+            "navLabel": "The application"
           }
         ]
       }
@@ -579,7 +808,7 @@
         "overview": {
           "eyebrow": "A portfolio you can have a conversation with",
           "lead": "A case study can tell a story. A conversation can start with the part you actually care about. I wanted my portfolio to do both.",
-          "learning": "A useful agent turns a body of knowledge into the answer someone needs next."
+          "learning": "A portfolio agent earns its place by answering the questions a curated page lets you avoid."
         },
         "eyebrow": "Turning a résumé into an evidence-grounded conversation",
         "context": "A static portfolio can show the work, but it cannot adapt to the question a recruiter, hiring manager, or technical stakeholder actually wants answered. Shauna designed a live ElevenLabs experience that lets visitors explore her career, case studies, technical builds, and working principles through voice or text. She also created a voice persona from her own voice and gave the agent a defined personality so the experience feels recognisably hers without pretending to be her.",
@@ -650,13 +879,49 @@
             "title": "Start with the visitor’s question",
             "paragraphs": [
               "Recruiters, hiring managers and collaborators arrive with different questions. I wanted them to explore the work naturally, with answers that were specific, useful and faithful to my experience."
-            ]
+            ],
+            "layout": "split",
+            "label": "Visitor experience",
+            "navLabel": "The question",
+            "aside": {
+              "label": "The experience to create",
+              "text": "Let visitors begin with their own questions and get answers that stay faithful to the work."
+            }
           },
           {
             "id": "contribution",
             "title": "Designing the conversation",
             "paragraphs": [
               "I designed and integrated a voice and text agent on ElevenLabs, with a voice persona based on my own recordings. I configured its personality, prompts, modular knowledge and intent routing, then compared models and tested responses against career and project evidence to improve clarity, relevance and accuracy."
+            ],
+            "layout": "artifact",
+            "label": "Conversation design",
+            "navLabel": "The system",
+            "visual": {
+              "type": "relationship",
+              "title": "From a visitor’s question to a grounded answer",
+              "steps": [
+                "Voice or text question",
+                "Prompts + intent routing",
+                "Curated project knowledge",
+                "Voice or text answer"
+              ],
+              "caption": "ElevenLabs · Voice persona · Modular knowledge · Response testing",
+              "href": "documents/voice-agent.html",
+              "linkLabel": "Read the system overview"
+            }
+          },
+          {
+            "id": "choices",
+            "title": "The choices behind a useful conversation",
+            "label": "Strategic choices",
+            "navLabel": "The decisions",
+            "layout": "decisions",
+            "items": [
+              "Start with different visitor intents. Recruiters, hiring managers, and collaborators need different routes into the same body of work.",
+              "Design a recognisable voice. Base the voice persona on my recordings and configure its personality and prompts.",
+              "Make knowledge modular. Connect the conversation to curated career and project material through intent routing.",
+              "Test against the experience. Compare models and review answers for clarity, relevance, and accuracy."
             ]
           },
           {
@@ -664,7 +929,10 @@
             "title": "A portfolio you can talk to",
             "paragraphs": [
               "A live conversational layer for the portfolio. Visitors can ask about a project, a decision or my approach, while the agent draws on curated career and project material. The work brought voice design, product judgment and hands-on AI configuration together in one experience."
-            ]
+            ],
+            "layout": "text",
+            "label": "Live experience",
+            "navLabel": "The experience"
           }
         ]
       }
@@ -702,7 +970,7 @@
         "overview": {
           "eyebrow": "Turning analyst relations into a strategic market leadership programme",
           "lead": "When Workvivo's dedicated analyst relations owner left, I took on the remit alongside leading Product Marketing. I built a repeatable programme that strengthened our existing position and helped open up adjacent markets.",
-          "learning": "Analyst relations should help the company see where the market is going—not just tell analysts where we've been."
+          "learning": "If analyst relations only starts when a report is due, someone else’s calendar is setting your strategic agenda."
         },
         "eyebrow": "Building external market credibility",
         "context": "Workvivo evolved from an underdog employee app into a recognised Employee Experience Platform and later a broader AI-native employee-experience story. Analyst understanding had to evolve with the product and company narrative.",
@@ -730,21 +998,62 @@
             "title": "Beyond report deadlines",
             "paragraphs": [
               "We had an established presence in employee experience and intranet research, but analyst engagement needed to become more than a series of report deadlines. We needed stronger relationships, a clear evidence base and a view of where the broader product portfolio could credibly compete."
-            ]
+            ],
+            "layout": "split",
+            "label": "Strategic opportunity",
+            "navLabel": "The opportunity",
+            "aside": {
+              "label": "The programme ambition",
+              "text": "Build relationships and market intelligence that help Workvivo strengthen its position and assess adjacent categories."
+            }
           },
           {
             "id": "contribution",
             "title": "Building the analyst relations programme",
             "paragraphs": [
               "I took ownership of analyst strategy, executive briefings, research submissions, customer proof and ongoing engagement across Gartner, Forrester, ClearBox and other firms. I connected the analyst programme with portfolio positioning, competitive intelligence and GTM, and expanded activity through strategy days, events and research conversations. I also used analyst and market signals to advise leadership on category shifts, product opportunities and where Workvivo should place its next bets."
-            ]
+            ],
+            "layout": "artifact",
+            "label": "Programme design",
+            "navLabel": "The programme",
+            "visual": {
+              "type": "relationship",
+              "title": "An ongoing intelligence cycle",
+              "steps": [
+                "Analyst relationships",
+                "Briefings + research",
+                "Market signals",
+                "Portfolio + GTM decisions"
+              ],
+              "caption": "Strategy days, customer proof, submissions, and ongoing engagement connect the programme."
+            }
           },
           {
             "id": "result",
             "title": "Recognition and new category opportunities",
             "paragraphs": [
               "The programme supported stronger year-on-year recognition, including Workvivo's fourth consecutive Gartner Magic Quadrant Leader placement in 2026, its 2026 Forrester Wave Leader position in Intranet Platforms and ClearBox Choice recognition. I secured invitations to additional Forrester Wave evaluations in Employee Experience Management and Cognitive Search. Those evaluations are in progress; invitations are not placements or outcomes."
-            ]
+            ],
+            "layout": "artifact",
+            "label": "Recognition and expansion",
+            "navLabel": "The outcomes",
+            "visual": {
+              "type": "gallery",
+              "title": "Published recognition campaigns",
+              "images": [
+                {
+                  "src": "assets/evidence/gartner-mq-2025.png",
+                  "alt": "Workvivo Gartner 2025 campaign artwork.",
+                  "caption": "Gartner · 2025 campaign artwork"
+                },
+                {
+                  "src": "assets/evidence/forrester-wave-2026.png",
+                  "alt": "Workvivo Forrester 2026 campaign artwork.",
+                  "caption": "Forrester · 2026 campaign artwork"
+                }
+              ],
+              "caption": "Company campaign artifacts; recognition reflects the wider business and independent analyst assessments."
+            }
           }
         ]
       }
@@ -783,7 +1092,7 @@
         "overview": {
           "eyebrow": "Turning a market disruption into a clear reason to choose Workvivo",
           "lead": "When Meta announced Workplace's closure, its customers had to move. But Workvivo still had to earn their choice.",
-          "learning": "When customers have to move, the destination still has to earn their choice."
+          "learning": "A competitor’s exit creates urgency. It does not create a reason to choose you."
         },
         "eyebrow": "Turning disruption into commercial opportunity",
         "context": "Meta announced the closure of Workplace. Workvivo was named Meta’s only preferred migration partner, creating a major, time-bound market opportunity and a highly visible competitive GTM motion.",
@@ -817,21 +1126,46 @@
             "title": "A forced move. A competitive choice.",
             "paragraphs": [
               "Workvivo was named Meta's only preferred migration partner, creating a rare, time-sensitive opportunity. Buyers needed reassurance about moving their communities, evidence that the new platform would meet their needs and a reason to choose Workvivo over competing alternatives."
-            ]
+            ],
+            "layout": "split",
+            "label": "Market disruption",
+            "navLabel": "The opening",
+            "aside": {
+              "label": "The strategic tension",
+              "text": "Workplace customers had to move. Workvivo still had to earn their choice."
+            }
           },
           {
             "id": "contribution",
             "title": "Giving customers a reason to choose",
             "paragraphs": [
               "I led migration positioning, competitive differentiation and seller messaging, connecting the practical migration story to the longer-term value of employee experience. I worked across functions to put the right narrative, objections and enablement into the field during a compressed decision window."
-            ]
+            ],
+            "layout": "artifact",
+            "label": "Migration positioning",
+            "navLabel": "The strategy",
+            "visual": {
+              "type": "journey",
+              "title": "Give buyers a reason to move with confidence",
+              "steps": [
+                "Migration reassurance",
+                "Competitive differentiation",
+                "Long-term employee value"
+              ],
+              "caption": "Positioning, objections, and seller enablement for a compressed decision window.",
+              "href": "https://www.workvivo.com/workplace/",
+              "linkLabel": "Explore the migration programme"
+            }
           },
           {
             "id": "result",
             "title": "A coordinated market response",
             "paragraphs": [
               "A coordinated GTM approach that helped the wider business compete for Workplace customers. Workvivo's company-wide response was recognised with Forrester's **2026 B2B Return on Integration Honors**. The award belongs to the cross-functional company effort; my contribution was positioning, competitive strategy and seller enablement. Internal retrospectives describe substantial company-level customer capture and revenue growth. I have not included those figures here without an approved public source and a clear attribution boundary."
-            ]
+            ],
+            "layout": "text",
+            "label": "Cross-functional delivery",
+            "navLabel": "The response"
           }
         ]
       }

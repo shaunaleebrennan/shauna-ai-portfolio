@@ -10,17 +10,25 @@ I don't want to market AI from the sidelines. I learn how the systems work, buil
 
 AI changes both what enterprises can buy and how marketing teams can operate. I wanted a practical understanding of agents, orchestration, context, retrieval and human oversight—not just the vocabulary.
 
+**The learning standard:** Understand how agents, context, retrieval, and human oversight affect the products and workflows I work on.
+
 ## Study it. Build it. Test it.
 
 I completed Product School courses in AI Product Strategy for Leaders, Agentic Workflows & Loops, and Go-to-Market, and I’m undertaking its Product Manager Certification. Alongside formal learning, I build and test agents, automation workflows, and lightweight applications using coding assistants, n8n, and other developer tools.
 
 Projects include the live conversational portfolio agent, competitive research workflows, and Messaging as Code. I test what works, what fails, and where human approval is still essential.
 
+### Learn. Build. Apply.
+
+Formal learning → Practical builds → Testing + iteration → Product + GTM judgment
+
+Product School courses, self-guided builds, and hands-on workflow testing.
+
 ## Bringing that judgment into product marketing
 
 More technical fluency in the AI products I market, better questions for Product and Engineering, and working examples of AI applied to genuine PMM problems. These are practical builds and pilots, not claims of organisation-wide automation or measured efficiency gains.
 
-> The tools aren't the proof. The choices behind the workflow are.
+> AI fluency should improve the decisions you make. Knowing the terminology is the entry fee.
 
 ## Supporting evidence
 

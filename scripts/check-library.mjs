@@ -26,6 +26,17 @@ for (const file of files) {
   for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) links.push([file, match[1].replaceAll('&amp;', '&')]);
 }
 for (const item of work) for (const e of item.evidence) links.push(['case-study.html', e.url]);
+for (const item of work) {
+  if (item.projectPreview) links.push(['case-study.html', item.projectPreview.image]);
+  for (const block of item.caseStudy.story) {
+    const visual = block.visual;
+    if (!visual) continue;
+    if (visual.src) links.push(['case-study.html', visual.src]);
+    if (visual.href) links.push(['case-study.html', visual.href]);
+    for (const image of visual.images || []) links.push(['case-study.html', image.src]);
+    for (const link of visual.links || []) links.push(['case-study.html', link.url]);
+  }
+}
 for (const [file, href] of links) {
   check(!href.includes('workvivo-it-buyer-test'), `Company-specific tool link in ${file}`);
   if (/^(https?:|mailto:|data:)/.test(href)) continue;
@@ -60,9 +71,12 @@ for (const item of work) {
   check(item.caseStudy.story?.length > 0, `Missing story: ${item.slug}`);
   check(new Set(item.caseStudy.story.map(block => block.id)).size === item.caseStudy.story.length, `Duplicate section IDs: ${item.slug}`);
   for (const block of item.caseStudy.story) {
+    check(['text', 'split', 'artifact', 'decisions'].includes(block.layout), `Unknown layout: ${item.slug}`);
     check(block.title && (block.paragraphs?.length || block.items?.length), `Empty section: ${item.slug}`);
     check(markdown.includes(`## ${block.title}`), `Stale section title: ${item.slug}`);
     for (const text of [...(block.paragraphs || []), ...(block.items || [])]) check(markdown.includes(text), `Stale section copy: ${item.slug}`);
+    if (block.aside) check(markdown.includes(block.aside.text), `Stale strategic question: ${item.slug}`);
+    if (block.visual) check(markdown.includes(block.visual.title), `Missing visual explanation: ${item.slug}`);
   }
   for (const evidence of item.evidence) {
     check(markdown.includes(evidence.title), `Missing Markdown evidence: ${item.slug}`);

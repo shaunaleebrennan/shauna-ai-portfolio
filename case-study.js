@@ -17,7 +17,48 @@ try {
     document.title = `${item.title} — Shauna Azevedo-Brennan`;
     document.querySelector('meta[name="description"]').content = story.lead;
     const richText = value => escape(value).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    const section = block => `<section id="${escape(block.id)}" class="case-grid"><h2>${escape(block.title)}</h2><div class="case-copy">${(block.paragraphs || []).map(text => `<p>${richText(text)}</p>`).join('')}${block.items?.length ? `<ul>${block.items.map(text => `<li>${richText(text)}</li>`).join('')}</ul>` : ''}</div></section>`;
+    const paragraphs = values => (values || []).map(text => `<p>${richText(text)}</p>`).join('');
+    const safeUrl = value => {
+      const url = new URL(value, window.location.href);
+      if (!['https:', 'http:'].includes(url.protocol)) throw new Error('Unsupported project link');
+      return escape(value);
+    };
+    const projectLink = visual => visual.href ? `<a class="ds-visual-link" href="${safeUrl(visual.href)}">${escape(visual.linkLabel || 'Explore the project')} <span aria-hidden="true">↗</span></a>` : '';
+    const image = (entry, className = '') => `<img class="${className}" src="${safeUrl(entry.src)}" alt="${escape(entry.alt)}" loading="lazy">`;
+    const visual = data => {
+      if (!data) return '';
+      let body = '';
+      if (data.type === 'image') body = image(data, 'ds-evidence-image');
+      if (data.type === 'journey') {
+        body = `${data.src ? image(data, 'ds-product-image') : ''}<ol class="ds-journey" style="--steps:${data.steps.length}">${data.steps.map((step, index) => `<li><span class="ds-step-number">${String(index + 1).padStart(2, '0')}</span><span>${escape(step)}</span></li>`).join('')}</ol>`;
+      }
+      if (data.type === 'relationship') body = `<ul class="ds-network">${data.steps.map(step => `<li>${escape(step)}</li>`).join('')}</ul>`;
+      if (data.type === 'compare') body = `<div class="ds-comparison"><div><span>${escape(data.beforeLabel)}</span><strong>${escape(data.before)}</strong></div><span class="ds-comparison-arrow" aria-hidden="true">→</span><div><span>${escape(data.afterLabel)}</span><strong>${escape(data.after)}</strong></div></div>`;
+      if (data.type === 'gallery') body = `<div class="ds-gallery">${data.images.map(entry => `<figure><a href="${safeUrl(entry.src)}">${image(entry)}</a><figcaption>${escape(entry.caption)}</figcaption></figure>`).join('')}</div>`;
+      if (data.type === 'resources') body = `<div class="ds-resources">${data.links.map(entry => `<a href="${safeUrl(entry.url)}"><strong>${escape(entry.title)} <span aria-hidden="true">↗</span></strong><span>${escape(entry.note)}</span></a>`).join('')}</div>`;
+      return `<div class="ds-visual ds-visual--${escape(data.type)}"><div class="ds-visual-heading"><h3>${escape(data.title)}</h3></div>${body}${data.caption ? `<p class="ds-visual-caption">${escape(data.caption)}</p>` : ''}${projectLink(data)}</div>`;
+    };
+    const scope = data => data?.scope ? `<div class="ds-scope"><span class="ds-scope-label">Project coverage</span><dl>${data.scope.map(entry => `<div><dt>${escape(entry.label)}</dt><dd>${escape(entry.value)}</dd></div>`).join('')}</dl></div>` : '';
+    const section = (block, index) => {
+      const label = `<div class="ds-section-label"><span>${String(index + 1).padStart(2, '0')}</span><span>${escape(block.label || block.title)}</span></div>`;
+      const heading = `<h2>${escape(block.title)}</h2>`;
+      let body;
+      if (block.layout === 'decisions') {
+        body = `<div class="ds-decisions-head">${heading}<div class="ds-copy">${paragraphs(block.paragraphs)}</div></div><div class="ds-decision-grid">${(block.items || []).map((text, i) => {
+          const end = text.indexOf('. ');
+          const title = end === -1 ? text : text.slice(0, end + 1);
+          const detail = end === -1 ? '' : text.slice(end + 2);
+          return `<article class="ds-decision"><span class="ds-decision-number">${String(i + 1).padStart(2, '0')}</span><h3>${richText(title)}</h3>${detail ? `<p>${richText(detail)}</p>` : ''}</article>`;
+        }).join('')}</div>`;
+      } else if (block.layout === 'split') {
+        body = `<div class="ds-opening-grid"><div class="ds-copy">${heading}${paragraphs((block.paragraphs || []).slice(0, 1))}</div><div class="ds-secondary">${paragraphs((block.paragraphs || []).slice(1))}${block.aside ? `<aside class="ds-question"><span>${escape(block.aside.label)}</span><p>${richText(block.aside.text)}</p></aside>` : ''}${visual(block.visual)}</div></div>`;
+      } else if (block.layout === 'artifact' && block.visual) {
+        body = `<div class="ds-experience-grid"><div class="ds-copy">${heading}${paragraphs(block.paragraphs)}${scope(block.visual)}</div>${visual(block.visual)}</div>`;
+      } else {
+        body = `<div class="ds-text-grid">${heading}<div class="ds-copy">${paragraphs(block.paragraphs)}${block.items?.length ? `<ul>${block.items.map(text => `<li>${richText(text)}</li>`).join('')}</ul>` : ''}</div></div>`;
+      }
+      return `<section id="${escape(block.id)}" class="ds-section ds-section--${escape(block.layout || 'text')}">${label}${body}</section>`;
+    };
 
     root.innerHTML = `
       <article>
@@ -33,9 +74,10 @@ try {
           <figure class="case-visual"><img src="${escape(item.image)}" alt="${escape(item.title)} case study artwork" width="1600" height="2000" fetchpriority="high"></figure>
         </header>
         ${item.projectPreview ? `<figure class="case-project-preview case-shell"><a href="${escape(item.projectUrl)}" target="_blank" rel="noopener noreferrer"><img src="${escape(item.projectPreview.image)}" alt="${escape(item.projectPreview.alt)}" loading="lazy" width="${escape(item.projectPreview.width || 1248)}" height="${escape(item.projectPreview.height || 824)}"></a><figcaption>${escape(item.projectPreview.caption)}</figcaption></figure>` : ''}
-        <div class="case-body case-shell">
+        <div class="ds-body case-shell">
+          <nav class="ds-index" aria-label="Case study sections">${item.caseStudy.story.map((block, index) => `<a href="#${escape(block.id)}"><span>${String(index + 1).padStart(2, '0')}</span>${escape(block.navLabel || block.title)}</a>`).join('')}</nav>
           ${item.caseStudy.story.map(section).join('')}
-          ${story.learning ? `<aside class="case-takeaway"><p>${escape(story.learning)}</p></aside>` : ''}
+          ${story.learning ? `<aside class="ds-pov"><span class="ds-pov-label">My point of view</span><blockquote>“${escape(story.learning.replace(/^[“"]|[”"]$/g, ''))}”</blockquote><p class="ds-pov-signature">Shauna Azevedo-Brennan</p></aside>` : ''}
           <nav class="case-actions" aria-label="Case study navigation">
             <a href="index.html#explore">← All selected work</a>
             <a class="next-case" href="${escape(next.href || `case-study.html?case=${encodeURIComponent(next.slug)}`)}"><span>Next story</span><strong>${escape(next.title)} →</strong></a>

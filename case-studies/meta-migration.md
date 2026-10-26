@@ -10,15 +10,25 @@ When Meta announced Workplace's closure, its customers had to move. But Workvivo
 
 Workvivo was named Meta's only preferred migration partner, creating a rare, time-sensitive opportunity. Buyers needed reassurance about moving their communities, evidence that the new platform would meet their needs and a reason to choose Workvivo over competing alternatives.
 
+**The strategic tension:** Workplace customers had to move. Workvivo still had to earn their choice.
+
 ## Giving customers a reason to choose
 
 I led migration positioning, competitive differentiation and seller messaging, connecting the practical migration story to the longer-term value of employee experience. I worked across functions to put the right narrative, objections and enablement into the field during a compressed decision window.
+
+### Give buyers a reason to move with confidence
+
+Migration reassurance → Competitive differentiation → Long-term employee value
+
+Positioning, objections, and seller enablement for a compressed decision window.
+
+[Explore the migration programme](https://www.workvivo.com/workplace/)
 
 ## A coordinated market response
 
 A coordinated GTM approach that helped the wider business compete for Workplace customers. Workvivo's company-wide response was recognised with Forrester's **2026 B2B Return on Integration Honors**. The award belongs to the cross-functional company effort; my contribution was positioning, competitive strategy and seller enablement. Internal retrospectives describe substantial company-level customer capture and revenue growth. I have not included those figures here without an approved public source and a clear attribution boundary.
 
-> When customers have to move, the destination still has to earn their choice.
+> A competitor’s exit creates urgency. It does not create a reason to choose you.
 
 ## Supporting evidence
 

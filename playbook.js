@@ -21,6 +21,7 @@ function selectArc(index, moveFocus = false) {
     arcPanels[i].hidden = !selected;
   });
   arcArt.dataset.stage = String(currentStage);
+  document.querySelector('#arc').dataset.stage = String(currentStage);
   document.querySelector('.pb-visual-step').textContent = `${String(currentStage + 1).padStart(2, '0')} / ${arcTabs[currentStage].textContent.replace(/^\s*0\d\s*/, '').trim()}`;
   const [before, after, caption] = arcStates[currentStage];
   document.querySelector('#arc-art-before').textContent = before;

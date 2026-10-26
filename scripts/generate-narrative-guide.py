@@ -215,9 +215,9 @@ STAGE_COLOURS=[LAV,PINK,colors.HexColor('#e4f4c8'),colors.HexColor('#f6e8d8'),co
 styles={
  'title':ParagraphStyle('title',fontName='Display',fontSize=32,leading=38,textColor=INK,spaceAfter=12),
  'deck':ParagraphStyle('deck',fontName='Guide',fontSize=12.5,leading=18.5,textColor=colors.HexColor('#3f4a40'),spaceAfter=22),
- 'h':ParagraphStyle('h',fontName='DisplayBold',fontSize=13.2,leading=18,spaceBefore=17,spaceAfter=7,textColor=INK,keepWithNext=True),
- 'p':ParagraphStyle('p',fontName='Guide',fontSize=11.2,leading=16.8,spaceAfter=9,textColor=colors.HexColor('#263026')),
- 'b':ParagraphStyle('b',fontName='Guide',fontSize=11.2,leading=16.8,spaceAfter=8,leftIndent=13,firstLineIndent=-13,textColor=colors.HexColor('#263026')),
+ 'h':ParagraphStyle('h',fontName='DisplayBold',fontSize=13.2,leading=18,spaceBefore=24,spaceAfter=9,textColor=INK,keepWithNext=True),
+ 'p':ParagraphStyle('p',fontName='Guide',fontSize=11.2,leading=15,spaceAfter=14,textColor=colors.HexColor('#263026')),
+ 'b':ParagraphStyle('b',fontName='Guide',fontSize=11.2,leading=15,spaceAfter=12,leftIndent=13,firstLineIndent=-13,textColor=colors.HexColor('#263026')),
  'note':ParagraphStyle('note',fontName='Guide',fontSize=11.2,leading=16.8,spaceBefore=16,spaceAfter=18,backColor=MINT,borderPadding=13,textColor=INK),
  'caption':ParagraphStyle('caption',fontName='Guide',fontSize=8.2,leading=11.5,spaceAfter=12,textColor=colors.HexColor('#535e52'))}
 ART=OUT/'illustrations'
@@ -338,10 +338,10 @@ class ReadingCard(Flowable):
 
 class TakeawayCard(Flowable):
  def __init__(self,text):
-  Flowable.__init__(self);self.text=text;self.spaceBefore=8;self.spaceAfter=10
+  Flowable.__init__(self);self.text=text;self.spaceBefore=12;self.spaceAfter=14
  def wrap(self,aw,ah):
   self.width=aw
-  self.pp=Paragraph(safe(self.text),ParagraphStyle('takeaway',fontName='Guide',fontSize=11.2,leading=16.8,textColor=INK))
+  self.pp=Paragraph(safe(self.text),ParagraphStyle('takeaway',fontName='Guide',fontSize=11.2,leading=15,textColor=INK))
   _,self.ph=self.pp.wrap(aw-30,1000);self.height=self.ph+24;return aw,self.height
  def draw(self):
   c=self.canv;c.setFillColor(colors.HexColor('#ecefe5'));c.roundRect(0,0,self.width,self.height,6,fill=1,stroke=0)
@@ -375,20 +375,20 @@ class EditorialGrid(Flowable):
    top-=rh+14
 
 class EditorialRows(Flowable):
- def __init__(self,items,fill=MINT):Flowable.__init__(self);self.items=items;self.fill=fill;self.spaceBefore=8;self.spaceAfter=14
+ def __init__(self,items,fill=MINT,padding=24):Flowable.__init__(self);self.items=items;self.fill=fill;self.padding=padding;self.spaceBefore=8;self.spaceAfter=14
  def wrap(self,aw,ah):
   self.width=aw;self.rows=[]
   for label,text in self.items:
    lp=Paragraph(safe(label),ParagraphStyle('rowLabel',fontName='DisplayBold',fontSize=10.2,leading=14,textColor=INK))
    pp=Paragraph(safe(text),ParagraphStyle('rowText',fontName='Guide',fontSize=10.4,leading=14.8,textColor=INK))
-   _,lh=lp.wrap(100,1000);_,ph=pp.wrap(aw-142,1000);self.rows.append((lp,pp,lh,ph,max(lh,ph)+24))
+   _,lh=lp.wrap(100,1000);_,ph=pp.wrap(aw-142,1000);self.rows.append((lp,pp,lh,ph,max(lh,ph)+self.padding))
   self.height=sum(r[-1] for r in self.rows);return aw,self.height
  def draw(self):
   c=self.canv;top=self.height
   for lp,pp,lh,ph,rh in self.rows:
    c.setFillColor(self.fill);c.rect(0,top-rh,122,rh,fill=1,stroke=0)
    c.setStrokeColor(colors.HexColor('#d5d8cc'));c.setLineWidth(.4);c.line(0,top-rh,self.width,top-rh)
-   lp.drawOn(c,11,top-12-lh);pp.drawOn(c,137,top-12-ph);top-=rh
+   lp.drawOn(c,11,top-self.padding/2-lh);pp.drawOn(c,137,top-self.padding/2-ph);top-=rh
 
 def split_bold(text):
  match=re.match(r'<b>(.*?)</b>\s*(.*)',text,re.S)
@@ -460,7 +460,7 @@ for i,(title,deck,blocks) in enumerate(PAGES):
   flow.extend([block('h',blocks[7][1]),block('p',blocks[8][1]),block('note',blocks[9][1])]);continue
  if i==16:
   flow.append(block('h',blocks[0][1]))
-  flow.append(EditorialRows([split_bold(t) for k,t in blocks[1:6]],LAV))
+  flow.append(EditorialRows([split_bold(t) for k,t in blocks[1:6]],LAV,padding=20))
   flow.extend(block(k,t) for k,t in blocks[6:]);continue
  if i==17:
   flow.extend([block('h',blocks[0][1]),block('p',blocks[1][1])])
@@ -480,7 +480,7 @@ for i,(title,deck,blocks) in enumerate(PAGES):
   if i==1 and kind=='p' and t.startswith('03 Positioning'):
    flow.append(Contents());continue
   st=styles[kind]
-  if i==10 and kind=='p':st=ParagraphStyle('storyParagraph',parent=st,spaceAfter=10)
+  if i==10 and kind=='p':st=ParagraphStyle('storyParagraph',parent=st,spaceAfter=14)
   if kind=='note':
    flow.append(TakeawayCard(t));continue
   flow.append(Paragraph(('• ' if kind=='b' else '')+safe(t),st))

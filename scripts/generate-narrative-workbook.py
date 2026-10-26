@@ -30,7 +30,7 @@ STAGES = ['#eee8f5', '#f7e3e9', '#e4f1d0', '#f3e7d7', '#e0eae1']
 TINTS = [STAGES[0], STAGES[2], STAGES[1], STAGES[3]]
 GUIDE = 'https://shaunaleebrennan.github.io/shauna-ai-portfolio/playbook.html'
 c = canvas.Canvas(str(OUT), pagesize=A4, pageCompression=1)
-c.setTitle('Narrative Design Workbook | Shauna Brennan')
+c.setTitle('Narrative Design Workbook | Shauna Azevedo-Brennan')
 c.setAuthor('Shauna Azevedo-Brennan')
 c.setSubject('Four practical worksheets: brief, argument, proof, and review')
 
@@ -71,7 +71,7 @@ def checkbox(text, x, top, width, size=10):
 def header(number, title, subtitle):
     rect(M, 29, 23, 4, '#c9ff63', 0)
     para('NARRATIVE DESIGN / WORKBOOK', M + 33, 25, 300, 7.8, 11, MUTED, 'BodyBold')
-    para('SHAUNA BRENNAN', W - M - 104, 25, 104, 7.8, 11, MUTED, 'BodyBold')
+    para('SHAUNA AZEVEDO-BRENNAN', W - M - 160, 25, 160, 7.8, 11, MUTED, 'BodyBold')
     para(title, M, 56, CW, 30, 38, INK, 'Heading')
     para(subtitle, M, 104, CW, 11.3, 16, MUTED)
     tabs = ['01  Brief', '02  Story', '03  Proof', '04  Review']
@@ -84,7 +84,7 @@ def header(number, title, subtitle):
 
 def end_page(number):
     rule(M, 790, CW)
-    para('Five-stage method: Marcus Andrews. Practical companion: Shauna Brennan.', M, 799, CW - 35, 7.1, 9.5, MUTED)
+    para('Five-stage method: Marcus Andrews. Practical companion: Shauna Azevedo-Brennan.', M, 799, CW - 35, 7.1, 9.5, MUTED)
     para(f'{number} / 4', W - M - 25, 799, 25, 7.8, 10, MUTED, 'BodyBold')
     c.linkURL(GUIDE, (M, H - 813, W - M - 35, H - 796), thickness=0)
     c.showPage()

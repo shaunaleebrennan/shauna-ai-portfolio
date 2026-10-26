@@ -74,7 +74,7 @@ const briefForm = document.querySelector('#narrative-brief');
 const briefStatus = document.querySelector('#brief-status');
 const fields = [...briefForm.querySelectorAll('textarea')];
 function briefText() {
-  return '# Narrative Design Brief\n\n' + fields.map(field => `## ${field.name}\n\n${field.value.trim() || '[Not yet defined]'}`).join('\n\n') + '\n\n---\nPrepared using Shauna Brennan’s Narrative Design playbook.\nFive-stage change-led method: Marcus Andrews.\n';
+  return '# Narrative Design Brief\n\n' + fields.map(field => `## ${field.name}\n\n${field.value.trim() || '[Not yet defined]'}`).join('\n\n') + '\n\n---\nPrepared using Shauna Azevedo-Brennan’s Narrative Design playbook.\nFive-stage change-led method: Marcus Andrews.\n';
 }
 function hasNotes() {
   if (fields.some(field => field.value.trim())) return true;

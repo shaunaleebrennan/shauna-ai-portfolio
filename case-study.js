@@ -14,7 +14,7 @@ try {
     const item = content.work[index];
     const story = item.caseStudy.overview;
     const next = content.work[(index + 1) % content.work.length];
-    document.title = `${item.title} — Shauna Brennan`;
+    document.title = `${item.title} — Shauna Azevedo-Brennan`;
     document.querySelector('meta[name="description"]').content = story.lead;
     const richText = value => escape(value).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
     const section = (id, title, text) => `<section id="${id}" class="case-grid"><h2>${title}</h2><div class="case-copy"><p>${richText(text)}</p></div></section>`;

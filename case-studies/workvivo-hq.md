@@ -2,48 +2,46 @@
 
 [← All selected work](../README.md#selected-work)
 
-**Reimagining the intranet as a digital HQ for the modern workforce**
+**Standing out in a crowded AI-native employee experience market**
 
-I led the brand narrative, positioning, and messaging behind Workvivo HQ, giving our AI ambition a meaning our customers could understand and our HR and Internal Comms champions could get behind.
+I led the brand narrative, positioning, and messaging behind Workvivo HQ: evolving our employee experience platform story into a digital HQ our customer base could understand, with messaging adapted by persona.
 
-## When AI stops being a differentiator
+## Standing out in a crowded AI-native EX market
 
-As AI capabilities became more widely available, I saw a positioning risk: an AI-led story could make Workvivo sound more like its competitors. Saying more about AI would not, by itself, give customers a stronger reason to choose us.
+Workvivo was the **employee experience platform**, with messaging adapted by persona. The challenge was standing out in a crowded AI-native employee experience market.
 
-Our HR and Internal Comms champions already understood Workvivo through communication, connection, and belonging. We needed to expand their understanding of what the platform could become, while keeping those priorities central to the story.
+As AI became increasingly commoditised, we needed a way to differentiate while staying relevant to our champion personas. Overusing AI in the copy would not give us that distinction. The brand narrative needed to make our ambition understandable to the entire customer base.
 
-**The strategic question:** How could we reimagine the intranet for the AI era in a way our entire customer base could understand—and our existing champions could get behind?
+**The strategic question:** How could Workvivo differentiate in a crowded AI-native employee experience market while staying relevant to its champion personas and understandable to its entire customer base?
 
 ## Give work a home
 
-I centred the brand narrative on a **digital HQ for the modern workforce**. A headquarters was a familiar idea with room for a bigger ambition: a shared home where every employee could connect with the organisation, find what they needed, and get work done.
+I centred the brand narrative on a **digital HQ for the modern workforce**. It gave us a way to express the platform’s evolution in language our customer base could understand.
 
-That reframed expectations of the intranet. Communication and culture remained essential, alongside knowledge, insight, and action. It gave existing customers a way to understand the evolution through their own experience of work.
+The work brought together the broader digital HQ narrative and messaging adapted by persona. AI remained part of the product story, without becoming the repeated message across the copy.
 
-“Give work a home” expressed that idea simply. AI had a clear role in making the experience more useful, with specific capabilities explained where they mattered.
+### The evolution of the platform story
 
-### A familiar idea. A broader ambition.
-
-| The starting point | The expanded promise |
+| Existing positioning | Brand narrative |
 | --- | --- |
-| An intranet for communication and connection | A digital HQ for the modern workforce |
+| Workvivo, the employee experience platform | A digital HQ for the modern workforce |
 
-Build on what champions value, then show how the experience can do more.
+Messaging adapted by persona, with a shared digital HQ narrative.
 
 ## The judgment behind the messaging
 
 
 
-- Lead with a world customers recognise. Use digital HQ to make the product ambition understandable across the customer base, including employees who would never describe their needs in AI terminology.
-- Protect our champions’ reasons to care. Keep communication, culture, and belonging central, so HR and Internal Comms could see their priorities in the expanded vision.
-- Make AI language earn its place. Avoid using AI as a repeated headline claim. Explain it when it clarifies how an employee can find an answer, understand information, or take action.
-- Give every product a role in the story. Connect HQ, HQ Agent, and Seer through one employee experience, with capabilities and proof that make the broader promise credible.
+- Start with the competitive challenge. Stand out in a crowded AI-native employee experience market, where AI claims were becoming less distinctive.
+- Make the ambition understandable. Use digital HQ to express the platform’s evolution in language the entire customer base could understand.
+- Stay relevant to our champions. Adapt the messaging by persona while maintaining a shared brand narrative.
+- Avoid overusing AI in the copy. Let the digital HQ story lead, with AI explained through the capabilities and value it enables.
 
 ## From brand narrative to a shared launch story
 
 I led the positioning and messaging architecture, then carried the narrative into launch messaging, the website, analyst framing, competitive guidance, campaign direction, and seller enablement, working across Product, Sales, Growth, and Marketing.
 
-The core story stayed consistent as the emphasis changed by audience. HR and Internal Comms could connect it to employee experience; IT could explore the knowledge, integrations, and capabilities behind it. HQ Agent and Seer extended the ambition within the same brand narrative.
+The messaging varied by persona within the broader digital HQ narrative. The portfolio story connected Workvivo HQ, HQ Agent, and Seer.
 
 ### One employee experience
 
@@ -53,10 +51,10 @@ Communication and connection · Knowledge and action · Listening and insight
 
 [Explore the narrative notes](../knowledge/case-study-hq.md)
 
-## A bigger ambition customers could understand
+## Bringing the narrative to market
 
-Workvivo HQ launched with a shared way to explain the platform’s evolution: a digital HQ bringing together communication, knowledge, insight, and action. The brand narrative connected the AI ambition to the employee experience customers already knew.
+Workvivo HQ launched with the digital HQ narrative connecting communication, knowledge, insight, and action. Launch messaging, campaigns, and enablement carried that narrative into market.
 
 The company-wide launch was recognised internally for consistent messaging across leadership and field teams. That feedback supports the alignment achieved; it does not establish a measured pipeline or adoption impact.
 
-> When every competitor can claim AI, the brand has to give customers something more meaningful to believe in.
+> An AI story that erases what made you different is a concession to your competitors.

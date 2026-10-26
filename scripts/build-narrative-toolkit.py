@@ -15,7 +15,7 @@ example, evidence, pressure tests, AI guidance, and activation. A standalone 19-
 Four printable worksheets for your brief, story, proof, and review.
 Use them independently or alongside the playbook in a workshop.
 
-3. WORK WITH AI — narrative-design-playbook/
+3. WORK WITH AI — narrative-design-skill/
 The complete companion skill, including SKILL.md and its reference files.
 Install the whole folder in an assistant that supports custom skills, or
 add its files as project references. Unzipping or uploading the toolkit
@@ -34,5 +34,5 @@ with ZipFile(ASSETS / 'narrative-design-toolkit.zip', 'w', ZIP_DEFLATED) as bund
     with ZipFile(ASSETS / 'narrative-design-skill.zip') as skill:
         for entry in skill.infolist():
             if not entry.is_dir():
-                bundle.writestr(entry.filename, skill.read(entry.filename))
+                bundle.writestr('narrative-design-skill/' + entry.filename.split('/', 1)[1], skill.read(entry.filename))
 print('Built narrative-design-toolkit.zip: playbook, workbook, and complete AI skill.')

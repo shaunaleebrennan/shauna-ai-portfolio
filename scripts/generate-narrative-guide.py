@@ -336,6 +336,17 @@ class ReadingCard(Flowable):
   c.setFont('GuideBold',8);c.setFillColor(colors.HexColor('#465141'));c.drawString(18,self.height-20,self.label.upper())
   self.pp.drawOn(c,18,14)
 
+class TakeawayCard(Flowable):
+ def __init__(self,text):
+  Flowable.__init__(self);self.text=text;self.spaceBefore=8;self.spaceAfter=10
+ def wrap(self,aw,ah):
+  self.width=aw
+  self.pp=Paragraph(safe(self.text),ParagraphStyle('takeaway',fontName='Guide',fontSize=11.2,leading=16.8,textColor=INK))
+  _,self.ph=self.pp.wrap(aw-30,1000);self.height=self.ph+24;return aw,self.height
+ def draw(self):
+  c=self.canv;c.setFillColor(colors.HexColor('#ecefe5'));c.roundRect(0,0,self.width,self.height,6,fill=1,stroke=0)
+  self.pp.drawOn(c,15,12)
+
 class EditorialGrid(Flowable):
  def __init__(self,items,fill=LAV,start=None):
   Flowable.__init__(self);self.items=items;self.fill=fill;self.start=start;self.spaceBefore=8;self.spaceAfter=14
@@ -383,7 +394,7 @@ def split_bold(text):
  match=re.match(r'<b>(.*?)</b>\s*(.*)',text,re.S)
  return (match.group(1).rstrip('.:'),match.group(2)) if match else ('',text)
 
-def block(kind,text):return Paragraph(('• ' if kind=='b' else '')+safe(text),styles[kind])
+def block(kind,text):return TakeawayCard(text) if kind=='note' else Paragraph(('• ' if kind=='b' else '')+safe(text),styles[kind])
 
 class Contents(Flowable):
  def __init__(self):Flowable.__init__(self);self.height=207;self.spaceBefore=4;self.spaceAfter=13
@@ -434,9 +445,12 @@ for i,(title,deck,blocks) in enumerate(PAGES):
   part=i-12;flow.append(EditorialGrid(TESTS[part*6:(part+1)*6],PINK,start=part*6+1))
   flow.append(ReadingCard('Your next move',blocks[-1][1],MINT));continue
  if i==14:
-  flow.extend([block('h',blocks[0][1]),block('p',blocks[1][1]),block('h',blocks[2][1])])
+  def writing_block(kind,text):
+   if kind=='h':return Paragraph(safe(text),ParagraphStyle('writingHeading',parent=styles['h'],spaceBefore=8,spaceAfter=5))
+   return block(kind,text)
+  flow.extend([writing_block('h',blocks[0][1]),block('p',blocks[1][1]),writing_block('h',blocks[2][1])])
   flow.extend(block(k,t) for k,t in blocks[3:6])
-  flow.append(block('h',blocks[6][1]))
+  flow.append(writing_block('h',blocks[6][1]))
   flow.append(EditorialGrid([split_bold(t) for k,t in blocks[7:11]],STAGE_COLOURS[2]))
   flow.append(block('note',blocks[-1][1]));continue
  if i==15:
@@ -456,7 +470,7 @@ for i,(title,deck,blocks) in enumerate(PAGES):
   flow.append(block('p',blocks[10][1]));continue
  if i==18:
   flow.extend([block('h',blocks[0][1]),block('p',blocks[1][1])])
-  flow.append(EditorialGrid([('Marcus Andrews',blocks[2][1]),('Marcus Andrews',blocks[3][1]),('Nancy Duarte',blocks[5][1]),('Donald Miller',blocks[6][1])],colors.HexColor('#ecefe5')))
+  flow.append(EditorialGrid([('The original method',blocks[2][1]),('Framework reference',blocks[3][1]),('Story structure',blocks[5][1]),('The customer’s role',blocks[6][1])],colors.HexColor('#ecefe5')))
   flow.append(ReadingCard('Put it into practice',blocks[8][1]+'<br/><br/>'+blocks[9][1],LAV))
   flow.append(block('p',blocks[10][1]));continue
 
@@ -466,9 +480,9 @@ for i,(title,deck,blocks) in enumerate(PAGES):
   if i==1 and kind=='p' and t.startswith('03 Positioning'):
    flow.append(Contents());continue
   st=styles[kind]
-  if i==10 and kind=='p':st=ParagraphStyle('storyParagraph',parent=st,spaceAfter=6)
+  if i==10 and kind=='p':st=ParagraphStyle('storyParagraph',parent=st,spaceAfter=10)
   if kind=='note':
-   st=ParagraphStyle('colourNote',parent=st,backColor=colors.HexColor('#ecefe5'))
+   flow.append(TakeawayCard(t));continue
   flow.append(Paragraph(('• ' if kind=='b' else '')+safe(t),st))
 base=OUT/'narrative-design-guide-body.pdf'
 doc=SimpleDocTemplate(str(base),pagesize=A4,rightMargin=48,leftMargin=48,topMargin=83,bottomMargin=72,title='Narrative Design: Change the Frame | Narrative Design Playbook',author='Shauna Azevedo-Brennan')

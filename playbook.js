@@ -134,3 +134,45 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   document.querySelectorAll('.pb-reveal').forEach(element => observer.observe(element));
   document.documentElement.classList.add('pb-js');
 }
+
+// Explore one source of insight at a time, with the reasoning available on demand.
+const signalExamples = {
+  customer: {
+    kicker: 'Illustrative customer signal',
+    heading: 'Every task is done. The customer is still blocked.',
+    prompt: 'Look at recent decisions, workarounds, objections, and unmet expectations.',
+    observation: 'Internal teams mark their checklists complete while the customer still cannot use the product.',
+    interpretation: 'Internal completion may be a poor measure of customer progress.',
+    test: 'Trace one real onboarding journey. Establish where work finished but the customer still could not reach the agreed outcome.'
+  },
+  competitive: {
+    kicker: 'Illustrative competitive signal',
+    heading: 'Everyone promises faster onboarding.',
+    prompt: 'Compare the buying criteria competitors reinforce. What gets overlooked when speed is the main measure?',
+    observation: 'Competing stories emphasize speed and automation.',
+    interpretation: 'Buyers may be judging internal efficiency while missing whether the customer reaches value.',
+    test: 'Review the actual alternatives and ask buyers which criteria changed their decision.'
+  },
+  market: {
+    kicker: 'Illustrative market signal',
+    heading: 'Enterprise rollouts need more teams to be ready.',
+    prompt: 'Investigate what has changed in the buyer’s work, then establish whether it affects the audience you want to reach.',
+    observation: 'An enterprise rollout now depends on security, integrations, and several teams.',
+    interpretation: 'Single-team task completion may no longer predict whether the customer can get started.',
+    test: 'Compare recent journeys with earlier ones. Check whether interdependencies increased and what that delayed.'
+  }
+};
+const signalButtons = [...document.querySelectorAll('[data-signal]')];
+signalButtons.forEach(button => button.addEventListener('click', () => {
+  const example = signalExamples[button.dataset.signal];
+  signalButtons.forEach(other => other.setAttribute('aria-pressed', String(other === button)));
+  document.querySelector('.pb-signal-reasoning').open = false;
+  Object.entries(example).forEach(([key, value]) => {
+    document.querySelector(`#signal-${key}`).textContent = value;
+  });
+}));
+
+const reviewItems = [...document.querySelectorAll('.pb-review-item')];
+reviewItems.forEach(item => item.addEventListener('toggle', () => {
+  if (item.open) reviewItems.forEach(other => { if (other !== item) other.open = false; });
+}));

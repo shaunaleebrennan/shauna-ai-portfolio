@@ -241,3 +241,6 @@
 @media(max-width:900px){.proof-finder{grid-template-columns:1fr;gap:28px}.proof-results ol{grid-template-columns:repeat(2,minmax(0,1fr))}.proof-results li:last-child:nth-child(odd){grid-column:1/-1}}
 @media(max-width:760px){#explore .proof-finder{width:calc(100vw - 32px);padding-right:24px}.proof-finder{margin:32px 0 58px;padding:27px 24px;border-radius:18px}.proof-finder .proof-finder-intro h2{font-size:38px}.proof-search-form{display:block;padding:5px;border-radius:14px}.proof-search-form input{width:100%;height:45px}.proof-search-form button{width:100%;min-height:45px}.proof-results ol{grid-template-columns:1fr}.proof-results li:last-child:nth-child(odd){grid-column:auto}.proof-result-fallback{align-items:flex-start;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){.proof-search-form,.proof-suggestions button,.proof-result-card{transition:none}}
+
+/* Preserve the light playbook cover without the photographic shadow overlay. */
+.work-rail .work-card[data-project="playbook"] .work-image:after{display:none}

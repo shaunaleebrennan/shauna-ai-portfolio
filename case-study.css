@@ -170,3 +170,14 @@
 .ds-film figcaption a{color:var(--acid);text-decoration:none;margin-left:10px}
 .ds-film figcaption a:hover{text-decoration:underline}
 @media(max-width:760px){.ds-film{margin-top:28px}.ds-film-heading{padding:20px;display:block}.ds-film-heading h3{margin-top:10px}.ds-film figcaption{padding:18px 20px}.ds-film figcaption a{display:block;margin:8px 0 0}}
+
+/* Work modes: an original layout for the seller narrative's product mapping. */
+.ds-work-modes{list-style:none;padding:18px;margin:0;display:grid;gap:10px}
+.ds-work-modes li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;padding:22px;border:1px solid var(--line);border-radius:10px;min-width:0}
+.ds-work-modes h4{font:500 17px/1.4 Manrope,sans-serif;margin:0 0 9px;letter-spacing:-.025em}
+.ds-work-modes li p{font-size:12px;line-height:1.65}
+.ds-work-mode-role{border-left:1px solid var(--line);padding-left:18px}
+.ds-work-mode-role>strong{display:block;color:var(--muted);font:500 12px/1.5 Manrope,sans-serif;margin:0 0 10px}
+.ds-work-modes .ds-work-mode--focus{background:#c7f78009;border-color:#c7f78055}
+.ds-work-mode--focus .ds-work-mode-role>strong{color:var(--acid)}
+@media(max-width:760px){.ds-work-modes{padding:14px}.ds-work-modes li{padding:20px;grid-template-columns:1fr;gap:16px}.ds-work-mode-role{border-left:0;border-top:1px solid var(--line);padding:15px 0 0}}

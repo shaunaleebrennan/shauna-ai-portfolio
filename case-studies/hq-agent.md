@@ -4,7 +4,7 @@
 
 **Customer-led GTM for the next AI investment**
 
-I shaped HQ Agent’s customer-led GTM, positioning, and commercial story around a substantial expansion opportunity: helping existing Workvivo customers see where it added value alongside the AI and enterprise systems they already owned.
+I shaped a customer-led expansion motion for HQ Agent, combining call insights and competitive research with a clear positioning decision: an employee experience agent that helps people find answers and get everyday workplace tasks done.
 
 ## A growth opportunity inside the customer base
 
@@ -14,19 +14,42 @@ Many customers already had something they considered similar. The commercial cha
 
 **The buying question:** “We already have something similar. Why do we need HQ Agent?”
 
-## Start with what the customer already has
+## Let the customer and the alternatives shape the GTM
 
-The discovery work connected employee use cases to the customer’s AI maturity, technology environment, stakeholders, and commercial priorities. Field feedback showed different starting points, from organisations using established AI assistants to customers still building their employee experience foundations.
+I combined **ZRA (Zoom Revenue Accelerator) call insights**, desk research on Microsoft, Workday, ServiceNow, Salesforce, and other competitors, and buyer message testing. Each source answered a different question.
 
-The two-wave Wynter study reinforced the installed-base reality: 42 of 45 participants reported Microsoft Copilot active in their organisation. The case for HQ Agent needed to explain incremental value within an existing stack.
+Customer conversations exposed objections and existing investments. Desk research examined how adjacent platforms positioned their capabilities. Wynter helped assess reactions to specific messages. Together, those inputs informed the use cases, competitive story, and seller guidance.
 
-### The existing investment matters
+### Three inputs. Different jobs.
 
-- **93%:** Reported Microsoft Copilot active. 42 of 45 participants in the buyer messaging study.
+1. **Customer conversations / ZRA.** Understand the customer’s use cases, existing stack, objections, and buying questions.
+2. **Competitor desk research.** Examine adjacent alternatives, their positioning, and the reasons a customer might default to them.
+3. **Wynter message testing.** Assess reactions to positioning statements and the proof buyers wanted.
 
-Wynter · March–April 2026 · Small buyer panel; this is not an estimate of Workvivo customer adoption.
+Call evidence, competitor analysis, and message testing informed different parts of the GTM.
 
-[Read the related buyer research brief](../assets/documents/workvivo-hq-research-brief.pdf)
+[Read the message-testing brief](../assets/documents/workvivo-hq-research-brief.pdf)
+
+## Define the job of an employee experience agent
+
+A major part of the messaging work was clarifying what HQ Agent actually was. Enterprise search described a capability; “agent” alone left the purpose unclear. I positioned it as an **employee experience agent**, focused on trusted organisational answers and everyday workplace tasks.
+
+I used Gartner’s four work modes to make the distinction concrete: productivity assistants support the work people are hired to do; HQ Agent helps remove the friction around being ready and able to do it. The mapping also clarified the role of Workvivo HQ and ZoomMate.
+
+In the October messaging review, the commercial team reported that this framing was resonating with customers and helping them understand HQ Agent’s role alongside Copilot.
+
+### Different work. Different role for AI.
+
+| Work mode | Employee need | Positioning role |
+| --- | --- | --- |
+| Work | Core tasks people are hired to do. Create, analyse, research, and deliver core work. | Productivity AI / ZoomMate |
+| Work to do work | Supporting activities around the core job. Find relevant knowledge and reduce searching, switching, and chasing. | HQ Agent |
+| Work to enable work | The workplace services needed to function in the organisation. Policy answers and supported routine HR, IT, and workplace requests. | HQ Agent |
+| Work to feel connected | The social and organisational experience of work. Stay informed, participate, and feel connected. | Workvivo HQ |
+
+Adapted from Gartner’s four work modes. Labels follow our seller deck; the product mapping is our positioning application.
+
+[Gartner: The 4 Work Modes Framework](https://www.gartner.com/en/documents/6461739)
 
 ## Compete beyond the employee experience category
 
@@ -80,7 +103,7 @@ Find the information · Understand the answer · Complete a supported task
 
 ## Equip the customer expansion motion
 
-I brought the work together across positioning, portfolio strategy, competitive guidance, pricing and packaging, and seller narrative. The customer upsell story was simple: the digital HQ customers already used could now do more for their people.
+I brought the work together across employee experience agent positioning, portfolio strategy, competitive guidance, pricing and packaging, and seller narrative. The customer upsell story was simple: the digital HQ customers already used could now do more for their people.
 
 Seller enablement connected discovery, use cases, objections, and the role of Zoom to the same commercial story. The commercial aim was to turn an existing employee experience relationship into a credible next investment in HQ Agent.
 
@@ -92,4 +115,4 @@ Seller enablement connected discovery, use cases, objections, and the role of Zo
 
 Customer discovery → differentiated value → a commercial decision.
 
-> The next AI purchase has to earn its place in the customer’s existing stack.
+> Before asking customers to buy another agent, make its job unmistakable.

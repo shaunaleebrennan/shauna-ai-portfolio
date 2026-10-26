@@ -6,7 +6,7 @@ document.querySelector('#capabilities').innerHTML = content.capabilities.map((it
 const workGrid = document.querySelector('#work-grid');
 workGrid.innerHTML = content.work.map((item, index) => `
   <a class="work-card" data-project="${item.slug}" data-category="${item.category}" href="${item.href || `./case-study.html?case=${encodeURIComponent(item.slug)}`}" aria-label="Open ${item.title}${item.href ? '' : ' case study'}">
-    ${item.image ? `<div class="work-image"><img src="${item.image}" alt="" loading="lazy"></div>` : ''}
+    ${item.image ? `<div class="work-image"><img src="${item.image}" alt="" loading="lazy">${item.coverTitle ? `<span class="work-cover-heading" aria-hidden="true"><small>${item.coverLabel || item.title}</small><strong>${item.coverTitle}</strong></span>` : ''}</div>` : ''}
     <div class="work-content"><span class="work-number">${String(index + 1).padStart(2, '0')}</span><span class="tag">${item.tag}</span><span class="arrow">↗</span><h3>${item.title}</h3><p>${item.summary}</p><span class="open-label">${item.href ? 'Explore the playbook' : 'View case study'}</span></div>
   </a>`).join('');
 

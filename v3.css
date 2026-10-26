@@ -247,3 +247,6 @@
 
 /* The launch playbook uses a crisp graphic cover. */
 .work-rail .work-card[data-project="launch-with-intent"] .work-image:after{display:none}
+
+/* Readable typography on illustrated playbook covers. */
+.work-rail .work-cover-heading{position:absolute;z-index:1;inset:25px 22px auto;color:#263b27;pointer-events:none}.work-cover-heading small{display:block;font:600 10px/1.4 Manrope,sans-serif;letter-spacing:.11em;text-transform:uppercase;margin-bottom:13px}.work-cover-heading strong{display:block;max-width:245px;font:500 clamp(27px,2.6vw,36px)/1.08 Manrope,sans-serif;letter-spacing:-.045em}

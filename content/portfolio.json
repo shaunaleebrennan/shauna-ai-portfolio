@@ -406,63 +406,6 @@
       }
     },
     {
-      "slug": "launch-with-intent",
-      "title": "Product launch playbook",
-      "category": "launch",
-      "tag": "Playbook",
-      "href": "launch-playbook.html",
-      "summary": "Make the moment matter. A practical framework and six-question test to tier launches, group releases, and plan who hears what, when.",
-      "demonstrates": "Launch strategy, tiering, customer communication, adoption planning, and AI-assisted GTM operations.",
-      "proof": "Six-question diagnostic, 10-page PDF playbook, and four-page workbook.",
-      "image": "assets/playbooks/illustrations/make-the-moment-matter.jpg",
-      "sourceUrl": "launch-playbook.html",
-      "evidence": [
-        {
-          "title": "Explore Launch with Intent",
-          "url": "launch-playbook.html",
-          "kind": "Interactive playbook",
-          "note": "Framework, six-question diagnostic, PDF playbook, and workshop workbook."
-        }
-      ],
-      "caseStudy": {
-        "overview": {
-          "eyebrow": "Making deliberate launch decisions as product release cycles accelerate",
-          "lead": "I evolved my release-planning template into a practical playbook and discussion tool for PMMs and Product Managers to tier launches, group releases, and plan audience timing.",
-          "learning": "A collection earns a bigger launch when it creates a stronger buying reason."
-        },
-        "story": [
-          {
-            "id": "method",
-            "title": "Three decisions and three clocks",
-            "layout": "text",
-            "paragraphs": [
-              "The playbook connects three practical decisions: how much the change matters, whether related releases create a stronger outcome, and who needs to hear what, when."
-            ],
-            "visual": {
-              "type": "journey",
-              "title": "Apply the launch framework",
-              "steps": [
-                "Customer outcome",
-                "Launch path",
-                "Readiness and adoption",
-                "Audience timing"
-              ],
-              "href": "launch-playbook.html",
-              "linkLabel": "Explore the playbook"
-            }
-          },
-          {
-            "id": "tools",
-            "title": "Make the reasoning usable",
-            "layout": "text",
-            "paragraphs": [
-              "A six-question discussion tool suggests a provisional tier, grouping approach, audience timing, and open decisions. The PDF playbook explains the reasoning; a separate workbook helps PMM and Product record evidence and agree the plan."
-            ]
-          }
-        ]
-      }
-    },
-    {
       "slug": "messaging-as-code",
       "title": "Messaging as Code",
       "category": "technical",
@@ -1583,6 +1526,65 @@
           }
         ]
       }
+    },
+    {
+      "slug": "launch-with-intent",
+      "title": "Product launch playbook",
+      "category": "launch",
+      "tag": "Playbook",
+      "href": "launch-playbook.html",
+      "summary": "Make the moment matter. A practical framework and six-question test to tier launches, group releases, and plan who hears what, when.",
+      "demonstrates": "Launch strategy, tiering, customer communication, adoption planning, and AI-assisted GTM operations.",
+      "proof": "Six-question diagnostic, 10-page PDF playbook, and four-page workbook.",
+      "image": "assets/playbooks/illustrations/make-the-moment-matter.jpg",
+      "sourceUrl": "launch-playbook.html",
+      "evidence": [
+        {
+          "title": "Explore Launch with Intent",
+          "url": "launch-playbook.html",
+          "kind": "Interactive playbook",
+          "note": "Framework, six-question diagnostic, PDF playbook, and workshop workbook."
+        }
+      ],
+      "caseStudy": {
+        "overview": {
+          "eyebrow": "Making deliberate launch decisions as product release cycles accelerate",
+          "lead": "I evolved my release-planning template into a practical playbook and discussion tool for PMMs and Product Managers to tier launches, group releases, and plan audience timing.",
+          "learning": "A collection earns a bigger launch when it creates a stronger buying reason."
+        },
+        "story": [
+          {
+            "id": "method",
+            "title": "Three decisions and three clocks",
+            "layout": "text",
+            "paragraphs": [
+              "The playbook connects three practical decisions: how much the change matters, whether related releases create a stronger outcome, and who needs to hear what, when."
+            ],
+            "visual": {
+              "type": "journey",
+              "title": "Apply the launch framework",
+              "steps": [
+                "Customer outcome",
+                "Launch path",
+                "Readiness and adoption",
+                "Audience timing"
+              ],
+              "href": "launch-playbook.html",
+              "linkLabel": "Explore the playbook"
+            }
+          },
+          {
+            "id": "tools",
+            "title": "Make the reasoning usable",
+            "layout": "text",
+            "paragraphs": [
+              "A six-question discussion tool suggests a provisional tier, grouping approach, audience timing, and open decisions. The PDF playbook explains the reasoning; a separate workbook helps PMM and Product record evidence and agree the plan."
+            ]
+          }
+        ]
+      },
+      "coverLabel": "Product launches",
+      "coverTitle": "Make the moment matter."
     }
   ]
 }

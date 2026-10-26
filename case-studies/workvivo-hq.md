@@ -43,6 +43,8 @@ Headquarters made that ambition tangible. It could speak to the whole customer b
 
 The digital HQ for the modern workforce.
 
+[Watch the Workvivo HQ launch video](https://fast.wistia.net/embed/iframe/9x6vj5cl93) · 35 seconds · [Original page](https://www.workvivo.com/hq/)
+
 ## One story. A clear messaging architecture.
 
 The product pillars gave the platform story structure. The persona matrix changed the emphasis, value, and proof for each audience, while keeping the same HQ narrative.

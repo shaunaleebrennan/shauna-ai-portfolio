@@ -9,8 +9,7 @@ Shauna Azevedo-Brennan
 
 1. READ — narrative-design-playbook.pdf
 The complete method: positioning, research, five narrative stages, a worked
-example, evidence, pressure tests, AI guidance, and activation. The four
-workbook pages are also included at the end of this guide.
+example, evidence, pressure tests, AI guidance, and activation. A standalone 19-page playbook.
 
 2. APPLY — narrative-design-workbook.pdf
 Four printable worksheets for your brief, story, proof, and review.

@@ -84,7 +84,7 @@ def header(number, title, subtitle):
 
 def end_page(number):
     rule(M, 790, CW)
-    para('Five-stage method: Marcus Andrews. Practical companion: Shauna Azevedo-Brennan.', M, 799, CW - 35, 7.1, 9.5, MUTED)
+    para('Narrative Design Playbook', M, 799, CW - 35, 7.1, 9.5, MUTED)
     para(f'{number} / 4', W - M - 25, 799, 25, 7.8, 10, MUTED, 'BodyBold')
     c.linkURL(GUIDE, (M, H - 813, W - M - 35, H - 796), thickness=0)
     c.showPage()

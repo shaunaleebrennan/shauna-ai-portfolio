@@ -4,28 +4,36 @@
 
 **Turning curiosity into a story people can explore**
 
-I wanted to understand how Brazil voted, what changed between rounds, and how the picture differed for Brazilians abroad. That curiosity became Brazil in Red: an interactive atlas built with AI.
+A national result tells you who won. I wanted to understand what sat beneath it: the differences between places, the change between rounds, and the experience of Brazilians voting abroad. I turned those questions into Brazil in Red, a bilingual interactive atlas.
 
-## It started with a question
+## Finding the story beneath the result
 
-How did voting change between rounds? Where did the national picture hide regional differences? And how did the results look for Brazilians living abroad? I wanted an experience that let me follow those questions across Brazil and the world.
+The starting point was personal curiosity. As I explored the results, the question grew: how could I bring the national picture, regional differences, and overseas vote into one experience that made sense to someone arriving without all that context?
 
-## From results to an explorable atlas
+I chose to give the atlas an editorial direction, then let readers investigate it. The page moves from the national result to changes between rounds, Brazilian states, and voters abroad. That sequence gives people a way into the subject before asking them to navigate a map or interpret a table.
 
-I set the questions, directed the research and AI-assisted build, and shaped the editorial structure and visual experience. The published atlas brings together maps of 27 Brazilian federal units, comparisons across 31 selected overseas countries and territories, and English and Portuguese views. Readers can follow the story or explore rounds, regions, and locations for themselves.
+## A guided story, with room to explore
 
-## The details that made it clearer
+I set the questions, directed the research and AI-assisted build, and shaped the structure, visual direction, and interaction design. The published experience covers 27 Brazilian federal units and 31 selected overseas countries and territories, with English and Portuguese views.
 
-I reviewed the experience repeatedly, asking whether each chart and section made the comparison understandable. Those reviews led to specific changes:
+I wanted the narrative and the interactive elements to work together. A reader can follow the page for the main patterns, then use the maps, round selectors, regional filters, and comparison tables to examine a place that matters to them. Headings, labels, and visual hierarchy had to support both ways of reading.
 
-- Make every percentage explicit: whose share, which round, and which votes are included.
-- Compare rounds on a consistent basis, distinguishing a change in winner from a change in vote share.
-- Add regional context when a handful of countries could obscure the bigger picture.
-- Refine headings, spacing, and visual hierarchy so the story is easier to follow.
+## The choices behind the comparisons
 
-## The people behind the numbers
+The most useful iterations came from questioning what a reader could reasonably conclude from each visual. I pushed for changes wherever an apparently simple comparison could imply something the data did not establish:
 
-I expanded the story beyond results to include people helping each other reach the polls. The atlas brings together the numbers, political context, and stories of participation, with source links and methodology notes. It is a personal project that shows how I turn curiosity into research, an editorial point of view, and a working public experience.
+- Give each percentage a clear meaning. A candidate’s share, the winner’s share, and a change between rounds answer different questions. The labels needed to identify the candidate, round, and voting basis.
+- Make the rounds comparable. Round one includes other candidates. The atlas distinguishes all-valid-vote shares from a comparison recalculated around the two finalists, and separates a change in winner from the size of the swing.
+- Choose the right level of context. Highlighting Ireland and France did not tell the whole European story. I asked for a regional view alongside the individual examples, so the selection of places would not carry more weight than it should.
+- Keep interpretation within the evidence. Aggregate changes show how results differed between rounds; they do not establish how individual people switched their votes. Source links and methodology notes give readers a way to examine those boundaries.
+
+## Making space for the people behind the numbers
+
+I also wanted the atlas to convey what participation involved. I asked to include stories of people travelling by boat, offering lifts, and helping others reach the polls alongside the political context and disputes. That widened the story from the outcome of voting to the effort people made to take part.
+
+The resulting project brings research, editorial judgment, and product design into one public experience. It reflects an approach I bring to product marketing: find the question people care about, turn complexity into a clear story, and make it easy to go deeper.
+
+> “For me, data storytelling is an editorial responsibility: choose the question that matters, make the comparisons meaningful, and give people enough context to form their own view.”
 
 ## Supporting evidence
 

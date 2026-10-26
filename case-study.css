@@ -110,3 +110,51 @@
  .ds-comparison{grid-template-columns:1fr;padding:25px}.ds-comparison-arrow{transform:rotate(90deg);width:24px;text-align:center}
  .ds-pov{padding:28px 24px;margin:42px 0}.ds-pov blockquote{font-size:29px}
 }
+
+/* Story modules: the same Decision Studio language, with a distinct role for each visual. */
+.ds-brand-statement{position:relative;isolation:isolate;padding:38px 32px 44px;overflow:hidden;min-height:360px;background:radial-gradient(ellipse at 100% 100%,#c7f78016,transparent 65%)}
+.ds-brand-statement>span,.ds-house-promise>span,.ds-house-audience-heading>span{display:block;color:var(--acid);font-size:10px;text-transform:uppercase;letter-spacing:.15em}
+.ds-brand-statement blockquote{position:relative;z-index:1;margin:32px 0 0;font:500 clamp(30px,3.1vw,44px)/1.2 Manrope,sans-serif;letter-spacing:-.045em;max-width:440px}
+.ds-brand-statement em{display:block;font-style:normal;color:var(--acid);margin-top:20px}
+.ds-brand-orbit{position:absolute;z-index:-1;bottom:-150px;right:-120px;width:350px;height:350px}
+.ds-brand-orbit span{position:absolute;inset:0;border:1px solid #c7f78030;border-radius:50%}.ds-brand-orbit span:nth-child(2){inset:45px}.ds-brand-orbit span:nth-child(3){inset:90px;background:#c7f78008}
+.ds-signal-list{padding:30px}
+.ds-signal+.ds-signal{border-top:1px solid var(--line);margin-top:27px;padding-top:27px}
+.ds-signal-top{display:flex;gap:22px;align-items:center;margin-bottom:18px}
+.ds-signal-top>strong{font:500 64px/1 Manrope,sans-serif;letter-spacing:-.065em;color:var(--acid);flex-shrink:0}
+.ds-signal-top>strong>span{font-size:27px;letter-spacing:-.03em}.ds-signal-top>span{font-size:16px;line-height:1.5}
+.ds-signal meter{display:block;appearance:none;width:100%;height:7px;border:0;background:#ffffff10;border-radius:10px}
+.ds-signal meter::-webkit-meter-bar{background:#ffffff10;border:0;border-radius:10px}.ds-signal meter::-webkit-meter-optimum-value{background:var(--acid);border-radius:10px}.ds-signal meter::-moz-meter-bar{background:var(--acid)}
+.ds-signal-list .ds-signal p{font-size:13px;margin-top:15px}.ds-signal:nth-child(2) .ds-signal-top>strong{color:var(--ink)}.ds-signal:nth-child(2) meter::-webkit-meter-optimum-value{background:#a7b49a}
+.ds-story-steps{list-style:none;margin:0;padding:28px 30px}
+.ds-story-steps li{position:relative;display:grid;grid-template-columns:30px minmax(0,1fr);gap:20px;padding:0 0 26px}
+.ds-story-steps li:last-child{padding-bottom:0}.ds-story-steps li:not(:last-child):before{content:"";position:absolute;width:1px;top:30px;bottom:0;left:14px;background:var(--line)}
+.ds-story-marker{display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--acid);border-radius:50%;font-size:10px;color:var(--acid)}
+.ds-story-steps h4,.ds-house-pillars h4{font:500 19px/1.4 Manrope,sans-serif;letter-spacing:-.025em;margin:1px 0 9px}
+.ds-story-steps li p{font-size:14px;line-height:1.65}
+.ds-house-promise{position:relative;text-align:center;padding:34px 25px;background:radial-gradient(ellipse at 50% 0%,#c7f78012,transparent 75%);border-bottom:1px solid var(--line)}
+.ds-house-promise>strong{display:block;font:500 clamp(29px,3.5vw,44px)/1.2 Manrope,sans-serif;letter-spacing:-.04em;margin:16px 0 12px}.ds-house-promise>p{color:var(--ink);font-size:19px}
+.ds-house-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:0 25px}
+.ds-house-pillars>div{position:relative;padding:29px 25px 32px;border-right:1px solid var(--line)}
+.ds-house-pillars>div:first-child{padding-left:0}.ds-house-pillars>div:last-child{border-right:0;padding-right:0}
+.ds-house-pillars>div>span{display:block;font-size:11px;color:var(--acid);margin-bottom:20px}.ds-house-pillars p{font-size:14px;line-height:1.65}
+.ds-house-audiences{border-top:1px solid var(--line);padding:27px 25px 25px}
+.ds-house-audience-heading{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:23px}.ds-house-audience-heading p{font-size:14px}
+.ds-persona-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:start}
+.ds-persona-grid details{border:1px solid var(--line);border-radius:10px;background:var(--bg);min-width:0}
+.ds-persona-grid summary{list-style:none;position:relative;cursor:pointer;padding:20px;min-height:140px}.ds-persona-grid summary::-webkit-details-marker{display:none}
+.ds-persona-grid summary>span:first-child{display:block;color:var(--acid);font-size:11px;margin-bottom:15px}.ds-persona-grid summary>strong{display:block;font:500 15px/1.5 Manrope,sans-serif;letter-spacing:-.01em;padding-right:6px}
+.ds-persona-toggle{position:absolute;right:14px;top:15px;color:var(--muted);font-size:20px}.ds-persona-grid details[open] .ds-persona-toggle{transform:rotate(45deg)}
+.ds-persona-grid details[open]{border-color:#c7f78060}.ds-persona-grid details>p{padding:0 20px 20px;font-size:13px;line-height:1.7}
+.ds-persona-grid summary:focus-visible{outline:2px solid var(--acid);outline-offset:3px;border-radius:10px}
+.ds-outcome-quote{margin:0;padding:25px 30px 32px}.ds-outcome-quote>span{font:500 86px/.9 Manrope,sans-serif;color:var(--acid)}
+.ds-outcome-quote blockquote{font:500 clamp(25px,2.7vw,37px)/1.35 Manrope,sans-serif;letter-spacing:-.035em;margin:0 0 28px}
+.ds-outcome-quote figcaption{font-size:12px;line-height:1.7;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
+@media(max-width:760px){
+ .ds-brand-statement{padding:28px 25px 38px;min-height:310px}.ds-brand-statement blockquote{font-size:35px}
+ .ds-signal-list,.ds-story-steps{padding:25px}.ds-signal-top>strong{font-size:57px}.ds-signal-top{gap:18px}
+ .ds-house-pillars{grid-template-columns:1fr;padding:0 25px}.ds-house-pillars>div,.ds-house-pillars>div:first-child,.ds-house-pillars>div:last-child{padding:24px 0;border-right:0;border-bottom:1px solid var(--line)}.ds-house-pillars>div:last-child{border:0}.ds-house-pillars>div>span{margin-bottom:12px}
+ .ds-house-audience-heading{display:block}.ds-house-audience-heading p{margin-top:10px}.ds-persona-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ds-persona-grid summary{padding:18px;min-height:150px}
+ .ds-outcome-quote{padding:25px}.ds-outcome-quote blockquote{font-size:30px}
+}
+@media(max-width:380px){.ds-persona-grid{grid-template-columns:1fr}.ds-persona-grid summary{min-height:0}}

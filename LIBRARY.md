@@ -8,11 +8,15 @@ Read every case study and supporting document here on GitHub. The links below op
 
 ### [Workvivo HQ](case-studies/workvivo-hq.md)
 
-Repositioning Workvivo for the AI era: from Employee Experience Platform towards an AI-powered digital HQ, without losing its employee experience differentiation.
+Evolving Workvivo’s employee experience platform narrative into a digital HQ, to stand out in a crowded AI-native employee experience market while staying relevant to champion personas.
 
 ### [Narrative design](case-studies/playbook.md)
 
 Narrative Design: turn market insight into a strategic story. Explore the method, pressure-test the argument, and take the skill and workbook with you.
+
+### [Product launch playbook](case-studies/launch-with-intent.md)
+
+Make the moment matter. A practical framework and six-question test to tier launches, group releases, and plan who hears what, when.
 
 ### [Messaging as Code](case-studies/messaging-as-code.md)
 
@@ -20,7 +24,7 @@ Designing an operating model for messaging reuse across teams and AI tools, with
 
 ### [HQ Agent](case-studies/hq-agent.md)
 
-Turning search, grounded answers and supported actions into positioning, packaging and enablement that buyers and sellers can use.
+Positioning HQ Agent as the employee experience agent and building a customer-led expansion motion through call insights, competitive research, pricing, and seller enablement.
 
 ### [Brazil in Red](case-studies/brazil-in-red.md)
 

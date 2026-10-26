@@ -244,3 +244,6 @@
 
 /* Preserve the light playbook cover without the photographic shadow overlay. */
 .work-rail .work-card[data-project="playbook"] .work-image:after{display:none}
+
+/* The launch playbook uses a crisp graphic cover. */
+.work-rail .work-card[data-project="launch-with-intent"] .work-image:after{display:none}

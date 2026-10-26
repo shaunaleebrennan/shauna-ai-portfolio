@@ -115,7 +115,9 @@
                   "detail": "Positive response to the adoption-led message."
                 }
               ],
-              "caption": "Wynter · March–April 2026 · 45 participants. Reactions to different statements; this was not a test of the HQ name or a measure of market demand."
+              "caption": "Wynter · March–April 2026 · 45 participants. Reactions to different statements; this was not a test of the HQ name or a measure of market demand.",
+              "href": "assets/documents/workvivo-hq-research-brief.pdf",
+              "linkLabel": "Read the research brief (PDF)"
             }
           },
           {
@@ -269,20 +271,20 @@
           },
           {
             "id": "result",
-            "title": "A story the organisation could tell",
+            "title": "Positioning that guided GTM decisions",
             "label": "Launch and alignment",
             "navLabel": "The delivery",
             "layout": "artifact",
             "paragraphs": [
-              "The HQ launch at WOW was highlighted in the team retrospective for achieving company-wide message alignment. The feedback connected leadership and SDRs through the same story.",
-              "That is evidence of internal narrative adoption. It does not establish a measured pipeline or product-adoption impact."
+              "The positioning gave teams a shared basis for decisions: which value to emphasise, how to adapt the story by persona, and which proof to use. I carried that foundation into launch messaging, campaigns, analyst framing, and sales enablement.",
+              "The HQ launch at WOW was highlighted in the team retrospective for company-wide message alignment, from leadership to SDRs. That feedback showed the narrative becoming a shared language across the business."
             ],
             "visual": {
               "type": "quote",
               "title": "Launch retrospective",
               "quote": "From John down to every SDR speaking the same language.",
               "attribution": "PMM team retrospective · August 2026",
-              "caption": "Qualitative team feedback on the Workvivo HQ launch at WOW."
+              "caption": "Team feedback on message alignment at the Workvivo HQ launch at WOW."
             }
           }
         ]

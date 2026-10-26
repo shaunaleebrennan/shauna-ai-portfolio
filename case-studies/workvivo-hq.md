@@ -29,6 +29,8 @@ The two-wave Wynter study favoured organisational context over an unsupported ad
 
 Wynter · March–April 2026 · 45 participants. Reactions to different statements; this was not a test of the HQ name or a measure of market demand.
 
+[Read the research brief (PDF)](../assets/documents/workvivo-hq-research-brief.pdf)
+
 ## A headquarters for every employee
 
 The strategic reframe was about **where AI lives**: inside the employee experience, where people communicate, find knowledge, and get work done.
@@ -98,11 +100,11 @@ I carried the positioning into launch messaging, the website, analyst framing, c
 
 Strategic direction and messaging led by PMM; delivery shared across teams.
 
-## A story the organisation could tell
+## Positioning that guided GTM decisions
 
-The HQ launch at WOW was highlighted in the team retrospective for achieving company-wide message alignment. The feedback connected leadership and SDRs through the same story.
+The positioning gave teams a shared basis for decisions: which value to emphasise, how to adapt the story by persona, and which proof to use. I carried that foundation into launch messaging, campaigns, analyst framing, and sales enablement.
 
-That is evidence of internal narrative adoption. It does not establish a measured pipeline or product-adoption impact.
+The HQ launch at WOW was highlighted in the team retrospective for company-wide message alignment, from leadership to SDRs. That feedback showed the narrative becoming a shared language across the business.
 
 ### Launch retrospective
 
@@ -110,6 +112,6 @@ That is evidence of internal narrative adoption. It does not establish a measure
 
 PMM team retrospective · August 2026
 
-Qualitative team feedback on the Workvivo HQ launch at WOW.
+Team feedback on message alignment at the Workvivo HQ launch at WOW.
 
 > An AI story that erases what made you different is a concession to your competitors.

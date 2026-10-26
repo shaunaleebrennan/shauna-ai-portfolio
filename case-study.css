@@ -181,3 +181,9 @@
 .ds-work-modes .ds-work-mode--focus{background:#c7f78009;border-color:#c7f78055}
 .ds-work-mode--focus .ds-work-mode-role>strong{color:var(--acid)}
 @media(max-width:760px){.ds-work-modes{padding:14px}.ds-work-modes li{padding:20px;grid-template-columns:1fr;gap:16px}.ds-work-mode-role{border-left:0;border-top:1px solid var(--line);padding:15px 0 0}}
+
+/* Preserve the full composition of landscape case-study artwork. */
+.case-hero--wide-art{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,66px)}
+.case-hero--wide-art .case-visual{max-width:540px;align-self:center}
+.case-hero--wide-art .case-visual img{width:100%;height:auto;object-fit:contain}
+@media(max-width:760px){.case-hero--wide-art{grid-template-columns:1fr}.case-hero--wide-art .case-visual{max-width:540px;justify-self:start}}

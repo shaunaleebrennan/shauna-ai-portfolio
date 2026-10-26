@@ -288,6 +288,12 @@
             }
           }
         ]
+      },
+      "heroImage": {
+        "src": "assets/evidence/workvivo-hq-hero.png",
+        "alt": "Workvivo HQ launch artwork featuring an employee using a phone alongside the Workvivo HQ branding.",
+        "width": 1040,
+        "height": 600
       }
     },
     {
@@ -829,8 +835,8 @@
                 "Action"
               ],
               "caption": "Find the information · Understand the answer · Complete a supported task",
-              "src": "assets/evidence/hq-agent-product.png",
-              "alt": "HQ Agent product interface artwork."
+              "src": "assets/evidence/hq-agent-frontline-example.jpg",
+              "alt": "Frontline employee asking HQ Agent what to do if a delivery truck is delayed, with an answer shown beside them."
             }
           },
           {

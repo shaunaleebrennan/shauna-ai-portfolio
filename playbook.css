@@ -168,3 +168,21 @@
 .pb-activation-feature{grid-template-columns:1fr;gap:25px}.pb-activation-list li{padding:17px 0}.pb-activation-list p{font-size:14px}.pb-section .pb-activation-list h3{font-size:16px}
 }
 @media(prefers-reduced-motion:reduce){.pb-signal-switch button{transition:none}}
+
+/* One complete toolkit, with a clear role for each resource. */
+.pb-toolkit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:36px 0 0}
+.pb-toolkit-item{padding:28px;border-radius:7px;min-width:0;display:flex;flex-direction:column}
+.pb-toolkit-guide{background:#ece5f4}.pb-toolkit-workbook{background:#f7e3e9}.pb-toolkit-skill{background:#e7eddf}
+.pb-toolkit-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:10px;line-height:1.5;letter-spacing:.035em;color:#596150}
+.pb-toolkit-top>span:first-child{text-transform:uppercase;font-weight:600}
+.pb-toolkit-item h3{font-size:27px;margin:32px 0 15px}
+.pb-toolkit-item p{font-size:14px;line-height:1.7;margin:0}
+.pb-toolkit-item .pb-toolkit-purpose{font:500 17px/1.5 Manrope,sans-serif;color:var(--ink);margin-bottom:16px}
+.pb-toolkit-download{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:30px 0;border-bottom:1px solid var(--line)}
+.pb-toolkit-download h3{font-size:23px;margin:0 0 9px}.pb-toolkit-download p{font-size:14px;margin:0 0 5px}
+.pb-toolkit-meta{font-size:12px;color:var(--muted)}.pb-toolkit-download .button{flex-shrink:0;white-space:normal;text-align:center;justify-content:center}
+.pb-toolkit-help{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:24px;font-size:13px}
+.pb-toolkit-help>a{padding-top:15px}.pb-toolkit-help .pb-disclosure{margin:0}.pb-toolkit-help .pb-disclosure p{font-size:14px}
+@media(max-width:900px){.pb-toolkit-grid{gap:12px}.pb-toolkit-item{padding:22px}.pb-toolkit-download{align-items:flex-start;flex-direction:column;gap:20px}}
+@media(max-width:760px){.pb-toolkit-grid{grid-template-columns:1fr;gap:14px;margin-top:28px}.pb-toolkit-item{padding:25px}.pb-toolkit-item h3{margin-top:22px}.pb-toolkit-help{grid-template-columns:1fr;gap:22px}.pb-toolkit-help>a{padding-top:0}.pb-toolkit-download .button{width:100%;box-sizing:border-box;font-size:14px}}
+@media print{.pb-toolkit-download,.pb-toolkit-help{display:none}}

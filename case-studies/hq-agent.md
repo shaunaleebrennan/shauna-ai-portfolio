@@ -4,7 +4,7 @@
 
 **Customer-led GTM for the next AI investment**
 
-I shaped a customer-led expansion motion for HQ Agent, combining call insights and competitive research with a clear positioning decision: an employee experience agent that helps people find answers and get everyday workplace tasks done.
+I positioned HQ Agent as an employee experience agent and shaped its customer-led expansion motion, drawing on customer discovery, beta feedback, analyst input, and close work with Sales and Product.
 
 ## A growth opportunity inside the customer base
 
@@ -14,21 +14,24 @@ Many customers already had something they considered similar. The commercial cha
 
 **The buying question:** “We already have something similar. Why do we need HQ Agent?”
 
-## Let the customer and the alternatives shape the GTM
+## Customer-led, from discovery through launch
 
-I combined **ZRA (Zoom Revenue Accelerator) call insights**, desk research on Microsoft, Workday, ServiceNow, Salesforce, and other competitors, and buyer message testing. Each source answered a different question.
+The work combined **direct customer conversations, beta programmes, analyst inquiries, and collaboration with Sales and Product**, alongside ZRA call insights, competitor desk research, and buyer message testing.
 
-Customer conversations exposed objections and existing investments. Desk research examined how adjacent platforms positioned their capabilities. Wynter helped assess reactions to specific messages. Together, those inputs informed the use cases, competitive story, and seller guidance.
+I brought those perspectives together to refine the employee use cases, positioning, competitive story, proof, and seller guidance. Customer and field feedback continued to inform the GTM as the product and commercial motion developed.
 
-### Three inputs. Different jobs.
+### An ongoing discovery and validation loop
 
-1. **Customer conversations / ZRA.** Understand the customer’s use cases, existing stack, objections, and buying questions.
-2. **Competitor desk research.** Examine adjacent alternatives, their positioning, and the reasons a customer might default to them.
-3. **Wynter message testing.** Assess reactions to positioning statements and the proof buyers wanted.
+- **Customer conversations:** Understand employee needs, buying priorities, the existing stack, and the customer’s definition of value.
+- **Beta programmes:** Bring customer feedback on the experience and use cases into the product and GTM discussion.
+- **Sales collaboration & ZRA:** Review live conversations, demos, objections, and the questions shaping buying decisions.
+- **Analyst inquiries & feedback:** Challenge category framing, differentiation, and the role of an employee experience agent.
+- **Competitor desk research:** Examine adjacent vendors, specialist tools, and internal-build alternatives.
+- **Buyer message testing:** Use Wynter to assess reactions to specific positioning statements and the proof buyers wanted.
 
-Call evidence, competitor analysis, and message testing informed different parts of the GTM.
+**Synthesised with Product and Sales:** Positioning · Priority use cases · Competitive strategy · Proof & seller guidance.
 
-[Read the message-testing brief](../assets/documents/workvivo-hq-research-brief.pdf)
+[Read one input: the Wynter message-testing brief](../assets/documents/workvivo-hq-research-brief.pdf)
 
 ## Define the job of an employee experience agent
 

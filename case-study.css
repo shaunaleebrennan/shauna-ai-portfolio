@@ -199,3 +199,16 @@
 .ds-employee-progression h4{font-size:18px}
 @media(max-width:760px){.ds-employee-scene{padding:22px;gap:18px}.ds-employee-scene h4{font-size:18px}.ds-employee-progression{padding:22px}}
 @media(max-width:390px){.ds-employee-scene{grid-template-columns:1fr}.ds-employee-illustration{max-width:190px}.ds-employee-scene h4{font-size:20px}}
+
+/* Research breadth, followed by the shared decisions it informed. */
+.ds-research-sources{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:12px 25px 0;gap:0 28px}
+.ds-research-sources article{min-width:0;padding:24px 0;border-bottom:1px solid var(--line)}
+.ds-research-sources article>span{display:block;color:var(--acid);font-size:10px;letter-spacing:.08em;margin-bottom:18px}
+.ds-research-sources h4{font:500 19px/1.4 Manrope,sans-serif;letter-spacing:-.025em;margin:0 0 12px}
+.ds-research-sources article>p{font-size:14px;line-height:1.7}
+.ds-research-synthesis{padding:29px 25px 8px}
+.ds-research-synthesis>span{display:block;color:var(--acid);font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}
+.ds-research-synthesis ul{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.ds-research-synthesis li{padding:10px 14px;border:1px solid #c7f78045;background:#c7f78008;border-radius:7px;font-size:13px;line-height:1.5}
+@media(max-width:760px){.ds-research-sources{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px;padding:5px 22px 0}.ds-research-sources h4{font-size:18px}.ds-research-synthesis{padding:24px 22px 5px}}
+@media(max-width:480px){.ds-research-sources{grid-template-columns:1fr}.ds-research-sources article{padding:21px 0}.ds-research-sources article>span{margin-bottom:12px}}

@@ -588,8 +588,8 @@
       "title": "HQ Agent",
       "category": "launch",
       "tag": "Product launch",
-      "summary": "Positioning HQ Agent as the employee experience agent and building a customer-led expansion motion through call insights, competitive research, pricing, and seller enablement.",
-      "demonstrates": "Customer-led GTM, category clarity, analyst-framework application, competitive research, expansion strategy, technical messaging, and seller enablement.",
+      "summary": "Customer-led GTM for HQ Agent: turning customer discovery, beta feedback, analyst input, and competitive intelligence into positioning, packaging, and seller execution.",
+      "demonstrates": "Customer discovery and validation, research synthesis, cross-functional GTM, category clarity, competitive strategy, technical messaging, and seller enablement.",
       "proof": "HQ product experience, launch narrative, seller materials, and portfolio positioning connecting Workvivo and Zoom AI.",
       "image": "assets/evidence/hq-agent.jpg",
       "sourceUrl": "https://www.workvivo.com/hq/",
@@ -616,7 +616,7 @@
       "caseStudy": {
         "overview": {
           "eyebrow": "Customer-led GTM for the next AI investment",
-          "lead": "I shaped a customer-led expansion motion for HQ Agent, combining call insights and competitive research with a clear positioning decision: an employee experience agent that helps people find answers and get everyday workplace tasks done.",
+          "lead": "I positioned HQ Agent as an employee experience agent and shaped its customer-led expansion motion, drawing on customer discovery, beta feedback, analyst input, and close work with Sales and Product.",
           "learning": "Before asking customers to buy another agent, make its job unmistakable."
         },
         "eyebrow": "Customer-led GTM for the next AI investment",
@@ -625,7 +625,7 @@
         "insight": "Position HQ Agent as the employee experience agent. Use Gartner’s four work modes to distinguish core job productivity from the work needed to enable it, and explain where HQ Agent complements existing tools.",
         "contribution": [
           "Employee experience agent positioning using Gartner’s four work modes",
-          "Customer call analysis through ZRA and competitor desk research",
+          "Research synthesis across customer conversations, beta programmes, analyst input, ZRA call insights, competitor research, and message testing",
           "Product and portfolio positioning",
           "AI maturity story and competitive framing",
           "Pricing and packaging co-developed with the Revenue leader",
@@ -660,34 +660,53 @@
           },
           {
             "id": "signals",
-            "title": "Let the customer and the alternatives shape the GTM",
-            "label": "Customer and buyer signals",
-            "navLabel": "The customer",
-            "layout": "artifact",
+            "title": "Customer-led, from discovery through launch",
+            "label": "Discovery and validation",
+            "navLabel": "The research",
+            "layout": "showcase",
             "paragraphs": [
-              "I combined **ZRA (Zoom Revenue Accelerator) call insights**, desk research on Microsoft, Workday, ServiceNow, Salesforce, and other competitors, and buyer message testing. Each source answered a different question.",
-              "Customer conversations exposed objections and existing investments. Desk research examined how adjacent platforms positioned their capabilities. Wynter helped assess reactions to specific messages. Together, those inputs informed the use cases, competitive story, and seller guidance."
+              "The work combined **direct customer conversations, beta programmes, analyst inquiries, and collaboration with Sales and Product**, alongside ZRA call insights, competitor desk research, and buyer message testing.",
+              "I brought those perspectives together to refine the employee use cases, positioning, competitive story, proof, and seller guidance. Customer and field feedback continued to inform the GTM as the product and commercial motion developed."
             ],
             "visual": {
-              "type": "steps",
-              "title": "Three inputs. Different jobs.",
-              "steps": [
+              "type": "research-system",
+              "title": "An ongoing discovery and validation loop",
+              "sources": [
                 {
-                  "title": "Customer conversations / ZRA",
-                  "detail": "Understand the customer’s use cases, existing stack, objections, and buying questions."
+                  "title": "Customer conversations",
+                  "detail": "Understand employee needs, buying priorities, the existing stack, and the customer’s definition of value."
+                },
+                {
+                  "title": "Beta programmes",
+                  "detail": "Bring customer feedback on the experience and use cases into the product and GTM discussion."
+                },
+                {
+                  "title": "Sales collaboration & ZRA",
+                  "detail": "Review live conversations, demos, objections, and the questions shaping buying decisions."
+                },
+                {
+                  "title": "Analyst inquiries & feedback",
+                  "detail": "Challenge category framing, differentiation, and the role of an employee experience agent."
                 },
                 {
                   "title": "Competitor desk research",
-                  "detail": "Examine adjacent alternatives, their positioning, and the reasons a customer might default to them."
+                  "detail": "Examine adjacent vendors, specialist tools, and internal-build alternatives."
                 },
                 {
-                  "title": "Wynter message testing",
-                  "detail": "Assess reactions to positioning statements and the proof buyers wanted."
+                  "title": "Buyer message testing",
+                  "detail": "Use Wynter to assess reactions to specific positioning statements and the proof buyers wanted."
                 }
               ],
-              "caption": "Call evidence, competitor analysis, and message testing informed different parts of the GTM.",
+              "synthesis": "Synthesised with Product and Sales",
+              "outputs": [
+                "Positioning",
+                "Priority use cases",
+                "Competitive strategy",
+                "Proof & seller guidance"
+              ],
+              "caption": "Learning continued across discovery, beta feedback, customer conversations, and field enablement.",
               "href": "assets/documents/workvivo-hq-research-brief.pdf",
-              "linkLabel": "Read the message-testing brief"
+              "linkLabel": "Read one input: the Wynter message-testing brief"
             }
           },
           {

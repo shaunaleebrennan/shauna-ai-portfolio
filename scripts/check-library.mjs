@@ -57,6 +57,13 @@ for (const item of work) {
   for (const value of Object.values(item.caseStudy.overview)) {
     check(markdown.includes(value), `Stale Markdown: ${item.slug}`);
   }
+  check(item.caseStudy.story?.length > 0, `Missing story: ${item.slug}`);
+  check(new Set(item.caseStudy.story.map(block => block.id)).size === item.caseStudy.story.length, `Duplicate section IDs: ${item.slug}`);
+  for (const block of item.caseStudy.story) {
+    check(block.title && (block.paragraphs?.length || block.items?.length), `Empty section: ${item.slug}`);
+    check(markdown.includes(`## ${block.title}`), `Stale section title: ${item.slug}`);
+    for (const text of [...(block.paragraphs || []), ...(block.items || [])]) check(markdown.includes(text), `Stale section copy: ${item.slug}`);
+  }
   for (const evidence of item.evidence) {
     check(markdown.includes(evidence.title), `Missing Markdown evidence: ${item.slug}`);
   }

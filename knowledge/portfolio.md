@@ -27,7 +27,7 @@ During her tenure, Workvivo grew from approximately $10M to approximately $110M 
 - [HQ Agent](../case-studies/hq-agent.md): AI product narrative, trust messaging, pricing, and packaging.
 - [The Meta Migration](../case-studies/meta-migration.md): migration positioning, competitive differentiation, and seller enablement.
 - [Market leadership](../case-studies/market-leadership.md): analyst narrative, evidence, and category strategy.
-- [Seer](../case-studies/seer.md): people-intelligence positioning and market entry.
+- Seer: people-intelligence positioning and market entry.
 
 ## Hands-on AI work
 

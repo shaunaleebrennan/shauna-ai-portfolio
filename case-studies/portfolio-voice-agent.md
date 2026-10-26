@@ -6,15 +6,15 @@
 
 A case study can tell a story. A conversation can start with the part you actually care about. I wanted my portfolio to do both.
 
-## What needed to change
+## Start with the visitor’s question
 
 Recruiters, hiring managers and collaborators arrive with different questions. I wanted them to explore the work naturally, with answers that were specific, useful and faithful to my experience.
 
-## My part in it
+## Designing the conversation
 
 I designed and integrated a voice and text agent on ElevenLabs, with a voice persona based on my own recordings. I configured its personality, prompts, modular knowledge and intent routing, then compared models and tested responses against career and project evidence to improve clarity, relevance and accuracy.
 
-## What came out of it
+## A portfolio you can talk to
 
 A live conversational layer for the portfolio. Visitors can ask about a project, a decision or my approach, while the agent draws on curated career and project material. The work brought voice design, product judgment and hands-on AI configuration together in one experience.
 

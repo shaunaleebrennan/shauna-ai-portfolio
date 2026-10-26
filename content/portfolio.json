@@ -52,9 +52,6 @@
         "overview": {
           "eyebrow": "Repositioning Workvivo for the AI era—without losing what made it different",
           "lead": "I led the positioning and messaging behind Workvivo's shift from an employee experience platform towards an AI-powered digital headquarters for every employee.",
-          "problem": "AI was changing how employees find knowledge, interact with systems and get work done. Workvivo needed a credible place in that changing market. The challenge was to make the new AI proposition clear to IT and business buyers while retaining the connection, communication and employee experience strengths customers already valued.",
-          "contribution": "I shaped portfolio positioning and the messaging architecture across Workvivo HQ, HQ Agent and Seer. That meant making deliberate choices about how the products fit together, where we could differentiate, and which technical capabilities mattered to each buyer. I carried the strategy into launch messaging, the website, analyst framing, competitive guidance, campaign direction and seller enablement, working across Product, Sales, Growth and Marketing.",
-          "result": "Workvivo HQ launched with a clearer portfolio story: one headquarters bringing together employee communication, knowledge, insight and action. The messaging gave Product, Marketing and Sales a shared way to explain the platform and its role in enterprise AI. The company-wide launch was recognised internally for consistent messaging across leadership and field teams. That is qualitative feedback, not a measured pipeline or adoption claim.",
           "learning": "The strongest AI story builds on what customers already trust."
         },
         "eyebrow": "Repositioning a category for the AI era",
@@ -75,7 +72,30 @@
           "Keep frontline employees inside the enterprise AI narrative"
         ],
         "outcome": "Workvivo publicly launched HQ while serving 9 million users and after surpassing $100M ARR. Those are company proof points during Shauna’s tenure, not outcomes attributed to her alone.",
-        "learning": "Repositioning works when it expands what a brand can mean without erasing the reason customers trusted it in the first place."
+        "learning": "Repositioning works when it expands what a brand can mean without erasing the reason customers trusted it in the first place.",
+        "story": [
+          {
+            "id": "problem",
+            "title": "A new role in enterprise AI",
+            "paragraphs": [
+              "AI was changing how employees find knowledge, interact with systems and get work done. Workvivo needed a credible place in that changing market. The challenge was to make the new AI proposition clear to IT and business buyers while retaining the connection, communication and employee experience strengths customers already valued."
+            ]
+          },
+          {
+            "id": "contribution",
+            "title": "One portfolio, one story",
+            "paragraphs": [
+              "I shaped portfolio positioning and the messaging architecture across Workvivo HQ, HQ Agent and Seer. That meant making deliberate choices about how the products fit together, where we could differentiate, and which technical capabilities mattered to each buyer. I carried the strategy into launch messaging, the website, analyst framing, competitive guidance, campaign direction and seller enablement, working across Product, Sales, Growth and Marketing."
+            ]
+          },
+          {
+            "id": "result",
+            "title": "Taking the positioning into market",
+            "paragraphs": [
+              "Workvivo HQ launched with a clearer portfolio story: one headquarters bringing together employee communication, knowledge, insight and action. The messaging gave Product, Marketing and Sales a shared way to explain the platform and its role in enterprise AI. The company-wide launch was recognised internally for consistent messaging across leadership and field teams. That is qualitative feedback, not a measured pipeline or adoption claim."
+            ]
+          }
+        ]
       }
     },
     {
@@ -113,11 +133,31 @@
         "overview": {
           "eyebrow": "Turning strategic PMM judgment into a method other people can use",
           "lead": "I created a practical Narrative Design playbook that connects market insight to buying criteria, a useful approach, and a credible product contribution.",
-          "problem": "A compact framework can explain the sequence while leaving the hardest decisions to the reader. I wanted to make the reasoning usable: how to choose an insight, develop a meaningful approach, connect the product to it, and test whether the story works.",
-          "contribution": "I developed the point of view, practical guidance, worked example, AI narrative checks, and downloadable companion. The playbook credits Marcus Andrews for the five-stage change-led method and distinguishes my practical extensions, including a reframe-led alternative when a market change is not established.",
-          "result": "A public interactive playbook with an annotated example, a browser-based brief export, a reusable narrative-design skill, and a printable workbook. The companion was checked through narrative development, a narrow edit, and Question Mode; those exercises do not establish customer or commercial impact.",
           "learning": "A useful framework makes the decisions behind the method visible."
-        }
+        },
+        "story": [
+          {
+            "id": "problem",
+            "title": "Making the method usable",
+            "paragraphs": [
+              "A compact framework can explain the sequence while leaving the hardest decisions to the reader. I wanted to make the reasoning usable: how to choose an insight, develop a meaningful approach, connect the product to it, and test whether the story works."
+            ]
+          },
+          {
+            "id": "contribution",
+            "title": "The thinking behind the playbook",
+            "paragraphs": [
+              "I developed the point of view, practical guidance, worked example, AI narrative checks, and downloadable companion. The playbook credits Marcus Andrews for the five-stage change-led method and distinguishes my practical extensions, including a reframe-led alternative when a market change is not established."
+            ]
+          },
+          {
+            "id": "result",
+            "title": "A toolkit to put it into practice",
+            "paragraphs": [
+              "A public interactive playbook with an annotated example, a browser-based brief export, a reusable narrative-design skill, and a printable workbook. The companion was checked through narrative development, a narrow edit, and Question Mode; those exercises do not establish customer or commercial impact."
+            ]
+          }
+        ]
       }
     },
     {
@@ -148,9 +188,6 @@
         "overview": {
           "eyebrow": "Making product messaging a source of truth—not another document to copy",
           "lead": "AI can generate content quickly. Keeping that content accurate, approved and consistent across teams is the harder problem.",
-          "problem": "Sales and Marketing reuse messaging across products, audiences and assets. Each copy-and-paste can weaken the link to its original meaning, supporting evidence or approval. I wanted a system where PMM could maintain the source and teams and AI agents could reuse it reliably.",
-          "contribution": "I led the project, wrote the product messaging with PMM-team support and defined the content model, approval process and acceptance criteria. I tested AI-assisted authoring and revision workflows and changed direction when a GitHub-based approach proved less practical for how the team works. The resulting in-house approach uses Zoom agents and Canvas to make messaging easier to find, maintain and review.",
-          "result": "The HQ Agent pilot is complete and connected to the sales enablement agent, with positive early feedback. Wider message coverage and a design-system-connected content generation workflow are planned, not yet established business outcomes. This is a working example of how I apply hands-on AI knowledge to improve PMM operations—not a claim that the full organisation has adopted it.",
           "learning": "Scaling AI content starts with messaging that people can trust and agents can use."
         },
         "eyebrow": "Making approved messaging reusable across teams and AI tools",
@@ -232,6 +269,36 @@
               "I would now prove the simplest complete human change cycle first, then add automation where it removes effort without obscuring ownership."
             ]
           }
+        ],
+        "story": [
+          {
+            "id": "need",
+            "title": "Messaging that can keep up",
+            "paragraphs": [
+              "Sales and Marketing reuse messaging across products, audiences and assets. Each copy-and-paste can weaken the link to its original meaning, supporting evidence or approval. I wanted a system where PMM could maintain the source and teams and AI agents could reuse it reliably."
+            ]
+          },
+          {
+            "id": "ownership",
+            "title": "Designing for trust and reuse",
+            "paragraphs": [
+              "I led the project, wrote the product messaging with PMM-team support, and defined the content model, approval process, and acceptance criteria. The goal was to give people and AI agents a source they could reuse while keeping PMM ownership and human review clear."
+            ]
+          },
+          {
+            "id": "iteration",
+            "title": "The workflow changed after testing",
+            "paragraphs": [
+              "I tested AI-assisted authoring and revision workflows, then changed direction when a GitHub-based approach proved less practical for how the team works. The resulting in-house approach uses Zoom agents and Canvas to make messaging easier to find, maintain, and review."
+            ]
+          },
+          {
+            "id": "status",
+            "title": "A completed pilot, with more to build",
+            "paragraphs": [
+              "The HQ Agent pilot is complete and connected to the sales enablement agent, with positive early feedback. Wider message coverage and a design-system-connected content generation workflow are planned, not yet established business outcomes. This is a working example of how I apply hands-on AI knowledge to improve PMM operations—not a claim that the full organisation has adopted it."
+            ]
+          }
         ]
       }
     },
@@ -269,9 +336,6 @@
         "overview": {
           "eyebrow": "From search to answer to action: making agentic AI easier to buy",
           "lead": "HQ Agent needed a clear story for what it could do, why it mattered and where it fitted within Workvivo's wider AI portfolio.",
-          "problem": "Search, grounded answers and task execution can sound like one undifferentiated AI promise. Buyers needed to understand the progression in value, the role of permissions and trust, and how HQ Agent related to Workvivo HQ and ZoomMate.",
-          "contribution": "I led product and portfolio positioning, working with Product and Zoom's AI teams to understand enterprise search, retrieval-augmented generation (RAG), grounding, permissions, integrations and supported actions. I turned those capabilities into buyer use cases, seller messaging and enablement for IT, HR and Communications. I also co-developed pricing and packaging with the Revenue leader, considering customer value, AI maturity, use cases, competitive alternatives and sustainable economics.",
-          "result": "The positioning gave commercial teams a usable progression—search, answer, action—and a more credible explanation of what the product could and could not do. It informed launch and seller enablement and helped connect technical capabilities to commercial value. Internal planning identified a substantial HQ Agent pipeline opportunity, but pipeline estimates and targets are not presented here as achieved or PMM-generated revenue.",
           "learning": "An agent's value is the work it helps people complete, with limits buyers can trust."
         },
         "eyebrow": "Commercialising enterprise AI",
@@ -293,7 +357,100 @@
           "Price levels of AI value rather than charging for novelty"
         ],
         "outcome": "The result was a portfolio and launch narrative designed to make a technically complex enterprise AI product easier to understand, sell, and evaluate. Shauna shaped the commercial story; she did not engineer the underlying AI system.",
-        "learning": "Technical depth matters in Product Marketing when it changes the claim, the value, the packaging, or the buyer’s trust."
+        "learning": "Technical depth matters in Product Marketing when it changes the claim, the value, the packaging, or the buyer’s trust.",
+        "story": [
+          {
+            "id": "problem",
+            "title": "Making the value progression clear",
+            "paragraphs": [
+              "Search, grounded answers and task execution can sound like one undifferentiated AI promise. Buyers needed to understand the progression in value, the role of permissions and trust, and how HQ Agent related to Workvivo HQ and ZoomMate."
+            ]
+          },
+          {
+            "id": "contribution",
+            "title": "Connecting technical depth to buying decisions",
+            "paragraphs": [
+              "I led product and portfolio positioning, working with Product and Zoom's AI teams to understand enterprise search, retrieval-augmented generation (RAG), grounding, permissions, integrations and supported actions. I turned those capabilities into buyer use cases, seller messaging and enablement for IT, HR and Communications. I also co-developed pricing and packaging with the Revenue leader, considering customer value, AI maturity, use cases, competitive alternatives and sustainable economics."
+            ]
+          },
+          {
+            "id": "result",
+            "title": "Search. Answer. Action.",
+            "paragraphs": [
+              "The positioning gave commercial teams a usable progression—search, answer, action—and a more credible explanation of what the product could and could not do. It informed launch and seller enablement and helped connect technical capabilities to commercial value. Internal planning identified a substantial HQ Agent pipeline opportunity, but pipeline estimates and targets are not presented here as achieved or PMM-generated revenue."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "brazil-in-red",
+      "title": "Brazil in Red",
+      "category": "technical",
+      "tag": "Data storytelling",
+      "summary": "From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.",
+      "demonstrates": "Research synthesis, data storytelling, product judgment, visual direction, and AI-assisted building.",
+      "proof": "Live bilingual atlas with interactive maps, round comparisons, source links, and methodology notes.",
+      "image": "assets/evidence/brazil-in-red.svg",
+      "sourceUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+      "projectUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+      "projectLabel": "Explore the live atlas",
+      "projectPreview": {
+        "image": "assets/evidence/brazil-in-red-preview.jpg",
+        "alt": "Brazil in Red atlas opening screen, with its red photographic design and presidential result comparison.",
+        "caption": "The atlas opens with the national picture, then lets readers explore the results across Brazil and the world.",
+        "width": 2048,
+        "height": 853
+      },
+      "evidence": [
+        {
+          "title": "Explore Brazil in Red",
+          "url": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+          "kind": "Live personal project",
+          "note": "Explore the bilingual atlas, interactive maps, comparison tables, and sources and method section."
+        }
+      ],
+      "caseStudy": {
+        "overview": {
+          "eyebrow": "Turning curiosity into a story people can explore",
+          "lead": "I wanted to understand how Brazil voted, what changed between rounds, and how the picture differed for Brazilians abroad. That curiosity became Brazil in Red: an interactive atlas built with AI."
+        },
+        "story": [
+          {
+            "id": "curiosity",
+            "title": "It started with a question",
+            "paragraphs": [
+              "How did voting change between rounds? Where did the national picture hide regional differences? And how did the results look for Brazilians living abroad? I wanted an experience that let me follow those questions across Brazil and the world."
+            ]
+          },
+          {
+            "id": "experience",
+            "title": "From results to an explorable atlas",
+            "paragraphs": [
+              "I set the questions, directed the research and AI-assisted build, and shaped the editorial structure and visual experience. The published atlas brings together maps of 27 Brazilian federal units, comparisons across 31 selected overseas countries and territories, and English and Portuguese views. Readers can follow the story or explore rounds, regions, and locations for themselves."
+            ]
+          },
+          {
+            "id": "decisions",
+            "title": "The details that made it clearer",
+            "paragraphs": [
+              "I reviewed the experience repeatedly, asking whether each chart and section made the comparison understandable. Those reviews led to specific changes:"
+            ],
+            "items": [
+              "Make every percentage explicit: whose share, which round, and which votes are included.",
+              "Compare rounds on a consistent basis, distinguishing a change in winner from a change in vote share.",
+              "Add regional context when a handful of countries could obscure the bigger picture.",
+              "Refine headings, spacing, and visual hierarchy so the story is easier to follow."
+            ]
+          },
+          {
+            "id": "people",
+            "title": "The people behind the numbers",
+            "paragraphs": [
+              "I expanded the story beyond results to include people helping each other reach the polls. The atlas brings together the numbers, political context, and stories of participation, with source links and methodology notes. It is a personal project that shows how I turn curiosity into research, an editorial point of view, and a working public experience."
+            ]
+          }
+        ]
       }
     },
     {
@@ -336,9 +493,6 @@
         "overview": {
           "eyebrow": "Learn. Build. Apply.",
           "lead": "I don't want to market AI from the sidelines. I learn how the systems work, build with them and use that experience to make better product and GTM decisions.",
-          "problem": "AI changes both what enterprises can buy and how marketing teams can operate. I wanted a practical understanding of agents, orchestration, context, retrieval and human oversight—not just the vocabulary.",
-          "contribution": "I completed Product School courses in AI Product Strategy for Leaders, Agentic Workflows & Loops and Go-to-Market, and I'm undertaking its Product Manager Certification. Alongside formal learning I build and test agents, automation workflows and lightweight applications using coding assistants, n8n and other developer tools. Projects include the live conversational portfolio agent, IT Pressure Test, competitive research workflows and Messaging as Code. I test what works, what fails and where human approval is still essential.",
-          "result": "More technical fluency in the AI products I market, better questions for Product and Engineering, and working examples of AI applied to genuine PMM problems. These are practical builds and pilots, not claims of organisation-wide automation or measured efficiency gains.",
           "learning": "The tools aren't the proof. The choices behind the workflow are."
         },
         "eyebrow": "Building an AI-enabled PMM operating model",
@@ -360,7 +514,31 @@
           "Use prototypes to learn before deciding whether to build, buy, or stop"
         ],
         "outcome": "The result is a growing set of practical systems that increase PMM leverage while keeping strategic accountability human. The tools are not the proof; the workflow design and operating choices are.",
-        "learning": "Technical expertise for a PMM is the ability to understand enough of the system to make better product, pricing, trust, and go-to-market decisions."
+        "learning": "Technical expertise for a PMM is the ability to understand enough of the system to make better product, pricing, trust, and go-to-market decisions.",
+        "story": [
+          {
+            "id": "motivation",
+            "title": "Learning through the work",
+            "paragraphs": [
+              "AI changes both what enterprises can buy and how marketing teams can operate. I wanted a practical understanding of agents, orchestration, context, retrieval and human oversight—not just the vocabulary."
+            ]
+          },
+          {
+            "id": "practice",
+            "title": "Study it. Build it. Test it.",
+            "paragraphs": [
+              "I completed Product School courses in AI Product Strategy for Leaders, Agentic Workflows & Loops, and Go-to-Market, and I’m undertaking its Product Manager Certification. Alongside formal learning, I build and test agents, automation workflows, and lightweight applications using coding assistants, n8n, and other developer tools.",
+              "Projects include the live conversational portfolio agent, competitive research workflows, and Messaging as Code. I test what works, what fails, and where human approval is still essential."
+            ]
+          },
+          {
+            "id": "application",
+            "title": "Bringing that judgment into product marketing",
+            "paragraphs": [
+              "More technical fluency in the AI products I market, better questions for Product and Engineering, and working examples of AI applied to genuine PMM problems. These are practical builds and pilots, not claims of organisation-wide automation or measured efficiency gains."
+            ]
+          }
+        ]
       }
     },
     {
@@ -397,9 +575,6 @@
         "overview": {
           "eyebrow": "A portfolio you can have a conversation with",
           "lead": "A case study can tell a story. A conversation can start with the part you actually care about. I wanted my portfolio to do both.",
-          "problem": "Recruiters, hiring managers and collaborators arrive with different questions. I wanted them to explore the work naturally, with answers that were specific, useful and faithful to my experience.",
-          "contribution": "I designed and integrated a voice and text agent on ElevenLabs, with a voice persona based on my own recordings. I configured its personality, prompts, modular knowledge and intent routing, then compared models and tested responses against career and project evidence to improve clarity, relevance and accuracy.",
-          "result": "A live conversational layer for the portfolio. Visitors can ask about a project, a decision or my approach, while the agent draws on curated career and project material. The work brought voice design, product judgment and hands-on AI configuration together in one experience.",
           "learning": "A useful agent turns a body of knowledge into the answer someone needs next."
         },
         "eyebrow": "Turning a résumé into an evidence-grounded conversation",
@@ -464,7 +639,30 @@
           "Live conversational quality still requires manual testing in ElevenLabs after knowledge or workflow configuration changes"
         ],
         "outcome": "The result is a live, inspectable portfolio interface that demonstrates more than familiarity with AI tools. It shows Shauna's ability to shape a voice persona, engineer prompts, build an intent-routing workflow, configure retrieval and guardrails, compare model behaviour, analyse tests, and translate the technical decisions into a clear professional story. The agent runs on ElevenLabs; Shauna designed, configured, tested, documented, and integrated the experience rather than engineering the underlying voice models or platform runtime.",
-        "learning": "The quality of an agent is shaped less by the cleverness of one prompt than by the discipline of its context, routing, evidence, evaluation, and boundaries."
+        "learning": "The quality of an agent is shaped less by the cleverness of one prompt than by the discipline of its context, routing, evidence, evaluation, and boundaries.",
+        "story": [
+          {
+            "id": "problem",
+            "title": "Start with the visitor’s question",
+            "paragraphs": [
+              "Recruiters, hiring managers and collaborators arrive with different questions. I wanted them to explore the work naturally, with answers that were specific, useful and faithful to my experience."
+            ]
+          },
+          {
+            "id": "contribution",
+            "title": "Designing the conversation",
+            "paragraphs": [
+              "I designed and integrated a voice and text agent on ElevenLabs, with a voice persona based on my own recordings. I configured its personality, prompts, modular knowledge and intent routing, then compared models and tested responses against career and project evidence to improve clarity, relevance and accuracy."
+            ]
+          },
+          {
+            "id": "result",
+            "title": "A portfolio you can talk to",
+            "paragraphs": [
+              "A live conversational layer for the portfolio. Visitors can ask about a project, a decision or my approach, while the agent draws on curated career and project material. The work brought voice design, product judgment and hands-on AI configuration together in one experience."
+            ]
+          }
+        ]
       }
     },
     {
@@ -500,9 +698,6 @@
         "overview": {
           "eyebrow": "Turning analyst relations into a strategic market leadership programme",
           "lead": "When Workvivo's dedicated analyst relations owner left, I took on the remit alongside leading Product Marketing. I built a repeatable programme that strengthened our existing position and helped open up adjacent markets.",
-          "problem": "We had an established presence in employee experience and intranet research, but analyst engagement needed to become more than a series of report deadlines. We needed stronger relationships, a clear evidence base and a view of where the broader product portfolio could credibly compete.",
-          "contribution": "I took ownership of analyst strategy, executive briefings, research submissions, customer proof and ongoing engagement across Gartner, Forrester, ClearBox and other firms. I connected the analyst programme with portfolio positioning, competitive intelligence and GTM, and expanded activity through strategy days, events and research conversations. I also used analyst and market signals to advise leadership on category shifts, product opportunities and where Workvivo should place its next bets.",
-          "result": "The programme supported stronger year-on-year recognition, including Workvivo's fourth consecutive Gartner Magic Quadrant Leader placement in 2026, its 2026 Forrester Wave Leader position in Intranet Platforms and ClearBox Choice recognition. I secured invitations to additional Forrester Wave evaluations in Employee Experience Management and Cognitive Search. Those evaluations are in progress; invitations are not placements or outcomes.",
           "learning": "Analyst relations should help the company see where the market is going—not just tell analysts where we've been."
         },
         "eyebrow": "Building external market credibility",
@@ -524,7 +719,30 @@
           "Maintain one coherent portfolio story across multiple evaluation contexts"
         ],
         "outcome": "Workvivo received recognition across Gartner, Forrester, G2, ClearBox, Gartner Peer Insights, and SoftwareReviews. Shauna played a substantial role in the program; independent analysts and reviewers controlled their own outcomes.",
-        "learning": "Influence without control demands evidence, consistency, and patience. Strong analyst relations makes the company easier to understand before it tries to make it look impressive."
+        "learning": "Influence without control demands evidence, consistency, and patience. Strong analyst relations makes the company easier to understand before it tries to make it look impressive.",
+        "story": [
+          {
+            "id": "problem",
+            "title": "Beyond report deadlines",
+            "paragraphs": [
+              "We had an established presence in employee experience and intranet research, but analyst engagement needed to become more than a series of report deadlines. We needed stronger relationships, a clear evidence base and a view of where the broader product portfolio could credibly compete."
+            ]
+          },
+          {
+            "id": "contribution",
+            "title": "Building the analyst relations programme",
+            "paragraphs": [
+              "I took ownership of analyst strategy, executive briefings, research submissions, customer proof and ongoing engagement across Gartner, Forrester, ClearBox and other firms. I connected the analyst programme with portfolio positioning, competitive intelligence and GTM, and expanded activity through strategy days, events and research conversations. I also used analyst and market signals to advise leadership on category shifts, product opportunities and where Workvivo should place its next bets."
+            ]
+          },
+          {
+            "id": "result",
+            "title": "Recognition and new category opportunities",
+            "paragraphs": [
+              "The programme supported stronger year-on-year recognition, including Workvivo's fourth consecutive Gartner Magic Quadrant Leader placement in 2026, its 2026 Forrester Wave Leader position in Intranet Platforms and ClearBox Choice recognition. I secured invitations to additional Forrester Wave evaluations in Employee Experience Management and Cognitive Search. Those evaluations are in progress; invitations are not placements or outcomes."
+            ]
+          }
+        ]
       }
     },
     {
@@ -561,9 +779,6 @@
         "overview": {
           "eyebrow": "Turning a market disruption into a clear reason to choose Workvivo",
           "lead": "When Meta announced Workplace's closure, its customers had to move. But Workvivo still had to earn their choice.",
-          "problem": "Workvivo was named Meta's only preferred migration partner, creating a rare, time-sensitive opportunity. Buyers needed reassurance about moving their communities, evidence that the new platform would meet their needs and a reason to choose Workvivo over competing alternatives.",
-          "contribution": "I led migration positioning, competitive differentiation and seller messaging, connecting the practical migration story to the longer-term value of employee experience. I worked across functions to put the right narrative, objections and enablement into the field during a compressed decision window.",
-          "result": "A coordinated GTM approach that helped the wider business compete for Workplace customers. Workvivo's company-wide response was recognised with Forrester's **2026 B2B Return on Integration Honors**. The award belongs to the cross-functional company effort; my contribution was positioning, competitive strategy and seller enablement. Internal retrospectives describe substantial company-level customer capture and revenue growth. I have not included those figures here without an approved public source and a clear attribution boundary.",
           "learning": "When customers have to move, the destination still has to earn their choice."
         },
         "eyebrow": "Turning disruption into commercial opportunity",
@@ -591,191 +806,30 @@
           "description": "Forrester recognised Workvivo for creating exceptional business value by aligning product, engineering, sales, marketing, customer success, and partnerships around a major market disruption. Shauna’s portfolio identifies that company programme as the Meta migration.",
           "url": "https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/"
         },
-        "learning": "When a market window is short, clarity and coordination become competitive advantages. The best displacement story makes both the move and the destination feel compelling."
-      }
-    },
-    {
-      "slug": "seer",
-      "title": "Seer",
-      "category": "gtm",
-      "tag": "GTM",
-      "summary": "Shaping Seer’s positioning, packaging and route to market, with a clear view of the value it could add to Workvivo’s wider platform.",
-      "demonstrates": "Portfolio strategy, competitive differentiation, pricing and packaging, launch leadership, and commercial judgment.",
-      "proof": "Seer product materials and the supplied 18-page Listening Gap research report.",
-      "image": "assets/evidence/seer.jpg",
-      "evidence": [
-        {
-          "title": "Read The Listening Gap notes",
-          "url": "documents/listening-gap.html",
-          "kind": "Supporting document",
-          "note": "Framework and implications from the supplied report; the full report is not hosted here."
-        },
-        {
-          "title": "Seer portfolio artwork",
-          "url": "assets/evidence/seer.jpg",
-          "kind": "Published artifact",
-          "note": "Portfolio visual accompanying the people-intelligence narrative."
-        },
-        {
-          "title": "Read the artifact inventory",
-          "url": "documents/evidence-inventory.html",
-          "kind": "Evidence record",
-          "note": "What the supplied research supports and what it does not establish."
-        }
-      ],
-      "caseStudy": {
-        "overview": {
-          "eyebrow": "Choosing where employee listening could create the most value",
-          "lead": "Seer was more than a messaging exercise. It raised a commercial question about where Workvivo should compete and how employee listening should fit within the wider platform.",
-          "problem": "The employee listening category was established and competitive. We needed to assess whether Seer would be strongest as a standalone product or as part of an integrated employee experience proposition.",
-          "contribution": "I assessed the standalone opportunity, compared alternatives and recommended an integrated listening, insight and action offer. I helped shape the agreed direction, then led positioning, launch planning and seller enablement, and co-developed commercial packaging. I hired a dedicated PMM to expand execution while retaining strategy oversight.",
-          "result": "We launched Seer with the Listening Gap story, connecting employee feedback to action within Workvivo's broader employee experience. As we learned from the commercial response, I developed further recommendations for a more integrated offer. Those recommendations are separate from what the business ultimately implemented. I do not claim an unverified revenue or adoption result.",
-          "learning": "The best product strategy considers how an offer strengthens the whole portfolio, not only how it sells on its own."
-        },
-        "eyebrow": "Entering the people-intelligence market",
-        "context": "Workvivo expanded into People Intelligence with Seer, moving into a buyer and category conversation adjacent to its employee-experience strengths.",
-        "challenge": "Seer could not sound like another survey platform. The story needed to explain how employee feedback moves beyond collection—turning large volumes of qualitative signal into insight that leaders and managers can act on.",
-        "insight": "The narrative became LISTEN → UNDERSTAND → ACT. The Listening Gap gave the strategy a memorable tension: organisations often collect employee feedback, but struggle to convert what they hear into meaningful action.",
-        "contribution": [
-          "Positioning and GTM strategy",
-          "Launch strategy",
-          "Pricing and packaging",
-          "Competitive strategy",
-          "Seller narrative and enablement",
-          "Hiring a dedicated PMM to scale execution while retaining senior strategy ownership"
-        ],
-        "decisions": [
-          "Anchor the story in action—not survey collection",
-          "Use AI topic grouping, comment analysis, and sentiment as means to insight",
-          "Connect executive reporting with practical manager action",
-          "Position against established engagement and listening alternatives"
-        ],
-        "outcome": "Seer established a people-intelligence expansion story spanning employee listening, AI-assisted insight, manager intelligence, and action. No unverified Seer revenue or adoption metrics are claimed.",
-        "learning": "Adjacent-market entry becomes credible when the narrative explains both the new capability and why the existing brand has earned the right to compete."
-      }
-    },
-    {
-      "slug": "it-pressure-test",
-      "title": "IT Pressure Test",
-      "category": "technical",
-      "tag": "Technical expertise",
-      "summary": "Turning IT-buyer positioning judgment into a working tool: six audience lenses, source-linked diagnostics, and a practical rewrite brief.",
-      "demonstrates": "Buyer insight, positioning systems, product judgment, AI-assisted prototyping, evaluation, and accountable human review.",
-      "proof": "Live portfolio-hosted app, inspectable rubric, 59 automated checks, and documented browser evaluation.",
-      "image": "assets/evidence/it-pressure-test-v2.jpg",
-      "sourceUrl": "it-pressure-test/",
-      "liveUrl": "it-pressure-test/",
-      "evidence": [
-        {
-          "title": "Try IT Pressure Test",
-          "url": "it-pressure-test/",
-          "kind": "Live interactive build",
-          "note": "Choose an IT audience, buying role and stage; inspect the copy and run a deeper review in the tool."
-        },
-        {
-          "title": "Inspect the implementation",
-          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa",
-          "kind": "Source repository",
-          "note": "The original repository retains the build and evaluation history under its existing URL."
-        },
-        {
-          "title": "Read the rubric validation notes",
-          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-rubric-3.1.md",
-          "kind": "Evaluation evidence",
-          "note": "Scoring safeguards, browser checks, and the remaining need for independent human calibration."
-        }
-      ],
-      "caseStudy": {
-        "overview": {
-          "eyebrow": "Making a messaging review more useful, sooner",
-          "lead": "“This needs to be stronger” is easy feedback to give and hard feedback to use. I wanted a review that helped someone decide what to change next.",
-          "problem": "The first version asked reviewers to complete a detailed rubric before receiving useful feedback. I needed to make the review immediately useful for enterprise IT messaging, while accounting for the reader’s remit, buying role and decision stage.",
-          "contribution": "I defined the buyer lenses, review experience and evidence criteria, then used ChatGPT and Codex to prototype and develop the tool. I replaced a manual-first rubric with immediate feedback, priority changes and an editable rewrite brief, and tested how the scoring and source passages behaved.",
-          "result": "A live browser tool that turns positioning judgment into practical editing guidance. It shows the passages behind its feedback and helps the author shape the next draft. The score is an aid to judgment; it does not verify claims or replace a buyer’s response.",
-          "learning": "Better messaging starts with understanding the decision your buyer is trying to make."
-        },
-        "eyebrow": "From a manual QA rubric to a buyer-focused decision aid",
-        "context": "Positioning reviews often produce broad opinions rather than specific, actionable questions. The original AI Positioning QA made a rubric inspectable, but asking reviewers to complete eight dimensions created too much work before they received useful feedback.",
-        "challenge": "Make the review immediately useful for enterprise IT messaging while retaining traceability. A CIO, an architecture lead and an internal champion can read the same asset with different responsibilities; an awareness asset should not be judged as a procurement brief.",
-        "insight": "Start with the buyer’s remit and the job of the message. Surface the questions that matter next, show the source passages behind the diagnosis, and leave the claim and publication decision with a human.",
-        "contribution": [
-          "Defined the IT-buyer scope, review experience and evidence standard",
-          "Directed AI-assisted prototyping in ChatGPT and implementation in Codex",
-          "Shaped six audience lenses, distinct buying roles and stage-aware review guidance",
-          "Pressure-tested scoring, source traceability, export behavior and input changes",
-          "Integrated the live tool, documentation and visual identity into this portfolio"
-        ],
-        "decisions": [
-          "Separate awareness stage from purchase stage: what the reader knows differs from what the buying group is deciding",
-          "Replace the manual-first interface with Gut Reaction, priority changes and buyer questions",
-          "Keep deep review inside the app with matching passages and an editable rewrite brief",
-          "Keep an inspectable /100 structural score with explicit stage weights, separate proof status and visible critical-claim warnings",
-          "Keep the public tool vendor-neutral and retain the original eight-dimension manual evaluator as a separate workflow"
-        ],
-        "architecture": [
-          "Static HTML and CSS provide the interface; vanilla JavaScript runs locally in the browser",
-          "Pure modules separate six IT buyer profiles and rewrite guidance from the versioned 0–4 scoring rubric",
-          "The UI module renders source excerpts, prioritised questions, stage guidance and the rewrite brief",
-          "Markdown export preserves the source, context, supplied proof and edited rewrite; the app makes no model or network calls",
-          "The portfolio hosts a versioned copy of the public runtime, with a source commit and file hashes recorded in its manifest"
-        ],
-        "tooling": [
-          "ChatGPT for prototype iteration and Codex for integration, refactoring and checks",
-          "Node’s test runner for deterministic scoring and export tests",
-          "GitHub for version control and GitHub Pages for static hosting",
-          "Generated case-study artwork; interface styling follows the portfolio palette"
-        ],
-        "safeguards": [
-          "Supplied proof is displayed as unverified context and cannot inflate the score of the source copy",
-          "Edits invalidate displayed results and exports; source HTML is escaped rather than executed",
-          "Quoted passages preserve the original source whitespace",
-          "No automatic saving, tracking or external model calls in the tool",
-          "Private research attachments are not published; unsupported research percentages were withheld"
-        ],
-        "validation": [
-          "59 automated checks passed for rubric 3.1, retaining the original manual-evaluator tests",
-          "Checks cover proof isolation, citations, selected negation cases, vendor substitutions, proposed measurements, risk flags and all 54 remit/role/stage combinations",
-          "Browser checks covered compact results, deep review, edited-brief export, escaped HTML, stale-result invalidation and 320px/390px layouts",
-          "Semantic relationships, unusual phrasing and unverified evidence remain limitations; independent human calibration has not been completed"
-        ],
-        "outcome": "A live IT messaging review that gives immediate, inspectable guidance and a reusable rewrite brief. The build demonstrates how positioning judgment can become a practical workflow. It does not establish commercial lift, buyer agreement or production-grade approval governance.",
-        "learning": "A useful review system must make its limits as visible as its recommendations. Simplifying the interface only helps if the evidence and the human decision remain clear."
-      }
-    },
-    {
-      "slug": "brazil-in-red",
-      "title": "Brazil in Red",
-      "category": "technical",
-      "tag": "Data storytelling",
-      "summary": "From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.",
-      "demonstrates": "Research synthesis, data storytelling, product judgment, visual direction, and AI-assisted building.",
-      "proof": "Live bilingual atlas with interactive maps, round comparisons, source links, and methodology notes.",
-      "image": "assets/evidence/brazil-in-red.svg",
-      "sourceUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
-      "projectUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
-      "projectLabel": "Explore the live atlas",
-      "projectPreview": {
-        "image": "assets/evidence/brazil-in-red-map.jpg",
-        "alt": "Brazil in Red state map with round selectors and a detailed Minas Gerais comparison.",
-        "caption": "Inside the atlas: switch rounds, explore a state, and compare the result with the change in vote share."
-      },
-      "evidence": [
-        {
-          "title": "Explore Brazil in Red",
-          "url": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
-          "kind": "Live personal project",
-          "note": "Explore the bilingual atlas, interactive maps, comparison tables, and sources and method section."
-        }
-      ],
-      "caseStudy": {
-        "overview": {
-          "eyebrow": "Turning curiosity into a story people can explore",
-          "lead": "I wanted to understand how Brazil voted, what changed between rounds, and how the picture differed for Brazilians abroad. That curiosity became Brazil in Red: an interactive atlas built with AI.",
-          "problem": "Election results arrive as headlines, tables, and scattered reports. I wanted to bring the national picture, regional differences, and overseas vote into one experience. The challenge was to make a complex dataset approachable while preserving the distinctions that matter: vote share versus vote count, a change in winner versus a change in margin, and the different candidate fields in each round.",
-          "contribution": "I set the questions, directed the research and AI-assisted build, and shaped the editorial structure and visual experience. I pushed the work through repeated reviews of maps, chart labels, comparisons, and page hierarchy. When a percentage was ambiguous, I asked for its meaning to be explicit. When selected countries obscured the bigger picture, I asked for regional context. I also expanded the story beyond the results to include people helping each other reach the polls. The resulting experience combines guided storytelling with maps and tables readers can explore for themselves.",
-          "result": "I published a bilingual atlas with English and Portuguese views, maps covering 27 Brazilian federal units, comparisons across 31 selected overseas countries and territories, and controls for exploring rounds, regions, and locations. It brings together the numbers, political context, and stories of participation, with source links and methodology notes. The project demonstrates how I take a question from research through product direction, AI-assisted implementation, and public delivery.",
-          "learning": "AI made it faster to build. Judgment made it worth exploring."
-        }
+        "learning": "When a market window is short, clarity and coordination become competitive advantages. The best displacement story makes both the move and the destination feel compelling.",
+        "story": [
+          {
+            "id": "problem",
+            "title": "A forced move. A competitive choice.",
+            "paragraphs": [
+              "Workvivo was named Meta's only preferred migration partner, creating a rare, time-sensitive opportunity. Buyers needed reassurance about moving their communities, evidence that the new platform would meet their needs and a reason to choose Workvivo over competing alternatives."
+            ]
+          },
+          {
+            "id": "contribution",
+            "title": "Giving customers a reason to choose",
+            "paragraphs": [
+              "I led migration positioning, competitive differentiation and seller messaging, connecting the practical migration story to the longer-term value of employee experience. I worked across functions to put the right narrative, objections and enablement into the field during a compressed decision window."
+            ]
+          },
+          {
+            "id": "result",
+            "title": "A coordinated market response",
+            "paragraphs": [
+              "A coordinated GTM approach that helped the wider business compete for Workplace customers. Workvivo's company-wide response was recognised with Forrester's **2026 B2B Return on Integration Honors**. The award belongs to the cross-functional company effort; my contribution was positioning, competitive strategy and seller enablement. Internal retrospectives describe substantial company-level customer capture and revenue growth. I have not included those figures here without an approved public source and a clear attribution boundary."
+            ]
+          }
+        ]
       }
     }
   ]

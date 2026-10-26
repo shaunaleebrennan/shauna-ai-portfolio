@@ -22,6 +22,10 @@ Designing an operating model for messaging reuse across teams and AI tools, with
 
 Turning search, grounded answers and supported actions into positioning, packaging and enablement that buyers and sellers can use.
 
+### [Brazil in Red](case-studies/brazil-in-red.md)
+
+From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.
+
 ### [AI Product Strategy](case-studies/ai-product-strategy.md)
 
 Combining Product School courses with self-guided building and testing to develop practical judgment about AI products and PMM workflows.
@@ -37,18 +41,6 @@ Scaling analyst relations into a strategic market leadership programme, strength
 ### [The Meta Migration](case-studies/meta-migration.md)
 
 Shaping migration positioning and seller strategy during Meta Workplace’s closure, as part of Workvivo’s Forrester-recognised response.
-
-### [Seer](case-studies/seer.md)
-
-Shaping Seer’s positioning, packaging and route to market, with a clear view of the value it could add to Workvivo’s wider platform.
-
-### [IT Pressure Test](case-studies/it-pressure-test.md)
-
-Turning IT-buyer positioning judgment into a working tool: six audience lenses, source-linked diagnostics, and a practical rewrite brief.
-
-### [Brazil in Red](case-studies/brazil-in-red.md)
-
-From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.
 
 ## Supporting documents
 

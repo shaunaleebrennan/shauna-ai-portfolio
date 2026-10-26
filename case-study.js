@@ -17,7 +17,7 @@ try {
     document.title = `${item.title} — Shauna Azevedo-Brennan`;
     document.querySelector('meta[name="description"]').content = story.lead;
     const richText = value => escape(value).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    const section = (id, title, text) => `<section id="${id}" class="case-grid"><h2>${title}</h2><div class="case-copy"><p>${richText(text)}</p></div></section>`;
+    const section = block => `<section id="${escape(block.id)}" class="case-grid"><h2>${escape(block.title)}</h2><div class="case-copy">${(block.paragraphs || []).map(text => `<p>${richText(text)}</p>`).join('')}${block.items?.length ? `<ul>${block.items.map(text => `<li>${richText(text)}</li>`).join('')}</ul>` : ''}</div></section>`;
 
     root.innerHTML = `
       <article>
@@ -32,12 +32,10 @@ try {
           </div>
           <figure class="case-visual"><img src="${escape(item.image)}" alt="${escape(item.title)} case study artwork" width="1600" height="2000" fetchpriority="high"></figure>
         </header>
-        ${item.projectPreview ? `<figure class="case-project-preview case-shell"><a href="${escape(item.projectUrl)}" target="_blank" rel="noopener noreferrer"><img src="${escape(item.projectPreview.image)}" alt="${escape(item.projectPreview.alt)}" loading="lazy" width="1248" height="824"></a><figcaption>${escape(item.projectPreview.caption)}</figcaption></figure>` : ''}
+        ${item.projectPreview ? `<figure class="case-project-preview case-shell"><a href="${escape(item.projectUrl)}" target="_blank" rel="noopener noreferrer"><img src="${escape(item.projectPreview.image)}" alt="${escape(item.projectPreview.alt)}" loading="lazy" width="${escape(item.projectPreview.width || 1248)}" height="${escape(item.projectPreview.height || 824)}"></a><figcaption>${escape(item.projectPreview.caption)}</figcaption></figure>` : ''}
         <div class="case-body case-shell">
-          ${section('context', 'What needed to change', story.problem)}
-          ${section('contribution', 'My part in it', story.contribution)}
-          ${section('outcome', 'What came out of it', story.result)}
-          <aside class="case-takeaway"><p>${escape(story.learning)}</p></aside>
+          ${item.caseStudy.story.map(section).join('')}
+          ${story.learning ? `<aside class="case-takeaway"><p>${escape(story.learning)}</p></aside>` : ''}
           <nav class="case-actions" aria-label="Case study navigation">
             <a href="index.html#explore">← All selected work</a>
             <a class="next-case" href="${escape(next.href || `case-study.html?case=${encodeURIComponent(next.slug)}`)}"><span>Next story</span><strong>${escape(next.title)} →</strong></a>

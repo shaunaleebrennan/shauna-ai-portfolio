@@ -6,15 +6,15 @@
 
 I created a practical Narrative Design playbook that connects market insight to buying criteria, a useful approach, and a credible product contribution.
 
-## What needed to change
+## Making the method usable
 
 A compact framework can explain the sequence while leaving the hardest decisions to the reader. I wanted to make the reasoning usable: how to choose an insight, develop a meaningful approach, connect the product to it, and test whether the story works.
 
-## My part in it
+## The thinking behind the playbook
 
 I developed the point of view, practical guidance, worked example, AI narrative checks, and downloadable companion. The playbook credits Marcus Andrews for the five-stage change-led method and distinguishes my practical extensions, including a reframe-led alternative when a market change is not established.
 
-## What came out of it
+## A toolkit to put it into practice
 
 A public interactive playbook with an annotated example, a browser-based brief export, a reusable narrative-design skill, and a printable workbook. The companion was checked through narrative development, a narrow edit, and Question Mode; those exercises do not establish customer or commercial impact.
 

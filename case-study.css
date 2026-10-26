@@ -19,3 +19,5 @@
 .pb-case-link{margin-top:26px}.pb-case-link a:hover{color:#0b0d0c;background:#d9ff96}
 
 .case-project-preview{margin:0 auto 44px}.case-project-preview img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px}.case-project-preview figcaption{max-width:760px;margin-top:14px;color:var(--muted);font-size:14px;line-height:1.6}
+
+.case-copy>p+p{margin-top:20px}.case-copy>ul{padding-left:1.2em;margin:20px 0 0;color:#d5d9d1;font-size:clamp(17px,1.6vw,19px);line-height:1.7}.case-copy li+li{margin-top:14px}

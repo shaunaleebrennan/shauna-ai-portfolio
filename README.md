@@ -51,10 +51,7 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 - [**Portfolio Voice Agent**](case-studies/portfolio-voice-agent.md) — Designing, configuring and testing a live voice and text agent that turns career and project evidence into useful conversations.
 - [**Analyst Relations & Category Leadership**](case-studies/market-leadership.md) — Transformed an additional remit into a strategic programme supporting stronger analyst recognition, broader category coverage and leadership intelligence.
 - [**The Meta Migration**](case-studies/meta-migration.md) — Shaping migration positioning and seller strategy during Meta Workplace’s closure, as part of Workvivo’s Forrester-recognised response.
-- [**Seer**](case-studies/seer.md) — Assessed the standalone opportunity, recommended an integrated offer, committed to the agreed launch and developed recommendations for the next phase.
-- [**IT Pressure Test**](case-studies/it-pressure-test.md) — Turning IT-buyer positioning judgment into a working tool: six audience lenses, source-linked diagnostics, and a practical rewrite brief.
 
-**Try the build:** [Open IT Pressure Test](https://shaunaleebrennan.github.io/shauna-ai-portfolio/it-pressure-test/) · [Source and validation](https://github.com/shaunaleebrennan/ai-positioning-qa).
 
 
 ## Supporting documents

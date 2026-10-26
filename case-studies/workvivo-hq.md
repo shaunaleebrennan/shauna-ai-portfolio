@@ -16,72 +16,98 @@ As AI became increasingly commoditised, we needed a way to differentiate while s
 
 ## The signals behind the story
 
-The inputs included a two-wave Wynter messaging study conducted in March–April 2026 with 45 participants, competitive research from May, and the market interpretation developed in the original HQ narrative.
+Competitive research showed AI-native positioning becoming common across the employee experience market. Buyer message testing helped identify which parts of Workvivo’s story earned interest.
 
-The study measured reactions to positioning statements in a small buyer panel. It informed the messaging; it did not test the digital HQ name or establish market-wide demand.
+The two-wave Wynter study favoured organisational context over an unsupported adoption claim. I used those signals to sharpen the differentiation and the proof behind it.
 
-- Competitive language was converging. The May competitive review documented AI-native employee experience positioning in the market. The implication was to give Workvivo a distinctive narrative beyond the AI label.
-- Organisational context earned interest. In the Wynter study, 69% of participants responded positively to a message about understanding company culture, people, and systems. This supported making Workvivo’s employee experience context part of the differentiation.
-- Adoption needed evidence. A message about employees choosing to use Workvivo received 31% positive responses in the same study. Existing adoption could support the story, but the claim needed proof rather than serving as a self-evident reason to buy.
-- The narrative supplied a strategic interpretation. Fragmented tools and knowledge created the risk of adding another disconnected AI destination. The response was to bring AI into a shared employee experience; digital HQ expressed that ambition.
+### What the messaging research told us
 
-## Workvivo HQ
-
-**Every employee deserves a headquarters. Now they have one.**
-
-The narrative reframed the opportunity around where AI lives: inside the employee experience, where people communicate, find knowledge, and get work done. Workvivo HQ made that ambition tangible through a shared headquarters for every employee.
-
-The headquarters concept extended to desk and frontline employees alike. It connected the broader ambition to Workvivo’s employee experience foundations, with messaging adapted by persona.
-
-### The evolution of the platform story
-
-| Existing positioning | Brand narrative |
+| Message | Positive responses |
 | --- | --- |
-| Workvivo, the employee experience platform | Workvivo HQ. Every employee deserves a headquarters. Now they have one. |
+| Company culture, people, and systems | 69% |
+| Employees choose to use Workvivo | 31% |
 
-A digital HQ for the modern workforce, with messaging adapted by persona.
+Wynter · March–April 2026 · 45 participants. Reactions to different statements; this was not a test of the HQ name or a measure of market demand.
 
-## The Narrative Design framework in practice
+## A headquarters for every employee
 
-I used Marcus Andrews’ five-stage Narrative Design framework to structure the argument: establish the change, explain its impact, define a response, acknowledge the barriers, and show how the product helps. The framework connected the market signals to the brand narrative and persona messaging.
+The strategic reframe was about **where AI lives**: inside the employee experience, where people communicate, find knowledge, and get work done.
 
-The reusable part is the sequence of decisions: interpret the signals, establish the audience stakes, define the response, examine the barriers, and connect product capabilities to credible proof.
+Headquarters made that ambition tangible. It could speak to the whole customer base while keeping employee experience central, with messaging adapted by persona.
 
-- The change. AI was changing how employees access information and get work done, while AI-native claims were becoming common across the employee experience market.
-- The impact. The narrative explored what that shift meant for employees navigating fragmented tools, and for IT, HR, and Comms supporting the change.
-- The new game. Put AI into the employee experience where people communicate, find knowledge, and act. The strategic reframe was about where AI lives; headquarters made that idea tangible.
-- Why it’s hard. Scattered systems, adoption friction, and unequal access across desk and frontline roles were barriers addressed in the original narrative.
-- The solution. Workvivo HQ: “Every employee deserves a headquarters. Now they have one.” Connect that promise to the product experience and adapt the messages and proof by persona.
+### The brand narrative
 
-## The judgment behind the messaging
+**Workvivo HQ**
 
+> Every employee deserves a headquarters. Now they have one.
 
+The digital HQ for the modern workforce.
 
-- Start with the competitive challenge. Stand out in a crowded AI-native employee experience market, where AI claims were becoming less distinctive.
-- Make the ambition understandable. Use digital HQ to express the platform’s evolution in language the entire customer base could understand.
-- Stay relevant to our champions. Adapt the messaging by persona while maintaining a shared brand narrative.
-- Avoid overusing AI in the copy. Let the digital HQ story lead, with AI explained through the capabilities and value it enables.
+## One story. A clear messaging architecture.
 
-## From brand narrative to a shared launch story
+The product pillars gave the platform story structure. The persona matrix changed the emphasis, value, and proof for each audience, while keeping the same HQ narrative.
 
-I led the positioning and messaging architecture, then carried the narrative into launch messaging, the website, analyst framing, competitive guidance, campaign direction, and seller enablement, working across Product, Sales, Growth, and Marketing.
+### How the narrative becomes a message system
 
-The messaging varied by persona within the broader digital HQ narrative. The portfolio story connected Workvivo HQ, HQ Agent, and Seer.
+**Workvivo HQ: Every employee deserves a headquarters. Now they have one.**
 
-### One employee experience
+| Product pillar | Role |
+| --- | --- |
+| Communication & Engagement | Connection, participation, and the organisation’s shared story. |
+| Search & Knowledge | Finding information and answers in the flow of work. |
+| People Intelligence | Understanding the employee experience and informing action. |
 
-Workvivo HQ · HQ Agent · Seer
+| Audience | Emphasis | Message and proof |
+| --- | --- | --- |
+| IT | Governance, adoption, and consolidation | A governed experience layer, with proof around adoption, ROI, and the AI foundation. |
+| HR | Trust, inclusion, and listening | Support employees through change, with engagement and listening evidence. |
+| Comms | Reach, relevance, and understanding | Make change understood and actionable, with reach, engagement, and analytics proof. |
+| Employees | Simplicity, clarity, and access | Understand what is happening, find what they need, and get work done. |
 
-Communication and connection · Knowledge and action · Listening and insight
+Product pillars and persona priorities from the HQ messaging work. Select an audience to see how the emphasis changes.
 
-[Explore the narrative notes](../knowledge/case-study-hq.md)
+## A method behind the message
 
-## Bringing the narrative to market
+I used Marcus Andrews’ five-stage Narrative Design framework to connect market change to audience stakes, a practical response, and Workvivo’s role.
 
-Workvivo HQ launched with the digital HQ narrative connecting communication, knowledge, insight, and action. Launch messaging, campaigns, and enablement carried that narrative into market.
+That sequence made the argument reusable across executive presentations, analyst conversations, and persona messaging.
 
-The company-wide launch was recognised internally for consistent messaging across leadership and field teams. That feedback supports the alignment achieved; it does not establish a measured pipeline or adoption impact.
+### Narrative Design, applied
+
+1. **The change.** AI was changing how employees access information and get work done, while AI-native claims were becoming common across the employee experience market.
+2. **The impact.** The narrative explored what that shift meant for employees navigating fragmented tools, and for IT, HR, and Comms supporting the change.
+3. **The new game.** Put AI into the employee experience where people communicate, find knowledge, and act. The strategic reframe was about where AI lives; headquarters made that idea tangible.
+4. **Why it’s hard.** Scattered systems, adoption friction, and unequal access across desk and frontline roles were barriers addressed in the original narrative.
+5. **The solution.** Workvivo HQ: “Every employee deserves a headquarters. Now they have one.” Connect that promise to the product experience and adapt the messages and proof by persona.
+
+[Explore the Narrative Design playbook](../playbook.html)
+
+## Make the story usable in the field
+
+I translated the narrative into GTM kits and seller enablement: the platform evolution story, persona messages, talk tracks, and guidance on how to move from the HQ vision into product detail.
+
+I carried the positioning into launch messaging, the website, analyst framing, competitive guidance, and campaign direction, working across Product, Sales, Growth, and Marketing.
+
+### From master narrative to market
+
+1. **Equip the seller.** Platform story, persona messages, evolution talk track, and GTM kits.
+2. **Align the launch.** Shared narrative across leadership, Marketing, and field teams.
+3. **Activate by audience.** Adapt the emphasis for sales conversations, campaigns, the website, and analysts.
+
+Strategic direction and messaging led by PMM; delivery shared across teams.
+
+## A story the organisation could tell
+
+The HQ launch at WOW was highlighted in the team retrospective for achieving company-wide message alignment. The feedback connected leadership and SDRs through the same story.
+
+That is evidence of internal narrative adoption. It does not establish a measured pipeline or product-adoption impact.
+
+### Launch retrospective
+
+> From John down to every SDR speaking the same language.
+
+PMM team retrospective · August 2026
+
+Qualitative team feedback on the Workvivo HQ launch at WOW.
 
 > An AI story that erases what made you different is a concession to your competitors.
-
-Framework: [Marcus Andrews’ Narrative Design](https://wynter.com/post/narrative-design). [Explore my Narrative Design playbook](../playbook.html).

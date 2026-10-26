@@ -15,3 +15,7 @@ A six-question discussion tool suggests a provisional tier, grouping approach, a
 [Explore the playbook](../launch-playbook.html)
 
 [PDF playbook](../assets/playbooks/launch-with-intent-playbook.pdf) · [Workbook](../assets/playbooks/launch-with-intent-workbook.pdf)
+
+## A shared planning surface
+
+The feature matrix makes customer value and business impact visible. Visual tier cards explain investment choices, and a six-stage interactive journey separates Product, Customers, and the wider market. Placements are discussion prompts rather than validated tier scores.

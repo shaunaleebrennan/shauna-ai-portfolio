@@ -1533,9 +1533,9 @@
       "category": "launch",
       "tag": "Playbook",
       "href": "launch-playbook.html",
-      "summary": "Make the moment matter. A practical framework and six-question test to tier launches, group releases, and plan who hears what, when.",
+      "summary": "Tier launches, group releases, and plan audience timing with a feature matrix, visual tiers, and an interactive launch journey.",
       "demonstrates": "Launch strategy, tiering, customer communication, adoption planning, and AI-assisted GTM operations.",
-      "proof": "Six-question diagnostic, 10-page PDF playbook, and four-page workbook.",
+      "proof": "Interactive feature matrix, visual tiers, launch journey, six-question diagnostic, and downloadable toolkit.",
       "image": "assets/playbooks/illustrations/make-the-moment-matter.jpg",
       "sourceUrl": "launch-playbook.html",
       "evidence": [
@@ -1543,7 +1543,7 @@
           "title": "Explore Launch with Intent",
           "url": "launch-playbook.html",
           "kind": "Interactive playbook",
-          "note": "Framework, six-question diagnostic, PDF playbook, and workshop workbook."
+          "note": "Feature matrix, visual tiers, launch journey, diagnostic, PDF playbook, and workshop workbook."
         }
       ],
       "caseStudy": {

@@ -187,3 +187,15 @@
 .case-hero--wide-art .case-visual{max-width:540px;align-self:center}
 .case-hero--wide-art .case-visual img{width:100%;height:auto;object-fit:contain}
 @media(max-width:760px){.case-hero--wide-art{grid-template-columns:1fr}.case-hero--wide-art .case-visual{max-width:540px;justify-self:start}}
+
+/* A compact illustration supports a legible, explicit value progression. */
+.ds-employee-scene{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:22px;align-items:center;padding:25px;border-bottom:1px solid var(--line)}
+.ds-employee-illustration{display:block;width:100%;max-width:210px;height:auto;justify-self:start;clip-path:inset(1px round 12px)}
+.ds-employee-scene>div{min-width:0}
+.ds-employee-scene>div>span{display:block;font-size:9px;line-height:1.5;letter-spacing:.11em;text-transform:uppercase;color:var(--acid);margin-bottom:12px}
+.ds-employee-scene h4{font:500 19px/1.45 Manrope,sans-serif;letter-spacing:-.025em;margin:0}
+.ds-employee-progression{padding:25px}
+.ds-employee-progression li{padding-bottom:23px}
+.ds-employee-progression h4{font-size:18px}
+@media(max-width:760px){.ds-employee-scene{padding:22px;gap:18px}.ds-employee-scene h4{font-size:18px}.ds-employee-progression{padding:22px}}
+@media(max-width:390px){.ds-employee-scene{grid-template-columns:1fr}.ds-employee-illustration{max-width:190px}.ds-employee-scene h4{font-size:20px}}

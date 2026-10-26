@@ -827,16 +827,26 @@
               "I co-developed pricing and packaging with the Revenue leader, considering customer value, AI maturity, competitive alternatives, use cases, and sustainable economics. Trust messaging made permissions, grounding, citations, and supported actions part of evaluation."
             ],
             "visual": {
-              "type": "journey",
+              "type": "example-journey",
               "title": "From search, to answer, to job done",
               "steps": [
-                "Search",
-                "Answer",
-                "Action"
+                {
+                  "title": "Search",
+                  "detail": "Find the relevant company information."
+                },
+                {
+                  "title": "Answer",
+                  "detail": "Understand the guidance and the sources behind it."
+                },
+                {
+                  "title": "Action",
+                  "detail": "Complete a supported next step through a connected app."
+                }
               ],
-              "caption": "Find the information · Understand the answer · Complete a supported task",
+              "caption": "A clear progression from finding information to getting something done.",
               "src": "assets/evidence/hq-agent-frontline-example.jpg",
-              "alt": "Frontline employee asking HQ Agent what to do if a delivery truck is delayed, with an answer shown beside them."
+              "alt": "Frontline employee asking HQ Agent what to do if a delivery truck is delayed, with an answer shown beside them.",
+              "question": "What do I do if the delivery truck is delayed?"
             }
           },
           {

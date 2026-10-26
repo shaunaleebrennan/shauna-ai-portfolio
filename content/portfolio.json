@@ -161,6 +161,80 @@
       }
     },
     {
+      "slug": "brazil-in-red",
+      "title": "Brazil in Red",
+      "category": "technical",
+      "tag": "Data storytelling",
+      "summary": "From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.",
+      "demonstrates": "Research synthesis, data storytelling, product judgment, visual direction, and AI-assisted building.",
+      "proof": "Live bilingual atlas with interactive maps, round comparisons, source links, and methodology notes.",
+      "image": "assets/evidence/brazil-in-red.svg",
+      "sourceUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+      "projectUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+      "projectLabel": "Explore the live atlas",
+      "projectPreview": {
+        "image": "assets/evidence/brazil-in-red-preview.jpg",
+        "alt": "Brazil in Red atlas opening screen, with its red photographic design and presidential result comparison.",
+        "caption": "The atlas opens with the national picture, then lets readers explore the results across Brazil and the world.",
+        "width": 2048,
+        "height": 853
+      },
+      "evidence": [
+        {
+          "title": "Explore Brazil in Red",
+          "url": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+          "kind": "Live personal project",
+          "note": "Explore the bilingual atlas, interactive maps, comparison tables, and sources and method section."
+        }
+      ],
+      "caseStudy": {
+        "overview": {
+          "eyebrow": "Turning curiosity into a story people can explore",
+          "lead": "A national result tells you who won. I wanted to understand what sat beneath it: the differences between places, the change between rounds, and the experience of Brazilians voting abroad. I turned those questions into Brazil in Red, a bilingual interactive atlas.",
+          "learning": "“For me, data storytelling is an editorial responsibility: choose the question that matters, make the comparisons meaningful, and give people enough context to form their own view.”"
+        },
+        "story": [
+          {
+            "id": "curiosity",
+            "title": "Finding the story beneath the result",
+            "paragraphs": [
+              "The starting point was personal curiosity. As I explored the results, the question grew: how could I bring the national picture, regional differences, and overseas vote into one experience that made sense to someone arriving without all that context?",
+              "I chose to give the atlas an editorial direction, then let readers investigate it. The page moves from the national result to changes between rounds, Brazilian states, and voters abroad. That sequence gives people a way into the subject before asking them to navigate a map or interpret a table."
+            ]
+          },
+          {
+            "id": "experience",
+            "title": "A guided story, with room to explore",
+            "paragraphs": [
+              "I set the questions, directed the research and AI-assisted build, and shaped the structure, visual direction, and interaction design. The published experience covers 27 Brazilian federal units and 31 selected overseas countries and territories, with English and Portuguese views.",
+              "I wanted the narrative and the interactive elements to work together. A reader can follow the page for the main patterns, then use the maps, round selectors, regional filters, and comparison tables to examine a place that matters to them. Headings, labels, and visual hierarchy had to support both ways of reading."
+            ]
+          },
+          {
+            "id": "decisions",
+            "title": "The choices behind the comparisons",
+            "paragraphs": [
+              "The most useful iterations came from questioning what a reader could reasonably conclude from each visual. I pushed for changes wherever an apparently simple comparison could imply something the data did not establish:"
+            ],
+            "items": [
+              "Give each percentage a clear meaning. A candidate’s share, the winner’s share, and a change between rounds answer different questions. The labels needed to identify the candidate, round, and voting basis.",
+              "Make the rounds comparable. Round one includes other candidates. The atlas distinguishes all-valid-vote shares from a comparison recalculated around the two finalists, and separates a change in winner from the size of the swing.",
+              "Choose the right level of context. Highlighting Ireland and France did not tell the whole European story. I asked for a regional view alongside the individual examples, so the selection of places would not carry more weight than it should.",
+              "Keep interpretation within the evidence. Aggregate changes show how results differed between rounds; they do not establish how individual people switched their votes. Source links and methodology notes give readers a way to examine those boundaries."
+            ]
+          },
+          {
+            "id": "people",
+            "title": "Making space for the people behind the numbers",
+            "paragraphs": [
+              "I also wanted the atlas to convey what participation involved. I asked to include stories of people travelling by boat, offering lifts, and helping others reach the polls alongside the political context and disputes. That widened the story from the outcome of voting to the effort people made to take part.",
+              "The resulting project brings research, editorial judgment, and product design into one public experience. It reflects an approach I bring to product marketing: find the question people care about, turn complexity into a clear story, and make it easy to go deeper."
+            ]
+          }
+        ]
+      }
+    },
+    {
       "slug": "messaging-as-code",
       "title": "Messaging as Code",
       "category": "technical",
@@ -378,80 +452,6 @@
             "title": "Search. Answer. Action.",
             "paragraphs": [
               "The positioning gave commercial teams a usable progression—search, answer, action—and a more credible explanation of what the product could and could not do. It informed launch and seller enablement and helped connect technical capabilities to commercial value. Internal planning identified a substantial HQ Agent pipeline opportunity, but pipeline estimates and targets are not presented here as achieved or PMM-generated revenue."
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "slug": "brazil-in-red",
-      "title": "Brazil in Red",
-      "category": "technical",
-      "tag": "Data storytelling",
-      "summary": "From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.",
-      "demonstrates": "Research synthesis, data storytelling, product judgment, visual direction, and AI-assisted building.",
-      "proof": "Live bilingual atlas with interactive maps, round comparisons, source links, and methodology notes.",
-      "image": "assets/evidence/brazil-in-red.svg",
-      "sourceUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
-      "projectUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
-      "projectLabel": "Explore the live atlas",
-      "projectPreview": {
-        "image": "assets/evidence/brazil-in-red-preview.jpg",
-        "alt": "Brazil in Red atlas opening screen, with its red photographic design and presidential result comparison.",
-        "caption": "The atlas opens with the national picture, then lets readers explore the results across Brazil and the world.",
-        "width": 2048,
-        "height": 853
-      },
-      "evidence": [
-        {
-          "title": "Explore Brazil in Red",
-          "url": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
-          "kind": "Live personal project",
-          "note": "Explore the bilingual atlas, interactive maps, comparison tables, and sources and method section."
-        }
-      ],
-      "caseStudy": {
-        "overview": {
-          "eyebrow": "Turning curiosity into a story people can explore",
-          "lead": "A national result tells you who won. I wanted to understand what sat beneath it: the differences between places, the change between rounds, and the experience of Brazilians voting abroad. I turned those questions into Brazil in Red, a bilingual interactive atlas.",
-          "learning": "“For me, data storytelling is an editorial responsibility: choose the question that matters, make the comparisons meaningful, and give people enough context to form their own view.”"
-        },
-        "story": [
-          {
-            "id": "curiosity",
-            "title": "Finding the story beneath the result",
-            "paragraphs": [
-              "The starting point was personal curiosity. As I explored the results, the question grew: how could I bring the national picture, regional differences, and overseas vote into one experience that made sense to someone arriving without all that context?",
-              "I chose to give the atlas an editorial direction, then let readers investigate it. The page moves from the national result to changes between rounds, Brazilian states, and voters abroad. That sequence gives people a way into the subject before asking them to navigate a map or interpret a table."
-            ]
-          },
-          {
-            "id": "experience",
-            "title": "A guided story, with room to explore",
-            "paragraphs": [
-              "I set the questions, directed the research and AI-assisted build, and shaped the structure, visual direction, and interaction design. The published experience covers 27 Brazilian federal units and 31 selected overseas countries and territories, with English and Portuguese views.",
-              "I wanted the narrative and the interactive elements to work together. A reader can follow the page for the main patterns, then use the maps, round selectors, regional filters, and comparison tables to examine a place that matters to them. Headings, labels, and visual hierarchy had to support both ways of reading."
-            ]
-          },
-          {
-            "id": "decisions",
-            "title": "The choices behind the comparisons",
-            "paragraphs": [
-              "The most useful iterations came from questioning what a reader could reasonably conclude from each visual. I pushed for changes wherever an apparently simple comparison could imply something the data did not establish:"
-            ],
-            "items": [
-              "Give each percentage a clear meaning. A candidate’s share, the winner’s share, and a change between rounds answer different questions. The labels needed to identify the candidate, round, and voting basis.",
-              "Make the rounds comparable. Round one includes other candidates. The atlas distinguishes all-valid-vote shares from a comparison recalculated around the two finalists, and separates a change in winner from the size of the swing.",
-              "Choose the right level of context. Highlighting Ireland and France did not tell the whole European story. I asked for a regional view alongside the individual examples, so the selection of places would not carry more weight than it should.",
-              "Keep interpretation within the evidence. Aggregate changes show how results differed between rounds; they do not establish how individual people switched their votes. Source links and methodology notes give readers a way to examine those boundaries."
-            ]
-          },
-          {
-            "id": "people",
-            "title": "Making space for the people behind the numbers",
-            "paragraphs": [
-              "I also wanted the atlas to convey what participation involved. I asked to include stories of people travelling by boat, offering lifts, and helping others reach the polls alongside the political context and disputes. That widened the story from the outcome of voting to the effort people made to take part.",
-              "The resulting project brings research, editorial judgment, and product design into one public experience. It reflects an approach I bring to product marketing: find the question people care about, turn complexity into a clear story, and make it easy to go deeper."
             ]
           }
         ]

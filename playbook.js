@@ -21,6 +21,7 @@ function selectArc(index, moveFocus = false) {
     arcPanels[i].hidden = !selected;
   });
   arcArt.dataset.stage = String(currentStage);
+  document.querySelector('.pb-visual-step').textContent = `${String(currentStage + 1).padStart(2, '0')} / ${arcTabs[currentStage].textContent.replace(/^\s*0\d\s*/, '').trim()}`;
   const [before, after, caption] = arcStates[currentStage];
   document.querySelector('#arc-art-before').textContent = before;
   document.querySelector('#arc-art-after').textContent = after;
@@ -132,16 +133,4 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   }), {threshold:.06});
   document.querySelectorAll('.pb-reveal').forEach(element => observer.observe(element));
   document.documentElement.classList.add('pb-js');
-}
-
-const heroVisual = document.querySelector('.pb-hero-visual');
-if (matchMedia('(pointer: fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const orb = heroVisual.querySelector('.pb-hero-orb');
-  heroVisual.addEventListener('pointermove', event => {
-    const bounds = heroVisual.getBoundingClientRect();
-    const x = (event.clientX - bounds.left) / bounds.width - .5;
-    const y = (event.clientY - bounds.top) / bounds.height - .5;
-    orb.style.transform = `translate(${x * 14}px, ${y * 14}px) rotate(-15deg)`;
-  });
-  heroVisual.addEventListener('pointerleave', () => { orb.style.transform = ''; });
 }

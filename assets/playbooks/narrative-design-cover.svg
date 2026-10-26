@@ -1,16 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2000" viewBox="0 0 1600 2000" role="img" aria-labelledby="title desc">
-  <title id="title">Narrative Design Playbook</title><desc id="desc">A luminous orb seen through overlapping frames, illustrating a new way to understand the market.</desc>
-  <defs><radialGradient id="orb" cx="30%" cy="25%" r="85%"><stop offset="0" stop-color="#fff7cb"/><stop offset=".27" stop-color="#f6c8d8"/><stop offset=".61" stop-color="#8b7dff"/><stop offset=".88" stop-color="#c9ff63"/><stop offset="1" stop-color="#385128"/></radialGradient><radialGradient id="glow"><stop stop-color="#8b7dff" stop-opacity=".2"/><stop offset="1" stop-color="#0b0d0c" stop-opacity="0"/></radialGradient></defs>
-  <rect width="1600" height="2000" fill="#0b0d0c"/>
-  <circle cx="800" cy="1090" r="660" fill="url(#glow)"/>
-  <g fill="none" stroke="#a5aa9d" stroke-opacity=".25"><circle cx="800" cy="1110" r="430"/><circle cx="800" cy="1110" r="570" stroke-dasharray="8 16"/></g>
-  <circle cx="800" cy="1100" r="280" fill="url(#orb)"/>
-  <g fill="none" stroke="#eef1e8"><rect x="540" y="710" width="520" height="760" rx="255" stroke-opacity=".6" stroke-width="2" transform="rotate(-18 800 1100)"/><rect x="490" y="650" width="620" height="880" rx="300" stroke-opacity=".24" stroke-width="2" transform="rotate(15 800 1100)"/></g>
-  <text x="120" y="153" fill="#c9ff63" font-family="Arial,sans-serif" font-size="29" letter-spacing="7">THE PMM PLAYBOOK</text>
-  <text x="115" y="328" fill="#eef1e8" font-family="Arial,sans-serif" font-size="115" font-weight="500" letter-spacing="-5">Narrative</text><text x="115" y="453" fill="#eef1e8" font-family="Arial,sans-serif" font-size="115" font-weight="500" letter-spacing="-5">Design.</text>
-  <rect x="185" y="790" width="342" height="75" rx="12" fill="#131614" stroke="#272c28" transform="rotate(-7 185 790)"/><text x="211" y="834" fill="#a5aa9d" font-family="Arial,sans-serif" font-size="25" transform="rotate(-7 185 790)">THE FAMILIAR FRAME</text>
-  <rect x="1020" y="1360" width="355" height="75" rx="12" fill="#131614" stroke="#c9ff63" stroke-opacity=".4" transform="rotate(5 1020 1360)"/><text x="1045" y="1407" fill="#c9ff63" font-family="Arial,sans-serif" font-size="25" transform="rotate(5 1020 1360)">A DIFFERENT WAY TO WIN</text>
-  <path d="M120 1665H1480" stroke="#272c28"/>
-  <text x="120" y="1787" fill="#c9ff63" font-family="Arial,sans-serif" font-size="72" letter-spacing="-2">Change the frame.</text>
-  <text x="120" y="1905" fill="#a5aa9d" font-family="Arial,sans-serif" font-size="29">SHAUNA BRENNAN</text><text x="1480" y="1905" text-anchor="end" fill="#eef1e8" font-family="Arial,sans-serif" font-size="40">↗</text>
+<title id="title">Narrative Design Playbook</title>
+<desc id="desc">A light editorial cover with a frame opening a new path.</desc>
+<rect width="1600" height="2000" fill="#f8f6f0"/>
+<rect x="120" y="116" width="70" height="20" fill="#c9ff63"/>
+<text x="214" y="141" fill="#5f675d" font-family="Arial,sans-serif" font-size="29" letter-spacing="5">THE PMM PLAYBOOKS / 01</text>
+<text x="115" y="330" fill="#171e18" font-family="Arial,sans-serif" font-size="125" font-weight="600" letter-spacing="-5">Narrative</text>
+<text x="115" y="465" fill="#171e18" font-family="Arial,sans-serif" font-size="125" font-weight="600" letter-spacing="-5">Design.</text>
+<path d="M120 1340C380 1090 540 1260 780 1040S1190 810 1480 980V1450H120Z" fill="#e9e0f8"/>
+<path d="M120 1440C450 1170 710 1430 940 1240S1240 1070 1480 1170V1510H120Z" fill="#f7e3e9"/>
+<path d="M120 1510C450 1300 600 1450 805 1170S1110 1040 1480 990" fill="none" stroke="#d9edab" stroke-width="145"/>
+<path d="M580 1430V720H1080V1430H990V810H670V1430Z" fill="#d4d0c4"/>
+<path d="M580 1430V720H1080L1115 690H615L580 720" fill="#eeeae0"/>
+<path d="M1080 720L1115 690V1395L1080 1430Z" fill="#b7b2a6"/>
+<path d="M120 1655H1480" stroke="#dcded3" stroke-width="2"/>
+<text x="120" y="1787" fill="#171e18" font-family="Arial,sans-serif" font-size="72" letter-spacing="-2">Change the frame.</text>
+<text x="120" y="1905" fill="#5f675d" font-family="Arial,sans-serif" font-size="29">SHAUNA BRENNAN</text>
+<text x="1480" y="1905" text-anchor="end" fill="#171e18" font-family="Arial,sans-serif" font-size="40">↗</text>
 </svg>

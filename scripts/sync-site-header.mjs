@@ -5,22 +5,22 @@ import { createHash } from 'node:crypto';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const template = await readFile(path.join(root, 'partials/site-header.html'), 'utf8');
-export const siteHeader = (prefix = '', homepage = false) => template.replaceAll('{{home}}', homepage ? '' : `${prefix}index.html`);
+export const siteHeader = (prefix = '', homepage = false) => template.replaceAll('{{home}}', homepage ? '' : `${prefix}index.html`).replaceAll('{{prefix}}', prefix);
 
 export async function syncSiteHeaders() {
   const docs = JSON.parse(await readFile(path.join(root, 'content/library.json'), 'utf8'));
-  const pages = ['index.html', 'case-study.html', 'playbook.html', 'narrative-design-guide.html', 'library.html', ...docs.map(doc => `documents/${doc.id}.html`), 'it-pressure-test/index.html', 'it-pressure-test/manual-review.html'];
+  const pages = ['index.html', 'case-study.html', 'playbook.html', 'launch-playbook.html', 'playbooks.html', 'narrative-design-guide.html', 'library.html', ...docs.map(doc => `documents/${doc.id}.html`), 'it-pressure-test/index.html', 'it-pressure-test/manual-review.html'];
   for (const file of pages) {
     const location = path.join(root, file);
     const prefix = file.includes('/') ? '../' : '';
     let html = await readFile(location, 'utf8');
-    const header = siteHeader(prefix, file === 'index.html');
+    const header = siteHeader(prefix, file === 'index.html').replace('{{playbooksCurrent}}', ['playbooks.html', 'playbook.html', 'launch-playbook.html', 'narrative-design-guide.html'].includes(file) ? ' aria-current="page"' : '');
     const existing = /<div class="portfolio-header-band">[\s\S]*?<\/header>\s*<\/div>/;
     const legacy = /<header class="(?:nav[^"\n]*|topbar|site-header)">[\s\S]*?<\/header>/;
     if (!existing.test(html) && !legacy.test(html)) throw new Error(`Missing site header: ${file}`);
     html = html.replace(existing.test(html) ? existing : legacy, () => header);
     html = html.replace(/<link\b[^>]*href="(?:\.\.\/)?site-header\.css[^"\n]*"[^>]*>\s*/g, '');
-    html = html.replace('</head>', `<link rel="stylesheet" href="${prefix}site-header.css?v=20261026-1"></head>`);
+    html = html.replace('</head>', `<link rel="stylesheet" href="${prefix}site-header.css?v=20261028-collection"></head>`);
     if (file === 'it-pressure-test/manual-review.html') html = html.replace('<p class="shell"><a href="./index.html">← IT buyer review</a></p>', '').replace('<main id="main-content">', '<main id="main-content"><p class="shell"><a href="./index.html">← IT buyer review</a></p>');
     await writeFile(location, html);
   }

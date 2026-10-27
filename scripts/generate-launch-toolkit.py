@@ -29,7 +29,7 @@ def sub(t,y):return y+text(t,M,y,CW,15,20,'Display')+12
 def callout(t,y,colour=GREEN):
  st=ParagraphStyle('note',fontName='Body',fontSize=11,leading=16,textColor=HexColor(INK));o=Paragraph(t,st);_,h=o.wrap(CW-32,900);rect(M,y,CW,h+30,colour);o.drawOn(c,M+16,H-y-15-h);return y+h+48
 
-def top(n,title,deck,total=10,workbook=False):
+def top(n,title,deck,total=14,workbook=False):
  c.setFillColor(HexColor(CREAM));c.rect(0,0,W,H,fill=1,stroke=0);rect(M,27,24,4,ACID)
  text('PRODUCT LAUNCHES / '+('WORKBOOK' if workbook else 'PLAYBOOK'),M+35,24,CW-35,8,11,'Bold',MUTED)
  text(title,M,66,CW,30,36,'Display');y=66+Paragraph(title,ParagraphStyle('t',fontName='Display',fontSize=30,leading=36)).wrap(CW,500)[1]+18
@@ -47,7 +47,7 @@ y=top(1,'Product launches.<br/>Make the moment matter.','A practical framework f
 c.drawImage(str(OUT/'illustrations/make-the-moment-matter.jpg'),M,H-y-274,CW,274,mask='auto');y+=300
 y=callout('Ship at the pace the product needs. Communicate at the pace customers can use. <b>Launch when you have a story worth their attention.</b>',y)
 y=para('Read the method. Work through the six questions with your PM. Use the workbook to record the evidence and agree the decision.',y)
-y=source('Independent practical synthesis. Tiering foundations are credited to Intercom, Appcues, and Ready for Launch. Edition 2 · October 2026.',y);finish()
+y=source('Independent practical synthesis. Tiering foundations are credited to Intercom, Appcues, and Ready for Launch. Edition 3 · October 2026.',y);finish()
 y=top(2,'Make the choice<br/>before the plan.','Start with the customer’s job and the commercial opportunity. Leave the asset list for later.')
 for title,body in [('01 / Tier it','How much does it matter? Name who values the change, what they can do, and how that could affect acquisition, expansion, retention, or adoption.'),('02 / Group it','Is it stronger together? Look for releases that let the same audience complete a more valuable job. A shared date is not enough.'),('03 / Sequence it','Who needs what, when? Separate product availability, customer preparation, and the market moment.')]:y=sub(title,y);y=para(body,y)
 y=callout('A launch tier is a resource decision. Customer preparation is an impact decision. A quiet release can still need serious preparation.',y,LAV)
@@ -77,19 +77,34 @@ y=top(8,'Make the decision<br/>easy to use again.','Use the workbook in a 25-min
 for title,body in [('Before / Bring the inputs','A short list of releases, the customer problem, availability and dependencies, customer or deal signals, and the actual alternatives.'),('Minutes 0–8 / Establish the value','Work through the six diagnostic questions. Separate what you know from what you assume. Agree the provisional tier.'),('Minutes 8–16 / Test the collection','Map related releases to one audience and outcome. Keep unrelated changes separate. Confirm what a slipped dependency would change.'),('Minutes 16–25 / Agree the audience plan','Decide what admins, users, buyers, the field, and the market need. Assign an owner, open questions, and a review trigger.')]:y=sub(title,y);y=para(body,y)
 y=callout('End with a decision you can explain: tier, collection or individual path, audience timing, preparation, owner, and unresolved evidence.',y)
 y=para('After launch, check eligible reach, first value, repeat use, and the relevant commercial goal. Choose a review window that fits the usage and buying cycle. Use what you learn to improve the next decision.',y);finish()
-y=top(9,'Sources and influences.','Credit the foundations. Be clear about the extensions and the limits of the evidence.')
+y=top(9,'A quieter launch.<br/>Clear customer responsibilities.','Make these decisions for every customer-facing release, whatever the promotional tier.')
+for title,body in [('Accurate product facts','Check what changed, eligible access, price, dependencies, and limitations. Update affected claims. A recorded no-change decision is valid when nothing needs updating.'),('Affected audiences','Name the administrators, users, account buyers, and field teams who need to know. Choose relevant channels; a blanket announcement is not the default.'),('A route to value','Assign the setup, education, and support the change requires. A note may be enough for a small improvement; a workflow change may need more.'),('Follow-through','Name the owner, evidence of first value, and a review window that fits the job. Keep the effort proportionate to the release.')]:y=sub(title,y);y=para(body,y)
+y=callout('A quieter launch should still leave customers knowing what changed and how to benefit.',y,LAV)
+y=source('In the Appcues × Navattic survey, 60% reported falling behind on customer education and 59% on Sales/CS enablement. <link href="https://www.appcues.com/lp/state-of-product-launches-2026" color="#435735">Read the source</link>. September 2026; 60 marketers through vendor networks; question bases vary. Directional, self-reported findings. The minimum standard above is my application.',y);finish()
+y=top(10,'Agree the handoff<br/>before the scramble.','Set a working agreement with Product once, then revisit it when the release process changes.')
+for title,body in [('Which changes need a heads-up?','Define customer-facing changes: capability, access, packaging, permissions, and material behaviour changes.'),('When and where does PMM hear?','Choose the shared release record and handoff event. Involve PMM before customer access or commitments are fixed when preparation is needed.'),('What does Product supply?','Customer job, scope, eligible cohort, availability, dependencies, limitations, and owner. Mark unknowns.'),('What happens when plans change?','Name who flags changes in timing, scope, access, or claims. Identify the communication and enablement owners who review their impact.'),('Who owns the audiences and decision?','Assign customer guidance, field readiness, market communication, and the decision to proceed, narrow, or delay. PMM is not the automatic owner of every task.')]:y=sub(title,y);y=para(body,y,10.5)
+y=source('Appcues × Navattic reported that 56% heard about releases close to launch or after the fact. <link href="https://www.appcues.com/lp/state-of-product-launches-2026" color="#435735">Read the source</link>. September 2026; 60 marketers through vendor networks; question bases vary. The agreement is a recommended response, not a process tested by the survey.',y);finish()
+y=top(11,'Locate the gap.<br/>Choose the next conversation.','Review one eligible cohort and one time window. Fit the measures to the customer’s job.')
+for title,body in [('01 / Eligible','Who can use it? Check plan, cohort, rollout, configuration, and permissions. Exclude people without access from the adoption denominator.'),('02 / Aware','Did useful guidance reach them? Delivery or in-product exposure can indicate reach. Test understanding separately where it matters.'),('03 / Tried','Did they attempt the supported workflow? An announcement click is not necessarily a product attempt. Investigate setup, relevance, and confidence.'),('04 / Reached value','Did the job complete successfully? Account for correction effort and exceptions. A generated answer is not automatically a completed outcome.'),('05 / Returned','Did they use it successfully when the need recurred? A rare job does not need daily activity to be valuable.')]:y=sub(title,y);y=para(body,y,10.5)
+y=callout('The next step follows the gap: fix access, improve reach, clarify the use case, resolve product friction, or investigate recurring need.',y,GREEN)
+y=source('A diagnostic sequence, not a guaranteed linear funnel or a validated predictive model. Exposure is not proof of understanding. Track the relevant commercial goal against its own baseline.',y);finish()
+y=top(12,'Use AI to maintain<br/>what the launch depends on.','Start with an approved product change and one set of dependent assets.')
+for title,body in [('01 / Source change','Product records capability, eligibility, availability, limits, and the change owner in the shared product record.'),('02 / Find the impact','AI compares that record with mapped claims, decks, demos, help content, and customer guidance. Preserve source references.'),('03 / Propose edits','Show the proposed change and its reason. Keep permissions, scope, and availability qualifiers.'),('04 / Human review','Product verifies facts. PMM approves the message. Enablement, support, and channel owners review their own material.'),('05 / Refresh','Owners publish approved updates, link them to the source version, and record the next review trigger.')]:y=sub(title,y);y=para(body,y,10.5)
+y=callout('<b>Fictional example:</b> a search connector gains a confirmed request action for named pilot accounts. Flag the search-only slide, missing help instructions, and demo implying general availability. A scoped draft says: “Pilot users can submit supported requests after confirmation.” Verify facts and update the dependent assets.',y,LAV)
+y=source('Proposed workflow, not a claim that an integration or automatic update is running. Begin with one shared document and the assistant your team already uses.',y);finish()
+y=top(13,'Sources and influences.','Credit the foundations. Be clear about the extensions and the limits of the evidence.')
 sources=json.loads((OUT/'launch-sources.json').read_text())
 for a,b,u,d in sources:
  title=html.escape(a+' · '+b);desc=html.escape(d)
  y+=text('<link href="'+u+'" color="#435735"><b>'+title+'</b></link>',M,y,CW,9.2,13)+5
  y+=text(desc,M,y,CW,8.7,12,colour=MUTED)+12
 finish()
-y=top(10,'Your decision guide.','One page to keep beside the roadmap. Use with your PM before committing GTM effort.')
+y=top(14,'Your decision guide.','One page to keep beside the roadmap. Use with your PM before committing GTM effort.')
 for title,body in [('01 / What changes?','Name the customer outcome and commercial consequence. Choose a provisional tier: P0 changed GTM; P1 buying reason or blocker; P2 an easier existing job; P3 small improvement.'),('02 / Who values it?','Identify the audience and evidence. Unknown value makes the choice provisional. A focused segment can justify meaningful investment.'),('03 / Is it stronger together?','Same audience, connected job, stronger outcome. Group when those hold; keep coincidental releases separate.'),('04 / Does timing support the story?','Guide customers as parts ship. Announce the complete outcome when the essential parts are available. Keep uncertain dates provisional.'),('05 / What must customers do?','Scale preparation to learning, setup, permissions, or workflow change. This does not automatically change promotional intensity.'),('06 / Can we support the promise?','Check scope, availability, price, limits, demonstration, and evidence. Narrow claims or resolve gaps before promotion.')]:y=sub(title,y);y=para(body,y,10.5)
 y=source('Agree: tier · grouping · audience timing · preparation · owner · review trigger. Override the diagnostic when evidence supports it, and write down why. The tier is a judgment, not an approval or prediction.',y);finish();c.save()
-assert len(PdfReader(OUT/'launch-with-intent-playbook.pdf').pages)==10
+assert len(PdfReader(OUT/'launch-with-intent-playbook.pdf').pages)==14
 
-# Four-page printable session workbook; deliberately generous writing space.
+# Six-page printable session workbook; deliberately generous writing space.
 c=canvas.Canvas(str(OUT/'launch-with-intent-workbook.pdf'),pagesize=A4);c.setTitle('Product launch planning workbook');c.setAuthor('Shauna Azevedo-Brennan')
 def field(title,prompt,y,height=100):
  text(title,M,y,CW,12,17,'Bold');ph=text(prompt,M,y+24,CW,9,13,colour=MUTED);first=y+24+ph+19
@@ -97,12 +112,12 @@ def field(title,prompt,y,height=100):
   c.setStrokeColor(HexColor('#cbd0c2'));c.line(M,H-t,W-M,H-t)
  return y+height+20
 
-y=top(1,'What deserves<br/>the investment?','PMM + Product / Bring the customer problem, commercial evidence, and release context.',4,True)
+y=top(1,'What deserves<br/>the investment?','PMM + Product / Bring the customer problem, commercial evidence, and release context.',6,True)
 y=field('The audience and their job','Who values this, and what are they trying to accomplish?',y,105)
 y=field('The change and the buying reason','What becomes possible or easier? Why would they choose, expand, renew, or adopt?',y,115)
 y=field('Evidence and actual alternatives','Customer, deal, usage, or market signals. What would they do without us?',y,115)
 y=field('Provisional tier and the reason','P0 / Scream · P1 / Shout · P2 / Cheer · P3 / Whisper. What would change our mind?',y,110);finish()
-y=top(2,'What belongs together?','Map one possible collection. Keep the connected customer outcome in view.',4,True)
+y=top(2,'What belongs together?','Map one possible collection. Keep the connected customer outcome in view.',6,True)
 y=field('One audience. One job. One stronger outcome.','Write the collection headline without listing features.',y,100)
 cols=[M,M+CW*.42,M+CW*.68];widths=[CW*.42,CW*.26,CW*.32]
 for x,w,t in zip(cols,widths,['Release / capability','Availability / cohort','Dependency / contribution']):rect(x,y,w-4,37,GREEN);text(t,x+8,y+8,w-20,8.5,12,'Bold')
@@ -112,24 +127,42 @@ for _ in range(4):
   c.setStrokeColor(HexColor('#cbd0c2'));c.rect(x,H-y-54,w-4,54,fill=0,stroke=1)
  y+=59
 y+=14;y=field('Group, separate, or investigate?','Does the combined outcome earn a higher tier? Which part can we remove? What if one part slips?',y,100);finish()
-y=top(3,'Who needs what,<br/>and when?','Availability, customer understanding, and market attention can move on different dates.',4,True)
+y=top(3,'Who needs what,<br/>and when?','Availability, customer understanding, and market attention can move on different dates.',6,True)
 for title,prompt in [('Administrators and support','What must they prepare before access, setup, permissions, or responsibilities change?'),('Eligible users','When can they use it? What guidance gets them to the first valuable outcome?'),('Account buyers and the field','What changes the commercial conversation? What is included, paid, or still planned?'),('The wider market','What is the connected story? Which availability and proof conditions set the moment?')]:y=field(title,prompt,y,112)
 finish()
-y=top(4,'Agree the decision.<br/>Make it reviewable.','Leave with owners, evidence gaps, and a reason to revisit the plan.',4,True)
+y=top(4,'Agree the decision.<br/>Make it reviewable.','Leave with owners, evidence gaps, and a reason to revisit the plan.',6,True)
 y=field('Our decision','Tier, collection or individual path, key dates, and any override of the diagnostic.',y,100)
 y=field('Readiness and proof still to resolve','Capability, availability, pricing, claims, dependencies, and customer preparation.',y,100)
 y=field('Owners and review trigger','Who decides? Who does what? Which change would reopen the decision?',y,100)
 y=field('What will tell us the value landed?','First value, repeat use, commercial goal, baseline, and an appropriate review window.',y,100)
-y=source('Close the loop: explain one thing you chose not to do, and where that time or budget will go instead. Use page 10 of the playbook as the quick decision guide.',y);finish();c.save()
-assert len(PdfReader(OUT/'launch-with-intent-workbook.pdf').pages)==4
+y=source('Close the loop: explain one thing you chose not to do, and where that time or budget will go instead. Use page 14 of the playbook as the quick decision guide.',y);finish()
+y=top(5,'Agree how<br/>the teams work together.','Set up the Product–PMM handoff. Revisit when the process changes.',6,True)
+y=field('Trigger and shared record','Which customer-facing changes need a heads-up? When and where does PMM hear?',y,110)
+y=field('Product input and change alerts','Job, scope, access, availability, dependencies, limits, owner. Who flags changes?',y,110)
+y=field('Audience owners and decision authority','Who owns customer guidance, field readiness, market communication, and proceed / narrow / delay?',y,110)
+y=field('Minimum release standard','For facts, affected audiences, route to value, and review: name the owner, action, or reason no change is needed.',y,110);finish()
+y=top(6,'Did the value land?','Choose one eligible cohort and a review window that fits the job.',6,True)
+y=field('Cohort, window, and source of evidence','Keep the audience and measurement window consistent. Note access exclusions.',y,75)
+cols=[M,M+CW*.23,M+CW*.61];widths=[CW*.23,CW*.38,CW*.39]
+for x,w,t in zip(cols,widths,['Checkpoint','Evidence / gap','Next action / owner']):rect(x,y,w-4,32,GREEN);text(t,x+8,y+8,w-20,8.5,12,'Bold')
+y+=38
+for label in ['Eligible','Aware / reached','Tried','Reached value','Returned']:
+ for x,w in zip(cols,widths):
+  c.setStrokeColor(HexColor('#cbd0c2'));c.rect(x,H-y-54,w-4,54,fill=0,stroke=1)
+ text(label,M+8,y+15,widths[0]-16,9,13,'Bold');y+=59
+y+=15;y=field('What changes next?','Separate access, reach, clarity, product friction, and recurring need. Name the decision and commercial measure to review.',y,90)
+y=source('Exposure is not proof of understanding. Repeat use should follow the natural cadence of the job, not an arbitrary daily target.',y);finish();c.save()
+assert len(PdfReader(OUT/'launch-with-intent-workbook.pdf').pages)==6
 
 agenda='''# Start here: make the next release review useful
 
-1. Read page 10 of the playbook for the one-page decision guide.
+1. Read page 14 of the playbook for the one-page decision guide.
 2. Bring a PM and PMM, a release list, and relevant customer or commercial evidence.
-3. Use the six questions online or the four workbook pages.
+3. Use the six questions online or the six workbook pages.
 4. Spend 8 minutes on value, 8 on grouping, and 9 on audience timing and ownership.
-5. Record the decision in the editable canvas. Print it or export Markdown to your existing shared workspace.
+5. On the first session, use workbook page 5 to agree the Product handoff and minimum release standard.
+6. Review adoption using workbook page 6.
+7. Record the decision in the editable canvas. Print it or export Markdown to your existing shared workspace.
 
 ## Filled example (fictional)
 Audience: mobile employees handling routine workplace requests.
@@ -146,9 +179,9 @@ The tools support judgment. They do not approve a launch or predict its result.
 '''
 (OUT/'launch-session-start-here.md').write_text(agenda)
 # A reusable single-file canvas, rather than another intake brief.
-fields=[('Customer and outcome','One audience, one job, and the outcome they value.'),('Tier and evidence','Provisional tier, commercial consequence, evidence, and any override.'),('Release collection','Each capability, contribution, availability, cohort, and dependency.'),('Audience timing','Admins / users / buyers and field / wider market: what each needs and when.'),('Owners and open decisions','Decision owner, action owners, proof gaps, and conditions that reopen the plan.'),('Success and review','First value, repeat use, commercial goal, baseline, and review date.')]
+fields=[('Customer and outcome','One audience, one job, and the outcome they value.'),('Tier and evidence','Provisional tier, commercial consequence, evidence, and any override.'),('Release collection','Each capability, contribution, availability, cohort, and dependency.'),('Audience timing','Admins / users / buyers and field / wider market: what each needs and when.'),('Owners and open decisions','Decision owner, action owners, proof gaps, and conditions that reopen the plan.'),('Success and review','Eligible, aware, tried, reached value, returned: cohort, window, evidence, gap, and next action. Review the commercial goal separately.'),('Product working agreement','Which changes, handoff event, shared record, Product inputs, change alerts, audience owners, and decision authority?'),('Minimum release standard','Accurate facts, affected audiences, route to value, and follow-through: action and owner, or why no change is needed.')]
 canvas_html='''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Launch decision canvas</title><style>*{box-sizing:border-box}body{font:16px/1.5 Arial,sans-serif;background:#f8f6f0;color:#171e18;margin:0;padding:40px}main{max-width:1100px;margin:auto}h1{font-size:42px;letter-spacing:-2px;line-height:1.1}p{max-width:760px;color:#5f675d}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}label{display:block;font-weight:bold;background:#fffefa;border:1px solid #dcded3;border-radius:12px;padding:22px}small{display:block;font-weight:normal;color:#5f675d;margin:8px 0}textarea{display:block;width:100%;min-height:170px;font:16px/1.5 Arial;border:1px solid #dcded3;background:#f8f6f0;padding:12px;resize:vertical}button{border:1px solid #435735;border-radius:30px;background:#c9ff63;padding:12px 20px;margin:20px 10px 0 0;cursor:pointer;font:inherit}:focus-visible{outline:3px solid #66517e;outline-offset:4px}@media(max-width:650px){body{padding:20px}.grid{grid-template-columns:1fr}h1{font-size:34px}}@media print{body{padding:0;background:white;font-size:10pt}h1{font-size:27px}.grid{gap:12px}label{break-inside:avoid;padding:14px}textarea{border:0;min-height:140px;font-size:10pt}button,.privacy{display:none}}</style><main><p>THE PMM PLAYBOOKS / PRODUCT LAUNCHES</p><h1>One shared launch decision.</h1><p>Use this with your PM after the six-question diagnostic. Keep the evidence and the reasoning together.</p><p class="privacy">Notes stay in this page. Download Markdown before leaving, or print to PDF. This canvas does not autosave or send your notes to an AI service.</p><form id="canvas"><div class="grid">FIELDS</div><button type="button" id="print">Print / save as PDF</button><button type="submit">Download decisions as Markdown</button><p role="status" id="status"></p></form><p>Shauna Azevedo-Brennan · Make the moment matter.</p></main><script>document.querySelector('#print').onclick=()=>window.print();document.querySelector('#canvas').onsubmit=e=>{e.preventDefault();let t='# Launch decision canvas\\n\\n';for(const [k,v] of new FormData(e.currentTarget))t+='## '+k+'\\n'+(v.trim()||'[To decide]')+'\\n\\n';const u=URL.createObjectURL(new Blob([t],{type:'text/markdown;charset=utf-8'}));const a=document.createElement('a');a.href=u;a.download='launch-decision.md';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);document.querySelector('#status').textContent='Downloaded. Add this record to your team’s shared workspace.';};</script></html>'''.replace('FIELDS',''.join('<label>'+a+'<small>'+b+'</small><textarea name="'+a+'"></textarea></label>' for a,b in fields))
 (OUT/'launch-planning-canvas.html').write_text(canvas_html)
 with ZipFile(OUT/'launch-planning-toolkit.zip','w',ZIP_DEFLATED) as z:
  for f in ['launch-with-intent-playbook.pdf','launch-with-intent-workbook.pdf','launch-planning-canvas.html','launch-session-start-here.md']:z.write(OUT/f,f)
-print('Built 10-page playbook, 4-page workbook, editable canvas, and complete toolkit.')
+print('Built 14-page playbook, 6-page workbook, editable canvas, and complete toolkit.')

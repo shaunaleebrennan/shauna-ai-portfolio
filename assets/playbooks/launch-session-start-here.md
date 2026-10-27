@@ -1,10 +1,12 @@
 # Start here: make the next release review useful
 
-1. Read page 10 of the playbook for the one-page decision guide.
+1. Read page 14 of the playbook for the one-page decision guide.
 2. Bring a PM and PMM, a release list, and relevant customer or commercial evidence.
-3. Use the six questions online or the four workbook pages.
+3. Use the six questions online or the six workbook pages.
 4. Spend 8 minutes on value, 8 on grouping, and 9 on audience timing and ownership.
-5. Record the decision in the editable canvas. Print it or export Markdown to your existing shared workspace.
+5. On the first session, use workbook page 5 to agree the Product handoff and minimum release standard.
+6. Review adoption using workbook page 6.
+7. Record the decision in the editable canvas. Print it or export Markdown to your existing shared workspace.
 
 ## Filled example (fictional)
 Audience: mobile employees handling routine workplace requests.

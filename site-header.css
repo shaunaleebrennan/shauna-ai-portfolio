@@ -18,3 +18,5 @@
 @media(max-width:360px){.portfolio-header .portfolio-brand{font-size:16px}.portfolio-navigation{gap:23px}}
 @media print{.portfolio-header-band{display:none}}
 
+
+@media(max-width:760px){.portfolio-header-focused{display:flex;flex-wrap:wrap;padding:20px 0;min-height:90px}.portfolio-header-focused .portfolio-navigation{min-height:0;gap:20px;justify-content:flex-start;flex-wrap:wrap}}

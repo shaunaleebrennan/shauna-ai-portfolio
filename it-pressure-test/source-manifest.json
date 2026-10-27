@@ -5,14 +5,14 @@
     {
       "source": "tool.html",
       "path": "index.html",
-      "sha256": "dec2632187919f0edcbd41f5ea4b58cde09e93c07ffc5b685443b563dc101b30",
+      "sha256": "be783738491863f51d0173d03d520684bf562865219fa4ec18e9cd9db71dcbe6",
       "sourceSha256": "dfe2f73bbda2786be377db99e7ef253fc280589c633d5c81a139a04fa44dc878",
       "portfolioAdaptation": "Shared portfolio header and navigation"
     },
     {
       "source": "manual-review.html",
       "path": "manual-review.html",
-      "sha256": "fa43be3cd36afbf8c6b7bab9e1b2774e40b6bdef3887382e98fb4ff4f88cad37",
+      "sha256": "2a57d0fa169687f60a8ad4ac4a8e6a9aa423d18d8ad8ed93088e1fa5c464adb5",
       "sourceSha256": "39fb0219e82d0dd815a2b0c59e7bac0c7bda5e24e3a8fcac8e96f32bc8710525",
       "portfolioAdaptation": "Shared portfolio header and navigation"
     },

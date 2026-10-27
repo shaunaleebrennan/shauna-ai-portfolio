@@ -14,13 +14,22 @@ export async function syncSiteHeaders() {
     const location = path.join(root, file);
     const prefix = file.includes('/') ? '../' : '';
     let html = await readFile(location, 'utf8');
-    const header = siteHeader(prefix, file === 'index.html').replace('{{playbooksCurrent}}', ['playbooks.html', 'playbook.html', 'launch-playbook.html', 'narrative-design-guide.html'].includes(file) ? ' aria-current="page"' : '');
+    let header = siteHeader(prefix, file === 'index.html').replace('{{playbooksCurrent}}', '');
+    const playbookPages = ['playbooks.html', 'playbook.html', 'launch-playbook.html', 'narrative-design-guide.html'];
+    if (playbookPages.includes(file)) {
+      const links = file === 'playbooks.html'
+        ? '<a href="index.html">← Back to portfolio</a>'
+        : '<a href="playbooks.html">← All playbooks</a><a href="index.html">Back to portfolio ↗</a>';
+      header = header.replace(/<nav class="portfolio-navigation"[\s\S]*?<\/nav>/, `<nav class="portfolio-navigation" aria-label="Primary navigation">${links}</nav>`)
+        .replace(/\s*<a class="portfolio-linkedin"[\s\S]*?<\/a>/, '')
+        .replace('class="portfolio-header"', 'class="portfolio-header portfolio-header-focused"');
+    }
     const existing = /<div class="portfolio-header-band">[\s\S]*?<\/header>\s*<\/div>/;
     const legacy = /<header class="(?:nav[^"\n]*|topbar|site-header)">[\s\S]*?<\/header>/;
     if (!existing.test(html) && !legacy.test(html)) throw new Error(`Missing site header: ${file}`);
     html = html.replace(existing.test(html) ? existing : legacy, () => header);
     html = html.replace(/<link\b[^>]*href="(?:\.\.\/)?site-header\.css[^"\n]*"[^>]*>\s*/g, '');
-    html = html.replace('</head>', `<link rel="stylesheet" href="${prefix}site-header.css?v=20261028-adaptive"></head>`);
+    html = html.replace('</head>', `<link rel="stylesheet" href="${prefix}site-header.css?v=20261027-nav-final"></head>`);
     if (file === 'it-pressure-test/manual-review.html') html = html.replace('<p class="shell"><a href="./index.html">← IT buyer review</a></p>', '').replace('<main id="main-content">', '<main id="main-content"><p class="shell"><a href="./index.html">← IT buyer review</a></p>');
     await writeFile(location, html);
   }

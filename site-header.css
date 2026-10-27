@@ -12,8 +12,9 @@
 .portfolio-navigation a{padding:5px 0;border-bottom:1px solid transparent}
 .portfolio-navigation a[aria-current="page"]{color:var(--ink,#252823);border-bottom-color:var(--ink,#252823)}
 .portfolio-header .portfolio-linkedin{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line,#c9ccc1);border-radius:99px;padding:9px 15px;font-size:12px}
-.portfolio-header .portfolio-linkedin-full{display:none}
-.portfolio-header .portfolio-linkedin-short{display:inline}
+.portfolio-header .portfolio-linkedin-full{display:inline}
+.portfolio-header .portfolio-linkedin-short{display:none}
 @media(max-width:760px){.portfolio-header{width:88%;display:grid;grid-template-columns:1fr auto;gap:12px;min-height:112px;padding:19px 0 0}.portfolio-header .portfolio-brand{font-size:18px;gap:3px;white-space:normal;flex-wrap:wrap;min-width:0}.portfolio-header .portfolio-linkedin{grid-column:2;grid-row:1;font-size:11px;padding:8px 11px}.portfolio-navigation{grid-column:1/-1;grid-row:2;justify-content:center;gap:30px;min-height:42px;font-size:12px}}
 @media(max-width:360px){.portfolio-header .portfolio-brand{font-size:16px}.portfolio-navigation{gap:23px}}
 @media print{.portfolio-header-band{display:none}}
+

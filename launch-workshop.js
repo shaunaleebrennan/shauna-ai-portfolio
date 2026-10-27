@@ -57,7 +57,10 @@ function showAdoption(key){const d=adoptionChecks[key];document.querySelectorAll
 document.querySelectorAll('[data-adoption]').forEach(b=>b.addEventListener('click',()=>showAdoption(b.dataset.adoption)));showAdoption('eligible');
 
 const phaseLinks=[...document.querySelectorAll('.ls-rail a')];
-if(typeof window!=='undefined' && 'IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){phaseLinks.forEach(a=>{if(a.hash==='#'+entry.target.id)a.setAttribute('aria-current','step');else a.removeAttribute('aria-current');});}}},{rootMargin:'-15% 0px -65% 0px'});document.querySelectorAll('.ls-phase').forEach(el=>obs.observe(el));}
+if(typeof window!=='undefined'){
+ const updatePhase=()=>{const phases=[...document.querySelectorAll('.ls-phase')];let active=phases[0];for(const phase of phases){if(phase.getBoundingClientRect().top<=window.innerHeight*.6)active=phase;}phaseLinks.forEach(a=>{if(active&&a.hash==='#'+active.id)a.setAttribute('aria-current','step');else a.removeAttribute('aria-current');});};
+ let scheduled=false;window.addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(()=>{updatePhase();scheduled=false;});}},{passive:true});window.addEventListener('resize',updatePhase);updatePhase();
+}
 
 document.querySelector('#matrix-features').addEventListener('change',e=>{if(e.target.matches('[data-carry]')){const id=Number(e.target.dataset.carry);e.target.checked?carryIds.add(id):carryIds.delete(id);}});
 document.querySelector('#matrix-continue').addEventListener('click',()=>{const chosen=features.filter(f=>carryIds.has(f.id));if(!chosen.length){document.querySelector('#handoff-status').textContent='Select at least one release below the map to continue.';return;}document.dispatchEvent(new CustomEvent('launch:handoff',{detail:{features:chosen.map(f=>({...f,position:position(f.cell)})),outcome:document.querySelector('#collection-outcome').value}}));});

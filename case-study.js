@@ -13,7 +13,7 @@ try {
   } else {
     const item = content.work[index];
     const story = item.caseStudy.overview;
-    const studies = content.work.filter(entry => !entry.href);
+    const studies = content.work.filter(entry => !entry.href && !entry.stage);
     const studyIndex = studies.findIndex(entry => entry.slug === item.slug);
     const next = studyIndex === -1 ? studies[0] : studies[(studyIndex + 1) % studies.length];
     document.title = `${item.title} — Shauna Azevedo-Brennan`;
@@ -141,10 +141,10 @@ try {
           <div class="cx-fold-grid" aria-hidden="true"></div>
           <div class="cs-fold-glow" aria-hidden="true"></div>
           <div class="wrap cx-fold-inner">
-            <a class="cx-back lbl" href="index.html#explore">← All work</a>
+            ${item.stage ? '<a class="cx-back lbl" href="playbooks.html">← All playbooks</a>' : '<a class="cx-back lbl" href="index.html#explore">← All work</a>'}
             <header class="cx-hero${item.heroImage ? ' cx-hero--wide' : ''}">
               <div class="cx-hero-copy">
-                <p class="cx-kicker lbl"><span class="cx-dot" aria-hidden="true"></span>Case study · ${escape(item.tag)}</p>
+                <p class="cx-kicker lbl"><span class="cx-dot" aria-hidden="true"></span>${item.stage ? 'Playbook · In progress' : `Case study · ${escape(item.tag)}`}</p>
                 <h1 class="cx-title">${escape(item.title)}</h1>
                 <p class="cx-subtitle">${escape(story.eyebrow)}</p>
                 <p class="cx-intro">${escape(story.lead)}</p>

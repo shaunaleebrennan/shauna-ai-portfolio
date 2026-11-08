@@ -363,3 +363,8 @@ body.bp-it footer.bp-footer{margin-top:0}
 .launch-page .bp-sheet .lw-tier--lavender[aria-pressed="true"]{box-shadow:0 0 0 3px #F4F4EF,0 0 0 5px #6A4DFF}
 @media (prefers-reduced-motion:reduce){.launch-page .bp-sheet .lw-tier{transition:none}}
 .launch-page .bp-sheet .le-workbench,.launch-page .bp-sheet .lc-context,.launch-page .bp-sheet .lc-record{border:1px solid #E2E1D9;border-radius:24px;box-shadow:none}
+/* Messaging as Code: the playbook in progress links to its build notes */
+.bp-collection .coming .coming-cta{display:inline-flex;align-items:center;align-self:flex-start;margin-top:22px}
+.bp-collection a.card.coming:hover,.bp-collection a.card.coming:focus-visible{transform:translateY(-6px)!important;border-color:rgba(201,255,99,.5);box-shadow:0 40px 80px rgba(0,0,0,.45),0 0 90px rgba(143,123,255,.14)!important}
+.bp-collection a.card.coming:hover .arrow{background:#C9FF63;border-color:#C9FF63;color:#0B0B10}
+@media (prefers-reduced-motion:reduce){.bp-collection a.card.coming:hover{transform:none!important}}

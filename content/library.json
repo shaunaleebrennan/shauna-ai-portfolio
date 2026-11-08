@@ -32,7 +32,8 @@
     "title": "Claims and sources",
     "source": "docs/EVIDENCE_REGISTER.md",
     "category": "Evidence",
-    "summary": "Which statements are public artifacts, professional self-report, or company outcomes."
+    "summary": "Which statements are public artifacts, professional self-report, or company outcomes.",
+    "site": false
   },
   {
     "id": "evidence-inventory",

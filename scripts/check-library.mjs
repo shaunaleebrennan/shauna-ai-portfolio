@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import path from 'node:path';
 const docs = JSON.parse(await readFile('content/library.json', 'utf8'));
 const { work } = JSON.parse(await readFile('content/portfolio.json', 'utf8'));
-const files = ['index.html', 'library.html', 'case-study.html', 'playbook.html', 'narrative-design-guide.html', ...docs.map(d => `documents/${d.id}.html`)];
+const siteDocs = docs.filter(d => d.site !== false);
+const files = ['index.html', 'library.html', 'case-study.html', 'playbook.html', 'narrative-design-guide.html', ...siteDocs.map(d => `documents/${d.id}.html`)];
 const library = await readFile('library.html', 'utf8');
 const tracked = (await import('node:child_process')).execFileSync('git', ['ls-files'], { encoding: 'utf8' }).split('\n');
 let checks = 0;
@@ -13,7 +14,8 @@ check(new Set(docs.map(d => d.id)).size === docs.length, 'Document IDs must be u
 check(new Set(work.map(d => d.slug)).size === work.length, 'Case slugs must be unique');
 for (const doc of docs) {
   check(tracked.includes(doc.source), `Public source must already be tracked: ${doc.source}`);
-  check(library.includes(`documents/${doc.id}.html`), `Missing library link: ${doc.id}`);
+  if (doc.site === false) check(!library.includes(`documents/${doc.id}.html`), `GitHub-only document linked on the site: ${doc.id}`);
+  else check(library.includes(`documents/${doc.id}.html`), `Missing library link: ${doc.id}`);
 }
 for (const item of work) {
   check(library.includes(`case-study.html?case=${item.slug}`), `Missing case: ${item.slug}`);
@@ -51,7 +53,7 @@ for (const [file, href] of links) {
   }
 }
 const generated = await readdir('documents');
-check(generated.filter(name => name.endsWith('.html')).length === docs.length, 'Unexpected document output; inspect for stale or private pages');
+check(generated.filter(name => name.endsWith('.html')).length === siteDocs.length, 'Unexpected document output; inspect for stale or private pages');
 console.log(`${checks} checks passed: library coverage, local links, fragments, case routes, and public-source allowlist.`);
 
 const manifest = JSON.parse(await readFile('it-pressure-test/source-manifest.json','utf8'));

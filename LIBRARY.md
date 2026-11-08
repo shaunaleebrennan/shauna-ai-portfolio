@@ -10,10 +10,6 @@ Read every case study and supporting document here on GitHub. The links below op
 
 Customer-led GTM for HQ Agent: turning customer discovery, beta feedback, analyst input, and competitive intelligence into positioning, packaging, and seller execution.
 
-### [Messaging as Code](case-studies/messaging-as-code.md)
-
-Designing an operating model for messaging reuse across teams and AI tools, with clear product truth, PMM ownership and human review.
-
 ### [Portfolio Voice Agent](case-studies/portfolio-voice-agent.md)
 
 Designing, configuring and testing a live voice and text agent that turns career and project evidence into useful conversations.
@@ -45,6 +41,10 @@ Narrative Design: turn market insight into a strategic story. Explore the method
 ### [Product launch playbook](case-studies/launch-with-intent.md)
 
 Tier launches, group releases, and plan audience timing with a feature matrix, visual tiers, and an interactive launch journey.
+
+### [Messaging as Code](case-studies/messaging-as-code.md)
+
+Designing an operating model for messaging reuse across teams and AI tools, with clear product truth, PMM ownership and human review.
 
 ## Supporting documents
 

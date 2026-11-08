@@ -14,10 +14,6 @@ Product marketing leader with 10+ years in marketing across enterprise SaaS and 
 
 **[HQ Agent](case-studies/hq-agent.md)** — Customer-led GTM for the next AI investment: positioning, pricing and packaging, and seller enablement.
 
-[![Messaging as Code — Protect the meaning. Keep the owner.](assets/readme/case-messaging-as-code-2026.png)](case-studies/messaging-as-code.md)
-
-**[Messaging as Code](case-studies/messaging-as-code.md)** — A governed source of approved messaging that people and AI agents can reuse, with PMM ownership and human review.
-
 [![Workvivo HQ — Repositioning for the AI era](assets/readme/case-workvivo-hq-2026.png)](case-studies/workvivo-hq.md)
 
 **[Workvivo HQ](case-studies/workvivo-hq.md)** — Repositioning an employee experience platform as an AI-powered digital HQ, from narrative to launch.
@@ -31,6 +27,16 @@ Product marketing leader with 10+ years in marketing across enterprise SaaS and 
 **[Brazil in Red](case-studies/brazil-in-red.md)** — A bilingual, interactive election atlas built from a personal question. [Explore the live atlas](https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/).
 
 **More:** [Portfolio Voice Agent](case-studies/portfolio-voice-agent.md) · [The Meta Migration](case-studies/meta-migration.md) · [Analyst Relations &amp; Category Leadership](case-studies/market-leadership.md) · [All case studies and supporting documents](LIBRARY.md)
+
+## Playbooks
+
+Practical methods for the decisions that shape go-to-market, each with a worked example and a workbook.
+
+- **[Narrative design](https://shaunaleebrennan.github.io/shauna-ai-portfolio/playbook.html)** — Find the story worth telling: turn market change and customer insight into a narrative that gives people a reason to care.
+- **[Product launches](https://shaunaleebrennan.github.io/shauna-ai-portfolio/launch-playbook.html)** — Make the moment matter: decide what deserves a launch, what belongs together, and who needs to hear what, when.
+- **[Messaging as Code](case-studies/messaging-as-code.md)** · *in progress* — Keep the story connected: a governed source of approved messaging for the people and AI tools taking it into the world.
+
+[![Messaging as Code — Protect the meaning. Keep the owner.](assets/readme/case-messaging-as-code-2026.png)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/playbooks.html)
 
 ## Experience
 

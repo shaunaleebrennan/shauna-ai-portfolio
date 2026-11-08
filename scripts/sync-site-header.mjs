@@ -4,13 +4,13 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const template = await readFile(path.join(root, 'partials/site-header.html'), 'utf8');
+const template = (await readFile(path.join(root, 'partials/site-header.html'), 'utf8')).trimEnd();
 export const siteHeader = (prefix = '', homepage = false) => template.replaceAll('{{home}}', homepage ? '' : `${prefix}index.html`).replaceAll('{{prefix}}', prefix);
 
 export async function syncSiteHeaders() {
   const docs = JSON.parse(await readFile(path.join(root, 'content/library.json'), 'utf8'));
   // The homepage and case-study template carry their own header (see build output of the redesign).
-  const pages = ['playbook.html', 'launch-playbook.html', 'playbooks.html', 'narrative-design-guide.html', 'library.html', ...docs.map(doc => `documents/${doc.id}.html`), 'it-pressure-test/index.html', 'it-pressure-test/manual-review.html'];
+  const pages = ['playbook.html', 'launch-playbook.html', 'playbooks.html', 'narrative-design-guide.html', 'library.html', ...docs.filter(doc => doc.site !== false).map(doc => `documents/${doc.id}.html`), 'it-pressure-test/index.html', 'it-pressure-test/manual-review.html'];
   for (const file of pages) {
     const location = path.join(root, file);
     const prefix = file.includes('/') ? '../' : '';

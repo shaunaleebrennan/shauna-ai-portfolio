@@ -153,7 +153,7 @@ const renderRail = async () => {
     rail.innerHTML = '<p class="rail-error">The case studies couldn’t load. Please refresh the page.</p>';
     return;
   }
-  const studies = work.filter(item => !item.href);
+  const studies = work.filter(item => !item.href && !item.stage);
   const playbooks = work.filter(item => item.href);
   if (countEl) countEl.textContent = `${studies.length} case studies · ${playbooks.length} playbooks`;
   rail.innerHTML = studies.map((item, i) => {

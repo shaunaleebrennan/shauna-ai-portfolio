@@ -50,68 +50,133 @@ try {
       return `<div class="ds-visual ds-visual--${escape(data.type)}"><div class="ds-visual-heading"><h3>${escape(data.title)}</h3></div>${body}${data.caption ? `<p class="ds-visual-caption">${escape(data.caption)}</p>` : ''}${projectLink(data)}</div>`;
     };
     const scope = data => data?.scope ? `<div class="ds-scope"><span class="ds-scope-label">Project coverage</span><dl>${data.scope.map(entry => `<div><dt>${escape(entry.label)}</dt><dd>${escape(entry.value)}</dd></div>`).join('')}</dl></div>` : '';
+    const pad = n => String(n).padStart(2, '0');
+    const cs = item.caseStudy;
+    // The last sentence (or the clause after the last comma) carries the highlighter.
+    const highlightTail = value => {
+      const text = String(value).replace(/^[“"]|[”"]$/g, '');
+      const sentences = text.match(/[^.!?]+[.!?]+["”’]?\s*/g);
+      if (sentences && sentences.length > 1) {
+        const tail = sentences.pop();
+        return `${escape(sentences.join(''))}<span class="mk">${escape(tail.trim())}</span>`;
+      }
+      const comma = text.lastIndexOf(', ');
+      if (comma > 0) return `${escape(text.slice(0, comma + 2))}<span class="mk">${escape(text.slice(comma + 2))}</span>`;
+      return escape(text);
+    };
+    const copyText = value => escape(value).replace(/\*\*(.+?)\*\*/g, '<strong class="mk">$1</strong>');
+    const copy = values => (values || []).map(text => `<p>${copyText(text)}</p>`).join('');
+    const link = data => data.href ? `<a class="cx-link" href="${safeUrl(data.href)}"${/^https?:/.test(data.href) ? ' target="_blank" rel="noopener noreferrer"' : ''}>${escape(data.linkLabel || 'Explore the project')} <span aria-hidden="true">↗</span></a>` : '';
+    const caption = data => data.caption ? `<p class="cx-caption">${escape(data.caption)}</p>` : '';
+
+    const panel = data => {
+      if (!data) return '';
+      if (data.type === 'research-system') {
+        return `<div class="cx-panel cx-loop"><div class="cx-panel-head"><h3>${escape(data.title)}</h3><span class="lbl">${data.sources.length} inputs · 1 synthesis · ${data.outputs.length} outputs</span></div>
+          <div class="cx-loop-grid">${data.sources.map((source, i) => `<article><span class="lbl">${pad(i + 1)}</span><h4>${escape(source.title)}</h4><p>${escape(source.detail)}</p></article>`).join('')}</div>
+          <span class="cx-loop-line" aria-hidden="true"></span>
+          <div class="cx-loop-strip"><span class="lbl">${escape(data.synthesis)} →</span><ul>${data.outputs.map(output => `<li>${escape(output)}</li>`).join('')}</ul></div>
+          ${caption(data)}${link(data)}</div>`;
+      }
+      if (data.type === 'work-modes') {
+        return `<div class="cx-panel cx-panel--dark cx-modes"><h3>${escape(data.title)}</h3><ol>${data.modes.map(mode => `<li class="${mode.focus ? 'is-focus' : ''}"><div><h4>${escape(mode.title)}</h4><p>${escape(mode.meaning)}</p></div><div><span class="lbl">${escape(mode.role)}</span><p>${escape(mode.examples)}</p></div></li>`).join('')}</ol>${caption(data)}${link(data)}</div>`;
+      }
+      if (data.type === 'steps') {
+        const variant = data.variant || 'list';
+        if (variant === 'layers') {
+          return `<div class="cx-layers"><h3>${escape(data.title)}</h3>${data.steps.map((step, i) => `${i ? '<span class="cx-plus" aria-hidden="true">+</span>' : ''}<article class="${i === data.steps.length - 1 ? 'is-last' : ''}"><span class="lbl">Layer ${i + 1}</span><h4>${escape(step.title)}</h4><p>${escape(step.detail)}</p>${i === data.steps.length - 1 ? '<span class="cx-layer-orb" aria-hidden="true"></span>' : ''}</article>`).join('')}${caption(data)}${link(data)}</div>`;
+        }
+        if (variant === 'path') {
+          return `<div class="cx-path"><ol>${data.steps.map((step, i) => `<li class="${i === data.steps.length - 1 ? 'is-last' : ''}"><span class="cx-path-num">${i + 1}</span><h4>${escape(step.title)}</h4><p>${escape(step.detail)}</p></li>`).join('')}</ol>${caption(data)}${link(data)}</div>`;
+        }
+        return `<div class="cx-list"><h3>${escape(data.title)}</h3><ol>${data.steps.map((step, i) => `<li><span class="cx-list-num">${pad(i + 1)}</span><div><h4>${escape(step.title)}</h4><p>${escape(step.detail)}</p></div></li>`).join('')}</ol>${caption(data)}${link(data)}</div>`;
+      }
+      return `<div class="cx-panel cx-panel--${escape(data.type)}">${visual(data)}</div>`;
+    };
+
+    const label = (block, index) => `<p class="cx-label lbl"><span>${pad(index + 1)}</span> · ${escape(block.label || block.title)}</p>`;
+    const twoUp = (block, index, extra = '') => `<div class="cx-two"><div class="cx-two-head">${label(block, index)}<h2 class="cx-h2">${escape(block.title)}</h2></div><div class="cx-copy">${copy(block.paragraphs)}${block.items?.length && block.layout !== 'decisions' ? `<ul class="cx-bullets">${block.items.map(text => `<li>${copyText(text)}</li>`).join('')}</ul>` : ''}${extra}</div></div>`;
     const section = (block, index) => {
-      const label = `<div class="ds-section-label"><span>${String(index + 1).padStart(2, '0')}</span><span>${escape(block.label || block.title)}</span></div>`;
-      const heading = `<h2>${escape(block.title)}</h2>`;
+      const data = block.visual;
       let body;
-      if (block.layout === 'decisions') {
-        body = `<div class="ds-decisions-head">${heading}<div class="ds-copy">${paragraphs(block.paragraphs)}</div></div><div class="ds-decision-grid">${(block.items || []).map((text, i) => {
+      if (data?.type === 'example-journey') {
+        const parts = String(data.title).split(/,\s*/);
+        const band = parts.map((part, i) => `<span class="${i === parts.length - 1 ? 'is-last' : i ? 'is-mid' : ''}">${escape(part)}${i < parts.length - 1 ? ',' : '.'}</span>`).join(' ');
+        body = `<div class="cx-two-head cx-solo">${label(block, index)}<h2 class="cx-h2">${escape(block.title)}</h2></div>
+          <div class="cx-band"><div class="wrap"><p class="cx-band-line">${band}</p></div></div>
+          <div class="cx-journey"><figure class="cx-journey-scene"><img src="${safeUrl(data.src)}" alt="${escape(data.alt)}" loading="lazy"><figcaption>“${escape(data.question)}”</figcaption></figure>
+          <div class="cx-copy">${copy(block.paragraphs)}<ol class="cx-journey-steps">${data.steps.map(step => `<li><span class="lbl">${escape(step.title)}</span><p>${escape(step.detail)}</p></li>`).join('')}</ol></div></div>`;
+      } else if (block.layout === 'decisions') {
+        body = `${twoUp(block, index)}<div class="cx-options">${(block.items || []).map((text, i, all) => {
           const end = text.indexOf('. ');
           const title = end === -1 ? text : text.slice(0, end + 1);
           const detail = end === -1 ? '' : text.slice(end + 2);
-          return `<article class="ds-decision"><span class="ds-decision-number">${String(i + 1).padStart(2, '0')}</span><h3>${richText(title)}</h3>${detail ? `<p>${richText(detail)}</p>` : ''}</article>`;
+          return `<article class="${block.highlightLast && i === all.length - 1 ? 'is-chosen' : ''}"><span class="lbl">${escape(block.itemLabel || 'Decision')} ${pad(i + 1)}</span><h3>${copyText(title)}</h3>${detail ? `<p>${copyText(detail)}</p>` : ''}</article>`;
         }).join('')}</div>`;
-      } else if (block.layout === 'split') {
-        body = `<div class="ds-opening-grid"><div class="ds-copy">${heading}${paragraphs((block.paragraphs || []).slice(0, 1))}</div><div class="ds-secondary">${paragraphs((block.paragraphs || []).slice(1))}${block.aside ? `<aside class="ds-question"><span>${escape(block.aside.label)}</span><p>${richText(block.aside.text)}</p></aside>` : ''}${visual(block.visual)}</div></div>`;
-      } else if (block.layout === 'showcase' && block.visual) {
-        body = `<div class="ds-decisions-head">${heading}<div class="ds-copy">${paragraphs(block.paragraphs)}</div></div>${visual(block.visual)}`;
-      } else if (block.layout === 'artifact' && block.visual) {
-        body = `<div class="ds-experience-grid"><div class="ds-copy">${heading}${paragraphs(block.paragraphs)}${scope(block.visual)}</div>${visual(block.visual)}</div>`;
+      } else if (block.layout === 'artifact' && data && !(data.type === 'steps' && data.variant === 'path')) {
+        body = `<div class="cx-artifact"><div class="cx-artifact-copy">${label(block, index)}<h2 class="cx-h2">${escape(block.title)}</h2><div class="cx-copy">${copy(block.paragraphs)}</div>${scope(data)}</div><div class="cx-artifact-visual">${panel(data)}</div></div>`;
       } else {
-        body = `<div class="ds-text-grid">${heading}<div class="ds-copy">${paragraphs(block.paragraphs)}${block.items?.length ? `<ul>${block.items.map(text => `<li>${richText(text)}</li>`).join('')}</ul>` : ''}</div></div>`;
+        body = `${twoUp(block, index)}${block.aside ? `<figure class="cx-question${String(block.aside.text).length > 110 ? ' is-long' : ''}"><p class="lbl">${escape(block.aside.label)}</p><blockquote>“${highlightTail(block.aside.text)}”</blockquote></figure>` : ''}${data ? `<div class="cx-wide">${panel(data)}</div>` : ''}`;
       }
-      const film = block.media?.type === 'wistia' && /^[a-z0-9]{10}$/.test(block.media.id) ? `<figure class="ds-film"><div class="ds-film-heading"><span>${escape(block.media.label)}</span><h3>${escape(block.media.title)}</h3></div><div class="ds-film-frame"><iframe src="https://fast.wistia.net/embed/iframe/${escape(block.media.id)}?seo=false&amp;videoFoam=true&amp;autoPlay=false&amp;silentAutoPlay=false" title="${escape(block.media.title)}" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption>${escape(block.media.caption)} <a href="${safeUrl(block.media.source)}" target="_blank" rel="noopener noreferrer">Watch on Workvivo ↗</a></figcaption></figure>` : '';
-      return `<section id="${escape(block.id)}" class="ds-section ds-section--${escape(block.layout || 'text')}">${label}${body}${film}</section>`;
+      const film = block.media?.type === 'wistia' && /^[a-z0-9]{10}$/.test(block.media.id) ? `<figure class="ds-film cx-film"><div class="ds-film-heading"><span class="lbl">${escape(block.media.label)}</span><h3>${escape(block.media.title)}</h3></div><div class="ds-film-frame"><iframe src="https://fast.wistia.net/embed/iframe/${escape(block.media.id)}?seo=false&amp;videoFoam=true&amp;autoPlay=false&amp;silentAutoPlay=false" title="${escape(block.media.title)}" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption>${escape(block.media.caption)} <a href="${safeUrl(block.media.source)}" target="_blank" rel="noopener noreferrer">Watch on Workvivo ↗</a></figcaption></figure>` : '';
+      return `<section id="${escape(block.id)}" class="ds-section cx-section cx-section--${escape(block.layout || 'text')}${data?.type === 'example-journey' ? ' cx-section--band' : ''}">${body}${film}</section>`;
     };
 
-    const askPrompts = [`What was the hardest call on ${item.title}?`, `What evidence backs up ${item.title}?`, `What would you do differently on ${item.title}?`];
+    const outcomeParts = String(cs.outcome || '').match(/[^.!?]+[.!?]+\s*/g) || [];
+    const outcomeNote = outcomeParts.filter(sentence => /^\s*Shauna\b/.test(sentence)).join('').trim();
+    const outcomeMain = outcomeParts.filter(sentence => !/^\s*Shauna\b/.test(sentence)).join('').trim() || cs.outcome;
+    const glanceCards = [['The challenge', cs.challenge], ['The insight', cs.insight], ['The outcome', cs.outcome ? outcomeMain : '']].filter(entry => entry[1]);
+    const glance = glanceCards.length ? `<section class="cx-glance" aria-label="At a glance"><p class="lbl cx-kick">At a glance</p><div class="cx-glance-grid" style="--cards:${glanceCards.length}">${glanceCards.map(([name, text]) => `<article class="${name === 'The outcome' ? 'is-dark' : ''}"><span class="lbl">${name}</span><p>${escape(text)}</p>${name === 'The outcome' && outcomeNote ? `<small>${escape(outcomeNote)}</small>` : ''}</article>`).join('')}</div></section>` : '';
+    const did = (cs.contribution?.length || cs.decisions?.length) ? `<section class="cx-did">${cs.contribution?.length ? `<div><p class="lbl cx-kick">What I did</p><ul class="cx-did-list">${cs.contribution.map(text => `<li>${escape(text)}</li>`).join('')}</ul></div>` : ''}${cs.decisions?.length ? `<div><p class="lbl cx-kick">Key decisions</p><ol class="cx-decision-list">${cs.decisions.map((text, i) => `<li><span class="lbl">${pad(i + 1)}</span>${escape(text)}</li>`).join('')}</ol></div>` : ''}</section>` : '';
+    const learning = story.learning || cs.learning;
+    const pov = learning ? `<section class="cx-pov"><p class="lbl cx-kick">The point of view</p><blockquote>“${highlightTail(learning)}”</blockquote><p class="cx-pov-by">Shauna Azevedo-Brennan</p></section>` : '';
+    const evidence = item.evidence?.length ? `<section class="cx-evidence"><p class="lbl cx-kick">Evidence</p><div class="cx-evidence-grid">${item.evidence.map(entry => `<a href="${safeUrl(entry.url)}"${/^https?:/.test(entry.url) ? ' target="_blank" rel="noopener noreferrer"' : ''}><span class="lbl">${escape(entry.kind)}</span><strong>${escape(entry.title)} <span aria-hidden="true">↗</span></strong><span>${escape(entry.note)}</span></a>`).join('')}</div></section>` : '';
+    const meta = cs.meta?.length ? cs.meta : [{ label: 'Discipline', value: item.tag }, { label: 'Demonstrates', value: item.demonstrates }];
+    const askPrompts = item.askPrompts?.length ? item.askPrompts : [`What was the hardest call on ${item.title}?`, `What evidence backs up ${item.title}?`, `What would you do differently on ${item.title}?`];
+    const nextLine = next.caseStudy?.overview?.learning || next.caseStudy?.learning || next.caseStudy?.overview?.eyebrow || next.tag;
+
     root.innerHTML = `
-      <article class="cs">
-        <div class="cs-fold">
+      <article class="cs cx">
+        <div class="cs-fold cx-fold">
+          <div class="cx-fold-grid" aria-hidden="true"></div>
           <div class="cs-fold-glow" aria-hidden="true"></div>
-          <header class="case-hero case-shell${item.heroImage ? ' case-hero--wide-art' : ''}">
-          <div class="case-hero-content">
-            <div class="case-kicker">${studyIndex > -1 ? `<span class="cs-num">${String(studyIndex + 1).padStart(2, '0')}</span>` : ''}${escape(item.tag)}</div>
-            <h1 class="case-title">${escape(item.title)}</h1>
-            <p class="case-subtitle">${escape(story.eyebrow)}</p>
-            <p class="case-intro">${escape(story.lead)}</p>
-            ${item.projectUrl ? `<div class="pb-case-link"><a class="button primary" href="${escape(item.projectUrl)}" target="_blank" rel="noopener noreferrer">${escape(item.projectLabel || 'Explore the project')} <span aria-hidden="true">↗</span></a></div>` : ''}
-            ${item.href ? `<div class="pb-case-link"><a class="button primary" href="${escape(item.href)}">Explore the playbook <span aria-hidden="true">↗</span></a></div>` : ''}
-          </div>
-          <figure class="case-visual" data-cs-parallax><img src="${escape(item.heroImage?.src || item.image)}" alt="${escape(item.heroImage?.alt || `${item.title} case study artwork`)}" width="${escape(item.heroImage?.width || 1600)}" height="${escape(item.heroImage?.height || 2000)}" fetchpriority="high"></figure>
-        </header>
-        </div>
-        <div class="cs-sheet">
-          ${item.projectPreview ? `<figure class="case-project-preview case-shell"><a href="${escape(item.projectUrl)}" target="_blank" rel="noopener noreferrer"><img src="${escape(item.projectPreview.image)}" alt="${escape(item.projectPreview.alt)}" loading="lazy" width="${escape(item.projectPreview.width || 1248)}" height="${escape(item.projectPreview.height || 824)}"></a><figcaption>${escape(item.projectPreview.caption)}</figcaption></figure>` : ''}
-          <div class="ds-body case-shell">
-            <nav class="ds-index" aria-label="Case study sections">${item.caseStudy.story.map((block, index) => `<a href="#${escape(block.id)}"><span>${String(index + 1).padStart(2, '0')}</span>${escape(block.navLabel || block.title)}</a>`).join('')}</nav>
-            ${item.caseStudy.story.map(section).join('')}
-            ${story.learning ? `<aside class="ds-pov"><span class="ds-pov-label">My point of view</span><blockquote>“${escape(story.learning.replace(/^[“"]|[”"]$/g, ''))}”</blockquote><p class="ds-pov-signature">Shauna Azevedo-Brennan</p></aside>` : ''}
+          <div class="wrap cx-fold-inner">
+            <a class="cx-back lbl" href="index.html#explore">← All work</a>
+            <header class="cx-hero${item.heroImage ? ' cx-hero--wide' : ''}">
+              <div class="cx-hero-copy">
+                <p class="cx-kicker lbl"><span class="cx-dot" aria-hidden="true"></span>Case study · ${escape(item.tag)}</p>
+                <h1 class="cx-title">${escape(item.title)}</h1>
+                <p class="cx-subtitle">${escape(story.eyebrow)}</p>
+                <p class="cx-intro">${escape(story.lead)}</p>
+                ${item.projectUrl ? `<p class="cx-actions"><a class="cx-btn" href="${escape(item.projectUrl)}" target="_blank" rel="noopener noreferrer">${escape(item.projectLabel || 'Explore the project')} <span aria-hidden="true">↗</span></a></p>` : ''}
+                ${item.href ? `<p class="cx-actions"><a class="cx-btn" href="${escape(item.href)}">Explore the playbook <span aria-hidden="true">↗</span></a></p>` : ''}
+              </div>
+              <figure class="cx-cover" data-cs-parallax><img src="${escape(item.heroImage?.src || item.image)}" alt="${escape(item.heroImage?.alt || `${item.title} case study artwork`)}" width="${escape(item.heroImage?.width || 1600)}" height="${escape(item.heroImage?.height || 2000)}" fetchpriority="high"></figure>
+            </header>
+            <dl class="cx-meta" style="--cols:${meta.length}">${meta.map(entry => `<div><dt class="lbl">${escape(entry.label)}</dt><dd>${escape(entry.value)}</dd></div>`).join('')}</dl>
           </div>
         </div>
-        <section class="cs-close" aria-label="Keep exploring">
-          <div class="case-shell cs-close-grid">
-            <div class="cs-ask">
-              <span class="cs-lbl">Ask my portfolio agent</span>
-              <h2>Go deeper on this project.</h2>
-              <p>Ask my live AI agent about the decisions, trade-offs and evidence behind ${escape(item.title)}, by voice or text.</p>
+        <div class="cs-sheet cx-sheet">
+          <nav class="cx-chapters" aria-label="Case study chapters"><div class="wrap">${cs.story.map((block, i) => `<a href="#${escape(block.id)}"><span class="lbl">${pad(i + 1)}</span> <span class="cx-chap">${escape(block.navLabel || block.title)}</span></a>`).join('')}</div></nav>
+          ${item.projectPreview ? `<figure class="case-project-preview wrap"><a href="${escape(item.projectUrl)}" target="_blank" rel="noopener noreferrer"><img src="${escape(item.projectPreview.image)}" alt="${escape(item.projectPreview.alt)}" loading="lazy" width="${escape(item.projectPreview.width || 1248)}" height="${escape(item.projectPreview.height || 824)}"></a><figcaption>${escape(item.projectPreview.caption)}</figcaption></figure>` : ''}
+          <div class="wrap cx-body">
+            ${glance}
+            ${cs.story.map(section).join('')}
+            ${did}
+            ${pov}
+            ${evidence}
+          </div>
+        </div>
+        <section class="cs-close cx-close" aria-label="Keep exploring">
+          <div class="wrap cx-close-grid">
+            <div class="cx-ask">
+              <p class="cx-ask-top"><span class="cx-orb" aria-hidden="true"></span><span class="lbl">Ask my portfolio agent</span></p>
+              <h2>Got a question about ${escape(item.title)}? Ask it directly.</h2>
               <div class="cs-prompts">${askPrompts.map(question => `<a class="cs-chip" href="index.html?ask=${encodeURIComponent(question)}#ask">${escape(question)}</a>`).join('')}</div>
-              <a class="cs-back" href="index.html#explore">← All selected work</a>
             </div>
-            <a class="cs-next" href="${escape(next.href || `case-study.html?case=${encodeURIComponent(next.slug)}`)}">
-              <span class="cs-next-img"><img src="${escape(next.image)}" alt="" loading="lazy"></span>
-              <span class="cs-next-copy"><span class="cs-lbl">Next case study</span><strong>${escape(next.title)}</strong><span class="cs-next-tag">${escape(next.tag)}</span></span>
-              <span class="cs-next-go" aria-hidden="true">→</span>
+            <a class="cx-next" href="${escape(next.href || `case-study.html?case=${encodeURIComponent(next.slug)}`)}">
+              <span class="cx-next-img"><img src="${escape(next.image)}" alt="" loading="lazy"></span>
+              <span class="cx-next-copy"><span class="lbl">Next case study</span><strong>${escape(next.title)}</strong><span class="cx-next-line">${escape(nextLine)}</span><span class="cx-next-go">Read next →</span></span>
             </a>
           </div>
         </section>
@@ -139,16 +204,23 @@ function enhance() {
   }, { passive: true });
   onScroll();
 
-  const links = new Map([...document.querySelectorAll('.ds-index a')].map(link => [decodeURIComponent(link.hash.slice(1)), link]));
+  // Chapter bar: the current chapter carries the highlighter and stays in view.
+  const nav = document.querySelector('.cx-chapters .wrap');
+  const links = new Map([...document.querySelectorAll('.cx-chapters a')].map(link => [decodeURIComponent(link.hash.slice(1)), link]));
+  const setCurrent = id => {
+    links.forEach(link => { link.removeAttribute('aria-current'); link.querySelector('.cx-chap')?.classList.remove('mk'); });
+    const link = links.get(id);
+    if (!link) return;
+    link.setAttribute('aria-current', 'true');
+    link.querySelector('.cx-chap')?.classList.add('mk');
+    if (nav) nav.scrollTo({ left: Math.max(0, link.offsetLeft - 24), behavior: reduceMotion ? 'auto' : 'smooth' });
+  };
+  setCurrent(links.keys().next().value);
   if ('IntersectionObserver' in window) {
     const spy = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        links.forEach(link => link.removeAttribute('aria-current'));
-        links.get(entry.target.id)?.setAttribute('aria-current', 'true');
-      });
+      entries.forEach(entry => { if (entry.isIntersecting) setCurrent(entry.target.id); });
     }, { rootMargin: '-35% 0px -60% 0px' });
-    document.querySelectorAll('.ds-section[id]').forEach(section => spy.observe(section));
+    document.querySelectorAll('.cx-section[id]').forEach(section => spy.observe(section));
   }
 
   if (window.location.hash) {
@@ -156,8 +228,8 @@ function enhance() {
     if (target) requestAnimationFrame(() => target.scrollIntoView());
   }
 
+  const pieces = document.querySelectorAll('.case-project-preview, .cx-glance, .cx-section, .cx-did, .cx-pov, .cx-evidence, .cx-ask, .cx-next');
   if (reduceMotion || !('IntersectionObserver' in window)) return;
-  const pieces = document.querySelectorAll('.case-project-preview, .ds-section, .ds-pov, .cs-ask, .cs-next');
   pieces.forEach(piece => piece.classList.add('rv'));
   const reveal = new IntersectionObserver(entries => {
     entries.forEach(entry => {

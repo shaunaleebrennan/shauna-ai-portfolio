@@ -236,7 +236,9 @@
               "Keep the current approach. Establish what the employee still has to search for, piece together, or ask someone else to complete. Make the remaining friction concrete.",
               "Build internally. Examine implementation resources, accountability for answers and actions, runtime costs, ongoing maintenance, and delivery across the workforce.",
               "Buy HQ Agent. Demonstrate the relevant employee journey, supported connections, governance, and desktop/mobile experience. Compare those requirements with the customer’s build or incumbent."
-            ]
+            ],
+            "itemLabel": "Option",
+            "highlightLast": true
           },
           {
             "id": "zoom",
@@ -267,7 +269,8 @@
               ],
               "caption": "Established knowledge + current company communication + the Zoom AI foundation.",
               "href": "https://www.zoom.com/en/ai-research/the-next-phase-of-work/",
-              "linkLabel": "Read about Zoom’s federated AI approach"
+              "linkLabel": "Read about Zoom’s federated AI approach",
+              "variant": "layers"
             }
           },
           {
@@ -330,11 +333,35 @@
                   "detail": "Connect the alternative, ownership costs, packaging, proof, and implementation considerations."
                 }
               ],
-              "caption": "Customer discovery → differentiated value → a commercial decision."
+              "caption": "Customer discovery → differentiated value → a commercial decision.",
+              "variant": "path"
             }
           }
+        ],
+        "meta": [
+          {
+            "label": "Discipline",
+            "value": "Product launch"
+          },
+          {
+            "label": "My role",
+            "value": "Positioning, pricing and packaging, seller enablement"
+          },
+          {
+            "label": "Worked with",
+            "value": "Product, Revenue, Sales, Zoom AI teams"
+          },
+          {
+            "label": "Research inputs",
+            "value": "Customers, beta, analysts, ZRA, Wynter"
+          }
         ]
-      }
+      },
+      "askPrompts": [
+        "How did you position HQ Agent?",
+        "What did the research involve?",
+        "How did build vs buy work?"
+      ]
     },
     {
       "slug": "messaging-as-code",
@@ -925,7 +952,8 @@
                   "detail": "Adapt the emphasis for sales conversations, campaigns, the website, and analysts."
                 }
               ],
-              "caption": "Strategic direction and messaging led by PMM; delivery shared across teams."
+              "caption": "Strategic direction and messaging led by PMM; delivery shared across teams.",
+              "variant": "path"
             }
           },
           {

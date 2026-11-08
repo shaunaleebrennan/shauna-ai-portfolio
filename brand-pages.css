@@ -282,3 +282,84 @@ body.bp-it footer.bp-footer{margin-top:0}
   .bp-fold h1,.bp-fold p{color:#000000}
   .bp-fold h1 em{-webkit-text-fill-color:#000000;color:#000000;background:none}
 }
+
+/* =====================================================================
+   Playbook sections — the same language as the case studies:
+   mono section rules, ink pills for the current choice, dark evidence
+   panels for illustrations and proof, white cards, the lime highlighter
+   ===================================================================== */
+.bp-playbook .bp-sheet .pb-section-label{gap:6px;color:#55555E;font-size:11px}
+.bp-playbook .bp-sheet .pb-section-label>span:first-child{display:inline;width:auto;height:auto;min-width:0;padding:0;background:none;border:0;border-radius:0;color:#4D7A00;font:500 11px 'JetBrains Mono',ui-monospace,monospace}
+.bp-playbook .bp-sheet .pb-section-label>span:first-child::after{content:" ·";color:#8E918A}
+.bp-playbook .bp-sheet .pb-intro strong,.bp-playbook .bp-sheet .pb-lead strong,.bp-playbook .bp-sheet .pb-question strong{font-weight:600;color:#0B0B10;background-image:linear-gradient(transparent 58%,#C9FF63 58%);padding:0 .06em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+/* Chapter bar, as on the case studies */
+.bp-playbook .bp-sheet .pb-sticky{border-bottom:1px solid #0B0B10}
+.bp-playbook .bp-sheet .pb-sticky a{color:#55555E;font-size:14px;background-clip:content-box}
+.bp-playbook .bp-sheet .pb-sticky a:hover{color:#0B0B10}
+.bp-playbook .bp-sheet .pb-sticky a[aria-current="location"]{color:#0B0B10;background-image:linear-gradient(transparent 58%,#C9FF63 58%);background-repeat:no-repeat;background-origin:content-box}
+.bp-playbook .bp-sheet .pb-sticky a[aria-current="location"]:after{display:none}
+
+/* Ink pill for the current choice, outline for the rest */
+.bp-playbook .bp-sheet .pb-arc-tabs{gap:8px;border-bottom:0}
+.bp-playbook .bp-sheet .pb-arc-tabs button,.bp-playbook .bp-sheet .la-adoption-steps button,.bp-playbook .bp-sheet .lw-steps button,.bp-playbook .bp-sheet .pb-signal-switch button{background:#FFFFFF;border:1px solid #E2E1D9;border-radius:16px;color:#0B0B10;box-shadow:none;transition:background .2s ease,border-color .2s ease,color .2s ease}
+.bp-playbook .bp-sheet .pb-arc-tabs button:hover,.bp-playbook .bp-sheet .la-adoption-steps button:hover,.bp-playbook .bp-sheet .lw-steps button:hover,.bp-playbook .bp-sheet .pb-signal-switch button:hover{border-color:#0B0B10}
+.bp-playbook .bp-sheet .pb-arc-tabs button span,.bp-playbook .bp-sheet .la-adoption-steps button span,.bp-playbook .bp-sheet .lw-steps button>span{font-family:'JetBrains Mono',ui-monospace,monospace;color:#6B6B73}
+.bp-playbook .bp-sheet .pb-arc-tabs button[aria-selected="true"],.bp-playbook .bp-sheet .la-adoption-steps button[aria-pressed="true"],.bp-playbook .bp-sheet .lw-steps button[aria-selected="true"],.bp-playbook .bp-sheet .pb-signal-switch button[aria-pressed="true"]{background:#0B0B10;border-color:#0B0B10;color:#F2F3EE}
+.bp-playbook .bp-sheet .pb-arc-tabs button[aria-selected="true"] span,.bp-playbook .bp-sheet .la-adoption-steps button[aria-pressed="true"] span,.bp-playbook .bp-sheet .lw-steps button[aria-selected="true"]>span{color:#C9FF63}
+.bp-playbook .bp-sheet .pb-signal-switch{gap:8px;padding:0;background:none;border:0}
+.bp-playbook .bp-sheet .pb-signal-switch button{border-radius:999px;min-height:40px;padding:0 18px}
+
+/* Illustrations of the method: dark evidence panels */
+.bp-playbook .bp-sheet .pb-arc-art{background:radial-gradient(90% 120% at 100% 0%,rgba(106,77,255,.38),rgba(106,77,255,0) 60%),#0B0B10;border:0;border-radius:24px;color:#F2F3EE;box-shadow:0 30px 70px rgba(11,11,16,.16)}
+.bp-playbook .bp-sheet .pb-arc-art .pb-visual-step{font-family:'JetBrains Mono',ui-monospace,monospace;color:#C9FF63;letter-spacing:.1em;text-transform:uppercase;font-size:11px}
+.bp-playbook .bp-sheet .pb-arc-art .pb-art-label.before{color:#F2F3EE;font-family:'Inter Tight',Inter,sans-serif;font-weight:600}
+.bp-playbook .bp-sheet .pb-arc-art .pb-art-connector{color:#C9FF63}
+.bp-playbook .bp-sheet .pb-arc-art .pb-art-label.after{background:#1C1C26;border:1px solid rgba(201,255,99,.6);border-radius:16px;color:#F2F3EE;font-family:'Inter Tight',Inter,sans-serif;font-weight:600}
+.bp-playbook .bp-sheet .pb-arc-art .pb-art-caption{color:#B4B7AE}
+.bp-playbook .bp-sheet .pb-arc-panel h3{font:500 11px/1.5 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:#4D7A00}
+.bp-playbook .bp-sheet .pb-arc-panel .pb-question{font-family:'Inter Tight',Inter,sans-serif;font-weight:600;letter-spacing:-.035em;color:#0B0B10}
+.launch-page .bp-sheet .ls-proof,.bp-playbook .bp-sheet .lp-trend{background:radial-gradient(90% 140% at 100% 0%,rgba(106,77,255,.34),rgba(106,77,255,0) 60%),#0B0B10;border:0;border-radius:28px;color:#F2F3EE}
+.launch-page .bp-sheet .ls-proof strong,.bp-playbook .bp-sheet .lp-trend strong{color:#C9FF63;font-family:'Inter Tight',Inter,sans-serif;font-weight:600;letter-spacing:-.05em}
+.launch-page .bp-sheet .ls-proof p,.launch-page .bp-sheet .ls-proof h2,.bp-playbook .bp-sheet .lp-trend span,.bp-playbook .bp-sheet .lp-trend p{color:#F2F3EE}
+.launch-page .bp-sheet .ls-proof p+p,.bp-playbook .bp-sheet .lp-trend p{color:#B4B7AE}
+.launch-page .bp-sheet .ls-proof a,.bp-playbook .bp-sheet .lp-trend a{color:#C9FF63}
+.launch-page .bp-sheet .ls-proof>div+div{border-color:rgba(255,255,255,.12)}
+
+/* Examples, stories and working panels: white cards on paper */
+.bp-playbook .bp-sheet .pb-done,.bp-playbook .bp-sheet .pb-story,.bp-playbook .bp-sheet .pb-insight-feature,.bp-playbook .bp-sheet .lw-tier-detail,.bp-playbook .bp-sheet .lw-journey-panel,.bp-playbook .bp-sheet .la-adoption-panel,.bp-playbook .bp-sheet .la-standard,.bp-playbook .bp-sheet .lw-question-disclosure,.bp-playbook .bp-sheet .lw-lanes article,.bp-playbook .bp-sheet .lv-track li,.bp-playbook .bp-sheet .la-maintenance-steps li{background:#FFFFFF;border:1px solid #E2E1D9;border-radius:20px;box-shadow:none}
+.bp-playbook .bp-sheet .pb-done>span,.bp-playbook .bp-sheet .pb-story-kicker{font-family:'JetBrains Mono',ui-monospace,monospace;color:#4D7A00;text-transform:uppercase;letter-spacing:.12em;font-size:10px}
+.bp-playbook .bp-sheet .pb-done p{font-family:'Inter Tight',Inter,sans-serif;font-weight:500;color:#0B0B10;letter-spacing:-.01em}
+.bp-playbook .bp-sheet .pb-insight-art figcaption{background:rgba(11,11,16,.88);color:#F2F3EE;border-radius:999px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.08em}
+.bp-playbook .bp-sheet .pb-review-number{background:#FFFFFF;box-shadow:inset 0 0 0 1px #E2E1D9;color:#0B0B10;font-family:'JetBrains Mono',ui-monospace,monospace}
+.bp-playbook .bp-sheet .pb-review-item[open] .pb-review-number{background:#C9FF63;box-shadow:none;color:#0B0B10}
+.bp-playbook .bp-sheet .lw-selection{background:#FFFFFF;border:1px solid #E2E1D9;border-left:3px solid #C9FF63;border-radius:16px}
+.bp-playbook .bp-sheet .lw-lanes article>span,.bp-playbook .bp-sheet .lv-track li>span{font-family:'JetBrains Mono',ui-monospace,monospace;color:#4D7A00;text-transform:uppercase;letter-spacing:.1em;font-size:10px}
+
+/* Toolkit: the AI skill is the dark card */
+.bp-playbook .bp-sheet .pb-toolkit-item{background:#FFFFFF;border:1px solid #E2E1D9;border-radius:24px}
+.bp-playbook .bp-sheet .pb-toolkit-top span{font-family:'JetBrains Mono',ui-monospace,monospace;font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:10px;color:#6B6B73}
+.bp-playbook .bp-sheet .pb-toolkit-top span:first-child{color:#4D7A00}
+.bp-playbook .bp-sheet .pb-toolkit-item h3{font-family:'Inter Tight',Inter,sans-serif;font-weight:600;letter-spacing:-.025em}
+.bp-playbook .bp-sheet .pb-toolkit-skill{background:radial-gradient(90% 120% at 100% 0%,rgba(106,77,255,.34),rgba(106,77,255,0) 60%),#0B0B10;border-color:#0B0B10;color:#F2F3EE}
+.bp-playbook .bp-sheet .pb-toolkit-skill h3,.bp-playbook .bp-sheet .pb-toolkit-skill .pb-toolkit-purpose{color:#F2F3EE}
+.bp-playbook .bp-sheet .pb-toolkit-skill p{color:#B4B7AE}
+.bp-playbook .bp-sheet .pb-toolkit-skill .pb-toolkit-top span{color:#8E918A}
+.bp-playbook .bp-sheet .pb-toolkit-skill .pb-toolkit-top span:first-child{color:#C9FF63}
+
+/* Launch tiers: investment reads as weight, from Void to paper */
+.launch-page .bp-sheet .lw-tier{border:1px solid #E2E1D9;border-radius:20px;box-shadow:none;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .2s ease}
+.launch-page .bp-sheet .lw-tier:hover{transform:translateY(-3px)}
+.launch-page .bp-sheet .lw-tier--lavender,.launch-page .bp-sheet .lw-cell--4{background:#0B0B10;border-color:#0B0B10;color:#F2F3EE}
+.launch-page .bp-sheet .lw-tier--lavender *,.launch-page .bp-sheet .lw-cell--4 *{color:#F2F3EE}
+.launch-page .bp-sheet .lw-tier--lavender b,.launch-page .bp-sheet .lw-cell--4 a,.launch-page .bp-sheet .lw-cell--4 button{color:#C9FF63}
+.launch-page .bp-sheet .lw-tier--lavender .lw-volume i{background:#C9FF63}
+.launch-page .bp-sheet .lw-tier--pink,.launch-page .bp-sheet .lw-cell--3{background:#C9FF63;border-color:#C9FF63;color:#0B0B10}
+.launch-page .bp-sheet .lw-tier--pink *,.launch-page .bp-sheet .lw-cell--3 *{color:#0B0B10}
+.launch-page .bp-sheet .lw-tier--pink .lw-volume i{background:#0B0B10}
+.launch-page .bp-sheet .lw-tier--green,.launch-page .bp-sheet .lw-cell--2{background:#FFFFFF;border-color:#E2E1D9;color:#0B0B10}
+.launch-page .bp-sheet .lw-tier--sand,.launch-page .bp-sheet .lw-cell--1,.launch-page .bp-sheet .lw-cell--0{background:transparent;border:1px dashed #C9C8BE;color:#0B0B10}
+.launch-page .bp-sheet .lw-tier[aria-pressed="true"]{box-shadow:0 0 0 3px #F4F4EF,0 0 0 5px #0B0B10}
+.launch-page .bp-sheet .lw-tier--lavender[aria-pressed="true"]{box-shadow:0 0 0 3px #F4F4EF,0 0 0 5px #6A4DFF}
+@media (prefers-reduced-motion:reduce){.launch-page .bp-sheet .lw-tier{transition:none}}
+.launch-page .bp-sheet .le-workbench,.launch-page .bp-sheet .lc-context,.launch-page .bp-sheet .lc-record{border:1px solid #E2E1D9;border-radius:24px;box-shadow:none}

@@ -1,4 +1,4 @@
-![Shauna Azevedo-Brennan — Product Marketing Leader. Strategy, intelligence and AI innovation. Strategy that ships. Stories that stick.](assets/readme/hero.png)
+[![Shauna Azevedo-Brennan — Product Marketing Leader. I make complex AI clear.](assets/readme/hero-2026.png)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/)
 
 <h1 align="center">Shauna Azevedo-Brennan</h1>
 
@@ -22,27 +22,31 @@ Across 10 years in start-up, scale-up, acquisition, and global enterprise enviro
 
 ### [Workvivo HQ](case-studies/workvivo-hq.md)
 
-[![Workvivo HQ — Repositioning for the AI era](assets/readme/workvivo-hq-strip.svg)](case-studies/workvivo-hq.md)
+[![Workvivo HQ — Repositioning for the AI era](assets/readme/case-workvivo-hq-2026.png)](case-studies/workvivo-hq.md)
 
 **Positioning · Category · Launch** — I led the positioning work behind Workvivo’s shift from an Employee Experience Platform towards an AI-powered digital HQ for every employee, then carried that strategy into messaging architecture, analyst framing, launch, GTM kits and Sales enablement.
 
 ### [Messaging as Code](case-studies/messaging-as-code.md)
 
+[![Messaging as Code — Protect the meaning. Keep the owner.](assets/readme/case-messaging-as-code-2026.png)](case-studies/messaging-as-code.md)
+
 **Messaging · Workflow design · AI implementation** — I owned the project, wrote the messaging with PMM-team support, and defined the content model and approval workflow. Testing led me from GitHub to an in-house system using Zoom agents and Canvas. The HQ Agent messaging pilot is complete and connected to the sales enablement agent, with positive feedback so far.
 
 ### [HQ Agent](case-studies/hq-agent.md)
 
-[![HQ Agent — From search, to answer, to action](assets/readme/hq-agent-strip-v2.svg)](case-studies/hq-agent.md)
+[![HQ Agent — From search, to answer, to action](assets/readme/case-hq-agent-2026.png)](case-studies/hq-agent.md)
 
 **Agentic AI · Trust · Packaging** — Turning enterprise search, grounded answers and supported action into a clear commercial progression: **SEARCH → ANSWER → ACTION**. I led product and portfolio positioning and seller enablement, and co-developed pricing and packaging with the Revenue leader.
 
 ### [AI Product Strategy](case-studies/ai-product-strategy.md)
 
-[![AI Product Strategy — Building the PMM operating model](assets/readme/ai-product-strategy-strip-v2.svg)](case-studies/ai-product-strategy.md)
+[![AI Product Strategy — Building the PMM operating model](assets/readme/case-ai-product-strategy-2026.png)](case-studies/ai-product-strategy.md)
 
 **Applied learning · Agents · Workflow design** — Combining Product School courses in AI product strategy, agentic workflows and go-to-market with self-guided building, testing and iteration. Practical work includes this portfolio agent, IT Pressure Test and reusable research, synthesis and competitive workflows.
 
 ### [Brazil in Red](case-studies/brazil-in-red.md)
+
+[![Brazil in Red — Turning curiosity into a story people can explore](assets/readme/case-brazil-in-red-2026.png)](case-studies/brazil-in-red.md)
 
 **Research · Data storytelling · AI-assisted building** — Turning a personal question into a bilingual, interactive election atlas. I directed the research, editorial structure, visual experience, and iteration across state maps, overseas comparisons, and stories of participation. [Explore the live atlas](https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/).
 
@@ -163,6 +167,8 @@ The tools are not the proof; the workflow design and operating choices are.
 This repository powers my [live portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/): nine evidence-led case studies, a CV, public proof, and a grounded conversational agent. I designed and built the static experience with semantic HTML, responsive CSS, vanilla JavaScript, JSON-driven content, consent-aware Google Analytics, and GitHub Pages.
 
 Use it in three ways: **[scan](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#scan)** the executive view, **[explore](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#explore)** the evidence, or **[ask](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#ask)** the portfolio agent about my experience and the work behind a case study.
+
+[![Don’t just read my resume. Interrogate it. Ask my portfolio agent.](assets/readme/ask-agent-2026.png)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/#ask)
 
 <p align="center"><strong><a href="https://shaunaleebrennan.github.io/shauna-ai-portfolio/">Explore the full portfolio →</a></strong></p>
 

@@ -36,6 +36,16 @@ Gartner · 2025 campaign artwork
 
 Forrester · 2026 campaign artwork
 
+## Customer reviews, new categories
+
+Customer reviews tell the same story from the other side. In G2’s Fall 2026 reports, Workvivo is a Leader in 10 Grids, ranked first of 25 in Enterprise Social Networking, and appears for the first time in Knowledge Base, Enterprise Search and Knowledge Management.
+
+The AI portfolio is now visible there too: Workvivo is a High Performer in two new categories, AI Agents and Agentic AI, and is newly listed in AI categories including AI Agents for HR. As with every result here, these are company outcomes; G2 rankings come from customer reviews.
+
+### G2 · Fall 2026
+
+G2 Fall 2026 Grid reports. Rankings are G2’s, based on customer reviews; company recognition, not individual outcomes.
+
 ## Opening the next categories
 
 With the core categories established, the programme is extending into adjacent ones. Workvivo is a new entry in the Forrester Wave for Employee Experience Management Platforms, with results due in November 2026, and has been invited to the Forrester Landscape report for Cognitive Search platforms, with the RFI submitted in November 2026. Both are in progress; an invitation is not a placement.

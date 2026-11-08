@@ -93,6 +93,16 @@ try {
       }
       const head = (title, extra = '') => `<div class="cx-panel-head"><h3>${escape(title)}</h3>${extra}</div>`;
       if (data.type === 'recognition') return '<div class="cx-recognition" data-recognition></div>';
+      if (data.type === 'g2') {
+        const row = entry => `<li${entry.rank === 1 ? ' class="is-first"' : ''}><span class="cx-g2-rank">${entry.rank ? `#${entry.rank}<span>/${entry.of}</span>` : '<span>—</span>'}</span><span class="cx-g2-cat">${escape(entry.category)}${entry.new ? ' <em>New</em>' : ''}</span></li>`;
+        return `<div class="cx-panel cx-panel--dark cx-g2"><div class="cx-panel-head"><h3>Leader in ${data.leader.length} Grids. New in AI.</h3><span class="lbl">${escape(data.title)}</span></div>
+          <div class="cx-g2-grid">
+            <div class="cx-g2-col"><div class="cx-g2-badge"><img src="assets/recognition/g2-leader-fall-2026.png" alt="G2 Leader, Fall 2026" loading="lazy"><div><strong>Grid Leader</strong><span>Top-tier market leadership rankings</span></div></div><ol class="cx-g2-list">${data.leader.map(row).join('')}</ol></div>
+            <div class="cx-g2-col"><div class="cx-g2-badge"><img src="assets/recognition/g2-high-performer-ai-agents-fall-2026.png" alt="G2 High Performer, AI Agents, Fall 2026" loading="lazy"><div><strong>High Performer</strong><span>New AI categories</span></div></div><ol class="cx-g2-list">${data.highPerformer.map(row).join('')}</ol>
+            <div class="cx-g2-sub"><span class="lbl">Also newly listed</span><ol class="cx-g2-list">${data.listings.map(row).join('')}</ol></div>
+            <p class="cx-g2-love"><span class="cx-g2-star" aria-hidden="true">★</span><span><strong>Users Love Us</strong> G2 milestone for consistently high satisfaction ratings</span></p></div>
+          </div>${caption(data)}</div>`;
+      }
       if (data.type === 'signals') {
         const top = Math.max(...data.rows.map(row => Number(row.value) || 0));
         return `<div class="cx-panel cx-panel--dark cx-signals">${head(data.title)}${data.rows.map(row => {

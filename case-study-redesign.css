@@ -522,3 +522,27 @@
 .cx-recognition .tile{border-radius:32px}
 .cx-scope{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px 24px}
 .cs-sheet .ds-section .cx-recognition h3,.cs-sheet .ds-section .cx-recognition h4{color:#F2F3EE}
+
+/* G2 rankings */
+.cx-g2 .cx-panel-head h3{font-size:clamp(24px,2.4vw,32px);letter-spacing:-.04em}
+.cx-g2 .cx-panel-head .lbl{color:#C9FF63}
+.cx-g2-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px}
+.cx-g2-col{padding:24px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+.cx-g2-badge{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.cx-g2-badge img{width:64px;height:auto;flex:0 0 auto}
+.cx-g2-badge strong{display:block;color:#F2F3EE;font:600 22px/1.1 'Inter Tight',sans-serif;letter-spacing:-.03em}
+.cx-g2-badge span{display:block;margin-top:4px;color:#8E918A;font-size:14px}
+.cx-g2-list{margin:0;padding:0;list-style:none}
+.cx-g2-list li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;align-items:baseline;padding:9px 0;border-top:1px solid rgba(255,255,255,.07)}
+.cx-g2-rank{color:#F2F3EE;font:600 18px/1 'Inter Tight',sans-serif;letter-spacing:-.02em}
+.cx-g2-rank span{color:#8E918A;font:500 12px 'JetBrains Mono',monospace;letter-spacing:0;margin-left:2px}
+.cx-g2-list li.is-first .cx-g2-rank{color:#C9FF63}
+.cx-g2-cat{color:#E6E8E1;font-size:15px;line-height:1.35}
+.cx-g2-cat em{display:inline-flex;align-items:center;min-height:20px;margin-left:6px;padding:0 8px;border-radius:999px;background:rgba(201,255,99,.14);color:#C9FF63;font:500 10px/1 'JetBrains Mono',monospace;font-style:normal;letter-spacing:.1em;text-transform:uppercase;vertical-align:2px}
+.cx-g2-sub{margin-top:22px}
+.cx-g2-sub .lbl{display:block;margin-bottom:8px;color:#8E918A;font-size:10px}
+.cx-g2-love{display:flex;gap:12px;align-items:flex-start;margin:22px 0 0;padding:16px;border-radius:16px;background:rgba(201,255,99,.06);border:1px solid rgba(201,255,99,.2);color:#B4B7AE;font-size:14px;line-height:1.5}
+.cx-g2-love strong{display:block;color:#F2F3EE;font:600 16px 'Inter Tight',sans-serif;margin-bottom:2px}
+.cx-g2-star{color:#C9FF63;font-size:18px;line-height:1.2}
+.cx-g2 .cx-caption{color:#8E918A}
+@media (max-width:860px){.cx-g2-grid{grid-template-columns:1fr}.cx-g2-list li{grid-template-columns:80px minmax(0,1fr)}}

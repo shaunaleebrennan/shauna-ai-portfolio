@@ -1035,6 +1035,113 @@
             }
           },
           {
+            "id": "g2",
+            "title": "Customer reviews, new categories",
+            "label": "G2 · Fall 2026",
+            "navLabel": "G2",
+            "layout": "text",
+            "paragraphs": [
+              "Customer reviews tell the same story from the other side. In G2’s Fall 2026 reports, Workvivo is a Leader in 10 Grids, ranked first of 25 in Enterprise Social Networking, and appears for the first time in Knowledge Base, Enterprise Search and Knowledge Management.",
+              "The AI portfolio is now visible there too: Workvivo is a High Performer in two new categories, AI Agents and Agentic AI, and is newly listed in AI categories including AI Agents for HR. As with every result here, these are company outcomes; G2 rankings come from customer reviews."
+            ],
+            "visual": {
+              "type": "g2",
+              "title": "G2 · Fall 2026",
+              "leader": [
+                {
+                  "rank": 1,
+                  "of": 25,
+                  "category": "Enterprise Social Networking"
+                },
+                {
+                  "rank": 2,
+                  "of": 198,
+                  "category": "Employee Engagement"
+                },
+                {
+                  "rank": 2,
+                  "of": 75,
+                  "category": "Employee Intranet"
+                },
+                {
+                  "rank": 2,
+                  "of": 39,
+                  "category": "Frontline Worker Communications"
+                },
+                {
+                  "rank": 2,
+                  "of": 47,
+                  "category": "Employee Communications"
+                },
+                {
+                  "rank": 3,
+                  "of": 42,
+                  "category": "Employee Experience"
+                },
+                {
+                  "rank": 5,
+                  "of": 34,
+                  "category": "Knowledge Base",
+                  "new": true
+                },
+                {
+                  "rank": 11,
+                  "of": 71,
+                  "category": "Enterprise Search Software",
+                  "new": true
+                },
+                {
+                  "rank": 12,
+                  "of": 89,
+                  "category": "Employee Recognition"
+                },
+                {
+                  "rank": 16,
+                  "of": 143,
+                  "category": "Knowledge Management",
+                  "new": true
+                }
+              ],
+              "highPerformer": [
+                {
+                  "rank": 82,
+                  "of": 187,
+                  "category": "AI Agents",
+                  "new": true
+                },
+                {
+                  "rank": 92,
+                  "of": 215,
+                  "category": "Agentic AI",
+                  "new": true
+                }
+              ],
+              "listings": [
+                {
+                  "rank": 11,
+                  "of": 12,
+                  "category": "AI Agents for HR",
+                  "new": true
+                },
+                {
+                  "rank": 92,
+                  "of": 215,
+                  "category": "Emerging AI Software",
+                  "new": true
+                },
+                {
+                  "category": "Enterprise AI Chatbot",
+                  "new": true
+                },
+                {
+                  "category": "AI Agents for Business Ops",
+                  "new": true
+                }
+              ],
+              "caption": "G2 Fall 2026 Grid reports. Rankings are G2’s, based on customer reviews; company recognition, not individual outcomes."
+            }
+          },
+          {
             "id": "momentum",
             "title": "Opening the next categories",
             "label": "Category expansion",

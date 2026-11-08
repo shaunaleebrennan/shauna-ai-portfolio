@@ -13,7 +13,9 @@ try {
   } else {
     const item = content.work[index];
     const story = item.caseStudy.overview;
-    const next = content.work[(index + 1) % content.work.length];
+    const studies = content.work.filter(entry => !entry.href);
+    const studyIndex = studies.findIndex(entry => entry.slug === item.slug);
+    const next = studyIndex === -1 ? studies[0] : studies[(studyIndex + 1) % studies.length];
     document.title = `${item.title} — Shauna Azevedo-Brennan`;
     document.querySelector('meta[name="description"]').content = story.lead;
     const richText = value => escape(value).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
@@ -72,31 +74,97 @@ try {
       return `<section id="${escape(block.id)}" class="ds-section ds-section--${escape(block.layout || 'text')}">${label}${body}${film}</section>`;
     };
 
+    const askPrompts = [`What was the hardest call on ${item.title}?`, `What evidence backs up ${item.title}?`, `What would you do differently on ${item.title}?`];
     root.innerHTML = `
-      <article>
-        <header class="case-hero case-shell${item.heroImage ? ' case-hero--wide-art' : ''}">
+      <article class="cs">
+        <div class="cs-fold">
+          <div class="cs-fold-glow" aria-hidden="true"></div>
+          <header class="case-hero case-shell${item.heroImage ? ' case-hero--wide-art' : ''}">
           <div class="case-hero-content">
-            <div class="case-kicker">${escape(item.tag)}</div>
+            <div class="case-kicker">${studyIndex > -1 ? `<span class="cs-num">${String(studyIndex + 1).padStart(2, '0')}</span>` : ''}${escape(item.tag)}</div>
             <h1 class="case-title">${escape(item.title)}</h1>
             <p class="case-subtitle">${escape(story.eyebrow)}</p>
             <p class="case-intro">${escape(story.lead)}</p>
             ${item.projectUrl ? `<div class="pb-case-link"><a class="button primary" href="${escape(item.projectUrl)}" target="_blank" rel="noopener noreferrer">${escape(item.projectLabel || 'Explore the project')} <span aria-hidden="true">↗</span></a></div>` : ''}
             ${item.href ? `<div class="pb-case-link"><a class="button primary" href="${escape(item.href)}">Explore the playbook <span aria-hidden="true">↗</span></a></div>` : ''}
           </div>
-          <figure class="case-visual"><img src="${escape(item.heroImage?.src || item.image)}" alt="${escape(item.heroImage?.alt || `${item.title} case study artwork`)}" width="${escape(item.heroImage?.width || 1600)}" height="${escape(item.heroImage?.height || 2000)}" fetchpriority="high"></figure>
+          <figure class="case-visual" data-cs-parallax><img src="${escape(item.heroImage?.src || item.image)}" alt="${escape(item.heroImage?.alt || `${item.title} case study artwork`)}" width="${escape(item.heroImage?.width || 1600)}" height="${escape(item.heroImage?.height || 2000)}" fetchpriority="high"></figure>
         </header>
-        ${item.projectPreview ? `<figure class="case-project-preview case-shell"><a href="${escape(item.projectUrl)}" target="_blank" rel="noopener noreferrer"><img src="${escape(item.projectPreview.image)}" alt="${escape(item.projectPreview.alt)}" loading="lazy" width="${escape(item.projectPreview.width || 1248)}" height="${escape(item.projectPreview.height || 824)}"></a><figcaption>${escape(item.projectPreview.caption)}</figcaption></figure>` : ''}
-        <div class="ds-body case-shell">
-          <nav class="ds-index" aria-label="Case study sections">${item.caseStudy.story.map((block, index) => `<a href="#${escape(block.id)}"><span>${String(index + 1).padStart(2, '0')}</span>${escape(block.navLabel || block.title)}</a>`).join('')}</nav>
-          ${item.caseStudy.story.map(section).join('')}
-          ${story.learning ? `<aside class="ds-pov"><span class="ds-pov-label">My point of view</span><blockquote>“${escape(story.learning.replace(/^[“"]|[”"]$/g, ''))}”</blockquote><p class="ds-pov-signature">Shauna Azevedo-Brennan</p></aside>` : ''}
-          <nav class="case-actions" aria-label="Case study navigation">
-            <a href="index.html#explore">← All selected work</a>
-            <a class="next-case" href="${escape(next.href || `case-study.html?case=${encodeURIComponent(next.slug)}`)}"><span>Next story</span><strong>${escape(next.title)} →</strong></a>
-          </nav>
         </div>
+        <div class="cs-sheet">
+          ${item.projectPreview ? `<figure class="case-project-preview case-shell"><a href="${escape(item.projectUrl)}" target="_blank" rel="noopener noreferrer"><img src="${escape(item.projectPreview.image)}" alt="${escape(item.projectPreview.alt)}" loading="lazy" width="${escape(item.projectPreview.width || 1248)}" height="${escape(item.projectPreview.height || 824)}"></a><figcaption>${escape(item.projectPreview.caption)}</figcaption></figure>` : ''}
+          <div class="ds-body case-shell">
+            <nav class="ds-index" aria-label="Case study sections">${item.caseStudy.story.map((block, index) => `<a href="#${escape(block.id)}"><span>${String(index + 1).padStart(2, '0')}</span>${escape(block.navLabel || block.title)}</a>`).join('')}</nav>
+            ${item.caseStudy.story.map(section).join('')}
+            ${story.learning ? `<aside class="ds-pov"><span class="ds-pov-label">My point of view</span><blockquote>“${escape(story.learning.replace(/^[“"]|[”"]$/g, ''))}”</blockquote><p class="ds-pov-signature">Shauna Azevedo-Brennan</p></aside>` : ''}
+          </div>
+        </div>
+        <section class="cs-close" aria-label="Keep exploring">
+          <div class="case-shell cs-close-grid">
+            <div class="cs-ask">
+              <span class="cs-lbl">Ask my portfolio agent</span>
+              <h2>Go deeper on this project.</h2>
+              <p>Ask my live AI agent about the decisions, trade-offs and evidence behind ${escape(item.title)}, by voice or text.</p>
+              <div class="cs-prompts">${askPrompts.map(question => `<a class="cs-chip" href="index.html?ask=${encodeURIComponent(question)}#ask">${escape(question)}</a>`).join('')}</div>
+              <a class="cs-back" href="index.html#explore">← All selected work</a>
+            </div>
+            <a class="cs-next" href="${escape(next.href || `case-study.html?case=${encodeURIComponent(next.slug)}`)}">
+              <span class="cs-next-img"><img src="${escape(next.image)}" alt="" loading="lazy"></span>
+              <span class="cs-next-copy"><span class="cs-lbl">Next case study</span><strong>${escape(next.title)}</strong><span class="cs-next-tag">${escape(next.tag)}</span></span>
+              <span class="cs-next-go" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </section>
       </article>`;
+    enhance();
   }
 } catch (error) {
   root.innerHTML = `<section class="case-error case-shell"><div><h1>This story could not load.</h1><p>Please refresh, or <a href="index.html#explore">return to selected work</a>.</p></div></section>`;
+}
+
+function enhance() {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const bar = document.querySelector('[data-cs-progress]');
+  const visual = document.querySelector('[data-cs-parallax]');
+  let ticking = false;
+  const onScroll = () => {
+    ticking = false;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+    if (bar) bar.style.transform = `scaleX(${progress.toFixed(4)})`;
+    if (visual && !reduceMotion) visual.style.transform = `translateY(${Math.round(Math.min(window.scrollY, 900) * 0.08)}px)`;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  onScroll();
+
+  const links = new Map([...document.querySelectorAll('.ds-index a')].map(link => [decodeURIComponent(link.hash.slice(1)), link]));
+  if ('IntersectionObserver' in window) {
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        links.forEach(link => link.removeAttribute('aria-current'));
+        links.get(entry.target.id)?.setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-35% 0px -60% 0px' });
+    document.querySelectorAll('.ds-section[id]').forEach(section => spy.observe(section));
+  }
+
+  if (window.location.hash) {
+    const target = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+    if (target) requestAnimationFrame(() => target.scrollIntoView());
+  }
+
+  if (reduceMotion || !('IntersectionObserver' in window)) return;
+  const pieces = document.querySelectorAll('.case-project-preview, .ds-section, .ds-pov, .cs-ask, .cs-next');
+  pieces.forEach(piece => piece.classList.add('rv'));
+  const reveal = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in');
+      reveal.unobserve(entry.target);
+    });
+  }, { threshold: 0.06 });
+  pieces.forEach(piece => reveal.observe(piece));
 }

@@ -19,571 +19,6 @@
   ],
   "work": [
     {
-      "slug": "workvivo-hq",
-      "title": "Workvivo HQ",
-      "category": "gtm",
-      "tag": "GTM",
-      "summary": "Evolving Workvivo’s employee experience platform narrative into a digital HQ, to stand out in a crowded AI-native employee experience market while staying relevant to champion personas.",
-      "demonstrates": "Brand narrative, research synthesis, Narrative Design, strategic positioning, persona messaging, and cross-functional launch execution.",
-      "proof": "Public launch page, GTM kits and sales enablement, campaign system, Shauna launch post, and public peer testimonial.",
-      "image": "assets/evidence/workvivo-hq.jpg",
-      "sourceUrl": "https://www.workvivo.com/hq/",
-      "evidence": [
-        {
-          "title": "Workvivo HQ product page",
-          "url": "https://www.workvivo.com/hq/",
-          "kind": "Public product context",
-          "note": "Shows the product narrative; Shauna’s contribution is described in this case study."
-        },
-        {
-          "title": "Shauna’s launch post",
-          "url": "https://www.linkedin.com/posts/shaunalee_work-has-a-new-address-introducing-workvivo-activity-7472968114830454786-qTjH",
-          "kind": "Public launch activity",
-          "note": "Launch commentary and peer feedback. LinkedIn may require sign-in."
-        },
-        {
-          "title": "Read the narrative notes",
-          "url": "documents/hq-narrative.html",
-          "kind": "Supporting document",
-          "note": "Buyer problem, product pillars, and launch system."
-        }
-      ],
-      "caseStudy": {
-        "overview": {
-          "eyebrow": "Standing out in a crowded AI-native employee experience market",
-          "lead": "I led the brand narrative, positioning, and messaging behind Workvivo HQ: evolving our employee experience platform story into a digital HQ our customer base could understand, with messaging adapted by persona.",
-          "learning": "An AI story that erases what made you different is a concession to your competitors."
-        },
-        "eyebrow": "Standing out in a crowded AI-native employee experience market",
-        "context": "Workvivo was positioned as the employee experience platform, with messaging adapted by persona. The challenge was to stand out in a crowded AI-native employee experience market as AI itself became increasingly commoditised.",
-        "challenge": "How could Workvivo differentiate in a crowded AI-native employee experience market while staying relevant to its champion personas and understandable to its entire customer base?",
-        "insight": "The narrative centred on a digital HQ for the modern workforce. Rather than overusing AI in the copy, it made the platform’s ambition understandable through the idea of a digital HQ, with messaging adapted by persona.",
-        "contribution": [
-          "Market and buyer research synthesis using Narrative Design",
-          "Brand narrative and strategic positioning",
-          "Persona-specific messaging architecture",
-          "Portfolio story connecting Workvivo HQ, HQ Agent, and Seer",
-          "Launch messaging, website, campaign direction, and seller enablement",
-          "Analyst framing and competitive guidance"
-        ],
-        "decisions": [
-          "Differentiate within a crowded AI-native employee experience market",
-          "Express the platform ambition through digital HQ",
-          "Avoid overusing AI in the copy",
-          "Adapt messaging by persona while staying relevant to existing champions"
-        ],
-        "outcome": "Workvivo publicly launched HQ while serving 9 million users and after surpassing $100M ARR. Those are company proof points during Shauna’s tenure, not outcomes attributed to her alone.",
-        "learning": "An AI story that erases what made you different is a concession to your competitors.",
-        "story": [
-          {
-            "id": "problem",
-            "title": "Standing out in a crowded AI-native EX market",
-            "label": "The brand challenge",
-            "navLabel": "The challenge",
-            "layout": "split",
-            "paragraphs": [
-              "Workvivo was the **employee experience platform**, with messaging adapted by persona. The challenge was standing out in a crowded AI-native employee experience market.",
-              "As AI became increasingly commoditised, we needed a way to differentiate while staying relevant to our champion personas. Overusing AI in the copy would not give us that distinction. The brand narrative needed to make our ambition understandable to the entire customer base."
-            ],
-            "aside": {
-              "label": "The strategic question",
-              "text": "How could Workvivo differentiate in a crowded AI-native employee experience market while staying relevant to its champion personas and understandable to its entire customer base?"
-            }
-          },
-          {
-            "id": "signals",
-            "label": "Research into decisions",
-            "navLabel": "The signals",
-            "title": "The signals behind the story",
-            "layout": "artifact",
-            "paragraphs": [
-              "Competitive research showed AI-native positioning becoming common across the employee experience market. Buyer message testing helped identify which parts of Workvivo’s story earned interest.",
-              "The two-wave Wynter study favoured organisational context over an unsupported adoption claim. I used those signals to sharpen the differentiation and the proof behind it."
-            ],
-            "visual": {
-              "type": "signals",
-              "title": "What the messaging research told us",
-              "rows": [
-                {
-                  "value": 69,
-                  "label": "Company culture, people, and systems",
-                  "detail": "Positive response to the organisational-context message."
-                },
-                {
-                  "value": 31,
-                  "label": "Employees choose to use Workvivo",
-                  "detail": "Positive response to the adoption-led message."
-                }
-              ],
-              "caption": "Wynter · March–April 2026 · 45 participants. Reactions to different statements; this was not a test of the HQ name or a measure of market demand.",
-              "href": "assets/documents/workvivo-hq-research-brief.pdf",
-              "linkLabel": "Read the research brief (PDF)"
-            }
-          },
-          {
-            "id": "narrative",
-            "title": "A headquarters for every employee",
-            "label": "The narrative idea",
-            "navLabel": "The narrative",
-            "layout": "artifact",
-            "paragraphs": [
-              "The strategic reframe was about **where AI lives**: inside the employee experience, where people communicate, find knowledge, and get work done.",
-              "Headquarters made that ambition tangible. It could speak to the whole customer base while keeping employee experience central, with messaging adapted by persona."
-            ],
-            "visual": {
-              "type": "statement",
-              "title": "The brand narrative",
-              "eyebrow": "Workvivo HQ",
-              "statement": "Every employee deserves a headquarters.",
-              "answer": "Now they have one.",
-              "caption": "The digital HQ for the modern workforce."
-            },
-            "media": {
-              "type": "wistia",
-              "id": "9x6vj5cl93",
-              "label": "The narrative in motion",
-              "title": "Workvivo HQ – Launch Video",
-              "caption": "35-second launch film · Original Workvivo video.",
-              "source": "https://www.workvivo.com/hq/"
-            }
-          },
-          {
-            "id": "architecture",
-            "title": "One story. A clear messaging architecture.",
-            "label": "From narrative to messaging",
-            "navLabel": "The architecture",
-            "layout": "showcase",
-            "paragraphs": [
-              "The product pillars gave the platform story structure. The persona matrix changed the emphasis, value, and proof for each audience, while keeping the same HQ narrative."
-            ],
-            "visual": {
-              "type": "messaging-house",
-              "title": "How the narrative becomes a message system",
-              "promise": "Workvivo HQ",
-              "subtitle": "Every employee deserves a headquarters. Now they have one.",
-              "pillars": [
-                {
-                  "title": "Communication & Engagement",
-                  "detail": "Connection, participation, and the organisation’s shared story."
-                },
-                {
-                  "title": "Search & Knowledge",
-                  "detail": "Finding information and answers in the flow of work."
-                },
-                {
-                  "title": "People Intelligence",
-                  "detail": "Understanding the employee experience and informing action."
-                }
-              ],
-              "personas": [
-                {
-                  "name": "IT",
-                  "focus": "Governance, adoption, and consolidation",
-                  "detail": "A governed experience layer, with proof around adoption, ROI, and the AI foundation."
-                },
-                {
-                  "name": "HR",
-                  "focus": "Trust, inclusion, and listening",
-                  "detail": "Support employees through change, with engagement and listening evidence."
-                },
-                {
-                  "name": "Comms",
-                  "focus": "Reach, relevance, and understanding",
-                  "detail": "Make change understood and actionable, with reach, engagement, and analytics proof."
-                },
-                {
-                  "name": "Employees",
-                  "focus": "Simplicity, clarity, and access",
-                  "detail": "Understand what is happening, find what they need, and get work done."
-                }
-              ],
-              "caption": "Product pillars and persona priorities from the HQ messaging work. Select an audience to see how the emphasis changes."
-            }
-          },
-          {
-            "id": "framework",
-            "label": "A repeatable method",
-            "navLabel": "The framework",
-            "title": "A method behind the message",
-            "layout": "artifact",
-            "paragraphs": [
-              "I used Marcus Andrews’ five-stage Narrative Design framework to connect market change to audience stakes, a practical response, and Workvivo’s role.",
-              "That sequence made the argument reusable across executive presentations, analyst conversations, and persona messaging."
-            ],
-            "visual": {
-              "type": "steps",
-              "title": "Narrative Design, applied",
-              "steps": [
-                {
-                  "title": "The change",
-                  "detail": "AI was changing how employees access information and get work done, while AI-native claims were becoming common across the employee experience market."
-                },
-                {
-                  "title": "The impact",
-                  "detail": "The narrative explored what that shift meant for employees navigating fragmented tools, and for IT, HR, and Comms supporting the change."
-                },
-                {
-                  "title": "The new game",
-                  "detail": "Put AI into the employee experience where people communicate, find knowledge, and act. The strategic reframe was about where AI lives; headquarters made that idea tangible."
-                },
-                {
-                  "title": "Why it’s hard",
-                  "detail": "Scattered systems, adoption friction, and unequal access across desk and frontline roles were barriers addressed in the original narrative."
-                },
-                {
-                  "title": "The solution",
-                  "detail": "Workvivo HQ: “Every employee deserves a headquarters. Now they have one.” Connect that promise to the product experience and adapt the messages and proof by persona."
-                }
-              ],
-              "href": "playbook.html",
-              "linkLabel": "Explore the Narrative Design playbook"
-            }
-          },
-          {
-            "id": "contribution",
-            "title": "Make the story usable in the field",
-            "label": "GTM activation",
-            "navLabel": "The execution",
-            "layout": "artifact",
-            "paragraphs": [
-              "I translated the narrative into GTM kits and seller enablement: the platform evolution story, persona messages, talk tracks, and guidance on how to move from the HQ vision into product detail.",
-              "I carried the positioning into launch messaging, the website, analyst framing, competitive guidance, and campaign direction, working across Product, Sales, Growth, and Marketing."
-            ],
-            "visual": {
-              "type": "steps",
-              "title": "From master narrative to market",
-              "steps": [
-                {
-                  "title": "Equip the seller",
-                  "detail": "Platform story, persona messages, evolution talk track, and GTM kits."
-                },
-                {
-                  "title": "Align the launch",
-                  "detail": "Shared narrative across leadership, Marketing, and field teams."
-                },
-                {
-                  "title": "Activate by audience",
-                  "detail": "Adapt the emphasis for sales conversations, campaigns, the website, and analysts."
-                }
-              ],
-              "caption": "Strategic direction and messaging led by PMM; delivery shared across teams."
-            }
-          },
-          {
-            "id": "result",
-            "title": "Positioning that guided GTM decisions",
-            "label": "Launch and alignment",
-            "navLabel": "The delivery",
-            "layout": "artifact",
-            "paragraphs": [
-              "The positioning gave teams a shared basis for decisions: which value to emphasise, how to adapt the story by persona, and which proof to use. I carried that foundation into launch messaging, campaigns, analyst framing, and sales enablement.",
-              "The HQ launch at WOW was highlighted in the team retrospective for company-wide message alignment, from leadership to SDRs. That feedback showed the narrative becoming a shared language across the business."
-            ],
-            "visual": {
-              "type": "quote",
-              "title": "Launch retrospective",
-              "quote": "From John down to every SDR speaking the same language.",
-              "attribution": "PMM team retrospective · August 2026",
-              "caption": "Team feedback on message alignment at the Workvivo HQ launch at WOW."
-            }
-          }
-        ]
-      },
-      "heroImage": {
-        "src": "assets/evidence/workvivo-hq-hero.png",
-        "alt": "Workvivo HQ launch artwork featuring an employee using a phone alongside the Workvivo HQ branding.",
-        "width": 1040,
-        "height": 600
-      }
-    },
-    {
-      "slug": "playbook",
-      "title": "Narrative design",
-      "category": "gtm",
-      "tag": "Playbook",
-      "href": "playbook.html",
-      "summary": "Narrative Design: turn market insight into a strategic story. Explore the method, pressure-test the argument, and take the skill and workbook with you.",
-      "demonstrates": "Strategic narrative design, market insight, practical frameworks, and AI-assisted PMM workflows.",
-      "proof": "Interactive playbook, downloadable AI skill, and a four-page practical workbook.",
-      "image": "assets/playbooks/narrative-design-cover-v2.jpg",
-      "sourceUrl": "playbook.html",
-      "evidence": [
-        {
-          "title": "Explore the Narrative Design playbook",
-          "url": "playbook.html",
-          "kind": "Interactive playbook",
-          "note": "A practical method with worked examples and downloadable tools."
-        },
-        {
-          "title": "Download the narrative skill",
-          "url": "assets/playbooks/narrative-design-skill.zip",
-          "kind": "Reusable AI skill",
-          "note": "Method, pressure tests, AI narrative guidance, and spoken-flow review."
-        },
-        {
-          "title": "Download the workbook",
-          "url": "assets/playbooks/narrative-design-workbook.pdf",
-          "kind": "Printable workbook",
-          "note": "Four pages of prompts, decision guidance, and practical exercises."
-        }
-      ],
-      "caseStudy": {
-        "overview": {
-          "eyebrow": "Turning strategic PMM judgment into a method other people can use",
-          "lead": "I created a practical Narrative Design playbook that connects market insight to buying criteria, a useful approach, and a credible product contribution.",
-          "learning": "A narrative earns its place in strategy when it changes what you choose to build, sell, and stop doing."
-        },
-        "story": [
-          {
-            "id": "problem",
-            "title": "Making the method usable",
-            "paragraphs": [
-              "A compact framework can explain the sequence while leaving the hardest decisions to the reader. I wanted to make the reasoning usable: how to choose an insight, develop a meaningful approach, connect the product to it, and test whether the story works."
-            ],
-            "layout": "split",
-            "label": "Framework design",
-            "navLabel": "The need",
-            "aside": {
-              "label": "The practical question",
-              "text": "How do you make the judgment behind a narrative method usable by someone applying it to their own work?"
-            }
-          },
-          {
-            "id": "contribution",
-            "title": "The thinking behind the playbook",
-            "paragraphs": [
-              "I developed the point of view, practical guidance, worked example, AI narrative checks, and downloadable companion. The playbook credits Marcus Andrews for the five-stage change-led method and distinguishes my practical extensions, including a reframe-led alternative when a market change is not established."
-            ],
-            "layout": "artifact",
-            "label": "Method and extensions",
-            "navLabel": "The method",
-            "visual": {
-              "type": "journey",
-              "title": "Turn a method into practical decisions",
-              "steps": [
-                "Market insight",
-                "A meaningful approach",
-                "Product contribution",
-                "Pressure testing"
-              ],
-              "caption": "Based on Marcus Andrews’ method, with credited practical extensions.",
-              "href": "playbook.html",
-              "linkLabel": "Explore the interactive playbook"
-            }
-          },
-          {
-            "id": "result",
-            "title": "A toolkit to put it into practice",
-            "paragraphs": [
-              "A public interactive playbook with an annotated example, a browser-based brief export, a reusable narrative-design skill, and a printable workbook. The companion was checked through narrative development, a narrow edit, and Question Mode; those exercises do not establish customer or commercial impact."
-            ],
-            "layout": "artifact",
-            "label": "Tools for application",
-            "navLabel": "The toolkit",
-            "visual": {
-              "type": "resources",
-              "title": "Use the toolkit",
-              "links": [
-                {
-                  "title": "Interactive playbook",
-                  "url": "playbook.html",
-                  "note": "Worked example and browser brief export"
-                },
-                {
-                  "title": "Narrative Design skill",
-                  "url": "assets/playbooks/narrative-design-skill.zip",
-                  "note": "Reusable companion for AI-assisted work"
-                },
-                {
-                  "title": "Printable workbook",
-                  "url": "assets/playbooks/narrative-design-workbook.pdf",
-                  "note": "Prompts and practical exercises"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "slug": "messaging-as-code",
-      "title": "Messaging as Code",
-      "category": "technical",
-      "tag": "GTM systems",
-      "summary": "Designing an operating model for messaging reuse across teams and AI tools, with clear product truth, PMM ownership and human review.",
-      "demonstrates": "PMM operating-model design, strategic messaging, product judgment, information architecture, and AI-assisted implementation.",
-      "proof": "Sanitized compiler demonstration and change receipt, with implementation status and source notes in the evidence register.",
-      "image": "assets/evidence/messaging-as-code.svg",
-      "sourceUrl": "case-studies/messaging-as-code.md",
-      "evidence": [
-        {
-          "title": "Inspect the sanitized change receipt",
-          "url": "examples/messaging-as-code/change-demonstration.json",
-          "kind": "Executed local demonstration",
-          "note": "Invented wording run through the existing compiler, plus a stale-edit comparison. No customer content or live synchronization."
-        },
-        {
-          "title": "Implementation and source notes",
-          "url": "documents/evidence-register.html",
-          "kind": "Evidence register",
-          "note": "Source basis, ownership and current implementation boundaries."
-        }
-      ],
-      "caseStudy": {
-        "overview": {
-          "eyebrow": "Making product messaging a source of truth—not another document to copy",
-          "lead": "AI can generate content quickly. Keeping that content accurate, approved and consistent across teams is the harder problem.",
-          "learning": "If every AI tool gets its own version of your positioning, you have automated message drift."
-        },
-        "eyebrow": "Making approved messaging reusable across teams and AI tools",
-        "contribution": [
-          "Owned the project and defined the content model, approval workflow and acceptance criteria",
-          "Directed AI-assisted implementation of the validation and change-proposal foundation",
-          "Tested exact edits and failure scenarios, then simplified the authoring approach"
-        ],
-        "sections": [
-          {
-            "id": "context",
-            "title": "The problem",
-            "paragraphs": [
-              "Product messaging is reused across sales decks, launch materials, websites and AI prompts. Marketing, Sales and PMM need to adapt the story for different products, personas and assets while keeping claims accurate and the narrative consistent. Each adaptation creates another opportunity for wording to lose its context, evidence or approval status.",
-              "AI makes that content easier to produce and distribute. It also makes it more important to know which messages are current, supported and approved. I designed a structured messaging system to make reuse more reliable while preserving PMM ownership."
-            ]
-          },
-          {
-            "id": "contribution",
-            "title": "My role and approach",
-            "paragraphs": [
-              "I defined the content model, approval workflow and acceptance criteria, then directed AI-assisted implementation and tested how the system handled changes and failures. The model separates product facts from positioning, connects messages to their supporting sources, and gives content explicit ownership and review states.",
-              "The authoring pilot changed my approach. When the custom interface made it difficult to find and review the actual wording, I paused its expansion and prioritised familiar document editing, history and comments. Governance depends on people being able to understand and approve their own changes."
-            ]
-          },
-          {
-            "id": "workflow",
-            "title": "How the system works",
-            "paragraphs": [
-              "The intended change cycle is straightforward: a PMM edits wording, the system identifies the exact changes and checks them, and a human reviews the proposal before it becomes canonical. The implemented foundation prepares validated candidate changes and a receipt for review."
-            ],
-            "items": [
-              "Edit: start from a known version of the message and submit the exact intended wording",
-              "Check: compare the edit with its baseline, preserve untouched fields and validate the candidate content",
-              "Review: retain the proposed change and its receipt for a human decision",
-              "Recover: stop when the underlying message has changed, so the author can compare versions and reconcile the edit"
-            ],
-            "detailsTitle": "Technical design beneath the workflow",
-            "details": [
-              "Typed objects separate product truth, buyer context, proof, messaging, design and asset recipes",
-              "Git records versions; Python and JSON Schema validate structure and references offline",
-              "An identity binding connects each authoring field to its canonical object; a deterministic compiler produces candidate files and a change receipt"
-            ]
-          },
-          {
-            "id": "decisions",
-            "title": "The decisions that mattered",
-            "items": [
-              "Separate facts from positioning: product authority establishes what can be claimed; messaging determines how to communicate it for a buyer",
-              "Preserve exact edits: compile the wording the PMM submitted and leave other fields intact",
-              "Keep approval human: a successful technical check does not approve a claim or authorize publication",
-              "Make conflicts recoverable: preserve the original, submitted and current versions so the author can resolve a stale edit",
-              "Simplify authoring: prove one reliable change cycle in a familiar document workflow before adding more custom automation"
-            ]
-          },
-          {
-            "id": "evaluation",
-            "title": "What I built and tested",
-            "paragraphs": [
-              "The project produced a working foundation for validating structured messaging and proposing controlled changes for review. Development checks cover exact wording, untouched-field preservation, placeholders, stale edits, changed bindings and recovery from partial failures.",
-              "To make that behavior inspectable, I ran the existing compiler against a temporary local fixture using invented wording. One text edit produced a validated candidate and a change receipt. A separate comparison against a newer message returned STALE_AUTHORING_VIEW with no proposed changes."
-            ],
-            "demo": {
-              "label": "Sanitized local demonstration — invented wording, real compiler output",
-              "before": "Find the policy you need.",
-              "after": "Find the policy and its source.",
-              "receipt": "{\n  \"receipt_version\": 1,\n  \"cycle_id\": \"880c05cc9c037bdf1f9e10abf69b1fa5480860d8b08ca17b2af11846079b1ae7\",\n  \"baseline_commit\": \"4bad383c5006fdf76e6f2352a99388112fd2d566\",\n  \"changed_field\": \"text\",\n  \"before\": \"Find the policy you need.\",\n  \"after\": \"Find the policy and its source.\",\n  \"compiler_status\": \"PREPARED\",\n  \"candidate_file_count\": 1\n}",
-              "stale": "Current message: Find the current policy and owner.\nSubmitted edit: Find the policy and its source.\nResult: STALE_AUTHORING_VIEW\nProposed changes: []",
-              "note": "This demonstrates candidate compilation and conflict detection. It is not a customer change, approval event or live document synchronization.",
-              "url": "examples/messaging-as-code/change-demonstration.json"
-            },
-            "status": "Current status: live document synchronization remains incomplete, and adoption and efficiency gains have not yet been measured. The evidence register records the integration and implementation boundaries."
-          },
-          {
-            "id": "learning",
-            "title": "What I learned",
-            "paragraphs": [
-              "The central design question was how to make messaging easier to reuse while keeping people accountable for its meaning and approval. The pilot showed that the collaboration experience is part of that governance: a technically controlled workflow still fails if the author cannot easily find and review the wording.",
-              "I would now prove the simplest complete human change cycle first, then add automation where it removes effort without obscuring ownership."
-            ]
-          }
-        ],
-        "story": [
-          {
-            "id": "need",
-            "title": "Messaging that can keep up",
-            "paragraphs": [
-              "Sales and Marketing reuse messaging across products, audiences and assets. Each copy-and-paste can weaken the link to its original meaning, supporting evidence or approval. I wanted a system where PMM could maintain the source and teams and AI agents could reuse it reliably."
-            ],
-            "layout": "split",
-            "label": "The operating problem",
-            "navLabel": "The need",
-            "aside": {
-              "label": "The design requirement",
-              "text": "Give teams and AI agents a reliable source of messaging while keeping PMM ownership and human review clear."
-            }
-          },
-          {
-            "id": "ownership",
-            "title": "Designing for trust and reuse",
-            "paragraphs": [
-              "I led the project, wrote the product messaging with PMM-team support, and defined the content model, approval process, and acceptance criteria. The goal was to give people and AI agents a source they could reuse while keeping PMM ownership and human review clear."
-            ],
-            "layout": "artifact",
-            "label": "Governance and reuse",
-            "navLabel": "The system",
-            "visual": {
-              "type": "relationship",
-              "title": "A governed source for reuse",
-              "steps": [
-                "PMM-owned messaging",
-                "Human review",
-                "People + AI agents"
-              ],
-              "caption": "Content model · Approval process · Acceptance criteria",
-              "linkLabel": null
-            }
-          },
-          {
-            "id": "iteration",
-            "title": "The workflow changed after testing",
-            "paragraphs": [
-              "I tested AI-assisted authoring and revision workflows, then changed direction when a GitHub-based approach proved less practical for how the team works. The resulting in-house approach uses Zoom agents and Canvas to make messaging easier to find, maintain, and review."
-            ],
-            "layout": "split",
-            "label": "Iteration",
-            "navLabel": "The iteration",
-            "visual": {
-              "type": "compare",
-              "title": "The authoring approach evolved",
-              "beforeLabel": "Initial approach",
-              "before": "GitHub-based authoring",
-              "afterLabel": "After workflow testing",
-              "after": "Zoom agents + Canvas",
-              "caption": "The content model and human review remained central; the authoring approach changed to fit how the team works."
-            }
-          },
-          {
-            "id": "status",
-            "title": "A completed pilot, with more to build",
-            "paragraphs": [
-              "The HQ Agent pilot is complete and connected to the sales enablement agent, with positive early feedback. Wider message coverage and a design-system-connected content generation workflow are planned, not yet established business outcomes. This is a working example of how I apply hands-on AI knowledge to improve PMM operations—not a claim that the full organisation has adopted it."
-            ],
-            "layout": "text",
-            "label": "Pilot and next steps",
-            "navLabel": "The pilot"
-          }
-        ]
-      }
-    },
-    {
       "slug": "hq-agent",
       "title": "HQ Agent",
       "category": "launch",
@@ -902,231 +337,179 @@
       }
     },
     {
-      "slug": "brazil-in-red",
-      "title": "Brazil in Red",
+      "slug": "messaging-as-code",
+      "title": "Messaging as Code",
       "category": "technical",
-      "tag": "Data storytelling",
-      "summary": "From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.",
-      "demonstrates": "Research synthesis, data storytelling, product judgment, visual direction, and AI-assisted building.",
-      "proof": "Live bilingual atlas with interactive maps, round comparisons, source links, and methodology notes.",
-      "image": "assets/evidence/brazil-in-red.svg",
-      "sourceUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
-      "projectUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
-      "projectLabel": "Explore the live atlas",
-      "projectPreview": {
-        "image": "assets/evidence/brazil-in-red-preview.jpg",
-        "alt": "Brazil in Red atlas opening screen, with its red photographic design and presidential result comparison.",
-        "caption": "The atlas opens with the national picture, then lets readers explore the results across Brazil and the world.",
-        "width": 2048,
-        "height": 853
-      },
+      "tag": "GTM systems",
+      "summary": "Designing an operating model for messaging reuse across teams and AI tools, with clear product truth, PMM ownership and human review.",
+      "demonstrates": "PMM operating-model design, strategic messaging, product judgment, information architecture, and AI-assisted implementation.",
+      "proof": "Sanitized compiler demonstration and change receipt, with implementation status and source notes in the evidence register.",
+      "image": "assets/evidence/messaging-as-code-cover.jpg",
+      "sourceUrl": "case-studies/messaging-as-code.md",
       "evidence": [
         {
-          "title": "Explore Brazil in Red",
-          "url": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
-          "kind": "Live personal project",
-          "note": "Explore the bilingual atlas, interactive maps, comparison tables, and sources and method section."
+          "title": "Inspect the sanitized change receipt",
+          "url": "examples/messaging-as-code/change-demonstration.json",
+          "kind": "Executed local demonstration",
+          "note": "Invented wording run through the existing compiler, plus a stale-edit comparison. No customer content or live synchronization."
+        },
+        {
+          "title": "Implementation and source notes",
+          "url": "documents/evidence-register.html",
+          "kind": "Evidence register",
+          "note": "Source basis, ownership and current implementation boundaries."
         }
       ],
       "caseStudy": {
         "overview": {
-          "eyebrow": "Turning curiosity into a story people can explore",
-          "lead": "A national result tells you who won. I wanted to understand what sat beneath it: the differences between places, the change between rounds, and the experience of Brazilians voting abroad. I turned those questions into Brazil in Red, a bilingual interactive atlas.",
-          "learning": "A chart can be accurate and still tell the wrong story. Choosing what to compare is part of the strategy."
+          "eyebrow": "Making product messaging a source of truth—not another document to copy",
+          "lead": "AI can generate content quickly. Keeping that content accurate, approved and consistent across teams is the harder problem.",
+          "learning": "If every AI tool gets its own version of your positioning, you have automated message drift."
         },
-        "story": [
+        "eyebrow": "Making approved messaging reusable across teams and AI tools",
+        "contribution": [
+          "Owned the project and defined the content model, approval workflow and acceptance criteria",
+          "Directed AI-assisted implementation of the validation and change-proposal foundation",
+          "Tested exact edits and failure scenarios, then simplified the authoring approach"
+        ],
+        "sections": [
           {
-            "id": "curiosity",
-            "title": "Finding the story beneath the result",
+            "id": "context",
+            "title": "The problem",
             "paragraphs": [
-              "The starting point was personal curiosity. As I explored the results, the question grew: how could I bring the national picture, regional differences, and overseas vote into one experience that made sense to someone arriving without all that context?",
-              "I chose to give the atlas an editorial direction, then let readers investigate it. The page moves from the national result to changes between rounds, Brazilian states, and voters abroad. That sequence gives people a way into the subject before asking them to navigate a map or interpret a table."
-            ],
-            "layout": "split",
-            "label": "Editorial direction",
-            "navLabel": "The question",
-            "visual": {
-              "type": "journey",
-              "title": "A way into the subject",
-              "steps": [
-                "National result",
-                "Changes between rounds",
-                "Brazilian states",
-                "Voters abroad"
-              ]
-            }
+              "Product messaging is reused across sales decks, launch materials, websites and AI prompts. Marketing, Sales and PMM need to adapt the story for different products, personas and assets while keeping claims accurate and the narrative consistent. Each adaptation creates another opportunity for wording to lose its context, evidence or approval status.",
+              "AI makes that content easier to produce and distribute. It also makes it more important to know which messages are current, supported and approved. I designed a structured messaging system to make reuse more reliable while preserving PMM ownership."
+            ]
           },
           {
-            "id": "experience",
-            "title": "A guided story, with room to explore",
+            "id": "contribution",
+            "title": "My role and approach",
             "paragraphs": [
-              "I set the questions, directed the research and AI-assisted build, and shaped the structure, visual direction, and interaction design. The published experience covers 27 Brazilian federal units and 31 selected overseas countries and territories, with English and Portuguese views.",
-              "I wanted the narrative and the interactive elements to work together. A reader can follow the page for the main patterns, then use the maps, round selectors, regional filters, and comparison tables to examine a place that matters to them. Headings, labels, and visual hierarchy had to support both ways of reading."
+              "I defined the content model, approval workflow and acceptance criteria, then directed AI-assisted implementation and tested how the system handled changes and failures. The model separates product facts from positioning, connects messages to their supporting sources, and gives content explicit ownership and review states.",
+              "The authoring pilot changed my approach. When the custom interface made it difficult to find and review the actual wording, I paused its expansion and prioritised familiar document editing, history and comments. Governance depends on people being able to understand and approve their own changes."
+            ]
+          },
+          {
+            "id": "workflow",
+            "title": "How the system works",
+            "paragraphs": [
+              "The intended change cycle is straightforward: a PMM edits wording, the system identifies the exact changes and checks them, and a human reviews the proposal before it becomes canonical. The implemented foundation prepares validated candidate changes and a receipt for review."
             ],
-            "layout": "artifact",
-            "label": "Experience design",
-            "navLabel": "The experience",
-            "visual": {
-              "type": "image",
-              "title": "Inside the atlas",
-              "src": "assets/evidence/brazil-in-red-preview.jpg",
-              "alt": "The atlas opening screen with its national result comparison.",
-              "href": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
-              "caption": "Start with the national picture, then explore places and comparisons.",
-              "scope": [
-                {
-                  "value": "27",
-                  "label": "Brazilian federal units"
-                },
-                {
-                  "value": "31",
-                  "label": "Selected overseas locations"
-                },
-                {
-                  "value": "2",
-                  "label": "Language views"
-                }
-              ]
-            }
+            "items": [
+              "Edit: start from a known version of the message and submit the exact intended wording",
+              "Check: compare the edit with its baseline, preserve untouched fields and validate the candidate content",
+              "Review: retain the proposed change and its receipt for a human decision",
+              "Recover: stop when the underlying message has changed, so the author can compare versions and reconcile the edit"
+            ],
+            "detailsTitle": "Technical design beneath the workflow",
+            "details": [
+              "Typed objects separate product truth, buyer context, proof, messaging, design and asset recipes",
+              "Git records versions; Python and JSON Schema validate structure and references offline",
+              "An identity binding connects each authoring field to its canonical object; a deterministic compiler produces candidate files and a change receipt"
+            ]
           },
           {
             "id": "decisions",
-            "title": "The choices behind the comparisons",
-            "paragraphs": [
-              "The most useful iterations came from questioning what a reader could reasonably conclude from each visual. I pushed for changes wherever an apparently simple comparison could imply something the data did not establish:"
-            ],
+            "title": "The decisions that mattered",
             "items": [
-              "Give each percentage a clear meaning. A candidate’s share, the winner’s share, and a change between rounds answer different questions. The labels needed to identify the candidate, round, and voting basis.",
-              "Make the rounds comparable. Round one includes other candidates. The atlas distinguishes all-valid-vote shares from a comparison recalculated around the two finalists, and separates a change in winner from the size of the swing.",
-              "Choose the right level of context. Highlighting Ireland and France did not tell the whole European story. I asked for a regional view alongside the individual examples, so the selection of places would not carry more weight than it should.",
-              "Keep interpretation within the evidence. Aggregate changes show how results differed between rounds; they do not establish how individual people switched their votes. Source links and methodology notes give readers a way to examine those boundaries."
-            ],
-            "layout": "decisions",
-            "label": "Strategic judgment",
-            "navLabel": "The decisions"
+              "Separate facts from positioning: product authority establishes what can be claimed; messaging determines how to communicate it for a buyer",
+              "Preserve exact edits: compile the wording the PMM submitted and leave other fields intact",
+              "Keep approval human: a successful technical check does not approve a claim or authorize publication",
+              "Make conflicts recoverable: preserve the original, submitted and current versions so the author can resolve a stale edit",
+              "Simplify authoring: prove one reliable change cycle in a familiar document workflow before adding more custom automation"
+            ]
           },
           {
-            "id": "people",
-            "title": "Making space for the people behind the numbers",
+            "id": "evaluation",
+            "title": "What I built and tested",
             "paragraphs": [
-              "I also wanted the atlas to convey what participation involved. I asked to include stories of people travelling by boat, offering lifts, and helping others reach the polls alongside the political context and disputes. That widened the story from the outcome of voting to the effort people made to take part.",
-              "The resulting project brings research, editorial judgment, and product design into one public experience. It reflects an approach I bring to product marketing: find the question people care about, turn complexity into a clear story, and make it easy to go deeper."
+              "The project produced a working foundation for validating structured messaging and proposing controlled changes for review. Development checks cover exact wording, untouched-field preservation, placeholders, stale edits, changed bindings and recovery from partial failures.",
+              "To make that behavior inspectable, I ran the existing compiler against a temporary local fixture using invented wording. One text edit produced a validated candidate and a change receipt. A separate comparison against a newer message returned STALE_AUTHORING_VIEW with no proposed changes."
             ],
-            "layout": "text",
-            "label": "Human context",
-            "navLabel": "The people"
+            "demo": {
+              "label": "Sanitized local demonstration — invented wording, real compiler output",
+              "before": "Find the policy you need.",
+              "after": "Find the policy and its source.",
+              "receipt": "{\n  \"receipt_version\": 1,\n  \"cycle_id\": \"880c05cc9c037bdf1f9e10abf69b1fa5480860d8b08ca17b2af11846079b1ae7\",\n  \"baseline_commit\": \"4bad383c5006fdf76e6f2352a99388112fd2d566\",\n  \"changed_field\": \"text\",\n  \"before\": \"Find the policy you need.\",\n  \"after\": \"Find the policy and its source.\",\n  \"compiler_status\": \"PREPARED\",\n  \"candidate_file_count\": 1\n}",
+              "stale": "Current message: Find the current policy and owner.\nSubmitted edit: Find the policy and its source.\nResult: STALE_AUTHORING_VIEW\nProposed changes: []",
+              "note": "This demonstrates candidate compilation and conflict detection. It is not a customer change, approval event or live document synchronization.",
+              "url": "examples/messaging-as-code/change-demonstration.json"
+            },
+            "status": "Current status: live document synchronization remains incomplete, and adoption and efficiency gains have not yet been measured. The evidence register records the integration and implementation boundaries."
+          },
+          {
+            "id": "learning",
+            "title": "What I learned",
+            "paragraphs": [
+              "The central design question was how to make messaging easier to reuse while keeping people accountable for its meaning and approval. The pilot showed that the collaboration experience is part of that governance: a technically controlled workflow still fails if the author cannot easily find and review the wording.",
+              "I would now prove the simplest complete human change cycle first, then add automation where it removes effort without obscuring ownership."
+            ]
           }
-        ]
-      }
-    },
-    {
-      "slug": "ai-product-strategy",
-      "title": "AI Product Strategy",
-      "category": "technical",
-      "tag": "Technical expertise",
-      "summary": "Combining Product School courses with self-guided building and testing to develop practical judgment about AI products and PMM workflows.",
-      "demonstrates": "AI product judgment, pricing strategy, agent prototyping, workflow design, technical curiosity, and applied PMM experimentation.",
-      "proof": "Product School coursework, AI pricing study, this portfolio agent, and builds using Claude, ChatGPT, Codex, Replit, Lovable, ElevenLabs, and ZoomMate.",
-      "image": "assets/evidence/ai-product-strategy.jpg",
-      "sourceUrl": "https://github.com/shaunaleebrennan",
-      "evidence": [
-        {
-          "title": "Try IT Pressure Test",
-          "url": "it-pressure-test/",
-          "kind": "Public build",
-          "note": "IT-buyer lenses, evidence diagnostics, and in-tool deep review; human judgment remains accountable."
-        },
-        {
-          "title": "Inspect the rubric and implementation",
-          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa",
-          "kind": "Source repository",
-          "note": "Review the framework, worked example, and validation checks."
-        },
-        {
-          "title": "Read the positioning pressure test",
-          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-buyer-integration-2026-09-21.md",
-          "kind": "Evaluation evidence",
-          "note": "Adversarial scoring and import checks, fixes, and remaining calibration limits."
-        },
-        {
-          "title": "Explore the Portfolio Voice Agent",
-          "url": "case-study.html?case=portfolio-voice-agent",
-          "kind": "Related case study",
-          "note": "A concrete example of agent design, integration, and evaluation."
-        }
-      ],
-      "caseStudy": {
-        "overview": {
-          "eyebrow": "Learn. Build. Apply.",
-          "lead": "I don't want to market AI from the sidelines. I learn how the systems work, build with them and use that experience to make better product and GTM decisions.",
-          "learning": "AI fluency should improve the decisions you make. Knowing the terminology is the entry fee."
-        },
-        "eyebrow": "Building an AI-enabled PMM operating model",
-        "context": "AI-first Product Marketing is not simply a team using ChatGPT. Shauna has been exploring how AI can change the operating model of PMM itself—and where human judgment must remain accountable.",
-        "challenge": "High-value PMM time disappears into retrieval, repeated seller questions, monitoring, synthesis, recurring research, and first-pass analysis. The strategic question is which work requires human judgment and which work can be processed or automated.",
-        "insight": "AI does more of the processing. PMM remains accountable for the thinking. Retrieval, extraction, monitoring, classification, and repeatable analysis can accelerate; positioning, pricing, claims, category strategy, and executive recommendations still need accountable judgment.",
-        "contribution": [
-          "Seller-facing competitive intelligence and automated monitoring",
-          "AI-assisted win/loss analysis and lightweight decision tools",
-          "IT Pressure Test",
-          "This portfolio and its grounded agent experience",
-          "Reusable research, synthesis, and PMM workflows",
-          "Continued product and AI-pricing study"
         ],
-        "decisions": [
-          "Design around workflows rather than collecting tools",
-          "Keep a human in the loop for consequential claims and decisions",
-          "Encode PMM expertise into evaluation criteria",
-          "Use prototypes to learn before deciding whether to build, buy, or stop"
-        ],
-        "outcome": "The result is a growing set of practical systems that increase PMM leverage while keeping strategic accountability human. The tools are not the proof; the workflow design and operating choices are.",
-        "learning": "Technical expertise for a PMM is the ability to understand enough of the system to make better product, pricing, trust, and go-to-market decisions.",
         "story": [
           {
-            "id": "motivation",
-            "title": "Learning through the work",
+            "id": "need",
+            "title": "Messaging that can keep up",
             "paragraphs": [
-              "AI changes both what enterprises can buy and how marketing teams can operate. I wanted a practical understanding of agents, orchestration, context, retrieval and human oversight—not just the vocabulary."
+              "Sales and Marketing reuse messaging across products, audiences and assets. Each copy-and-paste can weaken the link to its original meaning, supporting evidence or approval. I wanted a system where PMM could maintain the source and teams and AI agents could reuse it reliably."
             ],
             "layout": "split",
-            "label": "Applied learning",
-            "navLabel": "The motivation",
+            "label": "The operating problem",
+            "navLabel": "The need",
             "aside": {
-              "label": "The learning standard",
-              "text": "Understand how agents, context, retrieval, and human oversight affect the products and workflows I work on."
+              "label": "The design requirement",
+              "text": "Give teams and AI agents a reliable source of messaging while keeping PMM ownership and human review clear."
             }
           },
           {
-            "id": "practice",
-            "title": "Study it. Build it. Test it.",
+            "id": "ownership",
+            "title": "Designing for trust and reuse",
             "paragraphs": [
-              "I completed Product School courses in AI Product Strategy for Leaders, Agentic Workflows & Loops, and Go-to-Market, and I’m undertaking its Product Manager Certification. Alongside formal learning, I build and test agents, automation workflows, and lightweight applications using coding assistants, n8n, and other developer tools.",
-              "Projects include the live conversational portfolio agent, competitive research workflows, and Messaging as Code. I test what works, what fails, and where human approval is still essential."
+              "I led the project, wrote the product messaging with PMM-team support, and defined the content model, approval process, and acceptance criteria. The goal was to give people and AI agents a source they could reuse while keeping PMM ownership and human review clear."
             ],
             "layout": "artifact",
-            "label": "Learning through practice",
-            "navLabel": "The practice",
+            "label": "Governance and reuse",
+            "navLabel": "The system",
             "visual": {
-              "type": "journey",
-              "title": "Learn. Build. Apply.",
+              "type": "relationship",
+              "title": "A governed source for reuse",
               "steps": [
-                "Formal learning",
-                "Practical builds",
-                "Testing + iteration",
-                "Product + GTM judgment"
+                "PMM-owned messaging",
+                "Human review",
+                "People + AI agents"
               ],
-              "caption": "Product School courses, self-guided builds, and hands-on workflow testing."
+              "caption": "Content model · Approval process · Acceptance criteria",
+              "linkLabel": null
             }
           },
           {
-            "id": "application",
-            "title": "Bringing that judgment into product marketing",
+            "id": "iteration",
+            "title": "The workflow changed after testing",
             "paragraphs": [
-              "More technical fluency in the AI products I market, better questions for Product and Engineering, and working examples of AI applied to genuine PMM problems. These are practical builds and pilots, not claims of organisation-wide automation or measured efficiency gains."
+              "I tested AI-assisted authoring and revision workflows, then changed direction when a GitHub-based approach proved less practical for how the team works. The resulting in-house approach uses Zoom agents and Canvas to make messaging easier to find, maintain, and review."
+            ],
+            "layout": "split",
+            "label": "Iteration",
+            "navLabel": "The iteration",
+            "visual": {
+              "type": "compare",
+              "title": "The authoring approach evolved",
+              "beforeLabel": "Initial approach",
+              "before": "GitHub-based authoring",
+              "afterLabel": "After workflow testing",
+              "after": "Zoom agents + Canvas",
+              "caption": "The content model and human review remained central; the authoring approach changed to fit how the team works."
+            }
+          },
+          {
+            "id": "status",
+            "title": "A completed pilot, with more to build",
+            "paragraphs": [
+              "The HQ Agent pilot is complete and connected to the sales enablement agent, with positive early feedback. Wider message coverage and a design-system-connected content generation workflow are planned, not yet established business outcomes. This is a working example of how I apply hands-on AI knowledge to improve PMM operations—not a claim that the full organisation has adopted it."
             ],
             "layout": "text",
-            "label": "Product marketing application",
-            "navLabel": "The application"
+            "label": "Pilot and next steps",
+            "navLabel": "The pilot"
           }
         ]
       }
@@ -1295,6 +678,396 @@
       }
     },
     {
+      "slug": "workvivo-hq",
+      "title": "Workvivo HQ",
+      "category": "gtm",
+      "tag": "GTM",
+      "summary": "Evolving Workvivo’s employee experience platform narrative into a digital HQ, to stand out in a crowded AI-native employee experience market while staying relevant to champion personas.",
+      "demonstrates": "Brand narrative, research synthesis, Narrative Design, strategic positioning, persona messaging, and cross-functional launch execution.",
+      "proof": "Public launch page, GTM kits and sales enablement, campaign system, Shauna launch post, and public peer testimonial.",
+      "image": "assets/evidence/workvivo-hq.jpg",
+      "sourceUrl": "https://www.workvivo.com/hq/",
+      "evidence": [
+        {
+          "title": "Workvivo HQ product page",
+          "url": "https://www.workvivo.com/hq/",
+          "kind": "Public product context",
+          "note": "Shows the product narrative; Shauna’s contribution is described in this case study."
+        },
+        {
+          "title": "Shauna’s launch post",
+          "url": "https://www.linkedin.com/posts/shaunalee_work-has-a-new-address-introducing-workvivo-activity-7472968114830454786-qTjH",
+          "kind": "Public launch activity",
+          "note": "Launch commentary and peer feedback. LinkedIn may require sign-in."
+        },
+        {
+          "title": "Read the narrative notes",
+          "url": "documents/hq-narrative.html",
+          "kind": "Supporting document",
+          "note": "Buyer problem, product pillars, and launch system."
+        }
+      ],
+      "caseStudy": {
+        "overview": {
+          "eyebrow": "Standing out in a crowded AI-native employee experience market",
+          "lead": "I led the brand narrative, positioning, and messaging behind Workvivo HQ: evolving our employee experience platform story into a digital HQ our customer base could understand, with messaging adapted by persona.",
+          "learning": "An AI story that erases what made you different is a concession to your competitors."
+        },
+        "eyebrow": "Standing out in a crowded AI-native employee experience market",
+        "context": "Workvivo was positioned as the employee experience platform, with messaging adapted by persona. The challenge was to stand out in a crowded AI-native employee experience market as AI itself became increasingly commoditised.",
+        "challenge": "How could Workvivo differentiate in a crowded AI-native employee experience market while staying relevant to its champion personas and understandable to its entire customer base?",
+        "insight": "The narrative centred on a digital HQ for the modern workforce. Rather than overusing AI in the copy, it made the platform’s ambition understandable through the idea of a digital HQ, with messaging adapted by persona.",
+        "contribution": [
+          "Market and buyer research synthesis using Narrative Design",
+          "Brand narrative and strategic positioning",
+          "Persona-specific messaging architecture",
+          "Portfolio story connecting Workvivo HQ, HQ Agent, and Seer",
+          "Launch messaging, website, campaign direction, and seller enablement",
+          "Analyst framing and competitive guidance"
+        ],
+        "decisions": [
+          "Differentiate within a crowded AI-native employee experience market",
+          "Express the platform ambition through digital HQ",
+          "Avoid overusing AI in the copy",
+          "Adapt messaging by persona while staying relevant to existing champions"
+        ],
+        "outcome": "Workvivo publicly launched HQ while serving 9 million users and after surpassing $100M ARR. Those are company proof points during Shauna’s tenure, not outcomes attributed to her alone.",
+        "learning": "An AI story that erases what made you different is a concession to your competitors.",
+        "story": [
+          {
+            "id": "problem",
+            "title": "Standing out in a crowded AI-native EX market",
+            "label": "The brand challenge",
+            "navLabel": "The challenge",
+            "layout": "split",
+            "paragraphs": [
+              "Workvivo was the **employee experience platform**, with messaging adapted by persona. The challenge was standing out in a crowded AI-native employee experience market.",
+              "As AI became increasingly commoditised, we needed a way to differentiate while staying relevant to our champion personas. Overusing AI in the copy would not give us that distinction. The brand narrative needed to make our ambition understandable to the entire customer base."
+            ],
+            "aside": {
+              "label": "The strategic question",
+              "text": "How could Workvivo differentiate in a crowded AI-native employee experience market while staying relevant to its champion personas and understandable to its entire customer base?"
+            }
+          },
+          {
+            "id": "signals",
+            "label": "Research into decisions",
+            "navLabel": "The signals",
+            "title": "The signals behind the story",
+            "layout": "artifact",
+            "paragraphs": [
+              "Competitive research showed AI-native positioning becoming common across the employee experience market. Buyer message testing helped identify which parts of Workvivo’s story earned interest.",
+              "The two-wave Wynter study favoured organisational context over an unsupported adoption claim. I used those signals to sharpen the differentiation and the proof behind it."
+            ],
+            "visual": {
+              "type": "signals",
+              "title": "What the messaging research told us",
+              "rows": [
+                {
+                  "value": 69,
+                  "label": "Company culture, people, and systems",
+                  "detail": "Positive response to the organisational-context message."
+                },
+                {
+                  "value": 31,
+                  "label": "Employees choose to use Workvivo",
+                  "detail": "Positive response to the adoption-led message."
+                }
+              ],
+              "caption": "Wynter · March–April 2026 · 45 participants. Reactions to different statements; this was not a test of the HQ name or a measure of market demand.",
+              "href": "assets/documents/workvivo-hq-research-brief.pdf",
+              "linkLabel": "Read the research brief (PDF)"
+            }
+          },
+          {
+            "id": "narrative",
+            "title": "A headquarters for every employee",
+            "label": "The narrative idea",
+            "navLabel": "The narrative",
+            "layout": "artifact",
+            "paragraphs": [
+              "The strategic reframe was about **where AI lives**: inside the employee experience, where people communicate, find knowledge, and get work done.",
+              "Headquarters made that ambition tangible. It could speak to the whole customer base while keeping employee experience central, with messaging adapted by persona."
+            ],
+            "visual": {
+              "type": "statement",
+              "title": "The brand narrative",
+              "eyebrow": "Workvivo HQ",
+              "statement": "Every employee deserves a headquarters.",
+              "answer": "Now they have one.",
+              "caption": "The digital HQ for the modern workforce."
+            },
+            "media": {
+              "type": "wistia",
+              "id": "9x6vj5cl93",
+              "label": "The narrative in motion",
+              "title": "Workvivo HQ – Launch Video",
+              "caption": "35-second launch film · Original Workvivo video.",
+              "source": "https://www.workvivo.com/hq/"
+            }
+          },
+          {
+            "id": "architecture",
+            "title": "One story. A clear messaging architecture.",
+            "label": "From narrative to messaging",
+            "navLabel": "The architecture",
+            "layout": "showcase",
+            "paragraphs": [
+              "The product pillars gave the platform story structure. The persona matrix changed the emphasis, value, and proof for each audience, while keeping the same HQ narrative."
+            ],
+            "visual": {
+              "type": "messaging-house",
+              "title": "How the narrative becomes a message system",
+              "promise": "Workvivo HQ",
+              "subtitle": "Every employee deserves a headquarters. Now they have one.",
+              "pillars": [
+                {
+                  "title": "Communication & Engagement",
+                  "detail": "Connection, participation, and the organisation’s shared story."
+                },
+                {
+                  "title": "Search & Knowledge",
+                  "detail": "Finding information and answers in the flow of work."
+                },
+                {
+                  "title": "People Intelligence",
+                  "detail": "Understanding the employee experience and informing action."
+                }
+              ],
+              "personas": [
+                {
+                  "name": "IT",
+                  "focus": "Governance, adoption, and consolidation",
+                  "detail": "A governed experience layer, with proof around adoption, ROI, and the AI foundation."
+                },
+                {
+                  "name": "HR",
+                  "focus": "Trust, inclusion, and listening",
+                  "detail": "Support employees through change, with engagement and listening evidence."
+                },
+                {
+                  "name": "Comms",
+                  "focus": "Reach, relevance, and understanding",
+                  "detail": "Make change understood and actionable, with reach, engagement, and analytics proof."
+                },
+                {
+                  "name": "Employees",
+                  "focus": "Simplicity, clarity, and access",
+                  "detail": "Understand what is happening, find what they need, and get work done."
+                }
+              ],
+              "caption": "Product pillars and persona priorities from the HQ messaging work. Select an audience to see how the emphasis changes."
+            }
+          },
+          {
+            "id": "framework",
+            "label": "A repeatable method",
+            "navLabel": "The framework",
+            "title": "A method behind the message",
+            "layout": "artifact",
+            "paragraphs": [
+              "I used Marcus Andrews’ five-stage Narrative Design framework to connect market change to audience stakes, a practical response, and Workvivo’s role.",
+              "That sequence made the argument reusable across executive presentations, analyst conversations, and persona messaging."
+            ],
+            "visual": {
+              "type": "steps",
+              "title": "Narrative Design, applied",
+              "steps": [
+                {
+                  "title": "The change",
+                  "detail": "AI was changing how employees access information and get work done, while AI-native claims were becoming common across the employee experience market."
+                },
+                {
+                  "title": "The impact",
+                  "detail": "The narrative explored what that shift meant for employees navigating fragmented tools, and for IT, HR, and Comms supporting the change."
+                },
+                {
+                  "title": "The new game",
+                  "detail": "Put AI into the employee experience where people communicate, find knowledge, and act. The strategic reframe was about where AI lives; headquarters made that idea tangible."
+                },
+                {
+                  "title": "Why it’s hard",
+                  "detail": "Scattered systems, adoption friction, and unequal access across desk and frontline roles were barriers addressed in the original narrative."
+                },
+                {
+                  "title": "The solution",
+                  "detail": "Workvivo HQ: “Every employee deserves a headquarters. Now they have one.” Connect that promise to the product experience and adapt the messages and proof by persona."
+                }
+              ],
+              "href": "playbook.html",
+              "linkLabel": "Explore the Narrative Design playbook"
+            }
+          },
+          {
+            "id": "contribution",
+            "title": "Make the story usable in the field",
+            "label": "GTM activation",
+            "navLabel": "The execution",
+            "layout": "artifact",
+            "paragraphs": [
+              "I translated the narrative into GTM kits and seller enablement: the platform evolution story, persona messages, talk tracks, and guidance on how to move from the HQ vision into product detail.",
+              "I carried the positioning into launch messaging, the website, analyst framing, competitive guidance, and campaign direction, working across Product, Sales, Growth, and Marketing."
+            ],
+            "visual": {
+              "type": "steps",
+              "title": "From master narrative to market",
+              "steps": [
+                {
+                  "title": "Equip the seller",
+                  "detail": "Platform story, persona messages, evolution talk track, and GTM kits."
+                },
+                {
+                  "title": "Align the launch",
+                  "detail": "Shared narrative across leadership, Marketing, and field teams."
+                },
+                {
+                  "title": "Activate by audience",
+                  "detail": "Adapt the emphasis for sales conversations, campaigns, the website, and analysts."
+                }
+              ],
+              "caption": "Strategic direction and messaging led by PMM; delivery shared across teams."
+            }
+          },
+          {
+            "id": "result",
+            "title": "Positioning that guided GTM decisions",
+            "label": "Launch and alignment",
+            "navLabel": "The delivery",
+            "layout": "artifact",
+            "paragraphs": [
+              "The positioning gave teams a shared basis for decisions: which value to emphasise, how to adapt the story by persona, and which proof to use. I carried that foundation into launch messaging, campaigns, analyst framing, and sales enablement.",
+              "The HQ launch at WOW was highlighted in the team retrospective for company-wide message alignment, from leadership to SDRs. That feedback showed the narrative becoming a shared language across the business."
+            ],
+            "visual": {
+              "type": "quote",
+              "title": "Launch retrospective",
+              "quote": "From John down to every SDR speaking the same language.",
+              "attribution": "PMM team retrospective · August 2026",
+              "caption": "Team feedback on message alignment at the Workvivo HQ launch at WOW."
+            }
+          }
+        ]
+      },
+      "heroImage": {
+        "src": "assets/evidence/workvivo-hq-hero.png",
+        "alt": "Workvivo HQ launch artwork featuring an employee using a phone alongside the Workvivo HQ branding.",
+        "width": 1040,
+        "height": 600
+      }
+    },
+    {
+      "slug": "meta-migration",
+      "title": "The Meta Migration",
+      "category": "competitive",
+      "tag": "Competitive displacement",
+      "summary": "Shaping migration positioning and seller strategy during Meta Workplace’s closure, as part of Workvivo’s Forrester-recognised response.",
+      "demonstrates": "Migration positioning, competitive differentiation, market messaging, seller strategy, enablement, and fast cross-functional GTM execution.",
+      "proof": "Forrester named Workvivo its 2026 B2B Return on Integration Honors winner for a cross-functional response to a major market disruption. Shauna’s portfolio identifies the recognised programme as the Meta migration and records her significant GTM role; the award is a company outcome.",
+      "image": "assets/evidence/meta-migration.jpg",
+      "sourceUrl": "https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/",
+      "evidence": [
+        {
+          "title": "Forrester winner announcement",
+          "url": "https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/",
+          "kind": "External company recognition",
+          "note": "Verifies Workvivo’s company award. The announcement does not name Meta."
+        },
+        {
+          "title": "Workplace migration programme",
+          "url": "https://www.workvivo.com/workplace/",
+          "kind": "Public company context",
+          "note": "Company migration offering; Shauna’s GTM role is professional self-report."
+        },
+        {
+          "title": "Read the claims and sources",
+          "url": "documents/evidence-register.html",
+          "kind": "Evidence record",
+          "note": "Separates the external award, programme attribution, and individual contribution."
+        }
+      ],
+      "caseStudy": {
+        "overview": {
+          "eyebrow": "Turning a market disruption into a clear reason to choose Workvivo",
+          "lead": "When Meta announced Workplace's closure, its customers had to move. But Workvivo still had to earn their choice.",
+          "learning": "A competitor’s exit creates urgency. It does not create a reason to choose you."
+        },
+        "eyebrow": "Turning disruption into commercial opportunity",
+        "context": "Meta announced the closure of Workplace. Workvivo was named Meta’s only preferred migration partner, creating a major, time-bound market opportunity and a highly visible competitive GTM motion.",
+        "challenge": "Workvivo had to move quickly while differentiating against competitors, reducing migration risk, addressing customer uncertainty, enabling sellers, and converting a temporary market event into durable commercial opportunity.",
+        "insight": "The winning story needed to combine urgency with reassurance. Migration could not feel like a technical transfer alone; it needed to feel like a credible path from a closing platform to a stronger long-term employee experience.",
+        "contribution": [
+          "Migration positioning and narrative",
+          "Competitive differentiation",
+          "Seller strategy and enablement",
+          "Market messaging",
+          "Cross-functional coordination of the commercial motion",
+          "Helping translate the market event into a repeatable customer story"
+        ],
+        "decisions": [
+          "Lead with a proven, low-risk migration path",
+          "Differentiate the destination—not only the transfer process",
+          "Equip sellers for a compressed, competitive decision cycle",
+          "Balance market urgency with customer confidence"
+        ],
+        "outcome": "Forrester named Workvivo its 2026 B2B Return on Integration Honors winner for a companywide response to a major market disruption. Shauna’s portfolio identifies the recognised programme as the Meta migration and records her as a significant GTM contributor. The award is a company outcome; no migration-share or ARR result is attributed to Shauna.",
+        "award": {
+          "title": "2026 B2B Return on Integration Honors",
+          "issuer": "Forrester",
+          "description": "Forrester recognised Workvivo for creating exceptional business value by aligning product, engineering, sales, marketing, customer success, and partnerships around a major market disruption. Shauna’s portfolio identifies that company programme as the Meta migration.",
+          "url": "https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/"
+        },
+        "learning": "When a market window is short, clarity and coordination become competitive advantages. The best displacement story makes both the move and the destination feel compelling.",
+        "story": [
+          {
+            "id": "problem",
+            "title": "A forced move. A competitive choice.",
+            "paragraphs": [
+              "Workvivo was named Meta's only preferred migration partner, creating a rare, time-sensitive opportunity. Buyers needed reassurance about moving their communities, evidence that the new platform would meet their needs and a reason to choose Workvivo over competing alternatives."
+            ],
+            "layout": "split",
+            "label": "Market disruption",
+            "navLabel": "The opening",
+            "aside": {
+              "label": "The strategic tension",
+              "text": "Workplace customers had to move. Workvivo still had to earn their choice."
+            }
+          },
+          {
+            "id": "contribution",
+            "title": "Giving customers a reason to choose",
+            "paragraphs": [
+              "I led migration positioning, competitive differentiation and seller messaging, connecting the practical migration story to the longer-term value of employee experience. I worked across functions to put the right narrative, objections and enablement into the field during a compressed decision window."
+            ],
+            "layout": "artifact",
+            "label": "Migration positioning",
+            "navLabel": "The strategy",
+            "visual": {
+              "type": "journey",
+              "title": "Give buyers a reason to move with confidence",
+              "steps": [
+                "Migration reassurance",
+                "Competitive differentiation",
+                "Long-term employee value"
+              ],
+              "caption": "Positioning, objections, and seller enablement for a compressed decision window.",
+              "href": "https://www.workvivo.com/workplace/",
+              "linkLabel": "Explore the migration programme"
+            }
+          },
+          {
+            "id": "result",
+            "title": "A coordinated market response",
+            "paragraphs": [
+              "A coordinated GTM approach that helped the wider business compete for Workplace customers. Workvivo's company-wide response was recognised with Forrester's **2026 B2B Return on Integration Honors**. The award belongs to the cross-functional company effort; my contribution was positioning, competitive strategy and seller enablement. Internal retrospectives describe substantial company-level customer capture and revenue growth. I have not included those figures here without an approved public source and a clear attribution boundary."
+            ],
+            "layout": "text",
+            "label": "Cross-functional delivery",
+            "navLabel": "The response"
+          }
+        ]
+      }
+    },
+    {
       "slug": "market-leadership",
       "title": "Analyst Relations & Category Leadership",
       "category": "analyst",
@@ -1416,113 +1189,340 @@
       }
     },
     {
-      "slug": "meta-migration",
-      "title": "The Meta Migration",
-      "category": "competitive",
-      "tag": "Competitive displacement",
-      "summary": "Shaping migration positioning and seller strategy during Meta Workplace’s closure, as part of Workvivo’s Forrester-recognised response.",
-      "demonstrates": "Migration positioning, competitive differentiation, market messaging, seller strategy, enablement, and fast cross-functional GTM execution.",
-      "proof": "Forrester named Workvivo its 2026 B2B Return on Integration Honors winner for a cross-functional response to a major market disruption. Shauna’s portfolio identifies the recognised programme as the Meta migration and records her significant GTM role; the award is a company outcome.",
-      "image": "assets/evidence/meta-migration.jpg",
-      "sourceUrl": "https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/",
+      "slug": "ai-product-strategy",
+      "title": "AI Product Strategy",
+      "category": "technical",
+      "tag": "Technical expertise",
+      "summary": "Combining Product School courses with self-guided building and testing to develop practical judgment about AI products and PMM workflows.",
+      "demonstrates": "AI product judgment, pricing strategy, agent prototyping, workflow design, technical curiosity, and applied PMM experimentation.",
+      "proof": "Product School coursework, AI pricing study, this portfolio agent, and builds using Claude, ChatGPT, Codex, Replit, Lovable, ElevenLabs, and ZoomMate.",
+      "image": "assets/evidence/ai-product-strategy.jpg",
+      "sourceUrl": "https://github.com/shaunaleebrennan",
       "evidence": [
         {
-          "title": "Forrester winner announcement",
-          "url": "https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/",
-          "kind": "External company recognition",
-          "note": "Verifies Workvivo’s company award. The announcement does not name Meta."
+          "title": "Try IT Pressure Test",
+          "url": "it-pressure-test/",
+          "kind": "Public build",
+          "note": "IT-buyer lenses, evidence diagnostics, and in-tool deep review; human judgment remains accountable."
         },
         {
-          "title": "Workplace migration programme",
-          "url": "https://www.workvivo.com/workplace/",
-          "kind": "Public company context",
-          "note": "Company migration offering; Shauna’s GTM role is professional self-report."
+          "title": "Inspect the rubric and implementation",
+          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa",
+          "kind": "Source repository",
+          "note": "Review the framework, worked example, and validation checks."
         },
         {
-          "title": "Read the claims and sources",
-          "url": "documents/evidence-register.html",
-          "kind": "Evidence record",
-          "note": "Separates the external award, programme attribution, and individual contribution."
+          "title": "Read the positioning pressure test",
+          "url": "https://github.com/shaunaleebrennan/ai-positioning-qa/blob/main/evals/it-buyer-integration-2026-09-21.md",
+          "kind": "Evaluation evidence",
+          "note": "Adversarial scoring and import checks, fixes, and remaining calibration limits."
+        },
+        {
+          "title": "Explore the Portfolio Voice Agent",
+          "url": "case-study.html?case=portfolio-voice-agent",
+          "kind": "Related case study",
+          "note": "A concrete example of agent design, integration, and evaluation."
         }
       ],
       "caseStudy": {
         "overview": {
-          "eyebrow": "Turning a market disruption into a clear reason to choose Workvivo",
-          "lead": "When Meta announced Workplace's closure, its customers had to move. But Workvivo still had to earn their choice.",
-          "learning": "A competitor’s exit creates urgency. It does not create a reason to choose you."
+          "eyebrow": "Learn. Build. Apply.",
+          "lead": "I don't want to market AI from the sidelines. I learn how the systems work, build with them and use that experience to make better product and GTM decisions.",
+          "learning": "AI fluency should improve the decisions you make. Knowing the terminology is the entry fee."
         },
-        "eyebrow": "Turning disruption into commercial opportunity",
-        "context": "Meta announced the closure of Workplace. Workvivo was named Meta’s only preferred migration partner, creating a major, time-bound market opportunity and a highly visible competitive GTM motion.",
-        "challenge": "Workvivo had to move quickly while differentiating against competitors, reducing migration risk, addressing customer uncertainty, enabling sellers, and converting a temporary market event into durable commercial opportunity.",
-        "insight": "The winning story needed to combine urgency with reassurance. Migration could not feel like a technical transfer alone; it needed to feel like a credible path from a closing platform to a stronger long-term employee experience.",
+        "eyebrow": "Building an AI-enabled PMM operating model",
+        "context": "AI-first Product Marketing is not simply a team using ChatGPT. Shauna has been exploring how AI can change the operating model of PMM itself—and where human judgment must remain accountable.",
+        "challenge": "High-value PMM time disappears into retrieval, repeated seller questions, monitoring, synthesis, recurring research, and first-pass analysis. The strategic question is which work requires human judgment and which work can be processed or automated.",
+        "insight": "AI does more of the processing. PMM remains accountable for the thinking. Retrieval, extraction, monitoring, classification, and repeatable analysis can accelerate; positioning, pricing, claims, category strategy, and executive recommendations still need accountable judgment.",
         "contribution": [
-          "Migration positioning and narrative",
-          "Competitive differentiation",
-          "Seller strategy and enablement",
-          "Market messaging",
-          "Cross-functional coordination of the commercial motion",
-          "Helping translate the market event into a repeatable customer story"
+          "Seller-facing competitive intelligence and automated monitoring",
+          "AI-assisted win/loss analysis and lightweight decision tools",
+          "IT Pressure Test",
+          "This portfolio and its grounded agent experience",
+          "Reusable research, synthesis, and PMM workflows",
+          "Continued product and AI-pricing study"
         ],
         "decisions": [
-          "Lead with a proven, low-risk migration path",
-          "Differentiate the destination—not only the transfer process",
-          "Equip sellers for a compressed, competitive decision cycle",
-          "Balance market urgency with customer confidence"
+          "Design around workflows rather than collecting tools",
+          "Keep a human in the loop for consequential claims and decisions",
+          "Encode PMM expertise into evaluation criteria",
+          "Use prototypes to learn before deciding whether to build, buy, or stop"
         ],
-        "outcome": "Forrester named Workvivo its 2026 B2B Return on Integration Honors winner for a companywide response to a major market disruption. Shauna’s portfolio identifies the recognised programme as the Meta migration and records her as a significant GTM contributor. The award is a company outcome; no migration-share or ARR result is attributed to Shauna.",
-        "award": {
-          "title": "2026 B2B Return on Integration Honors",
-          "issuer": "Forrester",
-          "description": "Forrester recognised Workvivo for creating exceptional business value by aligning product, engineering, sales, marketing, customer success, and partnerships around a major market disruption. Shauna’s portfolio identifies that company programme as the Meta migration.",
-          "url": "https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/"
+        "outcome": "The result is a growing set of practical systems that increase PMM leverage while keeping strategic accountability human. The tools are not the proof; the workflow design and operating choices are.",
+        "learning": "Technical expertise for a PMM is the ability to understand enough of the system to make better product, pricing, trust, and go-to-market decisions.",
+        "story": [
+          {
+            "id": "motivation",
+            "title": "Learning through the work",
+            "paragraphs": [
+              "AI changes both what enterprises can buy and how marketing teams can operate. I wanted a practical understanding of agents, orchestration, context, retrieval and human oversight—not just the vocabulary."
+            ],
+            "layout": "split",
+            "label": "Applied learning",
+            "navLabel": "The motivation",
+            "aside": {
+              "label": "The learning standard",
+              "text": "Understand how agents, context, retrieval, and human oversight affect the products and workflows I work on."
+            }
+          },
+          {
+            "id": "practice",
+            "title": "Study it. Build it. Test it.",
+            "paragraphs": [
+              "I completed Product School courses in AI Product Strategy for Leaders, Agentic Workflows & Loops, and Go-to-Market, and I’m undertaking its Product Manager Certification. Alongside formal learning, I build and test agents, automation workflows, and lightweight applications using coding assistants, n8n, and other developer tools.",
+              "Projects include the live conversational portfolio agent, competitive research workflows, and Messaging as Code. I test what works, what fails, and where human approval is still essential."
+            ],
+            "layout": "artifact",
+            "label": "Learning through practice",
+            "navLabel": "The practice",
+            "visual": {
+              "type": "journey",
+              "title": "Learn. Build. Apply.",
+              "steps": [
+                "Formal learning",
+                "Practical builds",
+                "Testing + iteration",
+                "Product + GTM judgment"
+              ],
+              "caption": "Product School courses, self-guided builds, and hands-on workflow testing."
+            }
+          },
+          {
+            "id": "application",
+            "title": "Bringing that judgment into product marketing",
+            "paragraphs": [
+              "More technical fluency in the AI products I market, better questions for Product and Engineering, and working examples of AI applied to genuine PMM problems. These are practical builds and pilots, not claims of organisation-wide automation or measured efficiency gains."
+            ],
+            "layout": "text",
+            "label": "Product marketing application",
+            "navLabel": "The application"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "brazil-in-red",
+      "title": "Brazil in Red",
+      "category": "technical",
+      "tag": "Data storytelling",
+      "summary": "From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.",
+      "demonstrates": "Research synthesis, data storytelling, product judgment, visual direction, and AI-assisted building.",
+      "proof": "Live bilingual atlas with interactive maps, round comparisons, source links, and methodology notes.",
+      "image": "assets/evidence/brazil-in-red.svg",
+      "sourceUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+      "projectUrl": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+      "projectLabel": "Explore the live atlas",
+      "projectPreview": {
+        "image": "assets/evidence/brazil-in-red-preview.jpg",
+        "alt": "Brazil in Red atlas opening screen, with its red photographic design and presidential result comparison.",
+        "caption": "The atlas opens with the national picture, then lets readers explore the results across Brazil and the world.",
+        "width": 2048,
+        "height": 853
+      },
+      "evidence": [
+        {
+          "title": "Explore Brazil in Red",
+          "url": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+          "kind": "Live personal project",
+          "note": "Explore the bilingual atlas, interactive maps, comparison tables, and sources and method section."
+        }
+      ],
+      "caseStudy": {
+        "overview": {
+          "eyebrow": "Turning curiosity into a story people can explore",
+          "lead": "A national result tells you who won. I wanted to understand what sat beneath it: the differences between places, the change between rounds, and the experience of Brazilians voting abroad. I turned those questions into Brazil in Red, a bilingual interactive atlas.",
+          "learning": "A chart can be accurate and still tell the wrong story. Choosing what to compare is part of the strategy."
         },
-        "learning": "When a market window is short, clarity and coordination become competitive advantages. The best displacement story makes both the move and the destination feel compelling.",
+        "story": [
+          {
+            "id": "curiosity",
+            "title": "Finding the story beneath the result",
+            "paragraphs": [
+              "The starting point was personal curiosity. As I explored the results, the question grew: how could I bring the national picture, regional differences, and overseas vote into one experience that made sense to someone arriving without all that context?",
+              "I chose to give the atlas an editorial direction, then let readers investigate it. The page moves from the national result to changes between rounds, Brazilian states, and voters abroad. That sequence gives people a way into the subject before asking them to navigate a map or interpret a table."
+            ],
+            "layout": "split",
+            "label": "Editorial direction",
+            "navLabel": "The question",
+            "visual": {
+              "type": "journey",
+              "title": "A way into the subject",
+              "steps": [
+                "National result",
+                "Changes between rounds",
+                "Brazilian states",
+                "Voters abroad"
+              ]
+            }
+          },
+          {
+            "id": "experience",
+            "title": "A guided story, with room to explore",
+            "paragraphs": [
+              "I set the questions, directed the research and AI-assisted build, and shaped the structure, visual direction, and interaction design. The published experience covers 27 Brazilian federal units and 31 selected overseas countries and territories, with English and Portuguese views.",
+              "I wanted the narrative and the interactive elements to work together. A reader can follow the page for the main patterns, then use the maps, round selectors, regional filters, and comparison tables to examine a place that matters to them. Headings, labels, and visual hierarchy had to support both ways of reading."
+            ],
+            "layout": "artifact",
+            "label": "Experience design",
+            "navLabel": "The experience",
+            "visual": {
+              "type": "image",
+              "title": "Inside the atlas",
+              "src": "assets/evidence/brazil-in-red-preview.jpg",
+              "alt": "The atlas opening screen with its national result comparison.",
+              "href": "https://brasil-voto-atlas-2026.shaunaleebrennan.chatgpt.site/",
+              "caption": "Start with the national picture, then explore places and comparisons.",
+              "scope": [
+                {
+                  "value": "27",
+                  "label": "Brazilian federal units"
+                },
+                {
+                  "value": "31",
+                  "label": "Selected overseas locations"
+                },
+                {
+                  "value": "2",
+                  "label": "Language views"
+                }
+              ]
+            }
+          },
+          {
+            "id": "decisions",
+            "title": "The choices behind the comparisons",
+            "paragraphs": [
+              "The most useful iterations came from questioning what a reader could reasonably conclude from each visual. I pushed for changes wherever an apparently simple comparison could imply something the data did not establish:"
+            ],
+            "items": [
+              "Give each percentage a clear meaning. A candidate’s share, the winner’s share, and a change between rounds answer different questions. The labels needed to identify the candidate, round, and voting basis.",
+              "Make the rounds comparable. Round one includes other candidates. The atlas distinguishes all-valid-vote shares from a comparison recalculated around the two finalists, and separates a change in winner from the size of the swing.",
+              "Choose the right level of context. Highlighting Ireland and France did not tell the whole European story. I asked for a regional view alongside the individual examples, so the selection of places would not carry more weight than it should.",
+              "Keep interpretation within the evidence. Aggregate changes show how results differed between rounds; they do not establish how individual people switched their votes. Source links and methodology notes give readers a way to examine those boundaries."
+            ],
+            "layout": "decisions",
+            "label": "Strategic judgment",
+            "navLabel": "The decisions"
+          },
+          {
+            "id": "people",
+            "title": "Making space for the people behind the numbers",
+            "paragraphs": [
+              "I also wanted the atlas to convey what participation involved. I asked to include stories of people travelling by boat, offering lifts, and helping others reach the polls alongside the political context and disputes. That widened the story from the outcome of voting to the effort people made to take part.",
+              "The resulting project brings research, editorial judgment, and product design into one public experience. It reflects an approach I bring to product marketing: find the question people care about, turn complexity into a clear story, and make it easy to go deeper."
+            ],
+            "layout": "text",
+            "label": "Human context",
+            "navLabel": "The people"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "playbook",
+      "title": "Narrative design",
+      "category": "gtm",
+      "tag": "Playbook",
+      "href": "playbook.html",
+      "summary": "Narrative Design: turn market insight into a strategic story. Explore the method, pressure-test the argument, and take the skill and workbook with you.",
+      "demonstrates": "Strategic narrative design, market insight, practical frameworks, and AI-assisted PMM workflows.",
+      "proof": "Interactive playbook, downloadable AI skill, and a four-page practical workbook.",
+      "image": "assets/playbooks/narrative-design-cover-v2.jpg",
+      "sourceUrl": "playbook.html",
+      "evidence": [
+        {
+          "title": "Explore the Narrative Design playbook",
+          "url": "playbook.html",
+          "kind": "Interactive playbook",
+          "note": "A practical method with worked examples and downloadable tools."
+        },
+        {
+          "title": "Download the narrative skill",
+          "url": "assets/playbooks/narrative-design-skill.zip",
+          "kind": "Reusable AI skill",
+          "note": "Method, pressure tests, AI narrative guidance, and spoken-flow review."
+        },
+        {
+          "title": "Download the workbook",
+          "url": "assets/playbooks/narrative-design-workbook.pdf",
+          "kind": "Printable workbook",
+          "note": "Four pages of prompts, decision guidance, and practical exercises."
+        }
+      ],
+      "caseStudy": {
+        "overview": {
+          "eyebrow": "Turning strategic PMM judgment into a method other people can use",
+          "lead": "I created a practical Narrative Design playbook that connects market insight to buying criteria, a useful approach, and a credible product contribution.",
+          "learning": "A narrative earns its place in strategy when it changes what you choose to build, sell, and stop doing."
+        },
         "story": [
           {
             "id": "problem",
-            "title": "A forced move. A competitive choice.",
+            "title": "Making the method usable",
             "paragraphs": [
-              "Workvivo was named Meta's only preferred migration partner, creating a rare, time-sensitive opportunity. Buyers needed reassurance about moving their communities, evidence that the new platform would meet their needs and a reason to choose Workvivo over competing alternatives."
+              "A compact framework can explain the sequence while leaving the hardest decisions to the reader. I wanted to make the reasoning usable: how to choose an insight, develop a meaningful approach, connect the product to it, and test whether the story works."
             ],
             "layout": "split",
-            "label": "Market disruption",
-            "navLabel": "The opening",
+            "label": "Framework design",
+            "navLabel": "The need",
             "aside": {
-              "label": "The strategic tension",
-              "text": "Workplace customers had to move. Workvivo still had to earn their choice."
+              "label": "The practical question",
+              "text": "How do you make the judgment behind a narrative method usable by someone applying it to their own work?"
             }
           },
           {
             "id": "contribution",
-            "title": "Giving customers a reason to choose",
+            "title": "The thinking behind the playbook",
             "paragraphs": [
-              "I led migration positioning, competitive differentiation and seller messaging, connecting the practical migration story to the longer-term value of employee experience. I worked across functions to put the right narrative, objections and enablement into the field during a compressed decision window."
+              "I developed the point of view, practical guidance, worked example, AI narrative checks, and downloadable companion. The playbook credits Marcus Andrews for the five-stage change-led method and distinguishes my practical extensions, including a reframe-led alternative when a market change is not established."
             ],
             "layout": "artifact",
-            "label": "Migration positioning",
-            "navLabel": "The strategy",
+            "label": "Method and extensions",
+            "navLabel": "The method",
             "visual": {
               "type": "journey",
-              "title": "Give buyers a reason to move with confidence",
+              "title": "Turn a method into practical decisions",
               "steps": [
-                "Migration reassurance",
-                "Competitive differentiation",
-                "Long-term employee value"
+                "Market insight",
+                "A meaningful approach",
+                "Product contribution",
+                "Pressure testing"
               ],
-              "caption": "Positioning, objections, and seller enablement for a compressed decision window.",
-              "href": "https://www.workvivo.com/workplace/",
-              "linkLabel": "Explore the migration programme"
+              "caption": "Based on Marcus Andrews’ method, with credited practical extensions.",
+              "href": "playbook.html",
+              "linkLabel": "Explore the interactive playbook"
             }
           },
           {
             "id": "result",
-            "title": "A coordinated market response",
+            "title": "A toolkit to put it into practice",
             "paragraphs": [
-              "A coordinated GTM approach that helped the wider business compete for Workplace customers. Workvivo's company-wide response was recognised with Forrester's **2026 B2B Return on Integration Honors**. The award belongs to the cross-functional company effort; my contribution was positioning, competitive strategy and seller enablement. Internal retrospectives describe substantial company-level customer capture and revenue growth. I have not included those figures here without an approved public source and a clear attribution boundary."
+              "A public interactive playbook with an annotated example, a browser-based brief export, a reusable narrative-design skill, and a printable workbook. The companion was checked through narrative development, a narrow edit, and Question Mode; those exercises do not establish customer or commercial impact."
             ],
-            "layout": "text",
-            "label": "Cross-functional delivery",
-            "navLabel": "The response"
+            "layout": "artifact",
+            "label": "Tools for application",
+            "navLabel": "The toolkit",
+            "visual": {
+              "type": "resources",
+              "title": "Use the toolkit",
+              "links": [
+                {
+                  "title": "Interactive playbook",
+                  "url": "playbook.html",
+                  "note": "Worked example and browser brief export"
+                },
+                {
+                  "title": "Narrative Design skill",
+                  "url": "assets/playbooks/narrative-design-skill.zip",
+                  "note": "Reusable companion for AI-assisted work"
+                },
+                {
+                  "title": "Printable workbook",
+                  "url": "assets/playbooks/narrative-design-workbook.pdf",
+                  "note": "Prompts and practical exercises"
+                }
+              ]
+            }
           }
         ]
       }

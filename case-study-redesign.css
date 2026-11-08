@@ -1,0 +1,120 @@
+/* Case studies — redesign layer (Complex → Clear).
+   Dark fold → light reading sheet → dark close. Loads after case-study.css,
+   so the existing story modules keep their structure and pick up the new
+   palette through the shared colour variables. */
+
+.cs-page{margin:0;background:#0B0B10;color:#F2F3EE;font-family:Inter,system-ui,sans-serif}
+.cs-page footer{display:block;padding:0;grid-template-columns:none;font-size:inherit;color:inherit}
+.cs-page main{display:block}
+
+/* Reading progress */
+.cs-progress{position:fixed;inset:0 0 auto;height:3px;z-index:60;pointer-events:none}
+.cs-progress span{display:block;height:100%;background:linear-gradient(90deg,#A796FF,#FFC4E1 45%,#C9FF63);transform:scaleX(0);transform-origin:0 50%}
+
+/* ---------- Fold (dark) ---------- */
+.cs-fold{position:relative;overflow:hidden;padding-top:96px}
+.cs-fold-glow{position:absolute;inset:-20% -10% auto auto;width:min(900px,90vw);height:900px;border-radius:50%;background:radial-gradient(circle at 60% 40%,rgba(143,123,255,.38) 0%,rgba(106,77,255,.12) 42%,rgba(106,77,255,0) 70%);pointer-events:none}
+.cs-fold .case-hero{position:relative;padding:clamp(40px,6vw,88px) 0 clamp(80px,9vw,140px)}
+.cs-fold .case-kicker{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#C9FF63}
+.cs-fold .case-kicker:before{display:none}
+.cs-num{color:#F2F3EE}
+.cs-num::after{content:'·';margin:0 10px;color:#8E918A}
+.cs-fold .case-title{margin:22px 0 24px;font:600 clamp(48px,6.4vw,100px)/.95 'Inter Tight',sans-serif;letter-spacing:-.055em;color:#F2F3EE;text-wrap:balance}
+.cs-fold .case-subtitle{font:500 clamp(22px,2.2vw,30px)/1.3 'Inter Tight',sans-serif;letter-spacing:-.025em;color:#F2F3EE}
+.cs-fold .case-intro{max-width:600px;color:#B4B7AE;font-size:18px;line-height:1.65}
+.cs-fold .pb-case-link{margin-top:32px}
+.cs-fold .pb-case-link a.button{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 24px;border:0;border-radius:999px;background:#C9FF63;color:#0B0B10;font:600 15px Inter,sans-serif;text-decoration:none;transition:transform .2s ease}
+.cs-fold .pb-case-link a.button:hover{transform:translateY(-2px);background:#D6FF85}
+.cs-fold .case-visual{max-width:400px;border-radius:24px;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 50px 100px rgba(0,0,0,.55),0 0 120px rgba(143,123,255,.25);will-change:transform}
+.cs-fold .case-hero--wide-art .case-visual{max-width:none}
+
+/* ---------- Reading sheet (light) ---------- */
+.cs-sheet{
+  --ink:#0B0B10;--muted:#55555E;--line:#E2E1D9;--panel:#FFFFFF;--bg:#F4F4EF;--acid:#4D7A00;
+  position:relative;z-index:2;background:#F4F4EF;color:#0B0B10;border-radius:40px;
+  box-shadow:0 -30px 80px rgba(0,0,0,.35);padding:clamp(48px,6vw,96px) 0 clamp(64px,7vw,112px)
+}
+.cs-sheet a{color:inherit}
+.cs-sheet .case-project-preview img{border-radius:20px;box-shadow:0 24px 60px rgba(11,11,16,.12)}
+.cs-sheet .case-project-preview figcaption{color:#55555E}
+.cs-sheet .ds-body{border-top:0}
+.cs-sheet .ds-section{padding:clamp(56px,6vw,88px) 0;border-bottom:1px solid #E2E1D9;scroll-margin-top:48px}
+.cs-sheet .ds-section:first-of-type{padding-top:8px}
+.cs-sheet .ds-section h2{font:600 clamp(32px,3.6vw,54px)/1.02 'Inter Tight',sans-serif;letter-spacing:-.045em;color:#0B0B10;text-wrap:balance}
+.cs-sheet .ds-section h3,.cs-sheet .ds-section h4{font-family:'Inter Tight',sans-serif;letter-spacing:-.02em;color:#0B0B10}
+.cs-sheet .ds-section-label{font:500 11px 'JetBrains Mono',monospace;letter-spacing:.14em;color:#6B6B73}
+.cs-sheet .ds-copy p,.cs-sheet .ds-secondary p{color:#2B2B32;font-size:18px;line-height:1.7}
+.cs-sheet .ds-copy p strong{color:#0B0B10}
+.cs-sheet .ds-copy li{color:#2B2B32}
+.cs-sheet .ds-visual{background:#FFFFFF;border:1px solid #E2E1D9;border-radius:24px;box-shadow:0 18px 50px rgba(11,11,16,.05)}
+.cs-sheet .ds-visual-link:hover{background:#F0EFE8}
+.cs-sheet .ds-step-number{background:#C9FF63;color:#0B0B10}
+.cs-sheet .ds-journey li:not(:last-child):after{background:#C9FF63}
+.cs-sheet .ds-signal meter::-webkit-meter-optimum-value{background:#4B2FE0}
+.cs-sheet .ds-signal:nth-child(2) meter::-webkit-meter-optimum-value{background:#A796FF}
+.cs-sheet .ds-signal meter::-moz-meter-bar{background:#4B2FE0}
+.cs-sheet .ds-decision{border-radius:22px;transition:transform .3s ease,box-shadow .3s ease}
+.cs-sheet .ds-decision:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(11,11,16,.08)}
+.cs-sheet .ds-question{border-radius:18px}
+
+/* Chapter navigation: sticky rail on wide screens, scrollable chips on small ones */
+.cs-sheet .ds-index a{display:flex;gap:12px;align-items:baseline;padding:9px 0 9px 14px;border-left:2px solid transparent;color:#6B6B73;font:500 14px/1.35 Inter,sans-serif;text-decoration:none;transition:color .2s ease,border-color .2s ease}
+.cs-sheet .ds-index a>span{font:500 11px 'JetBrains Mono',monospace;color:#8E918A}
+.cs-sheet .ds-index a:hover{color:#0B0B10}
+.cs-sheet .ds-index a[aria-current="true"]{color:#0B0B10;border-left-color:#C9FF63}
+.cs-sheet .ds-index a[aria-current="true"]>span{color:#4D7A00}
+@media (min-width:1100px){
+  .cs-sheet .ds-body{display:grid;grid-template-columns:210px minmax(0,1fr);column-gap:72px;align-items:start}
+  .cs-sheet .ds-index{grid-column:1;grid-row:1 / span 60;position:sticky;top:40px;display:flex;flex-direction:column;gap:2px;margin:0;padding:8px 0;border:0}
+  .cs-sheet .ds-body>:not(.ds-index){grid-column:2;min-width:0}
+}
+@media (max-width:1099px){
+  .cs-sheet .ds-index{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:0 0 24px;margin-bottom:8px;border-bottom:1px solid #E2E1D9}
+  .cs-sheet .ds-index::-webkit-scrollbar{display:none}
+  .cs-sheet .ds-index a{flex:0 0 auto;padding:9px 14px;border:1px solid #E2E1D9;border-radius:999px;background:#FFFFFF}
+  .cs-sheet .ds-index a[aria-current="true"]{border-color:#C9FF63}
+}
+
+/* Point of view: the sheet's one dark moment */
+.cs-sheet .ds-pov{
+  --ink:#F2F3EE;--muted:#B4B7AE;--acid:#C9FF63;--panel:#13131A;--line:rgba(255,255,255,.12);
+  margin:clamp(56px,6vw,88px) 0 0;border:0;border-radius:32px;padding:clamp(36px,5vw,64px);color:#F2F3EE;
+  background:radial-gradient(80% 120% at 100% 0%,rgba(106,77,255,.38),rgba(106,77,255,0) 60%),#0B0B10
+}
+.cs-sheet .ds-pov-label{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#C9FF63}
+.cs-sheet .ds-pov blockquote{font:500 clamp(30px,3.6vw,52px)/1.1 'Inter Tight',sans-serif;letter-spacing:-.045em;background:linear-gradient(100deg,#F2F3EE 0%,#FFC4E1 48%,#A796FF 78%,#C9FF63 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.cs-sheet .ds-pov-signature{color:#B4B7AE}
+
+/* ---------- Close (dark) ---------- */
+.cs-close{position:relative;padding:clamp(88px,10vw,150px) 0 clamp(72px,8vw,120px)}
+.cs-close-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(36px,5vw,80px);align-items:center}
+.cs-lbl{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#C9FF63}
+.cs-ask h2{margin:18px 0 0;font:600 clamp(40px,4.6vw,68px)/.98 'Inter Tight',sans-serif;letter-spacing:-.05em;color:#F2F3EE}
+.cs-ask p{margin:20px 0 0;max-width:480px;color:#B4B7AE;font-size:18px;line-height:1.6}
+.cs-prompts{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:28px}
+.cs-chip{display:inline-flex;align-items:center;min-height:42px;padding:0 18px;border-radius:999px;border:1px solid rgba(255,255,255,.18);color:#E6E8E1;font:500 14px Inter,sans-serif;text-decoration:none;transition:border-color .2s ease,color .2s ease}
+.cs-chip:hover{border-color:#C9FF63;color:#FFFFFF}
+.cs-back{display:inline-block;margin-top:32px;color:#C9FF63;font:600 15px Inter,sans-serif;text-decoration:none}
+.cs-back:hover{color:#E2FFA8}
+.cs-next{position:relative;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:28px;align-items:center;padding:20px;border-radius:28px;background:#13131A;border:1px solid rgba(255,255,255,.08);color:#F2F3EE;text-decoration:none;transition:border-color .3s ease,transform .3s ease}
+.cs-next:hover{border-color:rgba(201,255,99,.5);transform:translateY(-4px)}
+.cs-next-img{display:block;aspect-ratio:4 / 5;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.cs-next-img img{display:block;width:100%;height:100%;object-fit:cover}
+.cs-next-copy{display:flex;flex-direction:column;gap:12px;padding-right:56px}
+.cs-next-copy strong{font:600 clamp(28px,3vw,44px)/1 'Inter Tight',sans-serif;letter-spacing:-.045em}
+.cs-next-tag{color:#8E918A;font-size:15px}
+.cs-next-go{position:absolute;right:24px;bottom:24px;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#C9FF63;color:#0B0B10;font-size:20px;transition:transform .3s ease}
+.cs-next:hover .cs-next-go{transform:translateX(4px)}
+
+.case-error{padding:160px 0 120px;color:#F2F3EE}
+.case-error a{color:#C9FF63}
+
+@media (max-width:860px){
+  .cs-close-grid{grid-template-columns:1fr}
+  .cs-next{grid-template-columns:112px minmax(0,1fr);gap:18px;padding:14px}
+  .cs-next-copy{padding-right:44px}
+  .cs-next-go{right:16px;bottom:16px;width:40px;height:40px}
+  .cs-sheet{border-radius:28px}
+}
+@media (prefers-reduced-motion:reduce){.cs-next,.cs-next-go,.cs-sheet .ds-decision{transition:none}}
+.cs-page footer div{display:revert;flex-direction:revert}

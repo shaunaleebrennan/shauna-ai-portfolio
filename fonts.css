@@ -1,0 +1,19 @@
+/* Self-hosted brand type (SIL Open Font License — see assets/fonts/*-OFL.txt).
+   Inter Tight for display, Inter for reading, JetBrains Mono for labels. */
+@font-face{font-family:'Inter Tight';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/inter-tight-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter Tight';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/inter-tight-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter Tight';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-tight-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter Tight';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/inter-tight-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/inter-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/inter-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2')}
+
+/* Case-study styles still name the previous families; map them onto the new type. */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/inter-tight-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-tight-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/inter-tight-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/inter-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/inter-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2')}

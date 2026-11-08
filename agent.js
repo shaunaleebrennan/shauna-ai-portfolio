@@ -25,6 +25,7 @@ function initAgent(section) {
   let pulseFrame = 0;
   let level = 0;
   let lastSent = '';
+  let askedSomething = false;
   let sdkPromise = null;
 
   const setState = (state, text) => {
@@ -41,6 +42,7 @@ function initAgent(section) {
   };
   const openPanel = () => {
     panel.hidden = false;
+    section.classList.add('has-panel');
   };
 
   const loadSdk = () => {
@@ -130,6 +132,7 @@ function initAgent(section) {
     const message = text.trim();
     if (!message || !conversation) return;
     lastSent = message;
+    askedSomething = true;
     addMessage('user', message);
     try {
       conversation.sendUserMessage(message);
@@ -150,6 +153,8 @@ function initAgent(section) {
 
     starting = true;
     let mode = wanted;
+    log.replaceChildren();
+    askedSomething = false;
     setState('connecting', 'Connecting…');
     try {
       if (mode === 'voice') {
@@ -169,17 +174,25 @@ function initAgent(section) {
         onConnect: () => {
           setState(mode === 'voice' ? 'listening' : 'ready', mode === 'voice' ? 'Listening — go ahead' : 'Connected — ask away');
         },
-        onDisconnect: () => {
+        onDisconnect: details => {
           if (!conversation) return;
+          console.info('[agent] disconnected', details);
           conversation = null;
           kind = null;
           stopPulse();
           section.classList.remove('is-live');
-          setState('ended', 'Conversation ended');
+          if (details?.reason === 'error') {
+            setState('error', 'The connection dropped');
+            addMessage('system', 'Something interrupted the conversation. Start again to pick it back up.');
+          } else {
+            setState('ended', 'Conversation ended');
+            if (!askedSomething) addMessage('system', 'The conversation closed before a question came through. Start again whenever you’re ready.');
+          }
         },
         onError: message => console.warn('[agent]', message),
         onMessage: payload => {
           const fromUser = payload.role === 'user' || payload.source === 'user';
+          if (fromUser) askedSomething = true;
           if (fromUser && payload.message?.trim() === lastSent) { lastSent = ''; return; }
           addMessage(fromUser ? 'user' : 'agent', payload.message);
         },

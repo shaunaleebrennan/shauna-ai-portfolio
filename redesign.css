@@ -213,3 +213,12 @@ a.tool-logo:hover,a.tool-logo:focus-visible{color:#FFFFFF}
   .agent-log{max-height:260px}
 }
 .agent-widget-on [data-dock]{display:none !important}
+
+/* Workvivo marker on the analyst charts */
+.arframe>img.arhl{position:absolute;width:12%;height:auto;transform:translate(-50%,-50%);filter:drop-shadow(0 4px 10px rgba(11,11,16,.25));pointer-events:none}
+
+/* Ask: keep the orb beside the conversation instead of floating mid-column */
+#ask{overflow:clip !important}
+@media (min-width:900px){
+  [data-agent].has-panel [data-agent-orb]{align-self:flex-start;position:sticky !important;top:max(96px,calc(50vh - 220px))}
+}

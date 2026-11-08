@@ -368,3 +368,77 @@ body.bp-it footer.bp-footer{margin-top:0}
 .bp-collection a.card.coming:hover,.bp-collection a.card.coming:focus-visible{transform:translateY(-6px)!important;border-color:rgba(201,255,99,.5);box-shadow:0 40px 80px rgba(0,0,0,.45),0 0 90px rgba(143,123,255,.14)!important}
 .bp-collection a.card.coming:hover .arrow{background:#C9FF63;border-color:#C9FF63;color:#0B0B10}
 @media (prefers-reduced-motion:reduce){.bp-collection a.card.coming:hover{transform:none!important}}
+
+/* =====================================================================
+   Launch playbook: a story you can follow
+   chapter bar → the four-chapter map → a dark band opening each chapter
+   ===================================================================== */
+.launch-page.bp:not(.bp-past-fold) .ls-rail{opacity:1;pointer-events:auto;transform:none}
+.launch-page .bp-sheet .ls-rail{position:sticky;top:0;left:auto;z-index:25;display:flex;flex-direction:row;align-items:center;gap:28px;width:auto;min-height:64px;margin:0;padding:0 max(24px,calc((100% - 1120px)/2));background:rgba(244,244,239,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:0;border-bottom:1px solid #0B0B10;overflow-x:auto;scrollbar-width:none}
+.launch-page .bp-sheet .ls-rail::-webkit-scrollbar{display:none}
+.launch-page .bp-sheet .ls-rail a{position:static;flex:0 0 auto;display:inline-flex;align-items:baseline;gap:6px;color:#55555E;font:500 14px Inter,sans-serif;text-decoration:none}
+.launch-page .bp-sheet .ls-rail a span{display:inline;margin:0;color:#8E918A;font:500 10px 'JetBrains Mono',monospace;letter-spacing:.1em}
+.launch-page .bp-sheet .ls-rail a:hover{color:#0B0B10}
+.launch-page .bp-sheet .ls-rail a[aria-current]{color:#0B0B10;font-weight:500;background-image:linear-gradient(transparent 58%,#C9FF63 58%);background-repeat:no-repeat}
+.launch-page .bp-sheet .ls-rail a[aria-current] span{color:#4D7A00}
+.launch-page .bp-sheet .ls-rail a[aria-current]:before{display:none}
+.launch-page .bp-sheet .ls-proof{margin-top:clamp(40px,5vw,64px)}
+
+/* The map of the playbook */
+.launch-page .bp-sheet .ls-overview{padding:clamp(72px,8vw,112px) 0 clamp(32px,4vw,48px)}
+.launch-page .bp-sheet .ls-overview .le-kicker{display:block;font:500 11px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#4D7A00}
+.launch-page .bp-sheet .ls-overview h2{margin:14px 0 0;max-width:16ch;font:600 clamp(36px,4vw,56px)/1 'Inter Tight',sans-serif;letter-spacing:-.05em;color:#0B0B10}
+.ls-overview-intro{margin:18px 0 0;max-width:560px;color:#2B2B32;font-size:18px;line-height:1.6}
+.ls-overview-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:clamp(32px,4vw,48px) 0 0;padding:0;list-style:none;counter-reset:none}
+.ls-overview-steps a{position:relative;display:flex;flex-direction:column;gap:10px;height:100%;box-sizing:border-box;padding:24px;border-radius:24px;background:#FFFFFF;border:1px solid #E2E1D9;color:#0B0B10;text-decoration:none;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .2s ease}
+.ls-overview-steps a:hover{transform:translateY(-4px);border-color:#0B0B10}
+.ls-overview-steps li:last-child a{background:#0B0B10;border-color:#0B0B10;color:#F2F3EE}
+.ls-overview-steps li+li a::before{content:"→";position:absolute;left:-13px;top:28px;display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#C9FF63;color:#0B0B10;font:600 11px/1 'Inter Tight',sans-serif;z-index:1}
+.ls-ov-num{font:600 44px/.9 'Inter Tight',sans-serif;letter-spacing:-.05em;color:#0B0B10}
+.ls-overview-steps li:last-child .ls-ov-num{color:#C9FF63}
+.ls-ov-name{font:500 10px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#4D7A00}
+.ls-overview-steps li:last-child .ls-ov-name{color:#C9FF63}
+.ls-overview-steps strong{font:600 20px/1.15 'Inter Tight',sans-serif;letter-spacing:-.025em}
+.ls-ov-q{color:#55555E;font-size:14px;line-height:1.5}
+.ls-overview-steps li:last-child .ls-ov-q{color:#B4B7AE}
+.ls-ov-out{margin-top:auto;padding-top:14px;border-top:1px solid #E2E1D9;color:#2B2B32;font-size:13px;line-height:1.5}
+.ls-overview-steps li:last-child .ls-ov-out{border-color:rgba(255,255,255,.12);color:#F2F3EE}
+.ls-ov-out em{display:block;margin-bottom:4px;font:500 10px 'JetBrains Mono',monospace;font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:#6B6B73}
+.ls-overview-steps li:last-child .ls-ov-out em{color:#8E918A}
+
+/* Each chapter opens on a dark band */
+.launch-page .bp-sheet .ls-phase{margin-top:clamp(64px,7vw,104px);padding-top:0;border-top:0}
+.launch-page .bp-sheet .ls-phase-head{position:relative;isolation:isolate;grid-template-columns:120px minmax(0,1fr) 260px;align-items:center;margin-bottom:clamp(40px,5vw,64px);padding:clamp(48px,5vw,72px) 0;color:#F2F3EE;background:#0B0B10;box-shadow:0 0 0 100vmax #0B0B10;clip-path:inset(0 -100vmax)}
+.launch-page .bp-sheet .ls-phase-head::before{content:"";position:absolute;z-index:-1;right:-10%;top:-60%;width:min(700px,70vw);aspect-ratio:1;background:radial-gradient(circle closest-side,rgba(143,123,255,.32),rgba(106,77,255,0));pointer-events:none}
+.launch-page .bp-sheet .ls-phase-head .le-number{font:600 clamp(72px,8vw,112px)/.85 'Inter Tight',sans-serif;letter-spacing:-.06em;color:#C9FF63;opacity:1}
+.launch-page .bp-sheet .ls-phase-head .le-kicker{color:#C9FF63}
+.launch-page .bp-sheet .ls-phase-head h2{margin:12px 0 12px;color:#F2F3EE;font:600 clamp(36px,4vw,56px)/1 'Inter Tight',sans-serif;letter-spacing:-.05em}
+.launch-page .bp-sheet .ls-phase-head>div>p{color:#B4B7AE;font-size:17px}
+.launch-page .bp-sheet .ls-phase-head aside{margin:0;padding:18px 20px;border:1px solid rgba(201,255,99,.4);border-radius:18px;background:rgba(201,255,99,.05)}
+.launch-page .bp-sheet .ls-phase-head aside>span{font-family:'JetBrains Mono',monospace;color:#C9FF63;letter-spacing:.12em}
+.launch-page .bp-sheet .ls-phase-head aside p{color:#F2F3EE;font-size:15px;line-height:1.5}
+
+/* Exercises read as the tools; examples read as examples */
+.launch-page .bp-sheet .le-workbench,.launch-page .bp-sheet .lc-record{position:relative;padding:clamp(24px,3vw,40px);border:1px solid #E2E1D9;border-top:1px solid #E2E1D9;border-radius:28px;background:#FFFFFF;box-shadow:0 18px 50px rgba(11,11,16,.05)}
+.launch-page .bp-sheet .le-exercise{display:inline-flex;align-items:center;min-height:28px;padding:0 12px;border-radius:999px;background:#C9FF63;color:#0B0B10;font:500 10px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
+.launch-page .bp-sheet .le-tool-title{font:600 clamp(26px,2.6vw,36px)/1.05 'Inter Tight',sans-serif;letter-spacing:-.04em}
+
+@media (max-width:980px){
+  .ls-overview-steps{grid-template-columns:1fr 1fr}
+  .ls-overview-steps li:nth-child(3) a::before{display:none}
+  .launch-page .bp-sheet .ls-phase-head{grid-template-columns:90px minmax(0,1fr)}
+  .launch-page .bp-sheet .ls-phase-head aside{grid-column:2}
+}
+@media (max-width:600px){
+  .ls-overview-steps{grid-template-columns:1fr}
+  .ls-overview-steps li+li a::before{left:24px;top:-13px;transform:rotate(90deg)}
+  .launch-page .bp-sheet .ls-phase-head{grid-template-columns:1fr;gap:12px}
+  .launch-page .bp-sheet .ls-phase-head aside{grid-column:auto}
+  .launch-page .bp-sheet .ls-rail{gap:20px}
+}
+@media (prefers-reduced-motion:reduce){.ls-overview-steps a{transition:none}}
+.launch-page .bp-sheet .lw-cell--4 .lc-cell-help{color:#B4B7AE}
+.launch-page .bp-sheet .lw-cell--4 .lw-place,.launch-page .bp-sheet .lw-cell--4 .lw-place *{color:#F2F3EE}
+.launch-page .bp-sheet .lw-cell--4 .lw-place>span:last-child{color:#C9FF63}
+.launch-page .bp-sheet .lw-cell--3 .lc-cell-help,.launch-page .bp-sheet .lw-cell--2 .lc-cell-help{color:#2B2B32}
+.launch-page .bp-sheet{overflow-x:clip}

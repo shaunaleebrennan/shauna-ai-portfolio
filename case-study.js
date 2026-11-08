@@ -49,7 +49,7 @@ try {
       if (data.type === 'research-system') body = `<div class="ds-research-system"><div class="ds-research-sources">${data.sources.map((source,i)=>`<article><span>${String(i+1).padStart(2,'0')}</span><h4>${escape(source.title)}</h4><p>${escape(source.detail)}</p></article>`).join('')}</div><div class="ds-research-synthesis"><span>${escape(data.synthesis)}</span><ul>${data.outputs.map(output=>`<li>${escape(output)}</li>`).join('')}</ul></div></div>`;
       return `<div class="ds-visual ds-visual--${escape(data.type)}"><div class="ds-visual-heading"><h3>${escape(data.title)}</h3></div>${body}${data.caption ? `<p class="ds-visual-caption">${escape(data.caption)}</p>` : ''}${projectLink(data)}</div>`;
     };
-    const scope = data => data?.scope ? `<div class="ds-scope"><span class="ds-scope-label">Project coverage</span><dl>${data.scope.map(entry => `<div><dt>${escape(entry.label)}</dt><dd>${escape(entry.value)}</dd></div>`).join('')}</dl></div>` : '';
+    const scope = data => data?.scope ? `<dl class="cx-scope">${data.scope.map(entry => `<div><dt class="lbl">${escape(entry.label)}</dt><dd>${escape(entry.value)}</dd></div>`).join('')}</dl>` : '';
     const pad = n => String(n).padStart(2, '0');
     const cs = item.caseStudy;
     // The last sentence (or the clause after the last comma) carries the highlighter.
@@ -91,6 +91,43 @@ try {
         }
         return `<div class="cx-list"><h3>${escape(data.title)}</h3><ol>${data.steps.map((step, i) => `<li><span class="cx-list-num">${pad(i + 1)}</span><div><h4>${escape(step.title)}</h4><p>${escape(step.detail)}</p></div></li>`).join('')}</ol>${caption(data)}${link(data)}</div>`;
       }
+      const head = (title, extra = '') => `<div class="cx-panel-head"><h3>${escape(title)}</h3>${extra}</div>`;
+      if (data.type === 'recognition') return '<div class="cx-recognition" data-recognition></div>';
+      if (data.type === 'signals') {
+        const top = Math.max(...data.rows.map(row => Number(row.value) || 0));
+        return `<div class="cx-panel cx-panel--dark cx-signals">${head(data.title)}${data.rows.map(row => {
+          const value = Math.max(0, Math.min(100, Number(row.value) || 0));
+          return `<div class="cx-signal${value === top ? ' is-top' : ''}"><div class="cx-signal-top"><strong>${escape(row.value)}<span>%</span></strong><span class="cx-signal-label">${escape(row.label)}</span></div><div class="cx-signal-bar" role="img" aria-label="${escape(row.label)}: ${escape(row.value)} percent"><span style="width:${value}%"></span></div><p>${escape(row.detail)}</p></div>`;
+        }).join('')}${caption(data)}${link(data)}</div>`;
+      }
+      if (data.type === 'statement') {
+        return `<div class="cx-panel cx-panel--dark cx-statement"><span class="lbl">${escape(data.eyebrow)}</span><blockquote>${escape(data.statement)} <em>${escape(data.answer)}</em></blockquote>${caption(data)}${link(data)}</div>`;
+      }
+      if (data.type === 'quote') {
+        return `<figure class="cx-panel cx-panel--dark cx-quote"><span class="lbl">${escape(data.title)}</span><blockquote>“${escape(data.quote)}”</blockquote><figcaption class="lbl">${escape(data.attribution)}</figcaption>${caption(data)}</figure>`;
+      }
+      if (data.type === 'relationship') {
+        return `<div class="cx-flow">${head(data.title)}<ol>${data.steps.map((step, i) => `<li class="${i === data.steps.length - 1 ? 'is-last' : ''}"><span class="lbl">${pad(i + 1)}</span><strong>${escape(step)}</strong></li>`).join('')}</ol>${caption(data)}${link(data)}</div>`;
+      }
+      if (data.type === 'compare') {
+        return `<div class="cx-compare">${head(data.title)}<div class="cx-compare-row"><div class="cx-compare-before"><span class="lbl">${escape(data.beforeLabel)}</span><strong>${escape(data.before)}</strong></div><span class="cx-compare-arrow" aria-hidden="true">→</span><div class="cx-compare-after"><span class="lbl">${escape(data.afterLabel)}</span><strong>${escape(data.after)}</strong></div></div>${caption(data)}${link(data)}</div>`;
+      }
+      if (data.type === 'journey') {
+        return `<div class="cx-panel cx-track">${head(data.title, `<span class="lbl">${data.steps.length} steps</span>`)}${data.src ? `<img class="cx-track-image" src="${safeUrl(data.src)}" alt="${escape(data.alt || '')}" loading="lazy">` : ''}<ol style="--n:${data.steps.length}">${data.steps.map((step, i) => `<li class="${i === data.steps.length - 1 ? 'is-last' : ''}"><span class="cx-track-dot" aria-hidden="true"></span><span class="lbl">${pad(i + 1)}</span><strong>${escape(step)}</strong></li>`).join('')}</ol>${caption(data)}${link(data)}</div>`;
+      }
+      if (data.type === 'gallery') {
+        return `<div class="cx-panel cx-gallery">${head(data.title)}<div class="cx-gallery-grid">${data.images.map(entry => `<figure><a href="${safeUrl(entry.src)}"><img src="${safeUrl(entry.src)}" alt="${escape(entry.alt)}" loading="lazy"></a><figcaption class="lbl">${escape(entry.caption)}</figcaption></figure>`).join('')}</div>${caption(data)}${link(data)}</div>`;
+      }
+      if (data.type === 'resources') {
+        return `<div class="cx-resources">${head(data.title)}${data.links.map((entry, i) => `<a href="${safeUrl(entry.url)}"${/^https?:/.test(entry.url) ? ' target="_blank" rel="noopener noreferrer"' : ''}><span class="lbl">${pad(i + 1)}</span><span><strong>${escape(entry.title)}</strong><span>${escape(entry.note)}</span></span><span class="cx-go" aria-hidden="true">↗</span></a>`).join('')}${caption(data)}</div>`;
+      }
+      if (data.type === 'image') {
+        const img = `<img src="${safeUrl(data.src)}" alt="${escape(data.alt)}" loading="lazy">`;
+        return `<figure class="cx-shot">${data.title ? `<span class="lbl">${escape(data.title)}</span>` : ''}${data.href ? `<a href="${safeUrl(data.href)}"${/^https?:/.test(data.href) ? ' target="_blank" rel="noopener noreferrer"' : ''}>${img}</a>` : img}${data.caption ? `<figcaption>${escape(data.caption)}</figcaption>` : ''}${link(data)}</figure>`;
+      }
+      if (data.type === 'messaging-house') {
+        return `<div class="cx-panel cx-house">${head(data.title)}<div class="cx-house-roof"><span class="lbl">One master narrative</span><strong>${escape(data.promise)}</strong><p>${escape(data.subtitle)}</p></div><div class="cx-house-pillars">${data.pillars.map((pillar, i) => `<div><span class="lbl">Pillar ${pad(i + 1)}</span><h4>${escape(pillar.title)}</h4><p>${escape(pillar.detail)}</p></div>`).join('')}</div><div class="cx-house-audiences"><div class="cx-house-audience-head"><span class="lbl">Adapt the message</span><span>One narrative. Different reasons to care.</span></div><div class="cx-house-personas">${data.personas.map(persona => `<details><summary><span class="lbl">${escape(persona.name)}</span><strong>${escape(persona.focus)}</strong><span class="cx-plus-toggle" aria-hidden="true">+</span></summary><p>${escape(persona.detail)}</p></details>`).join('')}</div></div>${caption(data)}${link(data)}</div>`;
+      }
       return `<div class="cx-panel cx-panel--${escape(data.type)}">${visual(data)}</div>`;
     };
 
@@ -113,7 +150,7 @@ try {
           const detail = end === -1 ? '' : text.slice(end + 2);
           return `<article class="${block.highlightLast && i === all.length - 1 ? 'is-chosen' : ''}"><span class="lbl">${escape(block.itemLabel || 'Decision')} ${pad(i + 1)}</span><h3>${copyText(title)}</h3>${detail ? `<p>${copyText(detail)}</p>` : ''}</article>`;
         }).join('')}</div>`;
-      } else if (block.layout === 'artifact' && data && !(data.type === 'steps' && data.variant === 'path')) {
+      } else if (block.layout === 'artifact' && data && !(data.type === 'steps' && data.variant === 'path') && data.type !== 'recognition') {
         body = `<div class="cx-artifact"><div class="cx-artifact-copy">${label(block, index)}<h2 class="cx-h2">${escape(block.title)}</h2><div class="cx-copy">${copy(block.paragraphs)}</div>${scope(data)}</div><div class="cx-artifact-visual">${panel(data)}</div></div>`;
       } else {
         body = `${twoUp(block, index)}${block.aside ? `<figure class="cx-question${String(block.aside.text).length > 110 ? ' is-long' : ''}"><p class="lbl">${escape(block.aside.label)}</p><blockquote>“${highlightTail(block.aside.text)}”</blockquote></figure>` : ''}${data ? `<div class="cx-wide">${panel(data)}</div>` : ''}`;
@@ -122,12 +159,23 @@ try {
       return `<section id="${escape(block.id)}" class="ds-section cx-section cx-section--${escape(block.layout || 'text')}${data?.type === 'example-journey' ? ' cx-section--band' : ''}">${body}${film}</section>`;
     };
 
+    const leadSplit = value => {
+      const text = String(value).trim();
+      const match = text.match(/^(.+?[.!?])\s+(.+)$/s);
+      if (text.length <= 150 || !match || match[1].length < 24) return { lead: text, rest: '' };
+      return { lead: match[1], rest: match[2] };
+    };
     const outcomeParts = String(cs.outcome || '').match(/[^.!?]+[.!?]+\s*/g) || [];
     const outcomeNote = outcomeParts.filter(sentence => /^\s*Shauna\b/.test(sentence)).join('').trim();
     const outcomeMain = outcomeParts.filter(sentence => !/^\s*Shauna\b/.test(sentence)).join('').trim() || cs.outcome;
-    const glanceCards = [['The challenge', cs.challenge], ['The insight', cs.insight], ['The outcome', cs.outcome ? outcomeMain : '']].filter(entry => entry[1]);
-    const glance = glanceCards.length ? `<section class="cx-glance" aria-label="At a glance"><p class="lbl cx-kick">At a glance</p><div class="cx-glance-grid" style="--cards:${glanceCards.length}">${glanceCards.map(([name, text]) => `<article class="${name === 'The outcome' ? 'is-dark' : ''}"><span class="lbl">${name}</span><p>${escape(text)}</p>${name === 'The outcome' && outcomeNote ? `<small>${escape(outcomeNote)}</small>` : ''}</article>`).join('')}</div></section>` : '';
-    const did = (cs.contribution?.length || cs.decisions?.length) ? `<section class="cx-did">${cs.contribution?.length ? `<div><p class="lbl cx-kick">What I did</p><ul class="cx-did-list">${cs.contribution.map(text => `<li>${escape(text)}</li>`).join('')}</ul></div>` : ''}${cs.decisions?.length ? `<div><p class="lbl cx-kick">Key decisions</p><ol class="cx-decision-list">${cs.decisions.map((text, i) => `<li><span class="lbl">${pad(i + 1)}</span>${escape(text)}</li>`).join('')}</ol></div>` : ''}</section>` : '';
+    const glanceCards = (cs.challenge || cs.insight || cs.outcome)
+      ? [['The challenge', cs.challenge], ['The insight', cs.insight], ['The outcome', cs.outcome ? outcomeMain : '', outcomeNote]].filter(entry => entry[1])
+      : [['The project', item.summary], ['What it shows', item.demonstrates], ['The proof', item.proof]].filter(entry => entry[1]);
+    const glance = glanceCards.length ? `<section class="cx-glance" aria-label="At a glance"><p class="lbl cx-kick">At a glance</p><div class="cx-glance-grid" style="--cards:${glanceCards.length}">${glanceCards.map(([name, text, note], i) => {
+      const { lead, rest } = leadSplit(text);
+      return `<article class="${i === glanceCards.length - 1 ? 'is-dark' : ''}"><span class="lbl">${name}</span><p class="cx-glance-lead">${escape(lead)}</p>${rest ? `<p class="cx-glance-rest">${escape(rest)}</p>` : ''}${note ? `<small>${escape(note)}</small>` : ''}</article>`;
+    }).join('')}</div></section>` : '';
+    const did = (cs.contribution?.length || cs.decisions?.length) ? `<section class="cx-did${cs.contribution?.length && cs.decisions?.length ? '' : ' is-single'}">${cs.contribution?.length ? `<div><p class="lbl cx-kick">What I did</p><ul class="cx-did-list">${cs.contribution.map(text => `<li>${escape(text)}</li>`).join('')}</ul></div>` : ''}${cs.decisions?.length ? `<div><p class="lbl cx-kick">Key decisions</p><ol class="cx-decision-list">${cs.decisions.map((text, i) => `<li><span class="lbl">${pad(i + 1)}</span>${escape(text)}</li>`).join('')}</ol></div>` : ''}</section>` : '';
     const learning = story.learning || cs.learning;
     const pov = learning ? `<section class="cx-pov"><p class="lbl cx-kick">The point of view</p><blockquote>“${highlightTail(learning)}”</blockquote><p class="cx-pov-by">Shauna Azevedo-Brennan</p></section>` : '';
     const evidence = item.evidence?.length ? `<section class="cx-evidence"><p class="lbl cx-kick">Evidence</p><div class="cx-evidence-grid">${item.evidence.map(entry => `<a href="${safeUrl(entry.url)}"${/^https?:/.test(entry.url) ? ' target="_blank" rel="noopener noreferrer"' : ''}><span class="lbl">${escape(entry.kind)}</span><strong>${escape(entry.title)} <span aria-hidden="true">↗</span></strong><span>${escape(entry.note)}</span></a>`).join('')}</div></section>` : '';
@@ -181,6 +229,10 @@ try {
           </div>
         </section>
       </article>`;
+    const recognition = root.querySelector('[data-recognition]');
+    if (recognition) {
+      fetch('./partials/analyst-recognition.html', { cache: 'no-store' }).then(r => r.ok ? r.text() : '').then(html => { recognition.innerHTML = html; }).catch(() => {});
+    }
     enhance();
   }
 } catch (error) {

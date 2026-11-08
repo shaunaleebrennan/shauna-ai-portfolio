@@ -15,7 +15,7 @@ This is a public career summary, aligned with the published résumé. Individual
 
 At Workvivo, Shauna leads portfolio positioning and GTM across Workvivo HQ, HQ Agent, and Seer. Her scope includes launches, pricing and packaging, analyst strategy, competitive intelligence, and seller enablement, working across Product, Engineering, Revenue, and Marketing. She contributes to executive strategy and planning, coaches the five-person team through organisational change, and sets messaging direction for Marketing and Growth campaigns, SEO/AEO, launches, demos, and sales enablement.
 
-She owns the analyst relations program, including executive briefings, strategy days, evidence, evaluations, and events. This includes supporting four consecutive Gartner Magic Quadrant Leader placements and Workvivo’s 2026 Forrester Wave Leader position, plus invitations to Employee Experience Management and Cognitive Search Wave evaluations, both in progress. These are company recognitions and independent evaluations.
+She owns the analyst relations program, including executive briefings, strategy days, evidence, evaluations, and events. This includes supporting four consecutive Gartner Magic Quadrant Leader placements and Workvivo’s 2026 Forrester Wave Leader position, plus a new entry in the Forrester Wave for Employee Experience Management Platforms (results due November 2026) and an invitation to the Forrester Landscape for Cognitive Search platforms, both in progress. These are company recognitions and independent evaluations.
 
 She also owns the competitive intelligence program, replacing Klue with Steve AI connected to seller tools, and serves as a market intelligence partner to executive leadership.
 

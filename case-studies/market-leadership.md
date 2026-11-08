@@ -24,7 +24,7 @@ Strategy days, customer proof, submissions, and ongoing engagement connect the p
 
 ## Recognition and new category opportunities
 
-The programme supported stronger year-on-year recognition, including Workvivo's fourth consecutive Gartner Magic Quadrant Leader placement in 2026, its 2026 Forrester Wave Leader position in Intranet Platforms and ClearBox Choice recognition. I secured invitations to additional Forrester Wave evaluations in Employee Experience Management and Cognitive Search. Those evaluations are in progress; invitations are not placements or outcomes.
+The programme supported stronger year-on-year recognition, including Workvivo's fourth consecutive Gartner Magic Quadrant Leader placement in 2026, its 2026 Forrester Wave Leader position in Intranet Platforms and ClearBox Choice recognition.
 
 ### Published recognition campaigns
 
@@ -36,7 +36,22 @@ Gartner · 2025 campaign artwork
 
 Forrester · 2026 campaign artwork
 
-Company campaign artifacts; recognition reflects the wider business and independent analyst assessments.
+## Opening the next categories
+
+With the core categories established, the programme is extending into adjacent ones. Workvivo is a new entry in the Forrester Wave for Employee Experience Management Platforms, with results due in November 2026, and has been invited to the Forrester Landscape report for Cognitive Search platforms, with the RFI submitted in November 2026. Both are in progress; an invitation is not a placement.
+
+Coverage is broadening beyond evaluations too. ClearBox's new insights site includes a dedicated Workvivo report and a separate report on Seer by Workvivo, and at Zoomtopia's media and analyst event in London we presented a short Workvivo briefing alongside Zoom.
+
+### In motion · November 2026
+
+1. **Forrester Wave: Employee Experience Management** — A new entry for Workvivo. Results are due in November 2026.
+2. **Forrester Landscape: Cognitive Search** — Invited to the Landscape report for cognitive search platforms. RFI submitted.
+3. **ClearBox insights** — A dedicated Workvivo report, and a separate report on Seer by Workvivo.
+4. **Zoomtopia, London** — A short Workvivo briefing alongside Zoom at the media and analyst event.
+
+Evaluations in progress are invitations, not placements or outcomes.
+
+[Explore ClearBox insights](https://insights.clearbox.co.uk/)
 
 > If analyst relations only starts when a report is due, someone else’s calendar is setting your strategic agenda.
 
@@ -45,3 +60,4 @@ Company campaign artifacts; recognition reflects the wider business and independ
 - **[Gartner 2025 campaign artwork](../assets/evidence/gartner-mq-2025.png)** — Published campaign artifact. Company campaign creative, not the analyst report or proof of sole authorship.
 - **[Forrester 2026 campaign artwork](../assets/evidence/forrester-wave-2026.png)** — Published campaign artifact. Shows the recognition campaign; analysts controlled their own assessment.
 - **[Read the artifact inventory](../docs/EVIDENCE_INVENTORY.md)** — Evidence record. Sources and attribution boundaries for the analyst and category work.
+- **[ClearBox insights](https://insights.clearbox.co.uk/)** — Analyst coverage. Includes a dedicated Workvivo report and a separate report on Seer by Workvivo.

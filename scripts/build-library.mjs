@@ -96,7 +96,7 @@ await mkdir('case-studies', { recursive: true });
 const visualMarkdown = visual => {
   if (!visual) return '';
   const parts = [`### ${visual.title}`];
-  if (visual.steps) parts.push(visual.steps.join(' → '));
+  if (visual.steps) parts.push(visual.steps.every(step => typeof step === 'string') ? visual.steps.join(' → ') : visual.steps.map((step, i) => `${i + 1}. **${step.title}** — ${step.detail}`).join('\n'));
   if (visual.type === 'compare') parts.push(`**${visual.beforeLabel}:** ${visual.before}\n\n**${visual.afterLabel}:** ${visual.after}`);
   if (visual.src) parts.push(`![${visual.alt}](${githubTarget(visual.src)})`);
   if (visual.images) parts.push(visual.images.map(image => `![${image.alt}](${githubTarget(image.src)})\n\n${image.caption}`).join('\n\n'));

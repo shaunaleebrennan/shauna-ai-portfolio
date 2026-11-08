@@ -938,6 +938,12 @@
           "url": "documents/evidence-inventory.html",
           "kind": "Evidence record",
           "note": "Sources and attribution boundaries for the analyst and category work."
+        },
+        {
+          "title": "ClearBox insights",
+          "url": "https://insights.clearbox.co.uk/",
+          "kind": "Analyst coverage",
+          "note": "Includes a dedicated Workvivo report and a separate report on Seer by Workvivo."
         }
       ],
       "caseStudy": {
@@ -1006,13 +1012,13 @@
             "id": "result",
             "title": "Recognition and new category opportunities",
             "paragraphs": [
-              "The programme supported stronger year-on-year recognition, including Workvivo's fourth consecutive Gartner Magic Quadrant Leader placement in 2026, its 2026 Forrester Wave Leader position in Intranet Platforms and ClearBox Choice recognition. I secured invitations to additional Forrester Wave evaluations in Employee Experience Management and Cognitive Search. Those evaluations are in progress; invitations are not placements or outcomes."
+              "The programme supported stronger year-on-year recognition, including Workvivo's fourth consecutive Gartner Magic Quadrant Leader placement in 2026, its 2026 Forrester Wave Leader position in Intranet Platforms and ClearBox Choice recognition."
             ],
             "layout": "artifact",
             "label": "Recognition and expansion",
             "navLabel": "The outcomes",
             "visual": {
-              "type": "gallery",
+              "type": "recognition",
               "title": "Published recognition campaigns",
               "images": [
                 {
@@ -1025,8 +1031,43 @@
                   "alt": "Workvivo Forrester 2026 campaign artwork.",
                   "caption": "Forrester · 2026 campaign artwork"
                 }
+              ]
+            }
+          },
+          {
+            "id": "momentum",
+            "title": "Opening the next categories",
+            "label": "Category expansion",
+            "navLabel": "In motion",
+            "layout": "artifact",
+            "paragraphs": [
+              "With the core categories established, the programme is extending into adjacent ones. Workvivo is a new entry in the Forrester Wave for Employee Experience Management Platforms, with results due in November 2026, and has been invited to the Forrester Landscape report for Cognitive Search platforms, with the RFI submitted in November 2026. Both are in progress; an invitation is not a placement.",
+              "Coverage is broadening beyond evaluations too. ClearBox's new insights site includes a dedicated Workvivo report and a separate report on Seer by Workvivo, and at Zoomtopia's media and analyst event in London we presented a short Workvivo briefing alongside Zoom."
+            ],
+            "visual": {
+              "type": "steps",
+              "title": "In motion · November 2026",
+              "steps": [
+                {
+                  "title": "Forrester Wave: Employee Experience Management",
+                  "detail": "A new entry for Workvivo. Results are due in November 2026."
+                },
+                {
+                  "title": "Forrester Landscape: Cognitive Search",
+                  "detail": "Invited to the Landscape report for cognitive search platforms. RFI submitted."
+                },
+                {
+                  "title": "ClearBox insights",
+                  "detail": "A dedicated Workvivo report, and a separate report on Seer by Workvivo."
+                },
+                {
+                  "title": "Zoomtopia, London",
+                  "detail": "A short Workvivo briefing alongside Zoom at the media and analyst event."
+                }
               ],
-              "caption": "Company campaign artifacts; recognition reflects the wider business and independent analyst assessments."
+              "caption": "Evaluations in progress are invitations, not placements or outcomes.",
+              "href": "https://insights.clearbox.co.uk/",
+              "linkLabel": "Explore ClearBox insights"
             }
           }
         ]
@@ -1437,7 +1478,7 @@
       "tag": "Playbook in progress",
       "summary": "Designing an operating model for messaging reuse across teams and AI tools, with clear product truth, PMM ownership and human review.",
       "demonstrates": "PMM operating-model design, strategic messaging, product judgment, information architecture, and AI-assisted implementation.",
-      "proof": "Sanitized compiler demonstration and change receipt, with implementation status and source notes in the evidence register.",
+      "proof": "Sanitized compiler demonstration and change receipt, with implementation status and source notes.",
       "image": "assets/evidence/messaging-as-code-cover.jpg",
       "sourceUrl": "case-studies/messaging-as-code.md",
       "evidence": [

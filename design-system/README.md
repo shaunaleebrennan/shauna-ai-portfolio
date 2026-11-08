@@ -88,6 +88,8 @@ All three families are self-hosted under the SIL Open Font License (licences in 
 | The agent dock: orb, void and paper states | Metrics as *value · label · source* |
 | | Evidence panels: artifacts sit on a dark card inside paper, so proof reads as product |
 
+**The orb** is glass, not a flat gradient: a bright white rim, a cream highlight top left, a blue band through the middle, lime pooling on the bottom-right edge and a thin iridescent ring (pink → lilac → lime). It is pure CSS: `.gorb` for the sphere and `.gorb-ring` for the ring, in `redesign.css`. Set `--gs` to scale the light with the orb's size (1 ≈ 280px, 1.5 for the hero, 0.2 for the dock).
+
 **Motion**
 
 - **Decode.** Key words resolve from code glyphs into language.

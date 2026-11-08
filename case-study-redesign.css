@@ -241,7 +241,7 @@
 .cx-layers article.is-last .lbl{color:#C9FF63}
 .cx-layers article.is-last h4{color:#F2F3EE}
 .cx-layers article.is-last p{color:#B4B7AE}
-.cx-layer-orb{position:absolute;top:-36px;right:-36px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#FFF9D6 0%,#FFC4E1 28%,#A796FF 62%,#6A4DFF 88%);opacity:.95}
+.cx-layer-orb{position:absolute;top:-36px;right:-36px;width:120px;height:120px;--gs:.45}
 .cx-plus{align-self:center;margin:6px 0;color:#0B0B10;font:600 20px/1 'Inter Tight',sans-serif}
 .cx-path ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0;padding:0;list-style:none}
 .cx-path li{display:flex;flex-direction:column;gap:10px;padding:26px;border-radius:24px;background:#FFFFFF;border:1px solid #E2E1D9}
@@ -306,7 +306,7 @@
 .cx-close-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,5vw,80px);align-items:center}
 .cx-ask-top{display:flex;align-items:center;gap:18px;margin:0}
 .cx-ask-top .lbl{color:#C9FF63;font-size:11px}
-.cx-orb{width:72px;height:72px;flex:0 0 auto;border-radius:50%;background:radial-gradient(circle at 32% 28%,#FFF9D6 0%,#FFC4E1 26%,#A796FF 60%,#6A4DFF 88%);box-shadow:0 0 60px rgba(143,123,255,.45);animation:floaty 6s ease-in-out infinite}
+.cx-orb{position:relative;width:72px;height:72px;flex:0 0 auto;--gs:.3;animation:floaty 6s ease-in-out infinite}
 .cx-ask h2{margin:26px 0 0;font:600 clamp(40px,4.6vw,66px)/.98 'Inter Tight',sans-serif;letter-spacing:-.05em;color:#F2F3EE;text-wrap:balance}
 .cx-ask .cs-prompts{flex-direction:row;flex-wrap:wrap}
 .cx-next{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:center;padding:16px;border-radius:28px;background:#13131A;border:1px solid rgba(255,255,255,.08);color:#F2F3EE;transition:border-color .3s ease,transform .35s cubic-bezier(.2,.7,.2,1)}
@@ -555,5 +555,5 @@
 .cx-ghost{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#F2F3EE;font:600 15px Inter,sans-serif;cursor:pointer;transition:background .2s ease}
 .cx-ghost:hover{background:rgba(255,255,255,.06)}
 .cx-ask .agent-panel{max-width:none}
-.cx-ask[data-agent].has-panel .cx-orb{position:static !important}
+.cx-ask[data-agent].has-panel .cx-orb{position:relative !important}
 .cx-close-grid:has(.cx-ask.has-panel){align-items:start}

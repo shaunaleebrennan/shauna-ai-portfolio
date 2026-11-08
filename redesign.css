@@ -123,6 +123,11 @@ a.award:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(11,11,16,.1
 @keyframes floaty{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-14px) rotate(5deg)}}
 @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-30px) scale(1.08)}}
 @keyframes spin{to{transform:rotate(360deg)}}
+/* Glass orb: rim light, liquid colour band, lime edge. --gs scales the light to the orb's size (1 ≈ 280px). */
+.gorb{position:absolute;border-radius:50%;overflow:hidden;isolation:isolate;background:radial-gradient(circle at 30% 24%,#FFFBE3 0%,rgba(255,251,227,.9) 8%,rgba(255,251,227,0) 30%),radial-gradient(circle at 64% 24%,rgba(255,196,225,.7) 0%,rgba(255,196,225,0) 32%),radial-gradient(circle at 34% 28%,#FFE6F1 0%,#EDC2EE 18%,#B9A2FF 40%,#8A80FF 60%,#6E6EF8 80%,#8C9CFF 100%);box-shadow:inset 0 0 0 max(1.25px,calc(2px * var(--gs,1))) rgba(255,255,255,.95),inset 0 0 calc(7px * var(--gs,1)) 1px rgba(255,255,255,.55),inset 0 calc(-8px * var(--gs,1)) calc(18px * var(--gs,1)) rgba(255,255,255,.3),inset calc(-18px * var(--gs,1)) calc(-26px * var(--gs,1)) calc(50px * var(--gs,1)) rgba(30,16,90,.18),inset calc(9px * var(--gs,1)) calc(11px * var(--gs,1)) calc(4px * var(--gs,1)) calc(-7px * var(--gs,1)) rgba(255,255,255,.3),0 0 calc(12px * var(--gs,1)) rgba(255,255,255,.55),0 0 calc(70px * var(--gs,1)) rgba(167,150,255,.4),0 0 calc(180px * var(--gs,1)) rgba(106,77,255,.22)}
+.gorb::before{content:"";position:absolute;left:-15%;right:-25%;top:46%;height:30%;border-radius:50%;background:radial-gradient(closest-side,rgba(92,98,255,.85),rgba(92,98,255,.35) 60%,rgba(92,98,255,0));transform:rotate(24deg);filter:blur(calc(8px * var(--gs,1)));mix-blend-mode:multiply;opacity:.75}
+.gorb::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(ellipse 100% 100% at 30% 24%,rgba(201,255,99,0) 60%,rgba(201,255,99,.6) 73%,rgba(221,255,130,.9) 84%)}
+.gorb-ring{position:absolute;border-radius:50%;background:conic-gradient(from 0deg,#A796FF 0deg,#8C8CFF 80deg,#C9FF63 135deg,#A796FF 210deg,#FFC4E1 300deg,#A796FF 360deg);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 1.5px),#000 calc(100% - 1px));mask:radial-gradient(farthest-side,transparent calc(100% - 1.5px),#000 calc(100% - 1px));opacity:.6;pointer-events:none}
 @keyframes bars{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(201,255,99,.6)}50%{box-shadow:0 0 0 7px rgba(201,255,99,0)}}
 @media (max-width:820px){
@@ -130,7 +135,7 @@ a.award:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(11,11,16,.1
 .headline{font-size:15vw !important}
 .l2{padding-left:4% !important}
 .l3{padding-left:28% !important}
-.orbwrap{width:58vw !important;height:58vw !important;right:-6vw !important;top:12% !important}
+.orbwrap{width:58vw !important;height:58vw !important;right:-6vw !important;top:12% !important}.orbwrap .gorb{--gs:.9 !important}
 .rail{gap:16px}
 }
 @media (hover:none){.rq{opacity:1;transform:none}}

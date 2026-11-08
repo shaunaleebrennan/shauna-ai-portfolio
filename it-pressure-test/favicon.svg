@@ -1,23 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <radialGradient id="orb" cx="32%" cy="25%" r="80%">
-      <stop offset="0" stop-color="#FFF9D6"/>
-      <stop offset="0.24" stop-color="#FFC4E1"/>
-      <stop offset="0.52" stop-color="#A796FF"/>
-      <stop offset="0.7" stop-color="#6A4DFF"/>
-      <stop offset="0.94" stop-color="#C9FF63"/>
+    <radialGradient id="body" cx="34%" cy="28%" r="78%">
+      <stop offset="0" stop-color="#FFE6F1"/>
+      <stop offset="0.18" stop-color="#EDC2EE"/>
+      <stop offset="0.4" stop-color="#B9A2FF"/>
+      <stop offset="0.6" stop-color="#8A80FF"/>
+      <stop offset="0.8" stop-color="#6E6EF8"/>
+      <stop offset="1" stop-color="#8C9CFF"/>
     </radialGradient>
-    <radialGradient id="depth" cx="32%" cy="25%" r="85%">
-      <stop offset="0.55" stop-color="#140A3C" stop-opacity="0"/>
-      <stop offset="1" stop-color="#140A3C" stop-opacity="0.55"/>
+    <radialGradient id="lime" cx="30%" cy="24%" r="100%">
+      <stop offset="0.6" stop-color="#C9FF63" stop-opacity="0"/>
+      <stop offset="0.72" stop-color="#C9FF63" stop-opacity="0.75"/>
+      <stop offset="0.82" stop-color="#DAFF80"/>
+    </radialGradient>
+    <radialGradient id="light" cx="30%" cy="24%" r="30%">
+      <stop offset="0" stop-color="#FFFBE3"/>
+      <stop offset="0.3" stop-color="#FFFBE3" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FFFBE3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="band" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#5C62FF" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#5C62FF" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0.6" stop-color="#8F7BFF" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#8F7BFF" stop-opacity="0"/>
+      <stop offset="0.62" stop-color="#A796FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#A796FF" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFC4E1"/>
+      <stop offset="0.5" stop-color="#A796FF"/>
+      <stop offset="1" stop-color="#C9FF63"/>
+    </linearGradient>
+    <clipPath id="ball"><circle cx="32" cy="32" r="22"/></clipPath>
   </defs>
   <circle cx="32" cy="32" r="31" fill="#0B0B10"/>
-  <circle cx="32" cy="32" r="30" fill="url(#glow)"/>
-  <circle cx="32" cy="32" r="23" fill="url(#orb)"/>
-  <circle cx="32" cy="32" r="23" fill="url(#depth)"/>
+  <circle cx="32" cy="32" r="29" fill="url(#glow)"/>
+  <circle cx="32" cy="32" r="28" fill="none" stroke="url(#ring)" stroke-width="1" opacity="0.7"/>
+  <g clip-path="url(#ball)">
+    <circle cx="32" cy="32" r="22" fill="url(#body)"/>
+    <ellipse cx="34" cy="40" rx="24" ry="6" fill="url(#band)" transform="rotate(24 34 40)"/>
+    <circle cx="32" cy="32" r="22" fill="url(#lime)"/>
+    <circle cx="32" cy="32" r="22" fill="url(#light)"/>
+  </g>
+  <circle cx="32" cy="32" r="21.4" fill="none" stroke="#FFFFFF" stroke-width="1.05" opacity="0.95"/>
 </svg>

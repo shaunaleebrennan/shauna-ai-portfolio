@@ -42,7 +42,7 @@ Product marketing leader with 10+ years in marketing across enterprise SaaS and 
 - **IMM & sales enablement:** Set messaging direction for Marketing and Growth campaigns, connecting customer insight to pipeline priorities, SEO/AEO, launches, demos and sales conversations.
 - **Analyst relations & market leadership:** Built and scaled Workvivo’s analyst relations program, supporting stronger placements across Gartner, Forrester and ClearBox and wider research coverage. Secured invitations to Forrester Wave evaluations in Employee Experience Management and Cognitive Search, both in progress.
 - **Category strategy & market intelligence:** Advise executive leadership on market shifts, competitive threats and emerging opportunities, helping shape product strategy, category positioning and growth priorities.
-- **Competitive intelligence:** Replaced Klue with Steve AI, an agentic intelligence system connected to seller tools, keeping competitive guidance current and accessible.
+- **Competitive intelligence program:** Replaced Klue with Steve AI, an agentic intelligence system connected to seller tools. Reduced annual software costs by more than 60k while keeping competitive guidance current and accessible.
 - **AI-powered PMM systems:** Designed a messaging-as-code system to make approved messaging and its evidence reusable. Completed an HQ Agent pilot connected to our sales enablement agent; also build and test AI agents and workflows firsthand.
 - **Major GTM initiative:** Led migration positioning, competitive differentiation and seller enablement for Workplace from Meta, contributing to Workvivo’s Forrester-recognised company-wide response.
 
@@ -58,7 +58,7 @@ Product marketing leader with 10+ years in marketing across enterprise SaaS and 
 - **Founding PMM:** Built positioning, messaging, personas and launches; helped reposition the platform around online classes when COVID-19 disrupted the fitness industry.
 - **Customer education:** Rebuilt the knowledge base and learning experience, increasing knowledge-base views by 20%+ and reducing support tickets by 12%+.
 
-**Earlier experience:** Marketing Manager, Dencan Restaurants · Digital Media Executive, Unislim
+**Earlier experience:** Marketing Manager, Dencan Restaurants, managing more than $2.4M in marketing investment · Digital Media Executive, Unislim
 
 ## Core expertise
 

@@ -1,109 +1,136 @@
 {
   "sourceRepository": "https://github.com/shaunaleebrennan/ai-positioning-qa",
-  "sourceCommit": "df04acf3b3934bc2ad7a3eab320a77f94c143de3",
+  "sourceCommit": "eb82818efb801f348576fbcb942edebf34b6d6f1",
   "files": [
     {
       "source": "tool.html",
       "path": "index.html",
-      "sha256": "02d76d75d73b5e1e5662a3fd77e734b6f9d1fff96aa282048332be2eb2b085c7",
-      "sourceSha256": "dfe2f73bbda2786be377db99e7ef253fc280589c633d5c81a139a04fa44dc878",
+      "sha256": "e2b0b8a7b7b37795c5f5315a8eec83b0f3295f0598c5ec34c6ec08089127ae47",
+      "sourceSha256": "93dc2d89b2e722223ce42fabb3d027a766facab4ce20a0574289bf367adb7398",
       "portfolioAdaptation": "Shared portfolio header and navigation, and the Complex → Clear brand layer (type, palette, footer)"
     },
     {
       "source": "manual-review.html",
       "path": "manual-review.html",
-      "sha256": "1653ec64fa7dffc5e7106aa540904727b57b309f1bf6920deb8ebb4da0c2ad0e",
+      "sha256": "dd5dceb9de73eb06c2db0bf795e895cdb6861e439469b832fe0608efeb865e0a",
       "sourceSha256": "39fb0219e82d0dd815a2b0c59e7bac0c7bda5e24e3a8fcac8e96f32bc8710525",
       "portfolioAdaptation": "Shared portfolio header and navigation, and the Complex → Clear brand layer (type, palette, footer)"
     },
     {
       "source": "favicon.svg",
       "path": "favicon.svg",
-      "sha256": "f81bab785cfd2d1cb70c25255064ba5693dd6f30e279ebef70af3aba6a2c0549"
+      "sha256": "984303356dd0d273da7e6c805403ca43b5e54959595524f6003b38a1c05d9fbd",
+      "sourceSha256": "984303356dd0d273da7e6c805403ca43b5e54959595524f6003b38a1c05d9fbd"
     },
     {
       "source": "assets/styles.css",
       "path": "assets/styles.css",
       "sha256": "5eee37fc0328083dce2526dd160c42a8eb1286965138f6c0be341b3b37cf67dd",
-      "sourceSha256": "da56fc6f2a92029fe1a31a86a74c400b5f025ffb906012f10090811b9dec4ae6",
+      "sourceSha256": "5eee37fc0328083dce2526dd160c42a8eb1286965138f6c0be341b3b37cf67dd",
       "portfolioAdaptation": "Shared portfolio header and navigation, and the Complex → Clear brand layer (type, palette, footer)"
     },
     {
       "source": "assets/it-buyer.css",
       "path": "assets/it-buyer.css",
-      "sha256": "f0b23733488f6f95aa0b4ad8f9d5950aded78d6000a1f2d084387d11cacebef5",
-      "sourceSha256": "c3cf48fe3d9edd3f77a2a631dda28304929c393da883e33e495956df1eef61e4",
+      "sha256": "eff60f5de7a60b74f03db17d2f9717785e707556407453bec3804c7da788af84",
+      "sourceSha256": "eff60f5de7a60b74f03db17d2f9717785e707556407453bec3804c7da788af84",
       "portfolioAdaptation": "Shared portfolio header and navigation, and the Complex → Clear brand layer (type, palette, footer)"
     },
     {
       "source": "assets/js/app.js",
       "path": "assets/js/app.js",
-      "sha256": "5ee97c1b3ab9aa90dcf2396f1c400c54d5fa86d399e943054316d3c23bbaaa26"
+      "sha256": "5ee97c1b3ab9aa90dcf2396f1c400c54d5fa86d399e943054316d3c23bbaaa26",
+      "sourceSha256": "5ee97c1b3ab9aa90dcf2396f1c400c54d5fa86d399e943054316d3c23bbaaa26"
     },
     {
       "source": "assets/js/awareness.js",
       "path": "assets/js/awareness.js",
-      "sha256": "dfdf9be5cc06054310dab0dff37a35656e6781588bf0568bce1073b9ab600338"
+      "sha256": "dfdf9be5cc06054310dab0dff37a35656e6781588bf0568bce1073b9ab600338",
+      "sourceSha256": "dfdf9be5cc06054310dab0dff37a35656e6781588bf0568bce1073b9ab600338"
     },
     {
       "source": "assets/js/config.js",
       "path": "assets/js/config.js",
-      "sha256": "721896e316093becf92313768062457ebdeb4288e96c8f314d1a6c6e7945a44e"
+      "sha256": "721896e316093becf92313768062457ebdeb4288e96c8f314d1a6c6e7945a44e",
+      "sourceSha256": "721896e316093becf92313768062457ebdeb4288e96c8f314d1a6c6e7945a44e"
     },
     {
       "source": "assets/js/diagnostics.js",
       "path": "assets/js/diagnostics.js",
-      "sha256": "df940778534fe7276fc87521342453bddada1be84ea758ff151e0d9da5810a33"
+      "sha256": "df940778534fe7276fc87521342453bddada1be84ea758ff151e0d9da5810a33",
+      "sourceSha256": "df940778534fe7276fc87521342453bddada1be84ea758ff151e0d9da5810a33"
     },
     {
       "source": "assets/js/export.js",
       "path": "assets/js/export.js",
-      "sha256": "89c0b5765bf22dc1cffe13c7b5bb4c0c1e251a65750a82cb4b31bf28de4603a7"
-    },
-    {
-      "source": "assets/js/it-buyer.js",
-      "path": "assets/js/it-buyer.js",
-      "sha256": "cf8bef81107a06a7b1dc69921363cd3a3cd95927de6a3f44b21b35b6fb7774cf"
+      "sha256": "89c0b5765bf22dc1cffe13c7b5bb4c0c1e251a65750a82cb4b31bf28de4603a7",
+      "sourceSha256": "89c0b5765bf22dc1cffe13c7b5bb4c0c1e251a65750a82cb4b31bf28de4603a7"
     },
     {
       "source": "assets/js/it-engine.js",
       "path": "assets/js/it-engine.js",
-      "sha256": "47f8f40e571ae2f925ac26de26b63e7d29cc8b6ca7e630a2adf238efefa8b09b"
+      "sha256": "f96aab3658ea9f02aac5e2d9a7b70c59357387a2d9b2ee4931ccd0cd5dd949ac",
+      "sourceSha256": "f96aab3658ea9f02aac5e2d9a7b70c59357387a2d9b2ee4931ccd0cd5dd949ac"
+    },
+    {
+      "source": "assets/js/it-example.js",
+      "path": "assets/js/it-example.js",
+      "sha256": "0767b86447b79197223623f5321276708686afb7817fefa074fb8f11e76400a6",
+      "sourceSha256": "0767b86447b79197223623f5321276708686afb7817fefa074fb8f11e76400a6"
+    },
+    {
+      "source": "assets/js/it-review-app.js",
+      "path": "assets/js/it-review-app.js",
+      "sha256": "2cf956ccc95dc1bc6ee759873e9cb5790757781a1a53f16eb6885e2d6a7cf039",
+      "sourceSha256": "2cf956ccc95dc1bc6ee759873e9cb5790757781a1a53f16eb6885e2d6a7cf039"
     },
     {
       "source": "assets/js/it-rubric.js",
       "path": "assets/js/it-rubric.js",
-      "sha256": "a96487c7fda3e6ba2a1cbededfef27e0513e10cac35e6de1d04c0c023902edb2"
+      "sha256": "a96487c7fda3e6ba2a1cbededfef27e0513e10cac35e6de1d04c0c023902edb2",
+      "sourceSha256": "a96487c7fda3e6ba2a1cbededfef27e0513e10cac35e6de1d04c0c023902edb2"
     },
     {
       "source": "assets/js/prompt.js",
       "path": "assets/js/prompt.js",
-      "sha256": "22f5e52248ee9bcc6e3745421c6676325f02ddf766604e61174533e1d2256b22"
+      "sha256": "22f5e52248ee9bcc6e3745421c6676325f02ddf766604e61174533e1d2256b22",
+      "sourceSha256": "22f5e52248ee9bcc6e3745421c6676325f02ddf766604e61174533e1d2256b22"
+    },
+    {
+      "source": "assets/js/review.js",
+      "path": "assets/js/review.js",
+      "sha256": "6dcfa4d408b76c4ef633f8bfae348da1e716f3aa8a3ef41f81bdcdaf116faabc",
+      "sourceSha256": "6dcfa4d408b76c4ef633f8bfae348da1e716f3aa8a3ef41f81bdcdaf116faabc"
     },
     {
       "source": "assets/js/rubric.js",
       "path": "assets/js/rubric.js",
-      "sha256": "5c26a2d6b3c8131cf5492531856bed849b49667cf04342f29b0800188b13ab62"
+      "sha256": "5c26a2d6b3c8131cf5492531856bed849b49667cf04342f29b0800188b13ab62",
+      "sourceSha256": "5c26a2d6b3c8131cf5492531856bed849b49667cf04342f29b0800188b13ab62"
     },
     {
       "source": "assets/js/sample-data.js",
       "path": "assets/js/sample-data.js",
-      "sha256": "eaa449930fabf8145f45eb11412da52fdae97c073089fbbe645cf334d4c60277"
+      "sha256": "eaa449930fabf8145f45eb11412da52fdae97c073089fbbe645cf334d4c60277",
+      "sourceSha256": "eaa449930fabf8145f45eb11412da52fdae97c073089fbbe645cf334d4c60277"
     },
     {
       "source": "assets/js/scoring.js",
       "path": "assets/js/scoring.js",
-      "sha256": "28a7515204be58eb176ec7633661eeb1ec9246c6d98c85b09eab39b8ba2e365e"
+      "sha256": "28a7515204be58eb176ec7633661eeb1ec9246c6d98c85b09eab39b8ba2e365e",
+      "sourceSha256": "28a7515204be58eb176ec7633661eeb1ec9246c6d98c85b09eab39b8ba2e365e"
     },
     {
       "source": "assets/js/strategy.js",
       "path": "assets/js/strategy.js",
-      "sha256": "af29448562f658028364ccbc4e2a1f80e40e14ed2b043b3ab19308fcc81c84c7"
+      "sha256": "af29448562f658028364ccbc4e2a1f80e40e14ed2b043b3ab19308fcc81c84c7",
+      "sourceSha256": "af29448562f658028364ccbc4e2a1f80e40e14ed2b043b3ab19308fcc81c84c7"
     },
     {
       "source": "assets/js/validation.js",
       "path": "assets/js/validation.js",
-      "sha256": "8135ea3146f7af6dc2fca022c9c3cbc0bc0a1d5dd50e7c06d19e803c59cc9627"
+      "sha256": "8135ea3146f7af6dc2fca022c9c3cbc0bc0a1d5dd50e7c06d19e803c59cc9627",
+      "sourceSha256": "8135ea3146f7af6dc2fca022c9c3cbc0bc0a1d5dd50e7c06d19e803c59cc9627"
     }
   ]
 }

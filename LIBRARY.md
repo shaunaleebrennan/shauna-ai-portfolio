@@ -6,9 +6,37 @@ Read every case study and supporting document here on GitHub. The links below op
 
 ## Case studies
 
+### [HQ Agent](case-studies/hq-agent.md)
+
+Customer-led GTM for HQ Agent: turning customer discovery, beta feedback, analyst input, and competitive intelligence into positioning, packaging, and seller execution.
+
+### [Messaging as Code](case-studies/messaging-as-code.md)
+
+Designing an operating model for messaging reuse across teams and AI tools, with clear product truth, PMM ownership and human review.
+
+### [Portfolio Voice Agent](case-studies/portfolio-voice-agent.md)
+
+Designing, configuring and testing a live voice and text agent that turns career and project evidence into useful conversations.
+
 ### [Workvivo HQ](case-studies/workvivo-hq.md)
 
 Evolving Workvivo’s employee experience platform narrative into a digital HQ, to stand out in a crowded AI-native employee experience market while staying relevant to champion personas.
+
+### [The Meta Migration](case-studies/meta-migration.md)
+
+Shaping migration positioning and seller strategy during Meta Workplace’s closure, as part of Workvivo’s Forrester-recognised response.
+
+### [Analyst Relations & Category Leadership](case-studies/market-leadership.md)
+
+Scaling analyst relations into a strategic market leadership programme, strengthening research recognition and opening new category opportunities.
+
+### [AI Product Strategy](case-studies/ai-product-strategy.md)
+
+Combining Product School courses with self-guided building and testing to develop practical judgment about AI products and PMM workflows.
+
+### [Brazil in Red](case-studies/brazil-in-red.md)
+
+From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.
 
 ### [Narrative design](case-studies/playbook.md)
 
@@ -16,35 +44,7 @@ Narrative Design: turn market insight into a strategic story. Explore the method
 
 ### [Product launch playbook](case-studies/launch-with-intent.md)
 
-Make the moment matter. A practical framework and six-question test to tier launches, group releases, and plan who hears what, when.
-
-### [Messaging as Code](case-studies/messaging-as-code.md)
-
-Designing an operating model for messaging reuse across teams and AI tools, with clear product truth, PMM ownership and human review.
-
-### [HQ Agent](case-studies/hq-agent.md)
-
-Positioning HQ Agent as the employee experience agent and building a customer-led expansion motion through call insights, competitive research, pricing, and seller enablement.
-
-### [Brazil in Red](case-studies/brazil-in-red.md)
-
-From a personal question to a bilingual election atlas: turning research, maps, and human stories into an interactive experience.
-
-### [AI Product Strategy](case-studies/ai-product-strategy.md)
-
-Combining Product School courses with self-guided building and testing to develop practical judgment about AI products and PMM workflows.
-
-### [Portfolio Voice Agent](case-studies/portfolio-voice-agent.md)
-
-Designing, configuring and testing a live voice and text agent that turns career and project evidence into useful conversations.
-
-### [Analyst Relations & Category Leadership](case-studies/market-leadership.md)
-
-Scaling analyst relations into a strategic market leadership programme, strengthening research recognition and opening new category opportunities.
-
-### [The Meta Migration](case-studies/meta-migration.md)
-
-Shaping migration positioning and seller strategy during Meta Workplace’s closure, as part of Workvivo’s Forrester-recognised response.
+Tier launches, group releases, and plan audience timing with a feature matrix, visual tiers, and an interactive launch journey.
 
 ## Supporting documents
 

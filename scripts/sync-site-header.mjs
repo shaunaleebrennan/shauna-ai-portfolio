@@ -9,7 +9,8 @@ export const siteHeader = (prefix = '', homepage = false) => template.replaceAll
 
 export async function syncSiteHeaders() {
   const docs = JSON.parse(await readFile(path.join(root, 'content/library.json'), 'utf8'));
-  const pages = ['index.html', 'case-study.html', 'playbook.html', 'launch-playbook.html', 'playbooks.html', 'narrative-design-guide.html', 'library.html', ...docs.map(doc => `documents/${doc.id}.html`), 'it-pressure-test/index.html', 'it-pressure-test/manual-review.html'];
+  // The homepage and case-study template carry their own header (see build output of the redesign).
+  const pages = ['playbook.html', 'launch-playbook.html', 'playbooks.html', 'narrative-design-guide.html', 'library.html', ...docs.map(doc => `documents/${doc.id}.html`), 'it-pressure-test/index.html', 'it-pressure-test/manual-review.html'];
   for (const file of pages) {
     const location = path.join(root, file);
     const prefix = file.includes('/') ? '../' : '';
@@ -29,17 +30,17 @@ export async function syncSiteHeaders() {
     if (!existing.test(html) && !legacy.test(html)) throw new Error(`Missing site header: ${file}`);
     html = html.replace(existing.test(html) ? existing : legacy, () => header);
     html = html.replace(/<link\b[^>]*href="(?:\.\.\/)?site-header\.css[^"\n]*"[^>]*>\s*/g, '');
-    html = html.replace('</head>', `<link rel="stylesheet" href="${prefix}site-header.css?v=20261027-nav-final"></head>`);
+    html = html.replace('</head>', `<link rel="stylesheet" href="${prefix}site-header.css?v=20261108-brand"></head>`);
     if (file === 'it-pressure-test/manual-review.html') html = html.replace('<p class="shell"><a href="./index.html">← IT buyer review</a></p>', '').replace('<main id="main-content">', '<main id="main-content"><p class="shell"><a href="./index.html">← IT buyer review</a></p>');
     await writeFile(location, html);
   }
   // Preserve the imported tool's source hashes and record its portfolio header adaptation.
   const manifestPath = path.join(root, 'it-pressure-test/source-manifest.json');
   const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
-  for (const entry of manifest.files.filter(entry => ['index.html', 'manual-review.html'].includes(entry.path))) {
+  for (const entry of manifest.files.filter(entry => ['index.html', 'manual-review.html', 'assets/it-buyer.css', 'assets/styles.css'].includes(entry.path))) {
     entry.sourceSha256 ??= entry.sha256;
     entry.sha256 = createHash('sha256').update(await readFile(path.join(root, 'it-pressure-test', entry.path))).digest('hex');
-    entry.portfolioAdaptation = 'Shared portfolio header and navigation';
+    entry.portfolioAdaptation = 'Shared portfolio header and navigation, and the Complex → Clear brand layer (type, palette, footer)';
   }
   await writeFile(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
   console.log(`Synchronized homepage navigation across ${pages.length} pages.`);

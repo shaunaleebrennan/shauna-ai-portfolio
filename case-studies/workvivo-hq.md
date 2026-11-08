@@ -115,3 +115,9 @@ PMM team retrospective · August 2026
 Team feedback on message alignment at the Workvivo HQ launch at WOW.
 
 > An AI story that erases what made you different is a concession to your competitors.
+
+## Supporting evidence
+
+- **[Workvivo HQ product page](https://www.workvivo.com/hq/)** — Public product context. Shows the product narrative; Shauna’s contribution is described in this case study.
+- **[Shauna’s launch post](https://www.linkedin.com/posts/shaunalee_work-has-a-new-address-introducing-workvivo-activity-7472968114830454786-qTjH)** — Public launch activity. Launch commentary and peer feedback. LinkedIn may require sign-in.
+- **[Read the narrative notes](../knowledge/case-study-hq.md)** — Supporting document. Buyer problem, product pillars, and launch system.

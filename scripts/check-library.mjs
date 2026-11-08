@@ -71,7 +71,7 @@ for (const item of work) {
   check(item.caseStudy.story?.length > 0, `Missing story: ${item.slug}`);
   check(new Set(item.caseStudy.story.map(block => block.id)).size === item.caseStudy.story.length, `Duplicate section IDs: ${item.slug}`);
   for (const block of item.caseStudy.story) {
-    check(['text', 'split', 'artifact', 'decisions'].includes(block.layout), `Unknown layout: ${item.slug}`);
+    check(['text', 'split', 'artifact', 'decisions', 'showcase'].includes(block.layout), `Unknown layout: ${item.slug}`);
     check(block.title && (block.paragraphs?.length || block.items?.length), `Empty section: ${item.slug}`);
     check(markdown.includes(`## ${block.title}`), `Stale section title: ${item.slug}`);
     for (const text of [...(block.paragraphs || []), ...(block.items || [])]) check(markdown.includes(text), `Stale section copy: ${item.slug}`);

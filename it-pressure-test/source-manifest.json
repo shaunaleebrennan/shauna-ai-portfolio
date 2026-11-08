@@ -5,16 +5,16 @@
     {
       "source": "tool.html",
       "path": "index.html",
-      "sha256": "d07a4904bc8a462bb94666c172642616a03edbec9d63fc0c4f1ebfac7bb6083c",
+      "sha256": "36f6b98e28516c0d7c15ee000bf7bf973974a88f7a32c0d4a73dd3d5a67e6883",
       "sourceSha256": "dfe2f73bbda2786be377db99e7ef253fc280589c633d5c81a139a04fa44dc878",
-      "portfolioAdaptation": "Shared portfolio header and navigation"
+      "portfolioAdaptation": "Shared portfolio header and navigation, and the Complex → Clear brand layer (type, palette, footer)"
     },
     {
       "source": "manual-review.html",
       "path": "manual-review.html",
-      "sha256": "0ae3cd5946bcb7c3276cae1d4c16d87b25e43fc2849549fe7090f2530e6e99f8",
+      "sha256": "b5edb4af9a5a22b39a61e48e41c78fb1a6c82daed3ed72d7945443b698c77a8b",
       "sourceSha256": "39fb0219e82d0dd815a2b0c59e7bac0c7bda5e24e3a8fcac8e96f32bc8710525",
-      "portfolioAdaptation": "Shared portfolio header and navigation"
+      "portfolioAdaptation": "Shared portfolio header and navigation, and the Complex → Clear brand layer (type, palette, footer)"
     },
     {
       "source": "favicon.svg",
@@ -24,12 +24,16 @@
     {
       "source": "assets/styles.css",
       "path": "assets/styles.css",
-      "sha256": "da56fc6f2a92029fe1a31a86a74c400b5f025ffb906012f10090811b9dec4ae6"
+      "sha256": "5eee37fc0328083dce2526dd160c42a8eb1286965138f6c0be341b3b37cf67dd",
+      "sourceSha256": "da56fc6f2a92029fe1a31a86a74c400b5f025ffb906012f10090811b9dec4ae6",
+      "portfolioAdaptation": "Shared portfolio header and navigation, and the Complex → Clear brand layer (type, palette, footer)"
     },
     {
       "source": "assets/it-buyer.css",
       "path": "assets/it-buyer.css",
-      "sha256": "c3cf48fe3d9edd3f77a2a631dda28304929c393da883e33e495956df1eef61e4"
+      "sha256": "f0b23733488f6f95aa0b4ad8f9d5950aded78d6000a1f2d084387d11cacebef5",
+      "sourceSha256": "c3cf48fe3d9edd3f77a2a631dda28304929c393da883e33e495956df1eef61e4",
+      "portfolioAdaptation": "Shared portfolio header and navigation, and the Complex → Clear brand layer (type, palette, footer)"
     },
     {
       "source": "assets/js/app.js",

@@ -119,3 +119,9 @@ Seller enablement connected discovery, use cases, objections, and the role of Zo
 Customer discovery → differentiated value → a commercial decision.
 
 > Before asking customers to buy another agent, make its job unmistakable.
+
+## Supporting evidence
+
+- **[Workvivo HQ product page](https://www.workvivo.com/hq/)** — Public product context. Company product context, not independent verification of individual ownership.
+- **[HQ Agent product artwork](../assets/evidence/hq-agent-product.png)** — Published artifact. Product visual supporting the commercial narrative.
+- **[Explore the platform positioning](workvivo-hq.md)** — Related case study. How the agent fits the wider Workvivo HQ story.

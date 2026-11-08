@@ -6,9 +6,25 @@ const work = JSON.parse(await readFile('content/portfolio.json', 'utf8')).work;
 const docs = JSON.parse(await readFile('content/library.json', 'utf8'));
 const escape = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-const layout = (title, description, body, prefix = '') => `<!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="${escape(description)}"><title>${escape(title)} — Shauna Azevedo-Brennan</title><link rel="icon" href="${prefix}assets/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="${prefix}styles.css"><link rel="stylesheet" href="${prefix}library.css?v=20261024-1"><script src="${prefix}analytics.js" defer></script></head>
-<body class="resource-page"><a class="skip-link" href="#main">Skip to content</a><header class="nav shell"><a class="brand" href="${prefix}index.html"><span>SB</span> Shauna Azevedo-Brennan</a><nav aria-label="Main navigation"><a href="${prefix}index.html#explore">Portfolio</a><a href="${prefix}library.html">Library</a><a href="${prefix}assets/Shauna-Azevedo-Brennan-CV.pdf">CV</a></nav></header><main id="main" class="shell">${body}</main><footer class="shell"><div><strong>Shauna Azevedo-Brennan</strong><span>Product Marketing Leader</span></div><a href="${prefix}library.html">Case studies & documents</a><a href="mailto:shaunaleebrennan@gmail.com">Get in touch</a></footer></body></html>\n`;
+// Content pages share the Complex → Clear skeleton (see design-system/README.md):
+// the title sits in a dark fold; documents read on a light sheet; the library stays on the void.
+const BRAND = '20261108-brand';
+const brandFooter = prefix => `<footer class="bp-footer"><div class="bp-footer-wrap"><p class="bp-footer-line">I build with AI, but I market for <span>humans.</span></p><div class="bp-footer-meta"><span><strong>Shauna Azevedo-Brennan</strong> · Product Marketing Leader</span><span class="bp-footer-links"><a href="https://www.linkedin.com/in/shaunalee/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="${prefix}assets/Shauna-Azevedo-Brennan-CV.pdf" target="_blank" rel="noreferrer">CV ↓</a><a href="#top">Back to top ↑</a></span></div></div></footer>`;
+const layout = (title, description, body, prefix = '') => {
+  const isDocument = body.includes('<div class="document-layout">');
+  let main;
+  if (isDocument) {
+    const split = body.indexOf('<div class="document-layout">');
+    main = `<main id="main"><div class="bp-fold"><div class="shell">${body.slice(0, split)}</div></div><div class="bp-sheet"><div class="shell">${body.slice(split)}</div></div></main>`;
+  } else {
+    const split = body.indexOf('</header>') + '</header>'.length;
+    main = `<main id="main"><div class="bp-fold"><div class="shell">${body.slice(0, split)}</div></div><div class="shell">${body.slice(split)}</div></main>`;
+  }
+  return `<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="${escape(description)}"><title>${escape(title)} — Shauna Azevedo-Brennan</title><link rel="icon" href="${prefix}assets/favicon.svg"><link rel="stylesheet" href="${prefix}styles.css?v=${BRAND}"><link rel="stylesheet" href="${prefix}library.css?v=${BRAND}"><script src="${prefix}analytics.js" defer></script><link rel="preload" href="${prefix}assets/fonts/inter-tight-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="${prefix}assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="${prefix}fonts.css?v=20261108"><link rel="stylesheet" href="${prefix}brand-pages.css?v=${BRAND}"></head>
+<body id="top" class="resource-page bp ${isDocument ? 'bp-doc' : 'bp-library'}">${isDocument ? '<div class="bp-progress" aria-hidden="true"><span></span></div>' : ''}<a class="skip-link" href="#main">Skip to content</a><header class="nav shell"><a class="brand" href="${prefix}index.html"><span>SB</span> Shauna Azevedo-Brennan</a><nav aria-label="Main navigation"><a href="${prefix}index.html#explore">Portfolio</a><a href="${prefix}library.html">Library</a><a href="${prefix}assets/Shauna-Azevedo-Brennan-CV.pdf">CV</a></nav></header>${main}${brandFooter(prefix)}<script src="${prefix}brand-pages.js?v=${BRAND}" defer></script></body></html>
+`;
+};
 await mkdir('documents', { recursive: true });
 for (const doc of docs) {
   // Explicit allowlist only: never discover or publish Markdown by globbing.

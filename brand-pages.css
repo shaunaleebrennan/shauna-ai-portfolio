@@ -127,7 +127,7 @@ body.bp .bp-footer .bp-footer-tool strong{color:#F2F3EE;font-weight:600}
 .bp-ask h2{margin:18px 0 0;font:600 clamp(40px,4.6vw,68px)/.98 'Inter Tight',Inter,sans-serif;letter-spacing:-.05em;color:#F2F3EE;max-width:none}
 .bp-ask p{margin:20px 0 0;max-width:480px;color:#B4B7AE;font-size:18px;line-height:1.6}
 .bp-prompts{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:28px}
-.bp-chip{display:inline-flex;align-items:center;min-height:42px;padding:0 18px;border-radius:999px;border:1px solid rgba(255,255,255,.18);color:#E6E8E1;font:500 14px Inter,system-ui,sans-serif;text-decoration:none;transition:border-color .2s ease,color .2s ease}
+.bp-chip{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid rgba(255,255,255,.18);color:#E6E8E1;font:500 14px Inter,system-ui,sans-serif;text-decoration:none;transition:border-color .2s ease,color .2s ease}
 .bp-chip:hover{border-color:#C9FF63;color:#FFFFFF}
 .bp-back{display:inline-block;margin-top:32px;color:#C9FF63;font:600 15px Inter,system-ui,sans-serif;text-decoration:none}
 .bp-back:hover{color:#E2FFA8}

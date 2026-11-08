@@ -6,6 +6,7 @@
   /* Void: the AI moments (folds, Explore, Ask, closes) */
   --cc-void:#0B0B10;            /* page background on dark */
   --cc-void-2:#13131A;          /* cards and panels on dark */
+  --cc-void-3:#1C1C26;          /* raised surfaces on dark */
   --cc-void-line:rgba(255,255,255,.10);
   --cc-void-line-strong:rgba(255,255,255,.22);
   --cc-text:#F2F3EE;            /* primary text on dark      17.6:1 */
@@ -26,6 +27,7 @@
   --cc-lime-hover:#D6FF85;
   --cc-lime-ink:#4D7A00;        /* lime for text on paper     4.6:1 */
   --cc-violet-ink:#4B2FE0;      /* links on paper             6.8:1 */
+  --cc-highlight:linear-gradient(transparent 58%,#C9FF63 58%);   /* lime behind ink: key phrases on paper */
 
   /* Aura: the orb, the glow and the gradient word */
   --cc-cream:#FFF9D6;
@@ -40,11 +42,13 @@
   --cc-font-display:'Inter Tight',Inter,system-ui,sans-serif;
   --cc-font-body:Inter,system-ui,sans-serif;
   --cc-font-mono:'JetBrains Mono',ui-monospace,monospace;
-  --cc-size-display:clamp(48px,6.4vw,100px);   /* hero and fold titles, 600, -0.055em, 0.95–0.98 */
+  --cc-size-hero:168px;                        /* homepage hero, 500, caps, -0.055em */
+  --cc-size-display:clamp(48px,6.4vw,100px);   /* fold titles, 600, -0.055em, 0.95–0.98 */
   --cc-size-h2:clamp(40px,5vw,76px);           /* section titles, 600, -0.05em, 0.98 */
   --cc-size-h2-sheet:clamp(32px,3.6vw,54px);   /* titles inside the reading sheet, 600, -0.045em */
   --cc-size-lead:18px;                         /* intro paragraphs, 1.6–1.65 */
-  --cc-size-body:16px;                         /* 1.55–1.7 */
+  --cc-size-body:19px;                         /* reading copy, 1.65 */
+  --cc-measure:64ch;                           /* 60–68 characters */
   --cc-size-label:12px;                        /* mono, 500, uppercase, 0.14em */
   --cc-track-display:-.055em;
   --cc-track-h2:-.05em;
@@ -55,13 +59,14 @@
   --cc-wrap-wide:1440px;                       /* header width */
   --cc-gutter:clamp(20px,5vw,64px);
   --cc-header-height:84px;
-  --cc-section-y:clamp(88px,10vw,150px);
+  --cc-section-y:clamp(96px,10vw,160px);      /* 128–160 desktop, 96 phone */
+  --cc-touch:44px;                             /* minimum target */
 
   /* Shape */
   --cc-radius-pill:999px;
   --cc-radius-chip:16px;
   --cc-radius-card:24px;
-  --cc-radius-panel:28px;
+  --cc-radius-panel:32px;
   --cc-radius-sheet:40px;                      /* 28px below 860px */
   --cc-shadow-sheet:0 -30px 80px rgba(0,0,0,.35);
   --cc-shadow-cover:0 0 0 1px rgba(255,255,255,.12),0 50px 100px rgba(0,0,0,.55),0 0 120px rgba(143,123,255,.25);

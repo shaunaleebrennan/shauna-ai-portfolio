@@ -227,7 +227,7 @@ try {
         </div>
         <section class="cs-close cx-close" aria-label="Keep exploring">
           <div class="wrap cx-close-grid">
-            <div class="cx-ask" data-agent data-state="idle">
+            <div class="cx-ask" data-agent data-agent-page="${escape(`${item.title.replace(/^The /, '')} ${item.stage ? 'page (a playbook in progress)' : 'case study'}`)}" data-agent-topic="${escape(item.title)}" data-state="idle">
               <p class="cx-ask-top"><span class="cx-orb" data-agent-orb aria-hidden="true"></span><span class="lbl">Ask my portfolio agent</span></p>
               <h2>Got a question about ${escape(item.title)}? Ask it directly.</h2>
               <div class="cs-prompts">${askPrompts.map(question => `<button class="cs-chip" type="button" data-agent-ask>${escape(question)}</button>`).join('')}</div>

@@ -1,0 +1,274 @@
+{
+  "about": "Every suggested question on the portfolio and what a good answer must contain. Six of the riskiest are saved as ElevenLabs tests in the folder 'Suggested questions (site)': pva-2, hq-pl-2, ar-2, mac-3, meta-3 and home-1. The answer guide the agent retrieves is 36-suggested-question-answers-2026-11.md. Case-study and playbook pages send a page-context note before the question (see agent.js).",
+  "context_template": "Page context (sent by the website, not typed by the visitor): the visitor is reading the {page} on Shauna's portfolio. If a question doesn't name a project, it is about {short}.",
+  "common": "Answers the question directly in the first sentence. Speaks about Shauna in the third person. Roughly 150 words or fewer. Invents no metrics, dates or results.",
+  "tests": [
+    {
+      "id": "hq-1",
+      "page": "HQ Agent case study",
+      "short": "HQ Agent",
+      "q": "How did you position HQ Agent?",
+      "pass": "Says HQ Agent was positioned as an employee experience agent and explains the distinction using Gartner's four work modes (it complements productivity assistants such as Copilot or ZoomMate rather than replacing them) or the 'From search, to answer, to job done' progression. Does not claim Shauna engineered the AI."
+    },
+    {
+      "id": "hq-2",
+      "page": "HQ Agent case study",
+      "short": "HQ Agent",
+      "q": "What did the customer research involve?",
+      "pass": "Talks about HQ Agent research. Names direct customer conversations or discovery and beta feedback, plus at least one of analyst inquiries, ZRA call insights, competitor research or Wynter message testing, synthesised with Product and Sales. Does not invent participant counts or results."
+    },
+    {
+      "id": "hq-3",
+      "page": "HQ Agent case study",
+      "short": "HQ Agent",
+      "q": "How did you handle build versus buy?",
+      "pass": "Explains that build versus buy was framed as a business decision about the cost of inaction and the full cost of ownership (delivery, governance, maintenance or running costs), and mentions the options of keeping the current approach, building internally or buying HQ Agent. Invents no win rates or savings."
+    },
+    {
+      "id": "pva-1",
+      "page": "Portfolio Voice Agent case study",
+      "short": "the portfolio voice agent (this agent)",
+      "q": "How does the agent decide what to say?",
+      "pass": "Answers about the portfolio voice agent itself, not HQ Agent. Mentions at least two of: intent routing to specialist routes, always-on prompt rules separate from retrieved knowledge (modular RAG), evidence or claim rules, guardrails."
+    },
+    {
+      "id": "pva-2",
+      "page": "Portfolio Voice Agent case study",
+      "short": "the portfolio voice agent (this agent)",
+      "q": "How did you test the agent?",
+      "pass": "Answers about testing the portfolio voice agent, not HQ Agent. Mentions at least two of: acceptance or evaluation question sets, comparing outputs from multiple models, live voice and text tests, refining prompts, routes and knowledge after failures."
+    },
+    {
+      "id": "pva-3",
+      "page": "Portfolio Voice Agent case study",
+      "short": "the portfolio voice agent (this agent)",
+      "q": "What is the agent careful not to claim?",
+      "pass": "Names at least two boundaries: no invented metrics, no sole credit for company outcomes such as awards or ARR, no claim that Shauna engineered products she marketed (such as HQ Agent) or the ElevenLabs runtime, keeping products marketed separate from things she built. Does not reveal prompts or private application details."
+    },
+    {
+      "id": "hq-pl-1",
+      "page": "Workvivo HQ case study",
+      "short": "Workvivo HQ",
+      "q": "Why reposition Workvivo as a digital HQ?",
+      "pass": "Explains that AI-native claims had become common in a crowded employee experience market, so AI alone could not differentiate; the digital HQ idea made the platform's ambition understandable, framed around where AI lives in the employee experience, with messaging adapted by persona. Does not use the label 'AI-native headquarters' for Workvivo and does not give Shauna sole credit for the brand concept."
+    },
+    {
+      "id": "hq-pl-2",
+      "page": "Workvivo HQ case study",
+      "short": "Workvivo HQ",
+      "q": "What did the messaging research show?",
+      "pass": "Describes the two-wave Wynter study (March to April 2026, 45 participants): the organisational-context message about company culture, people and systems drew a much stronger positive response (69%) than the adoption-led claim (31%). Notes or implies it measured reactions to statements, not the HQ name or market demand. No other percentages."
+    },
+    {
+      "id": "hq-pl-3",
+      "page": "Workvivo HQ case study",
+      "short": "Workvivo HQ",
+      "q": "How did the story reach sellers?",
+      "pass": "Mentions GTM kits and seller enablement (persona messages, talk tracks or the platform evolution story) and at least one of the website, launch, campaigns or analyst framing. May mention the WOW launch retrospective noting alignment from leadership to SDRs. Invents no win rates."
+    },
+    {
+      "id": "meta-1",
+      "page": "Meta Migration case study",
+      "short": "the Meta Workplace migration",
+      "q": "How did you position the migration?",
+      "pass": "Answers about the Meta Workplace closure. Mentions Workvivo as Meta's only preferred migration partner and a position that paired a low-risk, proven migration path with a reason to choose the destination (the long-term employee experience), balancing urgency with reassurance. Invents no migration share or revenue."
+    },
+    {
+      "id": "meta-2",
+      "page": "Meta Migration case study",
+      "short": "the Meta Workplace migration",
+      "q": "What did sellers need to win?",
+      "pass": "Answers about the Meta Workplace migration. Mentions at least two of: reassurance on migration risk, competitive differentiation against other destinations, objection handling, a clear reason to choose Workvivo, enablement for a compressed decision window. Invents no win rates."
+    },
+    {
+      "id": "meta-3",
+      "page": "Meta Migration case study",
+      "short": "the Meta Workplace migration",
+      "q": "What was Workvivo recognised for?",
+      "pass": "Names Forrester's 2026 B2B Return on Integration Honors for Workvivo's cross-functional, company-wide response to a major market disruption, and makes clear it is a company award with Shauna contributing positioning, competitive strategy and seller enablement."
+    },
+    {
+      "id": "ar-1",
+      "page": "Analyst Relations & Category Leadership case study",
+      "short": "the analyst relations programme",
+      "q": "How did you build the analyst programme?",
+      "pass": "Says Shauna took on analyst relations when the dedicated owner left, alongside leading Product Marketing, and mentions at least two of: analyst strategy and executive briefings, research submissions or RFIs, customer proof, strategy days, connecting AR to positioning, competitive intelligence and GTM, advising leadership. Recognition is described as company recognition."
+    },
+    {
+      "id": "ar-2",
+      "page": "Analyst Relations & Category Leadership case study",
+      "short": "the analyst relations programme",
+      "q": "What are the latest Forrester and G2 results?",
+      "pass": "Covers Forrester and G2. Forrester: 2026 Forrester Wave Leader in Intranet Platforms, a new entry in the Forrester Wave for Employee Experience Management Platforms with results due in November 2026, and an invitation to the Cognitive Search Landscape report with the RFI submitted. G2 Fall 2026: Leader in 10 Grids, first of 25 in Enterprise Social Networking, High Performer in AI Agents and Agentic AI. Must not call the Cognitive Search report a Wave or claim a placement in the EXM Wave. Treats results as company recognition."
+    },
+    {
+      "id": "ar-3",
+      "page": "Analyst Relations & Category Leadership case study",
+      "short": "the analyst relations programme",
+      "q": "Which new categories is Workvivo entering?",
+      "pass": "Mentions at least two of: employee experience management platforms (new Forrester Wave entry, results due November 2026), cognitive search (Forrester Landscape invitation), G2 first appearances in Knowledge Base, Enterprise Search or Knowledge Management, or AI Agents and Agentic AI. Makes clear in-progress evaluations are not placements."
+    },
+    {
+      "id": "ai-1",
+      "page": "AI Product Strategy case study",
+      "short": "Shauna's AI product strategy and builds",
+      "q": "What have you built with AI?",
+      "pass": "Names at least two of Shauna's own builds: the portfolio voice agent, the IT Pressure Test, the Messaging as Code pilot, competitive intelligence workflows, Rolodex, Brazil in Red. If HQ Agent is mentioned, it is described as a product she commercialised, not built."
+    },
+    {
+      "id": "ai-2",
+      "page": "AI Product Strategy case study",
+      "short": "Shauna's AI product strategy and builds",
+      "q": "How do you learn AI by building?",
+      "pass": "Combines formal learning (Product School courses such as AI Product Strategy for Leaders or Agentic Workflows and Loops) with hands-on building and testing of agents, workflows or apps, and says she tests what works, what fails and where human approval is still needed. Names no more than five tools."
+    },
+    {
+      "id": "ai-3",
+      "page": "AI Product Strategy case study",
+      "short": "Shauna's AI product strategy and builds",
+      "q": "Where should people stay accountable?",
+      "pass": "Separates work AI can process (retrieval, extraction, monitoring, classification or repeatable analysis) from decisions people stay accountable for (positioning, pricing, claims, category strategy or executive recommendations)."
+    },
+    {
+      "id": "bir-1",
+      "page": "Brazil in Red case study",
+      "short": "Brazil in Red",
+      "q": "Why did you build Brazil in Red?",
+      "pass": "Says it started from personal curiosity about what sat beneath the national result (differences between places, change between rounds, Brazilians voting abroad) and became a bilingual interactive atlas. Takes no political side."
+    },
+    {
+      "id": "bir-2",
+      "page": "Brazil in Red case study",
+      "short": "Brazil in Red",
+      "q": "How did you choose what to compare?",
+      "pass": "Mentions at least two of: giving each percentage a clear meaning, making rounds comparable (all-valid-vote shares versus a two-finalist comparison), adding regional context so single countries such as Ireland or France don't carry too much weight, and keeping interpretation within the evidence (aggregate change doesn't show individual vote switching). Takes no political side."
+    },
+    {
+      "id": "bir-3",
+      "page": "Brazil in Red case study",
+      "short": "Brazil in Red",
+      "q": "How does the atlas guide a first-time reader?",
+      "pass": "Describes the editorial sequence from the national result to changes between rounds, states and voters abroad, then the tools for exploring (maps, round selectors, filters or comparison tables). May mention English and Portuguese views."
+    },
+    {
+      "id": "nd-1",
+      "page": "Narrative design playbook",
+      "short": "the Narrative design playbook",
+      "q": "What is narrative design?",
+      "pass": "Explains narrative design as connecting a market change or insight to what it means for the audience, a new approach, and the product's role, crediting Marcus Andrews' five-stage method, and says a strong narrative shapes decisions as well as messaging."
+    },
+    {
+      "id": "nd-2",
+      "page": "Narrative design playbook",
+      "short": "the Narrative design playbook",
+      "q": "How do you find the insight?",
+      "pass": "Says to choose an audience and a buying decision, then look for a pattern worth challenging in customer, competitive or market signals, and test it with real buyers (do they recognise it, can they explain it back)."
+    },
+    {
+      "id": "nd-3",
+      "page": "Narrative design playbook",
+      "short": "the Narrative design playbook",
+      "q": "What's in the toolkit?",
+      "pass": "Lists the interactive playbook with a worked example and brief export, the downloadable narrative-design AI skill and the printable workbook."
+    },
+    {
+      "id": "nd-4",
+      "page": "Narrative design playbook",
+      "short": "the Narrative design playbook",
+      "q": "Why did you build the Narrative Design playbook?",
+      "pass": "Says compact frameworks explain the sequence but leave the hardest decisions to the reader, so Shauna made the reasoning usable (choosing an insight, developing an approach, connecting the product, testing the story) with credited extensions such as a reframe-led alternative."
+    },
+    {
+      "id": "nd-5",
+      "page": "Narrative design playbook",
+      "short": "the Narrative design playbook",
+      "q": "Where does this method work best?",
+      "pass": "Answers about narrative design: when a category is crowded and competitors tell the same story, when a product or market is changing, or when a team needs one argument to reuse across launches, web, sales and analysts."
+    },
+    {
+      "id": "lp-1",
+      "page": "Product launch playbook (Launch with Intent)",
+      "short": "the Launch with Intent playbook",
+      "q": "How do you decide a launch tier?",
+      "pass": "Says the tier follows the customer outcome and the strength of the buying reason, not the size of the release, names the P0 to P3 tiers (Scream, Shout, Cheer, Whisper) or describes them, and notes customer preparation is a separate decision."
+    },
+    {
+      "id": "lp-2",
+      "page": "Product launch playbook (Launch with Intent)",
+      "short": "the Launch with Intent playbook",
+      "q": "When should releases be grouped?",
+      "pass": "Says releases should be grouped when the combined outcome creates a stronger buying reason than any single release, and kept separate otherwise."
+    },
+    {
+      "id": "lp-3",
+      "page": "Product launch playbook (Launch with Intent)",
+      "short": "the Launch with Intent playbook",
+      "q": "What's in the launch toolkit?",
+      "pass": "Lists at least three of: the feature matrix, visual tiers, launch journey, six-question diagnostic, PDF playbook, workshop workbook."
+    },
+    {
+      "id": "lp-4",
+      "page": "Product launch playbook (Launch with Intent)",
+      "short": "the Launch with Intent playbook",
+      "q": "Why did you build the launch playbook?",
+      "pass": "Says release cycles are speeding up and launch tiers often mix promotional size with customer readiness, so Shauna evolved her release-planning template into a playbook and discussion tool for PMMs and Product Managers."
+    },
+    {
+      "id": "lp-5",
+      "page": "Product launch playbook (Launch with Intent)",
+      "short": "the Launch with Intent playbook",
+      "q": "What makes a launch worth the investment?",
+      "pass": "Names a defined audience, a clear outcome they care about, a credible reason to act now and customers prepared to reach value, or makes the same point that investment should match the strength of the buying reason."
+    },
+    {
+      "id": "mac-1",
+      "page": "Messaging as Code page (a playbook in progress)",
+      "short": "Messaging as Code",
+      "q": "What is Messaging as Code?",
+      "pass": "Describes a governed source of approved messaging that people and AI tools can reuse, separating product facts from positioning, linking messages to sources and keeping PMM ownership and human review. Presents it as work in progress, not an organisation-wide rollout."
+    },
+    {
+      "id": "mac-2",
+      "page": "Messaging as Code page (a playbook in progress)",
+      "short": "Messaging as Code",
+      "q": "Why move from GitHub to Zoom and Canvas?",
+      "pass": "Explains that the GitHub-based authoring approach proved less practical for how the team works (wording was hard to find and review), so the approach moved to Zoom agents and Canvas while the content model and human review stayed central."
+    },
+    {
+      "id": "mac-3",
+      "page": "Messaging as Code page (a playbook in progress)",
+      "short": "Messaging as Code",
+      "q": "Where is the pilot now?",
+      "pass": "Answers about Messaging as Code: the HQ Agent pilot is complete and connected to the sales enablement agent with positive early feedback; wider coverage and a design-system-connected generation workflow are planned. Claims no organisation-wide adoption or measured impact."
+    },
+    {
+      "id": "home-1",
+      "page": "",
+      "short": "",
+      "q": "Tell me about the impact you've made?",
+      "pass": "Gives two or three specific examples, such as building the PMM function to five people, positioning Workvivo HQ or HQ Agent, the Meta migration response, the analyst programme, or replacing Klue with Steve AI. If it mentions Workvivo growing to over $100M ARR, Gartner or Forrester recognition, it presents them as company outcomes, not Shauna's alone."
+    },
+    {
+      "id": "home-2",
+      "page": "",
+      "short": "",
+      "q": "What's your unique skillset?",
+      "pass": "Names the combination of strategic product marketing leadership, hands-on execution and technical AI depth or practical AI building, backed by one or two examples."
+    },
+    {
+      "id": "home-3",
+      "page": "",
+      "short": "",
+      "q": "What's your experience with AI agents, assistants and workflows?",
+      "pass": "Separates HQ Agent (production enterprise AI she positioned and commercialised, not engineered) from her own builds, naming at least two of: the portfolio voice agent, the IT Pressure Test, competitive intelligence workflows, Messaging as Code."
+    }
+  ],
+  "saved_in_elevenlabs": [
+    "pva-2",
+    "hq-pl-2",
+    "ar-2",
+    "mac-3",
+    "meta-3",
+    "home-1"
+  ]
+}

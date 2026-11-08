@@ -7,6 +7,17 @@ const AGENT_ID = 'agent_4401kzh72h3ff1ev937b4qdg8b7y';
 const SDK_SRC = 'https://cdn.jsdelivr.net/npm/@elevenlabs/client@1.35.0/dist/lib.iife.js';
 const WIDGET_SRC = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
 
+// Pages tell the agent where the visitor is, so short questions such as
+// "Where is the pilot now?" resolve to the right project. The note is sent as a
+// contextual update: the agent reads it but doesn't reply to it.
+const pageNote = (page, topic) => `Page context (sent by the website, not typed by the visitor): the visitor is reading the ${page} on Shauna's portfolio. If a question doesn't name a project, it is about ${topic}.`;
+// Suggested questions handed over from a playbook page (index.html?ask=…&about=…#ask).
+// Only known pages are accepted, so a crafted link can't put its own words in the note.
+const HANDOVER_PAGES = {
+  'narrative-design': ['Narrative design playbook', 'the Narrative design playbook'],
+  'launch': ['Launch with Intent product launch playbook', 'the Launch with Intent playbook']
+};
+
 // Mount every agent block on the page, including ones a page renders later
 // (case studies render theirs after loading content, then fire 'agent:mount').
 const mountAgents = () => document.querySelectorAll('[data-agent]:not([data-agent-ready])').forEach(initAgent);
@@ -31,6 +42,9 @@ function initAgent(section) {
   let lastSent = '';
   let askedSomething = false;
   let sdkPromise = null;
+  let pageContext = section.dataset.agentPage
+    ? pageNote(section.dataset.agentPage, section.dataset.agentTopic || section.dataset.agentPage)
+    : '';
 
   const setState = (state, text) => {
     section.dataset.state = state;
@@ -209,6 +223,9 @@ function initAgent(section) {
         setState(mode === 'voice' ? 'listening' : 'ready', mode === 'voice' ? 'Listening — go ahead' : 'Connected — ask away');
       }
       if (mode === 'voice') pulse();
+      if (pageContext) {
+        try { conversation.sendContextualUpdate(pageContext); } catch (error) { console.warn('[agent] page context not sent', error); }
+      }
       if (firstMessage) send(firstMessage);
       if (mode === 'text') input?.focus();
     } catch (error) {
@@ -246,8 +263,11 @@ function initAgent(section) {
   window.addEventListener('pagehide', () => { conversation?.endSession().catch(() => {}); });
 
   // Questions handed over from a case study (index.html?ask=…#ask) wait in the box until the visitor sends them.
-  const handedOver = new URLSearchParams(window.location.search).get('ask');
+  const params = new URLSearchParams(window.location.search);
+  const handedOver = params.get('ask');
   if (handedOver && input && first) {
+    const from = HANDOVER_PAGES[params.get('about')];
+    if (from) pageContext = pageNote(...from);
     openPanel();
     setState('idle', 'Ready when you are — press Send to ask');
     input.value = handedOver.slice(0, 500);

@@ -1,22 +1,29 @@
-@font-face{font-family:"Portfolio Sans";src:url("assets/fonts/DMSans-Regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
-@font-face{font-family:"Portfolio Sans";src:url("assets/fonts/DMSans-SemiBold.ttf") format("truetype");font-style:normal;font-weight:600;font-display:swap}
-.portfolio-header-band{background:var(--bg,#f6f4ee);color:var(--ink,#252823);position:relative;z-index:2;border-bottom:1px solid var(--line,#dcded4)}
-.portfolio-header{box-sizing:border-box;width:min(90%,1296px);max-width:none;margin:0 auto;min-height:90px;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:32px;border:0;font:400 13px/1.55 "Portfolio Sans",sans-serif;letter-spacing:normal}
-.portfolio-header a{color:var(--muted,#62665e);text-decoration:none;white-space:nowrap}
-.portfolio-header a:hover{color:var(--ink,#252823)}
-.portfolio-header a:focus-visible{outline:2px solid var(--acid,#607642);outline-offset:5px}
-.portfolio-header .portfolio-brand{display:flex;align-items:baseline;gap:4px;margin-right:auto;color:var(--ink,#252823);font-size:21px;letter-spacing:-1px;line-height:1.25;font-weight:400}
-.portfolio-brand strong{font-weight:600}
-.portfolio-brand .portfolio-surname{display:inline;background:none;color:inherit;width:auto;height:auto;border-radius:0;font-size:inherit;font-weight:400}
-.portfolio-navigation{display:flex;align-items:center;gap:28px}
-.portfolio-navigation a{padding:5px 0;border-bottom:1px solid transparent}
-.portfolio-navigation a[aria-current="page"]{color:var(--ink,#252823);border-bottom-color:var(--ink,#252823)}
-.portfolio-header .portfolio-linkedin{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line,#c9ccc1);border-radius:99px;padding:9px 15px;font-size:12px}
+/* Shared site header — matches the homepage header (Complex → Clear). */
+.portfolio-header-band{position:relative;z-index:30;background:#0B0B10;color:#F2F3EE;border-bottom:1px solid rgba(255,255,255,.1)}
+.portfolio-header{box-sizing:border-box;width:auto;max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,64px);min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px;border:0;font:500 15px/1.4 Inter,system-ui,sans-serif;letter-spacing:normal}
+.portfolio-header a{color:#B4B7AE;text-decoration:none;white-space:nowrap;transition:color .2s ease}
+.portfolio-header a:hover{color:#F2F3EE}
+.portfolio-header a:focus-visible{outline:2px solid #C9FF63;outline-offset:5px;border-radius:4px}
+.portfolio-header .portfolio-brand{display:inline-flex;align-items:baseline;gap:.3em;margin-right:auto;color:#F2F3EE;font-family:'Inter Tight',Inter,sans-serif;font-size:20px;letter-spacing:-.03em;line-height:1.2;font-weight:500}
+.portfolio-header .portfolio-brand strong{font-weight:700}
+.portfolio-brand .portfolio-surname{display:inline;background:none;color:inherit;width:auto;height:auto;border-radius:0;font-size:inherit;font-weight:500}
+.portfolio-navigation{display:flex;align-items:center;gap:32px}
+.portfolio-navigation a{padding:6px 0;border-bottom:1px solid transparent}
+.portfolio-navigation a[aria-current="page"]{color:#F2F3EE;border-bottom-color:#C9FF63}
+.portfolio-header .portfolio-linkedin{display:inline-flex;align-items:center;gap:8px;min-height:44px;box-sizing:border-box;padding:0 18px;border:1px solid rgba(255,255,255,.22);border-radius:999px;color:#F2F3EE;font-size:14px;font-weight:600;transition:border-color .2s ease,background .2s ease}
+.portfolio-header .portfolio-linkedin:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.04)}
 .portfolio-header .portfolio-linkedin-full{display:inline}
 .portfolio-header .portfolio-linkedin-short{display:none}
-@media(max-width:760px){.portfolio-header{width:88%;display:grid;grid-template-columns:1fr auto;gap:12px;min-height:112px;padding:19px 0 0}.portfolio-header .portfolio-brand{font-size:18px;gap:3px;white-space:normal;flex-wrap:wrap;min-width:0}.portfolio-header .portfolio-linkedin{grid-column:2;grid-row:1;font-size:11px;padding:8px 11px}.portfolio-navigation{grid-column:1/-1;grid-row:2;justify-content:center;gap:30px;min-height:42px;font-size:12px}}
-@media(max-width:360px){.portfolio-header .portfolio-brand{font-size:16px}.portfolio-navigation{gap:23px}}
+@media(max-width:900px){.portfolio-navigation{gap:24px}}
+@media(max-width:760px){
+  .portfolio-header{display:grid;grid-template-columns:1fr auto;gap:4px 12px;min-height:0;padding:18px clamp(20px,5vw,64px) 6px}
+  .portfolio-header .portfolio-brand{font-size:18px;flex-wrap:wrap;min-width:0;row-gap:0}
+  .portfolio-header .portfolio-linkedin{grid-column:2;grid-row:1;min-height:40px;padding:0 14px;font-size:13px}
+  .portfolio-navigation{grid-column:1/-1;grid-row:2;justify-content:flex-start;gap:22px;min-height:44px;font-size:14px;overflow-x:auto;scrollbar-width:none}
+  .portfolio-navigation::-webkit-scrollbar{display:none}
+  .portfolio-header-focused{display:flex;flex-wrap:wrap;justify-content:space-between;padding:18px clamp(20px,5vw,64px);gap:10px 16px}
+  .portfolio-header-focused .portfolio-brand{margin-right:0}
+  .portfolio-header-focused .portfolio-navigation{grid-column:auto;grid-row:auto;min-height:0;gap:18px;font-size:13px}
+}
+@media(max-width:360px){.portfolio-header .portfolio-brand{font-size:16px}.portfolio-navigation{gap:18px}}
 @media print{.portfolio-header-band{display:none}}
-
-
-@media(max-width:760px){.portfolio-header-focused{display:flex;flex-wrap:wrap;padding:20px 0;min-height:90px}.portfolio-header-focused .portfolio-navigation{min-height:0;gap:20px;justify-content:flex-start;flex-wrap:wrap}}

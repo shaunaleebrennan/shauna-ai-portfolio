@@ -1,0 +1,75 @@
+/* Complex → Clear — design tokens
+   The single source for the portfolio's colour, type, space, shape and motion.
+   Import before any page stylesheet:  <link rel="stylesheet" href="design-system/tokens.css"> */
+
+:root{
+  /* Void: the AI moments (folds, Explore, Ask, closes) */
+  --cc-void:#0B0B10;            /* page background on dark */
+  --cc-void-2:#13131A;          /* cards and panels on dark */
+  --cc-void-line:rgba(255,255,255,.10);
+  --cc-void-line-strong:rgba(255,255,255,.22);
+  --cc-text:#F2F3EE;            /* primary text on dark      17.6:1 */
+  --cc-text-2:#B4B7AE;          /* secondary text on dark     9.7:1 */
+  --cc-text-3:#8E918A;          /* meta and captions on dark  6.1:1 */
+
+  /* Paper: the reading sheet */
+  --cc-paper:#F4F4EF;           /* sheet background */
+  --cc-card:#FFFFFF;            /* cards on paper */
+  --cc-line:#E2E1D9;            /* rules and borders on paper */
+  --cc-ink:#0B0B10;             /* primary text on paper     17.8:1 */
+  --cc-ink-2:#2B2B32;           /* body copy on paper        12.7:1 */
+  --cc-muted:#55555E;           /* secondary text on paper    6.7:1 */
+  --cc-muted-2:#6B6B73;         /* meta on paper              4.8:1 */
+
+  /* Accent */
+  --cc-lime:#C9FF63;            /* the one accent on dark; primary buttons */
+  --cc-lime-hover:#D6FF85;
+  --cc-lime-ink:#4D7A00;        /* lime for text on paper     4.6:1 */
+  --cc-violet-ink:#4B2FE0;      /* links on paper             6.8:1 */
+
+  /* Aura: the orb, the glow and the gradient word */
+  --cc-cream:#FFF9D6;
+  --cc-pink:#FFC4E1;
+  --cc-lilac:#A796FF;
+  --cc-violet:#6A4DFF;
+  --cc-aura:linear-gradient(100deg,#C9FF63 0%,#FFF9D6 18%,#FFC4E1 36%,#A796FF 52%,#FFC4E1 68%,#FFF9D6 84%,#C9FF63 100%);
+  --cc-glow:radial-gradient(circle closest-side,rgba(143,123,255,.36) 0%,rgba(106,77,255,.13) 52%,rgba(106,77,255,0) 100%);
+  --cc-progress:linear-gradient(90deg,#A796FF,#FFC4E1 45%,#C9FF63);
+
+  /* Type */
+  --cc-font-display:'Inter Tight',Inter,system-ui,sans-serif;
+  --cc-font-body:Inter,system-ui,sans-serif;
+  --cc-font-mono:'JetBrains Mono',ui-monospace,monospace;
+  --cc-size-display:clamp(48px,6.4vw,100px);   /* hero and fold titles, 600, -0.055em, 0.95–0.98 */
+  --cc-size-h2:clamp(40px,5vw,76px);           /* section titles, 600, -0.05em, 0.98 */
+  --cc-size-h2-sheet:clamp(32px,3.6vw,54px);   /* titles inside the reading sheet, 600, -0.045em */
+  --cc-size-lead:18px;                         /* intro paragraphs, 1.6–1.65 */
+  --cc-size-body:16px;                         /* 1.55–1.7 */
+  --cc-size-label:12px;                        /* mono, 500, uppercase, 0.14em */
+  --cc-track-display:-.055em;
+  --cc-track-h2:-.05em;
+  --cc-track-label:.14em;
+
+  /* Space and layout */
+  --cc-wrap:1200px;                            /* content width */
+  --cc-wrap-wide:1440px;                       /* header width */
+  --cc-gutter:clamp(20px,5vw,64px);
+  --cc-header-height:84px;
+  --cc-section-y:clamp(88px,10vw,150px);
+
+  /* Shape */
+  --cc-radius-pill:999px;
+  --cc-radius-chip:16px;
+  --cc-radius-card:24px;
+  --cc-radius-panel:28px;
+  --cc-radius-sheet:40px;                      /* 28px below 860px */
+  --cc-shadow-sheet:0 -30px 80px rgba(0,0,0,.35);
+  --cc-shadow-cover:0 0 0 1px rgba(255,255,255,.12),0 50px 100px rgba(0,0,0,.55),0 0 120px rgba(143,123,255,.25);
+
+  /* Motion */
+  --cc-ease:cubic-bezier(.2,.7,.2,1);
+  --cc-reveal:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1);   /* from translateY(48px) */
+  --cc-lift:-4px;                              /* card hover */
+  --cc-aura-duration:9s;                       /* gradient word drift */
+  --cc-pulse-duration:2.4s;                    /* live dot */
+}

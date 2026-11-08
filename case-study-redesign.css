@@ -546,3 +546,14 @@
 .cx-g2-star{color:#C9FF63;font-size:18px;line-height:1.2}
 .cx-g2 .cx-caption{color:#8E918A}
 @media (max-width:860px){.cx-g2-grid{grid-template-columns:1fr}.cx-g2-list li{grid-template-columns:80px minmax(0,1fr)}}
+
+/* The agent runs in place on every case study */
+.cx-ask .cs-prompts{margin-top:24px}
+.cx-ask .cs-chip{background:rgba(255,255,255,.04);cursor:pointer;text-align:left}
+.cx-ask-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.cx-ask .cx-btn{border:0;cursor:pointer}
+.cx-ghost{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#F2F3EE;font:600 15px Inter,sans-serif;cursor:pointer;transition:background .2s ease}
+.cx-ghost:hover{background:rgba(255,255,255,.06)}
+.cx-ask .agent-panel{max-width:none}
+.cx-ask[data-agent].has-panel .cx-orb{position:static !important}
+.cx-close-grid:has(.cx-ask.has-panel){align-items:start}

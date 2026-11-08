@@ -227,10 +227,17 @@ try {
         </div>
         <section class="cs-close cx-close" aria-label="Keep exploring">
           <div class="wrap cx-close-grid">
-            <div class="cx-ask">
-              <p class="cx-ask-top"><span class="cx-orb" aria-hidden="true"></span><span class="lbl">Ask my portfolio agent</span></p>
+            <div class="cx-ask" data-agent data-state="idle">
+              <p class="cx-ask-top"><span class="cx-orb" data-agent-orb aria-hidden="true"></span><span class="lbl">Ask my portfolio agent</span></p>
               <h2>Got a question about ${escape(item.title)}? Ask it directly.</h2>
-              <div class="cs-prompts">${askPrompts.map(question => `<a class="cs-chip" href="index.html?ask=${encodeURIComponent(question)}#ask">${escape(question)}</a>`).join('')}</div>
+              <div class="cs-prompts">${askPrompts.map(question => `<button class="cs-chip" type="button" data-agent-ask>${escape(question)}</button>`).join('')}</div>
+              <div class="cx-ask-actions"><button class="cx-btn" type="button" data-agent-start="voice">Start a voice conversation</button><button class="cx-ghost" type="button" data-agent-start="text">Type a question</button></div>
+              <div class="agent-panel" data-agent-panel hidden>
+                <div class="agent-head"><span class="agent-dot" aria-hidden="true"></span><strong class="agent-status" data-agent-status role="status">Connecting…</strong><button class="agent-end" type="button" data-agent-end>End</button></div>
+                <div class="agent-log" data-agent-log aria-live="polite"></div>
+                <form class="agent-form" data-agent-form><label class="sr-only" for="agent-input">Ask a question</label><input id="agent-input" type="text" autocomplete="off" placeholder="Type your question…" maxlength="500"><button type="submit">Send</button></form>
+                <p class="agent-note">Conversations run on ElevenLabs. Please don’t share confidential information.</p>
+              </div>
             </div>
             <a class="cx-next" href="${escape(next.href || `case-study.html?case=${encodeURIComponent(next.slug)}`)}">
               <span class="cx-next-img"><img src="${escape(next.image)}" alt="" loading="lazy"></span>
@@ -244,6 +251,7 @@ try {
       fetch('./partials/analyst-recognition.html', { cache: 'no-store' }).then(r => r.ok ? r.text() : '').then(html => { recognition.innerHTML = html; }).catch(() => {});
     }
     enhance();
+    document.dispatchEvent(new Event('agent:mount'));
   }
 } catch (error) {
   root.innerHTML = `<section class="case-error case-shell"><div><h1>This story could not load.</h1><p>Please refresh, or <a href="index.html#explore">return to selected work</a>.</p></div></section>`;

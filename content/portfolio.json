@@ -359,8 +359,8 @@
       },
       "askPrompts": [
         "How did you position HQ Agent?",
-        "What did the research involve?",
-        "How did build vs buy work?"
+        "What did the customer research involve?",
+        "How did you handle build versus buy?"
       ]
     },
     {
@@ -524,7 +524,12 @@
             "navLabel": "The experience"
           }
         ]
-      }
+      },
+      "askPrompts": [
+        "How does the agent decide what to say?",
+        "How did you test the agent?",
+        "What is the agent careful not to claim?"
+      ]
     },
     {
       "slug": "workvivo-hq",
@@ -803,7 +808,12 @@
         "alt": "Workvivo HQ launch artwork featuring an employee using a phone alongside the Workvivo HQ branding.",
         "width": 1040,
         "height": 600
-      }
+      },
+      "askPrompts": [
+        "Why reposition Workvivo as a digital HQ?",
+        "What did the messaging research show?",
+        "How did the story reach sellers?"
+      ]
     },
     {
       "slug": "meta-migration",
@@ -909,7 +919,12 @@
             "navLabel": "The response"
           }
         ]
-      }
+      },
+      "askPrompts": [
+        "How did you position the migration?",
+        "What did sellers need to win?",
+        "What was Workvivo recognised for?"
+      ]
     },
     {
       "slug": "market-leadership",
@@ -1178,7 +1193,12 @@
             }
           }
         ]
-      }
+      },
+      "askPrompts": [
+        "How did you build the analyst programme?",
+        "What are the latest Forrester and G2 results?",
+        "Which new categories is Workvivo entering?"
+      ]
     },
     {
       "slug": "ai-product-strategy",
@@ -1290,7 +1310,12 @@
             "navLabel": "The application"
           }
         ]
-      }
+      },
+      "askPrompts": [
+        "What have you built with AI?",
+        "How do you learn AI by building?",
+        "Where should people stay accountable?"
+      ]
     },
     {
       "slug": "brazil-in-red",
@@ -1408,7 +1433,12 @@
             "navLabel": "The people"
           }
         ]
-      }
+      },
+      "askPrompts": [
+        "Why did you build Brazil in Red?",
+        "How did you choose what to compare?",
+        "How does the atlas guide a first-time reader?"
+      ]
     },
     {
       "slug": "playbook",
@@ -1517,7 +1547,12 @@
             }
           }
         ]
-      }
+      },
+      "askPrompts": [
+        "What is narrative design?",
+        "How do you find the insight?",
+        "What’s in the toolkit?"
+      ]
     },
     {
       "slug": "launch-with-intent",
@@ -1576,7 +1611,12 @@
         ]
       },
       "coverLabel": "Product launches",
-      "coverTitle": "Make the moment matter."
+      "coverTitle": "Make the moment matter.",
+      "askPrompts": [
+        "How do you decide a launch tier?",
+        "When should releases be grouped?",
+        "What’s in the launch toolkit?"
+      ]
     },
     {
       "slug": "messaging-as-code",
@@ -1749,7 +1789,12 @@
           }
         ]
       },
-      "stage": "in-progress"
+      "stage": "in-progress",
+      "askPrompts": [
+        "What is Messaging as Code?",
+        "Why move from GitHub to Zoom and Canvas?",
+        "Where is the pilot now?"
+      ]
     }
   ]
 }

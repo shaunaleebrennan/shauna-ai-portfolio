@@ -7,10 +7,14 @@ const AGENT_ID = 'agent_4401kzh72h3ff1ev937b4qdg8b7y';
 const SDK_SRC = 'https://cdn.jsdelivr.net/npm/@elevenlabs/client@1.35.0/dist/lib.iife.js';
 const WIDGET_SRC = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
 
-const section = document.querySelector('[data-agent]');
-if (section) initAgent(section);
+// Mount every agent block on the page, including ones a page renders later
+// (case studies render theirs after loading content, then fire 'agent:mount').
+const mountAgents = () => document.querySelectorAll('[data-agent]:not([data-agent-ready])').forEach(initAgent);
+mountAgents();
+document.addEventListener('agent:mount', mountAgents);
 
 function initAgent(section) {
+  section.dataset.agentReady = '';
   const panel = section.querySelector('[data-agent-panel]');
   const statusEl = section.querySelector('[data-agent-status]');
   const log = section.querySelector('[data-agent-log]');
@@ -214,7 +218,11 @@ function initAgent(section) {
     }
   };
 
+  const first = document.querySelector('[data-agent]') === section;
   document.querySelectorAll('[data-agent-start]').forEach(button => {
+    // Buttons inside this block drive it; buttons outside any block (the homepage dock) drive the first one.
+    const owner = button.closest('[data-agent]');
+    if (owner ? owner !== section : !first) return;
     button.addEventListener('click', () => {
       if (!section.contains(button)) section.scrollIntoView({ behavior: 'smooth', block: 'center' });
       start(button.dataset.agentStart);
@@ -239,10 +247,15 @@ function initAgent(section) {
 
   // Questions handed over from a case study (index.html?ask=…#ask) wait in the box until the visitor sends them.
   const handedOver = new URLSearchParams(window.location.search).get('ask');
-  if (handedOver && input) {
+  if (handedOver && input && first) {
     openPanel();
     setState('idle', 'Ready when you are — press Send to ask');
     input.value = handedOver.slice(0, 500);
     input.focus({ preventScroll: true });
+    // The page keeps growing as work cards, fonts and reveals load, which moves the
+    // section after the browser's initial jump to #ask. Land on it once things settle.
+    const land = () => panel.scrollIntoView({ block: 'center' });
+    window.addEventListener('load', () => { land(); setTimeout(land, 600); }, { once: true });
+    setTimeout(land, 1200);
   }
 }

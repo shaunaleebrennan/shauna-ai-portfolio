@@ -20,7 +20,7 @@ Customer outcome → Launch path → Readiness and adoption → Audience timing
 
 A six-question discussion tool suggests a provisional tier, grouping approach, audience timing, and open decisions. The PDF playbook explains the reasoning; a separate workbook helps PMM and Product record evidence and agree the plan.
 
-> A collection earns a bigger launch when it creates a stronger buying reason.
+> The size of a launch should match the strength of the buying reason, not the size of the release.
 
 ## Supporting evidence
 

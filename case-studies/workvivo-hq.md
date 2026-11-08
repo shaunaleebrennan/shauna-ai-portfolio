@@ -114,7 +114,7 @@ PMM team retrospective · August 2026
 
 Team feedback on message alignment at the Workvivo HQ launch at WOW.
 
-> An AI story that erases what made you different is a concession to your competitors.
+> AI belongs in the story, but it can’t be the whole story. Customers still need to see what makes you different.
 
 ## Supporting evidence
 

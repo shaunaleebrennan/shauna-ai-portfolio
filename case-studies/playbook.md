@@ -34,7 +34,7 @@ A public interactive playbook with an annotated example, a browser-based brief e
 - [Narrative Design skill](../assets/playbooks/narrative-design-skill.zip) — Reusable companion for AI-assisted work
 - [Printable workbook](../assets/playbooks/narrative-design-workbook.pdf) — Prompts and practical exercises
 
-> A narrative earns its place in strategy when it changes what you choose to build, sell, and stop doing.
+> A strong narrative shapes decisions as well as messaging. It helps a team agree what to build, what to sell and what to stop doing.
 
 ## Supporting evidence
 

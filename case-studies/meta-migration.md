@@ -28,7 +28,7 @@ Positioning, objections, and seller enablement for a compressed decision window.
 
 A coordinated GTM approach that helped the wider business compete for Workplace customers. Workvivo's company-wide response was recognised with Forrester's **2026 B2B Return on Integration Honors**. The award belongs to the cross-functional company effort; my contribution was positioning, competitive strategy and seller enablement. Internal retrospectives describe substantial company-level customer capture and revenue growth. I have not included those figures here without an approved public source and a clear attribution boundary.
 
-> A competitor’s exit creates urgency. It does not create a reason to choose you.
+> A competitor leaving the market gave customers a deadline. We still had to give them a reason to choose Workvivo.
 
 ## Supporting evidence
 

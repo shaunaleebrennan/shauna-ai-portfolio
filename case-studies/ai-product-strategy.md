@@ -28,7 +28,7 @@ Product School courses, self-guided builds, and hands-on workflow testing.
 
 More technical fluency in the AI products I market, better questions for Product and Engineering, and working examples of AI applied to genuine PMM problems. These are practical builds and pilots, not claims of organisation-wide automation or measured efficiency gains.
 
-> AI fluency should improve the decisions you make. Knowing the terminology is the entry fee.
+> Understanding AI matters most when it improves the decisions I make. That’s why I learn by building and testing, not just reading.
 
 ## Supporting evidence
 

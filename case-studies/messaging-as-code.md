@@ -38,7 +38,7 @@ The content model and human review remained central; the authoring approach chan
 
 The HQ Agent pilot is complete and connected to the sales enablement agent, with positive early feedback. Wider message coverage and a design-system-connected content generation workflow are planned, not yet established business outcomes. This is a working example of how I apply hands-on AI knowledge to improve PMM operations—not a claim that the full organisation has adopted it.
 
-> If every AI tool gets its own version of your positioning, you have automated message drift.
+> As more teams use AI to write, approved messaging needs one source everyone can rely on. Otherwise every tool drifts in its own direction.
 
 ## Supporting evidence
 

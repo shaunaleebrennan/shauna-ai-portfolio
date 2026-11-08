@@ -63,7 +63,7 @@ Evaluations in progress are invitations, not placements or outcomes.
 
 [Explore ClearBox insights](https://insights.clearbox.co.uk/)
 
-> If analyst relations only starts when a report is due, someone else’s calendar is setting your strategic agenda.
+> Analyst relations works best as an ongoing conversation, not a series of deadlines. The value builds between the reports.
 
 ## Supporting evidence
 

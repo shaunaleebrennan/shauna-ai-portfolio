@@ -52,7 +52,7 @@
         "overview": {
           "eyebrow": "Customer-led GTM for the next AI investment",
           "lead": "I positioned HQ Agent as an employee experience agent and shaped its customer-led expansion motion, drawing on customer discovery, beta feedback, analyst input, and close work with Sales and Product.",
-          "learning": "Before asking customers to buy another agent, make its job unmistakable."
+          "learning": "When customers already own AI tools, the case for another one has to start with the work those tools leave undone."
         },
         "eyebrow": "Customer-led GTM for the next AI investment",
         "context": "HQ Agent created an expansion opportunity within Workvivo’s existing customer base. The GTM challenge was to understand customer priorities, AI maturity, existing investments, and the employee needs those investments left unmet.",
@@ -76,7 +76,7 @@
           "Connect use cases and value to pricing, packaging, and seller enablement"
         ],
         "outcome": "The result was a portfolio and launch narrative designed to make a technically complex enterprise AI product easier to understand, sell, and evaluate. Shauna shaped the commercial story; she did not engineer the underlying AI system.",
-        "learning": "Before asking customers to buy another agent, make its job unmistakable.",
+        "learning": "When customers already own AI tools, the case for another one has to start with the work those tools leave undone.",
         "story": [
           {
             "id": "problem",
@@ -397,7 +397,7 @@
         "overview": {
           "eyebrow": "A portfolio you can have a conversation with",
           "lead": "A case study can tell a story. A conversation can start with the part you actually care about. I wanted my portfolio to do both.",
-          "learning": "A portfolio agent earns its place by answering the questions a curated page lets you avoid."
+          "learning": "A portfolio agent is only worth building if it answers the follow-up questions a page can’t. It also has to be clear about what it doesn’t know."
         },
         "eyebrow": "Turning a résumé into an evidence-grounded conversation",
         "context": "A static portfolio can show the work, but it cannot adapt to the question a recruiter, hiring manager, or technical stakeholder actually wants answered. Shauna designed a live ElevenLabs experience that lets visitors explore her career, case studies, technical builds, and working principles through voice or text. She also created a voice persona from her own voice and gave the agent a defined personality so the experience feels recognisably hers without pretending to be her.",
@@ -560,7 +560,7 @@
         "overview": {
           "eyebrow": "Standing out in a crowded AI-native employee experience market",
           "lead": "I led the brand narrative, positioning, and messaging behind Workvivo HQ: evolving our employee experience platform story into a digital HQ our customer base could understand, with messaging adapted by persona.",
-          "learning": "An AI story that erases what made you different is a concession to your competitors."
+          "learning": "AI belongs in the story, but it can’t be the whole story. Customers still need to see what makes you different."
         },
         "eyebrow": "Standing out in a crowded AI-native employee experience market",
         "context": "Workvivo was positioned as the employee experience platform, with messaging adapted by persona. The challenge was to stand out in a crowded AI-native employee experience market as AI itself became increasingly commoditised.",
@@ -581,7 +581,7 @@
           "Adapt messaging by persona while staying relevant to existing champions"
         ],
         "outcome": "Workvivo publicly launched HQ while serving 9 million users and after surpassing $100M ARR. Those are company proof points during Shauna’s tenure, not outcomes attributed to her alone.",
-        "learning": "An AI story that erases what made you different is a concession to your competitors.",
+        "learning": "AI belongs in the story, but it can’t be the whole story. Customers still need to see what makes you different.",
         "story": [
           {
             "id": "problem",
@@ -833,7 +833,7 @@
         "overview": {
           "eyebrow": "Turning a market disruption into a clear reason to choose Workvivo",
           "lead": "When Meta announced Workplace's closure, its customers had to move. But Workvivo still had to earn their choice.",
-          "learning": "A competitor’s exit creates urgency. It does not create a reason to choose you."
+          "learning": "A competitor leaving the market gave customers a deadline. We still had to give them a reason to choose Workvivo."
         },
         "eyebrow": "Turning disruption into commercial opportunity",
         "context": "Meta announced the closure of Workplace. Workvivo was named Meta’s only preferred migration partner, creating a major, time-bound market opportunity and a highly visible competitive GTM motion.",
@@ -950,7 +950,7 @@
         "overview": {
           "eyebrow": "Turning analyst relations into a strategic market leadership programme",
           "lead": "When Workvivo's dedicated analyst relations owner left, I took on the remit alongside leading Product Marketing. I built a repeatable programme that strengthened our existing position and helped open up adjacent markets.",
-          "learning": "If analyst relations only starts when a report is due, someone else’s calendar is setting your strategic agenda."
+          "learning": "Analyst relations works best as an ongoing conversation, not a series of deadlines. The value builds between the reports."
         },
         "eyebrow": "Building external market credibility",
         "context": "Workvivo evolved from an underdog employee app into a recognised Employee Experience Platform and later a broader AI-native employee-experience story. Analyst understanding had to evolve with the product and company narrative.",
@@ -1220,7 +1220,7 @@
         "overview": {
           "eyebrow": "Learn. Build. Apply.",
           "lead": "I don't want to market AI from the sidelines. I learn how the systems work, build with them and use that experience to make better product and GTM decisions.",
-          "learning": "AI fluency should improve the decisions you make. Knowing the terminology is the entry fee."
+          "learning": "Understanding AI matters most when it improves the decisions I make. That’s why I learn by building and testing, not just reading."
         },
         "eyebrow": "Building an AI-enabled PMM operating model",
         "context": "AI-first Product Marketing is not simply a team using ChatGPT. Shauna has been exploring how AI can change the operating model of PMM itself—and where human judgment must remain accountable.",
@@ -1445,7 +1445,7 @@
         "overview": {
           "eyebrow": "Turning strategic PMM judgment into a method other people can use",
           "lead": "I created a practical Narrative Design playbook that connects market insight to buying criteria, a useful approach, and a credible product contribution.",
-          "learning": "A narrative earns its place in strategy when it changes what you choose to build, sell, and stop doing."
+          "learning": "A strong narrative shapes decisions as well as messaging. It helps a team agree what to build, what to sell and what to stop doing."
         },
         "story": [
           {
@@ -1542,7 +1542,7 @@
         "overview": {
           "eyebrow": "Making deliberate launch decisions as product release cycles accelerate",
           "lead": "I evolved my release-planning template into a practical playbook and discussion tool for PMMs and Product Managers to tier launches, group releases, and plan audience timing.",
-          "learning": "A collection earns a bigger launch when it creates a stronger buying reason."
+          "learning": "The size of a launch should match the strength of the buying reason, not the size of the release."
         },
         "story": [
           {
@@ -1600,7 +1600,7 @@
         "overview": {
           "eyebrow": "Making product messaging a source of truth—not another document to copy",
           "lead": "AI can generate content quickly. Keeping that content accurate, approved and consistent across teams is the harder problem.",
-          "learning": "If every AI tool gets its own version of your positioning, you have automated message drift."
+          "learning": "As more teams use AI to write, approved messaging needs one source everyone can rely on. Otherwise every tool drifts in its own direction."
         },
         "eyebrow": "Making approved messaging reusable across teams and AI tools",
         "contribution": [

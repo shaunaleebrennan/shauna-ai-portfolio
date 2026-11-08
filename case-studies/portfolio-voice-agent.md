@@ -37,7 +37,7 @@ ElevenLabs · Voice persona · Modular knowledge · Response testing
 
 A live conversational layer for the portfolio. Visitors can ask about a project, a decision or my approach, while the agent draws on curated career and project material. The work brought voice design, product judgment and hands-on AI configuration together in one experience.
 
-> A portfolio agent earns its place by answering the questions a curated page lets you avoid.
+> A portfolio agent is only worth building if it answers the follow-up questions a page can’t. It also has to be clear about what it doesn’t know.
 
 ## Supporting evidence
 

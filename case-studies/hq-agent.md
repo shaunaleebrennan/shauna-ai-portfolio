@@ -118,7 +118,7 @@ Seller enablement connected discovery, use cases, objections, and the role of Zo
 
 Customer discovery → differentiated value → a commercial decision.
 
-> Before asking customers to buy another agent, make its job unmistakable.
+> When customers already own AI tools, the case for another one has to start with the work those tools leave undone.
 
 ## Supporting evidence
 

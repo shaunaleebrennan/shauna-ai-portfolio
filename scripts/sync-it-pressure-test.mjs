@@ -6,7 +6,7 @@ import {execFileSync} from 'node:child_process';
 
 const source = '../ai-positioning-qa';
 const target = 'it-pressure-test';
-const BRAND = '20261108-it4';
+const BRAND = '20261110-mob';
 const sha = async path => createHash('sha256').update(await readFile(path)).digest('hex');
 
 const scripts = (await readdir(`${source}/docs/assets/js`)).filter(f => f.endsWith('.js'));

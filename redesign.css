@@ -234,3 +234,34 @@ a.tool-logo:hover,a.tool-logo:focus-visible{color:#FFFFFF}
 .pbv:hover>span:first-child,.pbv:focus-visible>span:first-child{transform:rotateX(5deg) rotateY(-7deg);box-shadow:0 0 0 2px #C9FF63,0 24px 50px rgba(0,0,0,.5)}
 .pbv:focus-visible{outline:none}
 @media (prefers-reduced-motion:reduce){.pbv,.pbv>span:first-child{transition:none}.pbv:hover,.pbv:hover>span:first-child{transform:none}}
+
+/* Phones: fixes from the mobile review (November 2026) */
+@media (max-width:700px){
+  /* Hero: keep the intro copy inside the screen; sit the orb behind the headline, clear of the label and header */
+  .herocopy{right:6% !important;max-width:none !important}
+  .orbwrap{width:56vw !important;height:56vw !important;right:-12vw !important;top:23% !important}
+  /* Section rhythm: desktop spacing left very large gaps between sections */
+  section[aria-label="Proof"]{padding:56px 0 40px !important}
+  #scan{padding-top:72px !important;padding-bottom:72px !important}
+  #explore{padding-top:88px !important}
+  section[aria-label="How I think"]{padding:80px 0 72px !important}
+  #essentials{padding-top:72px !important;padding-bottom:80px !important}
+  #ask{padding:72px 0 80px !important}
+  /* How I think: stacked steps share one left edge */
+  section[aria-label="How I think"] .step{padding:0 !important}
+  section[aria-label="How I think"] .step .lbl{margin-top:40px !important}
+  section[aria-label="How I think"] .step:first-child .lbl{margin-top:48px !important}
+  /* Section label rows: wrap as two tidy lines instead of breaking mid-label */
+  .wrap>div:first-child:has(>.lbl),#playbooks>div:first-child{flex-wrap:wrap !important;gap:6px 16px !important}
+  .wrap>div:first-child:has(>.lbl)>.lbl{white-space:nowrap}
+  /* Playbook cards: the cover matches its 88px column, so text no longer overlaps it */
+  .pbv>span:first-child{width:88px !important;height:88px !important}
+  .pbv{gap:14px !important}
+  /* Ask: a smaller orb, so the section doesn't open with a screen of empty space */
+  #ask [data-agent-orb]{flex:0 0 200px !important;min-width:0 !important;width:200px;margin:0 auto}
+  #ask [data-agent-orb] .gorb{--gs:.7}
+  /* G2 card: keep the Top 50 badge inside the card */
+  .arvoted2{right:10px !important;bottom:16px !important;width:26% !important}
+  /* Footer links: comfortable tap targets */
+  footer .void-link{display:inline-flex;align-items:center;min-height:44px}
+}

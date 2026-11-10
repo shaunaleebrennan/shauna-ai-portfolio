@@ -557,3 +557,14 @@
 .cx-ask .agent-panel{max-width:none}
 .cx-ask[data-agent].has-panel .cx-orb{position:relative !important}
 .cx-close-grid:has(.cx-ask.has-panel){align-items:start}
+
+/* Phones: fixes from the mobile review (November 2026) */
+.cx-path>.cx-caption,.cx-flow>.cx-caption,.cx-modes>.cx-caption,.cx-layers>.cx-caption{margin-top:16px}
+.cx-sheet .cx-quote figcaption{display:block;margin-top:18px}
+@media (max-width:720px){
+  .cx-next{padding:14px 18px 14px 14px}
+  .cx-next-copy strong{font-size:24px}
+  .cx-chapters a{display:inline-flex;align-items:center;min-height:44px}
+  .cx-back{display:inline-flex;align-items:center;min-height:44px}
+  .cx-close footer .void-link,.cs-close~footer .void-link{display:inline-flex;align-items:center;min-height:44px}
+}

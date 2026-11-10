@@ -5,14 +5,14 @@
     {
       "source": "tool.html",
       "path": "index.html",
-      "sha256": "e2b0b8a7b7b37795c5f5315a8eec83b0f3295f0598c5ec34c6ec08089127ae47",
+      "sha256": "05d4c1b203e4c9454fab4d02f3a256f9cff4ddbc2178996a780ec3dae516e431",
       "sourceSha256": "93dc2d89b2e722223ce42fabb3d027a766facab4ce20a0574289bf367adb7398",
       "portfolioAdaptation": "Shared portfolio header and navigation, and the Complex → Clear brand layer (type, palette, footer)"
     },
     {
       "source": "manual-review.html",
       "path": "manual-review.html",
-      "sha256": "dd5dceb9de73eb06c2db0bf795e895cdb6861e439469b832fe0608efeb865e0a",
+      "sha256": "fcfb7264a8193b105ea2128e611a394cca03fb74b9cd5ebf657af00c961b6ee5",
       "sourceSha256": "39fb0219e82d0dd815a2b0c59e7bac0c7bda5e24e3a8fcac8e96f32bc8710525",
       "portfolioAdaptation": "Shared portfolio header and navigation, and the Complex → Clear brand layer (type, palette, footer)"
     },

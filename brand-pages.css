@@ -442,3 +442,26 @@ body.bp-it footer.bp-footer{margin-top:0}
 .launch-page .bp-sheet .lw-cell--4 .lw-place>span:last-child{color:#C9FF63}
 .launch-page .bp-sheet .lw-cell--3 .lc-cell-help,.launch-page .bp-sheet .lw-cell--2 .lc-cell-help{color:#2B2B32}
 .launch-page .bp-sheet{overflow-x:clip}
+
+/* ---- Mobile review fixes (November 2026) ---- */
+/* Analytics consent: one dark card on every branded page (it was unstyled on the collection, library and documents) */
+body.bp .analytics-consent{position:fixed;z-index:9999;left:24px;right:24px;bottom:24px;margin:auto;max-width:920px;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:28px;border:1px solid rgba(242,243,238,.18);border-radius:18px;background:rgba(19,19,26,.96);box-shadow:0 22px 70px rgba(0,0,0,.42);backdrop-filter:blur(18px);color:#F2F3EE;font-family:Inter,sans-serif}
+body.bp .analytics-consent strong{font:600 15px 'Inter Tight',Inter,sans-serif;color:#F2F3EE}
+body.bp .analytics-consent p{max-width:610px;margin:6px 0 0;color:#B4B7AE;font-size:13px;line-height:1.5}
+body.bp .analytics-consent__actions{display:flex;gap:9px;flex:0 0 auto}
+body.bp .analytics-consent button{min-height:40px;padding:10px 16px;border:1px solid rgba(242,243,238,.22);border-radius:999px;background:transparent;color:#F2F3EE;font:600 13px Inter,sans-serif;cursor:pointer}
+body.bp .analytics-consent .analytics-consent__accept{border-color:#C9FF63;background:#C9FF63;color:#0B0B10}
+@media (max-width:680px){body.bp .analytics-consent{left:14px;right:14px;bottom:14px;align-items:stretch;flex-direction:column;gap:16px;padding:18px}body.bp .analytics-consent__actions{justify-content:flex-end;flex-wrap:wrap}}
+/* Launch playbook: the closing heading and the dark matrix cell were dark text on a dark ground */
+.launch-page .bp-close .bp-ask h2{color:#F2F3EE}
+.launch-page .bp-sheet .lw-cell--4 .lc-cell-help{color:#B4B7AE !important}
+@media (max-width:700px){
+  /* Library: the "ways in" card needs its padding back now that it has a background */
+  .bp-library .reading-paths{padding:24px 22px 28px !important;border-bottom:0 !important}
+  .bp-library .reading-paths>h2{font-size:24px}
+  /* Collection: stack the three steps, and stack each card's footer */
+  .bp-collection .steps{grid-template-columns:1fr !important;gap:22px !important}
+  .bp-collection .cardfoot{flex-wrap:wrap;gap:10px 16px}
+  /* Tap targets */
+  .bp-back,.bp-footer a,.pb-text-link,.lp-text-link,.pb-review-link{display:inline-flex;align-items:center;min-height:44px}
+}

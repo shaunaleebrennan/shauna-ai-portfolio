@@ -20,6 +20,8 @@ const HANDOVER_PAGES = {
 
 // Mount every agent block on the page, including ones a page renders later
 // (case studies render theirs after loading content, then fire 'agent:mount').
+// Only one conversation runs at a time: starting one ends any other on the page.
+const stoppers = new Set();
 const mountAgents = () => document.querySelectorAll('[data-agent]:not([data-agent-ready])').forEach(initAgent);
 mountAgents();
 document.addEventListener('agent:mount', mountAgents);
@@ -32,7 +34,10 @@ function initAgent(section) {
   const form = section.querySelector('[data-agent-form]');
   const input = form?.querySelector('input');
   const endButton = section.querySelector('[data-agent-end]');
-  const orb = section.querySelector('[data-agent-orb]');
+  // The orb is usually inside the block; a floating block can point at one elsewhere (the hero orb).
+  const orbTarget = section.dataset.agentOrb;
+  const orb = section.querySelector('[data-agent-orb]')
+    || (orbTarget && /^[.#][\w-]+$/.test(orbTarget) ? document.querySelector(orbTarget) : null);
 
   let conversation = null;
   let kind = null;
@@ -42,12 +47,17 @@ function initAgent(section) {
   let lastSent = '';
   let askedSomething = false;
   let sdkPromise = null;
+  let agentLines = 0;   // agent messages seen in this conversation
+  let thinkingSince = 0;
+  let greeted = false;  // was the agent's greeting already in when the question went out?
+  let repliesSince = 0;
   let pageContext = section.dataset.agentPage
     ? pageNote(section.dataset.agentPage, section.dataset.agentTopic || section.dataset.agentPage)
     : '';
 
   const setState = (state, text) => {
     section.dataset.state = state;
+    if (orb) orb.dataset.orbState = state; // drives the orb's thinking and speaking looks in CSS
     if (text) statusEl.textContent = text;
   };
   const addMessage = (who, text) => {
@@ -152,6 +162,12 @@ function initAgent(section) {
     lastSent = message;
     askedSomething = true;
     addMessage('user', message);
+    if (kind === 'text') {
+      greeted = agentLines > 0;
+      repliesSince = 0;
+      thinkingSince = performance.now();
+      setState('thinking', 'Thinking…');
+    }
     try {
       conversation.sendUserMessage(message);
     } catch (error) {
@@ -168,11 +184,13 @@ function initAgent(section) {
       return;
     }
     if (conversation) await endConversation();
+    stoppers.forEach(stopOther => { if (stopOther !== stop) stopOther(); });
 
     starting = true;
     let mode = wanted;
     log.replaceChildren();
     askedSomething = false;
+    agentLines = 0;
     setState('connecting', 'Connecting…');
     try {
       if (mode === 'voice') {
@@ -190,6 +208,7 @@ function initAgent(section) {
         agentId: AGENT_ID,
         ...(mode === 'text' ? { textOnly: true } : { connectionType: 'webrtc' }),
         onConnect: () => {
+          if (section.dataset.state !== 'connecting') return;
           setState(mode === 'voice' ? 'listening' : 'ready', mode === 'voice' ? 'Listening — go ahead' : 'Connected — ask away');
         },
         onDisconnect: details => {
@@ -213,6 +232,13 @@ function initAgent(section) {
           if (fromUser) askedSomething = true;
           if (fromUser && payload.message?.trim() === lastSent) { lastSent = ''; return; }
           addMessage(fromUser ? 'user' : 'agent', payload.message);
+          if (!fromUser) {
+            agentLines += 1;
+            repliesSince += 1;
+            // A greeting that lands just after the first question isn't the answer; keep thinking until the answer arrives.
+            const answered = greeted || repliesSince >= 2 || performance.now() - thinkingSince > 1500;
+            if (kind === 'text' && section.dataset.state === 'thinking' && answered) setState('ready', 'Connected — ask away');
+          }
         },
         onModeChange: ({ mode: speaking }) => {
           if (kind === 'voice') setState(speaking === 'speaking' ? 'speaking' : 'listening', speaking === 'speaking' ? 'Speaking…' : 'Listening — go ahead');
@@ -235,7 +261,15 @@ function initAgent(section) {
     }
   };
 
-  const first = document.querySelector('[data-agent]') === section;
+  const stop = async () => {
+    if (!conversation) return;
+    await endConversation();
+    setState('ended', 'Conversation ended');
+  };
+  stoppers.add(stop);
+
+  // The primary block answers the dock buttons and questions handed over from other pages.
+  const first = (document.querySelector('[data-agent-primary]') || document.querySelector('[data-agent]')) === section;
   document.querySelectorAll('[data-agent-start]').forEach(button => {
     // Buttons inside this block drive it; buttons outside any block (the homepage dock) drive the first one.
     const owner = button.closest('[data-agent]');
@@ -255,6 +289,36 @@ function initAgent(section) {
     if (!text.trim()) return;
     if (conversation) send(text);
     else start('text', text);
+  });
+  // Ask boxes elsewhere on the page (the hero) that open this block's conversation.
+  if (section.id) {
+    document.querySelectorAll(`form[data-agent-launch="${section.id}"]`).forEach(launcher => {
+      const field = launcher.querySelector('input');
+      if (!field) return;
+      launcher.addEventListener('submit', event => {
+        event.preventDefault();
+        const text = field.value.trim();
+        field.value = '';
+        start('text', text);
+      });
+      // Rotate a few example questions through the placeholder while the box is empty and unfocused.
+      const examples = (launcher.dataset.examples || '').split('|').map(item => item.trim()).filter(Boolean);
+      if (examples.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        let index = 0;
+        setInterval(() => {
+          if (document.activeElement === field || field.value) return;
+          index = (index + 1) % examples.length;
+          field.placeholder = examples[index];
+        }, 3600);
+      }
+    });
+  }
+  // A floating block can be closed: the conversation ends and the card goes away.
+  section.querySelector('[data-agent-close]')?.addEventListener('click', async () => {
+    await endConversation();
+    setState('idle');
+    panel.hidden = true;
+    section.classList.remove('has-panel');
   });
   endButton?.addEventListener('click', async () => {
     await endConversation();

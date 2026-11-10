@@ -265,3 +265,54 @@ a.tool-logo:hover,a.tool-logo:focus-visible{color:#FFFFFF}
   /* Footer links: comfortable tap targets */
   footer .void-link{display:inline-flex;align-items:center;min-height:44px}
 }
+
+/* ---- Hero ask box: type a question under the headline; the answer opens in a floating card ---- */
+.heroask{display:flex;align-items:center;gap:10px;min-height:56px;padding:6px 6px 6px 14px;border-radius:999px;background:rgba(19,19,26,.72);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(14px);transition:border-color .2s ease,box-shadow .3s ease}
+.heroask:focus-within{border-color:#C9FF63;box-shadow:0 0 0 4px rgba(201,255,99,.14),0 0 60px rgba(143,123,255,.25)}
+.heroask-orb{position:relative !important;flex:0 0 26px;width:26px;height:26px;--gs:.14}
+.heroask input{flex:1;min-width:0;height:44px;border:0;background:transparent;color:#F2F3EE;font:16px Inter,sans-serif;outline:none}
+.heroask input::placeholder{color:#B4B7AE;opacity:1}
+.heroask button{flex:0 0 44px;width:44px;height:44px;border:0;border-radius:50%;background:#C9FF63;color:#0B0B10;font:600 18px Inter,sans-serif;cursor:pointer;transition:transform .2s ease}
+.heroask button:hover{transform:translateX(2px)}
+.heroagent{position:fixed;z-index:70;right:24px;bottom:24px;width:min(440px,calc(100vw - 24px));pointer-events:none}
+.heroagent .agent-panel{margin:0;max-width:none;pointer-events:auto;background:rgba(19,19,26,.96);box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 0 1px rgba(201,255,99,.18);animation:heroagent-in .35s cubic-bezier(.2,.7,.2,1)}
+.heroagent .agent-log{max-height:min(46vh,380px)}
+@keyframes heroagent-in{from{opacity:0;transform:translateY(16px) scale(.98)}}
+body:has(.heroagent.has-panel) [data-dock]{display:none !important}
+@media (max-width:700px){
+  .heroagent{left:12px;right:12px;bottom:12px;width:auto}
+  .heroagent .agent-log{max-height:38vh}
+}
+
+/* ---- The orb reacts to the conversation ---- */
+.gorb{transition:filter .5s ease}
+.gorb-ring{transition:opacity .5s ease}
+[data-orb-state="connecting"] .gorb-ring,[data-orb-state="thinking"] .gorb-ring{opacity:1;animation:spin 2.6s linear infinite}
+[data-orb-state="connecting"] .gorb,[data-orb-state="thinking"] .gorb{filter:brightness(1.14) saturate(1.3)}
+[data-orb-state="thinking"] .orbfloat,.gorb[data-orb-state="thinking"],.gorb[data-orb-state="connecting"]{animation:orbthink 1.15s ease-in-out infinite !important}
+@keyframes orbthink{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+
+/* ---- 60-second tour ---- */
+.tour{position:fixed;z-index:80;left:50%;bottom:24px;width:min(680px,calc(100vw - 24px));transform:translate(-50%,24px);opacity:0;padding:16px 18px 14px;border-radius:24px;background:rgba(19,19,26,.94);border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 0 1px rgba(201,255,99,.14);backdrop-filter:blur(18px);color:#F2F3EE;font-family:Inter,sans-serif;transition:opacity .35s ease,transform .35s cubic-bezier(.2,.7,.2,1)}
+.tour.is-on{opacity:1;transform:translate(-50%,0)}
+.tour-prog{display:flex;gap:5px}
+.tour-prog span{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.14);overflow:hidden}
+.tour-prog i{display:block;width:0;height:100%;border-radius:2px;background:#C9FF63}
+.tour-row{display:flex;align-items:flex-start;gap:14px;margin-top:14px}
+.tour-orb{position:relative !important;flex:0 0 38px;width:38px;height:38px;--gs:.18;animation:orbthink 1.4s ease-in-out infinite}
+.tour.is-paused .tour-orb{animation-play-state:paused}
+.tour-cap{margin:0;min-height:3.9em;font:500 17px/1.45 'Inter Tight',Inter,sans-serif;letter-spacing:-.01em;color:#F2F3EE}
+.tour-cap.is-in{animation:tourcap .45s ease}
+@keyframes tourcap{from{opacity:0;transform:translateY(6px)}}
+.tour-ctl{display:flex;align-items:center;gap:8px;margin-top:8px}
+.tour-count{margin-right:auto;color:#8E918A;font-size:11px}
+.tour-ctl button{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#F2F3EE;font:600 13px Inter,sans-serif;cursor:pointer}
+.tour-ctl button:hover,.tour-ctl button:focus-visible{border-color:#C9FF63;outline:none}
+.tour.is-paused [data-tour-toggle]{background:#C9FF63;border-color:#C9FF63;color:#0B0B10}
+body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
+@media (max-width:700px){
+  .tour{bottom:12px;padding:14px 14px 12px;border-radius:20px}
+  .tour-cap{font-size:15px;min-height:4.4em}
+  .tour-orb{flex-basis:30px;width:30px;height:30px}
+}
+@media (prefers-reduced-motion:reduce){.gorb-ring,.tour-orb,.orbfloat,.gorb{animation:none !important}.tour,.tour-cap{transition:none;animation:none}}

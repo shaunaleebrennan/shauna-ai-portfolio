@@ -11,7 +11,7 @@
   <link rel="preload" href="assets/fonts/inter-tight-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts.css?v=20261108">
-  <link rel="stylesheet" href="redesign.css?v=20261110-mob">
+  <link rel="stylesheet" href="redesign.css?v=20261110-hero">
   <noscript><style>.rv,.rv .mk,.line,.node,.step{opacity:1 !important;transform:none !important;background-size:100% 100% !important}</style></noscript>
 </head>
 <body>
@@ -57,17 +57,17 @@
 <span class="l3" style="display: block; padding-left: 57%">Clear</span>
 </h1>
 
-<div class="herocopy" style="position: absolute; z-index: 4; left: 9%; bottom: calc(28px + 5%); max-width: 440px; display: flex; flex-direction: column; gap: 22px">
+<div class="herocopy" style="position: absolute; z-index: 4; left: 9%; bottom: calc(28px + 5%); max-width: 470px; display: flex; flex-direction: column; gap: 18px">
 <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #B4B7AE">I craft the positioning, shape the category, and build the GTM systems that turn complex AI into value for the customer.</p>
+<form class="heroask" data-agent-launch="hero-agent" data-examples="Ask me anything about my work…|What has Shauna built with AI?|How did she position HQ Agent?|Why would she fit an AI PMM role?" role="search" aria-label="Ask my portfolio agent">
+<span class="heroask-orb gorb" aria-hidden="true"></span>
+<label class="sr-only" for="hero-ask-input">Ask my portfolio agent a question</label>
+<input id="hero-ask-input" type="text" autocomplete="off" enterkeyhint="send" maxlength="500" placeholder="Ask me anything about my work…">
+<button type="submit" aria-label="Ask">→</button>
+</form>
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
 <a class="cta" href="./assets/Shauna-Azevedo-Brennan-CV.pdf" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 10px; min-height: 50px; box-sizing: border-box; padding: 0 22px; border-radius: 999px; background: #C9FF63; color: #0B0B10; text-decoration: none; font-size: 15px; font-weight: 600; transition: transform .2s ease">Download my CV <span aria-hidden="true">↓</span></a>
-<a class="ghost" href="#ask" style="display: inline-flex; align-items: center; gap: 10px; min-height: 50px; box-sizing: border-box; padding: 0 22px; border-radius: 999px; border: 1px solid rgba(255,255,255,.3); color: #F2F3EE; text-decoration: none; font-size: 15px; font-weight: 600; transition: background .2s ease">
-<span aria-hidden="true" style="display: inline-flex; align-items: center; gap: 3px; height: 16px">
-<span class="bar" style="display: block; width: 3px; height: 16px; border-radius: 2px; background: #C9FF63; animation: bars 1s ease-in-out infinite"></span>
-<span class="bar" style="display: block; width: 3px; height: 16px; border-radius: 2px; background: #C9FF63; animation: bars 1s ease-in-out .2s infinite"></span>
-<span class="bar" style="display: block; width: 3px; height: 16px; border-radius: 2px; background: #C9FF63; animation: bars 1s ease-in-out .4s infinite"></span>
-</span>
-Ask my portfolio agent</a>
+<button class="ghost" type="button" data-tour-start style="display: inline-flex; align-items: center; gap: 10px; min-height: 50px; box-sizing: border-box; padding: 0 20px; border-radius: 999px; border: 1px solid rgba(255,255,255,.3); background: transparent; color: #F2F3EE; font: 600 15px Inter, sans-serif; cursor: pointer; transition: background .2s ease"><span aria-hidden="true" style="display: inline-block; width: 0; height: 0; border-style: solid; border-width: 6px 0 6px 10px; border-color: transparent transparent transparent #C9FF63"></span>Take the 60-second tour</button>
 </div>
 </div>
 </section>
@@ -410,7 +410,7 @@ Ask my portfolio agent</a>
 </section>
 </div>
 
-<section id="ask" data-agent data-state="idle" aria-label="Ask my portfolio agent" style="position: relative; overflow: hidden; padding: 160px 0 120px">
+<section id="ask" data-agent data-agent-primary data-state="idle" aria-label="Ask my portfolio agent" style="position: relative; overflow: hidden; padding: 160px 0 120px">
 <div aria-hidden="true" style="position: absolute; width: 900px; height: 900px; left: -320px; top: -120px; border-radius: 50%; background: radial-gradient(circle, rgba(143,123,255,.32) 0%, rgba(90,60,255,.1) 40%, rgba(90,60,255,0) 70%)"></div>
 <div class="wrap rv" data-reveal="ask" style="position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 56px 96px">
 <div aria-hidden="true" data-agent-orb style="flex: 0 1 400px; min-width: 240px; position: relative; aspect-ratio: 1">
@@ -463,6 +463,15 @@ Ask my portfolio agent</a>
 </div>
 <script src="redesign.js?v=20261108" type="module"></script>
 <script>setTimeout(function(){if(!window.__portfolioReady){document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')})}},3000)</script>
-<script src="agent.js?v=20261108-ctx" type="module"></script>
+<div class="heroagent" id="hero-agent" data-agent data-agent-orb=".orbwrap" data-state="idle">
+<div class="agent-panel" data-agent-panel hidden role="dialog" aria-label="Conversation with my portfolio agent">
+<div class="agent-head"><span class="agent-dot" aria-hidden="true"></span><strong class="agent-status" data-agent-status role="status">Connecting…</strong><button class="agent-end" type="button" data-agent-close aria-label="End and close the conversation">Close</button></div>
+<div class="agent-log" data-agent-log aria-live="polite"></div>
+<form class="agent-form" data-agent-form><label class="sr-only" for="hero-agent-input">Ask a follow-up question</label><input id="hero-agent-input" type="text" autocomplete="off" placeholder="Ask a follow-up…" maxlength="500"><button type="submit">Send</button></form>
+<p class="agent-note">Conversations run on ElevenLabs. Please don’t share confidential information.</p>
+</div>
+</div>
+<script src="agent.js?v=20261110-hero" type="module"></script>
+<script src="tour.js?v=20261110" type="module"></script>
 </body>
 </html>

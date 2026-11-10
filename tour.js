@@ -5,7 +5,7 @@
 // Each stop is framed in the space above the caption bar, so the bar never covers it.
 // Wheel, touch or arrow keys pause the tour so a visitor is never fought for the scroll.
 const STOPS = [
-  { target: '#top', align: 'top', text: 'Hi, I’m Shauna, Decoded. Shauna makes complex AI clear. Here’s her work in sixty seconds.' },
+  { target: '#top', align: 'top', text: 'Hi, I’m Shauna, Decoded. Shauna turns AI products into stories that sell. Here’s her work in sixty seconds.' },
   { target: 'section[aria-label="Proof"]', text: 'She built Workvivo’s product marketing function from zero to a team of five, while the company grew from about $10M to $110M ARR.' },
   { target: '#scan', text: 'Her core strengths: positioning and narrative, AI-native go-to-market, PMM leadership, and category strategy.' },
   { target: '[data-rail]', text: 'She positioned HQ Agent, led the narrative behind Workvivo HQ, and shaped the migration story when Meta closed Workplace.' },

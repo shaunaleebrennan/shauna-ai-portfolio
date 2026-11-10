@@ -2,15 +2,16 @@
 // One tap scrolls the page through the proof while a caption bar narrates.
 // Each stop can carry an `audio` file (narration in Shauna's voice); when it is
 // present the stop lasts as long as the clip, otherwise it is timed by its length.
+// Each stop is framed in the space above the caption bar, so the bar never covers it.
 // Wheel, touch or arrow keys pause the tour so a visitor is never fought for the scroll.
 const STOPS = [
   { target: '#top', align: 'top', text: 'Hi, I’m Shauna, Decoded. Shauna makes complex AI clear. Here’s her work in sixty seconds.' },
   { target: 'section[aria-label="Proof"]', text: 'She built Workvivo’s product marketing function from zero to a team of five, while the company grew from about $10M to $110M ARR.' },
   { target: '#scan', text: 'Her core strengths: positioning and narrative, AI-native go-to-market, PMM leadership, and category strategy.' },
-  { target: '#explore', text: 'She positioned HQ Agent, led the narrative behind Workvivo HQ, and shaped the migration story when Meta closed Workplace.' },
+  { target: '[data-rail]', text: 'She positioned HQ Agent, led the narrative behind Workvivo HQ, and shaped the migration story when Meta closed Workplace.' },
   { target: 'section[aria-label="How I think"]', text: 'Her method is simple. Find the signal. Make the choice. Build the system.' },
-  { target: '.qbgrid', offset: 96, text: 'Workvivo named her Quarterback of the Year for 2026.' },
-  { find: () => [...document.querySelectorAll('#essentials h3')].find(h => /Recognised by/.test(h.textContent))?.parentElement, offset: 56, text: 'She also runs Workvivo’s analyst programme. The company is a Gartner Magic Quadrant Leader four years running and a 2026 Forrester Wave Leader.' },
+  { target: '.qbgrid', text: 'Workvivo named her Quarterback of the Year for 2026.' },
+  { find: () => document.querySelector('#essentials .arcard')?.parentElement, offset: 150, text: 'She also runs Workvivo’s analyst programme. The company is a Gartner Magic Quadrant Leader four years running and a 2026 Forrester Wave Leader.' },
   { target: '#ask', text: 'That’s the short version. Don’t just read her résumé. Ask me anything.' }
 ];
 const WORDS_PER_SECOND = 2.7;
@@ -56,7 +57,14 @@ if (starters.length) {
   const scrollToStop = stop => {
     const el = element(stop);
     if (!el) return;
-    const top = stop.align === 'top' ? 0 : el.getBoundingClientRect().top + window.scrollY - (stop.offset ?? 24);
+    // Frame the stop in the space above the caption bar, so the bar never covers what it is describing:
+    // centred when it fits, otherwise top-aligned.
+    const rect = el.getBoundingClientRect();
+    const barBox = bar.getBoundingClientRect();
+    const room = window.innerHeight - (barBox.height + (parseFloat(getComputedStyle(bar).bottom) || 0) + 16);
+    const lead = stop.offset ?? 24;
+    const gap = rect.height + 2 * lead <= room ? (room - rect.height) / 2 : lead;
+    const top = stop.align === 'top' ? 0 : rect.top + window.scrollY - gap;
     window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? 'auto' : 'smooth' });
   };
 

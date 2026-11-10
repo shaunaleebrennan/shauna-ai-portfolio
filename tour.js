@@ -1,20 +1,23 @@
 // The 60-second guided tour of the homepage.
 // One tap scrolls the page through the proof while a caption bar narrates.
-// Each stop can carry an `audio` file (narration in Shauna's voice); when it is
-// present the stop lasts as long as the clip, otherwise it is timed by its length.
+// Each stop carries an `audio` clip (narration in the same studio voice as the agent) and
+// its length in seconds (`dur`). With sound on, the stop lasts as long as the clip; muted,
+// or if the clip can't play, it is timed by the length of its caption instead.
 // Each stop is framed in the space above the caption bar, so the bar never covers it.
 // Wheel, touch or arrow keys pause the tour so a visitor is never fought for the scroll.
 const STOPS = [
-  { target: '#top', align: 'top', text: 'Hi, I’m Shauna, Decoded. Shauna turns AI products into stories that sell. Here’s her work in sixty seconds.' },
-  { target: 'section[aria-label="Proof"]', text: 'She built Workvivo’s product marketing function from zero to a team of five, while the company grew from about $10M to $110M ARR.' },
-  { target: '#scan', text: 'Her core strengths: positioning and narrative, AI-native go-to-market, PMM leadership, and category strategy.' },
-  { target: '[data-rail]', text: 'She positioned HQ Agent, led the narrative behind Workvivo HQ, and shaped the migration story when Meta closed Workplace.' },
-  { target: 'section[aria-label="How I think"]', text: 'Her method is simple. Find the signal. Make the choice. Build the system.' },
-  { target: '.qbgrid', text: 'Workvivo named her Quarterback of the Year for 2026.' },
-  { find: () => document.querySelector('#essentials .arcard')?.parentElement, offset: 150, text: 'She also runs Workvivo’s analyst programme. The company is a Gartner Magic Quadrant Leader four years running and a 2026 Forrester Wave Leader.' },
-  { target: '#ask', text: 'That’s the short version. Don’t just read her résumé. Ask me anything.' }
+  { target: '#top', align: 'top', audio: 'assets/tour/tour-1.mp3', dur: 8.28, text: 'Hi, I’m Shauna, Decoded. Shauna turns AI products into stories that sell. Here’s her work in sixty seconds.' },
+  { target: 'section[aria-label="Proof"]', audio: 'assets/tour/tour-2.mp3', dur: 10.68, text: 'She built Workvivo’s product marketing function from zero to a team of five, while the company grew from about $10M to $110M ARR.' },
+  { target: '#scan', audio: 'assets/tour/tour-3.mp3', dur: 8.67, text: 'Her core strengths: positioning and narrative, AI-native go-to-market, PMM leadership, and category strategy.' },
+  { target: '[data-rail]', audio: 'assets/tour/tour-4.mp3', dur: 8.75, text: 'She positioned HQ Agent, led the narrative behind Workvivo HQ, and shaped the migration story when Meta closed Workplace.' },
+  { target: 'section[aria-label="How I think"]', audio: 'assets/tour/tour-5.mp3', dur: 5.33, text: 'Her method is simple. Find the signal. Make the choice. Build the system.' },
+  { target: '.qbgrid', audio: 'assets/tour/tour-6.mp3', dur: 3.97, text: 'Workvivo named her Quarterback of the Year for 2026.' },
+  { find: () => document.querySelector('#essentials .arcard')?.parentElement, offset: 150, audio: 'assets/tour/tour-7.mp3', dur: 10.03, text: 'She also runs Workvivo’s analyst programme. The company is a Gartner Magic Quadrant Leader four years running and a 2026 Forrester Wave Leader.' },
+  { target: '#ask', audio: 'assets/tour/tour-8.mp3', dur: 4.83, text: 'That’s the short version. Don’t just read her résumé. Ask me anything.' }
 ];
 const WORDS_PER_SECOND = 2.7;
+const GAP = 320; // breath between clips, in ms
+const SOUND_KEY = 'tour-sound';
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const starters = document.querySelectorAll('[data-tour-start]');
 
@@ -32,6 +35,7 @@ if (starters.length) {
     </div>
     <div class="tour-ctl">
       <span class="lbl tour-count"></span>
+      <button type="button" data-tour-sound aria-pressed="true">Sound on</button>
       <button type="button" data-tour-toggle>Pause</button>
       <button type="button" data-tour-next>Skip</button>
       <button type="button" data-tour-end aria-label="End the tour">✕</button>
@@ -40,6 +44,7 @@ if (starters.length) {
   const caption = bar.querySelector('.tour-cap');
   const count = bar.querySelector('.tour-count');
   const toggle = bar.querySelector('[data-tour-toggle]');
+  const soundButton = bar.querySelector('[data-tour-sound]');
   const fills = [...bar.querySelectorAll('.tour-prog i')];
 
   let index = -1;
@@ -50,8 +55,18 @@ if (starters.length) {
   let running = false;
   let audio = null;
   let opener = null;
+  let warmed = null;
+  let sound = true;
+  try { sound = sessionStorage.getItem(SOUND_KEY) !== 'off'; } catch { /* storage can be blocked */ }
 
-  const seconds = stop => Math.max(3.5, stop.text.split(/\s+/).length / WORDS_PER_SECOND + 0.9);
+  const readingSeconds = stop => Math.max(3.5, stop.text.split(/\s+/).length / WORDS_PER_SECOND + 0.9);
+  // How long a stop lasts: the clip plus a breath when it will be heard, reading time otherwise.
+  const seconds = stop => (sound && stop.audio && stop.dur ? stop.dur + GAP / 1000 : readingSeconds(stop));
+  const warm = stop => { if (sound && stop?.audio) { warmed = new Audio(stop.audio); warmed.preload = 'auto'; } };
+  const paintSound = () => {
+    soundButton.textContent = sound ? 'Sound on' : 'Sound off';
+    soundButton.setAttribute('aria-pressed', String(sound));
+  };
   const element = stop => (stop.find ? stop.find() : document.querySelector(stop.target));
 
   const scrollToStop = stop => {
@@ -99,16 +114,32 @@ if (starters.length) {
     caption.classList.add('is-in');
     count.textContent = `${i + 1} / ${STOPS.length}`;
     scrollToStop(stop);
-    let ms = seconds(stop) * 1000;
     audio?.pause();
     audio = null;
-    if (stop.audio) {
-      // Narration: the stop ends when the clip does. If it can't play, the timer stands.
-      audio = new Audio(stop.audio);
-      audio.addEventListener('ended', () => { if (running && !paused && STOPS[index] === stop) next(); });
-      audio.play().then(() => { clearTimeout(timer); runFill(index, Math.max(ms, (audio.duration || 0) * 1000)); }).catch(() => { audio = null; });
-    }
-    schedule(ms);
+    schedule(seconds(stop) * 1000);
+    if (sound) narrate(stop);
+    warm(STOPS[i + 1]);
+  };
+
+  // Narration. The timer stays the single clock; each time the clip actually starts (or restarts
+  // after buffering or a pause) the clock is re-set to what is left of the clip, so sound,
+  // caption and progress bar stay together. If the clip can't play, the stop falls back to reading time.
+  const narrate = stop => {
+    const clip = new Audio(stop.audio);
+    audio = clip;
+    const live = () => running && audio === clip && STOPS[index] === stop;
+    clip.addEventListener('playing', () => {
+      if (!live() || paused) return;
+      const left = ((clip.duration || stop.dur) - clip.currentTime) * 1000;
+      if (Number.isFinite(left)) schedule(Math.max(0, left) + GAP);
+    });
+    const fallback = () => {
+      if (!live()) return;
+      audio = null;
+      if (!paused) schedule(readingSeconds(stop) * 1000);
+    };
+    clip.addEventListener('error', fallback);
+    clip.play().catch(fallback);
   };
 
   function next() {
@@ -133,8 +164,26 @@ if (starters.length) {
     bar.classList.remove('is-paused');
     toggle.textContent = 'Pause';
     scrollToStop(STOPS[index]);
-    if (audio) audio.play().catch(() => {});
     schedule(remaining);
+    if (audio && !audio.ended) audio.play().catch(() => {});
+  };
+
+  const setSound = on => {
+    sound = on;
+    try { sessionStorage.setItem(SOUND_KEY, on ? 'on' : 'off'); } catch { /* storage can be blocked */ }
+    paintSound();
+    if (!running) return;
+    const stop = STOPS[index];
+    if (!on) {
+      // Muted mid-stop: keep the time already earned, finish on reading time.
+      audio?.pause();
+      audio = null;
+      if (paused) remaining = Math.max(600, Math.min(remaining, readingSeconds(stop) * 1000));
+      else schedule(Math.max(1200, Math.min(endsAt - performance.now(), readingSeconds(stop) * 1000)));
+    } else if (!paused) {
+      // Sound back on: narration picks up from the next stop, so a line is never heard from the middle.
+      warm(STOPS[index + 1]);
+    }
   };
 
   const interrupt = () => pause();
@@ -155,6 +204,7 @@ if (starters.length) {
     const consent = document.querySelector('.analytics-consent');
     bar.style.bottom = consent ? `${consent.getBoundingClientRect().height + 28}px` : '';
     toggle.textContent = 'Pause';
+    paintSound();
     bar.classList.remove('is-paused', 'is-done');
     window.addEventListener('wheel', interrupt, { passive: true });
     window.addEventListener('touchmove', interrupt, { passive: true });
@@ -184,10 +234,15 @@ if (starters.length) {
   }
 
   toggle.addEventListener('click', () => (paused ? resume() : pause()));
+  soundButton.addEventListener('click', () => setSound(!sound));
   bar.querySelector('[data-tour-next]').addEventListener('click', () => { if (paused) { paused = false; bar.classList.remove('is-paused'); toggle.textContent = 'Pause'; } next(); });
   bar.querySelector('[data-tour-end]').addEventListener('click', () => end(false));
   // The bar's own controls must not count as "the visitor took over the scroll".
   bar.addEventListener('wheel', event => event.stopPropagation(), { passive: true });
   bar.addEventListener('touchmove', event => event.stopPropagation(), { passive: true });
-  starters.forEach(button => button.addEventListener('click', () => start(button)));
+  starters.forEach(button => {
+    button.addEventListener('click', () => start(button));
+    // Fetch the first clip as soon as the visitor shows interest, so the tour starts speaking at once.
+    ['pointerenter', 'focus', 'touchstart'].forEach(type => button.addEventListener(type, () => { if (!running && !warmed) warm(STOPS[0]); }, { passive: true, once: true }));
+  });
 }

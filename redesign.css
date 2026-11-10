@@ -309,6 +309,7 @@ body:has(.heroagent.has-panel) [data-dock]{display:none !important}
 .tour-ctl button{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#F2F3EE;font:600 13px Inter,sans-serif;cursor:pointer}
 .tour-ctl button:hover,.tour-ctl button:focus-visible{border-color:#C9FF63;outline:none}
 .tour.is-paused [data-tour-toggle]{background:#C9FF63;border-color:#C9FF63;color:#0B0B10}
+.tour-ctl [data-tour-sound][aria-pressed="false"]{color:#8E918A;border-color:rgba(255,255,255,.12)}
 body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
 @media (max-width:700px){
   .tour{bottom:12px;padding:14px 14px 12px;border-radius:20px}

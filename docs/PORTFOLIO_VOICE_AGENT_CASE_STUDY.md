@@ -2,16 +2,16 @@
 
 Portfolio Voice Agent is the live voice and text agent embedded in this portfolio. It is designed to help recruiters, hiring managers, and technical stakeholders explore Shauna Azevedo-Brennan's work through focused questions rather than a fixed résumé journey.
 
-## Voice persona and conversation design
+## Voice and conversation design
 
-Shauna created a custom voice persona from recordings of her own voice, then defined the agent's personality, tone, conversational style, and answer behaviour. The aim was to make the experience feel recognisably hers while keeping a clear boundary: the agent speaks about Shauna and does not pretend to be her.
+Shauna first created a custom voice persona from recordings of her own voice, then moved to a studio voice for clearer delivery. She defined the agent's personality, tone, conversational style, and answer behaviour. The aim was to make the experience feel recognisably hers while keeping a clear boundary: the agent speaks about Shauna and does not pretend to be her.
 
 This required more than selecting a voice. Shauna engineered prompts for how the agent should introduce evidence, handle uncertainty, stay concise in spoken answers, and adapt to different visitor intents. She tested multiple model outputs and refined the personality and prompt structure based on how each configuration handled tone, grounding, nuance, and claim boundaries.
 
 ## System design
 
 - **Runtime and interface:** ElevenLabs Conversational AI provides the voice and text runtime. Its web component is integrated into the static portfolio.
-- **Voice and personality:** A custom voice persona, personality prompt, and conversation rules create a consistent spoken experience.
+- **Voice and personality:** A studio voice, personality prompt, and conversation rules create a consistent spoken experience.
 - **Intent-routing workflow:** Different question types are routed to focused answer modes covering career history, technical experience, case-study depth, working style, and role-fit pressure tests.
 - **Knowledge architecture:** Compact identity and claim rules stay in persistent context. Longer career and case-study documents are retrieved only when relevant.
 - **Evidence layer:** Answers can link back to public portfolio case studies, repositories, and external sources.
@@ -53,8 +53,8 @@ Evaluation was iterative rather than a one-off checklist. Shauna ran repeated vo
 
 ## Tools and skills demonstrated
 
-ElevenLabs Conversational AI · custom voice persona · conversation design · personality design · prompt engineering · agent workflow design · intent routing · modular RAG · context engineering · knowledge architecture · guardrails · model evaluation · test analysis · operating procedures · HTML · CSS · JavaScript · Node.js · Git · GitHub Pages
+ElevenLabs Conversational AI · voice design · conversation design · personality design · prompt engineering · agent workflow design · intent routing · modular RAG · context engineering · knowledge architecture · guardrails · model evaluation · test analysis · operating procedures · HTML · CSS · JavaScript · Node.js · Git · GitHub Pages
 
 ## Ownership boundary
 
-Shauna created the voice persona, defined the personality, engineered the prompts and guardrails, built the intent-routing workflow, structured the knowledge, compared model outputs, analysed tests, documented the procedures, and integrated the portfolio-agent experience. ElevenLabs provides the underlying models, speech technology, orchestration platform, and runtime.
+Shauna designed and selected the voice, defined the personality, engineered the prompts and guardrails, built the intent-routing workflow, structured the knowledge, compared model outputs, analysed tests, documented the procedures, and integrated the portfolio-agent experience. ElevenLabs provides the underlying models, speech technology, orchestration platform, and runtime.

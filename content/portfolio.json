@@ -400,11 +400,11 @@
           "learning": "A portfolio agent is only worth building if it answers the follow-up questions a page can’t. It also has to be clear about what it doesn’t know."
         },
         "eyebrow": "Turning a résumé into an evidence-grounded conversation",
-        "context": "A static portfolio can show the work, but it cannot adapt to the question a recruiter, hiring manager, or technical stakeholder actually wants answered. Shauna designed a live ElevenLabs experience that lets visitors explore her career, case studies, technical builds, and working principles through voice or text. She also created a voice persona from her own voice and gave the agent a defined personality so the experience feels recognisably hers without pretending to be her.",
+        "context": "A static portfolio can show the work, but it cannot adapt to the question a recruiter, hiring manager, or technical stakeholder actually wants answered. Shauna designed a live ElevenLabs experience that lets visitors explore her career, case studies, technical builds, and working principles through voice or text. She first built a voice persona from her own recordings, later chose a studio voice for clearer delivery, and gave the agent a defined personality so the experience feels recognisably hers without pretending to be her.",
         "challenge": "The agent needed to be persuasive without becoming a hype machine. It had to answer broad career questions quickly, go deep on named projects, distinguish work Shauna built from products she marketed, link back to public evidence, and avoid turning company outcomes or technical fluency into unsupported personal claims.",
         "insight": "A credible portfolio agent is a voice, context, workflow, and evaluation problem—not simply a prompt. Better answers came from defining the persona, separating durable rules from retrievable evidence, routing different intents to specialist answer modes, comparing model outputs, and analysing failures where attribution, role fit, or technical ownership could drift.",
         "contribution": [
-          "Created a custom voice persona from her own recorded voice and defined its personality, tone, conversational style, and answer behaviour",
+          "Built a custom voice persona from her own recorded voice, later moved to a studio voice for clearer delivery, and defined the agent's personality, tone, conversational style, and answer behaviour",
           "Engineered the system prompts, answer contract, evidence standard, and guardrails",
           "Designed a modular knowledge base around career, technical builds, case studies, learning, recognition, and a canonical claim ledger",
           "Built the workflow and intent-routing conditions for technical questions, case-study deep dives, career history, working style, and role-fit pressure tests",
@@ -424,7 +424,7 @@
         ],
         "architecture": [
           "ElevenLabs Conversational AI provides the live voice and text runtime embedded through its web component",
-          "A custom voice persona created from Shauna's own voice provides a consistent spoken identity, supported by defined personality and conversation rules",
+          "A studio voice gives the agent a consistent spoken identity, supported by defined personality and conversation rules; an earlier version used a voice persona built from Shauna's own recordings",
           "A main-agent workflow coordinates specialist intent routes for career, technical evidence, case-study depth, working style, and fit assessment",
           "Two compact prompt documents hold identity, personality, answer policy, and claim controls in persistent context",
           "Nine focused knowledge documents are configured for RAG so the agent retrieves only the evidence relevant to the question",
@@ -432,7 +432,7 @@
           "Absolute portfolio and repository links let answers point visitors back to inspectable evidence"
         ],
         "tooling": [
-          "ElevenLabs Conversational AI for the agent runtime, custom voice persona, speech interface, workflow, model configuration, and knowledge retrieval",
+          "ElevenLabs Conversational AI for the agent runtime, voice, speech interface, workflow, model configuration, and knowledge retrieval",
           "Prompt engineering and conversation design for personality, response structure, routing, and behavioural boundaries",
           "Structured evaluation and qualitative analysis for comparing model outputs and finding recurring failure patterns",
           "HTML, CSS, and vanilla JavaScript for the portfolio and widget integration",
@@ -481,7 +481,7 @@
             "id": "contribution",
             "title": "Designing the conversation",
             "paragraphs": [
-              "I designed and integrated a voice and text agent on ElevenLabs, with a voice persona based on my own recordings. I configured its personality, prompts, modular knowledge and intent routing, then compared models and tested responses against career and project evidence to improve clarity, relevance and accuracy."
+              "I designed and integrated a voice and text agent on ElevenLabs. I first built its voice from my own recordings, then chose a studio voice for clearer delivery. I configured its personality, prompts, modular knowledge and intent routing, then compared models and tested responses against career and project evidence to improve clarity, relevance and accuracy."
             ],
             "layout": "artifact",
             "label": "Conversation design",
@@ -508,7 +508,7 @@
             "layout": "decisions",
             "items": [
               "Start with different visitor intents. Recruiters, hiring managers, and collaborators need different routes into the same body of work.",
-              "Design a recognisable voice. Base the voice persona on my recordings and configure its personality and prompts.",
+              "Design a recognisable voice. Start with a persona built from my recordings, settle on a studio voice for clarity, and configure its personality and prompts.",
               "Make knowledge modular. Connect the conversation to curated career and project material through intent routing.",
               "Test against the experience. Compare models and review answers for clarity, relevance, and accuracy."
             ]

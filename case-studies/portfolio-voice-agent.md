@@ -14,7 +14,7 @@ Recruiters, hiring managers and collaborators arrive with different questions. I
 
 ## Designing the conversation
 
-I designed and integrated a voice and text agent on ElevenLabs, with a voice persona based on my own recordings. I configured its personality, prompts, modular knowledge and intent routing, then compared models and tested responses against career and project evidence to improve clarity, relevance and accuracy.
+I designed and integrated a voice and text agent on ElevenLabs. I first built its voice from my own recordings, then chose a studio voice for clearer delivery. I configured its personality, prompts, modular knowledge and intent routing, then compared models and tested responses against career and project evidence to improve clarity, relevance and accuracy.
 
 ### From a visitor’s question to a grounded answer
 
@@ -29,7 +29,7 @@ ElevenLabs · Voice persona · Modular knowledge · Response testing
 
 
 - Start with different visitor intents. Recruiters, hiring managers, and collaborators need different routes into the same body of work.
-- Design a recognisable voice. Base the voice persona on my recordings and configure its personality and prompts.
+- Design a recognisable voice. Start with a persona built from my recordings, settle on a studio voice for clarity, and configure its personality and prompts.
 - Make knowledge modular. Connect the conversation to curated career and project material through intent routing.
 - Test against the experience. Compare models and review answers for clarity, relevance, and accuracy.
 

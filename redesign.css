@@ -267,12 +267,15 @@ a.tool-logo:hover,a.tool-logo:focus-visible{color:#FFFFFF}
 }
 
 /* ---- Hero ask box: type a question under the headline; the answer opens in a floating card ---- */
-.heroask{display:flex;align-items:center;gap:10px;min-height:56px;padding:6px 6px 6px 14px;border-radius:999px;background:rgba(19,19,26,.72);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(14px);transition:border-color .2s ease,box-shadow .3s ease}
+.heroask{flex:0 1 320px;width:320px;min-width:0;box-sizing:border-box;display:flex;align-items:center;gap:9px;min-height:50px;padding:4px 5px 4px 13px;border-radius:999px;background:rgba(19,19,26,.72);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(14px);transition:border-color .2s ease,box-shadow .3s ease}
 .heroask:focus-within{border-color:#C9FF63;box-shadow:0 0 0 4px rgba(201,255,99,.14),0 0 60px rgba(143,123,255,.25)}
-.heroask-orb{position:relative !important;flex:0 0 26px;width:26px;height:26px;--gs:.14}
-.heroask input{flex:1;min-width:0;height:44px;border:0;background:transparent;color:#F2F3EE;font:16px Inter,sans-serif;outline:none}
+.heroask-orb{position:relative !important;flex:0 0 22px;width:22px;height:22px;--gs:.12}
+.heroask input{flex:1;width:0;min-width:0;height:40px;border:0;background:transparent;color:#F2F3EE;font:15px Inter,sans-serif;outline:none;text-overflow:ellipsis}
 .heroask input::placeholder{color:#B4B7AE;opacity:1}
-.heroask button{flex:0 0 44px;width:44px;height:44px;border:0;border-radius:50%;background:#C9FF63;color:#0B0B10;font:600 18px Inter,sans-serif;cursor:pointer;transition:transform .2s ease}
+.heroask button{flex:0 0 40px;width:40px;height:40px;border:0;border-radius:50%;background:#C9FF63;color:#0B0B10;font:600 16px Inter,sans-serif;cursor:pointer;transition:transform .2s ease}
+/* The ask box sits in one row with Download my CV and the tour button, so the hero's copy block may be wider than its paragraph. */
+.herocopy{max-width:780px !important}
+.herocopy>p{max-width:470px}
 .heroask button:hover{transform:translateX(2px)}
 .heroagent{position:fixed;z-index:70;right:24px;bottom:24px;width:min(440px,calc(100vw - 24px));pointer-events:none}
 .heroagent .agent-panel{margin:0;max-width:none;pointer-events:auto;background:rgba(19,19,26,.96);box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 0 1px rgba(201,255,99,.18);animation:heroagent-in .35s cubic-bezier(.2,.7,.2,1)}
@@ -401,14 +404,16 @@ body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
 .orbtalk{position:absolute;inset:0;z-index:2;padding:0;border:0;border-radius:50%;background:transparent;cursor:pointer}
 .orbwrap:has(.orbtalk:hover) .gorb-ring,.orbwrap:has(.orbtag:hover) .gorb-ring,.orbwrap:has(.orbtag:focus-visible) .gorb-ring{opacity:1}
 .orbwrap:has(.orbtalk:hover) .gorb,.orbwrap:has(.orbtag:hover) .gorb{filter:brightness(1.07) saturate(1.1)}
-/* The tag is the button: big enough to tap, sitting on the orb's rim, and it fills with lime when the orb or the tag is hovered. */
-.orbtag{position:absolute;z-index:3;left:50%;top:-7%;translate:-50% 0;display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;white-space:nowrap;padding:0 16px 0 15px;border-radius:999px;background:rgba(19,19,26,.86);border:1px solid rgba(201,255,99,.6);box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 24px rgba(201,255,99,.16);backdrop-filter:blur(10px);font:600 12px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#F2F3EE;cursor:pointer;transition:background .25s ease,color .25s ease,box-shadow .25s ease,translate .25s ease}
-.orbtag i{flex:0 0 8px;width:8px;height:8px;border-radius:50%;background:#C9FF63;box-shadow:0 0 10px #C9FF63;animation:pulse 1.6s infinite}
-.orbtag b{font:600 15px Inter,sans-serif;color:#C9FF63;transition:translate .25s ease,color .25s ease}
-.orbtag:hover,.orbtag:focus-visible,.orbwrap:has(.orbtalk:hover) .orbtag{background:#C9FF63;color:#0B0B10;box-shadow:0 12px 34px rgba(0,0,0,.4),0 0 40px rgba(201,255,99,.4);outline:none;translate:-50% -2px}
-.orbtag:focus-visible{box-shadow:0 0 0 3px #0B0B10,0 0 0 5px #C9FF63}
-.orbtag:hover i,.orbtag:focus-visible i,.orbwrap:has(.orbtalk:hover) .orbtag i{background:#0B0B10;box-shadow:none;animation:none}
-.orbtag:hover b,.orbtag:focus-visible b,.orbwrap:has(.orbtalk:hover) .orbtag b{color:#0B0B10;translate:3px 0}
+/* The tag is the button, but a quiet one: a small glass label on the orb's rim. Hovering the orb or the tag
+   turns its outline and text lime and nudges the arrow; it never becomes a solid block. Its tap area is padded
+   out to 44px by the ::before so it stays easy to hit. */
+.orbtag{position:absolute;z-index:3;left:50%;top:-6%;translate:-50% 0;display:inline-flex;align-items:center;gap:8px;min-height:32px;box-sizing:border-box;white-space:nowrap;padding:0 12px 0 11px;border-radius:999px;background:rgba(19,19,26,.5);border:1px solid rgba(255,255,255,.26);backdrop-filter:blur(12px);font:500 10.5px 'JetBrains Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:#E6E8E1;cursor:pointer;transition:border-color .25s ease,color .25s ease,background .25s ease,box-shadow .25s ease}
+.orbtag::before{content:"";position:absolute;inset:-7px -6px}
+.orbtag i{flex:0 0 6px;width:6px;height:6px;border-radius:50%;background:#C9FF63;box-shadow:0 0 8px #C9FF63;animation:pulse 1.6s infinite}
+.orbtag b{font:500 12px Inter,sans-serif;color:#C9FF63;transition:translate .25s ease}
+.orbtag:hover,.orbtag:focus-visible,.orbwrap:has(.orbtalk:hover) .orbtag{border-color:rgba(201,255,99,.85);color:#C9FF63;background:rgba(19,19,26,.72);box-shadow:0 0 22px rgba(201,255,99,.2);outline:none}
+.orbtag:focus-visible{box-shadow:0 0 0 2px #0B0B10,0 0 0 4px #C9FF63}
+.orbtag:hover b,.orbtag:focus-visible b,.orbwrap:has(.orbtalk:hover) .orbtag b{translate:3px 0}
 /* While a conversation is under way the tag reports it instead of inviting: no arrow, quieter. */
 .orbwrap[data-orb-state="listening"] .orbtag b,.orbwrap[data-orb-state="speaking"] .orbtag b,.orbwrap[data-orb-state="thinking"] .orbtag b,.orbwrap[data-orb-state="connecting"] .orbtag b{display:none}
 /* Conversation panel. It wears the orb and its light: an aura hairline around the card, the orb and name in the
@@ -452,8 +457,13 @@ body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
 body.ask-in-view [data-dock]{opacity:0 !important;pointer-events:none !important}
 /* Once the panel is open its switch is the way in, so the buttons that opened it step aside. */
 [data-agent].has-panel [data-agent-start]{display:none !important}
+/* Tablets: the orb hangs off the right edge, so its tag is pinned inside the screen instead of centred on it. */
+@media (max-width:820px){
+  .orbtag{left:auto;right:17vw;top:5%;translate:0 0}
+}
 @media (max-width:700px){
-  .orbtag{left:auto;right:15vw;top:-31%;translate:0 0;font-size:10.5px;padding:0 13px 0 12px;gap:8px}
-  .orbtag:hover,.orbtag:focus-visible,.orbwrap:has(.orbtalk:hover) .orbtag{translate:0 -2px}
+  .orbtag{left:auto;right:15vw;top:-25%;translate:0 0;font-size:10px}
+  .heroask{flex:1 1 100%;width:auto}
+  .heroask input{font-size:16px}
   .agent-stage-copy span{display:none}
 }

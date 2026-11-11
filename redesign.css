@@ -399,12 +399,18 @@ body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
    Hero: the orb is a button (tap to start a call) with a tag that names it and says what it is doing. */
 .headline{pointer-events:none}
 .orbtalk{position:absolute;inset:0;z-index:2;padding:0;border:0;border-radius:50%;background:transparent;cursor:pointer}
-.orbtalk:focus-visible{outline:2px solid #C9FF63;outline-offset:12px}
-.orbwrap:has(.orbtalk:hover) .gorb-ring{opacity:1}
-.orbwrap:has(.orbtalk:hover) .gorb{filter:brightness(1.07) saturate(1.1)}
-.orbtag{position:absolute;z-index:3;left:50%;top:-9%;translate:-50% 0;display:inline-flex;align-items:center;gap:9px;white-space:nowrap;padding:8px 14px;border-radius:999px;background:rgba(19,19,26,.8);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);font:500 11px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#F2F3EE;pointer-events:none;transition:border-color .3s ease}
-.orbtag i{width:7px;height:7px;border-radius:50%;background:#C9FF63;box-shadow:0 0 10px #C9FF63;animation:pulse 1.6s infinite}
-.orbwrap:has(.orbtalk:hover) .orbtag,.orbwrap[data-orb-state="listening"] .orbtag,.orbwrap[data-orb-state="speaking"] .orbtag,.orbwrap[data-orb-state="thinking"] .orbtag,.orbwrap[data-orb-state="connecting"] .orbtag{border-color:#C9FF63}
+.orbwrap:has(.orbtalk:hover) .gorb-ring,.orbwrap:has(.orbtag:hover) .gorb-ring,.orbwrap:has(.orbtag:focus-visible) .gorb-ring{opacity:1}
+.orbwrap:has(.orbtalk:hover) .gorb,.orbwrap:has(.orbtag:hover) .gorb{filter:brightness(1.07) saturate(1.1)}
+/* The tag is the button: big enough to tap, sitting on the orb's rim, and it fills with lime when the orb or the tag is hovered. */
+.orbtag{position:absolute;z-index:3;left:50%;top:-7%;translate:-50% 0;display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;white-space:nowrap;padding:0 16px 0 15px;border-radius:999px;background:rgba(19,19,26,.86);border:1px solid rgba(201,255,99,.6);box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 24px rgba(201,255,99,.16);backdrop-filter:blur(10px);font:600 12px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#F2F3EE;cursor:pointer;transition:background .25s ease,color .25s ease,box-shadow .25s ease,translate .25s ease}
+.orbtag i{flex:0 0 8px;width:8px;height:8px;border-radius:50%;background:#C9FF63;box-shadow:0 0 10px #C9FF63;animation:pulse 1.6s infinite}
+.orbtag b{font:600 15px Inter,sans-serif;color:#C9FF63;transition:translate .25s ease,color .25s ease}
+.orbtag:hover,.orbtag:focus-visible,.orbwrap:has(.orbtalk:hover) .orbtag{background:#C9FF63;color:#0B0B10;box-shadow:0 12px 34px rgba(0,0,0,.4),0 0 40px rgba(201,255,99,.4);outline:none;translate:-50% -2px}
+.orbtag:focus-visible{box-shadow:0 0 0 3px #0B0B10,0 0 0 5px #C9FF63}
+.orbtag:hover i,.orbtag:focus-visible i,.orbwrap:has(.orbtalk:hover) .orbtag i{background:#0B0B10;box-shadow:none;animation:none}
+.orbtag:hover b,.orbtag:focus-visible b,.orbwrap:has(.orbtalk:hover) .orbtag b{color:#0B0B10;translate:3px 0}
+/* While a conversation is under way the tag reports it instead of inviting: no arrow, quieter. */
+.orbwrap[data-orb-state="listening"] .orbtag b,.orbwrap[data-orb-state="speaking"] .orbtag b,.orbwrap[data-orb-state="thinking"] .orbtag b,.orbwrap[data-orb-state="connecting"] .orbtag b{display:none}
 /* Conversation panel. It wears the orb and its light: an aura hairline around the card, the orb and name in the
    header, a Chat | Call switch that is always in view, and a call banner that moves with the voice. */
 .agent-panel{border:1px solid transparent;background:linear-gradient(#14141C,#14141C) padding-box,linear-gradient(135deg,rgba(167,150,255,.8),rgba(255,196,225,.3) 28%,rgba(255,255,255,.1) 55%,rgba(201,255,99,.75)) border-box;box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 70px rgba(106,77,255,.16);backdrop-filter:none}
@@ -436,11 +442,18 @@ body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
 .agent-bars i{width:3px;border-radius:2px;background:#C9FF63;height:calc(18% + var(--vol,0) * var(--k,80%))}
 .agent-bars i:nth-child(1){--k:55%}.agent-bars i:nth-child(2){--k:95%}.agent-bars i:nth-child(3){--k:140%}.agent-bars i:nth-child(4){--k:85%}.agent-bars i:nth-child(5){--k:50%}
 .agent-log:empty{min-height:0;padding:0 20px}
+/* Opened from the orb, the card starts with a few questions to try (they go once the conversation has a first line). */
+.agent-suggest{display:none;flex-wrap:wrap;gap:8px;padding:4px 16px 14px}
+.agent-log:empty+.agent-suggest{display:flex}
+[data-agent][data-state="connecting"] .agent-suggest,[data-agent][data-mode="voice"] .agent-suggest{display:none}
+.agent-suggest button{min-height:38px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#E6E8E1;font:500 14px Inter,sans-serif;text-align:left;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+.agent-suggest button:hover,.agent-suggest button:focus-visible{border-color:#C9FF63;color:#C9FF63;outline:none}
 [data-agent][data-mode="voice"] .agent-log:empty{min-height:14px}
 body.ask-in-view [data-dock]{opacity:0 !important;pointer-events:none !important}
 /* Once the panel is open its switch is the way in, so the buttons that opened it step aside. */
 [data-agent].has-panel [data-agent-start]{display:none !important}
 @media (max-width:700px){
-  .orbtag{left:auto;right:15vw;top:-27%;translate:0 0;font-size:10px;padding:7px 11px}
+  .orbtag{left:auto;right:15vw;top:-31%;translate:0 0;font-size:10.5px;padding:0 13px 0 12px;gap:8px}
+  .orbtag:hover,.orbtag:focus-visible,.orbwrap:has(.orbtalk:hover) .orbtag{translate:0 -2px}
   .agent-stage-copy span{display:none}
 }

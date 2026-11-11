@@ -356,6 +356,13 @@ function initAgent(section) {
     }
   };
 
+  const openIdle = () => {
+    openPanel();
+    if (!conversation && !starting) setState('idle', 'Ask me anything, by chat or call');
+    // Put the cursor in the box on desktop; on touch screens that would throw the keyboard over the card.
+    if (window.matchMedia('(hover: hover)').matches) input?.focus({ preventScroll: true });
+  };
+
   // The Chat | Call switch. Switching ends the current session and opens the other kind, keeping the transcript.
   function switchTo(mode) {
     if (conversation && kind === mode) { if (mode === 'text') input?.focus(); return; }
@@ -378,6 +385,8 @@ function initAgent(section) {
     const named = button.dataset.agentFor;
     if (named ? named !== section.id : (owner ? owner !== section : !first)) return;
     button.addEventListener('click', () => {
+      // "open" shows the card without starting anything: the visitor picks a question, types, or calls from there.
+      if (button.dataset.agentStart === 'open') return openIdle();
       start(button.dataset.agentStart);
       // From the dock, bring the conversation itself into view (the panel is open by now), not just its section.
       if (!named && !section.contains(button)) requestAnimationFrame(() => panel.scrollIntoView({ behavior: 'smooth', block: 'center' }));
@@ -425,6 +434,8 @@ function initAgent(section) {
   section.querySelector('[data-agent-close]')?.addEventListener('click', async () => {
     await endConversation();
     setState('idle');
+    log.replaceChildren(); // closing the card clears it, so it opens fresh next time
+    history.length = 0;
     panel.hidden = true;
     section.classList.remove('has-panel');
   });

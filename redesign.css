@@ -285,12 +285,36 @@ body:has(.heroagent.has-panel) [data-dock]{display:none !important}
 }
 
 /* ---- The orb reacts to the conversation ---- */
-.gorb{transition:filter .5s ease}
+/* Mood: the orb's colours are custom properties, registered as colours so they can glide from one mood to the next.
+   Rest is the brand violet; listening leans lime, thinking goes electric blue, speaking warms to pink. */
+@property --o1{syntax:'<color>';inherits:true;initial-value:#FFE6F1}
+@property --o2{syntax:'<color>';inherits:true;initial-value:#EDC2EE}
+@property --o3{syntax:'<color>';inherits:true;initial-value:#B9A2FF}
+@property --o4{syntax:'<color>';inherits:true;initial-value:#8A80FF}
+@property --o5{syntax:'<color>';inherits:true;initial-value:#6E6EF8}
+@property --o6{syntax:'<color>';inherits:true;initial-value:#8C9CFF}
+@property --ob1{syntax:'<color>';inherits:true;initial-value:rgba(92,98,255,.85)}
+@property --ob2{syntax:'<color>';inherits:true;initial-value:rgba(92,98,255,.35)}
+@property --og1{syntax:'<color>';inherits:true;initial-value:rgba(167,150,255,.4)}
+@property --og2{syntax:'<color>';inherits:true;initial-value:rgba(106,77,255,.22)}
+.gorb{--o1:#FFE6F1;--o2:#EDC2EE;--o3:#B9A2FF;--o4:#8A80FF;--o5:#6E6EF8;--o6:#8C9CFF;--ob1:rgba(92,98,255,.85);--ob2:rgba(92,98,255,.35);--og1:rgba(167,150,255,.4);--og2:rgba(106,77,255,.22);background:radial-gradient(circle at 30% 24%,#FFFBE3 0%,rgba(255,251,227,.9) 8%,rgba(255,251,227,0) 30%),radial-gradient(circle at 64% 24%,rgba(255,196,225,.7) 0%,rgba(255,196,225,0) 32%),radial-gradient(circle at 34% 28%,var(--o1) 0%,var(--o2) 18%,var(--o3) 40%,var(--o4) 60%,var(--o5) 80%,var(--o6) 100%);box-shadow:inset 0 0 0 max(1.25px,calc(2px * var(--gs,1))) rgba(255,255,255,.95),inset 0 0 calc(7px * var(--gs,1)) 1px rgba(255,255,255,.55),inset 0 calc(-8px * var(--gs,1)) calc(18px * var(--gs,1)) rgba(255,255,255,.3),inset calc(-18px * var(--gs,1)) calc(-26px * var(--gs,1)) calc(50px * var(--gs,1)) rgba(30,16,90,.18),inset calc(9px * var(--gs,1)) calc(11px * var(--gs,1)) calc(4px * var(--gs,1)) calc(-7px * var(--gs,1)) rgba(255,255,255,.3),0 0 calc(12px * var(--gs,1)) rgba(255,255,255,.55),0 0 calc(70px * var(--gs,1)) var(--og1),0 0 calc(180px * var(--gs,1)) var(--og2);transition:filter .5s ease,--o1 .9s ease,--o2 .9s ease,--o3 .9s ease,--o4 .9s ease,--o5 .9s ease,--o6 .9s ease,--ob1 .9s ease,--ob2 .9s ease,--og1 .9s ease,--og2 .9s ease}
+.gorb::before{background:radial-gradient(closest-side,var(--ob1),var(--ob2) 60%,rgba(92,98,255,0))}
+[data-orb-state="listening"] .gorb,.gorb[data-orb-state="listening"]{--o1:#F8FFE2;--o2:#DDF9BE;--o3:#A9EDC4;--o4:#7BD6D2;--o5:#62A6EE;--o6:#9AC4FF;--ob1:rgba(40,150,190,.8);--ob2:rgba(40,150,190,.3);--og1:rgba(201,255,99,.42);--og2:rgba(110,225,170,.24)}
+[data-orb-state="thinking"] .gorb,.gorb[data-orb-state="thinking"],[data-orb-state="connecting"] .gorb,.gorb[data-orb-state="connecting"]{--o1:#E8F1FF;--o2:#C0D3FF;--o3:#8EA4FF;--o4:#6674FF;--o5:#4A47EE;--o6:#7B6CFF;--ob1:rgba(52,40,225,.9);--ob2:rgba(52,40,225,.4);--og1:rgba(118,138,255,.5);--og2:rgba(72,60,255,.3)}
+[data-orb-state="speaking"] .gorb,.gorb[data-orb-state="speaking"]{--o1:#FFF4E2;--o2:#FFD6CF;--o3:#FFAACF;--o4:#F78BD6;--o5:#C97CFF;--o6:#FFB2C9;--ob1:rgba(236,84,168,.8);--ob2:rgba(236,84,168,.3);--og1:rgba(255,170,212,.46);--og2:rgba(255,108,170,.26)}
 .gorb-ring{transition:opacity .5s ease}
 [data-orb-state="connecting"] .gorb-ring,[data-orb-state="thinking"] .gorb-ring{opacity:1;animation:spin 2.6s linear infinite}
-[data-orb-state="connecting"] .gorb,[data-orb-state="thinking"] .gorb{filter:brightness(1.14) saturate(1.3)}
+[data-orb-state="listening"] .gorb-ring,[data-orb-state="speaking"] .gorb-ring{opacity:.95}
+[data-orb-state="connecting"] .gorb,[data-orb-state="thinking"] .gorb{filter:brightness(1.1) saturate(1.2)}
+[data-orb-state="error"] .gorb,.gorb[data-orb-state="error"]{filter:saturate(.35) brightness(.9)}
 [data-orb-state="thinking"] .orbfloat,.gorb[data-orb-state="thinking"],.gorb[data-orb-state="connecting"]{animation:orbthink 1.15s ease-in-out infinite !important}
 @keyframes orbthink{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+/* Speaking: the orb swells with the real loudness of the voice (--vol, set by script). With no live level to follow
+   (a typed answer, or sound off) it breathes on its own instead. */
+[data-orb-state]{scale:calc(1 + var(--vol,0) * .1)}
+[data-agent-orb][data-orb-state]{scale:calc(1 + var(--vol,0) * .22)}
+[data-orb-state="speaking"]:not([data-orb-voiced]) .gorb,.gorb[data-orb-state="speaking"]:not([data-orb-voiced]){animation:orbspeak 1.9s ease-in-out infinite !important}
+@keyframes orbspeak{0%,100%{transform:scale(1)}22%{transform:scale(1.035)}41%{transform:scale(1.008)}63%{transform:scale(1.045)}82%{transform:scale(1.012)}}
 
 /* ---- 60-second tour ---- */
 .tour{position:fixed;z-index:80;left:50%;bottom:24px;width:min(680px,calc(100vw - 24px));transform:translate(-50%,24px);opacity:0;padding:16px 18px 14px;border-radius:24px;background:rgba(19,19,26,.94);border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 0 1px rgba(201,255,99,.14);backdrop-filter:blur(18px);color:#F2F3EE;font-family:Inter,sans-serif;transition:opacity .35s ease,transform .35s cubic-bezier(.2,.7,.2,1)}
@@ -300,6 +324,8 @@ body:has(.heroagent.has-panel) [data-dock]{display:none !important}
 .tour-prog i{display:block;width:0;height:100%;border-radius:2px;background:#C9FF63}
 .tour-row{display:flex;align-items:flex-start;gap:14px;margin-top:14px}
 .tour-orb{position:relative !important;flex:0 0 38px;width:38px;height:38px;--gs:.18;animation:orbthink 1.4s ease-in-out infinite}
+.tour-orb[data-orb-state="speaking"]{scale:calc(1 + var(--vol,0) * .3)}
+.tour-orb[data-orb-voiced]{animation:none}
 .tour.is-paused .tour-orb{animation-play-state:paused}
 .tour-cap{margin:0;min-height:3.9em;font:500 17px/1.45 'Inter Tight',Inter,sans-serif;letter-spacing:-.01em;color:#F2F3EE}
 .tour-cap.is-in{animation:tourcap .45s ease}
@@ -317,3 +343,44 @@ body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
   .tour-orb{flex-basis:30px;width:30px;height:30px}
 }
 @media (prefers-reduced-motion:reduce){.gorb-ring,.tour-orb,.orbfloat,.gorb{animation:none !important}.tour,.tour-cap{transition:none;animation:none}}
+
+/* ---- Complex → Clear: a paragraph of jargon resolves into one line as the visitor scrolls ----
+   Without script (or with reduced motion) it reads as a still: the jargon dimmed, the seven words lit, the line beneath.
+   With script the section pins for a little over a screen and the seven words fly out of the paragraph into the line. */
+.c2c{position:relative;padding:120px 0 60px;overflow:clip}
+.c2c-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:20px}
+.c2c-say{color:#8E918A;font-size:11px;text-align:right}
+.c2c .c2c-head .c2c-say{white-space:normal !important}
+.c2c-say [data-c2c-after]{display:none}
+.c2c-track{height:1px;background:rgba(255,255,255,.12)}
+.c2c-track i{display:block;height:1px;width:calc(var(--c2c,1) * 100%);background:#C9FF63;box-shadow:0 0 12px rgba(201,255,99,.7)}
+.c2c-stage{margin-top:56px}
+.c2c-noise{margin:0;max-width:1040px;font:500 clamp(19px,2.3vw,32px)/1.42 'Inter Tight',sans-serif;letter-spacing:-.02em;color:#F2F3EE}
+.c2c-noise .f{opacity:.3}
+.c2c-noise .k{display:inline-block}
+.c2c-line{margin:48px 0 0;font:600 clamp(44px,6.6vw,104px)/.98 'Inter Tight',sans-serif;letter-spacing:-.05em;color:#F2F3EE}
+.c2c-mk{color:#C9FF63}
+.c2c-note{margin:32px 0 0;font-size:17px;line-height:1.5;color:#B4B7AE}
+.c2c-note a{color:#F2F3EE;text-decoration:underline;text-decoration-color:rgba(201,255,99,.7);text-underline-offset:4px;white-space:nowrap}
+.c2c-note a:hover,.c2c-note a:focus-visible{color:#C9FF63}
+.c2c.is-live{height:230vh;padding:0}
+.c2c.is-live .c2c-pin{position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center}
+.c2c.is-live .c2c-in{width:100%}
+.c2c.is-live .c2c-stage{display:grid;align-items:center;min-height:42vh}
+.c2c.is-live .c2c-noise,.c2c.is-live .c2c-line{grid-area:1/1}
+.c2c.is-live .c2c-line{margin:0;opacity:0}
+.c2c.is-live .c2c-noise .f,.c2c.is-live .c2c-noise .k{opacity:.55;will-change:opacity,transform}
+.c2c.is-live .c2c-note{opacity:0}
+.c2c.is-live .c2c-say{display:grid}
+.c2c.is-live .c2c-say span{grid-area:1/1;display:block;transition:opacity .4s ease}
+.c2c.is-live .c2c-say [data-c2c-after],.c2c.is-live.is-clear .c2c-say [data-c2c-before]{opacity:0}
+.c2c.is-live.is-clear .c2c-say [data-c2c-after]{opacity:1;color:#C9FF63}
+@media (max-width:700px){
+  .c2c{padding:88px 0 40px}
+  .c2c-stage{margin-top:36px}
+  .c2c-line{margin-top:36px}
+  .c2c-say{max-width:160px;line-height:1.5}
+  .c2c-head{align-items:flex-end}
+  .c2c.is-live{height:210vh}
+  .c2c.is-live .c2c-stage{min-height:52vh}
+}

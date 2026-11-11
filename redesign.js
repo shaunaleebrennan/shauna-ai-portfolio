@@ -232,3 +232,73 @@ if (rail) {
 
   renderRail();
 }
+
+/* ---------- Complex → Clear: jargon resolves into one line on scroll ---------- */
+// The seven words of the line are hidden in plain sight inside the jargon paragraph. As the section
+// scrolls through its pinned stretch the filler words blur away, and the seven fly to where the line sits.
+const c2c = document.querySelector('[data-c2c]');
+if (c2c && !reduceMotion) {
+  const noise = c2c.querySelector('[data-c2c-noise]');
+  const line = c2c.querySelector('[data-c2c-line]');
+  const note = c2c.querySelector('[data-c2c-note]');
+  const fillers = [...noise.querySelectorAll('.f')].map(el => ({ el, at: Number(el.style.getPropertyValue('--i')) || 0 }));
+  const flyers = [...noise.querySelectorAll('.k')];
+  const ghosts = [...line.querySelectorAll('.g')];
+  const clamp = n => Math.max(0, Math.min(1, n));
+  const ease = t => t * t * (3 - 2 * t);
+  let paths = [];
+  let c2cFrame = 0;
+  let last = -1;
+
+  c2c.classList.add('is-live');
+
+  // Where each word has to travel: from its place in the paragraph to its place in the line.
+  const measure = () => {
+    flyers.forEach(el => { el.style.transform = ''; });
+    const grow = parseFloat(getComputedStyle(line).fontSize) / parseFloat(getComputedStyle(noise).fontSize);
+    paths = flyers.map((el, i) => {
+      const from = el.getBoundingClientRect();
+      const to = ghosts[i].getBoundingClientRect();
+      return { x: to.left + to.width / 2 - (from.left + from.width / 2), y: to.top + to.height / 2 - (from.top + from.height / 2), grow };
+    });
+    last = -1;
+    paint();
+  };
+
+  function paint() {
+    c2cFrame = 0;
+    const box = c2c.getBoundingClientRect();
+    const span = box.height - window.innerHeight;
+    const p = span > 0 ? clamp(-box.top / span) : 1;
+    if (Math.abs(p - last) < 0.0005) return;
+    last = p;
+    c2c.style.setProperty('--c2c', p.toFixed(4));
+    c2c.classList.toggle('is-clear', p > 0.62);
+    // 1. The filler drains away, word by word, in a scattered order.
+    fillers.forEach(({ el, at }) => {
+      const gone = ease(clamp((p - 0.06 - at * 0.3) / 0.2));
+      el.style.opacity = (0.55 * (1 - gone)).toFixed(3);
+      el.style.filter = gone > 0.01 && gone < 0.99 ? `blur(${(gone * 6).toFixed(1)}px)` : '';
+    });
+    // 2. The seven words light up, then fly into the line and grow to its size.
+    const lit = ease(clamp((p - 0.1) / 0.3));
+    const fly = ease(clamp((p - 0.42) / 0.4));
+    // 3. The finished line (with its punctuation and its lime ending) takes over from the travelling words.
+    const settle = clamp((p - 0.82) / 0.07);
+    flyers.forEach((el, i) => {
+      const path = paths[i];
+      if (!path) return;
+      el.style.opacity = ((0.55 + 0.45 * lit) * (1 - settle)).toFixed(3);
+      el.style.transform = fly > 0 ? `translate(${(path.x * fly).toFixed(1)}px, ${(path.y * fly).toFixed(1)}px) scale(${(1 + (path.grow - 1) * fly).toFixed(4)})` : '';
+    });
+    line.style.opacity = settle.toFixed(3);
+    note.style.opacity = clamp((p - 0.88) / 0.08).toFixed(3);
+  }
+  const requestPaint = () => { if (!c2cFrame) c2cFrame = requestAnimationFrame(paint); };
+
+  window.addEventListener('scroll', requestPaint, { passive: true });
+  window.addEventListener('resize', measure);
+  document.fonts?.ready.then(measure);
+  window.addEventListener('load', measure, { once: true });
+  measure();
+}

@@ -90,6 +90,8 @@ All three families are self-hosted under the SIL Open Font License (licences in 
 
 **The orb** is glass, not a flat gradient: a bright white rim, a cream highlight top left, a blue band through the middle, lime pooling on the bottom-right edge and a thin iridescent ring (pink → lilac → lime). It is pure CSS: `.gorb` for the sphere and `.gorb-ring` for the ring, in `redesign.css`. Set `--gs` to scale the light with the orb's size (1 ≈ 280px, 1.5 for the hero, 0.2 for the dock).
 
+**The orb has moods.** Its colours are registered custom properties (`--o1`…`--o6`, `--ob1/2`, `--og1/2`), so they glide between states. Set `data-orb-state` on the orb or its wrapper: no value is rest (brand violet), `listening` leans lime, `thinking` and `connecting` go electric blue with a spinning ring, `speaking` warms to pink. `agent.js` sets the state from the conversation (typing a question counts as listening; a typed answer "speaks" for about as long as it takes to read). `--vol` (0–1) swells the orb with the loudness of the voice: live from the SDK in voice conversations, and from a measured loudness curve per clip in the tour (`LOUDNESS` in `tour.js`).
+
 **Motion**
 
 - **Decode.** Key words resolve from code glyphs into language.

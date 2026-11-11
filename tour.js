@@ -15,6 +15,19 @@ const STOPS = [
   { find: () => document.querySelector('#essentials .arcard')?.parentElement, offset: 150, audio: 'assets/tour/tour-7.mp3', dur: 10.03, text: 'She also runs Workvivo’s analyst programme. The company is a Gartner Magic Quadrant Leader four years running and a 2026 Forrester Wave Leader.' },
   { target: '#ask', audio: 'assets/tour/tour-8.mp3', dur: 4.83, text: 'That’s the short version. Don’t just read her résumé. Ask me anything.' }
 ];
+// Loudness of each clip, one digit (0–9) per 50ms, measured from the audio files. The orb swells
+// with it while the clip plays, so it moves with the voice without touching the audio path.
+const LOUDNESS = [
+  '04977432100004987215753221100002922742221110000000001189756412778931566666511443342101783510036444552035100003321111000000000688217646651236530063104513311221100000',
+  '11596675313851268758751011575631498743444204432144551467632465444332113683114676510005422111110000000099582376389842454541688476410112555764433445414664111443453379611135777666777746653332312464245444333332211100',
+  '1791215754101442110100000000000197872155544337777432222111100000000099788767886577432576415853202211100000000119967117874367775434222441000007997121476624333101321111111100',
+  '115737546214554276221115743332234421000000589964778776656410843666753475012674765244111112564344000000029942165311289765366521552014433345478878654421235433123521012111000000',
+  '179997305354004631211100000000000059887550064443331000000598620412164433100000000337986634500420021111000',
+  '399711377476579889723740116646476415437655653223115211167763156541022101000000',
+  '21667852077655568534841467667763256676431011232122111110000000003943862655543738623875256679977626102177624523443542000565445465641244432223000000799421575521555510551101048665101556465421122121110000',
+  '399700261276312321221220000000668743182123565426524451432111100000000873026652005985310211110000'
+];
+const LOUDNESS_STEP = 0.05;
 const WORDS_PER_SECOND = 2.7;
 const GAP = 320; // breath between clips, in ms
 const SOUND_KEY = 'tour-sound';
@@ -56,6 +69,8 @@ if (starters.length) {
   let audio = null;
   let opener = null;
   let warmed = null;
+  let voiceFrame = 0;
+  let voiceLevel = 0;
   let sound = true;
   try { sound = sessionStorage.getItem(SOUND_KEY) !== 'off'; } catch { /* storage can be blocked */ }
 
@@ -121,6 +136,36 @@ if (starters.length) {
     warm(STOPS[i + 1]);
   };
 
+  // While a clip plays, the orbs on stage (the bar's own, the hero orb, the Ask orb) turn to their
+  // speaking mood and swell with the clip's loudness.
+  const stage = () => [bar.querySelector('.tour-orb'), document.querySelector('.orbwrap'), document.querySelector('#ask [data-agent-orb]')].filter(Boolean);
+  const quiet = () => {
+    cancelAnimationFrame(voiceFrame);
+    voiceFrame = 0;
+    voiceLevel = 0;
+    stage().forEach(el => {
+      delete el.dataset.orbState;
+      el.removeAttribute('data-orb-voiced');
+      el.style.removeProperty('--vol');
+    });
+  };
+  const follow = () => {
+    const clip = audio;
+    const curve = LOUDNESS[index] || '';
+    const live = clip && !clip.paused && !clip.ended;
+    const target = live ? (Number(curve[Math.floor(clip.currentTime / LOUDNESS_STEP)]) || 0) / 9 : 0;
+    voiceLevel += (target - voiceLevel) * 0.35;
+    stage().forEach(el => el.style.setProperty('--vol', (el.classList.contains('tour-orb') ? voiceLevel : voiceLevel * 0.5).toFixed(3)));
+    voiceFrame = running && audio ? requestAnimationFrame(follow) : 0;
+  };
+  const speak = () => {
+    stage().forEach(el => {
+      el.dataset.orbState = 'speaking';
+      if (!reduceMotion) el.setAttribute('data-orb-voiced', '');
+    });
+    if (!reduceMotion && !voiceFrame) voiceFrame = requestAnimationFrame(follow);
+  };
+
   // Narration. The timer stays the single clock; each time the clip actually starts (or restarts
   // after buffering or a pause) the clock is re-set to what is left of the clip, so sound,
   // caption and progress bar stay together. If the clip can't play, the stop falls back to reading time.
@@ -130,12 +175,14 @@ if (starters.length) {
     const live = () => running && audio === clip && STOPS[index] === stop;
     clip.addEventListener('playing', () => {
       if (!live() || paused) return;
+      speak();
       const left = ((clip.duration || stop.dur) - clip.currentTime) * 1000;
       if (Number.isFinite(left)) schedule(Math.max(0, left) + GAP);
     });
     const fallback = () => {
       if (!live()) return;
       audio = null;
+      quiet();
       if (!paused) schedule(readingSeconds(stop) * 1000);
     };
     clip.addEventListener('error', fallback);
@@ -178,6 +225,7 @@ if (starters.length) {
       // Muted mid-stop: keep the time already earned, finish on reading time.
       audio?.pause();
       audio = null;
+      quiet();
       if (paused) remaining = Math.max(600, Math.min(remaining, readingSeconds(stop) * 1000));
       else schedule(Math.max(1200, Math.min(endsAt - performance.now(), readingSeconds(stop) * 1000)));
     } else if (!paused) {
@@ -200,6 +248,8 @@ if (starters.length) {
     opener = from || null;
     bar.hidden = false;
     document.body.classList.add('tour-on');
+    // The narration takes the floor: end any conversation with the agent first.
+    document.dispatchEvent(new Event('agent:stop'));
     // Sit above the analytics banner when it is showing.
     const consent = document.querySelector('.analytics-consent');
     bar.style.bottom = consent ? `${consent.getBoundingClientRect().height + 28}px` : '';
@@ -219,6 +269,7 @@ if (starters.length) {
     clearTimeout(timer);
     audio?.pause();
     audio = null;
+    quiet();
     window.removeEventListener('wheel', interrupt);
     window.removeEventListener('touchmove', interrupt);
     window.removeEventListener('keydown', onKey);

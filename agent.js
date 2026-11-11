@@ -22,6 +22,9 @@ const HANDOVER_PAGES = {
 // (case studies render theirs after loading content, then fire 'agent:mount').
 // Only one conversation runs at a time: starting one ends any other on the page.
 const stoppers = new Set();
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+// Anything that needs the floor (the narrated tour) can ask every conversation to stop.
+document.addEventListener('agent:stop', () => stoppers.forEach(stopOne => stopOne()));
 const mountAgents = () => document.querySelectorAll('[data-agent]:not([data-agent-ready])').forEach(initAgent);
 mountAgents();
 document.addEventListener('agent:mount', mountAgents);
@@ -55,11 +58,31 @@ function initAgent(section) {
     ? pageNote(section.dataset.agentPage, section.dataset.agentTopic || section.dataset.agentPage)
     : '';
 
+  // The orb's mood follows the conversation: lime while it listens, electric blue while it thinks,
+  // warm pink while it speaks, brand violet at rest. CSS does the colour work from data-orb-state.
+  // Ask boxes that open this block carry a small orb of their own, which mirrors the mood.
+  const orbs = [orb, ...(section.id ? document.querySelectorAll(`form[data-agent-launch="${section.id}"] .gorb`) : [])].filter(Boolean);
+  let moodTimer = 0;
+  const setMood = mood => orbs.forEach(el => { el.dataset.orbState = mood; });
   const setState = (state, text) => {
+    clearTimeout(moodTimer);
     section.dataset.state = state;
-    if (orb) orb.dataset.orbState = state; // drives the orb's thinking and speaking looks in CSS
+    setMood(state);
     if (text) statusEl.textContent = text;
   };
+  // A typed answer has no voice to follow, so the orb "speaks" for about as long as the answer takes to read.
+  const speakFor = text => {
+    clearTimeout(moodTimer);
+    setMood('speaking');
+    const ms = Math.min(7000, Math.max(2400, String(text || '').split(/\s+/).length * 190));
+    moodTimer = setTimeout(() => setMood(section.dataset.state), ms);
+  };
+  // Typing a question counts as the orb listening, as long as it isn't busy thinking or speaking.
+  const listenWhileTyping = field => field?.addEventListener('input', () => {
+    if (['thinking', 'speaking', 'connecting', 'listening'].includes(section.dataset.state)) return;
+    clearTimeout(moodTimer);
+    setMood(field.value.trim() ? 'listening' : section.dataset.state);
+  });
   const addMessage = (who, text) => {
     if (!text) return;
     const line = document.createElement('p');
@@ -96,9 +119,11 @@ function initAgent(section) {
     pulseFrame = 0;
     level = 0;
     orb?.style.setProperty('--vol', '0');
+    orb?.removeAttribute('data-orb-voiced');
   };
   const pulse = () => {
-    if (!conversation || kind !== 'voice') return stopPulse();
+    if (!conversation || kind !== 'voice' || reduceMotion) return stopPulse();
+    orb?.setAttribute('data-orb-voiced', '');
     let output = 0;
     let inputLevel = 0;
     try {
@@ -237,7 +262,10 @@ function initAgent(section) {
             repliesSince += 1;
             // A greeting that lands just after the first question isn't the answer; keep thinking until the answer arrives.
             const answered = greeted || repliesSince >= 2 || performance.now() - thinkingSince > 1500;
-            if (kind === 'text' && section.dataset.state === 'thinking' && answered) setState('ready', 'Connected — ask away');
+            if (kind === 'text' && section.dataset.state === 'thinking' && answered) {
+              setState('ready', 'Connected — ask away');
+              speakFor(payload.message);
+            }
           }
         },
         onModeChange: ({ mode: speaking }) => {
@@ -282,6 +310,7 @@ function initAgent(section) {
   section.querySelectorAll('[data-agent-ask]').forEach(chip => {
     chip.addEventListener('click', () => start('text', chip.textContent));
   });
+  listenWhileTyping(input);
   form?.addEventListener('submit', event => {
     event.preventDefault();
     const text = input.value;
@@ -295,6 +324,7 @@ function initAgent(section) {
     document.querySelectorAll(`form[data-agent-launch="${section.id}"]`).forEach(launcher => {
       const field = launcher.querySelector('input');
       if (!field) return;
+      listenWhileTyping(field);
       launcher.addEventListener('submit', event => {
         event.preventDefault();
         const text = field.value.trim();

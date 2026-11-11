@@ -405,9 +405,6 @@ body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
 .orbtag{position:absolute;z-index:3;left:50%;top:-9%;translate:-50% 0;display:inline-flex;align-items:center;gap:9px;white-space:nowrap;padding:8px 14px;border-radius:999px;background:rgba(19,19,26,.8);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);font:500 11px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#F2F3EE;pointer-events:none;transition:border-color .3s ease}
 .orbtag i{width:7px;height:7px;border-radius:50%;background:#C9FF63;box-shadow:0 0 10px #C9FF63;animation:pulse 1.6s infinite}
 .orbwrap:has(.orbtalk:hover) .orbtag,.orbwrap[data-orb-state="listening"] .orbtag,.orbwrap[data-orb-state="speaking"] .orbtag,.orbwrap[data-orb-state="thinking"] .orbtag,.orbwrap[data-orb-state="connecting"] .orbtag{border-color:#C9FF63}
-/* Hero ask box: Call sits beside Send */
-.heroask .heroask-call{flex:0 0 auto;width:auto;height:44px;display:inline-flex;align-items:center;gap:7px;padding:0 15px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:transparent;color:#F2F3EE;font:600 14px Inter,sans-serif}
-.heroask .heroask-call:hover,.heroask .heroask-call:focus-visible{transform:none;border-color:#C9FF63;color:#C9FF63;outline:none}
 /* Conversation panel. It wears the orb and its light: an aura hairline around the card, the orb and name in the
    header, a Chat | Call switch that is always in view, and a call banner that moves with the voice. */
 .agent-panel{border:1px solid transparent;background:linear-gradient(#14141C,#14141C) padding-box,linear-gradient(135deg,rgba(167,150,255,.8),rgba(255,196,225,.3) 28%,rgba(255,255,255,.1) 55%,rgba(201,255,99,.75)) border-box;box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 70px rgba(106,77,255,.16);backdrop-filter:none}
@@ -445,7 +442,5 @@ body.ask-in-view [data-dock]{opacity:0 !important;pointer-events:none !important
 [data-agent].has-panel [data-agent-start]{display:none !important}
 @media (max-width:700px){
   .orbtag{left:auto;right:15vw;top:-27%;translate:0 0;font-size:10px;padding:7px 11px}
-  .heroask .heroask-call{flex:0 0 44px;width:44px;padding:0;justify-content:center}
-  .heroask .heroask-call span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
   .agent-stage-copy span{display:none}
 }

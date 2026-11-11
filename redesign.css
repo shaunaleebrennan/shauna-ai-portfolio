@@ -285,8 +285,9 @@ body:has(.heroagent.has-panel) [data-dock]{display:none !important}
 }
 
 /* ---- The orb reacts to the conversation ---- */
-/* Mood: the orb's colours are custom properties, registered as colours so they can glide from one mood to the next.
-   Rest is the brand violet; listening leans lime, thinking goes electric blue, speaking warms to pink. */
+/* Mood. The orb always stays the brand orb (violet glass, lime edge); what changes with the conversation is its light.
+   A sheen sweeps across the glass, its hue shimmers, and its colours lean a little: cooler and lime-lit while it
+   listens, deeper while it thinks, warmer while it speaks. The colours are registered custom properties so they glide. */
 @property --o1{syntax:'<color>';inherits:true;initial-value:#FFE6F1}
 @property --o2{syntax:'<color>';inherits:true;initial-value:#EDC2EE}
 @property --o3{syntax:'<color>';inherits:true;initial-value:#B9A2FF}
@@ -297,24 +298,33 @@ body:has(.heroagent.has-panel) [data-dock]{display:none !important}
 @property --ob2{syntax:'<color>';inherits:true;initial-value:rgba(92,98,255,.35)}
 @property --og1{syntax:'<color>';inherits:true;initial-value:rgba(167,150,255,.4)}
 @property --og2{syntax:'<color>';inherits:true;initial-value:rgba(106,77,255,.22)}
-.gorb{--o1:#FFE6F1;--o2:#EDC2EE;--o3:#B9A2FF;--o4:#8A80FF;--o5:#6E6EF8;--o6:#8C9CFF;--ob1:rgba(92,98,255,.85);--ob2:rgba(92,98,255,.35);--og1:rgba(167,150,255,.4);--og2:rgba(106,77,255,.22);background:radial-gradient(circle at 30% 24%,#FFFBE3 0%,rgba(255,251,227,.9) 8%,rgba(255,251,227,0) 30%),radial-gradient(circle at 64% 24%,rgba(255,196,225,.7) 0%,rgba(255,196,225,0) 32%),radial-gradient(circle at 34% 28%,var(--o1) 0%,var(--o2) 18%,var(--o3) 40%,var(--o4) 60%,var(--o5) 80%,var(--o6) 100%);box-shadow:inset 0 0 0 max(1.25px,calc(2px * var(--gs,1))) rgba(255,255,255,.95),inset 0 0 calc(7px * var(--gs,1)) 1px rgba(255,255,255,.55),inset 0 calc(-8px * var(--gs,1)) calc(18px * var(--gs,1)) rgba(255,255,255,.3),inset calc(-18px * var(--gs,1)) calc(-26px * var(--gs,1)) calc(50px * var(--gs,1)) rgba(30,16,90,.18),inset calc(9px * var(--gs,1)) calc(11px * var(--gs,1)) calc(4px * var(--gs,1)) calc(-7px * var(--gs,1)) rgba(255,255,255,.3),0 0 calc(12px * var(--gs,1)) rgba(255,255,255,.55),0 0 calc(70px * var(--gs,1)) var(--og1),0 0 calc(180px * var(--gs,1)) var(--og2);transition:filter .5s ease,--o1 .9s ease,--o2 .9s ease,--o3 .9s ease,--o4 .9s ease,--o5 .9s ease,--o6 .9s ease,--ob1 .9s ease,--ob2 .9s ease,--og1 .9s ease,--og2 .9s ease}
+@property --sx{syntax:'<percentage>';inherits:true;initial-value:-45%}
+.gorb{--o1:#FFE6F1;--o2:#EDC2EE;--o3:#B9A2FF;--o4:#8A80FF;--o5:#6E6EF8;--o6:#8C9CFF;--ob1:rgba(92,98,255,.85);--ob2:rgba(92,98,255,.35);--og1:rgba(167,150,255,.4);--og2:rgba(106,77,255,.22);--sx:-45%;--sa:.42;background:linear-gradient(115deg,rgba(255,255,255,0) calc(var(--sx) - 17%),rgba(255,255,255,var(--sa)) var(--sx),rgba(255,255,255,0) calc(var(--sx) + 17%)),radial-gradient(circle at 30% 24%,#FFFBE3 0%,rgba(255,251,227,.9) 8%,rgba(255,251,227,0) 30%),radial-gradient(circle at 64% 24%,rgba(255,196,225,.7) 0%,rgba(255,196,225,0) 32%),radial-gradient(circle at 34% 28%,var(--o1) 0%,var(--o2) 18%,var(--o3) 40%,var(--o4) 60%,var(--o5) 80%,var(--o6) 100%);box-shadow:inset 0 0 0 max(1.25px,calc(2px * var(--gs,1))) rgba(255,255,255,.95),inset 0 0 calc(7px * var(--gs,1)) 1px rgba(255,255,255,.55),inset 0 calc(-8px * var(--gs,1)) calc(18px * var(--gs,1)) rgba(255,255,255,.3),inset calc(-18px * var(--gs,1)) calc(-26px * var(--gs,1)) calc(50px * var(--gs,1)) rgba(30,16,90,.18),inset calc(9px * var(--gs,1)) calc(11px * var(--gs,1)) calc(4px * var(--gs,1)) calc(-7px * var(--gs,1)) rgba(255,255,255,.3),0 0 calc(12px * var(--gs,1)) rgba(255,255,255,.55),0 0 calc(70px * var(--gs,1)) var(--og1),0 0 calc(180px * var(--gs,1)) var(--og2);transition:filter .6s ease,--o1 .9s ease,--o2 .9s ease,--o3 .9s ease,--o4 .9s ease,--o5 .9s ease,--o6 .9s ease,--ob1 .9s ease,--ob2 .9s ease,--og1 .9s ease,--og2 .9s ease;animation:orbglint-rest 9s ease-in-out infinite}
 .gorb::before{background:radial-gradient(closest-side,var(--ob1),var(--ob2) 60%,rgba(92,98,255,0))}
-[data-orb-state="listening"] .gorb,.gorb[data-orb-state="listening"]{--o1:#F8FFE2;--o2:#DDF9BE;--o3:#A9EDC4;--o4:#7BD6D2;--o5:#62A6EE;--o6:#9AC4FF;--ob1:rgba(40,150,190,.8);--ob2:rgba(40,150,190,.3);--og1:rgba(201,255,99,.42);--og2:rgba(110,225,170,.24)}
-[data-orb-state="thinking"] .gorb,.gorb[data-orb-state="thinking"],[data-orb-state="connecting"] .gorb,.gorb[data-orb-state="connecting"]{--o1:#E8F1FF;--o2:#C0D3FF;--o3:#8EA4FF;--o4:#6674FF;--o5:#4A47EE;--o6:#7B6CFF;--ob1:rgba(52,40,225,.9);--ob2:rgba(52,40,225,.4);--og1:rgba(118,138,255,.5);--og2:rgba(72,60,255,.3)}
-[data-orb-state="speaking"] .gorb,.gorb[data-orb-state="speaking"]{--o1:#FFF4E2;--o2:#FFD6CF;--o3:#FFAACF;--o4:#F78BD6;--o5:#C97CFF;--o6:#FFB2C9;--ob1:rgba(236,84,168,.8);--ob2:rgba(236,84,168,.3);--og1:rgba(255,170,212,.46);--og2:rgba(255,108,170,.26)}
+[data-orb-state="listening"] .gorb,.gorb[data-orb-state="listening"]{--o1:#FDEEEC;--o2:#E8D5DE;--o3:#B4BCEB;--o4:#859DF0;--o5:#6A81F5;--o6:#91AAFF;--ob1:rgba(74,116,233,.83);--ob2:rgba(74,116,233,.33);--og1:rgba(190,222,147,.47);--og2:rgba(109,179,196,.26)}
+[data-orb-state="thinking"] .gorb,.gorb[data-orb-state="thinking"],[data-orb-state="connecting"] .gorb,.gorb[data-orb-state="connecting"]{--o1:#F4ECF8;--o2:#D6CAF6;--o3:#A4A3FF;--o4:#787AFF;--o5:#5C5AF3;--o6:#8484FF;--ob1:rgba(72,69,240,.88);--ob2:rgba(72,69,240,.38);--og1:rgba(125,140,255,.48);--og2:rgba(77,63,255,.29)}
+[data-orb-state="speaking"] .gorb,.gorb[data-orb-state="speaking"]{--o1:#FFECEB;--o2:#F4CAE2;--o3:#D5A5EC;--o4:#B684EF;--o5:#9274FB;--o6:#BAA5E9;--ob1:rgba(150,92,220,.83);--ob2:rgba(150,92,220,.33);--og1:rgba(233,165,223,.45);--og2:rgba(218,100,191,.25)}
+/* The light. At rest a glint crosses the glass now and then. Listening: slow, soft sweeps. Thinking: quick sweeps and
+   a fast shimmer of hue. Speaking: steady sweeps, a warm shimmer, and the swell (below). */
+@keyframes orbglint-rest{0%,76%{--sx:-45%}100%{--sx:145%}}
+@keyframes orbglint{0%{--sx:-45%}100%{--sx:145%}}
+@keyframes orbhue{0%,100%{filter:hue-rotate(-16deg) brightness(1.05) saturate(1.15)}50%{filter:hue-rotate(20deg) brightness(1.14) saturate(1.35)}}
+@keyframes orbhue-warm{0%,100%{filter:hue-rotate(4deg) brightness(1.04) saturate(1.1)}50%{filter:hue-rotate(26deg) brightness(1.12) saturate(1.3)}}
+@keyframes orbthink{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+@keyframes orbspeak{0%,100%{transform:scale(1)}22%{transform:scale(1.035)}41%{transform:scale(1.008)}63%{transform:scale(1.045)}82%{transform:scale(1.012)}}
+[data-orb-state="listening"] .gorb,.gorb[data-orb-state="listening"]{--sa:.34;animation:orbglint 3.4s ease-in-out infinite !important}
+[data-orb-state="thinking"] .gorb,.gorb[data-orb-state="thinking"],[data-orb-state="connecting"] .gorb,.gorb[data-orb-state="connecting"]{--sa:.5;animation:orbthink 1.15s ease-in-out infinite,orbglint 1.5s linear infinite,orbhue 2.6s ease-in-out infinite !important}
+[data-orb-state="speaking"] .gorb,.gorb[data-orb-state="speaking"]{--sa:.46;animation:orbspeak 1.9s ease-in-out infinite,orbglint 2.4s ease-in-out infinite,orbhue-warm 5s ease-in-out infinite !important}
+[data-orb-state="speaking"][data-orb-voiced] .gorb,.gorb[data-orb-state="speaking"][data-orb-voiced]{animation:orbglint 2.4s ease-in-out infinite,orbhue-warm 5s ease-in-out infinite !important}
 .gorb-ring{transition:opacity .5s ease}
 [data-orb-state="connecting"] .gorb-ring,[data-orb-state="thinking"] .gorb-ring{opacity:1;animation:spin 2.6s linear infinite}
 [data-orb-state="listening"] .gorb-ring,[data-orb-state="speaking"] .gorb-ring{opacity:.95}
-[data-orb-state="connecting"] .gorb,[data-orb-state="thinking"] .gorb{filter:brightness(1.1) saturate(1.2)}
 [data-orb-state="error"] .gorb,.gorb[data-orb-state="error"]{filter:saturate(.35) brightness(.9)}
-[data-orb-state="thinking"] .orbfloat,.gorb[data-orb-state="thinking"],.gorb[data-orb-state="connecting"]{animation:orbthink 1.15s ease-in-out infinite !important}
-@keyframes orbthink{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
 /* Speaking: the orb swells with the real loudness of the voice (--vol, set by script). With no live level to follow
-   (a typed answer, or sound off) it breathes on its own instead. */
+   (a typed answer, or sound off) it breathes on its own instead (orbspeak, above). */
 [data-orb-state]{scale:calc(1 + var(--vol,0) * .1)}
 [data-agent-orb][data-orb-state]{scale:calc(1 + var(--vol,0) * .22)}
-[data-orb-state="speaking"]:not([data-orb-voiced]) .gorb,.gorb[data-orb-state="speaking"]:not([data-orb-voiced]){animation:orbspeak 1.9s ease-in-out infinite !important}
-@keyframes orbspeak{0%,100%{transform:scale(1)}22%{transform:scale(1.035)}41%{transform:scale(1.008)}63%{transform:scale(1.045)}82%{transform:scale(1.012)}}
+@media (prefers-reduced-motion:reduce){.gorb,[data-orb-state="listening"] .gorb,.gorb[data-orb-state="listening"],[data-orb-state="thinking"] .gorb,.gorb[data-orb-state="thinking"],[data-orb-state="connecting"] .gorb,.gorb[data-orb-state="connecting"],[data-orb-state="speaking"] .gorb,.gorb[data-orb-state="speaking"]{animation:none !important}}
 
 /* ---- 60-second tour ---- */
 .tour{position:fixed;z-index:80;left:50%;bottom:24px;width:min(680px,calc(100vw - 24px));transform:translate(-50%,24px);opacity:0;padding:16px 18px 14px;border-radius:24px;background:rgba(19,19,26,.94);border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 0 1px rgba(201,255,99,.14);backdrop-filter:blur(18px);color:#F2F3EE;font-family:Inter,sans-serif;transition:opacity .35s ease,transform .35s cubic-bezier(.2,.7,.2,1)}
@@ -325,7 +335,6 @@ body:has(.heroagent.has-panel) [data-dock]{display:none !important}
 .tour-row{display:flex;align-items:flex-start;gap:14px;margin-top:14px}
 .tour-orb{position:relative !important;flex:0 0 38px;width:38px;height:38px;--gs:.18;animation:orbthink 1.4s ease-in-out infinite}
 .tour-orb[data-orb-state="speaking"]{scale:calc(1 + var(--vol,0) * .3)}
-.tour-orb[data-orb-voiced]{animation:none}
 .tour.is-paused .tour-orb{animation-play-state:paused}
 .tour-cap{margin:0;min-height:3.9em;font:500 17px/1.45 'Inter Tight',Inter,sans-serif;letter-spacing:-.01em;color:#F2F3EE}
 .tour-cap.is-in{animation:tourcap .45s ease}
@@ -383,4 +392,37 @@ body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
   .c2c-head{align-items:flex-end}
   .c2c.is-live{height:210vh}
   .c2c.is-live .c2c-stage{min-height:52vh}
+}
+
+/* ---- One identity: the orb is Shauna, Decoded, wherever the agent appears ----
+   Hero: the orb is a button (tap to start a call) with a tag that names it and says what it is doing. */
+.headline{pointer-events:none}
+.orbtalk{position:absolute;inset:0;z-index:2;padding:0;border:0;border-radius:50%;background:transparent;cursor:pointer}
+.orbtalk:focus-visible{outline:2px solid #C9FF63;outline-offset:12px}
+.orbwrap:has(.orbtalk:hover) .gorb-ring{opacity:1}
+.orbwrap:has(.orbtalk:hover) .gorb{filter:brightness(1.07) saturate(1.1)}
+.orbtag{position:absolute;z-index:3;left:50%;top:-9%;translate:-50% 0;display:inline-flex;align-items:center;gap:9px;white-space:nowrap;padding:8px 14px;border-radius:999px;background:rgba(19,19,26,.8);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);font:500 11px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#F2F3EE;pointer-events:none;transition:border-color .3s ease}
+.orbtag i{width:7px;height:7px;border-radius:50%;background:#C9FF63;box-shadow:0 0 10px #C9FF63;animation:pulse 1.6s infinite}
+.orbwrap:has(.orbtalk:hover) .orbtag,.orbwrap[data-orb-state="listening"] .orbtag,.orbwrap[data-orb-state="speaking"] .orbtag,.orbwrap[data-orb-state="thinking"] .orbtag,.orbwrap[data-orb-state="connecting"] .orbtag{border-color:#C9FF63}
+/* Hero ask box: Call sits beside Send */
+.heroask .heroask-call{flex:0 0 auto;width:auto;height:44px;display:inline-flex;align-items:center;gap:7px;padding:0 15px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:transparent;color:#F2F3EE;font:600 14px Inter,sans-serif}
+.heroask .heroask-call:hover,.heroask .heroask-call:focus-visible{transform:none;border-color:#C9FF63;color:#C9FF63;outline:none}
+/* Conversation panel: orb avatar and name in the header, Call to switch to voice, a larger orb during a call */
+.agent-avatar{position:relative !important;flex:0 0 30px;width:30px;height:30px;--gs:.15}
+.agent-who{display:flex;flex-direction:column;gap:1px;min-width:0}
+.agent-who>strong:first-child{font:600 14px/1.25 'Inter Tight',Inter,sans-serif;letter-spacing:-.01em;color:#F2F3EE}
+.agent-who .agent-status{font:500 12px/1.3 Inter,sans-serif;color:#B4B7AE}
+.agent-call{margin-left:auto;display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:0 14px;border-radius:999px;border:0;background:#C9FF63;color:#0B0B10;font:600 13px Inter,sans-serif;cursor:pointer}
+.agent-call+.agent-end{margin-left:0}
+[data-agent][data-mode="voice"] .agent-call,[data-agent][data-state="connecting"] .agent-call{display:none}
+[data-agent][data-mode="voice"] .agent-end,[data-agent][data-state="connecting"] .agent-end{margin-left:auto}
+.agent-stage{display:none}
+.heroagent[data-mode="voice"] .agent-stage{display:block;position:relative;width:104px;height:104px;margin:24px auto 8px}
+.agent-stage .gorb-ring{inset:-15%}
+.agent-stage .gorb{inset:0;--gs:.42}
+.agent-stage[data-orb-state]{scale:calc(1 + var(--vol,0) * .25)}
+@media (max-width:700px){
+  .orbtag{left:auto;right:15vw;top:-27%;translate:0 0;font-size:10px;padding:7px 11px}
+  .heroask .heroask-call{flex:0 0 44px;width:44px;padding:0;justify-content:center}
+  .heroask .heroask-call span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
 }

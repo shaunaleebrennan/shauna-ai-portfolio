@@ -22,7 +22,7 @@
   <link rel="preload" href="assets/fonts/inter-tight-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts.css?v=20261108">
-  <link rel="stylesheet" href="redesign.css?v=20261111">
+  <link rel="stylesheet" href="redesign.css?v=20261111c">
   <noscript><style>.rv,.rv .mk,.line,.node,.step{opacity:1 !important;transform:none !important;background-size:100% 100% !important}</style></noscript>
 </head>
 <body>
@@ -54,12 +54,14 @@
 <span class="lbl" style="font-size: 13px; color: #C9FF63">Product Marketing Leader</span>
 </div>
 
-<div class="orbwrap" aria-hidden="true" style="position: absolute; z-index: 2; right: 15%; top: 20%; width: clamp(280px, 31vw, 480px); height: clamp(280px, 31vw, 480px); transform: translate(var(--orbX,0px), var(--orbY,0px)) scale(var(--orbS,1)); opacity: var(--orbO,1); transition: transform .5s cubic-bezier(.2,.7,.2,1)">
+<div class="orbwrap" style="position: absolute; z-index: 2; right: 15%; top: 20%; width: clamp(280px, 31vw, 480px); height: clamp(280px, 31vw, 480px); transform: translate(var(--orbX,0px), var(--orbY,0px)) scale(var(--orbS,1)); opacity: var(--orbO,1); transition: transform .5s cubic-bezier(.2,.7,.2,1)">
 <div class="ring" style="position: absolute; inset: -32%; border-radius: 50%; border: 1px dashed rgba(255,255,255,.16); animation: spin 90s linear infinite"></div>
 <div class="gorb-ring" style="inset: -14%"></div>
 <div class="orbfloat" style="position: absolute; inset: 0; animation: floaty 7s ease-in-out infinite">
 <div class="gorb" style="inset: 0; --gs: 1.5"></div>
 </div>
+<button class="orbtalk" type="button" data-agent-start="voice" data-agent-for="hero-agent" aria-label="Start a voice call with Shauna, Decoded, my portfolio agent"></button>
+<span class="orbtag" aria-hidden="true"><i></i><span data-agent-tag="hero-agent">Shauna, Decoded · tap to talk</span></span>
 </div>
 
 <h1 class="headline" data-decode aria-label="I make complex AI clear" style="position: absolute; z-index: 3; top: 29%; left: 8%; right: 4%; margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(64px, 10.4vw, 168px); line-height: .9; font-weight: 500; letter-spacing: -0.055em; text-transform: uppercase; color: #F2F3EE; transform: translate(var(--textX,0px), var(--textY,0px)); transition: transform .7s cubic-bezier(.2,.7,.2,1)">
@@ -74,6 +76,7 @@
 <span class="heroask-orb gorb" aria-hidden="true"></span>
 <label class="sr-only" for="hero-ask-input">Ask my portfolio agent a question</label>
 <input id="hero-ask-input" type="text" autocomplete="off" enterkeyhint="send" maxlength="500" placeholder="Ask me anything about my work…">
+<button class="heroask-call" type="button" data-agent-start="voice" data-agent-for="hero-agent" aria-label="Start a voice call with my portfolio agent"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path></svg><span>Call</span></button>
 <button type="submit" aria-label="Ask">→</button>
 </form>
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
@@ -499,7 +502,7 @@
 <p class="agent-note">Conversations run on ElevenLabs. Please don’t share confidential information.</p>
 </div>
 </div>
-<script src="agent.js?v=20261111" type="module"></script>
+<script src="agent.js?v=20261111b" type="module"></script>
 <script src="tour.js?v=20261111" type="module"></script>
 </body>
 </html>

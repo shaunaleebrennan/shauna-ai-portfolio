@@ -62,8 +62,48 @@ function initAgent(section) {
   // warm pink while it speaks, brand violet at rest. CSS does the colour work from data-orb-state.
   // Ask boxes that open this block carry a small orb of their own, which mirrors the mood.
   const orbs = [orb, ...(section.id ? document.querySelectorAll(`form[data-agent-launch="${section.id}"] .gorb`) : [])].filter(Boolean);
+
+  // One identity everywhere: the conversation panel wears the orb too. Its header shows a small orb and
+  // the agent's name, a Call button switches a typed chat to voice, and during a call a floating card
+  // shows a larger orb of its own (the page's orb may be off screen by then).
+  const head = section.querySelector('.agent-head');
+  const dot = head?.querySelector('.agent-dot');
+  if (head && dot) {
+    const avatar = document.createElement('span');
+    avatar.className = 'agent-avatar gorb';
+    avatar.setAttribute('aria-hidden', 'true');
+    const who = document.createElement('span');
+    who.className = 'agent-who';
+    const name = document.createElement('strong');
+    name.textContent = 'Shauna, Decoded';
+    dot.replaceWith(avatar, who);
+    who.append(name, statusEl);
+    const call = document.createElement('button');
+    call.type = 'button';
+    call.className = 'agent-call';
+    call.innerHTML = '<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path></svg><span>Call</span>';
+    call.setAttribute('aria-label', 'Switch to a voice call');
+    call.addEventListener('click', () => start('voice'));
+    who.after(call);
+    const stage = document.createElement('div');
+    stage.className = 'agent-stage';
+    stage.setAttribute('aria-hidden', 'true');
+    stage.innerHTML = '<span class="gorb-ring"></span><span class="gorb"></span>';
+    head.after(stage);
+    orbs.push(avatar, stage);
+  }
+  // Labels attached to an orb on the page (the hero's "tap to talk" tag) say what the agent is doing.
+  const tags = section.id ? [...document.querySelectorAll(`[data-agent-tag="${section.id}"]`)].map(el => ({ el, idle: el.textContent })) : [];
+  const TAG_TEXT = { connecting: 'Connecting…', listening: 'Listening…', thinking: 'Thinking…', speaking: 'Speaking…' };
   let moodTimer = 0;
-  const setMood = mood => orbs.forEach(el => { el.dataset.orbState = mood; });
+  const setMood = mood => {
+    orbs.forEach(el => { el.dataset.orbState = mood; });
+    tags.forEach(({ el, idle }) => { el.textContent = TAG_TEXT[mood] || idle; });
+  };
+  const setKind = value => {
+    kind = value;
+    section.dataset.mode = value || '';
+  };
   const setState = (state, text) => {
     clearTimeout(moodTimer);
     section.dataset.state = state;
@@ -118,12 +158,11 @@ function initAgent(section) {
     cancelAnimationFrame(pulseFrame);
     pulseFrame = 0;
     level = 0;
-    orb?.style.setProperty('--vol', '0');
-    orb?.removeAttribute('data-orb-voiced');
+    orbs.forEach(el => { el.style.setProperty('--vol', '0'); el.removeAttribute('data-orb-voiced'); });
   };
   const pulse = () => {
     if (!conversation || kind !== 'voice' || reduceMotion) return stopPulse();
-    orb?.setAttribute('data-orb-voiced', '');
+    orbs.forEach(el => el.setAttribute('data-orb-voiced', ''));
     let output = 0;
     let inputLevel = 0;
     try {
@@ -132,7 +171,7 @@ function initAgent(section) {
     } catch { /* volume is cosmetic */ }
     const target = Math.min(1, Math.max(output, inputLevel * 0.6) * 1.6);
     level += (target - level) * 0.25;
-    orb?.style.setProperty('--vol', level.toFixed(3));
+    orbs.forEach(el => el.style.setProperty('--vol', level.toFixed(3)));
     pulseFrame = requestAnimationFrame(pulse);
   };
 
@@ -140,7 +179,7 @@ function initAgent(section) {
     console.warn('[agent]', reason);
     stopPulse();
     conversation = null;
-    kind = null;
+    setKind(null);
     section.classList.remove('is-live');
     setState('error', 'The agent couldn’t start here');
     addMessage('system', 'Something blocked the on-page conversation. You can still talk to the agent in the chat bubble.');
@@ -173,7 +212,7 @@ function initAgent(section) {
   const endConversation = async () => {
     const current = conversation;
     conversation = null;
-    kind = null;
+    setKind(null);
     stopPulse();
     section.classList.remove('is-live');
     if (current) {
@@ -228,7 +267,7 @@ function initAgent(section) {
         }
       }
       const Conversation = await loadSdk();
-      kind = mode;
+      setKind(mode);
       conversation = await Conversation.startSession({
         agentId: AGENT_ID,
         ...(mode === 'text' ? { textOnly: true } : { connectionType: 'webrtc' }),
@@ -240,7 +279,7 @@ function initAgent(section) {
           if (!conversation) return;
           console.info('[agent] disconnected', details);
           conversation = null;
-          kind = null;
+          setKind(null);
           stopPulse();
           section.classList.remove('is-live');
           if (details?.reason === 'error') {
@@ -299,14 +338,18 @@ function initAgent(section) {
   // The primary block answers the dock buttons and questions handed over from other pages.
   const first = (document.querySelector('[data-agent-primary]') || document.querySelector('[data-agent]')) === section;
   document.querySelectorAll('[data-agent-start]').forEach(button => {
-    // Buttons inside this block drive it; buttons outside any block (the homepage dock) drive the first one.
+    // Buttons inside this block drive it; buttons that name a block (data-agent-for, e.g. the hero orb and
+    // the hero's Call button) drive that one in place; other buttons outside any block (the dock) drive the first one.
     const owner = button.closest('[data-agent]');
-    if (owner ? owner !== section : !first) return;
+    const named = button.dataset.agentFor;
+    if (named ? named !== section.id : (owner ? owner !== section : !first)) return;
     button.addEventListener('click', () => {
-      if (!section.contains(button)) section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (!named && !section.contains(button)) section.scrollIntoView({ behavior: 'smooth', block: 'center' });
       start(button.dataset.agentStart);
     });
   });
+  // The dock's small orb belongs to the block its buttons drive.
+  if (first) document.querySelectorAll('[data-dock] .gorb').forEach(el => orbs.push(el));
   section.querySelectorAll('[data-agent-ask]').forEach(chip => {
     chip.addEventListener('click', () => start('text', chip.textContent));
   });

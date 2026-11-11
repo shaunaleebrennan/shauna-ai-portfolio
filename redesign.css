@@ -266,16 +266,7 @@ a.tool-logo:hover,a.tool-logo:focus-visible{color:#FFFFFF}
   footer .void-link{display:inline-flex;align-items:center;min-height:44px}
 }
 
-/* ---- Hero ask box: type a question under the headline; the answer opens in a floating card ---- */
-.heroask{flex:0 1 280px;width:280px;min-width:0;box-sizing:border-box;display:flex;align-items:center;gap:8px;min-height:44px;padding:3px 4px 3px 12px;border-radius:999px;background:rgba(19,19,26,.72);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(14px);transition:border-color .2s ease,box-shadow .3s ease}
-.heroask:focus-within{border-color:#C9FF63;box-shadow:0 0 0 4px rgba(201,255,99,.14),0 0 60px rgba(143,123,255,.25)}
-.heroask-orb{position:relative !important;flex:0 0 20px;width:20px;height:20px;--gs:.11}
-.heroask input{flex:1;width:0;min-width:0;height:36px;border:0;background:transparent;color:#F2F3EE;font:14px Inter,sans-serif;outline:none;text-overflow:ellipsis}
-.heroask input::placeholder{color:#B4B7AE;opacity:1}
-.heroask button{flex:0 0 36px;width:36px;height:36px;border:0;border-radius:50%;background:#C9FF63;color:#0B0B10;font:600 15px Inter,sans-serif;cursor:pointer;transition:transform .2s ease}
-/* The ask box sits in one row with Download my CV and the tour button, so the hero's copy block may be wider than its paragraph. */
-.herocopy{max-width:780px !important}
-.heroask button:hover{transform:translateX(2px)}
+/* ---- The floating conversation card (opened from the hero orb) ---- */
 .heroagent{position:fixed;z-index:70;right:24px;bottom:24px;width:min(440px,calc(100vw - 24px));pointer-events:none}
 .heroagent .agent-panel{margin:0;max-width:none;pointer-events:auto;background:rgba(19,19,26,.96);box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 0 1px rgba(201,255,99,.18);animation:heroagent-in .35s cubic-bezier(.2,.7,.2,1)}
 .heroagent .agent-log{max-height:min(46vh,380px)}
@@ -402,8 +393,7 @@ body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
 .headline{pointer-events:none}
 /* The orb is the button; there is no pill on it. Its invitation is lettered along its ring, like an engraving on the
    rim, and sways a few degrees. Hovering the orb lights the lettering lime and brightens the glass. The lettering fades
-   while a conversation is under way (the orb's mood says the rest) and is left off on tablets and phones, where the orb
-   hangs off the screen and the ask box is the way in. */
+   while a conversation is under way (the orb's mood says the rest). */
 .orbtalk{position:absolute;inset:-20%;z-index:2;padding:0;border:0;border-radius:50%;background:transparent;cursor:pointer}
 .orbtalk:focus-visible{outline:2px solid #C9FF63;outline-offset:-10px}
 .orbwrap:has(.orbtalk:hover) .gorb-ring,.orbwrap:has(.orbtalk:focus-visible) .gorb-ring{opacity:1}
@@ -415,7 +405,10 @@ body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
 .orbtext .orbtext-go{fill:#C9FF63}
 .orbwrap:has(.orbtalk:hover) .orbtext text,.orbwrap:has(.orbtalk:focus-visible) .orbtext text{fill:#C9FF63}
 .orbwrap[data-orb-state="listening"] .orbtext,.orbwrap[data-orb-state="speaking"] .orbtext,.orbwrap[data-orb-state="thinking"] .orbtext,.orbwrap[data-orb-state="connecting"] .orbtext{opacity:0}
+.orbtext .orbtext-short{display:none}
+/* Tablets: the top of the orb's ring sits under the header, so no lettering. Phones: a short line fits on the top of the ring. */
 @media (max-width:820px){.orbtext{display:none}.orbtalk{inset:0}}
+@media (max-width:700px){.orbtext{display:block;animation:none}.orbtext .orbtext-long{display:none}.orbtext .orbtext-short{display:block;font-size:33px}}
 @media (prefers-reduced-motion:reduce){.orbtext{animation:none}}
 /* Hero: the supporting elements are a size smaller than the canvas drew them, to give the headline and the orb room. */
 .herocopy>p{font-size:16px !important;line-height:1.6 !important;max-width:400px}
@@ -462,11 +455,7 @@ body.ask-in-view [data-dock]{opacity:0 !important;pointer-events:none !important
 /* Once the panel is open its switch is the way in, so the buttons that opened it step aside. */
 [data-agent].has-panel [data-agent-start]{display:none !important}
 @media (max-width:700px){
-  .heroask{flex:1 1 100%;width:auto;min-height:50px}
-  .heroask input{height:42px}
-  .heroask button{flex-basis:42px;width:42px;height:42px}
   .herocopy>p{max-width:none}
   .herocta .cta,.herocta .ghost{min-height:48px !important}
-  .heroask input{font-size:16px}
   .agent-stage-copy span{display:none}
 }

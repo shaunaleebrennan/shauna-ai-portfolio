@@ -43,6 +43,7 @@ function initAgent(section) {
     || (orbTarget && /^[.#][\w-]+$/.test(orbTarget) ? document.querySelector(orbTarget) : null);
 
   let conversation = null;
+  let session = 0; // bumps whenever a conversation starts or ends, so stale callbacks can tell they are stale
   let kind = null;
   let starting = false;
   let pulseFrame = 0;
@@ -78,18 +79,23 @@ function initAgent(section) {
     name.textContent = 'Shauna, Decoded';
     dot.replaceWith(avatar, who);
     who.append(name, statusEl);
-    const call = document.createElement('button');
-    call.type = 'button';
-    call.className = 'agent-call';
-    call.innerHTML = '<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path></svg><span>Call</span>';
-    call.setAttribute('aria-label', 'Switch to a voice call');
-    call.addEventListener('click', () => start('voice'));
-    who.after(call);
+    // Chat | Call: the two ways to talk, always visible. The live one is filled; the other switches to it.
+    const modes = document.createElement('div');
+    modes.className = 'agent-modes';
+    modes.setAttribute('role', 'group');
+    modes.setAttribute('aria-label', 'How to talk to the agent');
+    modes.innerHTML = '<button type="button" data-agent-mode="text" aria-pressed="false"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9h8"></path><path d="M8 13h6"></path><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z"></path></svg><span>Chat</span></button>'
+      + '<button type="button" data-agent-mode="voice" aria-pressed="false"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path></svg><span>Call</span></button>';
+    modes.querySelectorAll('button').forEach(button => button.addEventListener('click', () => switchTo(button.dataset.agentMode)));
+    head.after(modes);
+    // During a call the panel shows it: an orb that moves with the voice, and what to do.
     const stage = document.createElement('div');
     stage.className = 'agent-stage';
     stage.setAttribute('aria-hidden', 'true');
-    stage.innerHTML = '<span class="gorb-ring"></span><span class="gorb"></span>';
-    head.after(stage);
+    stage.innerHTML = '<span class="agent-stage-orb"><span class="gorb-ring"></span><span class="gorb"></span></span>'
+      + '<span class="agent-stage-copy"><strong>You’re on a call</strong><span>Just start talking. What we say appears below.</span></span>'
+      + '<span class="agent-bars"><i></i><i></i><i></i><i></i><i></i></span>';
+    modes.after(stage);
     orbs.push(avatar, stage);
   }
   // Labels attached to an orb on the page (the hero's "tap to talk" tag) say what the agent is doing.
@@ -103,6 +109,7 @@ function initAgent(section) {
   const setKind = value => {
     kind = value;
     section.dataset.mode = value || '';
+    section.querySelectorAll('[data-agent-mode]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.agentMode === value)));
   };
   const setState = (state, text) => {
     clearTimeout(moodTimer);
@@ -123,8 +130,10 @@ function initAgent(section) {
     clearTimeout(moodTimer);
     setMood(field.value.trim() ? 'listening' : section.dataset.state);
   });
+  const history = [];
   const addMessage = (who, text) => {
     if (!text) return;
+    if (who !== 'system') history.push(`${who === 'user' ? 'Visitor' : 'You'}: ${text}`);
     const line = document.createElement('p');
     line.className = `msg msg--${who}`;
     line.textContent = text;
@@ -210,6 +219,7 @@ function initAgent(section) {
   };
 
   const endConversation = async () => {
+    session += 1;
     const current = conversation;
     conversation = null;
     setKind(null);
@@ -239,10 +249,10 @@ function initAgent(section) {
     }
   };
 
-  const start = async (wanted, firstMessage = '') => {
+  const start = async (wanted, firstMessage = '', { force = false, carry = false } = {}) => {
     openPanel();
     if (starting) return;
-    if (conversation && (wanted === kind || wanted === 'text')) {
+    if (conversation && (wanted === kind || (wanted === 'text' && !force))) {
       if (firstMessage) send(firstMessage);
       if (wanted === 'text') input?.focus();
       return;
@@ -252,7 +262,12 @@ function initAgent(section) {
 
     starting = true;
     let mode = wanted;
-    log.replaceChildren();
+    const mine = ++session;
+    const current = () => mine === session;
+    // A switch between chat and call keeps the transcript; a fresh start clears it.
+    const earlier = carry ? history.slice(-8).join('\n').slice(-1400) : '';
+    if (carry) addMessage('system', wanted === 'voice' ? 'Switching to a call…' : 'Switching to chat…');
+    else { log.replaceChildren(); history.length = 0; }
     askedSomething = false;
     agentLines = 0;
     setState('connecting', 'Connecting…');
@@ -268,15 +283,15 @@ function initAgent(section) {
       }
       const Conversation = await loadSdk();
       setKind(mode);
-      conversation = await Conversation.startSession({
+      const opened = await Conversation.startSession({
         agentId: AGENT_ID,
         ...(mode === 'text' ? { textOnly: true } : { connectionType: 'webrtc' }),
         onConnect: () => {
-          if (section.dataset.state !== 'connecting') return;
+          if (!current() || section.dataset.state !== 'connecting') return;
           setState(mode === 'voice' ? 'listening' : 'ready', mode === 'voice' ? 'Listening — go ahead' : 'Connected — ask away');
         },
         onDisconnect: details => {
-          if (!conversation) return;
+          if (!current() || !conversation) return;
           console.info('[agent] disconnected', details);
           conversation = null;
           setKind(null);
@@ -292,9 +307,12 @@ function initAgent(section) {
         },
         onError: message => console.warn('[agent]', message),
         onMessage: payload => {
+          if (!current()) return;
           const fromUser = payload.role === 'user' || payload.source === 'user';
           if (fromUser) askedSomething = true;
           if (fromUser && payload.message?.trim() === lastSent) { lastSent = ''; return; }
+          // After a switch the agent greets again; the transcript already has that line, so don't repeat it.
+          if (!fromUser && carry && agentLines === 0 && history.includes(`You: ${payload.message}`)) { agentLines += 1; return; }
           addMessage(fromUser ? 'user' : 'agent', payload.message);
           if (!fromUser) {
             agentLines += 1;
@@ -308,14 +326,24 @@ function initAgent(section) {
           }
         },
         onModeChange: ({ mode: speaking }) => {
-          if (kind === 'voice') setState(speaking === 'speaking' ? 'speaking' : 'listening', speaking === 'speaking' ? 'Speaking…' : 'Listening — go ahead');
+          if (current() && kind === 'voice') setState(speaking === 'speaking' ? 'speaking' : 'listening', speaking === 'speaking' ? 'Speaking…' : 'Listening — go ahead');
         }
       });
+      if (!current()) {
+        // Ended (End, Close, or another conversation starting) while this one was still connecting.
+        opened.endSession().catch(() => {});
+        if (section.dataset.state === 'connecting') { setKind(null); setState('ended', 'Conversation ended'); }
+        return;
+      }
+      conversation = opened;
       section.classList.add('is-live');
       if (section.dataset.state === 'connecting') {
         setState(mode === 'voice' ? 'listening' : 'ready', mode === 'voice' ? 'Listening — go ahead' : 'Connected — ask away');
       }
       if (mode === 'voice') pulse();
+      if (earlier) {
+        try { conversation.sendContextualUpdate(`Continuity note (sent by the website, not typed by the visitor): the visitor has just switched between typed chat and a voice call on the same page, and this is the same visit. Carry on from where you were; don't reintroduce yourself at length. The conversation so far:\n${earlier}`); } catch (error) { console.warn('[agent] continuity note not sent', error); }
+      }
       if (pageContext) {
         try { conversation.sendContextualUpdate(pageContext); } catch (error) { console.warn('[agent] page context not sent', error); }
       }
@@ -327,6 +355,12 @@ function initAgent(section) {
       starting = false;
     }
   };
+
+  // The Chat | Call switch. Switching ends the current session and opens the other kind, keeping the transcript.
+  function switchTo(mode) {
+    if (conversation && kind === mode) { if (mode === 'text') input?.focus(); return; }
+    start(mode, '', { force: true, carry: Boolean(conversation) });
+  }
 
   const stop = async () => {
     if (!conversation) return;
@@ -344,8 +378,9 @@ function initAgent(section) {
     const named = button.dataset.agentFor;
     if (named ? named !== section.id : (owner ? owner !== section : !first)) return;
     button.addEventListener('click', () => {
-      if (!named && !section.contains(button)) section.scrollIntoView({ behavior: 'smooth', block: 'center' });
       start(button.dataset.agentStart);
+      // From the dock, bring the conversation itself into view (the panel is open by now), not just its section.
+      if (!named && !section.contains(button)) requestAnimationFrame(() => panel.scrollIntoView({ behavior: 'smooth', block: 'center' }));
     });
   });
   // The dock's small orb belongs to the block its buttons drive.

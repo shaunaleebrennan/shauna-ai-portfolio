@@ -233,8 +233,8 @@ if (rail) {
   renderRail();
 }
 
-/* ---------- Complex → Clear: jargon resolves into one line on scroll ---------- */
-// The seven words of the line are hidden in plain sight inside the jargon paragraph. As the section
+/* ---------- Complex → Clear: a long positioning statement resolves into one line on scroll ---------- */
+// The seven words of the line are hidden in plain sight inside a long, overworked positioning statement. As the section
 // scrolls through its pinned stretch the filler words blur away, and the seven fly to where the line sits.
 const c2c = document.querySelector('[data-c2c]');
 if (c2c && !reduceMotion) {
@@ -301,4 +301,13 @@ if (c2c && !reduceMotion) {
   document.fonts?.ready.then(measure);
   window.addEventListener('load', measure, { once: true });
   measure();
+}
+
+/* ---------- The dock steps aside while the Ask section is on screen ---------- */
+// The Ask section has its own Chat and Call controls, and the dock would sit on top of its Send button.
+const askSection = document.querySelector('#ask');
+if (askSection && dock && 'IntersectionObserver' in window) {
+  new IntersectionObserver(entries => {
+    document.body.classList.toggle('ask-in-view', entries[0].isIntersecting);
+  }, { rootMargin: '-25% 0px -10% 0px' }).observe(askSection);
 }

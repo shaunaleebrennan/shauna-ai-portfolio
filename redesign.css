@@ -354,8 +354,8 @@ body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
 }
 @media (prefers-reduced-motion:reduce){.gorb-ring,.tour-orb,.orbfloat,.gorb{animation:none !important}.tour,.tour-cap{transition:none;animation:none}}
 
-/* ---- Complex → Clear: a paragraph of jargon resolves into one line as the visitor scrolls ----
-   Without script (or with reduced motion) it reads as a still: the jargon dimmed, the seven words lit, the line beneath.
+/* ---- Complex → Clear: a long, overworked positioning statement resolves into one line as the visitor scrolls ----
+   Without script (or with reduced motion) it reads as a still: the statement dimmed, the seven words lit, the line beneath.
    With script the section pins for a little over a screen and the seven words fly out of the paragraph into the line. */
 .c2c{position:relative;padding:120px 0 60px;overflow:clip}
 .c2c-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:20px}
@@ -365,7 +365,7 @@ body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
 .c2c-track{height:1px;background:rgba(255,255,255,.12)}
 .c2c-track i{display:block;height:1px;width:calc(var(--c2c,1) * 100%);background:#C9FF63;box-shadow:0 0 12px rgba(201,255,99,.7)}
 .c2c-stage{margin-top:56px}
-.c2c-noise{margin:0;max-width:1040px;font:500 clamp(19px,2.3vw,32px)/1.42 'Inter Tight',sans-serif;letter-spacing:-.02em;color:#F2F3EE}
+.c2c-noise{margin:0;max-width:1080px;font:500 clamp(17px,2.05vw,29px)/1.42 'Inter Tight',sans-serif;letter-spacing:-.02em;color:#F2F3EE}
 .c2c-noise .f{opacity:.3}
 .c2c-noise .k{display:inline-block}
 .c2c-line{margin:48px 0 0;font:600 clamp(44px,6.6vw,104px)/.98 'Inter Tight',sans-serif;letter-spacing:-.05em;color:#F2F3EE}
@@ -408,22 +408,44 @@ body.tour-on [data-dock],body.tour-on .heroagent{display:none !important}
 /* Hero ask box: Call sits beside Send */
 .heroask .heroask-call{flex:0 0 auto;width:auto;height:44px;display:inline-flex;align-items:center;gap:7px;padding:0 15px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:transparent;color:#F2F3EE;font:600 14px Inter,sans-serif}
 .heroask .heroask-call:hover,.heroask .heroask-call:focus-visible{transform:none;border-color:#C9FF63;color:#C9FF63;outline:none}
-/* Conversation panel: orb avatar and name in the header, Call to switch to voice, a larger orb during a call */
-.agent-avatar{position:relative !important;flex:0 0 30px;width:30px;height:30px;--gs:.15}
+/* Conversation panel. It wears the orb and its light: an aura hairline around the card, the orb and name in the
+   header, a Chat | Call switch that is always in view, and a call banner that moves with the voice. */
+.agent-panel{border:1px solid transparent;background:linear-gradient(#14141C,#14141C) padding-box,linear-gradient(135deg,rgba(167,150,255,.8),rgba(255,196,225,.3) 28%,rgba(255,255,255,.1) 55%,rgba(201,255,99,.75)) border-box;box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 70px rgba(106,77,255,.16);backdrop-filter:none}
+.heroagent .agent-panel{background:linear-gradient(#14141C,#14141C) padding-box,linear-gradient(135deg,rgba(167,150,255,.8),rgba(255,196,225,.3) 28%,rgba(255,255,255,.1) 55%,rgba(201,255,99,.75)) border-box;box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 70px rgba(106,77,255,.2)}
+.heroagent [data-agent-close]{display:inline-flex !important;align-items:center}
+.agent-head{padding:16px 16px 12px 18px;border-bottom:0;background:radial-gradient(280px 130px at 10% 0%,rgba(124,99,255,.3),rgba(124,99,255,0) 72%)}
+.agent-avatar{position:relative !important;flex:0 0 38px;width:38px;height:38px;--gs:.17}
 .agent-who{display:flex;flex-direction:column;gap:1px;min-width:0}
-.agent-who>strong:first-child{font:600 14px/1.25 'Inter Tight',Inter,sans-serif;letter-spacing:-.01em;color:#F2F3EE}
-.agent-who .agent-status{font:500 12px/1.3 Inter,sans-serif;color:#B4B7AE}
-.agent-call{margin-left:auto;display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:0 14px;border-radius:999px;border:0;background:#C9FF63;color:#0B0B10;font:600 13px Inter,sans-serif;cursor:pointer}
-.agent-call+.agent-end{margin-left:0}
-[data-agent][data-mode="voice"] .agent-call,[data-agent][data-state="connecting"] .agent-call{display:none}
-[data-agent][data-mode="voice"] .agent-end,[data-agent][data-state="connecting"] .agent-end{margin-left:auto}
+.agent-who>strong:first-child{font:600 16px/1.25 'Inter Tight',Inter,sans-serif;letter-spacing:-.015em;color:#F2F3EE}
+.agent-who .agent-status{font:500 13px/1.3 Inter,sans-serif;color:#B4B7AE}
+.agent-modes{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0 14px 12px;padding:4px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)}
+.agent-modes button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 12px;border:0;border-radius:999px;background:transparent;color:#F2F3EE;font:600 15px Inter,sans-serif;cursor:pointer;transition:background .2s ease,color .2s ease}
+.agent-modes button:hover,.agent-modes button:focus-visible{background:rgba(255,255,255,.09);outline:none}
+.agent-modes button:focus-visible{box-shadow:0 0 0 2px #C9FF63}
+.agent-modes button[aria-pressed="true"]{background:#C9FF63;color:#0B0B10}
+.agent-modes button[aria-pressed="true"]::after{content:"";width:7px;height:7px;border-radius:50%;background:#0B0B10;animation:agentlive 1.4s ease-in-out infinite}
+@keyframes agentlive{0%,100%{opacity:1}50%{opacity:.25}}
+/* Before a conversation is live both ways in are offered as equals, with Call marked as the lime one. */
+[data-agent]:not(.is-live) .agent-modes button[data-agent-mode="voice"]{color:#C9FF63}
 .agent-stage{display:none}
-.heroagent[data-mode="voice"] .agent-stage{display:block;position:relative;width:104px;height:104px;margin:24px auto 8px}
-.agent-stage .gorb-ring{inset:-15%}
-.agent-stage .gorb{inset:0;--gs:.42}
-.agent-stage[data-orb-state]{scale:calc(1 + var(--vol,0) * .25)}
+[data-agent][data-mode="voice"] .agent-stage{display:flex;align-items:center;gap:16px;margin:0 14px 4px;padding:14px 16px;border-radius:20px;background:rgba(201,255,99,.06);border:1px solid rgba(201,255,99,.2);scale:none}
+.agent-stage-orb{position:relative;flex:0 0 58px;width:58px;height:58px;scale:calc(1 + var(--vol,0) * .22)}
+.agent-stage .gorb-ring{inset:-16%}
+.agent-stage .gorb{inset:0;--gs:.28}
+.agent-stage-copy{display:flex;flex-direction:column;gap:2px;min-width:0;margin-right:auto}
+.agent-stage-copy strong{font:600 16px/1.25 'Inter Tight',Inter,sans-serif;letter-spacing:-.015em;color:#F2F3EE}
+.agent-stage-copy span{font:13px/1.4 Inter,sans-serif;color:#B4B7AE}
+.agent-bars{display:flex;align-items:center;gap:3px;height:34px}
+.agent-bars i{width:3px;border-radius:2px;background:#C9FF63;height:calc(18% + var(--vol,0) * var(--k,80%))}
+.agent-bars i:nth-child(1){--k:55%}.agent-bars i:nth-child(2){--k:95%}.agent-bars i:nth-child(3){--k:140%}.agent-bars i:nth-child(4){--k:85%}.agent-bars i:nth-child(5){--k:50%}
+.agent-log:empty{min-height:0;padding:0 20px}
+[data-agent][data-mode="voice"] .agent-log:empty{min-height:14px}
+body.ask-in-view [data-dock]{opacity:0 !important;pointer-events:none !important}
+/* Once the panel is open its switch is the way in, so the buttons that opened it step aside. */
+[data-agent].has-panel [data-agent-start]{display:none !important}
 @media (max-width:700px){
   .orbtag{left:auto;right:15vw;top:-27%;translate:0 0;font-size:10px;padding:7px 11px}
   .heroask .heroask-call{flex:0 0 44px;width:44px;padding:0;justify-content:center}
   .heroask .heroask-call span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+  .agent-stage-copy span{display:none}
 }

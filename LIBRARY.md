@@ -42,10 +42,6 @@ Narrative Design: turn market insight into a strategic story. Explore the method
 
 Tier launches, group releases, and plan audience timing with a feature matrix, visual tiers, and an interactive launch journey.
 
-### [Messaging as Code](case-studies/messaging-as-code.md)
-
-Designing an operating model for messaging reuse across teams and AI tools, with clear product truth, PMM ownership and human review.
-
 ## Supporting documents
 
 - **[Career and leadership](knowledge/portfolio.md)** — Experience, progression, team leadership, hands-on builds, and completed learning.

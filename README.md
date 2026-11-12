@@ -34,7 +34,7 @@ Practical methods for the decisions that shape go-to-market, each with a worked 
 
 - **[Narrative design](https://shaunaleebrennan.github.io/shauna-ai-portfolio/playbook.html)** — Find the story worth telling: turn market change and customer insight into a narrative that gives people a reason to care.
 - **[Product launches](https://shaunaleebrennan.github.io/shauna-ai-portfolio/launch-playbook.html)** — Make the moment matter: decide what deserves a launch, what belongs together, and who needs to hear what, when.
-- **[Messaging as Code](case-studies/messaging-as-code.md)** · *in progress* — Keep the story connected: a governed source of approved messaging for the people and AI tools taking it into the world.
+- **Messaging as Code** · *coming soon* — Keep the story connected: a governed source of approved messaging for the people and AI tools taking it into the world.
 
 [![Messaging as Code — Protect the meaning. Keep the owner.](assets/readme/case-messaging-as-code-2026.png)](https://shaunaleebrennan.github.io/shauna-ai-portfolio/playbooks.html)
 

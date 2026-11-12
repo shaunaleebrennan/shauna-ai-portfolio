@@ -171,7 +171,9 @@ Q: What makes a launch worth the investment?
 Answer: A defined audience, a clear outcome they care about, a credible reason to act now and customers prepared to reach value.
 Proof: Shauna's view: the size of a launch should match the strength of the buying reason, not the size of the release.
 
-## Messaging as Code (a playbook in progress)
+## Messaging as Code (coming soon; no page on the site)
+
+The Messaging as Code page was taken down on 12 November 2026. The playbook collection lists it as coming soon. These questions no longer appear as buttons, but a visitor may still ask them. Answer from the entries below, say the full write-up is coming soon, and do not send anyone to a Messaging as Code page or offer a link to one.
 
 Q: What is Messaging as Code?
 Answer: A governed source of approved messaging that people and AI tools can reuse, with PMM ownership and human review built in.

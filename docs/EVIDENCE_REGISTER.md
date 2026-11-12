@@ -25,6 +25,8 @@ Last reviewed: 24 October 2026
 
 ## Messaging as Code — added 21 October 2026
 
+**12 November 2026: the public page has been taken down at Shauna’s request.** The site no longer publishes a Messaging as Code page, its Markdown write-up, or the sanitized demonstration files; the playbook collection lists it as coming soon and old links to the page redirect there. The notes below remain as the record of what was reviewed.
+
 Professional self-report based on inspection of the internal Workvivo GTM OS repository (README, tooling status, authoring documentation and integration configuration) and development records. Shauna defined PMM requirements and directed AI-assisted implementation and testing. The public case study describes the system without publishing internal messaging or Product source material.
 
 Implemented: offline validation, deterministic authoring and candidate change compilation, plus a guarded synchronization foundation. Live document and tracker targets and the authenticated adapter remain unconfigured. Full unattended synchronization, enforced branch protection and commercial impact are not claimed. Asset resolution, tracing and generation remain planned. The custom authoring pilot was reassessed in favour of simpler document collaboration. Historical regression scenarios are described without presenting an old test count as a fresh run.

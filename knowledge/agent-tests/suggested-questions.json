@@ -1,5 +1,5 @@
 {
-  "about": "Every suggested question on the portfolio and what a good answer must contain. Six of the riskiest are saved as ElevenLabs tests in the folder 'Suggested questions (site)': pva-2, hq-pl-2, ar-2, mac-3, meta-3 and home-1. The answer guide the agent retrieves is 36-suggested-question-answers-2026-11.md. Case-study and playbook pages send a page-context note before the question (see agent.js).",
+  "about": "Every suggested question on the portfolio and what a good answer must contain. Five of the riskiest are saved as ElevenLabs tests in the folder 'Suggested questions (site)': pva-2, hq-pl-2, ar-2, meta-3 and home-1. The answer guide the agent retrieves is 36-suggested-question-answers-2026-11.md. Case-study and playbook pages send a page-context note before the question (see agent.js).",
   "context_template": "Page context (sent by the website, not typed by the visitor): the visitor is reading the {page} on Shauna's portfolio. If a question doesn't name a project, it is about {short}.",
   "common": "Answers the question directly in the first sentence. Speaks about Shauna in the third person. Roughly 150 words or fewer. Invents no metrics, dates or results.",
   "tests": [
@@ -221,27 +221,6 @@
       "pass": "Names a defined audience, a clear outcome they care about, a credible reason to act now and customers prepared to reach value, or makes the same point that investment should match the strength of the buying reason."
     },
     {
-      "id": "mac-1",
-      "page": "Messaging as Code page (a playbook in progress)",
-      "short": "Messaging as Code",
-      "q": "What is Messaging as Code?",
-      "pass": "Describes a governed source of approved messaging that people and AI tools can reuse, separating product facts from positioning, linking messages to sources and keeping PMM ownership and human review. Presents it as work in progress, not an organisation-wide rollout."
-    },
-    {
-      "id": "mac-2",
-      "page": "Messaging as Code page (a playbook in progress)",
-      "short": "Messaging as Code",
-      "q": "Why move from GitHub to Zoom and Canvas?",
-      "pass": "Explains that the GitHub-based authoring approach proved less practical for how the team works (wording was hard to find and review), so the approach moved to Zoom agents and Canvas while the content model and human review stayed central."
-    },
-    {
-      "id": "mac-3",
-      "page": "Messaging as Code page (a playbook in progress)",
-      "short": "Messaging as Code",
-      "q": "Where is the pilot now?",
-      "pass": "Answers about Messaging as Code: the HQ Agent pilot is complete and connected to the sales enablement agent with positive early feedback; wider coverage and a design-system-connected generation workflow are planned. Claims no organisation-wide adoption or measured impact."
-    },
-    {
       "id": "home-1",
       "page": "",
       "short": "",
@@ -267,7 +246,6 @@
     "pva-2",
     "hq-pl-2",
     "ar-2",
-    "mac-3",
     "meta-3",
     "home-1"
   ]

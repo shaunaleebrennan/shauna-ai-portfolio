@@ -31,7 +31,7 @@ During her tenure, Workvivo grew from approximately $10M to approximately $110M 
 
 ## Hands-on AI work
 
-- [Messaging as Code](../case-studies/messaging-as-code.md): defined the content model and approval workflow, wrote messaging with PMM-team support, and directed AI-assisted implementation. Testing led to an in-house system using Zoom agents and Canvas. The HQ Agent pilot is complete and connected to the sales enablement agent; wider rollout is planned.
+- Messaging as Code (write-up coming soon): defined the content model and approval workflow, wrote messaging with PMM-team support, and directed AI-assisted implementation. Testing led to an in-house system using Zoom agents and Canvas. The HQ Agent pilot is complete and connected to the sales enablement agent; wider rollout is planned.
 
 - [Portfolio Voice Agent](../case-studies/portfolio-voice-agent.md): voice-persona design, prompts, intent routing, knowledge structure, guardrails, evaluation, and web integration using ElevenLabs.
 - [IT Pressure Test](https://github.com/shaunaleebrennan/ai-positioning-qa): a public positioning-review tool with an inspectable rubric and source.

@@ -5,6 +5,9 @@ try {
   if (!response.ok) throw new Error('Portfolio content unavailable');
   const content = await response.json();
   const requestedSlug = new URLSearchParams(window.location.search).get('case');
+  // Pages that have been taken down send old links somewhere useful instead of an error.
+  const RETIRED = { 'messaging-as-code': 'playbooks.html' };
+  if (RETIRED[requestedSlug]) window.location.replace(RETIRED[requestedSlug]);
   const slug = requestedSlug === 'shauna-decoded' ? 'portfolio-voice-agent' : requestedSlug;
   const index = content.work.findIndex(item => item.slug === slug);
 

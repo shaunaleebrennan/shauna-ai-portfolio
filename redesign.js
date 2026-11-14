@@ -112,12 +112,15 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
   counters.forEach(el => { el.textContent = '0'; });
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
+      /* Reveal at 12% visible, or once the block fills a quarter of the screen: on phones the tallest
+         blocks are many screens long, so 12% of them can never be visible at once. */
+      const fills = entry.rootBounds ? entry.intersectionRect.height >= entry.rootBounds.height * 0.25 : entry.isIntersecting;
+      if (!(entry.intersectionRatio >= 0.12 || fills)) return;
       entry.target.classList.add('in');
       observer.unobserve(entry.target);
       if (entry.target.dataset.reveal === 'proof') countUp();
     });
-  }, { threshold: 0.12 });
+  }, { threshold: [0, 0.03, 0.06, 0.12, 0.25, 0.5] });
   reveals.forEach(el => observer.observe(el));
 }
 

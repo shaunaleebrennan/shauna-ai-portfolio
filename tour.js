@@ -89,7 +89,11 @@ if (starters.length) {
     if (!el) return;
     // Frame the stop in the space above the caption bar, so the bar never covers what it is describing:
     // centred when it fits, otherwise top-aligned.
+    // A block that hasn't faded in yet still sits 48px low; measure it where it will come to rest.
+    const pending = el.closest('.rv:not(.in)');
+    if (pending) { pending.style.transition = 'none'; pending.style.transform = 'none'; }
     const rect = el.getBoundingClientRect();
+    if (pending) { pending.style.transform = ''; void pending.offsetWidth; pending.style.transition = ''; }
     const barBox = bar.getBoundingClientRect();
     const room = window.innerHeight - (barBox.height + (parseFloat(getComputedStyle(bar).bottom) || 0) + 16);
     const lead = stop.offset ?? 24;
@@ -169,24 +173,46 @@ if (starters.length) {
   // Narration. The timer stays the single clock; each time the clip actually starts (or restarts
   // after buffering or a pause) the clock is re-set to what is left of the clip, so sound,
   // caption and progress bar stay together. If the clip can't play, the stop falls back to reading time.
-  const narrate = stop => {
-    const clip = new Audio(stop.audio);
-    audio = clip;
-    const live = () => running && audio === clip && STOPS[index] === stop;
-    clip.addEventListener('playing', () => {
-      if (!live() || paused) return;
+  // One audio element plays every clip. Phones only let sound start from a tap, and that permission
+  // belongs to the element that was tapped into life, so a fresh element per stop goes silent after stop one.
+  let player = null;
+  let playing = null;
+  const live = stop => running && audio === player && STOPS[index] === stop;
+  const fallback = stop => {
+    if (!stop || !live(stop)) return;
+    audio = null;
+    quiet();
+    if (!paused) schedule(readingSeconds(stop) * 1000);
+  };
+  const getPlayer = () => {
+    if (player) return player;
+    player = new Audio();
+    player.preload = 'auto';
+    player.addEventListener('playing', () => {
+      const stop = playing;
+      if (!live(stop) || paused) return;
       speak();
-      const left = ((clip.duration || stop.dur) - clip.currentTime) * 1000;
+      const left = ((player.duration || stop.dur) - player.currentTime) * 1000;
       if (Number.isFinite(left)) schedule(Math.max(0, left) + GAP);
     });
-    const fallback = () => {
-      if (!live()) return;
-      audio = null;
-      quiet();
-      if (!paused) schedule(readingSeconds(stop) * 1000);
-    };
-    clip.addEventListener('error', fallback);
-    clip.play().catch(fallback);
+    player.addEventListener('error', () => fallback(playing));
+    return player;
+  };
+  const narrate = stop => {
+    const clip = getPlayer();
+    playing = stop;
+    audio = clip;
+    clip.muted = false;
+    clip.src = stop.audio;
+    clip.play().catch(() => fallback(stop));
+  };
+  // Sound switched on by a tap mid-tour: use that tap to get the player permission to speak at the next stop.
+  const unlock = stop => {
+    if (!stop?.audio || audio) return;
+    const clip = getPlayer();
+    clip.muted = true;
+    clip.src = stop.audio;
+    clip.play().then(() => { if (audio !== clip) clip.pause(); }).catch(() => {}).finally(() => { if (audio !== clip) clip.currentTime = 0; clip.muted = false; });
   };
 
   function next() {
@@ -231,6 +257,7 @@ if (starters.length) {
     } else if (!paused) {
       // Sound back on: narration picks up from the next stop, so a line is never heard from the middle.
       warm(STOPS[index + 1]);
+      unlock(STOPS[index + 1]);
     }
   };
 
@@ -252,7 +279,9 @@ if (starters.length) {
     document.dispatchEvent(new Event('agent:stop'));
     // Sit above the analytics banner when it is showing.
     const consent = document.querySelector('.analytics-consent');
-    bar.style.bottom = consent ? `${consent.getBoundingClientRect().height + 28}px` : '';
+    // On phones the banner is hidden for the length of the tour instead (see redesign.css).
+    const phone = window.matchMedia('(max-width: 700px)').matches;
+    bar.style.bottom = consent && !phone ? `${consent.getBoundingClientRect().height + 28}px` : '';
     toggle.textContent = 'Pause';
     paintSound();
     bar.classList.remove('is-paused', 'is-done');

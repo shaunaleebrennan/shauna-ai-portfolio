@@ -264,6 +264,10 @@ a.tool-logo:hover,a.tool-logo:focus-visible{color:#FFFFFF}
   .arvoted2{right:10px !important;bottom:16px !important;width:26% !important}
   /* Footer links: comfortable tap targets */
   footer .void-link{display:inline-flex;align-items:center;min-height:44px}
+  /* Hero: fit the phone's visible screen, so the CV and tour buttons sit above the fold and the gap under the headline closes */
+  section#top[aria-label="Introduction"]{height:100vh !important;height:100svh !important;min-height:620px !important;max-height:860px;overflow:clip !important}
+  /* Tour: the analytics banner steps aside while the tour plays, so the two don't stack over half the screen */
+  body.tour-on .analytics-consent{display:none !important}
 }
 
 /* ---- The floating conversation card (opened from the hero orb) ---- */

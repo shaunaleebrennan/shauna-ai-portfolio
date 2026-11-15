@@ -430,11 +430,11 @@
             ],
             "visual": {
               "type": "image",
-              "title": "Tell one true story",
-              "src": "assets/evidence/truestory-preview.png",
-              "alt": "The Truestory headline with the word true highlighted and flagged Approved.",
+              "title": "The cast",
+              "src": "assets/evidence/truestory-cast.jpg",
+              "alt": "Four illustrated characters: the author writing, co-writers reviewing, the narrator speaking, and the audience waving.",
               "href": "https://truestory.one/",
-              "caption": "Violet only ever means approved. Coral is the author's pen."
+              "caption": "The author, the co-writers, the narrator and the audience. Only the author approves."
             }
           },
           {
@@ -452,6 +452,16 @@
               "Messaging held to its own rule. Truestory's description of itself is a record of approved claims, checked by a test.",
               "Next: putting it in front of a real go-to-market team on a real release."
             ]
+          }
+        ],
+        "meta": [
+          {
+            "label": "Discipline",
+            "value": "Product build"
+          },
+          {
+            "label": "Demonstrates",
+            "value": "Product strategy, positioning, brand and design systems, and AI-assisted building."
           }
         ]
       }

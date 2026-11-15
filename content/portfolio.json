@@ -368,9 +368,9 @@
       "title": "Truestory",
       "category": "technical",
       "tag": "Coming soon",
-      "summary": "A product changes. The pitch does not. My new build: the narrative system for go-to-market teams.",
+      "summary": "A product changes. The pitch does not. I'm building the system that keeps every deck, page and assistant telling the same true story.",
       "demonstrates": "Product strategy, positioning, brand and design systems, and AI-assisted building.",
-      "proof": "A working prototype with an offline demo, a signed-off design system and a live site.",
+      "proof": "A working prototype: a review desk, positioning bets, an answer library and a connector for AI assistants, held to 211 automated tests.",
       "image": "assets/evidence/truestory.jpg",
       "sourceUrl": "https://truestory.one/",
       "projectUrl": "https://truestory.one/",
@@ -393,7 +393,7 @@
       "caseStudy": {
         "overview": {
           "eyebrow": "The narrative system for go-to-market teams",
-          "lead": "A product changes. The pitch does not. The release note is right, the deck is from last quarter, and an assistant writes the next email from all of them. Nobody lied. Nobody checked. Truestory is my answer to that gap, and it is coming soon.",
+          "lead": "The release note is right. The deck is from last quarter. And an assistant just wrote the next email from both. Nobody lied. Nobody checked. Truestory keeps one approved record of what a company can say, shows where every line is used, and fixes it when the product moves.",
           "learning": "AI made content cheap. The scarce thing now is a story you can stand behind."
         },
         "story": [
@@ -404,8 +404,8 @@
             "label": "The problem",
             "layout": "split",
             "paragraphs": [
-              "I've spent my career as the person who owns the story. Every release, the same job lands on product marketing: work out what changed, what sales can now say, and which slides are quietly wrong.",
-              "That job used to be slow. With AI drafting decks, emails and answers at scale, it's now risky too. Every assistant repeats whatever it was given, right or wrong. The more content a team produces, the more it matters that one approved version of the truth sits underneath it."
+              "I've spent my career as the person who owns the story. Every release lands the same job on product marketing: work out what changed, what sales can now say, and which slides are quietly wrong.",
+              "That job used to be slow. Now it's risky too. Every assistant repeats whatever it was given, right or wrong, at scale. The more content a team makes, the more it matters that one approved version of the truth sits underneath it."
             ],
             "visual": {
               "type": "journey",
@@ -419,14 +419,44 @@
             }
           },
           {
+            "id": "bet",
+            "title": "The bet: own the job, not a category",
+            "navLabel": "The bet",
+            "label": "Positioning",
+            "layout": "decisions",
+            "paragraphs": [
+              "I mapped two positioning bets and scored each on market fit, differentiation, room in the market and whether I could execute. The stronger one doesn't fight for a crowded AI category. It goes after how teams do this today."
+            ],
+            "items": [
+              "A job, not a shelf. Keeping what sales says true after the product changes.",
+              "The status quo. A shared doc, a busy PMM, an assistant and a checklist.",
+              "Proof, not promises. Only approved wording passes, a roadmap item is never sold as shipped, and a named person approves every change."
+            ]
+          },
+          {
+            "id": "decisions",
+            "title": "Three decisions that shaped the product",
+            "navLabel": "Decisions",
+            "label": "Product",
+            "layout": "decisions",
+            "paragraphs": [
+              "The build is fast because the rules came first. Three choices did the most work."
+            ],
+            "items": [
+              "Truth first, fit second. Wording passes a strict gate, then gets ranked for the reader and the moment. A great fit never brings back an unapproved line.",
+              "AI proposes, people approve. Assistants can draft, comment and suggest. Only a named person can approve, and every decision goes into a history that shows if anything was changed.",
+              "One source, many destinations. The record lives in Git. Decks, pages, RFP answers and assistants all draw from it, so a fix made once shows up everywhere it's registered."
+            ]
+          },
+          {
             "id": "idea",
-            "title": "Write it once. Approve it once.",
-            "navLabel": "The idea",
-            "label": "The vision",
+            "title": "Truestory runs on Truestory",
+            "navLabel": "Proof",
+            "label": "How I hold myself to it",
             "layout": "artifact",
             "paragraphs": [
-              "The promise, and where Truestory is going, is simple: write a claim once, approve it once, and every page, deck and assistant tells it the same way.",
-              "Product marketing stays the author. A named person approves wording; an AI assistant can propose and comment, but never approve. And a roadmap item can't be approved as a shipped capability."
+              "Truestory's own messaging is a record of approved claims, each with its evidence. A test fails if the messaging guide says anything the record doesn't. Propose calling the trade mark 'registered' and the system holds it: the application is pending, so the claim isn't true yet.",
+              "I'm the product owner and orchestrator. Claude is the builder. I set the strategy, the rules and the bar; every change ships through a reviewed pull request."
             ],
             "visual": {
               "type": "image",
@@ -442,15 +472,15 @@
             "title": "Where it is now",
             "navLabel": "Status",
             "label": "Build in progress",
-            "layout": "decisions",
+            "layout": "split",
             "paragraphs": [
-              "Truestory is in active build. I'm keeping the detail close for now, but here's where things stand:"
+              "Truestory is coming soon. Built in my own time, on my own laptop, it now has:"
             ],
             "items": [
-              "Prototype working. A demo runs offline in your browser, built around three steps: decide, correct, tell sales.",
-              "Brand and design system signed off in November 2026, with its own name, voice, type and cast of characters.",
-              "Messaging held to its own rule. Truestory's description of itself is a record of approved claims, checked by a test.",
-              "Next: putting it in front of a real go-to-market team on a real release."
+              "A review desk that runs offline in the browser: decide, correct, tell sales.",
+              "Positioning bets, competitor watch, ranked wording, slide drafting and an RFP answer library.",
+              "A connector so an AI assistant can find, check and propose wording, but never approve it.",
+              "Next: a real go-to-market team, a real release, and a before-and-after on how long corrections take."
             ]
           }
         ],
@@ -458,6 +488,10 @@
           {
             "label": "Discipline",
             "value": "Product build"
+          },
+          {
+            "label": "My role",
+            "value": "Product owner, strategist and orchestrator"
           },
           {
             "label": "Demonstrates",

@@ -364,6 +364,99 @@
       ]
     },
     {
+      "slug": "truestory",
+      "title": "Truestory",
+      "category": "technical",
+      "tag": "Coming soon",
+      "summary": "A product changes. The pitch does not. My new build: the narrative system for go-to-market teams.",
+      "demonstrates": "Product strategy, positioning, brand and design systems, and AI-assisted building.",
+      "proof": "A working prototype with an offline demo, a signed-off design system and a live site.",
+      "image": "assets/evidence/truestory.jpg",
+      "sourceUrl": "https://truestory.one/",
+      "projectUrl": "https://truestory.one/",
+      "projectLabel": "Visit truestory.one",
+      "projectPreview": {
+        "image": "assets/evidence/truestory-preview.png",
+        "alt": "The Truestory headline, Tell one true story, with the word true highlighted and flagged Approved.",
+        "caption": "Tell one true story. The brand is a blank page, a pen and one highlighter.",
+        "width": 1920,
+        "height": 634
+      },
+      "evidence": [
+        {
+          "title": "Visit truestory.one",
+          "url": "https://truestory.one/",
+          "kind": "Live site",
+          "note": "Truestory is coming soon. Follow the build there."
+        }
+      ],
+      "caseStudy": {
+        "overview": {
+          "eyebrow": "The narrative system for go-to-market teams",
+          "lead": "A product changes. The pitch does not. The release note is right, the deck is from last quarter, and an assistant writes the next email from all of them. Nobody lied. Nobody checked. Truestory is my answer to that gap, and it is coming soon.",
+          "learning": "AI made content cheap. The scarce thing now is a story you can stand behind."
+        },
+        "story": [
+          {
+            "id": "why",
+            "title": "Why I'm building it",
+            "navLabel": "Why",
+            "label": "The problem",
+            "layout": "split",
+            "paragraphs": [
+              "I've spent my career as the person who owns the story. Every release, the same job lands on product marketing: work out what changed, what sales can now say, and which slides are quietly wrong.",
+              "That job used to be slow. With AI drafting decks, emails and answers at scale, it's now risky too. Every assistant repeats whatever it was given, right or wrong. The more content a team produces, the more it matters that one approved version of the truth sits underneath it."
+            ],
+            "visual": {
+              "type": "journey",
+              "title": "Where a pitch goes stale",
+              "steps": [
+                "Product ships a change",
+                "The release note is right",
+                "The deck and battlecard are not",
+                "An assistant repeats the old line"
+              ]
+            }
+          },
+          {
+            "id": "idea",
+            "title": "Write it once. Approve it once.",
+            "navLabel": "The idea",
+            "label": "The vision",
+            "layout": "artifact",
+            "paragraphs": [
+              "The promise, and where Truestory is going, is simple: write a claim once, approve it once, and every page, deck and assistant tells it the same way.",
+              "Product marketing stays the author. A named person approves wording; an AI assistant can propose and comment, but never approve. And a roadmap item can't be approved as a shipped capability."
+            ],
+            "visual": {
+              "type": "image",
+              "title": "Tell one true story",
+              "src": "assets/evidence/truestory-preview.png",
+              "alt": "The Truestory headline with the word true highlighted and flagged Approved.",
+              "href": "https://truestory.one/",
+              "caption": "Violet only ever means approved. Coral is the author's pen."
+            }
+          },
+          {
+            "id": "status",
+            "title": "Where it is now",
+            "navLabel": "Status",
+            "label": "Build in progress",
+            "layout": "decisions",
+            "paragraphs": [
+              "Truestory is in active build. I'm keeping the detail close for now, but here's where things stand:"
+            ],
+            "items": [
+              "Prototype working. A demo runs offline in your browser, built around three steps: decide, correct, tell sales.",
+              "Brand and design system signed off in November 2026, with its own name, voice, type and cast of characters.",
+              "Messaging held to its own rule. Truestory's description of itself is a record of approved claims, checked by a test.",
+              "Next: putting it in front of a real go-to-market team on a real release."
+            ]
+          }
+        ]
+      }
+    },
+    {
       "slug": "portfolio-voice-agent",
       "title": "Portfolio Voice Agent",
       "category": "technical",

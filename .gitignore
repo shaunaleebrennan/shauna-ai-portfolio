@@ -9,3 +9,4 @@ knowledge/agent-evaluation-set.md
 knowledge/agent-system-prompt-v2.md
 knowledge/elevenlabs/
 scripts/build-elevenlabs-html.mjs
+.lighthouseci/

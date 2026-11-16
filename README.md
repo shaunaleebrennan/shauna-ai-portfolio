@@ -89,6 +89,8 @@ Product & solutions positioning · Enterprise AI & orchestration · Category str
 
 ## About this repository
 
+[![CI](https://github.com/shaunaleebrennan/shauna-ai-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/shaunaleebrennan/shauna-ai-portfolio/actions/workflows/ci.yml)
+
 This repository powers my [live portfolio](https://shaunaleebrennan.github.io/shauna-ai-portfolio/): evidence-led case studies, playbooks, a CV and a grounded conversational agent, built as a static site on GitHub Pages. Company growth and awards are company outcomes; my role and contribution are professional self-report unless a linked source confirms them.
 
 - [Case studies and supporting documents](LIBRARY.md) — readable here on GitHub
@@ -98,7 +100,7 @@ This repository powers my [live portfolio](https://shaunaleebrennan.github.io/sh
 <details>
 <summary><strong>Maintaining the site</strong></summary>
 
-Run `npm ci`, `npm run build` and `npm run check` from the repository root. The library and supporting document pages are generated from the public sources listed in `content/library.json`; commit generated pages and the Markdown case studies with their source changes. Operational agent knowledge and prompts remain private.
+Run `npm ci`, `npm run build` and `npm test` from the repository root. `npm test` runs the content checks, the relative link check and the evidence search API tests; CI runs the same on every push and pull request, and fails if generated pages were not rebuilt. Pages stay at the root so their URLs do not change; styles live in `css/` and scripts in `js/`. The library and supporting document pages are generated from the public sources listed in `content/library.json`; commit generated pages and the Markdown case studies with their source changes. Operational agent knowledge and prompts remain private.
 
 The IT Pressure Test runtime lives in `it-pressure-test/`. After committing changes in the sibling `ai-positioning-qa` repository, run `node scripts/sync-it-pressure-test.mjs`, then `npm run build` and `npm run check`. The manifest records the source commit and hashes; the copy includes only public runtime assets, never research attachments. A fresh sync replaces the portfolio's brand adaptation of the tool's pages and styles, so reapply it afterwards.
 

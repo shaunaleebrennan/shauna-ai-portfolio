@@ -22,14 +22,7 @@ I brought those perspectives together to refine the employee use cases, position
 
 ### An ongoing discovery and validation loop
 
-- **Customer conversations:** Understand employee needs, buying priorities, the existing stack, and the customer’s definition of value.
-- **Beta programmes:** Bring customer feedback on the experience and use cases into the product and GTM discussion.
-- **Sales collaboration & ZRA:** Review live conversations, demos, objections, and the questions shaping buying decisions.
-- **Analyst inquiries & feedback:** Challenge category framing, differentiation, and the role of an employee experience agent.
-- **Competitor desk research:** Examine adjacent vendors, specialist tools, and internal-build alternatives.
-- **Buyer message testing:** Use Wynter to assess reactions to specific positioning statements and the proof buyers wanted.
-
-**Synthesised with Product and Sales:** Positioning · Priority use cases · Competitive strategy · Proof & seller guidance.
+Learning continued across discovery, beta feedback, customer conversations, and field enablement.
 
 [Read one input: the Wynter message-testing brief](../assets/documents/workvivo-hq-research-brief.pdf)
 
@@ -43,13 +36,6 @@ In the October messaging review, the commercial team reported that this framing 
 
 ### Different work. Different role for AI.
 
-| Work mode | Employee need | Positioning role |
-| --- | --- | --- |
-| Work | Core tasks people are hired to do. Create, analyse, research, and deliver core work. | Productivity AI / ZoomMate |
-| Work to do work | Supporting activities around the core job. Find relevant knowledge and reduce searching, switching, and chasing. | HQ Agent |
-| Work to enable work | The workplace services needed to function in the organisation. Policy answers and supported routine HR, IT, and workplace requests. | HQ Agent |
-| Work to feel connected | The social and organisational experience of work. Stay informed, participate, and feel connected. | Workvivo HQ |
-
 Adapted from Gartner’s four work modes. Labels follow our seller deck; the product mapping is our positioning application.
 
 [Gartner: The 4 Work Modes Framework](https://www.gartner.com/en/documents/6461739)
@@ -62,9 +48,9 @@ I shaped the competitive story around the employee journey and the work left for
 
 ### Three ways to earn a role
 
-1. **Complement.** Show the employee need that remains unmet alongside the tools the customer already owns.
-2. **Optimise.** Connect existing systems through an employee-facing experience, reducing the navigation and effort around them.
-3. **Compete.** Compare the actual use case, reach, experience, and commercial trade-offs where alternatives overlap.
+1. **Complement** — Show the employee need that remains unmet alongside the tools the customer already owns.
+2. **Optimise** — Connect existing systems through an employee-facing experience, reducing the navigation and effort around them.
+3. **Compete** — Compare the actual use case, reach, experience, and commercial trade-offs where alternatives overlap.
 
 The competitive enablement connected the motion to customer maturity and the existing stack.
 
@@ -84,9 +70,9 @@ The dynamic-context story brought company knowledge together with relevant updat
 
 ### From architecture to a reason to care
 
-1. **Company knowledge.** Policies, documents, and connected knowledge provide the established information.
-2. **Dynamic context.** Relevant company communications help explain what has changed and why it matters.
-3. **Zoom’s federated AI foundation.** Translate the use of multiple models into a discussion of task fit, performance, and enterprise AI economics.
+1. **Company knowledge** — Policies, documents, and connected knowledge provide the established information.
+2. **Dynamic context** — Relevant company communications help explain what has changed and why it matters.
+3. **Zoom’s federated AI foundation** — Translate the use of multiple models into a discussion of task fit, performance, and enterprise AI economics.
 
 Established knowledge + current company communication + the Zoom AI foundation.
 
@@ -100,9 +86,13 @@ I co-developed pricing and packaging with the Revenue leader, considering custom
 
 ### From search, to answer, to job done
 
-Search → Answer → Action
+1. **Search** — Find the relevant company information.
+2. **Answer** — Understand the guidance and the sources behind it.
+3. **Action** — Complete a supported next step through a connected app.
 
-Find the information · Understand the answer · Complete a supported task
+![Frontline employee asking HQ Agent what to do if a delivery truck is delayed, with an answer shown beside them.](../assets/evidence/hq-agent-frontline-example.jpg)
+
+A clear progression from finding information to getting something done.
 
 ## Equip the customer expansion motion
 
@@ -112,9 +102,9 @@ Seller enablement connected discovery, use cases, objections, and the role of Zo
 
 ### A customer-led path to the next investment
 
-1. **Discover the gap.** Start with the employee need, existing investment, stakeholders, and success criteria.
-2. **Demonstrate incremental value.** Show a relevant journey through trusted answers, company understanding, and supported action.
-3. **Make the buying case.** Connect the alternative, ownership costs, packaging, proof, and implementation considerations.
+1. **Discover the gap** — Start with the employee need, existing investment, stakeholders, and success criteria.
+2. **Demonstrate incremental value** — Show a relevant journey through trusted answers, company understanding, and supported action.
+3. **Make the buying case** — Connect the alternative, ownership costs, packaging, proof, and implementation considerations.
 
 Customer discovery → differentiated value → a commercial decision.
 

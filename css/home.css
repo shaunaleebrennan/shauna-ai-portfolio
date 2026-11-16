@@ -155,6 +155,8 @@ img{max-width:100%}
 /* AI toolkit — the live site's logo set and links */
 .tools{display:flex;align-items:center;gap:44px;padding-right:44px}
 .tool-logo{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;color:#C7CBC2;font:500 14px Inter,sans-serif;text-decoration:none}
+/* Toolkit logos are set inline (--logo) on index.html. Registering the property as a URL resolves it against the page, not this stylesheet in css/. */
+@property --logo{syntax:"<url> | none";inherits:true;initial-value:none}
 .tool-logo i{display:block;width:28px;height:28px;flex:0 0 28px;background:var(--brand,#F2F3EE);mask:var(--logo) center/contain no-repeat;-webkit-mask:var(--logo) center/contain no-repeat}
 .tool-logo--image i{background:var(--logo) center/contain no-repeat;mask:none;-webkit-mask:none}
 .tool-logo--round i{border-radius:50%}

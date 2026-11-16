@@ -2,7 +2,7 @@ import { readFile, access } from 'node:fs/promises';
 import assert from 'node:assert/strict';
 
 const data = JSON.parse(await readFile('content/portfolio.json', 'utf8'));
-const code = await readFile('case-study.js', 'utf8');
+const code = await readFile('js/case-study.js', 'utf8');
 const render = new Function('document', 'window', 'fetch', `return (async () => {${code}})()`);
 const base = 'https://shaunaleebrennan.github.io/shauna-ai-portfolio/';
 const escape = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');

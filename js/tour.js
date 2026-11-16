@@ -279,7 +279,7 @@ if (starters.length) {
     document.dispatchEvent(new Event('agent:stop'));
     // Sit above the analytics banner when it is showing.
     const consent = document.querySelector('.analytics-consent');
-    // On phones the banner is hidden for the length of the tour instead (see redesign.css).
+    // On phones the banner is hidden for the length of the tour instead (see home.css).
     const phone = window.matchMedia('(max-width: 700px)').matches;
     bar.style.bottom = consent && !phone ? `${consent.getBoundingClientRect().height + 28}px` : '';
     toggle.textContent = 'Pause';

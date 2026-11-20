@@ -6,7 +6,7 @@ The portfolio’s **Find the proof** module uses MongoDB Voyage AI to rerank a f
 
 ## Architecture
 
-- GitHub Pages serves the static portfolio and `evidence-search.js`.
+- GitHub Pages serves the static portfolio and `js/evidence-search.js`.
 - Render runs the small Node service in `api/`.
 - The Node service sends the visitor’s query and the fixed records in `content/search-evidence.json` to `rerank-3-lite`.
 - `VOYAGE_API_KEY` stays in Render. It must never be added to the repository or browser code.

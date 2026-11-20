@@ -29,8 +29,8 @@ export async function syncSiteHeaders() {
     const legacy = /<header class="(?:nav[^"\n]*|topbar|site-header)">[\s\S]*?<\/header>/;
     if (!existing.test(html) && !legacy.test(html)) throw new Error(`Missing site header: ${file}`);
     html = html.replace(existing.test(html) ? existing : legacy, () => header);
-    html = html.replace(/<link\b[^>]*href="(?:\.\.\/)?site-header\.css[^"\n]*"[^>]*>\s*/g, '');
-    html = html.replace('</head>', `<link rel="stylesheet" href="${prefix}site-header.css?v=20261108-brand"></head>`);
+    html = html.replace(/<link\b[^>]*href="(?:\.\.\/)?(?:css\/)?site-header\.css[^"\n]*"[^>]*>\s*/g, '');
+    html = html.replace('</head>', `<link rel="stylesheet" href="${prefix}css/site-header.css?v=20261108-brand"></head>`);
     if (file === 'it-pressure-test/manual-review.html') html = html.replace('<p class="shell"><a href="./index.html">← IT buyer review</a></p>', '').replace('<main id="main-content">', '<main id="main-content"><p class="shell"><a href="./index.html">← IT buyer review</a></p>');
     await writeFile(location, html);
   }

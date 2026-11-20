@@ -10,6 +10,10 @@ Read every case study and supporting document here on GitHub. The links below op
 
 Customer-led GTM for HQ Agent: turning customer discovery, beta feedback, analyst input, and competitive intelligence into positioning, packaging, and seller execution.
 
+### [Truestory](case-studies/truestory.md)
+
+A product changes. The pitch does not. I'm building the system that keeps every deck, page and assistant telling the same true story.
+
 ### [Portfolio Voice Agent](case-studies/portfolio-voice-agent.md)
 
 Designing, configuring and testing a live voice and text agent that turns career and project evidence into useful conversations.

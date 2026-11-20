@@ -34,4 +34,3 @@ A coordinated GTM approach that helped the wider business compete for Workplace 
 
 - **[Forrester winner announcement](https://www.forrester.com/blogs/meet-the-winners-of-the-2026-b2b-awards-and-hear-their-stories-live-at-b2b-forum-emea/)** — External company recognition. Verifies Workvivo’s company award. The announcement does not name Meta.
 - **[Workplace migration programme](https://www.workvivo.com/workplace/)** — Public company context. Company migration offering; Shauna’s GTM role is professional self-report.
-- **[Read the claims and sources](../docs/EVIDENCE_REGISTER.md)** — Evidence record. Separates the external award, programme attribution, and individual contribution.

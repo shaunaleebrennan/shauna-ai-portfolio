@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build-library.mjs",
-    "check": "node scripts/check-library.mjs"
+    "check": "node scripts/check-library.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "test": "npm run check && npm run check:links && npm --prefix api test"
   },
   "devDependencies": {
     "marked": "^17.0.0"

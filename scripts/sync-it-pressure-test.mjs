@@ -37,13 +37,13 @@ for (const [page, tool] of Object.entries(tools)) {
   const footers = html.match(/<footer\b[\s\S]*?<\/footer>/g) || [];
   if (footers.length !== 1) throw new Error(`Expected one footer in ${page}`);
   html = html.replace(footers[0], () => footer(tool));
-  html = html.replace('</head>', `<link rel="preload" href="../assets/fonts/inter-tight-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="../fonts.css?v=20261108"><link rel="stylesheet" href="../brand-pages.css?v=${BRAND}"></head>`);
+  html = html.replace('</head>', `<link rel="preload" href="../assets/fonts/inter-tight-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="../css/fonts.css?v=20261108"><link rel="stylesheet" href="../css/brand-pages.css?v=${BRAND}"></head>`);
   html = html.replace(/<body([^>]*)>/, (match, attrs) => {
     let next = attrs.includes('class="') ? attrs.replace(/class="([^"]*)"/, 'class="$1 bp bp-it"') : `${attrs} class="bp bp-it"`;
     if (!/\bid="/.test(next)) next = ` id="top"${next}`;
     return `<body${next}>`;
   });
-  html = html.replace('</body>', `<script src="../brand-pages.js?v=${BRAND}" defer></script></body>`);
+  html = html.replace('</body>', `<script src="../js/brand-pages.js?v=${BRAND}" defer></script></body>`);
   await writeFile(path, html);
 }
 

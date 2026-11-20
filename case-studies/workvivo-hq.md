@@ -22,11 +22,6 @@ The two-wave Wynter study favoured organisational context over an unsupported ad
 
 ### What the messaging research told us
 
-| Message | Positive responses |
-| --- | --- |
-| Company culture, people, and systems | 69% |
-| Employees choose to use Workvivo | 31% |
-
 Wynter · March–April 2026 · 45 participants. Reactions to different statements; this was not a test of the HQ name or a measure of market demand.
 
 [Read the research brief (PDF)](../assets/documents/workvivo-hq-research-brief.pdf)
@@ -39,34 +34,13 @@ Headquarters made that ambition tangible. It could speak to the whole customer b
 
 ### The brand narrative
 
-**Workvivo HQ**
-
-> Every employee deserves a headquarters. Now they have one.
-
 The digital HQ for the modern workforce.
-
-[Watch the Workvivo HQ launch video](https://fast.wistia.net/embed/iframe/9x6vj5cl93) · 35 seconds · [Original page](https://www.workvivo.com/hq/)
 
 ## One story. A clear messaging architecture.
 
 The product pillars gave the platform story structure. The persona matrix changed the emphasis, value, and proof for each audience, while keeping the same HQ narrative.
 
 ### How the narrative becomes a message system
-
-**Workvivo HQ: Every employee deserves a headquarters. Now they have one.**
-
-| Product pillar | Role |
-| --- | --- |
-| Communication & Engagement | Connection, participation, and the organisation’s shared story. |
-| Search & Knowledge | Finding information and answers in the flow of work. |
-| People Intelligence | Understanding the employee experience and informing action. |
-
-| Audience | Emphasis | Message and proof |
-| --- | --- | --- |
-| IT | Governance, adoption, and consolidation | A governed experience layer, with proof around adoption, ROI, and the AI foundation. |
-| HR | Trust, inclusion, and listening | Support employees through change, with engagement and listening evidence. |
-| Comms | Reach, relevance, and understanding | Make change understood and actionable, with reach, engagement, and analytics proof. |
-| Employees | Simplicity, clarity, and access | Understand what is happening, find what they need, and get work done. |
 
 Product pillars and persona priorities from the HQ messaging work. Select an audience to see how the emphasis changes.
 
@@ -78,11 +52,11 @@ That sequence made the argument reusable across executive presentations, analyst
 
 ### Narrative Design, applied
 
-1. **The change.** AI was changing how employees access information and get work done, while AI-native claims were becoming common across the employee experience market.
-2. **The impact.** The narrative explored what that shift meant for employees navigating fragmented tools, and for IT, HR, and Comms supporting the change.
-3. **The new game.** Put AI into the employee experience where people communicate, find knowledge, and act. The strategic reframe was about where AI lives; headquarters made that idea tangible.
-4. **Why it’s hard.** Scattered systems, adoption friction, and unequal access across desk and frontline roles were barriers addressed in the original narrative.
-5. **The solution.** Workvivo HQ: “Every employee deserves a headquarters. Now they have one.” Connect that promise to the product experience and adapt the messages and proof by persona.
+1. **The change** — AI was changing how employees access information and get work done, while AI-native claims were becoming common across the employee experience market.
+2. **The impact** — The narrative explored what that shift meant for employees navigating fragmented tools, and for IT, HR, and Comms supporting the change.
+3. **The new game** — Put AI into the employee experience where people communicate, find knowledge, and act. The strategic reframe was about where AI lives; headquarters made that idea tangible.
+4. **Why it’s hard** — Scattered systems, adoption friction, and unequal access across desk and frontline roles were barriers addressed in the original narrative.
+5. **The solution** — Workvivo HQ: “Every employee deserves a headquarters. Now they have one.” Connect that promise to the product experience and adapt the messages and proof by persona.
 
 [Explore the Narrative Design playbook](../playbook.html)
 
@@ -94,9 +68,9 @@ I carried the positioning into launch messaging, the website, analyst framing, c
 
 ### From master narrative to market
 
-1. **Equip the seller.** Platform story, persona messages, evolution talk track, and GTM kits.
-2. **Align the launch.** Shared narrative across leadership, Marketing, and field teams.
-3. **Activate by audience.** Adapt the emphasis for sales conversations, campaigns, the website, and analysts.
+1. **Equip the seller** — Platform story, persona messages, evolution talk track, and GTM kits.
+2. **Align the launch** — Shared narrative across leadership, Marketing, and field teams.
+3. **Activate by audience** — Adapt the emphasis for sales conversations, campaigns, the website, and analysts.
 
 Strategic direction and messaging led by PMM; delivery shared across teams.
 
@@ -107,10 +81,6 @@ The positioning gave teams a shared basis for decisions: which value to emphasis
 The HQ launch at WOW was highlighted in the team retrospective for company-wide message alignment, from leadership to SDRs. That feedback showed the narrative becoming a shared language across the business.
 
 ### Launch retrospective
-
-> From John down to every SDR speaking the same language.
-
-PMM team retrospective · August 2026
 
 Team feedback on message alignment at the Workvivo HQ launch at WOW.
 
